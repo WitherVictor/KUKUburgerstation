@@ -1,7 +1,7 @@
 /obj/item/organ/internal/implant/torso/od_purge
-	name = "overdose safety implant"
-	desc = "Prevents overdoses."
-	desc_extended = "A special implant that prevents the user from overdosing on chemicals by purging it from their bloodstream."
+	name = "过量防护植入体"
+	desc = "防止药物过量。"
+	desc_extended = "一种特殊植入体，通过清除血液中过量的化学物质来防止药物过量。"
 
 	has_life = TRUE
 
@@ -22,13 +22,13 @@
 				has_purged = TRUE
 				A.reagents.stored_reagents[reagent_path] = FLOOR(reagent_volume, 1)
 			if(has_purged)
-				A.to_chat(span("danger","\The [src.name] in your [attached_organ.name] beeps..."))
+				A.to_chat(span("danger","你的[attached_organ.name]中的[src.name]发出了哔声……"))
 
 
 /obj/item/organ/internal/implant/torso/death_alarm
-	name = "death alarm implant"
-	desc = "I died, please restart."
-	desc_extended = "A special implant that detects if the user has died, then broadcasts the message to the medical frequency. Only has enough charge to broadcast one death."
+	name = "死亡警报植入体"
+	desc = "我死了，请重启。"
+	desc_extended = "一种特殊植入体，检测到使用者死亡后，会通过医疗频道广播。电量仅够播报一次死亡。"
 
 /obj/item/organ/internal/implant/torso/death_alarm/on_organ_add(var/mob/living/advanced/new_owner)
 	. = ..()
@@ -44,8 +44,8 @@
 		var/mob/living/advanced/A = loc
 		var/turf/T = get_turf(src)
 		play_sound('sound/effects/death_alarm_beep.ogg',T)
-		A.to_chat(span("danger","\The [src.name] in your [attached_organ.name] beeps..."))
-		talk(src,src,"Medical Alert: [A.real_name] has died!",TEXT_RADIO,RADIO_FREQ_MEDICAL,talk_range = YELL_RANGE)
+		A.to_chat(span("danger","你的[attached_organ.name]中的[src.name]发出了哔声……"))
+		talk(src,src,"医疗警报：[A.real_name]已死亡！",TEXT_RADIO,RADIO_FREQ_MEDICAL,talk_range = YELL_RANGE)
 		qdel(src)
 		return TRUE
 

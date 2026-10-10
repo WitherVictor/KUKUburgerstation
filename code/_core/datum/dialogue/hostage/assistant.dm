@@ -8,47 +8,47 @@
 
 	if(!L.hostage)
 		.["hello"] = list(
-			"i'm rescued bro, go do something else"
+			"哥们，我已经获救了，去忙别的吧"
 		)
 	else
 		if(L.handcuffed)
 			.["hello"] = list(
-				pick("get these fucking #1 off me dude","bruh remove these #1","fucking shitsec slapped #1 on me, delete it"),
+				pick("哥们，快把这该死的#1弄下来","兄弟，把这#1摘了","狗屁安保给我戴了#1，赶紧弄掉"),
 				"*handcuffs"
 			)
 			.["*handcuffs"] = list(
-				"bruh how do you not know how to remove them, just examine me and hit remove dude"
+				"兄弟，这都不会摘？查看我，然后点移除就行了啊"
 			)
 			return
 
 		if(L.following) //If we're following someone
 			if(L.following == P) //If we're following the person we're talking to.
 				.["hello"] = list(
-					pick("are we there yet","bruh hurry it up","stop trying to rp and just get me out of here dude"),
+					pick("到了没有啊","兄弟，快点啊","别演角色扮演了，赶紧带我出去啊哥们"),
 					"*stop following me"
 				)
 				.["*stop following me"] = list(
-					pick("make up your mind, jfc","fine dude just hurry up","don't leave me here retard")
+					pick("操，先想好你要干嘛","行吧哥们，麻烦快点","别把我扔这儿，蠢货")
 				)
 			else //If we're following someone else.
 				.["hello"] = list(
-					pick("what","what do you want dude","what is it"),
+					pick("啥","哥们，你想干嘛","什么事"),
 					"*follow me"
 				)
 				.["*follow me"] = list(
-					"[L.following.real_name] seems cooler than you so i'm following them instead, my man"
+					"哥们，[L.following.real_name]看着比你酷，所以我跟着那边走了"
 				)
 		else //We're not following someone.
 			.["hello"] = list(
-				pick("bruh fucking get me out of there","i don't know this map, fucking help me get out"),
+				pick("兄弟，赶紧他妈带我出去","我不认识这地图，快帮我出去啊"),
 				"*follow me"
 			)
 			if(length(P.followers) < 2) //They have less than two followers
 				.["*follow me"] = list(
-					pick("fine","you better know what you're doing dude")
+					pick("行吧","哥们，你最好知道自己在干什么")
 				)
 			else
 				.["*follow me"] = list(
-					"bruh you already have too many people with you, it might be gay that way"
+					"兄弟，跟着你的人已经够多了，再凑一块怕不是要搞基"
 				)
 

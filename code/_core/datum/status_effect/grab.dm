@@ -1,6 +1,6 @@
 /status_effect/grab
-	name = "Grab"
-	desc = "You're grabbed!"
+	name = "被抓住"
+	desc = "你被抓住了！"
 	id = GRAB
 	minimum = 20
 	maximum = 20

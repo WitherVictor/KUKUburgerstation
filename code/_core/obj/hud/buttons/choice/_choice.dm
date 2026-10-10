@@ -1,7 +1,7 @@
 /obj/hud/button/choice
-	name = "choice"
-	desc = "Press this."
-	desc_extended = "Press this button."
+	name = "选择"
+	desc = "按下此处。"
+	desc_extended = "按下这个按钮。"
 	icon_state = "square"
 	screen_loc = "CENTER,CENTER"
 
@@ -28,19 +28,19 @@
 	return TRUE
 
 /obj/hud/button/choice/yes
-	name = "yes"
+	name = "是"
 	id = "yes"
 	icon_state = "yes"
 	screen_loc = "CENTER+2,CENTER"
 
 /obj/hud/button/choice/no
-	name = "no"
+	name = "否"
 	id = "no"
 	icon_state = "no"
 	screen_loc = "CENTER-2,CENTER"
 
 /obj/hud/button/choice/cancel
-	name = "cancel"
+	name = "取消"
 	id = "cancel"
 	icon_state = "cancel"
 	screen_loc = "CENTER,CENTER-2"

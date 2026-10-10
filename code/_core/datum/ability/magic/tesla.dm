@@ -1,6 +1,6 @@
 /ability/magic/projectile/tesla
-	name = "tesla ball"
-	desc = "Shoot a tesla ball at the target."
+	name = "特斯拉电球"
+	desc = "向目标发射一枚特斯拉电球。"
 	icon_state = "tesla"
 	cost = 10
 	cooldown = SECONDS_TO_DECISECONDS(10)

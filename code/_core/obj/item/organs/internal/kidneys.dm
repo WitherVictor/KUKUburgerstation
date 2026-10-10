@@ -1,12 +1,12 @@
 /obj/item/organ/internal/kidneys
-	name = "kidneys"
+	name = "肾脏"
 	id = BODY_KIDNEYS
 	icon_state = BODY_KIDNEYS
-	desc = "Filters waste from blood. Requires things."
+	desc = "过滤血液中的废物。需要些东西。"
 
 	attach_flag = BODY_GROIN
 
 	value = 0
 
 /obj/item/organ/internal/kidneys/robotic
-	name = "robotic kidneys"
+	name = "机械肾脏"

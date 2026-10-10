@@ -1,6 +1,6 @@
 /status_effect/slip
-	name = "Slipped"
-	desc = "You slipped!"
+	name = "滑倒"
+	desc = "你滑倒了！"
 	id = SLIP
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(4)

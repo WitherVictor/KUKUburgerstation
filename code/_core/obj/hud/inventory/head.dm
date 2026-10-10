@@ -1,5 +1,5 @@
 /obj/hud/inventory/organs/head
-	name = "head slot"
+	name = "头部装备槽"
 	icon_state = "slot_head"
 	id = BODY_HEAD
 	screen_loc = "LEFT:1,BOTTOM:16+4"
@@ -15,7 +15,7 @@
 	priority = 75
 
 /obj/hud/inventory/organs/neck
-	name = "neck slot"
+	name = "颈部装备槽"
 	icon_state = "slot_neck"
 	id = BODY_NECK
 	screen_loc = "LEFT+1:2,BOTTOM:15+3"
@@ -30,7 +30,7 @@
 	priority = 50
 
 /obj/hud/inventory/organs/face
-	name = "face slot"
+	name = "面部装备槽"
 	icon_state = "slot_face"
 	id = BODY_FACE
 	screen_loc = "LEFT+1:2,BOTTOM+4:16"
@@ -46,7 +46,7 @@
 
 
 /obj/hud/inventory/organs/ear
-	name = "ear slot"
+	name = "耳部装备槽"
 	id = BODY_EARS
 	icon_state = "slot_ears"
 	screen_loc = "LEFT:3+2,BOTTOM+3:15"

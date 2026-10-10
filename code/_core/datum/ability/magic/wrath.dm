@@ -1,6 +1,6 @@
 /ability/magic/wrath
-	name = "wrath"
-	desc = "Call down a lightning bolt that causes an explosion, an EMP, a fire, and smoke in a target area."
+	name = "雷霆之怒"
+	desc = "召唤一道闪电，在目标区域引发爆炸、电磁脉冲、火焰和烟雾。"
 	icon_state = "lightning"
 	cost = 100
 	cooldown = SECONDS_TO_DECISECONDS(30)

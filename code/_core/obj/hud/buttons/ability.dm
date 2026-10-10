@@ -1,8 +1,8 @@
 /obj/hud/button/ability
-	name = "ERROR"
+	name = "错误"
 	var/id = null
-	desc = "Slot button for quick actions."
-	desc_extended = "Press this button to activate that item on the tile you're pointing. New abilities can be slotted at the ability machine in Science."
+	desc = "快捷操作槽位按钮。"
+	desc_extended = "按下此按钮，对鼠标所指的地块使用对应项目。新能力可在科研部的能力装配机上装配。"
 	icon_state = "square_trim"
 	screen_loc = "LEFT,TOP"
 	alpha = 200

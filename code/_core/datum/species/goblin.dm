@@ -1,6 +1,6 @@
 /species/goblin/
-	name = "Goblin"
-	desc = "For the raid!"
+	name = "地精"
+	desc = "为了劫掠！"
 	id = "goblin"
 	flags_species = SPECIES_GOBLIN
 

@@ -9,4 +9,4 @@
 	can_be_parried = TRUE
 
 /damagetype/npc/get_attack_message_sound(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return span("warning","You hear bone hitting flesh.")
+	return span("warning","你听到骨骼撞击血肉的声音。")

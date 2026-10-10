@@ -1,6 +1,6 @@
 //Gloves
 /obj/hud/inventory/organs/left_hand_worn
-	name = "left glove"
+	name = "左手手套"
 	icon_state = "slot_hand_left"
 	id = BODY_HAND_LEFT
 	screen_loc = "LEFT:3+2,BOTTOM+2:14"
@@ -16,7 +16,7 @@
 	priority = 74
 
 /obj/hud/inventory/organs/right_hand_worn
-	name = "right glove"
+	name = "右手手套"
 	icon_state = "slot_hand_right"
 	id = BODY_HAND_RIGHT
 	screen_loc = "LEFT:1,BOTTOM+2:14"
@@ -33,7 +33,7 @@
 
 //Holding
 /obj/hud/inventory/organs/left_hand_held
-	name = "left hand slot"
+	name = "左手持握槽"
 	id = BODY_HAND_LEFT_HELD
 	icon = 'icons/hud/hud_wide.dmi'
 	icon_state = "left_hand"
@@ -79,7 +79,7 @@
 	. = ..()
 
 /obj/hud/inventory/organs/right_hand_held
-	name = "right hand slot"
+	name = "右手持握槽"
 	id = BODY_HAND_RIGHT_HELD
 	icon = 'icons/hud/hud_wide.dmi'
 	icon_state = "right_hand"

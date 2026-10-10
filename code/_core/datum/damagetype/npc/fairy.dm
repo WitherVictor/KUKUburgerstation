@@ -1,5 +1,5 @@
 /damagetype/npc/fairy
-	attack_verbs = list("hey")
+	attack_verbs = list("喊话骚扰")
 
 
 	//The base attack damage of the weapon. It's a flat value, unaffected by any skills or attributes.

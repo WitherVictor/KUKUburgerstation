@@ -6,7 +6,7 @@
 
 
 /obj/hud/inventory/exchange
-	name = "item exchange"
+	name = "物品兑换"
 
 	max_size = SIZE_8
 
@@ -24,7 +24,7 @@
 
 
 /obj/hud/inventory/exchange/gold_coins
-	name = "gold coins exchange"
+	name = "金币兑换"
 
 
 /obj/hud/inventory/exchange/gold_coins/on_exchange(var/obj/item/inserted_item)

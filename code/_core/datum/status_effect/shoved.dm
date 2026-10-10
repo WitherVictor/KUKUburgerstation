@@ -1,6 +1,6 @@
 /status_effect/shoved
-	name = "Shoved"
-	desc = "You're shoved!"
+	name = "被推退"
+	desc = "你被推退了！"
 	id = SHOVED
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(4)

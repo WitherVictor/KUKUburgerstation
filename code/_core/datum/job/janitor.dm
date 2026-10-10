@@ -1,6 +1,6 @@
 /job/janitor
-	name = "Janitor"
-	desc = "Job Description."
+	name = "保洁员"
+	desc = "岗位说明。"
 
 	passive_income = 0
 	passive_income_bonus = 200 //Per rank
@@ -20,10 +20,10 @@
 	)
 
 	ranks = list(
-		"Intern Custodian",
-		"Custodian",
-		"Senior Custodian",
-		"Chief Custodian"
+		"见习保洁员",
+		"保洁员",
+		"资深保洁员",
+		"保洁主管"
 	)
 
 	job_flags = FLAG_JOB_CLEANING

@@ -1,7 +1,7 @@
 /obj/item/consumable/fertilizer
-	name = "Plant-2-Grow"
-	desc = "Weird space fertilizer"
-	desc_extended = "Apply to a plant to increase its potency."
+	name = "长效灵"
+	desc = "奇怪的太空肥料。"
+	desc_extended = "对植物使用可提升其效力。"
 	icon = 'icons/obj/item/container/spray_bottle.dmi'
 	icon_state = "inventory"
 	value = 50
@@ -13,5 +13,5 @@
 	var/obj/structure/interactive/plant/O = object
 
 	O.potency += 1
-	caller.visible_message(span("notice","\The [caller.name] fertilizes the [O.name]."),span("notice","You fertilize the [O.name]."))
+	caller.visible_message(span("notice","[caller.name]给[O.name]施了肥。"),span("notice","你给[O.name]施了肥。"))
 	delete()

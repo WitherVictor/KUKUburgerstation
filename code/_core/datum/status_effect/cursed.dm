@@ -1,6 +1,6 @@
 /status_effect/cursed
-	name = "Cursed"
-	desc = "You've been cursed!"
+	name = "诅咒"
+	desc = "你被诅咒了！"
 	id = CURSED
 
 	minimum = SECONDS_TO_DECISECONDS(10)

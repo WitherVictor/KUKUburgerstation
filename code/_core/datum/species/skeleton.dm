@@ -1,6 +1,6 @@
 /species/skeleton/
-	name = "Skeleton"
-	desc = "Meat."
+	name = "骷髅"
+	desc = "肉。"
 	id = "skeleton"
 	flags_species = SPECIES_SKELETON
 

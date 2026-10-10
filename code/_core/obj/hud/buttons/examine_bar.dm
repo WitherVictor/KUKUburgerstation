@@ -1,5 +1,5 @@
 /obj/hud/button/examine_bar
-	name = "examine bar"
+	name = "查看信息栏"
 	mouse_opacity = 0
 	icon = 'icons/hud/examine_bar.dmi'
 	icon_state = "longboy"
@@ -7,7 +7,7 @@
 	screen_loc = "LEFT,BOTTOM"
 	maptext_width = VIEW_RANGE*TILE_SIZE
 
-	maptext = "hello"
+	maptext = "你好"
 
 	flags_hud = FLAG_HUD_MOB
 

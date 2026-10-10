@@ -1,6 +1,6 @@
 /obj/hud/button/stat/
-	name = "stat element"
-	desc = "Stat information."
+	name = "状态组件"
+	desc = "状态信息。"
 	var/id
 
 	screen_loc = "CENTER,CENTER"

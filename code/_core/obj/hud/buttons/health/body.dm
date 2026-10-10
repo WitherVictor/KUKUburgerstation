@@ -1,6 +1,6 @@
 /obj/hud/button/health/body
-	name = "limb health"
-	desc = "Health for your limbs."
+	name = "肢体健康"
+	desc = "各肢体的健康状况。"
 	id = "body"
 
 	icon = 'icons/hud/hud.dmi'

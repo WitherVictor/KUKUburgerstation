@@ -161,7 +161,7 @@ window "chat"
 		anchor2 = -1,-1
 		background-color = none
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Chat Tabs"
+		title = "聊天标签页"
 		titlebar = false
 		statusbar = false
 		can-close = false
@@ -191,7 +191,7 @@ window "chat_all"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "All"
+		title = "全部"
 		titlebar = false
 		statusbar = false
 		can-close = false
@@ -219,7 +219,7 @@ window "chat_combat"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Combat"
+		title = "战斗"
 		titlebar = false
 		statusbar = false
 		can-close = false
@@ -242,7 +242,7 @@ window "chat_debug"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Debug"
+		title = "调试"
 		is-pane = true
 		can-scroll = vertical
 	elem "output"
@@ -261,7 +261,7 @@ window "chat_looc"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "LOOC"
+		title = "本地角色外"
 		titlebar = false
 		statusbar = false
 		can-close = false
@@ -285,7 +285,7 @@ window "chat_ooc"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "OOC"
+		title = "角色外"
 		titlebar = false
 		statusbar = false
 		can-close = false
@@ -309,7 +309,7 @@ window "chat_say"
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Say"
+		title = "说话"
 		titlebar = false
 		statusbar = false
 		can-close = false
@@ -359,7 +359,7 @@ window "control"
 		text-color = #ffffff
 		background-color = #ff3300
 		saved-params = "is-checked"
-		text = "Donate!"
+		text = "赞助！"
 		command = "open-patreon"
 	elem "github"
 		type = BUTTON
@@ -386,7 +386,7 @@ window "control"
 		anchor1 = 0,0
 		anchor2 = 25,0
 		saved-params = "is-checked"
-		text = "Wiki"
+		text = "维基"
 		command = ""
 	elem "splitter"
 		type = CHILD
@@ -411,7 +411,7 @@ window "edit"
 		is-visible = false
 		border = sunken
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Edit"
+		title = "编辑"
 	elem "exit"
 		type = BUTTON
 		pos = 540,460
@@ -419,7 +419,7 @@ window "edit"
 		anchor1 = 100,100
 		anchor2 = 100,100
 		saved-params = "is-checked"
-		text = "Save and Exit"
+		text = "保存并退出"
 		command = ""
 	elem "input"
 		type = INPUT
@@ -472,7 +472,7 @@ window "main"
 		anchor2 = -1,-1
 		is-default = true
 		saved-params = "pos;size;is-minimized;is-maximized"
-		title = "Burgerstation 13"
+		title = "汉堡站13"
 		statusbar = false
 		icon = 'interface\\icons\\burger.png'
 		image-mode = center

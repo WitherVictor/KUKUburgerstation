@@ -1,7 +1,7 @@
 /obj/item/container/edible/egg
-	name = "egg"
-	desc = "What came first? The rooster that had to fertilize it."
-	desc_extended = "An egg hatched from a chicken."
+	name = "鸡蛋"
+	desc = "先有鸡还是先有蛋？当然是负责受精的公鸡。"
+	desc_extended = "母鸡下的一枚蛋。"
 	icon = 'icons/obj/item/consumable/food/meat.dmi'
 	icon_state = "egg"
 

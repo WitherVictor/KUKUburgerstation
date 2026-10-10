@@ -1,6 +1,6 @@
 /obj/structure/interactive/conveyor
-	name = "conveyor belt"
-	desc = "A metal conveyor belt, used to move crates and large objects."
+	name = "传送带"
+	desc = "用于搬运货箱和大型物体的金属传送带。"
 	icon = 'icons/obj/structure/conveyor.dmi'
 	icon_state = "conveyor"
 

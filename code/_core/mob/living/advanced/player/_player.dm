@@ -3,8 +3,8 @@
 	///Snowflake system that generates a md5 hash of the player on character creation.
 	var/unique_pid
 
-	desc = "Seems a little smarter than most, you think."
-	desc_extended = "This is a player."
+	desc = "你觉得这人似乎比大多数人聪明一点。"
+	desc_extended = "这是一名玩家。"
 
 	dna = /dna/human
 
@@ -119,7 +119,7 @@
 	var/species/owner_species = SPECIES(species)
 	. = list(
 		div("examine_title", src.name),
-		div("center bold","Level [level] [owner_species.name]"),
+		div("center bold","[level]级 [owner_species.name]"),
 		div("examine_description_long", src.desc_extended)
 	)
 
@@ -249,8 +249,10 @@
 	else
 		prestige_count[skill_id] += 1
 	set_skill_level(skill_id, (prestige_count[skill_id]*5))
-	src.to_chat(span("warning","Your loyalty implant buzzes as you feel your brain tampered with... seems like you've forgot everything about [skill_id]..."))
-	src.to_chat(span("notice","You have prestiged your [skill_id]. It is now at prestige level [prestige_count[skill_id]], requiring skill level [100 + prestige_count[skill_id]*5] to prestige again."))
+	var/experience/E = skills[skill_id]
+	var/skill_name = E ? E.name : skill_id
+	src.to_chat(span("warning","你的忠诚植入体嗡嗡作响，你感觉大脑被动了手脚……似乎忘记了关于[skill_name]的一切……"))
+	src.to_chat(span("notice","你的[skill_name]技能已转生，现为第[prestige_count[skill_id]]次转生。再次转生需要技能达到[100 + prestige_count[skill_id]*5]级。"))
 	//broadcast_to_clients(span("notice","[src.real_name] prestiged their [skill_id] to level [prestige_count[skill_id]]!"))
 	return TRUE
 

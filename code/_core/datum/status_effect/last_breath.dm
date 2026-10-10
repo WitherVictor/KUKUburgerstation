@@ -1,6 +1,6 @@
 /status_effect/last_breath
-	name = "Last Breath"
-	desc = "You're on your last legs!"
+	name = "最后喘息"
+	desc = "你已经奄奄一息了！"
 	id = CRITPROTECTION
 	minimum = SECONDS_TO_DECISECONDS(5)
 	maximum = SECONDS_TO_DECISECONDS(5)

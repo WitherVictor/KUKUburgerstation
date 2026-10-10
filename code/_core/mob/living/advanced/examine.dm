@@ -20,9 +20,9 @@
 
 	if(handcuffed)
 		if(examiner == src)
-			. += div("danger","You are handcuffed!")
+			. += div("danger","你被戴上了手铐！")
 		else
-			. += div("warning","(<a href='?src=\ref[examiner];uncuff=\ref[src]'>Remove</a>) [capitalize(pronoun)] is handcuffed!")
+			. += div("warning","（<a href='?src=\ref[examiner];uncuff=\ref[src]'>解开</a>）[pronoun]被戴上了手铐！")
 
 	. += ..()
 

@@ -2,7 +2,7 @@
 	set name = "Adjust Darkvision"
 	set category = "Game"
 
-	var/desired_value = input("What is your desired darkvision strength? (0 to 255, high values is better vision.)","Adjust Darkvision",255 - plane_master_lighting.alpha) as null|num
+	var/desired_value = input("你希望将夜视强度设为多少？（0 至 255，数值越高，视野越清晰。）","调整夜视",255 - plane_master_lighting.alpha) as null|num
 
 	if(isnum(desired_value))
 		plane_master_lighting.alpha = clamp(255 - desired_value,0,255)

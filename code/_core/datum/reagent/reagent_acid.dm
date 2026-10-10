@@ -1,8 +1,8 @@
 /reagent/acid
-	name = "acid"
+	name = "酸"
 	var/acid_strength = 1
 
-	flavor = "acid"
+	flavor = "酸"
 
 	flavor_strength = 10
 
@@ -15,7 +15,7 @@
 
 
 /reagent/acid/sulphuric
-	name = "sulphuric acid"
+	name = "硫酸"
 	color = "#FF6A00"
 
 	acid_strength = 10

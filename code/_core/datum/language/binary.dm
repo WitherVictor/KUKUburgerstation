@@ -1,5 +1,5 @@
 /language/binary
-	name = "Binary"
+	name = "二进制语"
 	id = LANGUAGE_BINARY
 
 /language/binary/process_text(var/speaker,var/text)

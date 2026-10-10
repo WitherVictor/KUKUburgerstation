@@ -1,5 +1,5 @@
 /obj/hud/inventory/organs/torso //Undershirt + Shirt
-	name = "torso slot"
+	name = "上衣装备槽"
 	icon_state = "slot_torso"
 	id = BODY_TORSO
 	screen_loc = "LEFT:2+1,BOTTOM+2:14"
@@ -13,7 +13,7 @@
 	priority = 100
 
 /obj/hud/inventory/organs/torso_o
-	name = "armor slot"
+	name = "护甲装备槽"
 	icon_state = "slot_torso_o"
 	id = BODY_TORSO_O
 	screen_loc = "LEFT:1,BOTTOM+3:15"
@@ -29,7 +29,7 @@
 	advanced_layering = TRUE
 
 /obj/hud/inventory/organs/torso_b
-	name = "back slot"
+	name = "背部装备槽"
 	icon_state = "slot_torso_b"
 	id = BODY_TORSO_B
 	screen_loc = "CENTER-4,BOTTOM:11"
@@ -57,7 +57,7 @@
 	. = ..()
 
 /obj/hud/inventory/organs/torso_ob
-	name = "holster"
+	name = "武器套"
 	icon_state = "slot_torso_ob"
 	id = BODY_TORSO_OB
 	screen_loc = "CENTER-5,BOTTOM:11"

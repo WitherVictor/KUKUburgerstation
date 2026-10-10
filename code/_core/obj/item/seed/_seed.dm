@@ -1,7 +1,7 @@
 /obj/item/seed
-	name = "seed packet"
-	desc = "Seed pun here."
-	desc_extended = "A packet of seeds that can be planted on soil to grow plants."
+	name = "种子包"
+	desc = "这里本该有个种子笑话。"
+	desc_extended = "一包种子，种到土里就能长成植物。"
 
 	icon = 'icons/obj/item/seed.dmi'
 	icon_state = "seed"
@@ -30,7 +30,7 @@
 		qdel(src)
 		return ..()
 
-	name = "[P.name] seed packet"
+	name = "[P.name]种子包"
 	desc_extended = P.desc
 	icon = P.seed_icon
 	icon_state = P.seed_icon_state
@@ -97,7 +97,7 @@
 		var/turf/T = object
 		var/plant_type/P = SSbotany.all_plant_types[plant_type]
 		if(!P.allowed_turfs[T.type])
-			activator.to_chat(span("warning","You can't plant \the [src.name] on \the [T.name]."))
+			activator.to_chat(span("warning","你无法将[src.name]种在[T.name]上。"))
 			return TRUE
 		var/obj/structure/interactive/plant/PL = new(T)
 		PL.plant_type = plant_type
@@ -113,7 +113,7 @@
 		FINALIZE(PL)
 		if(!PL.dead && !PL.qdeleting)
 			PL.set_active(TRUE)
-		activator.visible_message(span("notice","\The [activator.name] plants \the [src.name] in \the [T.name], creating a [PL.name]."),span("notice","You plant \the [src.name] in \the [T.name], creating \a [PL.name]."))
+		activator.visible_message(span("notice","[activator.name]将[src.name]种进了[T.name]，种下了一株[PL.name]。"),span("notice","你将[src.name]种进了[T.name]，种下了一株[PL.name]。"))
 		qdel(src)
 		return TRUE
 

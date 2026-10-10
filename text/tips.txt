@@ -1,53 +1,53 @@
-Your attacks are 100% accurate against NPCs who are not engaged in combat.
-The chance of a critical hit increases with your precision skill, or fulfilling the weapon's critical hit conditions.
-Luck is influenced by the object's inherit luck as well as the person using it. Luck influences combat in small and big ways.
-Delivering objects to cargo, regardless if they are part of your objectives, will grant a bonus payment relative to the value of the object. All items have some value to NanoTrasen, including most corpses. Living creatures, except for NanoTrasen personnel, are worth 4 times as more.
-Objects abandoned for a long time, on station or the battlefield, will likely be stolen or removed after a while. Some corpses left decayed for too long may attract strange creatures...
-Bicaridine heals brute damage. Kelotane heals burn damage. Dylovene heals toxin damage. It's best to keep all 3 in supply as many weapons and creatures do different types of damage.
-You can butcher most animals or creatures for meat and materials if you have a sharp enough weapon for it. Not all creatures can be butchered, however.
-Shotguns, SMGs, and Carbines are good for taking on groups of enemies. Rifles are good for picking out targets from a long range. They require more skill to use effectively, however. Press the zoom key (Default: V) to zoom in with the weapon in hand.
-Worn and held equipment can slow you down based on the weight of the object and how cumbersome it is to move with it. Objects inside containers, such as backpacks or pouches, do not count towards your character's weight.
-NPCs also have their own ammo count to manage. A valid tactic to counter an onslaught of NPCs is to wait it out until they run out of ammo. Some enemy NPCs do carry backup weapons, including swords, however.
-.38 special rounds are actually just shorter .357 rounds, and can fit into .357 chambered weapons.
-Sneaking is a legitimate tactic to avoid enemies you don't want to engage with. To toggle sneaking mode, press the C key. Note that stamina is consumed while sneaking while moving.
-You're twice as hard to detect while sneaking when laying down (resting).
-Performing a sneak attack (hitting an enemy unaware of you presence while in sneak mode) with perform a guaranteed critical hit.
-Grabbing an enemy will stun them for a short time. Grabbing an enemy from behind will stun them for a longer duration, and also disarm them.
-Enemies who are strong enough can break out of your grab, if they're able to.
-Disarms have a chance to shove people, staggering them. If a staggered enemy hits an object behind them, they're stunned instead.
-Firing pins control who is allowed to operate the gun. Syndicate guns contain firing pins that only Syndicate Operatives can fire, and NanoTrasen guns contain firing pins that only NanoTrasen Mercenaries can fire.
-Firing pins can be removed with a screwdriver, and replaced with other firing pins.
-Magic items, such as spell tomes, staves, and scrolls, do not use firing pins, but instead rely on the user's loyalty implant.
-Nearly every object in the world can be used as cover for ranged weapons. Cover only works if the enemy is not directly next to it.
-Most armor and protective clothing can only protect certain parts of your body. Be sure to examine the object to see which bodyparts it protects, and what it can protect against.
-Your health goes down if your limbs take damage. Your head contributes to you overall health twice as much as your torso, while your arms, hands, legs and feet contribute half as much.
-Bullets generally deal a mix of piercing and blunt damage. Pistols and revolver rounds usually deal more blunt than piercing damage, while rifle and sniper rifle rounds deal more piercing than blunt damage.
-Just because a gun has a larger calibre doesn't mean it deals more damage. Smaller rounds such as the 9mm cartridge can deal more damage to an armored target than larger rounds.
-NATO designated cartridges (9mm, 5.56mm, and 7.62mm) tend to penetrate better than calibre designated cartridges (.50, .45,, .223, .308), but deal less damage.
-Laser weapons are expensive and overheat easily, but they typically do full damage against targets as laser resistant armor is rare.
-Don't forget an objective finder when going out to find objectives. The objective tracker at the left of your screen only displays the initial position of the objectives, and not their current position.
-Having low nutrition and/or hydration incurs penalties. You will move slower when hungry and thirsty, and your health, stamina, and mana will regenerate slower.
-Your health, mana, and stamina regenerates faster while resting or sleeping.
-Your mana regenerates less if you have low mana.
-Unarmed attacks cannot be blocked, except by shields and your hands.
-Most sources of damage absorbed via armor will convert itself into 25% of the damage blocked as fatigue damage. Exceptions apply to fatigue damage, holy damage, and dark damage.
-Having a negative armor rating means that you take additional damage from what that armor protects.
-Humans have a natural holy and darkness armor resist of 100.
-Just because something is, doesn't mean it should be. If you believe you've encountered a bug or something horribly unbalanced, start a conversation about it on discord.
-Do not be afraid to ask questions! Wikibot can answer most commonly asked questions if asked in OOC, and if not, players are willing to help and give you advice.
-Sniper rifles are less precise at close range. They're more precise at longer range while looking through the scope (Default Key: V.)
-Feel your character is too slow? Make sure they're not injured, hungry, or thirsty before engaging in combat. Most weapons also slow you down when equipped as well.
-Food and drink is just as important as medicine. There is a very high chance that you will become hungry or thirst in the middle of a mission and suffer hunger or thirst penalties.
-Having performance issues? You can change your graphical settings under "View" in the top left corner.
-It is possible for NPCs or Players to break out of cuffs by resisting. NPCs and players cannot resist out of cuffs if they're on the floor.
-Don't go alone. The meatmen might get you.
-Sometimes wearing Syndicate armor as a NanoTrasen mercenary isn't a good idea as your corpse can easily be mistaken for the enemy when you die.
-It is actually possible for two people to hit eachother with a melee attack at the same time and both die.
-Backpacks slow you down when worn or carried. Remember to take only what you need.
-Wearing running shoes gives a bonus to movespeed.
-90% of player deaths are a result of going alone.
-Secure crates do not give any rewards when turned into cargo, regardless of contents. If you can't get them open, how do you expect Central Command to?
-Armor and clothing that give magic, holy, or dark defence give 0.5 armor penetration per 1 defense to attacks grant by the wearer.
-You consume twice as much reagents if you're drinking from a glass than compared to a beaker. You consume all the reagents when drinking from a shot glass.
-You gain decent physical damage resistance when drunk. This increases based on your intoxication. Careful not to get too drunk or your body may suffer consequences...
-The frequency of headsets and radios can be changed by hovering over the object and using your mousewheel.
+攻击尚未进入战斗的 NPC 时，你的攻击必定命中。
+提升精准技能，或满足武器的暴击条件，都能提高暴击概率。
+幸运的效果取决于物品自身的幸运值，也取决于使用者。幸运会从细微到关键的各个方面影响战斗。
+将物品送交货运部，无论是否属于任务目标，都能获得与物品价值相应的额外报酬。所有物品对纳米传讯都有一定价值，包括大多数尸体。除纳米传讯人员外，活体生物的价值是尸体的四倍。
+无论在站内还是战场上，长期无人看管的物品都可能被偷走或清理。腐烂太久的某些尸体还可能招来奇怪的生物……
+比卡利定治疗物理伤害，克罗烷治疗灼烧伤害，地洛文治疗毒素伤害。许多武器和生物会造成不同类型的伤害，最好三种药都备齐。
+只要武器足够锋利，你就能屠宰大多数动物或生物，获取肉和材料。不过，并非所有生物都可以屠宰。
+霰弹枪、冲锋枪和卡宾枪适合应付成群的敌人。步枪适合远距离点杀目标，但需要更高的技能才能发挥效果。手持武器时按瞄准键（默认 V）即可放大视野。
+穿戴或手持的装备会根据重量和行动时的累赘程度降低你的移动速度。背包、腰包等容器内的物品不计入角色负重。
+NPC 的弹药也有限。面对大量 NPC 的进攻，等待它们耗尽弹药也是一种有效战术。不过，有些敌方 NPC 会携带刀剑等备用武器。
+.38 Special 弹实际上是较短的 .357 弹，可以装入使用 .357 弹的武器。
+潜行是避开不想交战的敌人的有效战术。按 C 键切换潜行模式。注意，潜行移动会消耗体力。
+趴下（休息）时潜行，被发现的难度会提高一倍。
+偷袭必定暴击，也就是在潜行模式下攻击尚未察觉你的敌人。
+抓住敌人会使其短暂昏迷。从背后抓住敌人，会使其昏迷更久，并缴掉其武器。
+足够强壮的敌人有能力挣脱你的抓取。
+缴械有一定概率推搡目标，使其踉跄。如果踉跄的敌人撞上身后的物体，就会昏迷。
+击针决定谁可以使用枪械。辛迪加枪械的击针只允许辛迪加特工开火，纳米传讯枪械的击针则只允许纳米传讯雇佣兵开火。
+击针可以用螺丝刀拆下，再换上其他击针。
+法术书、法杖和卷轴等魔法物品不使用击针，而是依据使用者的忠诚植入体判断权限。
+世界中几乎所有物体都能充当抵挡远程攻击的掩体。但敌人紧挨着掩体时，掩体就不起作用了。
+大多数护甲和防护服只能保护身体的部分部位。记得查看物品，确认它能保护哪些部位，以及能抵挡哪些伤害。
+肢体受伤会降低生命值。头部损伤对总体生命值的影响是躯干的两倍，而手臂、手、腿和脚的影响是躯干的一半。
+子弹通常同时造成穿刺和钝击伤害。手枪弹和左轮手枪弹通常以钝击伤害为主，步枪弹和狙击步枪弹则以穿刺伤害为主。
+枪械口径更大，并不一定伤害更高。9 毫米弹等较小的弹药对装甲目标造成的伤害，可能高于更大的弹药。
+北约制式弹药（9 毫米、5.56 毫米、7.62 毫米）的穿透力通常高于以英寸口径命名的弹药（.50、.45、.223、.308），但伤害较低。
+激光武器价格昂贵，也容易过热。不过，抗激光护甲很少见，因此它们通常能对目标造成足额伤害。
+外出寻找任务目标时，别忘了带目标定位器。屏幕左侧的任务目标追踪栏只显示目标的初始位置，不显示当前位置。
+营养或水分不足会带来惩罚。饥饿或口渴时，你的移动速度会降低，生命值、体力和法力的恢复速度也会变慢。
+休息或睡眠时，生命值、法力和体力恢复得更快。
+法力较低时，法力恢复量也会减少。
+只有盾牌和双手能格挡徒手攻击。
+护甲吸收的大多数伤害会按被吸收伤害的 25% 转化为疲劳伤害。疲劳伤害、神圣伤害和黑暗伤害不适用此规则。
+某类伤害的护甲值为负数，意味着你受到该类伤害时会承受额外伤害。
+人类天生拥有 100 点神圣护甲和 100 点黑暗护甲。
+游戏里存在的东西未必就合理。如果你觉得遇到了漏洞或严重失衡的内容，请到 Discord 讨论。
+别怕提问！在角色外频道（OOC）提问时，维基机器人能回答大多数常见问题；即使它答不上来，其他玩家也愿意帮助你、给你建议。
+狙击步枪在近距离的精准度较低。在远处通过瞄准镜观察目标时，精准度更高（默认按键 V）。
+觉得角色走得太慢？交战前先确认自己没有受伤、饥饿或口渴。大多数武器装备后也会拖慢你的速度。
+食物和饮水与药物同样重要。你很可能在任务中途感到饥饿或口渴，并受到相应惩罚。
+遇到性能问题？你可以在左上角的“视图”菜单中调整图形设置。
+NPC 和玩家都可能通过挣脱动作摆脱手铐，但倒在地上时无法这样挣脱手铐。
+别独自行动。血肉人可能会抓到你。
+身为纳米传讯雇佣兵，穿辛迪加护甲有时可不是好主意：死后你的尸体很容易被当成敌人。
+两个人确实可能同时用近战攻击命中对方，然后同归于尽。
+穿戴或携带背包会降低移动速度。记得只带必需品。
+穿跑鞋可以提高移动速度。
+90% 的玩家死亡都源于独自行动。
+安全货箱无论装了什么，交给货运部都没有奖励。你都打不开，难道还指望中央指挥部能打开？
+护甲和服装提供的魔法、神圣或黑暗防御，每 1 点都会为穿戴者的攻击提供 0.5 点护甲穿透。
+用玻璃杯喝东西时，每次摄入的试剂量是用烧杯时的两倍。用小酒杯喝时，则会一次喝完所有试剂。
+醉酒时，你会获得可观的物理伤害抗性，醉得越厉害，抗性越高。不过别喝得太醉，否则身体可能会吃不消……
+将鼠标悬停在耳机或无线电上，再滚动鼠标滚轮，即可调整频率。

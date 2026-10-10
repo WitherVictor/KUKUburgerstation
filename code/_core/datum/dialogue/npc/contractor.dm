@@ -7,7 +7,7 @@
 	. = list()
 
 	.["hello"] = list(
-		"Ah, greetings [P.real_name], I have heard quite about you. Perhaps you'd like to earn some extra credits while working here? I am offering #1... if you're up for it.",
+		"啊，你好，[P.real_name]，久闻大名。想在这里工作时多赚点信用点吗？我提供#1……只要你有胆量接。",
 		"blood contracts"
 	)
 
@@ -17,26 +17,26 @@
 
 
 	.["blood contracts"] = list(
-		"It's simple: You #1 from me, and you go out there and complete it. You can then #2 to me and I will give you the reward inscribed in the #2, as well as what you spent to purchase to the blood contract. \
-		There is no risk of failing it... however if you lose the contract... well you lose your investment.",
+		"很简单：向我#1，然后出去完成它。之后回来向我#2，我就会支付契约上写明的奖励，并退还购买血契的费用。\
+		任务失败没有额外损失……但如果把契约弄丢了……那你的本金也就没了。",
 		"purchase a blood contract",
 		"turn in a blood contract"
 	)
 
 	.["purchase a blood contract"] = list(
-		"I hope you'll enjoy these..."
+		"希望你会喜欢这些……"
 	)
 
 	.["turn in a blood contract"] = list(
-		"..."
+		"……"
 	)
 
 	.["*success"] = list(
-		"Excellent work. Please enjoy your reward..."
+		"干得漂亮。好好享用你的奖励……"
 	)
 
 	.["*failure"] = list(
-		"You have no contracts in your hand that are completed. Please do not waste my time."
+		"你手里没有已完成的契约。请别浪费我的时间。"
 	)
 
 /dialogue/npc/contractor/set_topic(var/mob/living/advanced/player/P,var/topic)

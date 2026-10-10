@@ -1,7 +1,7 @@
 /obj/item/container/simple/beaker
-	name = "glass beaker"
-	desc = "For the mad scientist in all of us."
-	desc_extended = "Holds reagents."
+	name = "玻璃烧杯"
+	desc = "献给我们每个人心中的疯狂科学家。"
+	desc_extended = "用于盛装化学物质。"
 	crafting_id = "beaker"
 
 	icon = 'icons/obj/item/container/cup/beaker.dmi'
@@ -57,14 +57,14 @@
 	return ..()
 
 /obj/item/container/simple/beaker/potassium
-	name = "beaker of potassium"
+	name = "钾烧杯"
 
 /obj/item/container/simple/beaker/potassium/Generate()
 	reagents.add_reagent(/reagent/potassium,reagents.volume_max)
 	return ..()
 
 /obj/item/container/simple/beaker/phosphorous
-	name = "beaker of phosphorous"
+	name = "磷烧杯"
 
 /obj/item/container/simple/beaker/phosphorous/Generate()
 	reagents.add_reagent(/reagent/phosphorous,reagents.volume_max)
@@ -123,5 +123,5 @@
 	. = ..()
 	if(reagent && reagent_amount > 0)
 		var/reagent/R = REAGENT(src.reagent)
-		name = "[initial(name)] ([R.name] [reagent_amount]u)"
+		name = "[initial(name)]（[R.name]，[reagent_amount]单位）"
 		reagents.add_reagent(src.reagent,reagent_amount)

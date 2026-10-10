@@ -1,8 +1,8 @@
 /obj/item/organ/internal/heart
-	name = "heart"
+	name = "心脏"
 	id = BODY_HEART
 	icon_state = BODY_HEART
-	desc = "Pumps blood throughout the body."
+	desc = "将血液泵送至全身。"
 
 	attach_flag = BODY_TORSO
 
@@ -19,4 +19,4 @@
 
 
 /obj/item/organ/internal/heart/robotic
-	name = "robotic heart"
+	name = "机械心脏"

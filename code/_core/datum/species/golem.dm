@@ -1,6 +1,6 @@
 /species/golem/
-	name = "Golem"
-	desc = "Fucking stone people."
+	name = "魔像"
+	desc = "他妈的石头人。"
 	id = "golem"
 	flags_species = SPECIES_GOLEM
 

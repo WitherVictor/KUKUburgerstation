@@ -1,5 +1,5 @@
 /vote/mission //Vote instance
-	name = "Horde Type Vote"
+	name = "任务类型投票"
 	options = list()
 	time_limit = 120
 
@@ -24,7 +24,7 @@
 	if(winner)
 		SSgamemode.set_active_gamemode(gamemode_name_to_type[winner],"voting on_result")
 	else
-		broadcast_to_clients(span("danger","Vote failed! Defaulting to first result"))
+		broadcast_to_clients(span("danger","投票失败！默认选择第一个选项。"))
 		SSgamemode.set_active_gamemode(gamemode_name_to_type[1],"voting on_result")
 
 	return TRUE

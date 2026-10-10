@@ -1,5 +1,5 @@
 /obj/item/container/edible/dynamic/pizza
-	name = "pizza"
+	name = "披萨"
 	icon = 'icons/obj/item/consumable/food/dynamic_pizza.dmi'
 	icon_state = "bread_pizza"
 	crafting_id = "pizza"
@@ -130,7 +130,7 @@
 			else
 				color_sauce = blend_colors(color_sauce,I.reagents.color,0.5) //Lazy, I know but it saves on vars and processing.
 			I.reagents.transfer_reagents_to(src.reagents_toppings,min(10,I.reagents.volume_current),activator = activator)
-			activator.to_chat(span("notice","You sauce up \the [initial(src.name)]."))
+			activator.to_chat(span("notice","你给[initial(src.name)]涂上了酱汁。"))
 			return TRUE
 		else if(istype(I,/obj/item/container/edible/dynamic/cheese))
 			if(!color_cheese)
@@ -152,11 +152,11 @@
 						topping_data["large"] += I.reagents.color
 		if(valid)
 			update_sprite()
-			activator.to_chat(span("notice","You add \the [I.name] to \the [initial(src.name)]."))
+			activator.to_chat(span("notice","你将[I.name]加到了[initial(src.name)]上。"))
 			I.reagents.transfer_reagents_to(src.reagents_toppings,I.reagents.volume_current,activator = activator)
 			qdel(I)
 		else
-			activator.to_chat(span("warning","You can't reasonably find a way to add \the [I.name] to \the [initial(src.name)]..."))
+			activator.to_chat(span("warning","你想不出怎么把[I.name]加到[initial(src.name)]上……"))
 
 		return TRUE
 

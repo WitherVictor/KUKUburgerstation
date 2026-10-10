@@ -1,5 +1,5 @@
 /obj/hud/button/crafting/
-	name = "yeah"
+	name = "嗯哼"
 
 	essential = TRUE
 
@@ -16,7 +16,7 @@
 	return ..()
 
 /obj/hud/button/crafting/craft
-	name = "craft object"
+	name = "制作物品"
 	icon_state = "arrow"
 	dir = EAST
 	screen_loc = "CENTER+2,TOP-3"
@@ -39,7 +39,7 @@
 
 
 /obj/hud/button/crafting/close
-	name = "close crafting menu"
+	name = "关闭制作菜单"
 	icon_state = "close_crafting"
 	screen_loc = "CENTER-2,TOP-3"
 

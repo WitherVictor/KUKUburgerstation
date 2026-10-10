@@ -7,7 +7,7 @@
 
 /reagent/nutrition/bad_meat
 
-	name = "contaminated meat"
+	name = "受污染的肉"
 
 	flags_flavor = FLAG_FLAVOR_GROSS | FLAG_FLAVOR_RAW | FLAG_FLAVOR_MEAT
 	liquid = 0.2

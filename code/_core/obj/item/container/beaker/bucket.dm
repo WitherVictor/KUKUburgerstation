@@ -1,7 +1,7 @@
 /obj/item/container/simple/beaker/bucket
-	name = "bucket"
-	desc = "Yup. This is a bucket."
-	desc_extended = "A cheap and bulky steel bucket."
+	name = "水桶"
+	desc = "没错，这是个桶。"
+	desc_extended = "一个便宜又笨重的钢桶。"
 	icon = 'icons/obj/item/container/bucket.dmi'
 	icon_state = "bucket"
 	icon_count = 9
@@ -25,7 +25,7 @@
 
 
 /obj/item/container/simple/beaker/bucket/water
-	name = "water bucket"
+	name = "装水的桶"
 	color = COLOR_BLUE
 
 /obj/item/container/simple/beaker/bucket/water/Generate()

@@ -1,5 +1,5 @@
 /obj/hud/button/lockpicking
-	name = "lock"
+	name = "锁"
 	icon = 'icons/hud/lockpicking.dmi'
 	icon_state = "base"
 	screen_loc = "CENTER:-64,CENTER:-64"

@@ -1,6 +1,6 @@
 /job/security
-	name = "Security Officer"
-	desc = "A security enforcer is someone who protects NanoTrasen as well as its assets and its people. They have bonuses in offensive skills as well as bonuses in offensive and defensive attributes."
+	name = "安保员"
+	desc = "安保员负责保护纳米传讯及其资产和人员，攻击技能以及攻防属性均有加成。"
 	passive_income = 400
 	passive_income_bonus = 100
 
@@ -19,10 +19,10 @@
 	)
 
 	ranks = list(
-		"Recruit",
-		"Junior Officer",
-		"Officer",
-		"Senior Officer"
+		"安保新兵",
+		"初级安保员",
+		"安保员",
+		"资深安保员"
 	)
 
 	job_flags = FLAG_JOB_KILLING

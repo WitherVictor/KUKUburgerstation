@@ -1,5 +1,5 @@
 /objective/artifact
-	name = "Obtain Artifact"
+	name = "回收遗物"
 
 	var/obj/structure/interactive/artifact/created_artifact
 
@@ -25,7 +25,7 @@
 	return pick(valid_targets)
 
 /objective/artifact/get_description()
-	return "Obtain [english_list(tracked_atoms)] and bring it shipside. Location: [english_list(get_locations(),"Unknown")]."
+	return "取得[english_list(tracked_atoms,"未知目标","、","、")]，并将其带回汉堡站。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/artifact/setup()
 	if(!length(possible_objective_spawns))

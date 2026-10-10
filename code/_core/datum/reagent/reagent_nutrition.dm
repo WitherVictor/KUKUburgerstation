@@ -1,6 +1,6 @@
 /reagent/nutrition/
-	name = "nutrients"
-	desc = "A source of nutrition."
+	name = "营养物质"
+	desc = "一种营养来源。"
 	color = "#FFFFFF"
 	alpha = 255
 

@@ -1,13 +1,13 @@
 /obj/item/weapon/melee/tool/brass
-	name = "tool"
+	name = "工具"
 	drop_sound = 'sound/items/drop/scrap.ogg'
 	has_quick_function = TRUE
 
 
 /obj/item/weapon/melee/tool/brass/wirecutters
-	name = "brass wirecutters"
-	desc = "For cutting brass! And wires I guess."
-	desc_extended = "A cutter which is mainly used for wires. This one is made of brass!"
+	name = "黄铜钢丝钳"
+	desc = "用来剪黄铜！大概也能剪电线。"
+	desc_extended = "主要用于剪断电线的钳子。这把是黄铜做的！"
 	icon = 'icons/obj/item/tools.dmi'
 	icon_state = "cutters_clock"
 
@@ -19,9 +19,9 @@
 	value = 3
 
 /obj/item/weapon/melee/tool/brass/wrench
-	name = "clockwork wrench"
-	desc = "Percussive Maintinence!"
-	desc_extended = "A wrench that can fit any bolt in the known universe. What a time to be alive. This one is made of brass and cogs!"
+	name = "发条扳手"
+	desc = "敲一敲就修好了！"
+	desc_extended = "一把适配已知宇宙中任何螺栓的扳手。活在这个时代真好。这把由黄铜和齿轮制成！"
 	icon = 'icons/obj/item/tools.dmi'
 	icon_state = "wrench_clock"
 
@@ -33,9 +33,9 @@
 	value = 5
 
 obj/item/weapon/melee/tool/brass/welder
-	name = "clockwork welding tool"
-	desc = "A strange welding tool that is made of brass and gears. How does this even work?"
-	desc_extended = "A wielding tool powered by special hydrogen fuel. Good for most wielding jobs."
+	name = "发条焊接工具"
+	desc = "由黄铜和齿轮制成的奇怪焊接工具。这到底是怎么工作的？"
+	desc_extended = "使用特殊氢燃料的焊接工具，能胜任大多数焊接工作。"
 	icon = 'icons/obj/item/tools.dmi'
 	icon_state = "brasswelder"
 
@@ -99,16 +99,16 @@ obj/item/weapon/melee/tool/brass/welder
 	if(active)
 		active = FALSE
 		update_sprite()
-		activator.to_chat(span("notice","You turn \the [src.name] off."))
+		activator.to_chat(span("notice","你关闭了[src.name]。"))
 		STOP_THINKING(src)
 	else
 		if(fuel_current > 0)
 			active = TRUE
 			update_sprite()
-			activator.to_chat(span("notice","\The [src.name] turns on."))
+			activator.to_chat(span("notice","[src.name]启动了。"))
 			START_THINKING(src)
 		else
-			activator.to_chat(span("warning","\The [src.name] doesn't seem to want to turn on..."))
+			activator.to_chat(span("warning","[src.name]似乎无法启动……"))
 
 	return TRUE
 
@@ -127,9 +127,9 @@ obj/item/weapon/melee/tool/brass/welder
 	return ..()
 
 /obj/item/weapon/melee/tool/brass/crowbar
-	name = "brass crowbar"
-	desc = "Why?"
-	desc_extended = "A curved piece of metal still used as a tool today. This one is made of brass!"
+	name = "黄铜撬棍"
+	desc = "为什么？"
+	desc_extended = "一根弯曲的金属棒，至今仍被当作工具使用。这根是黄铜做的！"
 	icon = 'icons/obj/item/tools.dmi'
 	icon_state = "crowbar_clock"
 
@@ -141,9 +141,9 @@ obj/item/weapon/melee/tool/brass/welder
 	value = 5
 
 /obj/item/weapon/melee/tool/brass/screwdriver
-	name = "brass screwdriver"
-	desc = "It drives brass screws."
-	desc_extended = "A screwdriver. Can be used to replace firing pins in weapons, as well as a variety of other screw-related functions. This one is made of brass!"
+	name = "黄铜螺丝刀"
+	desc = "用来拧黄铜螺丝。"
+	desc_extended = "一把螺丝刀。可用于更换武器击针，以及各种与螺丝有关的操作。这把是黄铜做的！"
 	icon = 'icons/obj/item/tools.dmi'
 	icon_state = "screwdriver_clock"
 
@@ -155,9 +155,9 @@ obj/item/weapon/melee/tool/brass/welder
 	flags_tool = FLAG_TOOL_SCREWDRIVER
 
 /obj/item/weapon/melee/tool/brass/multitool
-	name = "brass multitool"
-	desc = "Ratvar's finest."
-	desc_extended = "A multitool that can be used to pulse the wires of airlocks and other machinery. This one is made of brass."
+	name = "黄铜多功能工具"
+	desc = "拉特瓦尔的杰作。"
+	desc_extended = "可向气闸和其他机械的电线发送脉冲的多功能工具。这件是黄铜做的。"
 	icon = 'icons/obj/item/tools.dmi'
 	icon_state = "brassmultitool"
 

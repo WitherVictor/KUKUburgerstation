@@ -8,9 +8,9 @@
 
 /mob/living/advanced/player/antagonist/wizard/Finalize()
 	. = ..()
-	to_chat(span("danger","GREETINGS. YOU ARE THE WIZARD FROM THE WIZARD FEDERATION."))
-	to_chat(span("danger","YOU ARE TASKED WITH PRANKING THE CREW BETTER THAN THE HONKMOTHER COULD. DO THIS BY BUYING STUFF WITH THE VENDORS. WORK WITH YOUR TEAM TO PULL OFF THE GREATEST PRANK OF ALL TIME."))
+	to_chat(span("danger","向你致意！你是来自巫师联邦的巫师。"))
+	to_chat(span("danger","你的任务是捉弄船员，甚至要胜过鸣笛之母。去售货机购买道具，与队友合作，完成史上最伟大的恶作剧！"))
 
 /mob/living/advanced/player/antagonist/wizard/setup_name()
 	. = ..()
-	name = "Great Wizard [real_name] the Almighty and Powerful, Jr."
+	name = "全能强大的大巫师小[real_name]"

@@ -1,8 +1,8 @@
 //Purely visual effect for roided zombies.
 
 /status_effect/buff
-	name = "Buff"
-	desc = "You're buff."
+	name = "壮硕"
+	desc = "你肌肉壮硕。"
 	id = BUFF
 
 	default_magnitude = 100

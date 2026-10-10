@@ -34,7 +34,7 @@ var/global/static/list/obj/hud/button/chargen_buttons = list(
 
 
 /obj/hud/button/chargen
-	name = "chargen button"
+	name = "角色创建按钮"
 	icon_state = "square"
 	screen_loc = "CENTER,CENTER"
 

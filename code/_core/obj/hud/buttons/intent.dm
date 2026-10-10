@@ -1,6 +1,6 @@
 /obj/hud/button/intent
-	name = "intent"
-	desc = "Harm intent or bust."
+	name = "交互意图"
+	desc = "不切伤害意图，誓不罢休。"
 	icon_state = "intent"
 	screen_loc = "RIGHT:1-2,BOTTOM:11"
 
@@ -38,25 +38,25 @@
 
 //The reason why this isn't one button is to support button binds.
 /obj/hud/button/intent/help
-	name = "help intent"
-	desc_extended = "Clicking this will change your stance to help intent. Help intent is a more passive stance that will make you appear less aggressive and cause your unarmed attacks to do strictly fatigue damage."
+	name = "帮助意图"
+	desc_extended = "点击这里切换为帮助意图。这是一种较被动的姿态，会让你显得不那么有攻击性，并使徒手攻击只造成疲劳伤害。"
 	icon_state = "intent_help"
 	intent = INTENT_HELP
 
 /obj/hud/button/intent/harm
-	name = "harm intent"
-	desc_extended = "Clicking this will change your stance to harm intent. Harm intent is an aggressive stance that will cause your character to face towards your cursor and cause your unarmed attacks to deal more damage."
+	name = "伤害意图"
+	desc_extended = "点击这里切换为伤害意图。这是一种进攻姿态，会使角色面朝鼠标指针，并提高徒手攻击的伤害。"
 	icon_state = "intent_harm"
 	intent = INTENT_HARM
 
 /obj/hud/button/intent/disarm
-	name = "disarm intent"
-	desc_extended = "Clicking this will change your stance to disarm intent. Disarm intent is a defensive stance that will change your unarmed attacks to shove or disarm the enemy's weapon."
+	name = "缴械意图"
+	desc_extended = "点击这里切换为缴械意图。这是一种防御姿态，会将徒手攻击改为推搡敌人或缴掉其武器。"
 	icon_state = "intent_disarm"
 	intent = INTENT_DISARM
 
 /obj/hud/button/intent/grab
-	name = "grab intent"
-	desc_extended = "Clicking this will change your stance to grab intent. Grab intent is an offensive stance that will change your unarmed attacks to grab the enemy. Enemies can still attack you when grabbed, unless they are on the ground or facing away from you. Enemies grabbed by you will always take critical hits."
+	name = "抓取意图"
+	desc_extended = "点击这里切换为抓取意图。这是一种进攻姿态，会将徒手攻击改为抓住敌人。被抓住的敌人仍能攻击你，除非它们倒地或背对着你。你抓住的敌人受到的攻击必定暴击。"
 	icon_state = "intent_grab"
 	intent = INTENT_GRAB

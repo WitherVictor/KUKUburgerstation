@@ -1,7 +1,7 @@
 /obj/structure/interactive/construction/frame
-	name = "frame"
-	desc = "A metal frame."
-	desc_extended = "Could make a lattice with some rods, or a girder with some sheets."
+	name = "框架"
+	desc = "一副金属框架。"
+	desc_extended = "加上棒材可以建造支撑网格，加上板材可以建造梁架。"
 	icon_state = "frame"
 
 	health_base = 25
@@ -12,13 +12,13 @@
 	INTERACT_CHECK_NO_DELAY(S)
 
 	if(!istype(src.loc,/turf/simulated/floor/plating/))
-		activator.to_chat(span("warning","You need to build plating before you can build a girder!"))
+		activator.to_chat(span("warning","必须先铺好地板才能建造梁架！"))
 		return FALSE
 	if(S.amount < 1)
-		activator.to_chat(span("warning","You need a sheet in order to build a frame!"))
+		activator.to_chat(span("warning","建造梁架需要1张板材！"))
 		return FALSE
 	if(S.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	return TRUE
 
@@ -33,7 +33,7 @@
 	G.color = S.color
 	INITIALIZE(G)
 	GENERATE(G)
-	activator?.to_chat(span("notice","You place \the [G.name]."))
+	activator?.to_chat(span("notice","你建造了[G.name]。"))
 	S.add_item_count(-1)
 	qdel(src)
 	return TRUE
@@ -44,10 +44,10 @@
 	INTERACT_CHECK_NO_DELAY(R)
 
 	if(R.amount < 1)
-		activator.to_chat(span("warning","You need a rod in order to build a frame!"))
+		activator.to_chat(span("warning","建造支撑网格需要1根棒材！"))
 		return FALSE
 	if(R.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	return TRUE
 
@@ -58,7 +58,7 @@
 	INITIALIZE(L)
 	GENERATE(L)
 	FINALIZE(L)
-	activator?.to_chat(span("notice","You place \the [L.name]."))
+	activator?.to_chat(span("notice","你建造了[L.name]。"))
 	R.add_item_count(-1)
 	qdel(src)
 	return TRUE

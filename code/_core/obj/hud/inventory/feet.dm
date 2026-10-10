@@ -1,5 +1,5 @@
 /obj/hud/inventory/organs/left_foot
-	name = "left foot slot"
+	name = "左脚装备槽"
 	icon_state = "slot_foot_left"
 	id = BODY_FOOT_LEFT
 	screen_loc = "LEFT:3+2,BOTTOM+1:13"
@@ -16,7 +16,7 @@
 	priority = 50
 
 /obj/hud/inventory/organs/right_foot
-	name = "right foot slot"
+	name = "右脚装备槽"
 	icon_state = "slot_foot_right"
 	id = BODY_FOOT_RIGHT
 	screen_loc = "LEFT:1,BOTTOM+1:13"

@@ -1,6 +1,6 @@
 /ability/
-	var/name = "ability"
-	var/desc = "What does it do?"
+	var/name = "能力"
+	var/desc = "它有什么作用？"
 	var/icon = 'icons/hud/ability.dmi'
 	var/icon_state = "none"
 

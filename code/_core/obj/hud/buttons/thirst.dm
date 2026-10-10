@@ -1,7 +1,7 @@
 /obj/hud/button/thirst
-	name = "hunger and thirst"
-	desc = "Keep both of these up!"
-	desc_extended = "A tracker for your current hunger and thirst levels. These can be replenished by eating and drinking, respectively."
+	name = "饥饿与口渴"
+	desc = "两项都要保持充足！"
+	desc_extended = "显示当前的饥饿与口渴程度。分别通过进食和饮水补充营养与水分。"
 
 	icon = 'icons/hud/hunger.dmi'
 	icon_state = "thirst_bar_0"
@@ -31,17 +31,17 @@
 
 		switch(hydration_mod)
 			if(-INFINITY to 0.2)
-				. += div("danger","You're dehydrated!")
+				. += div("danger","你脱水了！")
 			if(0.2 to 0.3)
-				. += div("warning","You're very thirsty!")
+				. += div("warning","你非常渴！")
 			if(0.3 to 0.5)
-				. += div("warning","You're thirsty.")
+				. += div("warning","你渴了。")
 			if(0.5 to 0.7)
-				. += div("notice","You could use something to drink.")
+				. += div("notice","你可以喝点东西。")
 			if(0.7 to INFINITY)
-				. += div("notice","You're not thirsty.")
+				. += div("notice","你不渴。")
 
-		. += "Your hydration level is [FLOOR(hydration_mod*100,1)]%."
+		. += "你的水分水平为 [FLOOR(hydration_mod*100,1)]%。"
 
 
 

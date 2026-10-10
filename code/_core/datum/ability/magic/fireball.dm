@@ -1,6 +1,6 @@
 /ability/magic/projectile/fireball
-	name = "Fireball"
-	desc = "Shoot a fireball at the target."
+	name = "火球术"
+	desc = "向目标发射一枚火球。"
 	icon_state = "fireball"
 	cost = 10
 	cooldown = SECONDS_TO_DECISECONDS(8)

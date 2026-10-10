@@ -17,8 +17,8 @@
 	layer = LAYER_HUD+100
 
 /obj/hud/button/exchange/sell
-	name = "sell"
-	desc_extended = "Clicking here will sell the currently slotted object for currency. Items sold cannot be recovered."
+	name = "出售"
+	desc_extended = "点击此处，将当前槽位中的物品卖出换取货币。售出的物品无法取回。"
 
 	icon = 'icons/hud/hud.dmi'
 	icon_state = "sell"
@@ -36,11 +36,11 @@
 			if(I && !I.qdeleting && get_dist(I,A) <= 1)
 				B.calculate_value()
 				if(B.stored_value <= 0)
-					activator.to_chat(span("warning","\The [I.name] cannot be sold!"))
+					activator.to_chat(span("warning","[I.name]无法出售！"))
 				else
 					if(istype(B.stored_object,/obj/item/currency/gold_coin))
 						var/currency_added = A.adjust_currency(B.stored_value)
-						A.to_chat(span("notice","You exchange \the [B.stored_object] for [currency_added] credits."))
+						A.to_chat(span("notice","你用[B.stored_object]兑换了 [currency_added] 信用点。"))
 						B.set_stored_object(null)
 						qdel(I)
 					else
@@ -51,7 +51,7 @@
 						INITIALIZE(G)
 						G.amount = B.stored_value
 						FINALIZE(G)
-						A.to_chat(span("notice","You sell \the [B.stored_object] for [G.amount] gold."))
+						A.to_chat(span("notice","你卖出[B.stored_object]，获得了 [G.amount] 金币。"))
 						B.set_stored_object(null)
 						qdel(I)
 						if(!G.qdeleting && is_item(object) && G.can_transfer_stacks_to(object))
@@ -62,7 +62,7 @@
 				B.set_stored_object(null)
 
 /obj/hud/button/exchange/close
-	name = "close"
+	name = "关闭"
 
 	icon = 'icons/hud/hud.dmi'
 	icon_state = "close_sell"
@@ -78,7 +78,7 @@
 		A.remove_sell_buttons()
 
 /obj/hud/button/exchange/base
-	name = "exchange"
+	name = "交易"
 
 	icon = 'icons/hud/exchange.dmi'
 	icon_state = "exchange"
@@ -163,16 +163,16 @@
 		desc = stored_object.desc
 		desc_extended = stored_object.desc_extended
 		if(istype(stored_object,/obj/item/currency/gold_coin))
-			maptext = "[nice_number(stored_value)] cr"
+			maptext = "[nice_number(stored_value)] 信用点"
 		else
-			maptext = "[nice_number(stored_value)] g"
+			maptext = "[nice_number(stored_value)] 金币"
 		maptext_x = 70
 		maptext_y = 16
 	else
 		name = initial(name)
 		desc = initial(desc)
 		desc_extended = initial(desc_extended)
-		maptext = "Click and drag an item here."
+		maptext = "将物品拖到此处。"
 		maptext_x = 5
 		maptext_y = 16
 

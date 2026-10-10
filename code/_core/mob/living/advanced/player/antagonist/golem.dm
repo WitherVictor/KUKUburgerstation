@@ -20,16 +20,16 @@ var/global/list/possible_materials = list(
 	var/skin_color = "#FFFFFF"
 	switch(chosen_material)
 		if("Bronze")
-			real_name = "Bronze Golem"
+			real_name = "青铜魔像"
 			skin_color = COLOR_BRONZE
 		if("Silver")
-			real_name = "Silver Golem"
+			real_name = "白银魔像"
 			skin_color = COLOR_SILVER
 		if("Gold")
-			real_name = "Gold Golem"
+			real_name = "黄金魔像"
 			skin_color = COLOR_GOLD
 		if("Platinum")
-			real_name = "Platinum Golem"
+			real_name = "铂金魔像"
 			skin_color = COLOR_PLATINUM
 
 	var/species/S = SPECIES(species)

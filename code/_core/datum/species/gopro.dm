@@ -1,6 +1,6 @@
 /species/cyborg/advanced
-	name = "Advanced Cyborg"
-	desc = "Fucking metal people."
+	name = "高级半机械人"
+	desc = "他妈的金属人。"
 	id = "cyborg_advanced"
 	flags_species = SPECIES_CYBORG
 

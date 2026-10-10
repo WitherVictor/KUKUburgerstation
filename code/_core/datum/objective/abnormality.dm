@@ -3,7 +3,7 @@ var/global/list/atom/movable/possible_abnormalities = list(
 )
 
 /objective/abnormality
-	name = "Contain Abnormality"
+	name = "收容异常体"
 
 	var/atom/movable/abnormality
 
@@ -30,7 +30,7 @@ var/global/list/atom/movable/possible_abnormalities = list(
 	return pick(valid_targets)
 
 /objective/abnormality/get_description()
-	return "Contain the unknown anomaly and bring it shipside into the science containment area in Science. Location: [english_list(get_locations(),"Unknown")]."
+	return "收容未知异常体，将其带回汉堡站科研部的收容区。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/abnormality/setup()
 	if(!length(possible_abnormality_spawns))

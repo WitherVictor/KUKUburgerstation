@@ -1,10 +1,10 @@
 /obj/structure/interactive/alchemy_plant
 	//These "plants" dont consume reagents, and have no seed. Run much less code on think. No reagent containers allowed! Use a plant!
-	name = "alchemy_plant"
+	name = "炼金植物"
 	icon = 'icons/obj/structure/flora/alchemy_plant.dmi'
 	icon_state = "error"
-	desc = "Something something bootleg plant"
-	desc_extended = "Some sort of wild plant."
+	desc = "总之就是某种山寨植物。"
+	desc_extended = "某种野生植物。"
 	var/grown = TRUE
 	var/harvest_item //What do we get for harvesting the plant?
 	var/obj/item/collect_item //What do we need to COLLECT FROM the plant?
@@ -18,12 +18,12 @@
 /obj/structure/interactive/alchemy_plant/proc/harvest(var/mob/living/advanced/caller)
 
 	if(!grown)
-		caller.to_chat(span("warning","\The [src.name] doesnt look ready to be harvested yet...."))
+		caller.to_chat(span("warning","[src.name]看起来还不能收获……"))
 		return TRUE
 	var/skill_power = caller.get_skill_power(SKILL_SURVIVAL,0,1,2)
 	var/chance = prob(clamp((skill_power*0.50) + harvest_chance,10,100))
 	if(!chance)
-		caller.to_chat(span("warning","You fumble and ruin the harvest!"))
+		caller.to_chat(span("warning","你手忙脚乱，把这次收获搞砸了！"))
 		caller.add_skill_xp(SKILL_SURVIVAL,3)
 		grown = FALSE
 		update_sprite()
@@ -34,10 +34,10 @@
 		GENERATE(NH)
 		FINALIZE(NH)
 		if(prob(clamp((skill_power*0.25) + great_success,2.5,75)))
-			caller.to_chat(span("notice","You carefully gather the [NH.name], but theres still more!"))
+			caller.to_chat(span("notice","你小心地采集了[NH.name]，而且还能继续采集！"))
 			caller.add_skill_xp(SKILL_SURVIVAL,10)
 			return TRUE
-		caller.to_chat(span("notice","You carefully gather the [NH.name],depleting it."))
+		caller.to_chat(span("notice","你小心地采集了[NH.name]，将其采尽。"))
 		caller.add_skill_xp(SKILL_SURVIVAL,5)
 		grown = FALSE
 		update_sprite()
@@ -70,7 +70,7 @@
 	if(!is_advanced(caller))
 		return ..()
 	if(collect_item && !istype(object,collect_item))
-		caller.to_chat(span("warning","You don't have the proper tool to collect from the [src.name] without damaging it! You need \a [initial(collect_item.name)]!"))
+		caller.to_chat(span("warning","你缺少合适的工具，无法在不损伤[src.name]的情况下采集！你需要[initial(collect_item.name)]！"))
 		return ..()
 
 	INTERACT_CHECK
@@ -82,49 +82,49 @@
 	return TRUE
 
 /obj/structure/interactive/alchemy_plant/forest_berry
-	name = "forest berry bush"
+	name = "森林浆果灌木"
 	icon_state = "forest_berry"
-	desc = "Magical!"
-	desc_extended = "A large red berry bush, its fruit have healing energy. Could be useful in alchemy."
+	desc = "充满魔力！"
+	desc_extended = "一大丛红色浆果灌木，果实蕴含治疗能量。也许能用于炼金。"
 	harvest_item = /obj/item/crafting/ingredient/part/alchemy_plant/forest_berry
 	collect_item = /obj/item/weapon/melee/tool/botany
 	harvest_chance = 60
 	great_success = 20
 
 /obj/structure/interactive/alchemy_plant/forest_nut
-	name = "forest nut pile"
+	name = "森林坚果堆"
 	icon_state = "forest_nut"
-	desc = "Magical!"
-	desc_extended = "A large pile of nuts, they have a defensive aura. Could be useful in alchemy."
+	desc = "充满魔力！"
+	desc_extended = "一大堆散发着防护气息的坚果。也许能用于炼金。"
 	harvest_item = /obj/item/crafting/ingredient/part/alchemy_plant/forest_nut
 	collect_item = /obj/item/weapon/melee/tool/botany
 	harvest_chance = 60
 	great_success = 20
 
 /obj/structure/interactive/alchemy_plant/snow_daisy
-	name = "snow daisy patch"
+	name = "雪雏菊丛"
 	icon_state = "snow_daisy"
-	desc = "Livingwood maker."
-	desc_extended = "A patch of pure white flowers, bursting with mana. Could be useful in alchemy."
+	desc = "活木制造者。"
+	desc_extended = "一丛蕴含充沛法力的纯白花朵。也许能用于炼金。"
 	harvest_item = /obj/item/crafting/ingredient/part/alchemy_plant/snow_daisy
 	collect_item = /obj/item/weapon/melee/tool/botany
 	harvest_chance = 40
 	great_success = 20
 
 /obj/structure/interactive/alchemy_plant/space_cotton
-	name = "space cotton"
+	name = "太空棉花"
 	icon_state = "space_cotton"
-	desc = "Something something racism"
-	desc_extended = "A cotton like plant growing synthcloth. Probably a lateblooming seed, as most that dont grow instantly are defective."
+	desc = "总之就是些种族歧视的破梗。"
+	desc_extended = "一种能长出合成布的棉花状植物。大概是晚熟种子，因为大多数不能立刻生长的种子都是次品。"
 	harvest_item = /obj/item/crafting/ingredient/thread/synthcloth
 	harvest_chance = 60
 	great_success = 20
 
 /obj/structure/interactive/alchemy_plant/devil_shroom
-	name = "devils mushroom"
+	name = "恶魔菇"
 	icon_state = "devil_shroom"
-	desc = "From a distant Rimworld"
-	desc_extended = "A strange mushroom that grows a fiber-like cloth that is incredibly strong and fireproof."
+	desc = "来自遥远的《环世界》。"
+	desc_extended = "一种奇怪的蘑菇，能长出纤维状织物，极其坚韧而且防火。"
 	harvest_item = /obj/item/crafting/ingredient/thread/devilstrand
 	harvest_chance = 30
 	great_success = 10

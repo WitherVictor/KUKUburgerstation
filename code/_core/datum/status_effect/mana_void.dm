@@ -1,6 +1,6 @@
 /status_effect/mana_void
-	name = "Mana Void"
-	desc = "You've been mana voided!"
+	name = "法力虚空"
+	desc = "你的法力被抽空了！"
 	id = MANAVOID
 	minimum = 0
 	maximum = 0

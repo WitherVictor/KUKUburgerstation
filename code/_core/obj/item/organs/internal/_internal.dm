@@ -1,6 +1,6 @@
 /obj/item/organ/internal
-	name = "internal organ"
-	desc = "An internal organ, it is now outside."
+	name = "内脏"
+	desc = "一个内脏，现在却在体外。"
 	has_dropped_icon = TRUE
 
 	enable_overlay = FALSE

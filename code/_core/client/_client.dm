@@ -293,16 +293,16 @@ var/global/regex/guest_regex = regex(@'guest-\d+$',"m")
 
 /client/proc/welcome()
 	if(world.port)
-		to_chat("Successfully joined [world.address]:[world.port].")
-	to_chat("<title>Welcome to Burgerstation 13</title><p>This is a work in progress server for testing out currently working features and other memes. Absolutely anything and everything will end up being changed.</p>")
+		to_chat("已成功连接到 [world.address]:[world.port]。")
+	to_chat("<title>欢迎来到汉堡站13</title><p>本服务器仍在开发中，用于试验现有功能和各种整活内容。这里的一切都可能发生变化。</p>")
 
 	var/server_discord = CONFIG("SERVER_DISCORD","")
 	if(server_discord)
-		to_chat(span("notice","Remember to join the discord <a href='[server_discord]'>here</a> if you're looking for help, or want updates on server progress!"))
+		to_chat(span("notice","需要帮助，或想了解服务器的最新进展？记得<a href='[server_discord]'>加入 Discord</a>！"))
 
 	var/server_rules = CONFIG("SERVER_RULES","")
 	if(server_rules)
-		to_chat(span("notice","<h1>Please be sure to read the rules <a href='[server_rules]'>here</a> before playing!</h1>"))
+		to_chat(span("notice","<h1>游玩前请务必<a href='[server_rules]'>阅读规则</a>！</h1>"))
 
 	return TRUE
 

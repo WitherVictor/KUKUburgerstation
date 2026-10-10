@@ -1,6 +1,6 @@
 /obj/hud/button/stat/ecg
-	name = "life"
-	desc = "Health for your limbs."
+	name = "生命体征"
+	desc = "各肢体的健康状况。"
 	id = "life"
 
 	icon = 'icons/hud/ecg.dmi'
@@ -68,10 +68,10 @@
 			icon_state = "revivable"
 		else
 			icon_state = "dead"
-		text_to_use = "<center>DEATH</center>"
+		text_to_use = "<center>死亡</center>"
 	else if(perceived_health_mod <= 0)
 		icon_state = "revivable"
-		text_to_use = "<center>CRIT</center>"
+		text_to_use = "<center>濒危</center>"
 	else
 		var/display_mod = (perceived_health_mod + real_health_mod)/2
 		icon_state = "[clamp(CEILING(display_mod*5,1),0,5)]"

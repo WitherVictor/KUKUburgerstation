@@ -1,7 +1,7 @@
 /obj/item/container/edible/plant
-	name = "plant"
-	desc = "For vegans."
-	desc_extended = "The trick to not spending money is that there's food pretty much everywhere if you're not afraid of poisoning."
+	name = "植物"
+	desc = "适合纯素食者。"
+	desc_extended = "省钱的秘诀就是：只要不怕中毒，几乎到处都能找到吃的。"
 
 	icon = 'icons/obj/item/consumable/food/plants.dmi'
 	icon_state = "slippery"
@@ -135,13 +135,13 @@
 			if(S.reagents) src.reagents.transfer_reagents_to(S.reagents,5)
 			FINALIZE(S)
 			animate(S,pixel_x=rand(-8,8),pixel_y=rand(-8,8),time=5)
-		attacker.visible_message(span("notice","\The [attacker.name] slices \the [src.name]."),span("notice","You slice \the [src.name]."))
+		attacker.visible_message(span("notice","[attacker.name]将[src.name]切成了片。"),span("notice","你将[src.name]切成了片。"))
 		qdel(src)
 
 	return ..()
 
 /obj/item/container/edible/plant/nitrogen_flower
-	name = "nitrogen flower"
+	name = "液氮花"
 	icon_state = "nitrogen_flower"
 	plant_type = /plant_type/nitrogen_flower
 	value = 1
@@ -151,7 +151,7 @@
 	return ..()
 
 /obj/item/container/edible/plant/oxygen_fruit
-	name = "oxygen fruit"
+	name = "液氧果"
 	icon_state = "oxygen_fruit"
 	plant_type = /plant_type/oxygen_fruit
 	value = 1
@@ -161,7 +161,7 @@
 	return ..()
 
 /obj/item/container/edible/plant/wheat
-	name = "wheat"
+	name = "小麦"
 	icon_state = "wheat"
 	plant_type = /plant_type/wheat
 	value = 1
@@ -171,7 +171,7 @@
 	return ..()
 
 /obj/item/container/edible/plant/sugarcane
-	name = "sugarcane"
+	name = "甘蔗"
 	icon_state = "sugarcane"
 	plant_type = /plant_type/sugarcane
 	value = 1
@@ -181,7 +181,7 @@
 	return ..()
 
 /obj/item/container/edible/plant/tomato
-	name = "tomato"
+	name = "番茄"
 	icon_state = "tomato"
 	plant_type = /plant_type/tomato
 	value = 1
@@ -191,7 +191,7 @@
 	return ..()
 
 /obj/item/container/edible/plant/lettuce
-	name = "lettuce"
+	name = "生菜"
 	icon_state = "lettuce"
 	plant_type = /plant_type/lettuce
 	value = 1
@@ -202,7 +202,7 @@
 
 
 /obj/item/container/edible/plant/chili
-	name = "chili pepper"
+	name = "辣椒"
 	icon_state = "chilipepper"
 	plant_type = /plant_type/chili
 	value = 1

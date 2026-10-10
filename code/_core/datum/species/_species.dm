@@ -1,7 +1,7 @@
 /species/
-	var/name = "Species Name"
-	var/desc = "Short species description."
-	var/desc_extended = "Extended species description."
+	var/name = "种族名称"
+	var/desc = "种族简介。"
+	var/desc_extended = "种族详细说明。"
 	var/id = null
 
 	var/dna/dna = null

@@ -1,5 +1,5 @@
 /obj/item/crafting_bench/bullet_press
-	name = "portable bullet press"
+	name = "便携弹药压制机"
 	icon = 'icons/obj/item/ore.dmi'
 	icon_state = "bullet_press"
 

@@ -6,44 +6,44 @@
 
 //Warrior
 /experience/attribute/strength/ //100% complete
-	name = "Strength"
-	desc = "A measure of how strong you are."
+	name = "力量"
+	desc = "衡量你有多强壮。"
 	skill_for_examine = 5
-	desc_vague = "Affects your damage in some way alongside increasing grab resistance."
-	desc_extended = "Affects the damage of most melee weapons as well as some ranged weapons, as well as your ability to escape grabs.\nCan be increased by dealing damage with strength-based weapons."
+	desc_vague = "会影响你的伤害，并提高抵抗抓取的能力。"
+	desc_extended = "影响大多数近战武器和部分远程武器的伤害，以及你挣脱抓取的能力。\n使用依赖力量的武器造成伤害可以提升此属性。"
 	id = ATTRIBUTE_STRENGTH
 	flags = ATTRIBUTE_DAMAGE
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/constitution/ //100% complete
-	name = "Constitution"
-	desc = "A measure of your physical well-being."
+	name = "体质"
+	desc = "衡量你的身体素质。"
 	skill_for_examine = 3
-	desc_vague = "Affects your resistances in some way."
-	desc_extended = "Affects your natural resistance to the physical elements.\nCan be increased by taking damage from non-magical attacks."
+	desc_vague = "会影响你的抗性。"
+	desc_extended = "影响你对物理伤害的天然抗性。\n承受非魔法攻击的伤害可以提升此属性。"
 	id = ATTRIBUTE_CONSTITUTION
 	flags = ATTRIBUTE_RESISTANCE
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/fortitude/ //100% complete
-	name = "Fortitude"
-	desc = "A measure of how your body responds to adversity."
+	name = "坚韧"
+	desc = "衡量你的身体应对逆境的能力。"
 	skill_for_examine = 4
-	desc_vague = "Affects your health in some way."
-	desc_extended = "Affects your natural health regeneration rate.\nCan be increased from regenerating your health naturally."
+	desc_vague = "会影响你的生命值。"
+	desc_extended = "影响生命值的自然恢复速度。\n自然恢复生命值可以提升此属性。"
 	id = ATTRIBUTE_FORTITUDE
 	flags = ATTRIBUTE_REGEN
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/vitality/ //100% complete
-	name = "Vitality"
-	desc = "A measure of your lifeforce."
+	name = "活力"
+	desc = "衡量你的生命力。"
 	skill_for_examine = 4
-	desc_vague = "Affects your health in some way."
-	desc_extended = "Affects your maximum health.\nCan be increased by leveling up strength, constitution, or fortitude."
+	desc_vague = "会影响你的生命值。"
+	desc_extended = "影响生命值上限。\n提升力量、体质或坚韧的等级可以提升此属性。"
 	id = ATTRIBUTE_VITALITY
 	flags = ATTRIBUTE_STAT | ATTRIBUTE_NO_DIFFICULTY_XP_MUL
 	experience_power = 1
@@ -56,44 +56,44 @@
 
 //Rogue
 /experience/attribute/dexterity/ //100% complete
-	name = "Dexterity"
-	desc = "A measure of raw overall skill."
+	name = "灵巧"
+	desc = "衡量你的综合动作技巧。"
 	skill_for_examine = 5
-	desc_vague = "Affects your damage in some way."
-	desc_extended = "Affects the damage and the attack speed of most melee weapons as well as some ranged weapons.\nCan be increased by dealing damage with dexterity-based weapons."
+	desc_vague = "会影响你的伤害。"
+	desc_extended = "影响大多数近战武器和部分远程武器的伤害及攻击速度。\n使用依赖灵巧的武器造成伤害可以提升此属性。"
 	id = ATTRIBUTE_DEXTERITY
 	flags = ATTRIBUTE_DAMAGE
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/agility //0% complete
-	name = "Agility"
-	desc = "A measure of how fast your body can move."
+	name = "敏捷"
+	desc = "衡量你的身体能移动多快。"
 	skill_for_examine = 2
-	desc_vague = "Affects your speed in some way."
-	desc_extended = "Affects the maximum speed at which you can move, as well as the strength of slowdown negation.\nCan be increased by sprinting."
+	desc_vague = "会影响你的速度。"
+	desc_extended = "影响移动速度上限，以及抵消减速效果的能力。\n冲刺可以提升此属性。"
 	id = ATTRIBUTE_AGILITY
 	flags = ATTRIBUTE_RESISTANCE
 	experience_power = 1.9
 	experience_multiplier = 5.2
 
 /experience/attribute/resilience/ //100% complete
-	name = "Resilience"
-	desc = "A measure of how well your body reacts to physical exhertion."
+	name = "韧性"
+	desc = "衡量你的身体应对体力消耗的能力。"
 	skill_for_examine = 2
-	desc_vague = "Affects your stamina in some way."
-	desc_extended = "Affects your natural stamina regeneration rate.\nCan be increased from regenerating your stamina naturally."
+	desc_vague = "会影响你的体力。"
+	desc_extended = "影响体力的自然恢复速度。\n自然恢复体力可以提升此属性。"
 	id = ATTRIBUTE_RESILIENCE
 	flags = ATTRIBUTE_REGEN
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/endurance/ //100% complete
-	name = "Endurance"
-	desc = "A measure of how long your body can last."
+	name = "耐力"
+	desc = "衡量你的身体能坚持多久。"
 	skill_for_examine = 3
-	desc_vague = "Affects your stamina in some way."
-	desc_extended = "Affects your maximum stamina.\nCan be increased by leveling up dexterity, agility, or resilience."
+	desc_vague = "会影响你的体力。"
+	desc_extended = "影响体力上限。\n提升灵巧、敏捷或韧性的等级可以提升此属性。"
 	id = ATTRIBUTE_ENDURANCE
 	flags = ATTRIBUTE_STAT | ATTRIBUTE_NO_DIFFICULTY_XP_MUL
 	experience_power = 1
@@ -107,44 +107,44 @@
 
 //Wizard
 /experience/attribute/intelligence/ //100% complete
-	name = "Intelligence"
-	desc = "A measure of how quickly and accurately you can apply knowledge."
+	name = "智力"
+	desc = "衡量你运用知识的速度与准确程度。"
 	skill_for_examine = 6
-	desc_vague = "Affects your damage in some way."
-	desc_extended = "Affects the damage of most magical spells, powers, and abilities.\nCan be increased by dealing damage with spell-based weapons."
+	desc_vague = "会影响你的伤害。"
+	desc_extended = "影响大多数魔法法术、力量和能力的伤害。\n使用法术类武器造成伤害可以提升此属性。"
 	id = ATTRIBUTE_INTELLIGENCE
 	flags = ATTRIBUTE_DAMAGE
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/willpower/ //100% complete
-	name = "Willpower"
-	desc = "A measure of how well you can control your mind."
+	name = "意志"
+	desc = "衡量你控制心智的能力。"
 	skill_for_examine = 6
-	desc_vague = "Affects your mana in some way."
-	desc_extended = "Affects your natural mana regeneration rate.\nCan be increased by regenerating your mana naturally."
+	desc_vague = "会影响你的法力。"
+	desc_extended = "影响法力的自然恢复速度。\n自然恢复法力可以提升此属性。"
 	id = ATTRIBUTE_WILLPOWER
 	flags = ATTRIBUTE_REGEN
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/soul //100% complete
-	name = "Soul"
-	desc = "A measure of how strong your spirtual being is."
+	name = "灵魂"
+	desc = "衡量你的灵魂有多强大。"
 	skill_for_examine = 7
-	desc_vague = "Affects your resistances in some way."
-	desc_extended = "Affects your natural resistances to the arcane.\nCan be increased by taking damage from magical attacks."
+	desc_vague = "会影响你的抗性。"
+	desc_extended = "影响你对魔法的天然抗性。\n承受魔法攻击的伤害可以提升此属性。"
 	id = ATTRIBUTE_SOUL
 	flags = ATTRIBUTE_RESISTANCE
 	experience_power = 1.9
 	experience_multiplier = 10.4
 
 /experience/attribute/wisdom/ //100% complete
-	name = "Wisdom"
-	desc = "A measure of how much knowledge you have."
+	name = "智慧"
+	desc = "衡量你掌握的知识有多丰富。"
 	skill_for_examine = 7
-	desc_vague = "Affects your mana in some way."
-	desc_extended = "Affects your maximum mana.\nCan be increased by leveling up willpower, soul, and intelligence."
+	desc_vague = "会影响你的法力。"
+	desc_extended = "影响法力上限。\n提升意志、灵魂和智力的等级可以提升此属性。"
 	id = ATTRIBUTE_WISDOM
 	flags = ATTRIBUTE_STAT | ATTRIBUTE_NO_DIFFICULTY_XP_MUL
 	experience_power = 1
@@ -166,7 +166,7 @@
 
 //None. Everyone starts with 50.
 /experience/attribute/luck/ //50% complete.
-	name = "Luck"
+	name = "幸运"
 	id = ATTRIBUTE_LUCK
 	flags = ATTRIBUTE_STAT | ATTRIBUTE_NO_DIFFICULTY_XP_MUL
 	chargen_min_level = 40

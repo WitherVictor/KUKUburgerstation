@@ -1,7 +1,7 @@
 /obj/hud/button/targeting_new
-	name = "limb targeting"
-	desc = "Aim for the head!"
-	desc_extended = "Click here to change where your character will target. Note that the accuracy of where you target is affected by many variables such as skill level, movement, and the enemy's evasiveness."
+	name = "肢体瞄准"
+	desc = "瞄准头部！"
+	desc_extended = "点击这里更改角色瞄准的部位。注意，部位瞄准的命中率受多种因素影响，包括技能等级、移动状况和敌人的闪避能力。"
 	icon = 'icons/hud/paperdoll.dmi'
 	icon_state = "base"
 	screen_loc = "RIGHT,BOTTOM:11"

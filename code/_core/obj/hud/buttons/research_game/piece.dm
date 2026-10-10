@@ -1,6 +1,6 @@
 /obj/hud/button/research/piece
-	name = "research piece"
-	desc = "It's a piece"
+	name = "科研拼块"
+	desc = "一块拼块。"
 	icon = 'icons/hud/game_piece.dmi'
 	icon_state = "piece"
 

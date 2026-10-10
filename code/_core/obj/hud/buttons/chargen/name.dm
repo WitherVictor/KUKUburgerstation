@@ -1,13 +1,13 @@
 /obj/hud/button/chargen/change_name
-	name = "change name"
-	desc = "What's in a name?"
-	desc_extended = "Your current character's name. Click here to change it. Names are limited to latin characters only, with no numbers."
+	name = "更改姓名"
+	desc = "名字又算得了什么？"
+	desc_extended = "当前角色的姓名。点击这里更改。姓名只允许使用拉丁字母，不允许使用数字。"
 	icon = 'icons/hud/nameplate.dmi'
 	icon_state = "nameplate"
 
 	screen_loc = "CENTER-1,CENTER+2"
 
-	maptext = "<center>Invalid Name</center>"
+	maptext = "<center>无效姓名</center>"
 	maptext_y = 5
 	maptext_height = TILE_SIZE
 	maptext_width = TILE_SIZE*3
@@ -30,7 +30,7 @@
 	if(is_player(activator) && activator.client)
 		var/mob/living/advanced/player/P = activator
 
-		var/choice = input(P,"What would you like your name to be?","Name Change",P.real_name) as text|null
+		var/choice = input(P,"你希望叫什么名字？","更改姓名",P.real_name) as text|null
 
 		if(!choice) return
 

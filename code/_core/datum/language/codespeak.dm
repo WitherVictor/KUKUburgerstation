@@ -1,5 +1,5 @@
 /language/codespeak
-	name = "Codespeak"
+	name = "暗语"
 	id = LANGUAGE_CODESPEAK
 
 /language/codespeak/process_text(var/speaker,var/text)
@@ -7,7 +7,7 @@
 	var/widsom_length = length(SStext.wisdoms)
 
 	if(!widsom_length)
-		return "Penis."
+		return "鸡巴。"
 
 	var/number = 1
 

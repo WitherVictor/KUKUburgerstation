@@ -17,7 +17,7 @@
 		if(add_message)
 			L.to_chat(span("notice [trait_tag]",add_message))
 
-		L.to_chat(span("notice [trait_tag]","<b>New Trait Gained:</b> [name]!"))
+		L.to_chat(span("notice [trait_tag]","<b>获得新特质：</b>[name]！"))
 		L.to_chat(span("notice","[desc]"))
 
 	return TRUE
@@ -35,7 +35,7 @@
 		if(remove_message)
 			L.to_chat(span("notice [inverse]",remove_message))
 
-		L.to_chat(span("notice [inverse]","<b>Trait Lost:</b> [name]!"))
+		L.to_chat(span("notice [inverse]","<b>失去特质：</b>[name]！"))
 
 	return TRUE
 
@@ -44,11 +44,11 @@
 	var/damagetype/damage_type
 
 /trait/unarmed/shocking_touch
-	name = "Shocking Touch"
-	desc = "Basic unarmed harmful strikes deal pure shock damage, and have a chance to stun."
+	name = "电击之触"
+	desc = "基础徒手伤害攻击造成纯电击伤害，并有机会击晕目标。"
 
-	add_message = "Electricity flows through your hands."
-	remove_message = "Your hands no longer flow with energy..."
+	add_message = "电流在你双手间流动。"
+	remove_message = "你的双手不再涌动着能量……"
 
 	damage_type = /damagetype/unarmed/fists/shock_touch
 
@@ -61,22 +61,22 @@
 	var/thirst_multiplier = 1
 
 /trait/metabolism/fast
-	name = "Fast Metabolism"
-	desc = "Reagents metabolize twice as fast in the bloodstream, but you are hungry more often."
+	name = "快速代谢"
+	desc = "血液中的试剂代谢速度变为两倍，但你更容易饥饿。"
 
-	add_message = "You feel your metabolic energy increase."
-	remove_message = "Your metabolism no longer feels as active..."
+	add_message = "你感觉新陈代谢变快了。"
+	remove_message = "你的新陈代谢不再那么活跃……"
 
 	metabolism_multiplier = 2
 	hunger_multiplier = 1.5
 	trait_tag = TRAIT_NEUTRAL
 
 /trait/metabolism/none
-	name = "No Metabolism"
-	desc = "You have no metabolism; you don't get hungry and reagents don't process in your system."
+	name = "无代谢"
+	desc = "你没有新陈代谢，不会饥饿，试剂也不会在你体内代谢。"
 
-	add_message = "You somehow feel like you have no metabolism..."
-	remove_message = "You now have a metabolism."
+	add_message = "不知为何，你感觉自己没有新陈代谢了……"
+	remove_message = "你现在又有新陈代谢了。"
 
 	metabolism_multiplier = 0
 	hunger_multiplier = 0
@@ -84,52 +84,52 @@
 	trait_tag = TRAIT_NEUTRAL
 
 /trait/metabolism/slow
-	name = "Slow Metabolism"
-	desc = "Reagents metabolize twice as slow in the bloodstream, but you are hungrier less often."
+	name = "缓慢代谢"
+	desc = "血液中的试剂代谢速度减半，但你更不容易饥饿。"
 
-	add_message = "You feel your metabolic energy decrease."
-	remove_message = "Your metabolism no longer feels as slow..."
+	add_message = "你感觉新陈代谢变慢了。"
+	remove_message = "你的新陈代谢不再那么缓慢……"
 
 	metabolism_multiplier = 0.5
 	hunger_multiplier = 0.75
 	trait_tag = TRAIT_NEUTRAL
 
 /trait/pain_tolerant/
-	name = "Pain Tolerant"
-	desc = "You do not scream when experiencing pain."
+	name = "耐痛"
+	desc = "你不会因疼痛而尖叫。"
 
-	add_message = "You don't feel the need to scream while in pain."
-	remove_message = "You feel the need to scream while in pain..."
+	add_message = "你觉得疼痛时也不必尖叫。"
+	remove_message = "你觉得疼痛时还是需要尖叫……"
 
 	trait_tag = TRAIT_POSITIVE
 
 /trait/block_runner/
-	name = "Block Runner"
-	desc = "You can block while running, but you can't block while standing still."
+	name = "奔跑格挡"
+	desc = "你能在奔跑时格挡，但站着不动时无法格挡。"
 	trait_tag = TRAIT_NEUTRAL
 
-	add_message = "Wait... what if I hold the shield up while I run?"
-	remove_message = "You now forget that you can run with a shield."
+	add_message = "等等……要是我跑步时举着盾呢？"
+	remove_message = "你忘了自己可以举着盾跑步。"
 
 /trait/flamability/
 	category = /trait/flamability
 	var/fire_stack_multiplier = 1
 
 /trait/flamability/fire_retardant
-	name = "Fire Retardant"
-	desc = "You seem to be less flammable than normal."
+	name = "阻燃"
+	desc = "你似乎比一般人更不容易燃烧。"
 	fire_stack_multiplier = 0.75
 	trait_tag = TRAIT_POSITIVE
 
-	add_message = "Your skin gets a little moist. This should be useful if I'm ever set on fire..."
-	remove_message = "Your skin no longer feels as moist."
+	add_message = "你的皮肤变得有些湿润。万一着火，这应该能派上用场……"
+	remove_message = "你的皮肤不再那么湿润。"
 
 /trait/flamability/flammable
-	name = "Flammable"
-	desc = "You seem to get set on fire easily."
+	name = "易燃"
+	desc = "你似乎很容易被点燃。"
 
-	add_message = "Your skin feels very dry and very flammable..."
-	remove_message = "Your skin no longer feels as dry."
+	add_message = "你的皮肤感觉非常干燥，似乎一点就着……"
+	remove_message = "你的皮肤不再那么干燥。"
 
 	fire_stack_multiplier = 1.25
 	trait_tag = TRAIT_NEGATIVE
@@ -139,22 +139,22 @@
 	var/extra_health = 0
 
 /trait/death_check/tenacious
-	name = "Tenacious"
-	desc = "You never seem to give up, even on death's door."
+	name = "顽强"
+	desc = "即使濒临死亡，你也从不轻易放弃。"
 
-	add_message = "You are filled with determination."
-	remove_message = "You no longer feel as determined as before."
+	add_message = "你充满了决心。"
+	remove_message = "你不再像以前那样坚定。"
 
 
 	extra_health = 50
 	trait_tag = TRAIT_POSITIVE
 
 /trait/death_check/quitter
-	name = "Quitter"
-	desc = "You seem to give up easily, especially when about to die."
+	name = "轻言放弃"
+	desc = "你似乎很容易放弃，尤其是快死的时候。"
 
-	add_message = "You feel like there really isn't any point to hanging in there while dying, especially when you can get cloned and all..."
-	remove_message = "You don't seem to give up on life as easy as before."
+	add_message = "你觉得快死时硬撑着也没什么意义，反正还能克隆什么的……"
+	remove_message = "你不再像以前那样轻易放弃生命。"
 
 	extra_health = -50
 	trait_tag = TRAIT_NEGATIVE
@@ -164,21 +164,21 @@
 	var/bleed_multiplier
 
 /trait/bleed_multiplier/paper_skin
-	name = "Paper Skin"
-	desc = "You seem to bleed easier than most."
+	name = "纸薄皮肤"
+	desc = "你似乎比大多数人更容易流血。"
 
-	add_message = "Your skin feels as fragile as paper..."
-	remove_message = "Your skin no longer feels as fragile."
+	add_message = "你的皮肤感觉像纸一样脆弱……"
+	remove_message = "你的皮肤不再那么脆弱。"
 
 	bleed_multiplier = 1.5
 	trait_tag = TRAIT_NEGATIVE
 
 /trait/bleed_multiplier/hard_skin
-	name = "Tough Skin"
-	desc = "Your skin seems to bleed harder than most."
+	name = "坚韧皮肤"
+	desc = "你的皮肤似乎比大多数人更不容易流血。"
 
-	add_message = "Your skin gets considerably tougher."
-	remove_message = "Your skin no longer feels as tough."
+	add_message = "你的皮肤明显变得更加坚韧。"
+	remove_message = "你的皮肤不再那么坚韧。"
 
 	bleed_multiplier = 0.75
 	trait_tag = TRAIT_POSITIVE
@@ -188,27 +188,27 @@
 	var/regen_multiplier = 1
 
 /trait/blood_regen/none
-	name = "Blood Degeneration"
-	desc = "Your body doesn't generate any blood at all."
-	add_message = "You feel anemic..."
-	remove_message = "You no longer feel anemic."
+	name = "造血衰退"
+	desc = "你的身体完全无法生成血液。"
+	add_message = "你感觉自己贫血了……"
+	remove_message = "你不再感到贫血。"
 	regen_multiplier = 0
 	trait_tag = TRAIT_NEGATIVE
 
 
 /trait/blood_regen/blood_degen
-	name = "Anemia"
-	desc = "You body regenerates blood much slower, consuming less nutrition over time while at low blood."
-	add_message = "You feel anemic..."
-	remove_message = "You no longer feel anemic."
+	name = "贫血"
+	desc = "你的造血速度大幅降低，血量不足时消耗的营养也更少。"
+	add_message = "你感觉自己贫血了……"
+	remove_message = "你不再感到贫血。"
 	regen_multiplier = 0.25
 	trait_tag = TRAIT_NEGATIVE
 
 /trait/blood_regen/blood_regen
-	name = "Polycythemia Vera"
-	add_message = "Your veins get larger, and your heart pounds... guess I make a lot more blood now."
-	remove_message = "You no longer feel like your body can produce more blood."
-	desc = "Your body regenerates blood at a increased rate, consuming more nutrition over time while at low blood."
+	name = "真性红细胞增多症"
+	add_message = "你的静脉变粗，心脏怦怦直跳……看来身体现在能造出更多血了。"
+	remove_message = "你不再感觉自己的身体能生成更多血液。"
+	desc = "你的造血速度提高，血量不足时消耗的营养也更多。"
 	regen_multiplier = 1.5
 	trait_tag = TRAIT_POSITIVE
 
@@ -220,10 +220,10 @@
 	var/reverse_intoxication = FALSE
 
 /trait/intoxication_regen/reverse
-	name = "Reverse Intoxication"
-	desc = "You need alcohol to sustain yourself. A lack of alcohol makes you more intoxicated, somehow."
-	add_message = "You feel like you rely on alcohol."
-	remove_message = "You don't feel like you have a dependence on alcohol anymore."
+	name = "反向醉酒"
+	desc = "你需要酒精来维持状态。不知为何，缺少酒精反而让你醉得更厉害。"
+	add_message = "你感觉自己离不开酒精。"
+	remove_message = "你不再觉得自己依赖酒精。"
 	alcohol_threshold_multiplier = 2
 	should_apply_drunk_status_effects = TRUE
 	reverse_intoxication = TRUE
@@ -231,20 +231,20 @@
 
 
 /trait/intoxication_regen/light_drinker
-	name = "Light Drinker"
-	desc = "You can't hold your liquor, and don't sober up as quick."
-	add_message = "You feel like you can't hold your liqour well..."
-	remove_message = "You feel like you can hold your liquor normally."
+	name = "不胜酒力"
+	desc = "你的酒量很小，醒酒也比较慢。"
+	add_message = "你感觉自己不太能喝酒了……"
+	remove_message = "你感觉自己的酒量恢复正常了。"
 	alcohol_threshold_multiplier = 0.75
 	intoxication_removal_multiplier = 0.5
 	should_apply_drunk_status_effects = TRUE
 	trait_tag = TRAIT_NEGATIVE
 
 /trait/intoxication_regen/seasoned_drinker
-	name = "Seasoned Drinker"
-	desc = "You can hold your liquor well, but don't sober up as quick."
-	add_message = "You feel like you can hold your liquor very well."
-	remove_message = "You feel like you can hold your liqour normally."
+	name = "老酒鬼"
+	desc = "你的酒量很好，但醒酒比较慢。"
+	add_message = "你感觉自己特别能喝。"
+	remove_message = "你感觉自己的酒量恢复正常了。"
 	alcohol_threshold_multiplier = 2
 	intoxication_removal_multiplier = 0.5
 	should_apply_drunk_status_effects = FALSE
@@ -257,28 +257,28 @@
 	var/mana_regen_mul = 1
 
 /trait/general_regen/mind_over_matter
-	name = "Mind Over Matter"
-	desc = "You regenerate mana twice as much, but regenerate health half as much."
-	add_message = "Your brain feels focused, but your heart... not so much."
-	remove_message = "Your mind and body feel back in sync."
+	name = "精神至上"
+	desc = "你的法力恢复量变为两倍，但生命恢复量减半。"
+	add_message = "你的大脑感觉很专注，但心脏……就不太行了。"
+	remove_message = "你的身心重新协调起来。"
 	health_regen_mul = 0.5
 	mana_regen_mul = 2
 	trait_tag = TRAIT_NEUTRAL
 
 /trait/general_regen/jock
-	name = "Physically Focused"
-	desc = "You regenerate stamina twice as much, but regenerate mana half as much."
-	add_message = "Your stamina feels better, but your mind is... uh... what's that word... huh... hm..."
-	remove_message = "Your mind and body feel back in sync."
+	name = "专注体能"
+	desc = "你的体力恢复量变为两倍，但法力恢复量减半。"
+	add_message = "你的体力更充沛了，但脑子……呃……那个词怎么说来着……嗯……"
+	remove_message = "你的身心重新协调起来。"
 	stamina_regen_mul = 2
 	mana_regen_mul = 0.5
 	trait_tag = TRAIT_NEUTRAL
 
 /trait/general_regen/nerd
-	name = "Mentally Focused"
-	desc = "You regenerate mana twice as much, but regenerate stamina half as much."
-	add_message = "Your brain feels focused, but your body... not so much."
-	remove_message = "Your mind and body feel back in sync."
+	name = "专注精神"
+	desc = "你的法力恢复量变为两倍，但体力恢复量减半。"
+	add_message = "你的大脑感觉很专注，但身体……就不太行了。"
+	remove_message = "你的身心重新协调起来。"
 	stamina_regen_mul = 0.5
 	mana_regen_mul = 2
 	trait_tag = TRAIT_NEUTRAL
@@ -288,18 +288,18 @@
 	var/move_delay_mul = 1
 
 /trait/speed/slow
-	name = "Slow"
-	desc = "You prefer to take things a little more slowly."
-	add_message = "You feel like everything moves too fast... why not walk once in a while?"
-	remove_message = "You feel like you're comfortable moving normally."
+	name = "迟缓"
+	desc = "你更喜欢慢慢来。"
+	add_message = "你觉得一切都太快了……偶尔慢慢走不好吗？"
+	remove_message = "你感觉按正常速度移动挺舒服。"
 	move_delay_mul = 1.1
 	trait_tag = TRAIT_NEGATIVE
 
 /trait/speed/quick
-	name = "Quick"
-	desc = "You're quite athletic and are quick to move with a bonus to movement speed."
-	add_message = "You feel the need for speed."
-	remove_message = "You no longer feel like speed is a good thing."
+	name = "迅捷"
+	desc = "你身手矫健、行动迅速，移动速度获得加成。"
+	add_message = "你渴望速度。"
+	remove_message = "你不再觉得速度是件好事。"
 	move_delay_mul = 0.9
 	trait_tag = TRAIT_POSITIVE
 
@@ -308,18 +308,18 @@
 	var/nutrition_multiplier = 1
 
 /trait/nutrition/malnutrition
-	name = "Malnutrition"
-	desc = "You have a poor diet and suffer a penalty to nutritional quality."
-	add_message = "You feel weak and tired..."
-	remove_message = "You feel better now."
+	name = "营养不良"
+	desc = "你的饮食很差，营养质量受到减益。"
+	add_message = "你感觉虚弱又疲惫……"
+	remove_message = "你现在感觉好多了。"
 	nutrition_multiplier = 0.9
 	trait_tag = TRAIT_NEGATIVE
 
 /trait/nutrition/vigorous
-	name = "Vigorous"
-	desc = "You have a good diet and gain a bonus to nutritional quality."
-	add_message = "Your body feels like it's full of life and vigor."
-	remove_message = "Eh, you feel average now."
+	name = "精力充沛"
+	desc = "你的饮食良好，营养质量获得加成。"
+	add_message = "你感觉身体充满了生机与活力。"
+	remove_message = "嗯，你现在感觉普普通通。"
 	nutrition_multiplier = 1.1
 	trait_tag = TRAIT_POSITIVE
 
@@ -329,10 +329,10 @@
 	var/handcuff_escape_multiplier = 1
 
 /trait/handcuffs/escape_artist
-	name = "Escape Artist"
-	desc = "You can escape handcuffs quicker and easier."
-	add_message = "I can break these cuffs."
-	remove_message = "You can't break those cuffs."
+	name = "脱逃大师"
+	desc = "你能更快、更轻松地挣脱手铐。"
+	add_message = "我能挣脱这副手铐。"
+	remove_message = "你无法轻松挣脱那副手铐了。"
 	handcuff_escape_multiplier = 2
 	trait_tag = TRAIT_POSITIVE
 
@@ -343,19 +343,19 @@
 	var/health_mul = 1
 
 /trait/vitality/strong
-	name = "Strong"
-	desc = "You have +20 to health, and a 5% health increase."
-	add_message = "You feel stronger."
-	remove_message = "You feel average."
+	name = "健壮"
+	desc = "你的生命值增加20，并提高5%。"
+	add_message = "你感觉更强壮了。"
+	remove_message = "你感觉恢复了平常的状态。"
 	health_add = 20
 	health_mul = 1.05
 	trait_tag = TRAIT_POSITIVE
 
 /trait/vitality/fragile
-	name = "Fragile"
-	desc = "You have a -20 penalty to health, and a 5% health decrease."
-	add_message = "You feel weaker."
-	remove_message = "You feel average."
+	name = "脆弱"
+	desc = "你的生命值减少20，并降低5%。"
+	add_message = "你感觉更虚弱了。"
+	remove_message = "你感觉恢复了平常的状态。"
 	health_add = 20
 	health_mul = 1.05
 	trait_tag = TRAIT_NEGATIVE

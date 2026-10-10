@@ -1,5 +1,5 @@
 /obj/hud/button/ping
-	name = "ping"
+	name = "网络延迟"
 	icon_state = "ping"
 	maptext = "<div align='right'>???ms </div>"
 

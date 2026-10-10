@@ -1,5 +1,5 @@
 /job/chaplain
-	name = "Chaplain"
+	name = "牧师"
 	desc = ""
 	passive_income = 400
 	passive_income_bonus = 100
@@ -19,10 +19,10 @@
 	)
 
 	ranks = list(
-		"Intern Chaplain",
-		"Chaplain",
-		"Senior Chaplain",
-		"Head Chaplain"
+		"见习牧师",
+		"牧师",
+		"资深牧师",
+		"首席牧师"
 	)
 
 	job_flags = FLAG_JOB_KILLING

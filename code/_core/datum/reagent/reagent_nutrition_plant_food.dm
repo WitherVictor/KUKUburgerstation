@@ -1,6 +1,6 @@
 /reagent/nutrition/plant_food
-	name = "plant food"
-	desc = "Food made from plants, or plants made from food?"
+	name = "植物营养液"
+	desc = "植物做的食物，还是食物养的植物？"
 	color = "#5B7F00"
 	alpha = 255
 
@@ -8,7 +8,7 @@
 	nutrition_normal_amount = 15
 	nutrition_quality_amount = 0
 
-	flavor = "dirt"
+	flavor = "泥土"
 
 	liquid = -0.5
 

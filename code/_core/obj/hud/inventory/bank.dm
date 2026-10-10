@@ -1,5 +1,5 @@
 /obj/hud/inventory/dynamic/bank
-	name = "bank space"
+	name = "银行储物格"
 	icon_state = "square_round"
 
 	max_size = SIZE_10
@@ -17,15 +17,15 @@
 
 	if(!bypass)
 		if(length(I.inventories) && I.size >= SIZE_2)
-			if(messages) owner.to_chat(span("warning","The bank does not allow the storage of large containers."))
+			if(messages) owner.to_chat(span("warning","银行不允许存放大型容器。"))
 			return FALSE
 
 		if(!I.can_save)
-			if(messages) owner.to_chat(span("warning","This type of object cannot be stored."))
+			if(messages) owner.to_chat(span("warning","无法存放这类物品。"))
 			return FALSE
 
 		if(I.contraband)
-			if(messages) owner.to_chat(span("warning","The bank refuses to store contraband."))
+			if(messages) owner.to_chat(span("warning","银行拒绝存放违禁品。"))
 			return FALSE
 
 	. = ..()

@@ -1,8 +1,8 @@
 //Human
 /obj/item/organ/eye
-	name = "right eye"
+	name = "右眼"
 	id = BODY_EYE_RIGHT
-	desc = "An eye."
+	desc = "一只眼睛。"
 	icon_state = BODY_EYE_RIGHT
 	worn_layer = LAYER_MOB_EYE
 
@@ -34,29 +34,29 @@
 	)
 
 /obj/item/organ/eye/left
-	name = "left eye"
+	name = "左眼"
 	id = BODY_EYE_LEFT
-	desc = "An eye."
+	desc = "一只眼睛。"
 	icon_state = BODY_EYE_LEFT
 
 //Reptile
 /obj/item/organ/eye/reptile
-	name = "right reptile eye"
+	name = "原始蜥蜴人右眼"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
 
 /obj/item/organ/eye/reptile/left
-	name = "left reptile eye"
+	name = "原始蜥蜴人左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 //Reptile Advanced
 /obj/item/organ/eye/reptile_advanced
-	name = "right advanced reptile eye"
+	name = "蜥蜴人右眼"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
 
 
 /obj/item/organ/eye/reptile_advanced/left
-	name = "left advanced reptile eye"
+	name = "蜥蜴人左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
@@ -64,100 +64,100 @@
 
 //Cyborg
 /obj/item/organ/eye/cyborg
-	name = "right cyborg optical sensor"
+	name = "半机械人右侧光学传感器"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/eye/cyborg/left
-	name = "left cyborg optical sensor"
+	name = "半机械人左侧光学传感器"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 //Cyborg 2
 /obj/item/organ/eye/gopro
-	name = "right advanced cyborg optical sensor"
+	name = "高级半机械人右侧光学传感器"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/eye/gopro/left
-	name = "left advanced cyborg optical sensor"
+	name = "高级半机械人左侧光学传感器"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 
 //Beefman
 /obj/item/organ/eye/beefman
-	name = "right beefman eye"
+	name = "血肉人右眼"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
 
 /obj/item/organ/eye/beefman/left
-	name = "left beefman eye"
+	name = "血肉人左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 
 //Monkey
 /obj/item/organ/eye/monkey
-	name = "right monkey eye"
+	name = "猴子右眼"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
 
 /obj/item/organ/eye/monkey/left
-	name = "left monkey eye"
+	name = "猴子左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 //goblin
 /obj/item/organ/eye/goblin
-	name = "right goblin eye"
+	name = "地精右眼"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
 
 /obj/item/organ/eye/goblin/left
-	name = "left goblin eye"
+	name = "地精左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 //Moth
 /obj/item/organ/eye/moth
-	name = "right moth eye"
+	name = "蛾人右眼"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
 
 /obj/item/organ/eye/moth/left
-	name = "left moth eye"
+	name = "蛾人左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 //diona
 /obj/item/organ/eye/diona
-	name = "right diona eye"
+	name = "狄俄娜右眼"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 
 /obj/item/organ/eye/diona/left
-	name = "left diona eye"
+	name = "狄俄娜左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 
 //golem
 /obj/item/organ/eye/golem
-	name = "right golem eye"
+	name = "魔像右眼"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
 
 /obj/item/organ/eye/golem/left
-	name = "left golem eye"
+	name = "魔像左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT
 
 
 //abductor
 /obj/item/organ/eye/abductor
-	name = "right abductor eye"
+	name = "绑架者右眼"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
 
 /obj/item/organ/eye/abductor/left
-	name = "left abductor eye"
+	name = "绑架者左眼"
 	id = BODY_EYE_LEFT
 	icon_state = BODY_EYE_LEFT

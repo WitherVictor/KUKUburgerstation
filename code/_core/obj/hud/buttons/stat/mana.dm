@@ -1,6 +1,6 @@
 /obj/hud/button/stat/mana
-	name = "mana"
-	desc = "Mana for your soul"
+	name = "法力"
+	desc = "灵魂的法力。"
 	id = "mana"
 
 	icon = 'icons/hud/mana.dmi'

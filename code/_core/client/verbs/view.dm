@@ -4,25 +4,25 @@
 
 	//sortTim(SSliving.all_mobs_with_clients,/proc/cmp_path_asc)
 
-	var/mob/choice = input("Who would you like to jump to?","Jump to Mob") as null|mob in SSliving.all_mobs_with_clients
+	var/mob/choice = input("你想跳转到谁身边？","跳转到角色") as null|mob in SSliving.all_mobs_with_clients
 	if(!choice || choice == mob)
-		to_chat(span("warning","Invalid mob selected."))
+		to_chat(span("warning","选择的角色无效。"))
 		return FALSE
 
 	if(is_living(mob))
 		if(!(permissions & FLAG_PERMISSION_MODERATOR) && !(permissions & FLAG_PERMISSION_ADMIN))
-			to_chat(span("warning", "You cannot use ghost commands as a living player."))
+			to_chat(span("warning", "活着的玩家不能使用幽灵命令。"))
 			return FALSE
 		to_chat(span("notice", "ADMIN: Skipping living player safety check."))
 
 	var/turf/T = get_turf(choice)
 	if(!T)
-		to_chat(span("warning","Target is in an Invalid turf."))
+		to_chat(span("warning","目标所在的地块无效。"))
 		return FALSE
 
 	mob.force_move(T)
 
-	to_chat(span("notice","You jumped to [choice]'s location."))
+	to_chat(span("notice","你已跳转到[choice]所在的位置。"))
 	if(is_living(mob))
 		log_admin("[src.get_debug_name()] jumped to [choice.get_debug_name()]'s (mob) location.")
 
@@ -32,25 +32,25 @@
 
 	//sortTim(SSliving.all_mobs,/proc/cmp_path_asc)
 
-	var/mob/choice = input("Who would you like to jump to?","Jump to Mob") as null|mob in SSliving.all_mobs
+	var/mob/choice = input("你想跳转到谁身边？","跳转到角色") as null|mob in SSliving.all_mobs
 	if(!choice || choice == mob)
-		to_chat(span("warning","Invalid mob selected."))
+		to_chat(span("warning","选择的角色无效。"))
 		return FALSE
 
 	if(is_living(mob))
 		if(!(permissions & FLAG_PERMISSION_MODERATOR) && !(permissions & FLAG_PERMISSION_ADMIN))
-			to_chat(span("warning", "You cannot use ghost commands as a living player."))
+			to_chat(span("warning", "活着的玩家不能使用幽灵命令。"))
 			return FALSE
 		to_chat(span("notice", "ADMIN: Skipping living player safety check."))
 
 	var/turf/T = get_turf(choice)
 	if(!T)
-		to_chat(span("warning","Invalid turf."))
+		to_chat(span("warning","地块无效。"))
 		return FALSE
 
 	mob.force_move(T)
 
-	to_chat(span("notice","You jumped to [choice]'s location."))
+	to_chat(span("notice","你已跳转到[choice]所在的位置。"))
 	if(is_living(mob))
 		log_admin("[mob.get_debug_name()] jumped to [choice.get_debug_name()]'s location.")
 
@@ -94,18 +94,18 @@
 	set name = "Orbit Player"
 	set category = "View"
 
-	var/mob/choice = input("Who would you like to orbit?","Orbit Mob") as null|mob in SSliving.all_mobs_with_clients
+	var/mob/choice = input("你想跟随旁观谁？","跟随旁观角色") as null|mob in SSliving.all_mobs_with_clients
 	if(!choice || choice == mob)
-		to_chat(span("warning","Invalid mob selected."))
+		to_chat(span("warning","选择的角色无效。"))
 		return FALSE
 
 	if(is_living(mob))
-		to_chat(span("warning","Cannot orbit as a living mob."))
+		to_chat(span("warning","活着的角色不能跟随旁观。"))
 		return FALSE
 
 	var/turf/T = get_turf(choice)
 	if(!T)
-		to_chat(span("warning","Invalid turf."))
+		to_chat(span("warning","地块无效。"))
 		return FALSE
 
 	if(mob.observing)
@@ -116,7 +116,7 @@
 	choice.observers += mob
 	mob.observing = choice
 
-	to_chat(span("notice","You orbit [choice]."))
+	to_chat(span("notice","你正在跟随旁观[choice]。"))
 
 /client/verb/orbit_mob()
 	set name = "Orbit Mob"
@@ -124,18 +124,18 @@
 
 	//sortTim(SSliving.all_mobs,/proc/cmp_path_asc)
 
-	var/mob/choice = input("Who would you like to orbit?","Orbit Mob") as null|mob in SSliving.all_mobs
+	var/mob/choice = input("你想跟随旁观谁？","跟随旁观角色") as null|mob in SSliving.all_mobs
 	if(!choice || choice == mob)
-		to_chat(span("warning","Invalid mob."))
+		to_chat(span("warning","角色无效。"))
 		return FALSE
 
 	if(is_living(mob))
-		to_chat(span("warning","Cannot orbit as a living mob."))
+		to_chat(span("warning","活着的角色不能跟随旁观。"))
 		return FALSE
 
 	var/turf/T = get_turf(choice)
 	if(!T)
-		to_chat(span("warning","Invalid turf."))
+		to_chat(span("warning","地块无效。"))
 		return FALSE
 
 	if(mob.observing)
@@ -146,7 +146,7 @@
 	choice.observers += mob
 	mob.observing = choice
 
-	to_chat(span("notice","You orbit [choice]."))
+	to_chat(span("notice","你正在跟随旁观[choice]。"))
 
 /client/verb/jump_to_area()
 	set name = "Jump to Area"
@@ -157,14 +157,14 @@
 		var/area/A = SSarea.all_areas[k]
 		coverted_choice["[A]"] = A
 
-	var/choice = input("What area would you like to jump to?","Jump to Area") as null|anything in coverted_choice
+	var/choice = input("你想跳转到哪个区域？","跳转到区域") as null|anything in coverted_choice
 	if(!choice)
-		to_chat(span("warning","Invalid area."))
+		to_chat(span("warning","区域无效。"))
 		return FALSE
 
 	if(is_living(mob))
 		if(!(permissions & FLAG_PERMISSION_MODERATOR) && !(permissions & FLAG_PERMISSION_ADMIN))
-			to_chat(span("warning", "You cannot use ghost commands as a living player."))
+			to_chat(span("warning", "活着的玩家不能使用幽灵命令。"))
 			return FALSE
 		to_chat(span("notice", "ADMIN: Skipping living player safety check."))
 
@@ -172,12 +172,12 @@
 
 	var/turf/T = locate(A.average_x,A.average_y,A.z)
 	if(!T)
-		to_chat(span("warning","Invalid turf."))
+		to_chat(span("warning","地块无效。"))
 		return FALSE
 
 	mob.force_move(T)
 
-	to_chat(span("notice","You jumped to [A]'s location."))
+	to_chat(span("notice","你已跳转到[A]所在的位置。"))
 	log_admin("[src] jumped to [A]'s (area) location.")
 
 /client/verb/view_map()
@@ -191,8 +191,8 @@
 
 	if(M_control)
 		M_control.update_owner(null)
-		src.to_chat(span("notice","You close the map."))
+		src.to_chat(span("notice","你关闭了地图。"))
 	else
 		M_control = new(mob)
 		M_control.update_owner(mob)
-		src.to_chat(span("notice","You open the map."))
+		src.to_chat(span("notice","你打开了地图。"))

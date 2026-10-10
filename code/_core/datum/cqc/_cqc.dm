@@ -1,5 +1,5 @@
 /cqc/
-	var/name = "CQC Move Name"
+	var/name = "近身格斗招式名称"
 	var/combo = "" //The combo to trigger.
 	var/damagetype/damage_type //The damage type that is applied on target.
 	var/combo_breaker = FALSE //Should we clear the current combo when this combo is finished?

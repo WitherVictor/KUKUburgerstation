@@ -9,32 +9,32 @@
 	if(L.following) //If we're following someone
 		if(L.following == P) //If we're following the person we're talking to.
 			.["hello"] = list(
-				"I am currently following you.NEWLINE#1",
+				"我正在跟随你。NEWLINE#1",
 				"*Stop following me."
 			)
 			.["*Stop following me."] = list(
-				"I will wait here."
+				"我会在这里等候。"
 			)
 		else //If we're following someone else.
 			.["hello"] = list(
-				"I am currently following someone else.NEWLINE#1",
+				"我正在跟随别人。NEWLINE#1",
 				"*Follow me."
 			)
 			.["*Follow me."] = list(
-				"I am currently following the orders of [L.following.real_name], so I cannot follow you."
+				"我正在听从[L.following.real_name]的命令，不能跟随你。"
 			)
 	else //We're not following someone.
 		.["hello"] = list(
-			"I am currently following no one.NEWLINE#1",
+			"我现在没有跟随任何人。NEWLINE#1",
 			"*Follow me."
 		)
 		if(length(P.followers) < 2) //They have less than 2 followers
 			.["*Follow me."] = list(
-				"I will follow."
+				"我会跟随你。"
 			)
 		else
 			.["*Follow me."] = list(
-				"You already have someone with you."
+				"已经有人跟着你了。"
 			)
 
 /dialogue/npc/hostage/set_topic(var/mob/living/advanced/player/P,var/topic)

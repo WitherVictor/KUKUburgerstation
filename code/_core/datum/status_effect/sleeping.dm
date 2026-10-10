@@ -1,6 +1,6 @@
 /status_effect/sleeping
-	name = "Sleeping"
-	desc = "You're sleeping!"
+	name = "睡眠"
+	desc = "你正在睡觉！"
 	id = SLEEP
 	minimum = SECONDS_TO_DECISECONDS(10)
 	maximum = SECONDS_TO_DECISECONDS(60)

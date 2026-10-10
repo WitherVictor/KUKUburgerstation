@@ -1,8 +1,8 @@
 /obj/item/ability_learner
 
-	name = "ability scroll"
-	desc = "I've finally found it."
-	desc_extended = "Error."
+	name = "能力卷轴"
+	desc = "终于让我找到了。"
+	desc_extended = "错误。"
 
 	icon = 'icons/obj/item/books.dmi'
 	icon_state = "scroll"
@@ -25,8 +25,8 @@
 
 /obj/item/ability_learner/update_sprite()
 	. = ..()
-	if(name == "ability scroll")
-		name = "ability scroll: [initial(stored_ability.name)]"
+	if(name == "能力卷轴")
+		name = "能力卷轴：[initial(stored_ability.name)]"
 		desc_extended = initial(stored_ability.desc)
 
 /obj/item/ability_learner/update_overlays()
@@ -46,7 +46,7 @@
 	PROGRESS_BAR(activator,src,30,src::learn(),activator)
 	PROGRESS_BAR_CONDITIONS(activator,src,src::can_learn(),activator)
 
-	activator.to_chat(span("notice","You look into \the [src.name] and begin learning about [initial(stored_ability.name)]..."))
+	activator.to_chat(span("notice","你研读[src.name]，开始学习[initial(stored_ability.name)]……"))
 
 	return TRUE
 
@@ -76,11 +76,11 @@
 	if(!GD.loaded_data["unlocked_abilities"])
 		GD.loaded_data["unlocked_abilities"] = list()
 	else if("[stored_ability]" in GD.loaded_data["unlocked_abilities"]) //stored_ability is a path.
-		A.to_chat(span("warning","You've already know [initial(stored_ability.name)]!"))
+		A.to_chat(span("warning","你已经学会了[initial(stored_ability.name)]！"))
 		return FALSE
 
 	GD.loaded_data["unlocked_abilities"] += "[stored_ability]" //stored_ability is a path.
-	A.to_chat(span("notice","You learn everything you can about [initial(stored_ability.name)] from \the [src.name] before it fades to dust.."))
+	A.to_chat(span("notice","你从[src.name]中学会了[initial(stored_ability.name)]的全部内容，随后卷轴化为尘埃……"))
 	stored_ability = null
 	qdel(src)
 

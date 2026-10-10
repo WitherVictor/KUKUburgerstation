@@ -1,6 +1,6 @@
 /status_effect/paralyzed
-	name = "Paralyzed"
-	desc = "You're paralyzed!"
+	name = "麻痹"
+	desc = "你麻痹了！"
 	id = PARALYZE
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(30)

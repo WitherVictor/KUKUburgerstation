@@ -1,6 +1,6 @@
 /damagetype/npc/captain_beepsky
-	attack_verbs = list("stun")
-	weapon_name = "bluespace stunbaton"
+	attack_verbs = list("击晕")
+	weapon_name = "蓝空间电击警棍"
 
 	//The base attack damage of the weapon. It's a flat value, unaffected by any skills or attributes.
 	attack_damage_base = list(

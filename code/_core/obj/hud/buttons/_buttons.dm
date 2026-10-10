@@ -1,6 +1,6 @@
 /obj/hud/button/
-	name = "button"
-	desc = "This button does something, I think."
+	name = "按钮"
+	desc = "这个按钮应该有点用吧。"
 
 	icon = 'icons/hud/hud.dmi'
 	icon_state = null

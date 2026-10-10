@@ -1,5 +1,5 @@
 /reagent/fuel
-	name = "Generic Fuel"
+	name = "通用燃料"
 	color = "#7F3300"
 	alpha = 255
 
@@ -100,12 +100,12 @@
 	. = ..()
 
 /reagent/fuel/oxygen //Found in the snow biome as a magic plant
-	name = "Liquid Oxygen"
-	desc = "What most lifeforms breathe in, but in liquid form."
+	name = "液氧"
+	desc = "大多数生物呼吸所需的物质，不过这是液态的。"
 	color = "#E6F2F2"
 	alpha = 200
 
-	flavor = "oxygen"
+	flavor = "氧气"
 	value = 2
 
 	liquid = 0.25
@@ -117,7 +117,7 @@
 	heated_reagent_temp = 330
 
 /reagent/fuel/oil
-	name = "Processed Oil"
+	name = "精炼油"
 	color = "#131616"
 	alpha = 255
 
@@ -129,7 +129,7 @@
 	ignition_temperature = 450
 
 /reagent/fuel/oil/crude
-	name = "Crude Oil"
+	name = "原油"
 	color = "#0F0F0F"
 	alpha = 255
 
@@ -146,7 +146,7 @@
 	ignition_temperature = 500
 
 /reagent/fuel/oil/carbon
-	name = "Carbonized Oil"
+	name = "碳化油"
 	color = "#000000"
 	alpha = 255
 
@@ -163,7 +163,7 @@
 	ignition_temperature = 550
 
 /reagent/fuel/welding
-	name = "Welding Fuel"
+	name = "焊接燃料"
 	color = "#7F3300"
 	alpha = 255
 
@@ -175,7 +175,7 @@
 	ignition_temperature = 475
 
 /reagent/fuel/hydrogen
-	name = "Liquid Hydrogen"
+	name = "液氢"
 	color = "#7F0000"
 	alpha = 255
 
@@ -189,7 +189,7 @@
 	ignition_temperature = 860
 
 /reagent/fuel/hydrogen_peroxide
-	name = "Hydrogen Peroxide"
+	name = "过氧化氢"
 	color = "#FFEFEF"
 	alpha = 100
 
@@ -203,7 +203,7 @@
 	ignition_temperature = 420
 
 /reagent/fuel/phoron
-	name = "Liquid Phoron"
+	name = "液态佛隆"
 	color = "#FF00DC"
 	alpha = 255
 
@@ -215,8 +215,8 @@
 	ignition_temperature = 300
 
 /reagent/fuel/acetone
-	name = "Acetone"
-	desc = "A colorless, corrosive flammable liquid used for solvents."
+	name = "丙酮"
+	desc = "一种用作溶剂的无色液体，具有腐蚀性且易燃。"
 	alpha = 100
 
 	particle_size = 0.1
@@ -227,7 +227,7 @@
 	ignition_temperature = 310
 
 /reagent/fuel/diethylamine
-	name = "Diethylamine"
+	name = "二乙胺"
 	alpha = 255
 
 	particle_size = 0.75
@@ -238,8 +238,8 @@
 	ignition_temperature = 600
 
 /reagent/fuel/tnt
-	name = "Trinitrotoluene"
-	desc = "Also know as TNT, this material is very explosive."
+	name = "三硝基甲苯"
+	desc = "又称TNT，是一种威力很大的炸药。"
 
 	particle_size = 0.75
 
@@ -248,8 +248,8 @@
 	explosion_strength_per_unit = 0.1
 
 /reagent/fuel/potassium_perchlorate
-	name = "Potassium Perchlorate"
-	desc = "What causes the bang in the flashbang."
+	name = "高氯酸钾"
+	desc = "闪光震撼弹中产生巨响的成分。"
 
 	liquid = -0.5
 	particle_size = 0.2
@@ -260,8 +260,8 @@
 	ignition_temperature = 370
 
 /reagent/fuel/flash_powder
-	name = "Flash Powder Mixture"
-	desc = "What causes the flash and bang in the flashbang."
+	name = "闪光粉混合物"
+	desc = "闪光震撼弹中产生闪光和巨响的成分。"
 
 	liquid = -0.5
 	particle_size = 0.3

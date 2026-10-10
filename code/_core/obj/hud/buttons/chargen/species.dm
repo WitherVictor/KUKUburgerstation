@@ -1,6 +1,6 @@
 /obj/hud/button/chargen/species/
-	name = "change species"
-	desc_extended = "Click here to change your character's species. Note that changing your character's species will cause you to lose your previous changes."
+	name = "更改种族"
+	desc_extended = "点击这里更改角色的种族。注意，更改种族会清除你之前的外观修改。"
 	icon_state = "change_species"
 	screen_loc = "CENTER+2,CENTER+0"
 
@@ -15,7 +15,8 @@
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
 
-		var/species_choice = input("What species do you wish to change to?") as null|anything in list("Human","Lizard","Cyborg","Dionae","Moth")
+		var/list/species_choices = list("人类" = "Human","蜥蜴人" = "Lizard","半机械人" = "Cyborg","狄俄娜" = "Dionae","蛾人" = "Moth")
+		var/species_choice = input("你想变成什么种族？") as null|anything in species_choices
 		if(!species_choice)
 			return TRUE
 
@@ -27,7 +28,8 @@
 			"Moth" = "moth"
 		)
 
-		var/choice = input("Are you sure you want to change your species to [species_choice]? Your appearance will reset to that species' default.","Species Change") in list("Yes","No")
+		var/list/confirmation_choices = list("是" = "Yes","否" = "No")
+		var/choice = input("确定要将种族改为[species_choice]吗？你的外观将恢复为该种族的默认外观。","更改种族") in confirmation_choices
 
-		if(choice == "Yes")
-			A.perform_specieschange(choice_to_species[species_choice],TRUE,TRUE)
+		if(choice && confirmation_choices[choice] == "Yes")
+			A.perform_specieschange(choice_to_species[species_choices[species_choice]],TRUE,TRUE)

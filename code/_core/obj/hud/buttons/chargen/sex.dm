@@ -1,6 +1,6 @@
 /obj/hud/button/chargen/sex/
-	name = "change sex"
-	desc_extended = "Click here to change your character's sex. Note that changing your character's sex will cause you to lose your previous changes."
+	name = "更改生理性别"
+	desc_extended = "点击这里更改角色的生理性别。注意，更改生理性别会清除你之前的外观修改。"
 	icon_state = "sex_other"
 	screen_loc = "CENTER+2,CENTER+2"
 	user_colors = TRUE
@@ -29,7 +29,8 @@
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
 		var/desired_sex = A.sex == MALE ? FEMALE : MALE
-		var/choice = input("Are you sure you want to change your sex to [desired_sex == MALE ? "male" : "female"]? Your appearance will reset to default.","Sex Change") in list("Yes","No")
+		var/list/confirmation_choices = list("是" = "Yes","否" = "No")
+		var/choice = input("确定要将生理性别改为[desired_sex == MALE ? "男性" : "女性"]吗？你的外观将恢复默认。","更改生理性别") in confirmation_choices
 
-		if(choice == "Yes")
+		if(choice && confirmation_choices[choice] == "Yes")
 			A.perform_sexchange(desired_sex,TRUE,TRUE)

@@ -1,6 +1,6 @@
 /ability/magic/radial_blind
-	name = "radial blind"
-	desc = "Blind all enemies around you in a small radius."
+	name = "范围致盲"
+	desc = "使周围小范围内的所有敌人暂时失明。"
 	icon_state = "blind"
 	cost = 80
 	cooldown = SECONDS_TO_DECISECONDS(30)

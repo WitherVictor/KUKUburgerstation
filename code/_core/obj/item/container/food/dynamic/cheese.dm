@@ -1,7 +1,7 @@
 /obj/item/container/edible/dynamic/cheese
-	name = "cheese"
-	desc = "A rat's favorite."
-	desc_extended = "Nothing says class like huge yellow blocks of cheddar."
+	name = "奶酪"
+	desc = "老鼠的最爱。"
+	desc_extended = "没有什么比一大块黄色切达奶酪更能彰显品位了。"
 
 	icon = 'icons/obj/item/consumable/food/cheese.dmi'
 	icon_state = "wheel"
@@ -35,7 +35,7 @@
 			if(pieces <= 1 || original_volume < pieces)
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.to_chat(span("notice","There isn't enough cheese in \the [src.name] to cut!"))
+					L.to_chat(span("notice","[src.name]的奶酪太少，无法继续切分！"))
 				return ..()
 
 			for(var/i=1,i<=pieces,i++)
@@ -48,7 +48,7 @@
 
 			if(is_living(attacker))
 				var/mob/living/L = attacker
-				L.visible_message(span("notice","\The [L.name] cuts \the [src.name] into several cheese pieces."),span("notice","You cut \the [src.name] into [pieces] cheese pieces."))
+				L.visible_message(span("notice","[L.name]将[src.name]切成了几块奶酪。"),span("notice","你将[src.name]切成了[pieces]块奶酪。"))
 
 			qdel(src)
 
@@ -58,7 +58,7 @@
 				if(pieces <= 1 || original_volume < pieces)
 					if(is_living(attacker))
 						var/mob/living/L = attacker
-						L.to_chat(span("warning","There isn't enough cheese in \the [src.name] to cut!"))
+						L.to_chat(span("warning","[src.name]的奶酪太少，无法继续切分！"))
 					return ..()
 
 				for(var/i=1,i<=pieces,i++)
@@ -71,14 +71,14 @@
 
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.visible_message(span("notice","\The [L.name] cuts \the [src.name] into several cheese pieces."),span("notice","You cut \the [src.name] into [pieces] cheese pieces."))
+					L.visible_message(span("notice","[L.name]将[src.name]切成了几块奶酪。"),span("notice","你将[src.name]切成了[pieces]块奶酪。"))
 
 				qdel(src)
 
 			else if(original_volume <= 1)
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.to_chat(span("warning","There isn't enough cheese in \the [src.name] to cut!"))
+					L.to_chat(span("warning","[src.name]的奶酪太少，无法继续切分！"))
 				return ..()
 			else
 				var/obj/item/container/edible/dynamic/cheese/C = new(get_turf(src))
@@ -89,7 +89,7 @@
 				animate(C,pixel_x = rand(-16,16),pixel_y=rand(-16,16),time=SECONDS_TO_DECISECONDS(1))
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.visible_message(span("notice","\The [L.name] slices a thin slice of cheese off the top of \the [src.name]."),span("notice","You slice a thin slice of cheese off the top of \the [src.name]."))
+					L.visible_message(span("notice","[L.name]从[src.name]顶部切下了一薄片奶酪。"),span("notice","你从[src.name]顶部切下了一薄片奶酪。"))
 
 	return ..()
 
@@ -114,7 +114,7 @@
 	return ..()
 
 /obj/item/container/edible/dynamic/cheese/block
-	name = "block cheese"
+	name = "块状奶酪"
 	icon_state = "block"
 	value = 1
 
@@ -123,7 +123,7 @@
 	return ..()
 
 /obj/item/container/edible/dynamic/cheese/wheel
-	name = "wheel cheese"
+	name = "轮状奶酪"
 	icon_state = "wheel"
 	value = 1
 

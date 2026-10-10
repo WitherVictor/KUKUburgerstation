@@ -1,7 +1,7 @@
 /obj/item/container/edible/dynamic/fish
-	name = "fish"
-	desc = "Something smells fishy here..."
-	desc_extended = "Fish. It's good for you. Except the mercury."
+	name = "鱼"
+	desc = "这里有股鱼腥味……"
+	desc_extended = "鱼，对身体有益。除了里面的汞。"
 	icon = 'icons/obj/item/consumable/food/meat.dmi'
 	icon_state = "fish"
 	crafting_id = "fish"

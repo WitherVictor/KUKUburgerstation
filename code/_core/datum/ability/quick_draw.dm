@@ -1,6 +1,6 @@
 /ability/quick_draw
-	name = "Quick Draw"
-	desc = "Quickly draws the item in your equipment slot into your dominant hand."
+	name = "快速取物"
+	desc = "将装备槽中的物品迅速取到惯用手中。"
 	icon_state = "quick_draw"
 	cost = 5
 	cooldown = SECONDS_TO_DECISECONDS(1)
@@ -36,8 +36,8 @@
 
 
 /ability/quick_draw/plus
-	name = "Quick Draw+"
-	desc = "Quickly draws the item in your equipment slot into your dominant hand. If the item is a weapon, attempt an attack on the target location."
+	name = "快速取物+"
+	desc = "将装备槽中的物品迅速取到惯用手中。如果该物品是武器，会尝试攻击目标位置。"
 	icon_state = "quick_draw_plus"
 	attack_too = TRUE
 	cost = 20

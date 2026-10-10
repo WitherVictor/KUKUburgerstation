@@ -1,6 +1,6 @@
 /species/stand/
-	name = "Stand"
-	desc = "Vanilla as fuck."
+	name = "替身"
+	desc = "普通得要命。"
 	id = "stand"
 	flags_species = SPECIES_HUMAN
 

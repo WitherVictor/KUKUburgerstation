@@ -1,6 +1,6 @@
 /obj/hud/button/vendor
 
-	name = "vending button"
+	name = "售货按钮"
 	icon = 'icons/hud/vendor_long.dmi'
 	icon_state = "large"
 	screen_loc = "CENTER,CENTER"
@@ -9,7 +9,7 @@
 
 	user_colors = TRUE
 
-	maptext = "ITEM NAME HERE"
+	maptext = "物品名称"
 
 	var/obj/item/associated_item
 	var/obj/structure/interactive/vending/associated_vendor
@@ -148,7 +148,7 @@
 	if(.)
 
 		if(locked)
-			activator.to_chat(span("warning","You haven't unlocked that yet: [locked]"))
+			activator.to_chat(span("warning","你尚未解锁该物品：[locked]"))
 			return TRUE
 
 		var/obj/item/I = associated_vendor.purchase_item(activator,params,associated_item,associated_cost)
@@ -159,9 +159,9 @@
 		if(object && is_item(object) && I.can_transfer_stacks_to(object))
 			var/stacks_transfered = I.transfer_amount_to(object)
 			if(stacks_transfered)
-				activator.to_chat(span("notice","You restock \the [object.name] with [stacks_transfered] stacks."))
+				activator.to_chat(span("notice","你向[object.name]补充了 [stacks_transfered] 份。"))
 			else
-				activator.to_chat(span("warning","You can't restock \the [src.name], it's full!"))
+				activator.to_chat(span("warning","无法继续补充[src.name]，已经装满了！"))
 
 		if(is_advanced(activator))
 			var/mob/living/advanced/A = activator
@@ -170,7 +170,7 @@
 
 
 /obj/hud/button/close_vendor
-	name = "close vendor"
+	name = "关闭售货界面"
 	icon_state = "close_inventory"
 	screen_loc = "CENTER,CENTER"
 

@@ -1,6 +1,6 @@
 /status_effect/druggy
-	name = "Druggy"
-	desc = "You're druggy!"
+	name = "药物迷幻"
+	desc = "药物让你陷入了迷幻状态！"
 	id = DRUGGY
 
 	minimum = SECONDS_TO_DECISECONDS(10)

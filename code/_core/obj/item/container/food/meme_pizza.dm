@@ -1,11 +1,11 @@
 /obj/item/container/edible/meme_pizza
-	name = "legendary pineapple pizza"
+	name = "传奇菠萝披萨"
 
 	icon = 'icons/obj/item/consumable/food/meme.dmi'
 	icon_state = "pizza"
 
-	desc = "Who would put fruit on a pizza?"
-	desc_extended = "An absolutely legendary pizza that heals you to full health when consumed. Does not work on the dead."
+	desc = "谁会往披萨上放水果啊？"
+	desc_extended = "名副其实的传奇披萨，吃下后能让你恢复到满生命值。对死者无效。"
 
 	value = 1000
 

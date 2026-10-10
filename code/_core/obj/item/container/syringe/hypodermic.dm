@@ -1,5 +1,5 @@
 /obj/item/container/syringe/hypodermic/
-	name = "hypodermic syringe"
+	name = "皮下注射器"
 	value = 5
 	injection_time = SECONDS_TO_DECISECONDS(2)
 
@@ -62,21 +62,21 @@
 
 
 /obj/item/container/syringe/hypodermic/epinephrine/
-	name = "hypodermic syringe (epinephrine)"
+	name = "皮下注射器（急救肾上腺素）"
 
 /obj/item/container/syringe/hypodermic/epinephrine/Generate()
 	reagents.add_reagent(/reagent/medicine/adrenaline/epinephrine,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/hypodermic/opium/
-	name = "hypodermic syringe (opium)"
+	name = "皮下注射器（鸦片）"
 
 /obj/item/container/syringe/hypodermic/opium/Generate()
 	reagents.add_reagent(/reagent/medicine/painkiller/opium,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/hypodermic/omnizine
-	name = "hypodermic syringe (omnizine)"
+	name = "皮下注射器（全能灵药）"
 
 /obj/item/container/syringe/hypodermic/omnizine/Generate()
 	reagents.add_reagent(/reagent/medicine/omnizine,reagents.volume_max)
@@ -84,8 +84,8 @@
 
 
 /obj/item/container/syringe/hypodermic/auto
-	name = "autosyringe"
-	desc_extended = "A rare prototype to the medipen, the autosyringe uses pressurized air to quickly inhject chemicals into the bloodstream. The pressurized system cannot be tweaked and thus will always inject the full amount if possible."
+	name = "自动注射器"
+	desc_extended = "蝴蝶注射笔的罕见原型，使用压缩空气将化学物质快速注入血液。加压系统无法调节，因此只要条件允许，就会一次注入全部内容物。"
 	icon = 'icons/obj/item/container/syringe_advanced.dmi'
 	rarity = RARITY_RARE
 	quality_reduction_on_use = 5

@@ -1,8 +1,8 @@
 
 //Simple Dash.
 /ability/dash
-	name = "Dash"
-	desc = "Dash in your character's movement direction. If you are not moving, you will dash in the facing direction instead. Distance is 4 tiles."
+	name = "冲刺"
+	desc = "朝角色的移动方向冲刺。静止时，改为朝角色面向的方向冲刺。距离为 4 格。"
 	icon_state = "dash"
 
 	resource_type = STAMINA
@@ -23,8 +23,8 @@
 
 //Controlled Dash
 /ability/dash/controlled
-	name = "Controlled Dash"
-	desc = "Dash towards your character's facing direction. Can be controlled mid-dash. Distance is 3 tiles."
+	name = "可控冲刺"
+	desc = "朝角色面向的方向冲刺，途中可控制方向。距离为 3 格。"
 	icon_state = "dash_plus"
 	dash_strength = 3
 	cooldown = SECONDS_TO_DECISECONDS(5)
@@ -39,8 +39,8 @@
 
 //Targeted Dash
 /ability/dash/targeted
-	name = "Targeted Dash"
-	desc = "Dash towards the targeted tile. Maximum distance is 3 tiles."
+	name = "定点冲刺"
+	desc = "朝指定地块冲刺。最远距离为 3 格。"
 	icon_state = "dash_targeted"
 	dash_strength = 3
 	cost = 40
@@ -57,8 +57,8 @@
 
 //Random dash.
 /ability/dash/random
-	name = "Random Dash"
-	desc = "Dash in a random direction. Distance is 2 tiles."
+	name = "随机冲刺"
+	desc = "朝随机方向冲刺。距离为 2 格。"
 	icon_state = "dash"
 	dash_strength = 2
 	cost = 10
@@ -75,8 +75,8 @@
 
 //Fleeting dash.
 /ability/dash/fleeting
-	name = "Fleeting Dash"
-	desc = "Dash away from the targeted location. Distance is 2 tiles."
+	name = "撤离冲刺"
+	desc = "朝远离目标位置的方向冲刺。距离为 2 格。"
 	icon_state = "dash"
 	dash_strength = 2
 	cost = 20

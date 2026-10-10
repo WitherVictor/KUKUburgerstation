@@ -1,5 +1,6 @@
 /material/
 	var/name = "material"
+	var/display_name = "材料"
 	var/desc = "Pun."
 	var/desc_extended = "Information about this material."
 
@@ -21,12 +22,14 @@
 
 /material/grass/
 	name = "grass"
+	display_name = "草"
 	color = COLOR_GREEN
 
 	value_per_unit = 1
 
 /material/dirt/
 	name = "dirt"
+	display_name = "泥土"
 	color = COLOR_BROWN
 
 	value_per_unit = 0.5
@@ -34,6 +37,7 @@
 
 /material/cobalt/
 	name = "cobalt"
+	display_name = "钴"
 	color = COLOR_BLUE
 
 	value_per_unit = 1
@@ -42,12 +46,14 @@
 
 /material/rock/
 	name = "rock"
+	display_name = "岩石"
 	color = COLOR_ROCK
 	wall_health = 250
 	value_per_unit = 1
 
 /material/glass/
 	name = "glass"
+	display_name = "玻璃"
 	color = COLOR_GLASS
 	wall_health = 25
 	icon_state_sheet = "glass"
@@ -58,6 +64,7 @@
 
 /material/steel
 	name = "steel"
+	display_name = "钢"
 	color = COLOR_STEEL
 	wall_health = 1000
 	value_per_unit = 9
@@ -66,6 +73,7 @@
 
 /material/copper
 	name = "copper"
+	display_name = "铜"
 	color = "#E28446"
 	wall_health = 250
 	value_per_unit = 4
@@ -74,6 +82,7 @@
 
 /material/aluminium
 	name = "aluminium"
+	display_name = "铝"
 	color = COLOR_ALUMINIUM
 	value_per_unit = 12
 	wall_health = 100
@@ -82,6 +91,7 @@
 
 /material/brass
 	name = "brass"
+	display_name = "黄铜"
 	color = "#e7a831"
 	value_per_unit = 15
 	wall_health = 750
@@ -90,6 +100,7 @@
 
 /material/iron
 	name = "iron"
+	display_name = "铁"
 	color = COLOR_IRON
 	icon_state_ore = "ore_iron"
 	icon_state_ore_deposit = "deposit_iron"
@@ -100,6 +111,7 @@
 
 /material/phoron
 	name = "phoron"
+	display_name = "佛隆"
 	color = COLOR_PHORON
 	icon_state_ore = "ore_phoron"
 	icon_state_ore_deposit = "deposit_phoron"
@@ -110,6 +122,7 @@
 
 /material/carbon
 	name = "carbon"
+	display_name = "碳"
 	color = COLOR_CARBON
 	icon_state_ore = "ore_coal"
 	icon_state_ore_deposit = "deposit_coal"
@@ -120,6 +133,7 @@
 
 /material/gold
 	name = "gold"
+	display_name = "金"
 	color = COLOR_GOLD
 	icon_state_ore = "ore_gold"
 	icon_state_ore_deposit = "deposit_gold"
@@ -130,6 +144,7 @@
 
 /material/platinum
 	name = "platinum"
+	display_name = "铂"
 	color = COLOR_PLATINUM
 	icon_state_ore = "ore_platinum"
 	icon_state_ore_deposit = "deposit_platinum"
@@ -140,6 +155,7 @@
 
 /material/diamond
 	name = "diamond"
+	display_name = "钻石"
 	color = COLOR_DIAMOND
 	icon_state_ore = "ore_diamond"
 	icon_state_ore_deposit = "deposit_diamond"
@@ -150,6 +166,7 @@
 
 /material/silver
 	name = "silver"
+	display_name = "银"
 	color = COLOR_SILVER
 	icon_state_ore = "ore_silver"
 	icon_state_ore_deposit = "deposit_silver"
@@ -160,6 +177,7 @@
 
 /material/uranium
 	name = "uranium"
+	display_name = "铀"
 	color = COLOR_URANIUM
 	icon_state_ore = "ore_uranium"
 	icon_state_ore_deposit = "deposit_uranium"
@@ -170,6 +188,7 @@
 
 /material/titanium
 	name = "titanium"
+	display_name = "钛"
 	color = COLOR_TITANIUM
 	icon_state_ore = "ore_titanium"
 	icon_state_ore_deposit = "deposit_titanium"
@@ -180,6 +199,7 @@
 
 /material/plasteel
 	name = "plasteel"
+	display_name = "塑钢"
 	color = COLOR_PLASTEEL
 	wall_health = 2000
 	value_per_unit = 25
@@ -188,6 +208,7 @@
 
 /material/wood
 	name = "wood"
+	display_name = "木材"
 	color = COLOR_WOOD
 	value_per_unit = 5
 	wall_health = 50
@@ -196,6 +217,7 @@
 
 /material/adamantium_carbon
 	name = "adamantium-carbon"
+	display_name = "精金碳复合材料"
 	color = COLOR_ADAMANITUM_CARBON
 	value_per_unit = 2000
 	wall_health = INFINITY

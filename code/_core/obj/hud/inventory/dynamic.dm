@@ -1,5 +1,5 @@
 /obj/hud/inventory/dynamic
-	name = "inventory space"
+	name = "储物格"
 	icon_state = "square_round"
 
 	max_size = -1
@@ -21,7 +21,7 @@
 	. = ..()
 	if(is_atom(desired_loc))
 		var/atom/A = desired_loc
-		name = "inventory space of [A.name]"
+		name = "[A.name]的储物格"
 	alpha = 0
 	mouse_opacity = 0
 
@@ -37,7 +37,7 @@
 		var/obj/item/container/edible/sandwich/S = I
 		for(var/obj/hud/inventory/I2 in S.inventories)
 			if(length(I2.contents))
-				if(owner) owner.to_chat(span("warning","You can't put a sandwich inside another sandwich! That's breaking the laws of sandwich!"))
+				if(owner) owner.to_chat(span("warning","你不能把三明治塞进另一个三明治里！这违反了三明治法则！"))
 				return FALSE
 		if(loc && loc == I)
 			return FALSE
@@ -47,11 +47,11 @@
 
 		if(is_occupied(TRUE))
 			if(messages && src.loc)
-				owner.to_chat(span("warning","\The [src.loc.name] is already occupied!"))
+				owner.to_chat(span("warning","[src.loc.name]已经被占用了！"))
 			return FALSE
 
 		if(length(contents) >= max_slots)
-			if(messages) owner.to_chat(span("warning","You don't see how you can fit any more objects inside \the [src.loc.name]!"))
+			if(messages) owner.to_chat(span("warning","[src.loc.name]里实在塞不下更多物品了！"))
 			return FALSE
 
 		return TRUE

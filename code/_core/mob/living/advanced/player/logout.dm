@@ -4,16 +4,16 @@ mob/living/advanced/player/proc/can_save(var/area/A)
 		return FALSE
 
 	if(!A || !(A.flags_area & FLAG_AREA_SAVEZONE))
-		src.to_chat(span("danger","You cannot save and quit here! Find a suitable zone to rest first!"))
+		src.to_chat(span("danger","这里不能保存并退出！先找个适合休息的区域！"))
 		return FALSE
 
 	var/obj/structure/interactive/bed/sleeper/S = locate() in src.loc.contents
 	if(!S)
-		src.to_chat(span("danger","Find a sleeper and lie down on it first before saving!"))
+		src.to_chat(span("danger","保存前，请先找个休眠舱躺下！"))
 		return FALSE
 
 	if(!S.buckled)
-		src.to_chat(span("danger","Lay down on the bed first before saving!"))
+		src.to_chat(span("danger","保存前，请先躺到床上！"))
 		return FALSE
 
 	return TRUE

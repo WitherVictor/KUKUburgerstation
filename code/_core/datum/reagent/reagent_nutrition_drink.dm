@@ -1,10 +1,10 @@
 /reagent/nutrition/water
-	name = "water"
-	desc = "What most lifeforms drink."
+	name = "水"
+	desc = "大多数生物喝的东西。"
 	color = "#99D5FF"
 	alpha = 150
 
-	flavor = "water"
+	flavor = "水"
 	flavor_strength = 0.1
 
 	particle_size = 0
@@ -45,12 +45,12 @@
 
 
 /reagent/nutrition/water/holy
-	name = "holy water"
-	desc = "What most lifeforms bless with."
+	name = "圣水"
+	desc = "大多数生物用来祝圣的东西。"
 	color = "#99D5FF"
 	alpha = 100
 
-	flavor = "holy water"
+	flavor = "圣水"
 	flavor_strength = 0.5
 
 	particle_size = 0
@@ -63,12 +63,12 @@
 	value = 3
 
 /reagent/nutrition/ice
-	name = "ice"
-	desc = "What most lifeforms use to cool their drinks."
+	name = "冰"
+	desc = "大多数生物用来冰镇饮料的东西。"
 	color = "#E5FFFF"
 	alpha = 200
 
-	flavor = "ice"
+	flavor = "冰"
 	flavor_strength = 0.1
 
 	liquid = -0.5
@@ -85,14 +85,14 @@
 	particle_size = 0.9
 
 /reagent/nutrition/soda
-	name = "carbonated water"
-	desc = "Carbonated water."
+	name = "碳酸水"
+	desc = "充满气泡的水。"
 	color = "#DDFFFF"
 	alpha = 225
 
 	hydration_amount = 15
 
-	flavor = "white noise"
+	flavor = "白噪声"
 
 	heal_amount = 0
 
@@ -100,55 +100,55 @@
 	particle_size = 0.2
 
 /reagent/nutrition/soda/cola
-	name = "\improper Space Cola"
-	desc = "Drink Space Cola!"
+	name = "太空可乐"
+	desc = "来喝太空可乐！"
 	color = "#5D2500"
 
-	flavor = "cola"
+	flavor = "可乐"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 0
 
 /reagent/nutrition/soda/grape
-	name = "\improper Starkist Grape Soda"
-	desc = "Head for the stars!"
+	name = "星吻葡萄汽水"
+	desc = "向着群星出发！"
 	color = "#57007F"
 
-	flavor = "grape soda"
+	flavor = "葡萄汽水"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 0
 
 /reagent/nutrition/soda/orange
-	name = "\improper Starkist Orange Soda"
-	desc = "Head for the stars!"
+	name = "星吻橙味汽水"
+	desc = "向着群星出发！"
 	color = "#590000"
 
-	flavor = "orange soda"
+	flavor = "橙味汽水"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 0
 
 /reagent/nutrition/soda/iced_tea
-	name = "\improper Disk! Iced Tea"
-	desc = "Secure that refreshing flavor!"
+	name = "磁盘！冰茶"
+	desc = "守住这份清爽滋味！"
 	color = "#A55C2B"
 
 	nutrition_fast_amount = 5
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 0
 
-	flavor = "iced tea"
+	flavor = "冰茶"
 
 /reagent/nutrition/soda/mountain_wind
-	name = "\improper Space Mountain Wind"
-	desc = "Do the Mountain!"
+	name = "太空山风"
+	desc = "畅饮山风！"
 	color = "#B6FF00"
 
-	flavor = "citrus soda"
+	flavor = "柑橘汽水"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 0
@@ -156,22 +156,22 @@
 
 
 /reagent/nutrition/soda/dr_gibb
-	name = "\improper Dr. Gibb"
-	desc = "42 varierties of flavor!"
+	name = "吉布博士"
+	desc = "42种风味！"
 	color = "#590000"
 
-	flavor = "cherry cola"
+	flavor = "樱桃可乐"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 0
 
 /reagent/nutrition/soda/space_up
-	name = "\improper Space Up!"
-	desc = "Space up with Space Up!"
+	name = "太空七喜！"
+	desc = "喝太空七喜，一起飞上太空！"
 	color = "#590000"
 
-	flavor = "lemon lime soda"
+	flavor = "柠檬青柠汽水"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 0

@@ -1,5 +1,5 @@
 /damagetype/npc/spider
-	attack_verbs = list("bite","chomp","scratch")
+	attack_verbs = list("撕咬","啃咬","抓挠")
 
 
 	//The base attack damage of the weapon. It's a flat value, unaffected by any skills or attributes.

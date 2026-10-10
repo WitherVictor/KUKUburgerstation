@@ -1,5 +1,5 @@
 /menu/class/
-	name = "Class Editor"
+	name = "职业编辑器"
 	id = "class_editor"
 	file = 'html/chargen_class.html'
 	resources = list(

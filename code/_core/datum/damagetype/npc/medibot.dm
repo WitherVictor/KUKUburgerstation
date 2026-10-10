@@ -1,5 +1,5 @@
 /damagetype/npc/medibot
-	attack_verbs = list("ram","drive")
+	attack_verbs = list("冲撞","碾压")
 
 	//The base attack damage of the weapon. It's a flat value, unaffected by any skills or attributes.
 	attack_damage_base = list(

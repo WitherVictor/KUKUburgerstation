@@ -17,6 +17,7 @@
 
 	var/obj/hud/button/close_ability_choice/C = new
 	C.linked_machine = machine
+	var/list/category_display_names = list("CQC" = "近身格斗", "Quick Draw" = "快速取物", "Dash" = "冲刺", "Magic" = "魔法")
 
 	var/list/abilitiy_buttons = list()
 	var/max_x = 0
@@ -26,7 +27,7 @@
 		var/x=0
 		var/obj/hud/button/CB = new
 		CB.icon_state = "none"
-		CB.maptext = "[category]"
+		CB.maptext = category_display_names[category] ? category_display_names[category] : "[category]"
 		CB.maptext_width = TILE_SIZE*2
 		CB.update_owner(A)
 		CB.screen_loc = "LEFT+1.5:8,TOP-1.75-[y]"
@@ -56,7 +57,7 @@
 
 
 /obj/hud/button/ability_choice
-	name = "ability choice"
+	name = "选择能力"
 
 	var/unlocked = TRUE
 	var/selected = FALSE
@@ -121,7 +122,7 @@
 
 
 /obj/hud/button/ability_choice/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
-	activator.to_chat(span("notice","Click and drag to an ability slot at the top left to slot this ability."))
+	activator.to_chat(span("notice","将此能力拖到左上角的能力槽位即可装配。"))
 	return TRUE
 
 
@@ -134,11 +135,11 @@
 	var/mob/living/advanced/A = owner
 
 	if(get_dist(linked_close.linked_machine,A) >= 2)
-		activator.to_chat(span("warning","You're too far away!"))
+		activator.to_chat(span("warning","你离得太远了！"))
 		return FALSE
 
 	if(!unlocked)
-		activator.to_chat(span("warning","You have not unlocked this ability yet. Abilities can be unlocked by purchasing them in Science or by finding them in the mission area."))
+		activator.to_chat(span("warning","你尚未解锁此能力。可以在科研部购买能力，或在任务区域找到它们来解锁。"))
 		return FALSE
 
 	var/src_ability_category = initial(stored_ability.category)
@@ -150,7 +151,7 @@
 		for(var/k in A.ability_buttons)
 			var/obj/hud/button/ability/B = A.ability_buttons[k]
 			if(B.ability && B.ability.category == src_ability_category)
-				activator.to_chat(span("warning","You cannot have more than one ability of the same category in your genetics."))
+				activator.to_chat(span("warning","你不能装配多个同类别的基因能力。"))
 				return FALSE
 
 	return TRUE
@@ -172,9 +173,9 @@
 		B.ability = new stored_ability
 		B.update_sprite()
 		if(old_ability_name)
-			activator.to_chat(span("notice","You replace [old_ability_name] with [B.ability.name]."))
+			activator.to_chat(span("notice","你将[old_ability_name]替换为[B.ability.name]。"))
 		else
-			activator.to_chat(span("notice","You add [B.ability.name] to genetics."))
+			activator.to_chat(span("notice","你装配了基因能力[B.ability.name]。"))
 		var/obj/hud/button/close_ability_choice/C = src.linked_close
 		for(var/k in C.linked_buttons)
 			var/obj/hud/button/OB = k
@@ -184,7 +185,7 @@
 
 
 /obj/hud/button/close_ability_choice
-	name = "close ability choice"
+	name = "关闭能力选择"
 	icon_state = "square_round"
 	var/list/linked_buttons
 	var/obj/structure/interactive/ability_machine/linked_machine

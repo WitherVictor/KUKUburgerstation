@@ -9,41 +9,41 @@
 
 	if(world.realtime < next_pay)
 		.["hello"] = list(
-			"Hello, [P.real_name]. It seems that you are all caught up on your taxes. Your next tax due date is [time2text(next_pay,"Month DD")]. \
-			Perhaps you have come to just #1?",
+			"你好，[P.real_name]。看来你已经缴清税款。下次缴税日期是[time2text(next_pay,"MM-DD")]。\
+			你是来#1的吗？",
 			"*learn about taxes"
 		)
 	else
 		var/delinq = SStax.check_delinquent(P)
 		delinq *= 1/(86400*10)
 		.["hello"] = list(
-			"Hello, [P.real_name]. Have you come to #1, or perhaps #2? Your taxes are currently [!delinq ? "due this week" : "overdue by [CEILING(delinq,1)] days"].",
+			"你好，[P.real_name]。你是来#1，还是#2？你的税款[!delinq ? "本周到期" : "已逾期[CEILING(delinq,1)]天"]。",
 			"*pay your taxes",
 			"*learn about taxes"
 		)
 
 	var/tax_explain = SStax.get_explaination(P)
 	tax_explain = replacetextEx(tax_explain,"\n","NEWLINE")
-	tax_explain = "[tax_explain]NEWLINEIs this acceptable?NEWLINE#1NEWLINE#2"
+	tax_explain = "[tax_explain]NEWLINE你接受吗？NEWLINE#1NEWLINE#2"
 	.["*pay your taxes"] = list(
 		html_encode(tax_explain),
 		"*Yes, pay taxes.",
 		"*No, do not pay taxes."
 	)
 
-	.["*Yes, pay taxes."] = list("You shouldn't be seeing this.")
+	.["*Yes, pay taxes."] = list("你本不该看到这条信息。")
 	.["*No, do not pay taxes."] = list(
-		"Remember, if you do #1 1 week after your deadline, which is [time2text(next_due,"Month DD")], some special people might go after you!",
+		"记住，如果超过缴税期限一周，也就是到了[time2text(next_due,"MM-DD")]，你还没有#1，就可能有些特殊人士来找你！",
 		"pay your taxes"
 	)
 
 	.["*learn about taxes"] = list(
-		"As a working private mercenary of the Solarian Government, you are subject to all laws and regulations under Solarian Law, as well as its tax code. \
-		As per the Ground Freedom Act of 2104, subsection 24b, you must pay a weekly tax before setting foot on any soil belonging to the Solarian Government \
-		or else you waive all legal rights, life, liberties, freedoms, property, and happiness until the amount due is paid. In er... other words, we will send \
-		bounty hunters after you to repo your possessions until debts are satisfied. In the unfortunate event that you cannot pay your taxes, we will charge you \
-		what you can pay and then charge you the rest later when you can actually pay. Note that paying your taxes partially does not remove your delinquent status, \
-		however it may save you from being placed in a higher tax bracket if you didn't pay."
+		"作为受太阳系政府雇用的私人雇佣兵，你必须遵守太阳系法律体系中的所有法律、法规以及税法。\
+		根据《2104年地面自由法案》第24b款，踏上任何太阳系政府所属土地前，你必须缴纳每周税款，\
+		否则在缴清欠款之前，你将放弃一切法律权利、生命、自由、财产与幸福。呃……换句话说，我们会派\
+		赏金猎人追捕你，收走你的财物，直到债务清偿。万一你无力缴清税款，我们会先收取你能付的部分，\
+		剩余部分等你付得起时再收。请注意，部分缴税并不会解除你的欠税状态，\
+		但与完全不缴税相比，这或许能让你避免落入更高税档。"
 	)
 
 /dialogue/npc/taxman/set_topic(var/mob/living/advanced/player/P,var/topic)
@@ -56,5 +56,5 @@
 			P.dialogue_target_id = null
 			close_menu(P,/menu/dialogue/)
 		else
-			P.to_chat(span("warning","You can't pay your taxes yet, you're too early!"))
+			P.to_chat(span("warning","现在还不能缴税，你来得太早了！"))
 

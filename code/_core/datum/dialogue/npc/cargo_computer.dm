@@ -5,7 +5,7 @@
 	. = list()
 
 	.["hello"] = list(
-		"Welcome to NanoTrasen's Cargo Ordering System v0.1 Alpha. You have been automatically recognized as [P.real_name]. Please select one of the following valid commands:NEWLINE\
+		"欢迎使用纳米传讯货运订购系统 v0.1 Alpha。已自动识别你的身份：[P.real_name]。请选择以下操作：NEWLINE\
 		#1NEWLINE\
 		#2NEWLINE\
 		#3",
@@ -16,12 +16,12 @@
 	)
 
 	.["*about"] = list(
-		"NanoTrasen's Cargo Ordering System v0.1 Alpha will help you purchase everything you need in order to complete your mission in the current mission area. \
-		To order something from the cargo system, purchase a requisition sheet and fill out the information of the item you wish to aquire in the Cargo catalogue. \
-		Once you are done, process the requisition via the fax machine located outside cargo. Your order will be placed and can be picked up at the secondary cargo shuttle.NEWLINE\
-		To purchase a template requisition sheet, select \"#1\".NEWLINE\
-		To purchase an updated catalog, select \"#2\".NEWLINE\
-		To view this about page again, select \"#3\".",
+		"纳米传讯货运订购系统 v0.1 Alpha 会帮助你购买在当前任务区域完成任务所需的物品。\
+		若要订货，请先购买采购申请单，再根据货运目录填写所需物品的信息。\
+		填好后，使用货运部外的传真机提交申请。订单随即生效，你可以在第二艘货运穿梭机上取货。NEWLINE\
+		购买采购申请单模板，请选择“#1”。NEWLINE\
+		购买最新版目录，请选择“#2”。NEWLINE\
+		再次查看本说明，请选择“#3”。",
 		"*purchase requisition sheet",
 		"*purchase catalogue",
 		"*about"
@@ -30,7 +30,7 @@
 	.["*main menu"] = .["hello"]
 
 	.["*purchase requisition sheet"] = list(
-		"Are you sure you wish to purchase a template requisition sheet? This operation will cost 50 credits.NEWLINE\
+		"确定要购买采购申请单模板吗？此操作需要50信用点。NEWLINE\
 		#1NEWLINE\
 		#2",
 		"*Yes, purchase a requisition sheet.",
@@ -38,7 +38,7 @@
 	)
 
 	.["*purchase catalogue"] = list(
-		"Are you sure you wish to purchase an up to date cargo catalogue? This operation will cost 200 credits.NEWLINE\
+		"确定要购买最新版货运目录吗？此操作需要200信用点。NEWLINE\
 		#1NEWLINE\
 		#2",
 		"*Yes, purchase a catalogue.",
@@ -47,22 +47,22 @@
 
 
 	.["*Yes, purchase a requisition sheet."] = list(
-		"You have selected to purchase a requisition sheet. Please return to the #1.",
+		"你已选择购买采购申请单。请返回#1。",
 		"*main menu"
 	)
 
 	.["*Yes, purchase a catalogue."] = list(
-		"You have selected to purchase a catalogue. Please return to the #1.",
+		"你已选择购买货运目录。请返回#1。",
 		"*main menu"
 	)
 
 	.["*No, do not purchase a requisition sheet."] = list(
-		"You have selected not to purchase a requisition sheet. Please return to the #1.",
+		"你已选择不购买采购申请单。请返回#1。",
 		"*main menu"
 	)
 
 	.["*No, do not purchase a catalogue."] = list(
-		"You have selected not to purchase a catalogue. Please return to the #1.",
+		"你已选择不购买货运目录。请返回#1。",
 		"*main menu"
 	)
 
@@ -79,7 +79,7 @@
 				FINALIZE(C)
 				P.put_in_hands(C)
 			else
-				P.to_chat(span("warning","You can't afford that!"))
+				P.to_chat(span("warning","你的信用点不够！"))
 		if("*Yes, purchase a catalogue.")
 			if(P.currency >= 200 && P.adjust_currency(-200))
 				var/obj/item/paper/book/cargo_catalog/C = new(get_turf(P))
@@ -88,5 +88,5 @@
 				FINALIZE(C)
 				P.put_in_hands(C)
 			else
-				P.to_chat(span("warning","You can't afford that!"))
+				P.to_chat(span("warning","你的信用点不够！"))
 

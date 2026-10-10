@@ -1,5 +1,5 @@
 /obj/hud/button/stat/resist_bar
-	name = "resist bar"
+	name = "挣脱进度条"
 	icon = 'icons/hud/escape.dmi'
 	icon_state = "escape"
 	id = "resist"
@@ -11,7 +11,7 @@
 
 	var/obj/stored_line
 
-	maptext = "Resist!"
+	maptext = "挣脱！"
 	maptext_y = -16
 
 	mouse_opacity = 0

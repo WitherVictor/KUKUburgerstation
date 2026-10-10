@@ -1,6 +1,7 @@
 /vote/ //Vote instance
-	var/name = "Unknown Vote" //The name of the vote. Usually the question.
+	var/name = "未知投票" //The name of the vote. Usually the question.
 	var/list/options = list() //Just a list of possible choices.
+	var/list/option_display_names = list()
 	var/list/votes = list() //k = ckey, v = option, as a number
 
 	var/time_limit = 60 //In seconds.
@@ -12,16 +13,20 @@
 	//New is called when the vote is created.
 	//Destroy is called when the vote is destroyed.
 
+/vote/proc/get_option_display_name(var/option)
+	return option_display_names[option] ? option_display_names[option] : option
+
 /vote/proc/show(var/client/C)
 
-	. = "<h1>Vote</h1><h2>[name]</h2>"
+	. = "<html><head><meta charset='utf-8'></head><body><h1>投票</h1><h2>[name]</h2>"
 
 	for(var/i=1,i<=length(options),i++)
 		var/option = options[i]
 		if(votes[C.ckey] == i)
-			. += "<p><b>[option] (SELECTED)</b></p>"
+			. += "<p><b>[get_option_display_name(option)]（已选）</b></p>"
 		else
-			. += "<p><a href='?vote=\ref[src];vote_option=[i]'>[option]</a></p>"
+			. += "<p><a href='?vote=\ref[src];vote_option=[i]'>[get_option_display_name(option)]</a></p>"
+	. += "</body></html>"
 
 	C << browse(.,"window=Voting;display=1;size=300x300;border=0;can_close=1;can_resize=1;can_minimize=1;titlebar=1")
 
@@ -35,13 +40,13 @@
 		var/client/C = SSclient.all_clients[k]
 		if(!C)
 			continue
-		C.to_chat(div("vote","A new vote has been started. Voting will end in [time_limit] seconds."))
-		if(weighted_mode) C.to_chat(div("vote","Note that the vote is weighted, meaning that an option is randomly chosen, with the probability proportional to voters."))
+		C.to_chat(div("vote","新投票已开始，将在[time_limit]秒后结束。"))
+		if(weighted_mode) C.to_chat(div("vote","本次投票采用加权随机方式：各选项按票数计算抽中权重，得票最多的选项获得额外权重。"))
 		C.to_chat(div("vote","<u>[name]</u>"))
 		for(var/i=1,i<=length(options),i++)
 			var/option = options[i]
-			C.to_chat(div("vote","[i]. [option]"))
-		C.to_chat(div("vote","<a href='?vote=\ref[src]'>Click here to vote.</a>"))
+			C.to_chat(div("vote","[i]. [get_option_display_name(option)]"))
+		C.to_chat(div("vote","<a href='?vote=\ref[src]'>点击此处投票。</a>"))
 
 	play_sound_global('sound/ui/start_vote.ogg',SSliving.all_mobs_with_clients)
 
@@ -70,7 +75,7 @@
 
 	var/results = get_results()
 
-	var/message_to_send = list(div("vote","<u>Voting Results:</u> [name]"))
+	var/message_to_send = list(div("vote","<u>投票结果：</u>[name]"))
 
 	var/winner = null
 	var/winner_votes = -1
@@ -98,7 +103,7 @@
 				weight = vote_count/(highest*2)
 			weighted_results_list[option] = weight
 			total_weight += weight
-			message_to_send += div("vote","[option]: [vote_count] (Weight: [weight])")
+			message_to_send += div("vote","[get_option_display_name(option)]：[vote_count]票（权重：[weight]）")
 
 		if(length(weighted_results_list))
 			winner = pickweight(weighted_results_list)
@@ -113,18 +118,18 @@
 			if(vote_count > winner_votes)
 				winner = option
 				winner_votes = vote_count
-			message_to_send += div("vote","[option]: [vote_count]")
+			message_to_send += div("vote","[get_option_display_name(option)]：[vote_count]票")
 			total_votes += vote_count
 
 	if(!total_votes)
 		winner = pick(options)
-		message_to_send += div("vote","Defaulting to random option as there were no votes...")
-		message_to_send += div("vote","Winner: [winner].")
+		message_to_send += div("vote","无人投票，随机选择一个选项……")
+		message_to_send += div("vote","胜出选项：[get_option_display_name(winner)]。")
 	else
 		if(weighted_mode)
-			message_to_send += div("vote","Winner (Weighted random mode): [winner] ([CEILING( (winner_votes/total_weight) * 100, 1)]%)")
+			message_to_send += div("vote","胜出选项（加权随机模式）：[get_option_display_name(winner)]（[CEILING( (winner_votes/total_weight) * 100, 1)]%）")
 		else
-			message_to_send += div("vote","Winner: [winner].")
+			message_to_send += div("vote","胜出选项：[get_option_display_name(winner)]。")
 
 	for(var/k in SSclient.all_clients)
 		var/client/C = SSclient.all_clients[k]

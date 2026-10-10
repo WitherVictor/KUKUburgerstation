@@ -1,5 +1,5 @@
 /obj/hud/button/tooltip
-	name = "tooltip"
+	name = "悬停提示"
 	mouse_opacity = 0
 	alpha = 0
 	screen_loc = "TOP,LEFT"

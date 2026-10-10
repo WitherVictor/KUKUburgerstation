@@ -1,9 +1,9 @@
 //Medicine like band-aids and the such.
 
 /obj/item/container/healing
-	name = "medicine"
-	desc = "For when you have a boo-boo."
-	desc_extended = "Apply to your wounds or damaged limbs to treat."
+	name = "药品"
+	desc = "受了小伤时用得上。"
+	desc_extended = "用于伤口或受损肢体以进行治疗。"
 	icon = 'icons/obj/item/medicine.dmi'
 
 	var/heal_brute = 0
@@ -102,9 +102,9 @@
 		reagents.transfer_reagents_to(A.reagents, transfer_amount, activator = activator)
 
 	if(activator == A.loc)
-		activator.visible_message(span("notice","\The [activator.name] bandages their [A.name]."),span("notice","You bandage your [A.name]."))
+		activator.visible_message(span("notice","[activator.name]包扎了自己的[A.name]。"),span("notice","你包扎了自己的[A.name]。"))
 	else
-		activator.visible_message(span("warning","\The [activator.name] bandages \the [A.loc.name]'s [A.name]."),span("notice","You bandage \the [A.loc.name]'s [A.name]."))
+		activator.visible_message(span("warning","[activator.name]包扎了[A.loc.name]的[A.name]。"),span("notice","你包扎了[A.loc.name]的[A.name]。"))
 
 	if(treatment_sound)
 		play_sound(treatment_sound,get_turf(src))
@@ -119,11 +119,11 @@
 	INTERACT_CHECK_NO_DELAY(target)
 
 	if(!is_organ(target) && !is_living(target))
-		activator.to_chat(span("warning","You can't treat \the [target.name]!"))
+		activator.to_chat(span("warning","你无法治疗[target.name]！"))
 		return FALSE
 
 	if(!target || !target.health)
-		activator.to_chat(span("warning","You can't treat \the [target.name]!"))
+		activator.to_chat(span("warning","你无法治疗[target.name]！"))
 		return FALSE
 
 	if(heal_brute < 0 || heal_burn < 0 || reagents.contains_lethal) //Hostile!
@@ -142,16 +142,16 @@
 			return FALSE
 		if(activator_as_living != target_as_living)
 			if(!allow_hostile_action(activator_as_living.loyalty_tag,target_as_living))
-				activator.to_chat(span("warning","You'd feel it would be unsafe to treat your fellow man with the dangerous [src.name]..."))
+				activator.to_chat(span("warning","你觉得用危险的[src.name]治疗同伴并不安全……"))
 				return FALSE
 
 	if(organic)
 		if(!target.health.organic)
-			activator.to_chat(span("warning","\The [src.name] can only treat organic limbs!"))
+			activator.to_chat(span("warning","[src.name]只能治疗有机肢体！"))
 			return FALSE
 	else
 		if(target.health.organic)
-			activator.to_chat(span("warning","\The [src.name] can only treat non-organic limbs!"))
+			activator.to_chat(span("warning","[src.name]只能修复无机肢体！"))
 			return FALSE
 	return TRUE
 

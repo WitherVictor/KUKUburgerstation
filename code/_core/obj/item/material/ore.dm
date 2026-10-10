@@ -1,8 +1,8 @@
 /obj/item/material/ore
 
-	name = "ore"
-	desc = "This should be sold or smelted."
-	desc_extended = "A piece of ore containing minerals. Sell this to NanoTrasen for credits, or put this in a smelter to turn it into an ingot."
+	name = "矿石"
+	desc = "应该拿去出售或熔炼。"
+	desc_extended = "一块含有矿物的矿石。卖给纳米传讯可获得信用点，也能放入熔炉炼成锭。"
 	icon = 'icons/obj/item/ore_new.dmi'
 	icon_state = null
 
@@ -20,10 +20,10 @@
 /obj/item/material/ore/update_icon()
 	var/material/M = SSmaterials.all_materials[material_id]
 	if(!M || !M.icon_state_ore)
-		name = "ERROR ore"
+		name = "异常矿石"
 		log_error("Warning! [src.get_debug_name()] had incorrect material type \"[material_id]\"!")
 	else
-		name = "[deunderscore(M.name)] ore"
+		name = "[M.display_name]矿石"
 		color = "#FFFFFF"
 		icon_state = "[M.icon_state_ore]_[min(amount_max_icon,CEILING(amount/15,1))]"
 	return ..()

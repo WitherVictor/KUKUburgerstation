@@ -8,21 +8,21 @@
 		var/v = building[k]
 		unused_commands += v
 
-	var/html_to_send = "<h1>Controls</h1><h3>I unironically made this in like 2 hours so please be gentle.</h3>"
+	var/html_to_send = "<h1>按键设置</h1><h3>这界面真的是我大约两小时赶出来的，请手下留情。</h3>"
 
 	for(var/key in macros.macros)
 		var/command = macros.macros[key]
 		html_to_send += "<a href='?change_key=[key]'>[key]: [command]</a><br>"
 		unused_commands -= command
 	html_to_send += "<hr>"
-	html_to_send += "<p>Unused commands: [english_list(unused_commands)].</p>"
+	html_to_send += "<p>未绑定的命令：[english_list(unused_commands)]。</p>"
 	html_to_send += "<hr>"
-	html_to_send += "<a href='?change_key=new'>Add New Bind</a><br>"
-	html_to_send += "<a href='?change_key=QWERTY'>Reset to Factory Default (QWERTY)</a><br>"
-	html_to_send += "<a href='?change_key=AZERTY'>Reset to Factory Default (AZERTY)</a><br>"
-	html_to_send += "<a href='?change_key=save'>Save Settings to Stored File</a><br>"
-	html_to_send += "<a href='?change_key=load'>Load Settings from Stored File</a><br>"
-	html_to_send += "<a href='?change_key=quit'>Quit</a><br>"
+	html_to_send += "<a href='?change_key=new'>添加按键绑定</a><br>"
+	html_to_send += "<a href='?change_key=QWERTY'>恢复默认设置（QWERTY）</a><br>"
+	html_to_send += "<a href='?change_key=AZERTY'>恢复默认设置（AZERTY）</a><br>"
+	html_to_send += "<a href='?change_key=save'>保存设置到存档文件</a><br>"
+	html_to_send += "<a href='?change_key=load'>从存档文件载入设置</a><br>"
+	html_to_send += "<a href='?change_key=quit'>退出</a><br>"
 
 	var/id = "edit_macros"
 	//winclone(src, "window", id)
@@ -34,7 +34,7 @@
 	set hidden = TRUE
 	var/old_fps = clamp(src.fps,FPS_SERVER,FPS_CLIENT)
 	desired_fps = clamp(desired_fps,FPS_SERVER,FPS_CLIENT)
-	to_chat(span("notice","Your FPS was changed from [old_fps] to [desired_fps]."))
+	to_chat(span("notice","帧率已从 [old_fps] 改为 [desired_fps]。"))
 	if(desired_fps == FPS_SERVER)
 		desired_fps = 0
 	src.fps = desired_fps
@@ -45,7 +45,7 @@
 	var/old_view_range = view
 	settings.change_setting("view_range",desired_view_range)
 	update_view_range()
-	to_chat(span("notice","Your view range was changed from [old_view_range] to [view]."))
+	to_chat(span("notice","视野范围已从 [old_view_range] 改为 [view]。"))
 
 /client/verb/toggle_fullscreen()
 	set hidden = TRUE
@@ -98,7 +98,7 @@
 	set hidden = TRUE
 	SPAM_CHECK_CLIENT(10)
 	settings.change_setting("compact_mode",!settings.loaded_data["compact_mode"])
-	to_chat(span("notice","Compact mode changed."))
+	to_chat(span("notice","已切换紧凑模式。"))
 	for(var/k in mob.buttons)
 		var/obj/hud/button/B = k
 		B.update_sprite()

@@ -1,7 +1,7 @@
 /obj/structure/interactive/construction/lattice
-	name = "lattice"
-	desc = "A metal lattice."
-	desc_extended = "Could probably add some more rods for a grille, or a plate for a floor."
+	name = "支撑网格"
+	desc = "一副金属支撑网格。"
+	desc_extended = "再加棒材可以建造格栅，加上板材可以铺成地板。"
 	icon_state = "lattice"
 
 	health_base = 50
@@ -12,13 +12,13 @@
 	INTERACT_CHECK_NO_DELAY(R)
 
 	if(R.amount < 1)
-		activator.to_chat(span("warning","You need a rod in order to build a grille!"))
+		activator.to_chat(span("warning","建造格栅需要1根棒材！"))
 		return FALSE
 	if(R.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	if(get_dist(activator,src) > 1)
-		activator.to_chat(span("warning","You're too far away!"))
+		activator.to_chat(span("warning","你离得太远了！"))
 		return FALSE
 	return TRUE
 
@@ -34,7 +34,7 @@
 	INITIALIZE(G)
 	GENERATE(G)
 	FINALIZE(G)
-	activator?.visible_message(span("notice","\The [activator.name] places \the [G.name]."),span("notice","You place \the [G.name]."))
+	activator?.visible_message(span("notice","[activator.name]建造了[G.name]。"),span("notice","你建造了[G.name]。"))
 	R.add_item_count(-1)
 	qdel(src)
 	return TRUE
@@ -45,13 +45,13 @@
 	INTERACT_CHECK_NO_DELAY(S)
 
 	if(istype(src.loc,/turf/simulated/wall/))
-		activator.to_chat(span("warning","There is already a wall here... somehow."))
+		activator.to_chat(span("warning","不知为何，这里已经有一堵墙了……"))
 		return FALSE
 	if(S.amount < 1)
-		activator.to_chat(span("warning","You need a sheet in order to build a wall!"))
+		activator.to_chat(span("warning","建墙需要1张板材！"))
 		return FALSE
 	if(S.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	return TRUE
 
@@ -60,7 +60,7 @@
 	T.change_turf(/turf/simulated/floor/plating/,TRUE)
 	T.color = S.color
 	T.material_id = S.material_id
-	activator?.visible_message(span("notice","\The [activator.name] places \the [T.name]."),span("notice","You place \the [T.name]."))
+	activator?.visible_message(span("notice","[activator.name]铺设了[T.name]。"),span("notice","你铺设了[T.name]。"))
 	S.add_item_count(-1)
 	qdel(src)
 	return TRUE
@@ -71,13 +71,13 @@
 	INTERACT_CHECK_NO_DELAY(S)
 
 	if(istype(src.loc,/turf/simulated/floor/plating/))
-		activator.to_chat(span("warning","There is already a floor plating here!"))
+		activator.to_chat(span("warning","这里已经铺有地板了！"))
 		return FALSE
 	if(S.amount < 1)
-		activator.to_chat(span("warning","You need a sheet in order to build a floor plating!"))
+		activator.to_chat(span("warning","铺设地板需要1张板材！"))
 		return FALSE
 	if(S.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	return TRUE
 

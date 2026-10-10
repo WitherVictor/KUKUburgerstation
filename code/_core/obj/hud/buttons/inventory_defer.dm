@@ -1,7 +1,7 @@
 //This mimicks an inventory object. Used for examing mob's items.
 
 /obj/hud/button/inventory_defer
-	name = "inventory"
+	name = "物品栏"
 	icon_state = "square_round"
 	var/obj/hud/inventory/referencing
 	var/obj/hud/button/close_inventory_defers/assoc_button
@@ -54,7 +54,7 @@
 
 	var/obj/item/top_object = get_top_vis_object()
 	if(!top_object)
-		activator.to_chat(span("warning","There is nothing to remove!"))
+		activator.to_chat(span("warning","没有可以取出的物品！"))
 		return FALSE
 
 	if(is_organ(referencing.loc))

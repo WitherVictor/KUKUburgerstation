@@ -1,7 +1,7 @@
 /obj/item/organ/internal/implant
-	name = "implant"
+	name = "植入体"
 	id = "implant"
-	desc = "Implant."
+	desc = "植入体。"
 	icon_state = "lungs"
 	attach_flag = BODY_TORSO
 	value_burgerbux = 1
@@ -13,21 +13,21 @@
 
 
 /obj/item/organ/internal/implant/head/
-	name = "head implant"
+	name = "头部植入体"
 	id = "implant_head"
 	attach_flag = BODY_HEAD
 
 /obj/item/organ/internal/implant/torso
-	name = "torso implant"
+	name = "躯干植入体"
 	id = "implant_torso"
 	attach_flag = BODY_TORSO
 
 /obj/item/organ/internal/implant/groin
-	name = "groin implant"
+	name = "腹股沟植入体"
 	id = "implant_groin"
 	attach_flag = BODY_GROIN
 
 /obj/item/organ/internal/implant/hand/left
-	name = "left hand implant"
+	name = "左手植入体"
 	id = "implant_hand_left"
 	attach_flag = BODY_HAND_LEFT

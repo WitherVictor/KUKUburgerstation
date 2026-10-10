@@ -1,8 +1,8 @@
 //For npcs only.
 
 /status_effect/rage
-	name = "Rage"
-	desc = "You're filled with rage!"
+	name = "狂怒"
+	desc = "你怒不可遏！"
 	id = RAGE
 
 	minimum = SECONDS_TO_DECISECONDS(5)
@@ -15,6 +15,6 @@
 	. = ..()
 	owner.add_status_effect(UNDYING,magnitude,duration,stealthy=TRUE)
 	owner.add_status_effect(ADRENALINE,magnitude,duration,stealthy=TRUE)
-	owner.do_say("RRRRRRRRRRRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!")
+	owner.do_say("吼啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！！")
 	if(duration == -1 && !owner.is_player_controlled(owner))
 		owner.color = "#FF0000"

@@ -1,6 +1,6 @@
 /status_effect/zombie
-	name = "Zombified"
-	desc = "You've been zombified!"
+	name = "僵尸化"
+	desc = "你变成了僵尸！"
 	id = ZOMBIE
 
 	affects_dead = TRUE

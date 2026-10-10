@@ -1,9 +1,9 @@
 /obj/item/crafting_bench/grinder
-	name = "portable grinder"
+	name = "便携研磨机"
 	icon = 'icons/obj/item/ore.dmi'
 	icon_state = "grinder"
-	desc = "If I chopped you up into a meat grinder..."
-	desc_extended = "Grinds reagent-holding items, such as pills or food into reagents. Requires a reagent container for collecting said reagents."
+	desc = "要是我把你剁碎扔进绞肉机……"
+	desc_extended = "将药片或食物等含有试剂的物品研磨，提取其中的试剂。需要试剂容器来收集产物。"
 
 	inventories = list(
 		/obj/hud/inventory/crafting/slotB1,
@@ -46,7 +46,7 @@
 				break
 
 	if(!C)
-		activator.to_chat(span("warning","You're missing a valid container in the product slot!"))
+		activator.to_chat(span("warning","请在成品槽放入可用的收集容器！"))
 		return FALSE
 
 	var/list/item_table = generate_crafting_table(activator,src)
@@ -80,7 +80,7 @@
 			I.reagents.process_recipes(activator)
 
 	if(!success)
-		activator.to_chat(span("warning","There are no valid items to process!"))
+		activator.to_chat(span("warning","没有可处理的物品！"))
 		return FALSE
 
 	for(var/reagent_type in C.reagents.stored_reagents)

@@ -1,5 +1,5 @@
 /language/clockwork
-	name = "Ratvarian"
+	name = "拉特瓦尔语"
 	id = LANGUAGE_CLOCKWORK
 
 /language/clockwork/process_text(var/speaker,var/text)
@@ -14,7 +14,7 @@
 
 	var/new_sentence = ""
 
-	for(var/i in 1 to length(text))
+	for(var/i in 1 to length_char(text))
 		var/letter = getCharacter(text,i)
 		var/was_upper = letter == uppertext(letter)
 		letter = lowertext(letter)
@@ -32,7 +32,7 @@
 
 		else if(consonants_position)
 			var/desired_index = consonants_position + SSlanguage.language_seed
-			var/previous_character = lowertext(getCharacter(new_sentence,length(new_sentence)))
+			var/previous_character = lowertext(getCharacter(new_sentence,length_char(new_sentence)))
 			var/this_character = consonants[1 + (desired_index % length(consonants))]
 			if(previous_character == this_character)
 				continue

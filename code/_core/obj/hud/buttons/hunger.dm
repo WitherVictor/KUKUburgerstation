@@ -1,7 +1,7 @@
 /obj/hud/button/hunger
-	name = "hunger and thirst"
-	desc = "Keep both of these up!"
-	desc_extended = "A tracker for your current hunger and thirst levels. These can be replenished by eating and drinking, respectively."
+	name = "饥饿与口渴"
+	desc = "两项都要保持充足！"
+	desc_extended = "显示当前的饥饿与口渴程度。分别通过进食和饮水补充营养与水分。"
 
 	icon = 'icons/hud/hunger.dmi'
 	icon_state = "thirst_bar_0"
@@ -24,22 +24,22 @@
 
 		switch(nutrition_percent)
 			if(-INFINITY to 0.2)
-				. += div("danger","You're starving!")
+				. += div("danger","你快饿死了！")
 			if(0.2 to 0.3)
-				. += div("warning","You're very hungry!")
+				. += div("warning","你非常饿！")
 			if(0.3 to 0.5)
-				. += div("warning","You're hungry.")
+				. += div("warning","你饿了。")
 			if(0.5 to 0.7)
-				. += div("notice","You could use a bite to eat.")
+				. += div("notice","你可以吃点东西。")
 			if(0.7 to 0.9)
-				. += div("notice","You're not hungry.")
+				. += div("notice","你不饿。")
 			if(0.9 to 1)
-				. += div("notice","You're full.")
+				. += div("notice","你吃饱了。")
 			if(1 to INFINITY)
-				. += div("warning","You're overfed!")
+				. += div("warning","你吃撑了！")
 
-		. += "Total Nutrition: [FLOOR(nutrition_percent*100,1)]%."
-		. += "Nutritional Health: [FLOOR(L.get_nutrition_quality_mod()*L.get_nutrition_mod()*100,1)]%."
+		. += "总营养：[FLOOR(nutrition_percent*100,1)]%。"
+		. += "营养健康度：[FLOOR(L.get_nutrition_quality_mod()*L.get_nutrition_mod()*100,1)]%。"
 
 
 /obj/hud/button/hunger/update_owner()

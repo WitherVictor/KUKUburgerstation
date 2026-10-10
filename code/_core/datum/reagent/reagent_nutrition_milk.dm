@@ -1,7 +1,7 @@
 //Milk
 /reagent/nutrition/milk/
-	name = "cow's milk"
-	desc = "Nutrition and flavor from cow's milk."
+	name = "牛奶"
+	desc = "牛奶提供的营养与风味。"
 	color = "#FFFFFF"
 	alpha = 255
 
@@ -11,7 +11,7 @@
 	hydration_amount = 4
 
 
-	flavor = "milk"
+	flavor = "牛奶"
 
 	liquid = 0.5
 
@@ -20,8 +20,8 @@
 	particle_size = 0.2
 
 /reagent/nutrition/cream
-	name = "milk cream"
-	desc = "Nutrition and flavor from milk cream."
+	name = "奶油"
+	desc = "奶油提供的营养与风味。"
 	color = "#EEEED9"
 
 	nutrition_fast_amount = 10
@@ -30,7 +30,7 @@
 
 	hydration_amount = 3
 
-	flavor = "cream"
+	flavor = "奶油"
 
 	liquid = 0.5
 
@@ -40,15 +40,15 @@
 
 //Cheese
 /reagent/nutrition/cheese/
-	name = "processed cheese"
-	desc = "Nutrition and flavor from processed cheese."
+	name = "加工奶酪"
+	desc = "加工奶酪提供的营养与风味。"
 	color = "#FFC237"
 
 	nutrition_fast_amount = 20
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 0
 
-	flavor = "processed cheese"
+	flavor = "加工奶酪"
 
 	liquid = 0.2
 
@@ -59,30 +59,30 @@
 	particle_size = 0.8
 
 /reagent/nutrition/cheese/kadchgall
-	name = "Kadchgall Desert cheese"
-	desc = "Nutrition and flavor from Kadchgall cheese."
+	name = "卡奇格尔沙漠奶酪"
+	desc = "卡奇格尔奶酪提供的营养与风味。"
 	color = "#FFE8AA"
 
 	nutrition_fast_amount = 5
 	nutrition_normal_amount = 10
 	nutrition_quality_amount = 10
 
-	flavor = "processed cheese"
+	flavor = "加工奶酪"
 
 	liquid = 0.2
 
 	flags_flavor = FLAG_FLAVOR_DAIRY | FLAG_FLAVOR_LOVE | FLAG_FLAVOR_FAT
 
 /reagent/nutrition/cheese/cheddar
-	name = "cheddar cheese"
-	desc = "Nutrition and flavor from cheddar cheese."
+	name = "切达奶酪"
+	desc = "切达奶酪提供的营养与风味。"
 	color = "#FF9F00"
 
 	nutrition_fast_amount = 10
 	nutrition_normal_amount = 5
 	nutrition_quality_amount = 10
 
-	flavor = "sharp cheddar cheese"
+	flavor = "浓郁的切达奶酪"
 
 	liquid = 0.2
 
@@ -90,8 +90,8 @@
 
 
 /reagent/nutrition/cheese/brabander
-	name = "Old Brabander Jungle cheese"
-	desc = "Nutrition and flavor from Old Brabander Jungle cheese."
+	name = "陈年布拉班德丛林奶酪"
+	desc = "陈年布拉班德丛林奶酪提供的营养与风味。"
 	color = "#FFFCE8"
 
 	nutrition_fast_amount = 5
@@ -99,7 +99,7 @@
 	nutrition_quality_amount = 15
 
 
-	flavor = "sweet and creamy caramel cheese"
+	flavor = "香甜顺滑的焦糖奶酪"
 
 	liquid = 0.2
 
@@ -108,15 +108,15 @@
 
 
 /reagent/nutrition/cheese/raclette
-	name = "Raclette Alpine cheese"
-	desc = "Nutrition and flavor from Raclette Alpine cheese."
+	name = "阿尔卑斯拉克莱特奶酪"
+	desc = "阿尔卑斯拉克莱特奶酪提供的营养与风味。"
 	color = "#FFF09F"
 
 	nutrition_fast_amount = 5
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 20
 
-	flavor = "sweet nutty cheese"
+	flavor = "带坚果香的甜奶酪"
 
 	liquid = 0.2
 
@@ -124,15 +124,15 @@
 
 
 /reagent/nutrition/cheese/gruyere
-	name = "Gruy�re cave cheese"
-	desc = "Nutrition and flavor from Gruy�re cave cheese."
+	name = "洞穴熟成格鲁耶尔奶酪"
+	desc = "洞穴熟成格鲁耶尔奶酪提供的营养与风味。"
 	color = "#E4A300"
 
 	nutrition_fast_amount = 5
 	nutrition_normal_amount = 10
 	nutrition_quality_amount = 10
 
-	flavor = "sweet and salty nutty cream cheese"
+	flavor = "咸甜交织、带坚果香的奶油奶酪"
 
 	liquid = 0.2
 
@@ -140,15 +140,15 @@
 
 
 /reagent/nutrition/cheese/guava
-	name = "Smoked Guava cheese"
-	desc = "Nutrition and flavor from Smoked Guava cheese."
+	name = "烟熏番石榴奶酪"
+	desc = "烟熏番石榴奶酪提供的营养与风味。"
 	color = "#704226"
 
 	nutrition_fast_amount = 5
 	nutrition_normal_amount = 5
 	nutrition_quality_amount = 15
 
-	flavor = "sweet fudge cheese"
+	flavor = "香甜的软糖奶酪"
 
 	liquid = 0.2
 
@@ -156,15 +156,15 @@
 
 
 /reagent/nutrition/cheese/bluespace
-	name = "bluespace cheese"
-	desc = "Nutrition and flavor from bluespace cheese."
+	name = "蓝空间奶酪"
+	desc = "蓝空间奶酪提供的营养与风味。"
 	color = "#78A093"
 
 	nutrition_fast_amount = 20
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = 5
 
-	flavor = "bluespace cheese"
+	flavor = "蓝空间奶酪"
 
 	liquid = 0.2
 
@@ -172,8 +172,8 @@
 
 
 /reagent/nutrition/cheese/oasis
-	name = "Glardin Oasis cheese"
-	desc = "Nutrition and flavor from Glardin Oasis cheese."
+	name = "格拉丁绿洲奶酪"
+	desc = "格拉丁绿洲奶酪提供的营养与风味。"
 	color = "#3D62C3"
 
 	nutrition_fast_amount = 10
@@ -182,22 +182,22 @@
 
 	hydration_amount = 5
 
-	flavor = "salty waterlogged cheese"
+	flavor = "湿漉漉的咸奶酪"
 
 	liquid = 0.2
 
 	flags_flavor = FLAG_FLAVOR_DAIRY | FLAG_FLAVOR_LOVE | FLAG_FLAVOR_FAT
 
 /reagent/nutrition/cheese/blackash
-	name = "Black Ash cheese"
-	desc = "Nutrition and flavor from Black Ash cheese."
+	name = "黑灰奶酪"
+	desc = "黑灰奶酪提供的营养与风味。"
 	color = "#3f3f3f"
 
 	nutrition_fast_amount = 0
 	nutrition_normal_amount = 25
 	nutrition_quality_amount = 0
 
-	flavor = "scorched rocks and smokey ash cheese"
+	flavor = "焦石与烟灰味的奶酪"
 
 	liquid = 0.2
 
@@ -205,15 +205,15 @@
 
 
 /reagent/nutrition/butter
-	name = "butter"
-	desc = "Nutrition and flavor from butter."
+	name = "黄油"
+	desc = "黄油提供的营养与风味。"
 	color = "#FFD865"
 
 	nutrition_fast_amount = 15
 	nutrition_normal_amount = 10
 	nutrition_quality_amount = 5
 
-	flavor = "butter"
+	flavor = "黄油"
 
 	value = 2
 

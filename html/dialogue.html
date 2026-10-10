@@ -2,6 +2,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<head>
+		<meta charset="utf-8" />
 		<style>
 			body {
 				background-color: #FF0000;
@@ -83,21 +84,21 @@
 		<table id="main_table">
 			<tr>
 				<th id='character_name' colspan=3>
-					CHARACTER NAME
+					角色姓名
 				</th>
 			</tr>
 			<tr>
 				<th id='dialogue' rowspan=2>
-					<div id='text'>YOUR TEXT HERE.</div>
+					<div id='text'>对话内容。</div>
 					<hr>
-					<div id='options'>YOUR OPTIONS HERE.</div>
+					<div id='options'>对话选项。</div>
 				</th>
 				<th id="topic_container">
 					<div id='topics'></div>
 				</th>			
 			</tr>
 			<tr>
-				<th id='goodbye'>HELLO</th>
+				<th id='goodbye'>你好</th>
 			</tr>
 			
 			
@@ -108,6 +109,15 @@
 		var global_reference
 		
 		var global_stored_topics = []
+		var global_topic_labels = {}
+
+		function set_topic_labels(labels) {
+			global_topic_labels = labels
+		}
+
+		function get_topic_label(topic) {
+			return global_topic_labels[topic] || topic.replace("*", "")
+		}
 	
 		function set_reference(reference) {
 			global_reference = reference
@@ -140,9 +150,9 @@
 			
 			//Actually setting the dialogue box.
 			for(i=2; i < tabledata.length; i++) {
-				var formatted_link = "<a href=\"byond://?src="+global_reference+";topic="+encodeURIComponent(tabledata[i])+"\">" + tabledata[i].replace("*","") + "</a>"
+				var formatted_link = "<a href=\"byond://?src="+global_reference+";topic="+encodeURIComponent(tabledata[i])+"\">" + get_topic_label(tabledata[i]) + "</a>"
 				add_table_of_contents(tabledata[i])
-				dialogue = dialogue.replace("#" + (i-1).toString(), formatted_link)
+				dialogue = dialogue.replace(new RegExp("#" + (i-1).toString() + "(?![0-9])", "g"), function() { return formatted_link })
 			}
 
 			document.getElementById("dialogue").innerHTML = dialogue
@@ -151,7 +161,7 @@
 			for(i=0; i < global_stored_topics.length; i++) {
 				var chosen_topic = global_stored_topics[i]
 				if(chosen_topic.substring(0,1) != "*") {
-					var formatted_link = "<a href=\"byond://?src="+global_reference+";topic="+encodeURIComponent(chosen_topic)+"\">"+chosen_topic+"</a>"
+					var formatted_link = "<a href=\"byond://?src="+global_reference+";topic="+encodeURIComponent(chosen_topic)+"\">"+get_topic_label(chosen_topic)+"</a>"
 					topics_html = topics_html+formatted_link+"<br>"
 				}
 			}
@@ -165,7 +175,7 @@
 		}
 		
 		function add_goodbye() {
-			document.getElementById("goodbye").innerHTML = "<button class='extended' onclick='goodbye()'>Goodbye</button>"
+			document.getElementById("goodbye").innerHTML = "<button class='extended' onclick='goodbye()'>再见</button>"
 		}
 		
 		function set_name(name) {

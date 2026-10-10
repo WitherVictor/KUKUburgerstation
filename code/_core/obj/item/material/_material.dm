@@ -1,6 +1,6 @@
 /obj/item/material/
-	name = "glitch"
-	desc = "I am error."
+	name = "异常材料"
+	desc = "我是个错误。"
 	icon = 'icons/obj/item/material.dmi'
 	icon_state = "shard_1"
 

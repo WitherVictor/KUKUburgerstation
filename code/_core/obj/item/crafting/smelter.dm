@@ -1,7 +1,7 @@
 /obj/item/crafting_bench/smelter
-	name = "portable smelter"
-	desc = "Oven in my car, melting ore!"
-	desc_extended = "Smelts ores and rapidly heats up anything placed inside. Can be used for cooking in a pinch."
+	name = "便携熔炉"
+	desc = "车里放个炉子，开车也能熔矿！"
+	desc_extended = "熔炼矿石，并快速加热放入其中的物品。应急时也能用来做饭。"
 	icon = 'icons/obj/item/ore.dmi'
 	icon_state = "smelter"
 

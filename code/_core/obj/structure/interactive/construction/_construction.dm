@@ -1,5 +1,5 @@
 /obj/structure/interactive/construction/
-	name = "construction object"
+	name = "建造结构"
 	icon = 'icons/obj/structure/construction.dmi'
 	mouse_opacity = 2
 	material_id = /material/steel

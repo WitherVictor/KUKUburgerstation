@@ -1,16 +1,16 @@
 /obj/item/container/edible/package/junkfood
-	name = "junk food"
+	name = "垃圾食品"
 	icon = 'icons/obj/item/consumable/food/processed.dmi'
 
 /obj/item/container/edible/package/junkfood/chips
-	name = "chippy crisps"
-	desc = "Hmm, tastes like mediocrity!"
-	desc_extended = "Plain flavoured, much like the people who eat these."
+	name = "薯薯脆片"
+	desc = "嗯，一股平庸的味道！"
+	desc_extended = "原味，跟吃它的人一样平淡无奇。"
 	icon_state = "chips"
 	value = 1
 
 /obj/item/container/edible/package/junkfood/chips/Initialize()
-	name = pick("chippy crisps","cripsy chips")
+	name = pick("薯薯脆片","脆脆薯片")
 	return ..()
 
 /obj/item/container/edible/package/junkfood/chips/Generate()
@@ -20,9 +20,9 @@
 
 
 /obj/item/container/edible/package/junkfood/candy
-	name = "getmore candy bar"
-	desc = "Nougat, love it or at it."
-	desc_extended = "An actually pretty good chocolate bar."
+	name = "再来一根巧克力棒"
+	desc = "牛轧糖，爱它就吃了它。"
+	desc_extended = "其实相当不错的巧克力棒。"
 	icon_state = "candy"
 	value = 1
 
@@ -34,9 +34,9 @@
 
 
 /obj/item/container/edible/package/junkfood/jerky
-	name = "sos jerky"
-	desc = "For that refueling station feel."
-	desc_extended = "A package containing dried pieces of meat. Common in refueling station snack shops for some reason."
+	name = "求救牌肉干"
+	desc = "给你加油站的感觉。"
+	desc_extended = "一包肉干。不知为何，加油站的小卖部总能见到它。"
 	icon_state = "jerky"
 	value = 1
 
@@ -46,9 +46,9 @@
 	return ..()
 
 /obj/item/container/edible/package/junkfood/raisins
-	name = "4no raisins"
-	desc = "admins pls halp"
-	desc_extended = "This raisins brand mascot, called the raisin shitter, has been voted the least popular mascot for 75 years in a row."
+	name = "四不牌葡萄干"
+	desc = "管理员快来救命啊。"
+	desc_extended = "这个葡萄干品牌的吉祥物叫“葡萄干拉屎怪”，已连续75年被评为最不受欢迎的吉祥物。"
 	icon_state = "raisins"
 	value = 1
 
@@ -60,9 +60,9 @@
 
 
 /obj/item/container/edible/package/junkfood/cake
-	name = "space cream cake"
-	desc = "Will probably live longer than you."
-	desc_extended = "A cream cake that is held very importantly by some people despite being junk food."
+	name = "太空奶油蛋糕"
+	desc = "它大概比你还能活。"
+	desc_extended = "虽然是垃圾食品，有些人却把这种奶油蛋糕看得非常重要。"
 	icon_state = "cake"
 	value = 1
 
@@ -74,9 +74,9 @@
 
 
 /obj/item/container/edible/package/junkfood/syndicate
-	name = "syndi-cakes"
-	desc = "Hmm, tastes like betrayal!"
-	desc_extended = "Legends has it that the reason why this is on sale here despite being a Syndie product is that Jack Trasen can't get enough of these."
+	name = "辛迪小蛋糕"
+	desc = "嗯，一股背叛的味道！"
+	desc_extended = "传说这款辛迪加产品之所以能在这里出售，是因为杰克·特拉森实在吃不够。"
 	icon_state = "syndicate"
 	value = 1
 
@@ -86,9 +86,9 @@
 	return ..()
 
 /obj/item/container/edible/package/junkfood/cheese_chips
-	name = "cheese honkers"
-	desc = "A cheesie snack that will honk all over your mouth."
-	desc_extended = "A cheese chip that for some reason uses clown branding."
+	name = "鸣笛奶酪脆片"
+	desc = "让你的嘴里响遍喇叭声的奶酪零食。"
+	desc_extended = "不知为何采用小丑品牌包装的奶酪脆片。"
 	icon_state = "cheesie_honkers"
 	value = 1
 
@@ -125,7 +125,7 @@
 	return T
 
 /obj/item/container/edible/package/junkfood/halloween/credit
-	name = "100 credit bar"
+	name = "百信用点巧克力棒"
 	icon_state = "100_credit_bar"
 	value = 1
 
@@ -137,7 +137,7 @@
 	return ..()
 
 /obj/item/container/edible/package/junkfood/halloween/coconut_joy
-	name = "coconut joy"
+	name = "椰子乐巧克力棒"
 	icon_state = "coconut_joy"
 	value = 1
 
@@ -148,7 +148,7 @@
 	return ..()
 
 /obj/item/container/edible/package/junkfood/halloween/hurr_bar
-	name = "hurr bar"
+	name = "呃呃巧克力棒"
 	icon_state = "hurr_bar"
 	value = 1
 
@@ -159,7 +159,7 @@
 
 
 /obj/item/container/edible/package/junkfood/halloween/candy_bar
-	name = "laughter bar"
+	name = "欢笑巧克力棒"
 	icon_state = "candy_bar"
 	value = 1
 
@@ -171,7 +171,7 @@
 
 
 /obj/item/container/edible/package/junkfood/halloween/kit_catgirl_metaclique_bar
-	name = "kit-catgirl metaclique bar"
+	name = "猫娘小圈子威化棒"
 	icon_state = "kit_catgirl_metaclique_bar"
 	value = 1
 
@@ -182,7 +182,7 @@
 
 
 /obj/item/container/edible/package/junkfood/halloween/twink_bar
-	name = "twink bar"
+	name = "小鲜肉巧克力棒"
 	icon_state = "twink_bar"
 	value = 1
 
@@ -204,7 +204,7 @@
 */
 
 /obj/item/container/edible/package/junkfood/halloween/malf_way
-	name = "\improper MALF way bar"
+	name = "失控之路巧克力棒"
 	icon_state = "malf_way"
 	value = 1
 
@@ -214,7 +214,7 @@
 	return ..()
 
 /obj/item/container/edible/package/junkfood/halloween/triggerfinger
-	name = "triggerfinger bar"
+	name = "扳机指巧克力棒"
 	icon_state = "triggerfinger"
 	value = 1
 

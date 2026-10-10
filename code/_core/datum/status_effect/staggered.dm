@@ -1,6 +1,6 @@
 /status_effect/staggered
-	name = "Staggered"
-	desc = "You're staggered!"
+	name = "硬直"
+	desc = "你陷入了硬直，暂时无法行动！"
 	id = STAGGER
 	minimum = SECONDS_TO_DECISECONDS(0.25)
 	maximum = SECONDS_TO_DECISECONDS(1)

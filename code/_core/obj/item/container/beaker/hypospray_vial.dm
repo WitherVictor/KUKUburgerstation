@@ -1,6 +1,6 @@
 /obj/item/container/simple/beaker/bottle/hypospray
-	name = "hypospray vial"
-	desc = "Reagents in a semi-compressed bottle."
+	name = "高压注射器药瓶"
+	desc = "装在半压缩药瓶中的试剂。"
 
 	icon = 'icons/obj/item/container/cup/bottle_hypo.dmi'
 	icon_state = "bottle"
@@ -29,7 +29,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/hypospray/brute_mix
-	name = "syndicate hypospray brute prevention mix"
+	name = "辛迪加高压注射器外伤防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/hypospray/brute_mix/Generate()
@@ -41,7 +41,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/hypospray/burn_mix
-	name = "syndicate hypospray burn prevention mix"
+	name = "辛迪加高压注射器烧伤防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/hypospray/burn_mix/Generate()
@@ -53,7 +53,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/hypospray/toxin_mix
-	name = "syndicate hypospray toxin prevention mix"
+	name = "辛迪加高压注射器毒素防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/hypospray/toxin_mix/Generate()
@@ -65,7 +65,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/hypospray/death_mix
-	name = "syndicate hypospray death prevention mix"
+	name = "辛迪加高压注射器保命混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/hypospray/death_mix/Generate()
@@ -77,7 +77,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/hypospray/rad_mix
-	name = "syndicate hypospray radiation prevention mix"
+	name = "辛迪加高压注射器辐射防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/hypospray/rad_mix/Generate()
@@ -89,7 +89,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/hypospray/combat_mix
-	name = "syndicate hypospray combat mix"
+	name = "辛迪加高压注射器战斗混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/hypospray/combat_mix/Generate()

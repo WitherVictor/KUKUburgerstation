@@ -1,6 +1,6 @@
 /species/reptile/advanced
-	name = "Advanced Reptile"
-	desc = "Fucking furries. Advanced."
+	name = "蜥蜴人"
+	desc = "该死的兽迷。进化版。"
 	id = "reptile_advanced"
 	flags_species = SPECIES_REPTILE_ADVANCED
 

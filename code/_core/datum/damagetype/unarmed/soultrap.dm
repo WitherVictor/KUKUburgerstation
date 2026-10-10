@@ -1,6 +1,6 @@
 /damagetype/unarmed/soultrap
 
-	attack_verbs = list("soultrap")
+	attack_verbs = list("灵魂捕获")
 
 	hit_effect = /obj/effect/temp/impact/combat/disarm
 

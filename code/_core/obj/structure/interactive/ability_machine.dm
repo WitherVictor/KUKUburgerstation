@@ -1,9 +1,9 @@
 //Change your abilities here.
 
 /obj/structure/interactive/ability_machine
-	name = "ability machine"
-	desc = "It's science, I ain't gotta explain shit."
-	desc_extended = "An almost magical genetic manipulation machine that practically grants the user superpowers. Customize your genetic-based abilities here."
+	name = "能力装配机"
+	desc = "这就是科学，老子才懒得解释。"
+	desc_extended = "一台近乎魔法的基因改造机器，能赋予使用者超能力。可以在此自定义基因能力。"
 
 	icon = 'icons/obj/structure/ability_machine.dmi'
 	icon_state = "ability_machine"
@@ -38,9 +38,9 @@
 
 
 /obj/structure/interactive/ability_machine/tall
-	name = "spell table"
-	desc_extended = "It's magic, I ain't gotta explain shit."
-	desc_extended = "A magical spell manipulation machine that practically grants the user superpowers. Customize your spell-based abilities here."
+	name = "法术台"
+	desc_extended = "这就是魔法，老子才懒得解释。"
+	desc_extended = "一台神奇的法术调整机器，能赋予使用者超能力。可以在此自定义法术能力。"
 	icon = 'icons/obj/structure/ability_machine_tall.dmi'
 	pixel_x = 0
 	ability_types = list(

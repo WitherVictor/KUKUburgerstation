@@ -1,6 +1,6 @@
 /status_effect/temp_armor
-	name = "Stoneskin"
-	desc = "Your skin feels strong!"
+	name = "石肤"
+	desc = "你的皮肤变得坚韧！"
 	id = TEMP_ARMOR
 	maximum = SECONDS_TO_DECISECONDS(300)
 	minimum = SECONDS_TO_DECISECONDS(1)

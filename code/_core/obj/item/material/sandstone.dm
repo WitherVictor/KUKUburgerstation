@@ -1,6 +1,6 @@
 /obj/item/material/sandstone
-	name = "sandstone"
-	desc = "rock and stone!"
+	name = "砂岩"
+	desc = "为了岩石与磐石！"
 	icon = 'icons/obj/item/material.dmi'
 	icon_state = "sandstone"
 

@@ -1,5 +1,5 @@
 /obj/hud/button/health/bar/
-	name = "health bar"
+	name = "生命条"
 	icon = 'icons/obj/health/base.dmi'
 	icon_state = ""
 	color = "#FFFFFF"
@@ -34,10 +34,10 @@
 	add_underlay(I)
 
 /obj/hud/button/health/bar/hp
-	name = "health"
+	name = "生命值"
 	id = "health"
-	desc = "Approximately how close you are to death."
-	desc_extended = "Your health. When this reaches 0, you die. This value can be raised by increasing your vitality."
+	desc = "大致反映你离死亡还有多远。"
+	desc_extended = "你的生命值。生命值过低时会进入濒危状态。提升活力可以增加生命值上限。"
 	min = 0
 	color = "#FF0000"
 
@@ -46,7 +46,7 @@
 	flags = FLAGS_HUD_MOB
 
 /obj/hud/button/health/bar/hp/get_examine_list(var/mob/examiner)
-	return ..() + div("notice","You have [current] out of [max] health.")
+	return ..() + div("notice","当前生命值为 [current]，上限为 [max]。")
 
 /obj/hud/button/health/bar/hp/update_stats(var/mob/living/M)
 
@@ -62,10 +62,10 @@
 	. = ..()
 
 /obj/hud/button/health/bar/sp
-	name = "stamina"
+	name = "体力"
 	id = "stamina"
-	desc = "Approximately how close your are to physical fatigue."
-	desc_extended = "Your stamina. If this value is too low, some actions can't be performed. When it is 0, you will likely collapse from exhaution. This value can be raised by increasing your endurance."
+	desc = "大致反映你离身体疲劳还有多远。"
+	desc_extended = "你的体力。体力过低时，某些行动将无法进行。降至 0 时，你很可能因精疲力竭而倒下。提升耐力可以增加体力上限。"
 	min = 0
 	color = "#00ff00"
 
@@ -74,7 +74,7 @@
 	flags = FLAGS_HUD_MOB
 
 /obj/hud/button/health/bar/sp/get_examine_list(var/mob/examiner)
-	return ..() + div("notice","You have [current] out of [max] stamina.")
+	return ..() + div("notice","当前体力为 [current]，上限为 [max]。")
 
 /obj/hud/button/health/bar/sp/update_stats(var/mob/living/M)
 
@@ -90,10 +90,10 @@
 	. = ..()
 
 /obj/hud/button/health/bar/mp
-	name = "mana"
+	name = "法力"
 	id = "mana"
-	desc = "Approximately how close you are to mental fatigue."
-	desc_extended = "Your mana. Determines which spells you can cast and how often. When it is 0, you will likely collapse from mental exhaution. This value can be raised by increasing your willpower."
+	desc = "大致反映你离精神疲劳还有多远。"
+	desc_extended = "你的法力。决定你能施放哪些法术，以及施放的频率。降至 0 时，你很可能因精神耗尽而倒下。提升智慧可以增加法力上限。"
 	min = 0
 	color = "#0000ff"
 
@@ -102,7 +102,7 @@
 	flags = FLAGS_HUD_MOB
 
 /obj/hud/button/health/bar/mp/get_examine_list(var/mob/examiner)
-	return ..() + div("notice","You have [current] out of [max] mana.")
+	return ..() + div("notice","当前法力为 [current]，上限为 [max]。")
 
 /obj/hud/button/health/bar/mp/update_stats(var/mob/living/M)
 

@@ -1,3 +1,3 @@
 /obj/item/container/food/raw
-	name = "raw food"
-	desc = "Not quite edible yet."
+	name = "生食材"
+	desc = "还没到能吃的时候。"

@@ -31,7 +31,7 @@
 		var/volume_to_add = 1
 		if(!A.dead && V.dead)
 			if (V.blood_volume <= 0 || V.blood_volume_max <= 0 || !V.blood_type)
-				A.to_chat(span("danger","That enemy has no blood to steal!"))
+				A.to_chat(span("danger","那个敌人没有可供汲取的血液！"))
 				return ..()
 			var/blood_to_steal = min(V.blood_volume,(A.blood_volume_max - A.blood_volume)) //it took blood, sweat and tears, but...
 			if(blood_to_steal > 0)

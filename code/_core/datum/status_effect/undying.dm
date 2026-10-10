@@ -1,6 +1,6 @@
 /status_effect/undying
-	name = "Undying"
-	desc = "You refuse to die!"
+	name = "不死"
+	desc = "你拒绝死亡！"
 	id = UNDYING
 
 	minimum = SECONDS_TO_DECISECONDS(5)

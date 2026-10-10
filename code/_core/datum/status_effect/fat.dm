@@ -1,8 +1,8 @@
 //Purely visual effect for bloated zombies.
 
 /status_effect/fat
-	name = "Fat"
-	desc = "You're fat."
+	name = "肥胖"
+	desc = "你很胖。"
 	id = FAT
 
 	default_magnitude = 100

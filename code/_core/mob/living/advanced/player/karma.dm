@@ -32,27 +32,27 @@
 		var/attacker_justice_served = attacker.mobdata.loaded_data["justice_served"]
 		var/attacker_justice_reward = attacker.mobdata.loaded_data["justice_reward_claimed"]
 
-		attacker.to_chat(span("notice","You hear a voice in your head..."))
+		attacker.to_chat(span("notice","你的脑海中响起一个声音……"))
 
-		var/bonus_text = "Continue killing those who defy the natural order, and you shall be rewarded."
+		var/bonus_text = "继续诛杀违逆自然秩序之人，你将得到奖赏。"
 
 		if(attacker_justice_served == 5 && attacker_justice_reward < 5)
-			bonus_text = "You've done well for yourself. Speak to the one who calles themselves Bar-Shaleez to receive a reward..."
+			bonus_text = "你做得不错。去找那个自称巴尔-沙利兹的人领取奖赏……"
 		else if(attacker_justice_served == 10 && attacker_justice_reward < 10)
-			bonus_text = "You carry out my will quite efficiently for a mortal. Bar-Shaleez will have a reward waiting for you."
+			bonus_text = "以凡人而言，你执行我的意志颇有效率。巴尔-沙利兹会为你准备奖赏。"
 		else if(attacker_justice_served == 15 && attacker_justice_reward < 15)
-			bonus_text = "You surpass some of my best followers. Speak to Bar-Shaleez for a reward worth your stature."
+			bonus_text = "你胜过了我麾下的一些杰出信徒。去找巴尔-沙利兹，领取与你功绩相称的奖赏。"
 		else if(attacker_justice_served == 25 && attacker_justice_reward < 25)
-			bonus_text = "You surpass some of my best followers. Speak to Bar-Shaleez for a reward worth your stature."
+			bonus_text = "你胜过了我麾下的一些杰出信徒。去找巴尔-沙利兹，领取与你功绩相称的奖赏。"
 
 		if(old_victim_justice_broken)
-			attacker.to_chat(span("karma","\The [victim.real_name] has been judged for their sins for the murder of [old_victim_justice_broken] innocent\s. [bonus_text]"))
+			attacker.to_chat(span("karma","[victim.real_name]因杀害[old_victim_justice_broken]名无辜者的罪行受到了审判。[bonus_text]"))
 		else
-			attacker.to_chat(span("karma","\The [victim.real_name] has been judged for their sins for their past life. [bonus_text]"))
+			attacker.to_chat(span("karma","[victim.real_name]因前世的罪行受到了审判。[bonus_text]"))
 
 		if(old_victim_justice_broken > 0)
-			victim.to_chat(span("notice","You hear a voice in your head..."))
-			victim.to_chat(span("karma","Fool. I told you to repent. You no longer have my favor."))
+			victim.to_chat(span("notice","你的脑海中响起一个声音……"))
+			victim.to_chat(span("karma","愚蠢。我早已命你悔罪。你已失去我的眷顾。"))
 			victim.mobdata.loaded_data["justice_served"] = 0
 
 		return FALSE
@@ -62,33 +62,33 @@
 
 		attacker.mobdata.loaded_data["justice_broken"] += 1
 
-		attacker.to_chat(span("notice","You hear a voice in your head..."))
+		attacker.to_chat(span("notice","你的脑海中响起一个声音……"))
 
 		if(attacker.mobdata.loaded_data["justice_served"] >= 1 || attacker.mobdata.loaded_data["justice_broken"] == 1)
-			attacker.to_chat(span("karma","You dare defy me? I shall assume that this was a mistake just this once. Repent for your sins now, or else suffering shall await."))
+			attacker.to_chat(span("karma","你竟敢违逆我？这一次，我姑且当作你是无心之失。立刻为你的罪行忏悔，否则等待你的唯有苦难。"))
 			return FALSE
 
 		switch(attacker.mobdata.loaded_data["justice_broken"])
 			if(1)
-				attacker.to_chat(span("karma","Fool. You will pay for that!"))
+				attacker.to_chat(span("karma","愚蠢。你会为此付出代价！"))
 				return TRUE
 			if(2)
-				attacker.to_chat(span("karma","Fool. You will pay for that..."))
+				attacker.to_chat(span("karma","愚蠢。你会为此付出代价……"))
 				return TRUE
 			if(3)
-				attacker.to_chat(span("karma","You wish to be punished again? So be it. Continue on this path and there will be nothing but darkness awaiting you."))
+				attacker.to_chat(span("karma","你还想再受惩罚？那就如你所愿。继续走下去，等待你的唯有黑暗。"))
 				return TRUE
 			if(4)
-				attacker.to_chat(span("karma","You have made an enemy out of me. Repent and regain my favor, or I shall send nothing but more death your way."))
+				attacker.to_chat(span("karma","你已与我为敌。忏悔以重获我的眷顾，否则我只会为你送来更多死亡。"))
 				attacker.mobdata.loaded_data["justice_served"] = 0
 				return TRUE
 			else
-				attacker.to_chat(span("karma","Enjoy the wraith of my minions, mortal."))
+				attacker.to_chat(span("karma","凡人，好好领教我仆从的怒火吧。"))
 				return TRUE
 
 	if(attacker.mobdata.loaded_data["justice_served"] > 1)
-		attacker.to_chat(span("notice","You hear a voice in your head..."))
-		attacker.to_chat(span("karma","\The [victim.real_name] was not guilty enough to warrant my praise... seek out better prey."))
+		attacker.to_chat(span("notice","你的脑海中响起一个声音……"))
+		attacker.to_chat(span("karma","[victim.real_name]的罪行尚不足以让你赢得我的赞许……去寻找更合适的猎物。"))
 
 	return FALSE
 

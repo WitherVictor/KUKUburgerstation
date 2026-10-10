@@ -1,7 +1,7 @@
 /obj/item/emf
-	name = "\improper EMF reader"
-	desc = "It just works."
-	desc_extended = "A specialized plastic tool that can allegedly read Electromagnetic Field Radiation levels. Allegedly."
+	name = "电磁场探测仪"
+	desc = "就是好使。"
+	desc_extended = "一种专用塑料仪器，据说能测量电磁场辐射强度。只是据说。"
 	icon = 'icons/obj/item/weapons/melee/tools/emf.dmi'
 	icon_state = "inventory"
 
@@ -89,7 +89,7 @@
 
 	active = !active
 
-	activator.to_chat(span("notice","You turn [active ? "on" : "off"] \the [src.name]."))
+	activator.to_chat(span("notice","你[active ? "开启" : "关闭"]了[src.name]。"))
 
 	play_sound('sound/machines/click.ogg',get_turf(src),range_max=VIEW_RANGE*0.25)
 

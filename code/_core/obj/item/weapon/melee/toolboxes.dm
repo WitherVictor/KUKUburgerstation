@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/toolbox
-	name = "toolbox"
-	desc = "WARNING: Very Robust"
-	desc_extended = "A Toolbox mainly used by the most brutish and stupid mercs to hit people with. Can also be used to store tools."
+	name = "工具箱"
+	desc = "警告：极其结实。"
+	desc_extended = "主要被最粗鲁愚笨的雇佣兵拿来砸人的工具箱。也能用来装工具。"
 	icon = 'icons/obj/item/weapons/melee/toolbox/red.dmi'
 	damage_type = /damagetype/item/heavy
 
@@ -19,7 +19,7 @@
 	color = "#FF0000"
 
 /obj/item/weapon/melee/toolbox/red/emergency
-	name = "emergency toolbox"
+	name = "应急工具箱"
 
 /obj/item/weapon/melee/toolbox/red/emergency/Generate()
 	new /obj/item/weapon/melee/tool/crowbar(src)
@@ -41,7 +41,7 @@
 
 
 /obj/item/weapon/melee/toolbox/syndicate
-	name = "fully loaded black toolbox"
+	name = "满载的黑色工具箱"
 	color = COLOR_GREY_DARK
 
 	rarity = RARITY_RARE
@@ -56,9 +56,9 @@
 	return ..()
 
 /obj/item/weapon/melee/toolbox/gold
-	name = "golden toolbox"
-	desc = "WARNING: Shiny!"
-	desc_extended = "A gold plated toolbox awarded to the most robust of assistants. Can also be used to store tools."
+	name = "黄金工具箱"
+	desc = "警告：闪闪发光！"
+	desc_extended = "颁发给最能打的助理的镀金工具箱。也能用来装工具。"
 	icon = 'icons/obj/item/weapons/melee/toolbox/gold.dmi'
 	damage_type = /damagetype/melee/club/gold_toolbox
 

@@ -1,7 +1,7 @@
 /obj/item/container/syringe/medipen
-	name = "butterfly pen"
-	desc = "For when you want to poke holes in people faster."
-	desc_extended = "A single use hypodermic needle pen designed to quickly and safely administer reagents to the user's bloodstream."
+	name = "蝴蝶注射笔"
+	desc = "想更快在人身上扎洞时用得上。"
+	desc_extended = "一次性皮下注射笔，用于将化学物质快速、安全地注入使用者的血液。"
 	crafting_id = "medipen"
 	icon = 'icons/obj/item/container/medipen.dmi'
 	icon_state = "medipen"
@@ -26,14 +26,14 @@
 	name = initial(name)
 	desc_extended = initial(desc_extended)
 	if(quality <= 0)
-		name = "used [name]"
-		desc_extended = "[desc_extended] This one is used and should be discarded."
+		name = "用过的[name]"
+		desc_extended = "[desc_extended]这支已经用过，应予丢弃。"
 	else
 		var/list/names = list()
 		for(var/r_id in reagents.stored_reagents)
 			var/reagent/R = REAGENT(r_id)
 			names += R.name
-		desc_extended = "[desc_extended] This one contains [english_list(names)]."
+		desc_extended = "[desc_extended]这支含有[english_list(names,"无药物","、","和")]。"
 
 /obj/item/container/syringe/medipen/update_icon()
 	. = ..()
@@ -59,7 +59,7 @@
 	return
 
 /obj/item/container/syringe/medipen/adminomnizine
-	name = "god's butterfly pen"
+	name = "神之蝴蝶注射笔"
 	value_burgerbux = 1
 
 /obj/item/container/syringe/medipen/adminomnizine/Generate()
@@ -67,51 +67,51 @@
 	return ..()
 
 /obj/item/container/syringe/medipen/bicaridine
-	name = "anti-brute butterfly pen"
+	name = "外伤治疗蝴蝶注射笔"
 
 /obj/item/container/syringe/medipen/bicaridine/Generate()
 	reagents.add_reagent(/reagent/medicine/bicaridine_plus,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/medipen/kelotane
-	name = "anti-burn butterfly pen"
+	name = "烧伤治疗蝴蝶注射笔"
 
 /obj/item/container/syringe/medipen/kelotane/Generate()
 	reagents.add_reagent(/reagent/medicine/kelotane,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/medipen/dylovene
-	name = "anti-toxin butterfly pen"
+	name = "解毒蝴蝶注射笔"
 
 /obj/item/container/syringe/medipen/dylovene/Generate()
 	reagents.add_reagent(/reagent/medicine/dylovene,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/medipen/dexaline
-	name = "anti-suffocation butterfly pen"
+	name = "抗窒息蝴蝶注射笔"
 
 /obj/item/container/syringe/medipen/dexaline/Generate()
 	reagents.add_reagent(/reagent/medicine/dexalin,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/medipen/epinephrine
-	name = "epinephrine butterfly pen"
+	name = "急救肾上腺素蝴蝶注射笔"
 
 /obj/item/container/syringe/medipen/epinephrine/Generate()
 	reagents.add_reagent(/reagent/medicine/adrenaline/epinephrine,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/medipen/iron
-	name = "anti-bloodloss butterfly pen"
+	name = "补血蝴蝶注射笔"
 
 /obj/item/container/syringe/medipen/iron/Generate()
 	reagents.add_reagent(/reagent/iron,reagents.volume_max)
 	return ..()
 
 /obj/item/container/syringe/medipen/mining
-	name = "mining butterfly pen"
-	desc = "The only thing that keeps you alive during ash storms. Besides mining capsules."
-	desc_extended = "An incredibly beneficial and expensive butterfly pen with a potent mix of chemicals that should keep you standing even in the harshest of environments. It is recommended not to use more than two in a quick succession."
+	name = "采矿蝴蝶注射笔"
+	desc = "除了采矿胶囊之外，唯一能让你在火山灰暴中活下来的东西。"
+	desc_extended = "效果极佳、价格昂贵的蝴蝶注射笔，内含强效混合药剂，即使在极端恶劣的环境中也能让你保持行动。建议不要在短时间内连续使用超过两支。"
 
 /obj/item/container/syringe/medipen/mining/Generate()
 	reagents.add_reagent(/reagent/medicine/inaprovaline,5)
@@ -121,9 +121,9 @@
 	return ..()
 
 /obj/item/container/syringe/medipen/mining_plus
-	name = "deluxe mining butterfly pen"
-	desc = "The only thing that keeps you alive during ash storms. Besides mining capsules."
-	desc_extended = "An incredibly beneficial and expensive butterfly pen with a potent mix of chemicals that should keep you standing even in the harshest of environments. It is recommended not to use more than two in a quick succession."
+	name = "豪华采矿蝴蝶注射笔"
+	desc = "除了采矿胶囊之外，唯一能让你在火山灰暴中活下来的东西。"
+	desc_extended = "效果极佳、价格昂贵的蝴蝶注射笔，内含强效混合药剂，即使在极端恶劣的环境中也能让你保持行动。建议不要在短时间内连续使用超过两支。"
 
 	reagents = /reagent_container/syringe/hypospray
 

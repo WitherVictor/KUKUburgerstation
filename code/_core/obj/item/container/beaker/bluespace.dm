@@ -1,7 +1,7 @@
 /obj/item/container/simple/beaker/bluespace
-	name = "bluespace beaker"
-	desc = "A chemist's best friend."
-	desc_extended = "An incredibly useful and spacious bluespace beaker designed to hold as much reagents as possible in as little space as possible."
+	name = "蓝空间烧杯"
+	desc = "化学家的最佳伙伴。"
+	desc_extended = "极其实用且容量充足的蓝空间烧杯，设计目标是在尽可能小的空间里盛装尽可能多的化学物质。"
 	icon = 'icons/obj/item/container/cup/beaker_bluespace.dmi'
 	icon_state = "beaker"
 	icon_count = 1

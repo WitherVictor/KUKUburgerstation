@@ -1,5 +1,5 @@
 /damagetype/unarmed/bite/
-	attack_verbs = list("bite","chomp","gnaw")
+	attack_verbs = list("撕咬","啃咬","啮咬")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/bite.ogg'

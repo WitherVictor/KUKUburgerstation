@@ -1,7 +1,7 @@
 /obj/structure/interactive/construction/grille
-	name = "grille"
-	desc = "A metal grille."
-	desc_extended = "Could probably add some glass for a window."
+	name = "格栅"
+	desc = "一副金属格栅。"
+	desc_extended = "加上玻璃可以装成窗户。"
 	icon_state = "grille"
 
 	icon = 'icons/obj/structure/grille.dmi'
@@ -28,10 +28,10 @@
 	INTERACT_CHECK_NO_DELAY(S)
 
 	if(istype(src.loc,/obj/structure/window/))
-		activator.to_chat(span("warning","There is already a window here!"))
+		activator.to_chat(span("warning","这里已经有窗户了！"))
 		return FALSE
 	if(S.amount < 1)
-		activator.to_chat(span("warning","You need a glass sheet in order to build a wall!"))
+		activator.to_chat(span("warning","安装窗户需要1张玻璃板！"))
 		return FALSE
 	return TRUE
 
@@ -42,7 +42,7 @@
 	INITIALIZE(W)
 	GENERATE(W)
 	FINALIZE(W)
-	activator?.visible_message(span("notice","\The [activator.name] places \the [W.name]."),span("notice","You place \the [W.name]."))
+	activator?.visible_message(span("notice","[activator.name]安装了[W.name]。"),span("notice","你安装了[W.name]。"))
 	S.add_item_count(-1)
 	return TRUE
 
@@ -55,7 +55,7 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(10)
 			if(src.can_do_destruction(FALSE))
-				activator.to_chat(span("notice","You dissasemble the [src.name]"))
+				activator.to_chat(span("notice","你拆解了[src.name]。"))
 				src.on_destruction(FALSE)
 			return TRUE
 	if(istype(object,/obj/item/material/sheet))
@@ -81,7 +81,7 @@
 	qdel(src)
 
 /obj/structure/interactive/construction/grille/plasteel
-	name = "plasteel grille"
-	desc = "A plasteel grille."
+	name = "塑钢格栅"
+	desc = "一副塑钢格栅。"
 	color = COLOR_PLASTEEL
 	material_id = /material/plasteel

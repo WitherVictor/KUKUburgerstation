@@ -1,5 +1,5 @@
 /damagetype/unarmed/holy
-	attack_verbs = list("bless","exorcise","smite","beatify","sanctify","proselytizes")
+	attack_verbs = list("祝福","驱邪","惩击","封圣","圣化","传教")
 
 	hit_effect = /obj/effect/temp/impact/combat/punch
 
@@ -80,7 +80,7 @@
 
 
 /damagetype/unarmed/holy/spiked
-	attack_verbs = list("curse","defile","desecrate","taint","blaspheme","pollute")
+	attack_verbs = list("诅咒","玷污","亵渎","腐化","渎神","污染")
 
 	//The base attack damage of the weapon. It's a flat value, unaffected by any skills or attributes.
 	attack_damage_base = list(

@@ -1,47 +1,47 @@
 /obj/item/container/edible/pill/bicaridine
-	name = "bicaridine pill (5u)"
+	name = "比卡利定药片（5单位）"
 
 /obj/item/container/edible/pill/bicaridine/Generate()
 	reagents.add_reagent(/reagent/medicine/bicaridine,5)
 	return ..()
 
 /obj/item/container/edible/pill/kelotane
-	name = "kelotane pill (5u)"
+	name = "克罗烷药片（5单位）"
 
 /obj/item/container/edible/pill/kelotane/Generate()
 	reagents.add_reagent(/reagent/medicine/kelotane,5)
 	return ..()
 
 /obj/item/container/edible/pill/dylovene
-	name = "dylovene pill (5u)"
+	name = "地洛文药片（5单位）"
 
 /obj/item/container/edible/pill/dylovene/Generate()
 	reagents.add_reagent(/reagent/medicine/dylovene,5)
 	return ..()
 
 /obj/item/container/edible/pill/calomel
-	name = "calomel pill (10u)"
+	name = "甘汞药片（5单位）"
 
 /obj/item/container/edible/pill/calomel/Generate()
 	reagents.add_reagent(/reagent/medicine/purge,5)
 	return ..()
 
 /obj/item/container/edible/pill/charcoal
-	name = "charcoal pill (10u)"
+	name = "活性炭药片（5单位）"
 
 /obj/item/container/edible/pill/charcoal/Generate()
 	reagents.add_reagent(/reagent/medicine/charcoal,5)
 	return ..()
 
 /obj/item/container/edible/pill/iron
-	name = "iron pill (10u)"
+	name = "铁剂药片（10单位）"
 
 /obj/item/container/edible/pill/iron/Generate()
 	reagents.add_reagent(/reagent/iron,10)
 	return ..()
 
 /obj/item/container/edible/pill/space_drugs
-	name = "space drugs (5u)"
+	name = "太空迷幻药（5单位）"
 	icon_state = "circle"
 
 /obj/item/container/edible/pill/space_drugs/Generate()
@@ -50,7 +50,7 @@
 
 
 /obj/item/container/edible/pill/space_dust
-	name = "space dust (10u)"
+	name = "太空自由之尘（10单位）"
 	icon_state = "circle"
 
 /obj/item/container/edible/pill/space_dust/Generate()
@@ -59,43 +59,43 @@
 
 
 /obj/item/container/edible/pill/omnizine
-	name = "omnizine pill (10u)"
+	name = "全能灵药药片（10单位）"
 
 /obj/item/container/edible/pill/omnizine/Generate()
 	reagents.add_reagent(/reagent/medicine/omnizine,10)
 	return ..()
 
 /obj/item/container/edible/pill/potassium_iodide
-	name = "potassium iodide pill (10u)"
+	name = "碘化钾药片（10单位）"
 
 /obj/item/container/edible/pill/potassium_iodide/Generate()
 	reagents.add_reagent(/reagent/medicine/potassium_iodide,10)
 	return ..()
 
 /obj/item/container/edible/pill/antihol
-	name = "antihol pill (10u)"
+	name = "解酒剂药片（10单位）"
 
 /obj/item/container/edible/pill/antihol/Generate()
 	reagents.add_reagent(/reagent/medicine/antihol,10)
 	return ..()
 
 /obj/item/container/edible/pill/assprin
-	name = "assprin pill (5u)"
+	name = "屁司匹林药片（5单位）"
 
 /obj/item/container/edible/pill/assprin/Generate()
 	reagents.add_reagent(/reagent/medicine/painkiller/assprin,5)
 	return ..()
 
 /obj/item/container/edible/pill/space_prussian_blue
-	name = "space prussian blue (10u)"
+	name = "太空普鲁士蓝（10单位）"
 
 /obj/item/container/edible/pill/space_prussian_blue/Generate()
 	reagents.add_reagent(/reagent/medicine/space_prussian_blue,10)
 	return ..()
 
 /obj/item/container/edible/pill/chlorine
-	name = "chlorine tablet (10u)"
-	desc_extended = "Chlorine in tablet form, meant to be dissolved in beakers or other reagent containers. Maybe don't eat this."
+	name = "氯片（5单位）"
+	desc_extended = "片剂形式的氯，用于溶入烧杯或其他化学容器。最好别吃。"
 	icon_state = "circle"
 
 /obj/item/container/edible/pill/chlorine/Generate()
@@ -103,8 +103,8 @@
 	return ..()
 
 /obj/item/container/edible/pill/carbon
-	name = "carbon tablet (10u)"
-	desc_extended = "Carbon in tablet form, meant to be dissolved in beakers or other reagent containers. Maybe don't eat this."
+	name = "碳片（5单位）"
+	desc_extended = "片剂形式的碳，用于溶入烧杯或其他化学容器。最好别吃。"
 	icon_state = "circle"
 
 /obj/item/container/edible/pill/carbon/Generate()

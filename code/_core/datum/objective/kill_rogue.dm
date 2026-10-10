@@ -1,7 +1,7 @@
 
 
 /objective/kill_rogue
-	name = "Kill Rogue Crewmember"
+	name = "击杀叛变船员"
 	credit_reward = 1000
 	burgerbux_reward = 1
 	points_reward = 15
@@ -42,7 +42,7 @@
 	return pick(valid_targets)
 
 /objective/kill_rogue/get_description()
-	return "Kill [english_list(tracked_atoms)]. Location: [english_list(get_locations(),"Unknown")]."
+	return "击杀[english_list(tracked_atoms,"未知目标","、","、")]。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/kill_rogue/start()
 	var/mob/living/L = get_random_target()

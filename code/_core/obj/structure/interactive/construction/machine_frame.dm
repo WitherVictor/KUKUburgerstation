@@ -1,7 +1,7 @@
 /obj/structure/interactive/construction/machine_frame
-	name = "machine frame"
-	desc = "A metal machine frame."
-	desc_extended = "I should add some electronics if its a complex machine, otherwise, I'll just need some other part."
+	name = "机器框架"
+	desc = "一副金属机器框架。"
+	desc_extended = "复杂机器需要先装入电子元件，其他机器则只需要相应零件。"
 	icon_state = "machine_frame"
 
 	collision_flags = FLAG_COLLISION_WALL
@@ -30,17 +30,17 @@ obj/structure/interactive/construction/machine_frame/clicked_on_by_object(var/mo
 		var/obj/item/T = object
 		if(T.flags_tool & FLAG_TOOL_WRENCH)
 			if(anchored)
-				activator.to_chat(span("notice","You un-anchor the machine frame."))
+				activator.to_chat(span("notice","你松开了机器框架的固定装置。"))
 				anchored = FALSE
 			else
-				activator.to_chat(span("notice","You anchor the machine frame."))
+				activator.to_chat(span("notice","你固定了机器框架。"))
 				anchored = TRUE
 	if(istype(object,/obj/item/container/healing/cable))
 		var/obj/item/P = object
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.visible_message(span("notice","[activator.name] inserts some parts into the [src.name]."),span("notice","You insert some parts into the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]向[src.name]中装入了一些零件。"),span("notice","你向[src.name]中装入了一些零件。"))
 		electronics = TRUE
 		P.add_item_count(-1)
 		return TRUE
@@ -48,27 +48,27 @@ obj/structure/interactive/construction/machine_frame/clicked_on_by_object(var/mo
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.visible_message(span("notice","[activator.name] inserts some parts into the [src.name]."),span("notice","You insert some parts into the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]向[src.name]中装入了一些零件。"),span("notice","你向[src.name]中装入了一些零件。"))
 		make_machine(activator,object,/obj/structure/interactive/mining_drill)
 		return TRUE
 	if(istype(object,/obj/item/material/sheet))
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.visible_message(span("notice","[activator.name] inserts some parts into the [src.name]."),span("notice","You insert some parts into the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]向[src.name]中装入了一些零件。"),span("notice","你向[src.name]中装入了一些零件。"))
 		make_machine(activator,object,/obj/structure/interactive/mining_brace)
 		return TRUE
 	if(istype(object,/obj/item/crafting_bench/smelter))
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.visible_message(span("notice","[activator.name] inserts some parts into the [src.name]."),span("notice","You insert some parts into the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]向[src.name]中装入了一些零件。"),span("notice","你向[src.name]中装入了一些零件。"))
 		make_machine(activator,object,/obj/structure/interactive/smelter)
 		return TRUE
 	if(istype(object,/obj/item/material/rod))
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.visible_message(span("notice","[activator.name] inserts some parts into the [src.name]."),span("notice","You insert some parts into the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]向[src.name]中装入了一些零件。"),span("notice","你向[src.name]中装入了一些零件。"))
 		make_machine(activator,object,/obj/structure/interactive/conveyor)
 	return ..()

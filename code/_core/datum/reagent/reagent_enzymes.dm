@@ -1,6 +1,6 @@
 /reagent/enzymes
-	name = "all-purpose enzymes"
-	desc = "Enzymes that interact with other food."
+	name = "通用酶"
+	desc = "能与其他食物发生反应的酶。"
 	color = "#267F00"
 	alpha = 225
 

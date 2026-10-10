@@ -1,5 +1,5 @@
 /obj/item/container/spray/silver_sulfadiazine
-	name = "medical spray (silver sulfadiazine)"
+	name = "医疗喷雾（磺胺嘧啶银）"
 	color = "#FFBD7F"
 	glass_color = "#FFFF00"
 
@@ -8,7 +8,7 @@
 	return ..()
 
 /obj/item/container/spray/mustard
-	name = "medical spray (mustard)"
+	name = "医疗喷雾（芥末酱）"
 	color = "#FFBD7F"
 	glass_color = "#FFFF00"
 
@@ -17,7 +17,7 @@
 	return ..()
 
 /obj/item/container/spray/styptic_powder
-	name = "medical spray (styptic powder)"
+	name = "医疗喷雾（止血粉）"
 	color = "#FF7F7F"
 	glass_color = "#FF0000"
 
@@ -26,7 +26,7 @@
 	return ..()
 
 /obj/item/container/spray/ketchup
-	name = "medical spray (ketchup)"
+	name = "医疗喷雾（番茄酱）"
 	color = "#FF7F7F"
 	glass_color = "#FF0000"
 
@@ -35,7 +35,7 @@
 	return ..()
 
 /obj/item/container/spray/synthflesh
-	name = "medical spray (synthflesh)"
+	name = "医疗喷雾（合成血肉）"
 	color = "#FFEBEB"
 	glass_color = "#FFFFFF"
 

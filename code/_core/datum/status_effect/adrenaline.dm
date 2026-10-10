@@ -1,6 +1,6 @@
 /status_effect/adrenaline
-	name = "Adrenaline"
-	desc = "You're filled with adrenaline!"
+	name = "肾上腺素"
+	desc = "你体内的肾上腺素正在飙升！"
 	id = ADRENALINE
 
 	minimum = SECONDS_TO_DECISECONDS(10)

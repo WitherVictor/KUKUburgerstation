@@ -1,6 +1,7 @@
 /vote/continue_round //Vote instance
-	name = "Continue the Round?" //The name of the vote. Usually the question.
+	name = "继续本回合吗？" //The name of the vote. Usually the question.
 	options = list("Yes","No") //Just a list of possible choices.
+	option_display_names = list("Yes" = "是","No" = "否")
 	time_limit = 60 //In seconds.
 
 

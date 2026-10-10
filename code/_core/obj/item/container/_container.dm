@@ -1,7 +1,7 @@
 /obj/item/container
-	name = "container"
-	desc = "This holds something."
-	desc_extended = "Holds things."
+	name = "容器"
+	desc = "这里面装着东西。"
+	desc_extended = "用于盛装物品。"
 
 	can_rename = TRUE
 

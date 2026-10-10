@@ -1,6 +1,6 @@
 /status_effect/stun
-	name = "Stunned"
-	desc = "You're stunned!"
+	name = "眩晕"
+	desc = "你被击晕了！"
 	id = STUN
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(4)

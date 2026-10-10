@@ -4,7 +4,7 @@
 	return ..();}
 
 /obj/item/container/simple/beaker/large
-	name = "large beaker"
+	name = "大型烧杯"
 	icon = 'icons/obj/item/container/cup/beaker_large.dmi'
 	icon_state = "beaker"
 	icon_count = 10
@@ -76,7 +76,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/large/ice/
-	name = "beaker of ice"
+	name = "装冰的烧杯"
 
 /obj/item/container/simple/beaker/large/ice/Generate()
 	reagents.add_reagent(/reagent/nutrition/ice,reagents.volume_max,T0C - 10)

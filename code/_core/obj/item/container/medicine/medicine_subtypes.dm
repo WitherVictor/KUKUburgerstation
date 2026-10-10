@@ -1,7 +1,7 @@
 /obj/item/container/healing/bandage
-	name = "bandages"
-	desc = "Stop the bleeding, and you stop death - or delay it, at least."
-	desc_extended = "Folks here believe that any affliction can be smothered in bandages, and any decently soft cloth can serve as one. Makes one wonder how people with such advanced medical knowledge even get sick at all."
+	name = "绷带"
+	desc = "止住出血，就能阻止死亡——至少能拖延一下。"
+	desc_extended = "这里的人相信，任何病痛都能用绷带裹好，任何足够柔软的布都能当绷带。真让人纳闷，掌握如此先进医学知识的人怎么还会生病。"
 	icon_state = "brutepack"
 	treatment_time_mul = 1
 	heal_brute = 50
@@ -19,9 +19,9 @@
 	amount = 3
 
 /obj/item/container/healing/bandage/advanced
-	name = "infused bandages (styptic powder)"
-	desc = "Allows wounds to recover further than simple cloth."
-	desc_extended = "Bandages infused with styptic power. Close wounds faster than normal bandages if pressed well against the skin."
+	name = "浸药绷带（止血粉）"
+	desc = "比普通布料更能促进伤口恢复。"
+	desc_extended = "添加了止血粉的绷带。紧贴皮肤按压时，能比普通绷带更快地闭合伤口。"
 
 	rarity = RARITY_UNCOMMON
 
@@ -30,9 +30,9 @@
 	reagents.add_reagent(/reagent/medicine/styptic_powder, reagents.volume_max)
 
 /obj/item/container/healing/ointment
-	name = "ointment"
-	desc = "Nothing like salving an itching burn."
-	desc_extended = "Applied topically to burns to heal the skin and relieve pain. Standard ointment bottles used to have Silver Sulfadiazine in them, but were deemed too expensive to keep buying in bulk."
+	name = "药膏"
+	desc = "没有什么比给发痒的烧伤处涂上药膏更舒服了。"
+	desc_extended = "涂抹在烧伤处，促进皮肤愈合并缓解疼痛。标准药膏曾含有磺胺嘧啶银，但因大批采购太贵而被取消了。"
 	icon_state = "ointment"
 	treatment_time_mul = 1
 	heal_burn = 50
@@ -44,9 +44,9 @@
 	amount = 3
 
 /obj/item/container/healing/ointment/advanced
-	name = "infused ointment (silver sulfadiazine)"
-	desc = "Sometimes you have to prepare your own medicine."
-	desc_extended = "Ointment whose gel has been mixed with Silver Sufadiazine.  Far more effective at both healing burnt skin and relieving pain."
+	name = "混药药膏（磺胺嘧啶银）"
+	desc = "有时你得自己配药。"
+	desc_extended = "混入磺胺嘧啶银的凝胶药膏，在治疗烧伤皮肤和缓解疼痛方面都有效得多。"
 
 	rarity = RARITY_UNCOMMON
 
@@ -56,9 +56,9 @@
 	reagents.add_reagent(/reagent/medicine/silver_sulfadiazine, reagents.volume_max)
 
 /obj/item/container/healing/trauma_kit
-	name = "trauma kit"
-	desc = "Each kit contains a set of bandaging equipment:bandages, splits, and antiseptics."
-	desc_extended = "Very useful for recovery after traumatic injury. Allows to stop bleeding, disinfect wounds, support injured joints and damaged tissue."
+	name = "创伤处理包"
+	desc = "每包含有一套包扎用品：绷带、夹板和消毒剂。"
+	desc_extended = "有助于创伤后的恢复，可用于止血、消毒伤口，以及支撑受伤关节和受损组织。"
 	icon_state = "traumakit"
 	treatment_time_mul = 1.25
 	heal_brute = 80
@@ -77,9 +77,9 @@
 	amount = 3
 
 /obj/item/container/healing/trauma_kit/advanced
-	name = "infused trauma kit (styptic powder)"
-	desc = "I knew something was missing."
-	desc_extended = "Trauma Kits with added styptic powder to the bandages and antiseptics, allowing for even better recovery."
+	name = "浸药创伤处理包（止血粉）"
+	desc = "我就知道少了点什么。"
+	desc_extended = "在绷带和消毒剂中加入止血粉的创伤处理包，能让伤势恢复得更好。"
 
 	value = 100
 
@@ -90,9 +90,9 @@
 	reagents.add_reagent(/reagent/medicine/styptic_powder, reagents.volume_max)
 
 /obj/item/container/healing/nanopaste
-	name = "nanopaste"
-	desc = "Nanomachines, son!"
-	desc_extended = "A tube of healing nanites that heals any mechanical limb of any brute and burn damage."
+	name = "纳米修复膏"
+	desc = "纳米机械，小子！"
+	desc_extended = "一管用于修复的纳米机械，可修复机械肢体受到的物理和灼烧伤害。"
 	icon_state = "nanopaste"
 	treatment_time_mul = 2
 	heal_brute = 80
@@ -123,9 +123,9 @@
 			O.broken = FALSE
 
 /obj/item/container/healing/bone_gel
-	name = "bone gel"
-	desc = "Oof ouch my bones."
-	desc_extended = "An advanced gel substance that encourages broken bone growth instantly when applied. Some tissue damage is a side effect."
+	name = "接骨凝胶"
+	desc = "哎哟，我的骨头。"
+	desc_extended = "一种先进凝胶，涂抹后能立即促进断骨生长，副作用是造成一些组织损伤。"
 	icon_state = "bone_gel"
 	treatment_time_mul = 4
 	heal_brute = 0
@@ -158,9 +158,9 @@
 
 
 /obj/item/container/healing/burn_kit
-	name = "burn kit"
-	desc = "Each kit contains a set of ointments and antiseptics."
-	desc_extended = "The major problems with burns aren't as much the burns themselves, but the infections. These kits have antiseptics, lowering infection. Of course, the best way to avoid infection is still to be dead."
+	name = "烧伤处理包"
+	desc = "每包含有一套药膏和消毒剂。"
+	desc_extended = "烧伤的大麻烦往往是感染。这些处理包含有消毒剂，可以减少感染。当然，避免感染最好的办法还是死掉。"
 	icon_state = "burnkit"
 	treatment_time_mul = 1.25
 	heal_burn = 80
@@ -178,9 +178,9 @@
 	amount = 3
 
 /obj/item/container/healing/burn_kit/advanced
-	name = "infused burn kit (silver sulfadiazine)"
-	desc = "I can't believe they still cheaped out on the silver sulfadiazine."
-	desc_extended = "Burn kits whose contents have been infused with Silver Sulfadiazine. A great lesson in how Capitalism will never provide to your needs."
+	name = "浸药烧伤处理包（磺胺嘧啶银）"
+	desc = "真不敢相信，他们居然连磺胺嘧啶银都要省。"
+	desc_extended = "用品中加入了磺胺嘧啶银的烧伤处理包。生动地教会你：资本主义永远满足不了你的需求。"
 
 	value = 100
 
@@ -191,9 +191,9 @@
 	reagents.add_reagent(/reagent/medicine/silver_sulfadiazine, reagents.volume_max)
 
 /obj/item/container/healing/cable
-	name = "cable"
-	desc = "I prefer satellite."
-	desc_extended = "Cable for fixing robotic limbs. Use to replace burnt wiring on prosthetics."
+	name = "电缆"
+	desc = "比起有线，我更喜欢卫星。"
+	desc_extended = "用于修理机械肢体的电缆，可以替换义肢中烧毁的线路。"
 	icon_state = "cable"
 	treatment_time_mul = 1.25
 	heal_burn = 70
@@ -210,9 +210,9 @@
 	amount = 5
 
 /obj/item/container/healing/patch
-	name = "medical patch"
-	desc = "For when you can't be bothered to use a syringe."
-	desc_extended = "Patches like these can't be used to cover wounds on their own, but can administer a great quantity of medicines really fast. Of course, giving too much medicines can be a way to speed up death rather than delay it, so be careful."
+	name = "医用贴片"
+	desc = "懒得用注射器时的选择。"
+	desc_extended = "这种贴片本身不能包扎伤口，但能迅速给予大量药物。当然，用药过量可能加速死亡，所以要小心。"
 	icon_state = "patch"
 	treatment_time_mul = 0.5
 	amount_max = 3
@@ -222,9 +222,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/container/healing/patch/brute
-	name = "brute patch (Styptic Powder)"
-	desc = "For when you can't be bothered to use a syringe."
-	desc_extended = "Patches like these can't be used to cover wounds on their own, but can administer a great quantity of medicines really fast. Of course, giving too much medicines can be a way to speed up death rather than delay it, so be careful."
+	name = "外伤贴片（止血粉）"
+	desc = "懒得用注射器时的选择。"
+	desc_extended = "这种贴片本身不能包扎伤口，但能迅速给予大量药物。当然，用药过量可能加速死亡，所以要小心。"
 	icon_state = "patch_brute"
 
 /obj/item/container/healing/patch/brute/Generate()
@@ -232,9 +232,9 @@
 	reagents.add_reagent(/reagent/medicine/styptic_powder, reagents.volume_max)
 
 /obj/item/container/healing/patch/burn
-	name = "burn patch (Silver Sulfadiazine)"
-	desc = "For when you can't be bothered to use a syringe."
-	desc_extended = "Patches like these can't be used to cover wounds on their own, but can administer a great quantity of medicines really fast. Of course, giving too much medicines can be a way to speed up death rather than delay it, so be careful."
+	name = "烧伤贴片（磺胺嘧啶银）"
+	desc = "懒得用注射器时的选择。"
+	desc_extended = "这种贴片本身不能包扎伤口，但能迅速给予大量药物。当然，用药过量可能加速死亡，所以要小心。"
 	icon_state = "patch_burn"
 
 /obj/item/container/healing/patch/burn/Generate()
@@ -242,9 +242,9 @@
 	reagents.add_reagent(/reagent/medicine/silver_sulfadiazine, reagents.volume_max)
 
 /obj/item/container/healing/patch/synthflesh
-	name = "regeneration patch (Synthflesh)"
-	desc = "For when you can't be bothered to use a syringe."
-	desc_extended = "Patches like these can't be used to cover wounds on their own, but can administer a great quantity of medicines really fast. Of course, giving too much medicines can be a way to speed up death rather than delay it, so be careful."
+	name = "再生贴片（合成血肉）"
+	desc = "懒得用注射器时的选择。"
+	desc_extended = "这种贴片本身不能包扎伤口，但能迅速给予大量药物。当然，用药过量可能加速死亡，所以要小心。"
 	icon_state = "patch"
 
 /obj/item/container/healing/patch/synthflesh/Generate()
@@ -252,9 +252,9 @@
 	reagents.add_reagent(/reagent/medicine/synthflesh, reagents.volume_max)
 
 /obj/item/container/healing/gauze
-	name = "gauze"
-	desc = "Stop the bleeding. And that's it."
-	desc_extended = "Folks here believe that any affliction can be smothered in bandages, and any decently soft cloth can serve as one. Makes one wonder how people with such advanced medical knowledge even get sick at all."
+	name = "纱布"
+	desc = "止血。仅此而已。"
+	desc_extended = "这里的人相信，任何病痛都能用绷带裹好，任何足够柔软的布都能当绷带。真让人纳闷，掌握如此先进医学知识的人怎么还会生病。"
 	icon_state = "gauze"
 	treatment_time_mul = 1
 	heal_brute = 0

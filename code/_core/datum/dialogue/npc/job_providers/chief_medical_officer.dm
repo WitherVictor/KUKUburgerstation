@@ -6,36 +6,36 @@
 	. = list()
 
 	.["hello"] = list(
-		"Welcome to the Medical Department. Due to staffing shortages, we're considered 99 percent self serve, and we'll offer a #1 to anyone who is qualified to be a #2.",
+		"欢迎来到医疗部。由于人手不足，这里基本上有百分之九十九的事情需要自助。只要有资格当#2，我们就愿意提供#1。",
 		"job",
 		"medical doctor"
 	)
 
 	.["job"] = list(
-		"No one wants to be a #1 these days. It's all about killing or blowing shit up. Internal research suggests that being a #1 has too many requirements, such as a high school diploma, so we're doing without them entirely. Become one today!",
+		"现在没人想当#1，人人都只想着杀人放火、炸个稀巴烂。内部研究认为，当#1的门槛太多，比如要有高中毕业证，所以我们干脆把要求全取消了。今天就来入职吧！",
 		"medical doctor"
 	)
 
 	if(P.job == /job/medical)
 		.["medical doctor"] = list(
-			"I sometimes forget this too, but you're already a #1.",
+			"我有时候也会忘，不过你已经是#1了。",
 			"medical doctor"
 		)
 	else
 		.["medical doctor"] = list(
-			"The only requirement to becoming a #1 is your consent. Do you consent to becoming a #1? You basically gain income for treating people, so that's cool.NEWLINE#2NEWLINE#3",
+			"成为#1的唯一要求就是你本人同意。你愿意当#1吗？简单说，给人治病就能赚钱，挺不错的。NEWLINE#2NEWLINE#3",
 			"medical doctor",
 			"*Yes, become a medical doctor.",
 			"*No, do not become a medical doctor."
 		)
 
 	.["*Yes, become a medical doctor."] = list(
-		"By the powers vested in me, you are now officially a #1. Congrats, now go heal people.",
+		"根据授予我的职权，你现在正式成为#1了。恭喜，去治病救人吧。",
 		"medical doctor"
 	)
 
 	.["*No, do not become a medical doctor."] = list(
-		"Suit yourself. The #1 still stands.",
+		"随你。这个#1仍为你敞开。",
 		"job"
 	)
 

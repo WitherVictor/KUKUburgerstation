@@ -57,9 +57,10 @@
 
 	var/list/formatted_list = list()
 	for(var/r_name in name_to_amount)
-		formatted_list += "[name_to_amount[r_name]] units of [r_name]"
+		formatted_list += "[name_to_amount[r_name]]单位[r_name]"
 
-	return "It contains [english_list(formatted_list)]. The temperature reads [average_temperature] kelvin."
+	var/contents_description = length(formatted_list) ? "其中含有[english_list(formatted_list,"无内容物","、","和")]。" : "其中没有内容物。"
+	return "[contents_description]温度为[average_temperature]开尔文。"
 
 /reagent_container/New(var/atom/desired_owner,var/desired_volume_max)
 
@@ -370,7 +371,7 @@
 		var/difference = volume_current - volume_max
 		var/turf/T = get_turf(owner)
 		if(T)
-			owner.visible_message(span("warning","\The [owner.name] overflows!"))
+			owner.visible_message(span("warning","[owner.name]溢出了！"))
 			src.splash(activator,T,difference)
 		else
 			remove_reagents(difference)
@@ -635,7 +636,7 @@
 
 		if(src.contains_lethal && L2 && L1 != L2)
 			if(!allow_hostile_action(L1.loyalty_tag,L2))
-				L1.to_chat(span("warning","Your loyalty tag prevents you from giving lethal reagents to your allies!"))
+				L1.to_chat(span("warning","你的忠诚标记阻止你向友军给予致命药剂！"))
 				return 0
 
 	var/total_amount_transfered = 0
@@ -698,26 +699,26 @@
 		var/flavor_text
 		switch(v)
 			if(0.05 to 0.1)
-				flavor_text = "a hint of [k]"
+				flavor_text = "一丝[k]"
 			if(0.1 to 0.25)
-				flavor_text = "a little bit of [k]"
+				flavor_text = "少许[k]"
 			if(0.25 to 1)
 				flavor_text = k
 			if(1 to 2)
-				flavor_text = "a strong amount of [k]"
+				flavor_text = "浓烈的[k]"
 			if(2 to INFINITY)
-				flavor_text = "an overwhelming amount of [k]"
+				flavor_text = "极其浓烈的[k]"
 		if(flavor_text)
 			english_flavor_profile += flavor_text
 
 
-	return list(english_list(english_flavor_profile),flavor_flags,flavor_count)
+	return list(english_list(english_flavor_profile,"淡淡的味道","、","和"),flavor_flags,flavor_count)
 
 
 /reagent_container/proc/splash(var/mob/activator,var/atom/target,var/splash_amount = volume_current,var/silent = FALSE,var/strength_mod=1)
 
 	if(!splash_amount || !volume_current)
-		if(!silent) activator?.to_chat(span("warning","There is nothing to splash!"))
+		if(!silent) activator?.to_chat(span("warning","没有东西可泼洒！"))
 		return FALSE
 
 	if(!target)
@@ -739,7 +740,7 @@
 			var/reagent/R = REAGENT(r_id)
 			var/volume_to_splash = -source.add_reagent(R.type,-source.stored_reagents[r_id] * (splash_amount/source.volume_current),TNULL,FALSE,FALSE)
 			R.on_splash(source,activator,src,volume_to_splash,strength_mod)
-		if(!silent) activator?.visible_message(span("danger","\The [activator] splashes the contents of \the [source.owner.name] on \the [src.name]!"),span("warning","You splash the contents of \the [source.owner.name] on \the [src.name]!"))
+		if(!silent) activator?.visible_message(span("danger","[activator]将[source.owner.name]中的液体泼到了[src.name]上！"),span("warning","你将[source.owner.name]中的液体泼到了[src.name]上！"))
 		source.update_container(activator)
 		source.process_recipes(activator)
 		return TRUE
@@ -761,18 +762,20 @@
 		CRASH("[src.get_debug_name()] had no owner!")
 
 	var/consume_verb = owner.get_consume_verb()
+	var/list/consume_verb_display_names = list("eat" = "吃下","drink" = "喝下","swallow" = "吞下","drink out of" = "饮用","take a bite out of" = "咬下")
+	consume_verb = consume_verb_display_names[consume_verb] ? consume_verb_display_names[consume_verb] : "食用"
 	var/consume_sound = owner.get_consume_sound()
 
 	if(!length(stored_reagents) || volume_current <= 0)
-		activator.to_chat(span("warning","There is nothing left of \the [src.owner.name] to [consume_verb]!"))
+		activator.to_chat(span("warning","[src.owner.name]中已经没有可食用或饮用的东西了！"))
 		return FALSE
 
 	if(is_advanced(consumer))
 		var/mob/living/advanced/A = consumer
 		if(!A.labeled_organs[BODY_STOMACH])
 			if(activator && activator != consumer)
-				activator.to_chat(span("warning","You don't know how they can [consume_verb] \the [src.owner.name]!"))
-			consumer.to_chat(span("warning","You don't know how you can [consume_verb] \the [src]!"))
+				activator.to_chat(span("warning","你不知道对方该怎么[consume_verb][src.owner.name]！"))
+			consumer.to_chat(span("warning","你不知道自己该怎么[consume_verb][src.owner.name]！"))
 			return FALSE
 
 		var/list/flavor_data = get_flavor()
@@ -796,18 +799,18 @@
 		if(final_flavor_text && (A.last_flavor_time + SECONDS_TO_DECISECONDS(3) <= world.time || A.last_flavor != final_flavor_text) )
 			A.last_flavor = final_flavor_text
 			A.last_flavor_time = world.time
-			final_flavor_text = "You taste [final_flavor_text]."
+			final_flavor_text = "你尝到了[final_flavor_text]。"
 			if(like_score >= 1)
-				final_flavor_text += " You like this taste."
+				final_flavor_text += "你喜欢这个味道。"
 			else if(like_score < 0)
-				final_flavor_text += " You hate this taste!"
+				final_flavor_text += "你讨厌这个味道！"
 		else
 			final_flavor_text = null
 
 		if(activator && activator != consumer)
-			consumer.visible_message(span("warning","\The [activator.name] forces \the [consumer.name] to [consume_verb] \the [src.owner.name]!"),span("danger","\The [activator.name] forces you to [consume_verb] the [src.owner.name]!"))
+			consumer.visible_message(span("warning","[activator.name]强迫[consumer.name][consume_verb][src.owner.name]！"),span("danger","[activator.name]强迫你[consume_verb][src.owner.name]！"))
 		else
-			consumer.visible_message(span("notice","\The [consumer.name] [consume_verb]s \the [src.owner.name]."),span("notice","You [consume_verb] \the [src.owner.name]."))
+			consumer.visible_message(span("notice","[consumer.name][consume_verb]了[src.owner.name]。"),span("notice","你[consume_verb]了[src.owner.name]。"))
 
 		if(consume_sound)
 			play_sound(consume_sound,get_turf(consumer),range_max=VIEW_RANGE*0.5)

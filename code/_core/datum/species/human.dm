@@ -1,6 +1,6 @@
 /species/human/
-	name = "Human"
-	desc = "Vanilla as fuck."
+	name = "人类"
+	desc = "普通得要命。"
 	id = "human"
 	flags_species = SPECIES_HUMAN
 

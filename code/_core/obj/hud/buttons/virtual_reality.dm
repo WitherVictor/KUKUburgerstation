@@ -6,7 +6,7 @@
 	. = ..()
 
 /obj/hud/button/virtual_reality/info
-	name = "view virtual reality information"
+	name = "查看虚拟现实信息"
 	icon_state = "question"
 	screen_loc = "CENTER-1,CENTER"
 
@@ -15,7 +15,7 @@
 	. = ..()
 
 /obj/hud/button/virtual_reality/enter
-	name = "enter reality pod"
+	name = "进入虚拟现实舱"
 	icon_state = "arrow"
 	screen_loc = "CENTER,CENTER"
 
@@ -24,7 +24,7 @@
 	. = ..()
 
 /obj/hud/button/virtual_reality/exit
-	name = "exit virtual reality pod"
+	name = "退出虚拟现实舱"
 	icon_state = "view_inventory"
 	screen_loc = "CENTER+1,CENTER"
 

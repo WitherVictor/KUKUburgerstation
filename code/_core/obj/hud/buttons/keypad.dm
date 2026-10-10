@@ -1,5 +1,5 @@
 /obj/hud/button/keypad
-	name = "keypad"
+	name = "数字键盘"
 
 	var/stored_keypad = 0
 
@@ -8,7 +8,7 @@
 	has_quick_function = FALSE
 
 /obj/hud/button/keypad/close
-	name = "close keypad"
+	name = "关闭数字键盘"
 	icon_state = "close_inventory"
 	screen_loc = "CENTER+3,CENTER+2"
 
@@ -24,7 +24,7 @@
 /obj/hud/button/keypad/top
 	icon_state = "keypad_top"
 	screen_loc = "CENTER+2,CENTER+2"
-	maptext = "<p align='right'>Hello</p>"
+	maptext = "<p align='right'>你好</p>"
 	maptext_y = 22
 	maptext_x = -2
 

@@ -1,6 +1,6 @@
 /objective/
-	var/name = "Objective Name"
-	var/desc = "Objective Description"
+	var/name = "任务目标名称"
+	var/desc = "任务目标说明"
 	var/list/atom/tracked_atoms = list()
 	var/completion_state = ACTIVE
 	var/credit_reward = 0
@@ -42,7 +42,7 @@
 			if(!P.client || P.loyalty_tag != "NanoTrasen")
 				continue
 			var/increased_currency = P.adjust_currency(credit_reward)
-			P.to_chat(span("notice","You've been given [increased_currency] credits for completing [name]."))
+			P.to_chat(span("notice","你完成了“[name]”，获得了[increased_currency]信用点。"))
 
 		credit_reward = 0
 
@@ -52,7 +52,7 @@
 			if(!P.client || P.loyalty_tag != "NanoTrasen")
 				continue
 			var/increased_currency = P.adjust_burgerbux(burgerbux_reward)
-			P.to_chat(span("notice","You've been given [increased_currency] burgerbux for completing [name]."))
+			P.to_chat(span("notice","你完成了“[name]”，获得了[increased_currency]汉堡币。"))
 
 		burgerbux_reward = 0
 
@@ -74,7 +74,8 @@
 		if(A2) . += A2
 
 /objective/proc/get_description()
-	return "[initial(desc)] ([completion_state])"
+	var/list/state_names = list(ACTIVE = "进行中",COMPLETED = "已完成",FAILED = "已失败",IMPOSSIBLE = "无法执行")
+	return "[initial(desc)]（[state_names[completion_state]]）"
 
 /objective/proc/update(var/update_gamemode = TRUE)
 

@@ -1,7 +1,7 @@
 /obj/hud/button/mood
-	name = "mood"
-	desc = "Mooooooooooooooood."
-	desc_extended = "An average indication of your mental state. Can be improved by eating and drinking healthy."
+	name = "心情"
+	desc = "心情啊啊啊啊啊啊。"
+	desc_extended = "总体反映你的精神状态。健康饮食可以改善心情。"
 	icon = 'icons/hud/mood.dmi'
 	icon_state = "100"
 	screen_loc = "RIGHT-1,CENTER"
@@ -43,4 +43,4 @@
 
 	. = ..()
 
-	. += "Your overall mood is [src.last_mood]%."
+	. += "你的总体心情为 [src.last_mood]%。"

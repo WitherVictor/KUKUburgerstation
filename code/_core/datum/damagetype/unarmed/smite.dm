@@ -1,6 +1,6 @@
 /damagetype/unarmed/smite
 
-	attack_verbs = list("smite")
+	attack_verbs = list("惩击")
 
 	hit_effect = /obj/effect/temp/impact/combat/claw
 

@@ -1,6 +1,6 @@
 /job/
-	var/name = "Job Name."
-	var/desc = "Job Description."
+	var/name = "岗位名称。"
+	var/desc = "岗位说明。"
 
 	var/passive_income = 0
 	var/passive_income_bonus = 0 //Per rank after 1

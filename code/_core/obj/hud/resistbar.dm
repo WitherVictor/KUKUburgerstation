@@ -1,5 +1,5 @@
 /obj/hud/resistbar
-	name = "resist bar"
+	name = "挣脱进度条"
 	icon = 'icons/hud/escape.dmi'
 	icon_state = "escape"
 

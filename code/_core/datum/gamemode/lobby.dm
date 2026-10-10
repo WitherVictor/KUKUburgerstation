@@ -1,6 +1,6 @@
 /gamemode/lobby
-	name = "Lobby"
-	desc = "The lobby gamemode. You shouldn't be seeing this."
+	name = "大厅"
+	desc = "大厅模式。你本不该看到这条信息。"
 	hidden = TRUE
 
 	round_time_next = 0

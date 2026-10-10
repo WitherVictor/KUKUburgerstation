@@ -1,6 +1,6 @@
 /obj/item/material/ingot
-	name = "ingot"
-	desc = "I am error."
+	name = "材料锭"
+	desc = "我是个错误。"
 
 	icon = 'icons/obj/item/material.dmi'
 	icon_state = "ingot"
@@ -13,11 +13,11 @@
 /obj/item/material/ingot/update_icon()
 	var/material/M = SSmaterials.all_materials[material_id]
 	if(!M)
-		name = "ERROR ingot"
+		name = "异常材料锭"
 		log_error("Warning! [src.get_debug_name()] had incorrect material type \"[material_id]\"!")
 	else
-		name = "[deunderscore(M.name)] ingot"
-		desc_extended = "An ingot of [deunderscore(M.name)]. Made by smelting raw ore or alloying."
+		name = "[M.display_name]锭"
+		desc_extended = "一块[M.display_name]锭，由原矿熔炼或合金加工而成。"
 		icon_state = "[M.icon_state_ingot]_[min(CEILING(amount/10,1),amount_max_icon)]"
 		color = M.color
 	return ..()

@@ -1,6 +1,6 @@
 /gamemode/mission
-	name = "Mission"
-	desc = "Complete a major mission before the Space Military arrives."
+	name = "任务模式"
+	desc = "在太空军抵达之前完成一项重大任务。"
 	hidden = FALSE
 
 	var/last_vote = 0
@@ -175,7 +175,7 @@
 		stage++
 		switch(stage)
 			if(1)
-				status_display_text = "GEAR"
+				status_display_text = "备装"
 				if(CONFIG("ENABLE_QUICKSTART", FALSE))
 					round_time_next = 1
 					allow_launch = TRUE
@@ -185,39 +185,39 @@
 				else
 					round_time_next = 6*60
 					announce(
-						"Central Command Mission Update",
-						"Prepare for Landfall",
-						"All landfall crew are ordered to gear up for planetside combat. Estimated time until shuttle functionality: 6 minutes.",
+						"中央指挥部任务更新",
+						"准备登陆",
+						"命令全体登陆船员准备地表作战装备。穿梭机预计将在六分钟后启用。",
 						sound_to_play = 'sound/voice/announcement/landfall_crew_6_minutes_shuttle.ogg'
 					)
 				CALLBACK("\ref[src]_add_objectives",SECONDS_TO_DECISECONDS(10),src,src::add_objectives()) //10 to 60 seconds.
 				CALLBACK("\ref[src]_announce_lore",rand(100,600),src,src::announce_lore()) //10 to 60 seconds.
 			if(2)
-				status_display_text = "PREP"
+				status_display_text = "准备"
 				round_time_next = 1*60
 				announce(
-					"Central Command Mission Update",
-					"Drop Pod Boarding",
-					"All landfall crew are ordered to proceed to the hanger bay and prep for drop pod launch. Shuttles will be allowed to launch in 1 minute.",
+					"中央指挥部任务更新",
+					"登上空降舱",
+					"命令全体登陆船员前往机库，做好空降舱发射准备。一分钟后将准许穿梭机起飞。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_1_minute_shuttle.ogg'
 				)
 			if(3)
-				status_display_text = "RDY"
+				status_display_text = "就绪"
 				round_time_next = 10
 				allow_launch = TRUE
 				SShorde.enable = TRUE
 				SSevents.enable = TRUE
 				announce(
-					"Central Command Mission Update",
-					"Mission is a Go",
-					"Shuttles are prepped and ready to depart into the Area of Operations. All crew are cleared to launch.",
+					"中央指挥部任务更新",
+					"行动开始",
+					"穿梭机已准备就绪，可以前往作战区域。准许全体船员出发。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_0_minutes_shuttle.ogg'
 				)
 			if(4)
-				status_display_text = "WAR"
+				status_display_text = "作战"
 				round_time_next = 60*60
 			if(5 to INFINITY)
-				status_display_text = "VOTE"
+				status_display_text = "投票"
 				round_time_next = -1
 				if(allow_continue)
 					world.end()
@@ -231,7 +231,7 @@
 		status_display_time = null
 
 	if(status_display_text && status_display_time)
-		set_status_display("mission","[status_display_text ? status_display_text : "HI"]\n[status_display_time ? status_display_time : "THERE"]")
+		set_status_display("mission","[status_display_text ? status_display_text : "你好"]\n[status_display_time ? status_display_time : "欢迎"]")
 
 	if(stage == 4 && length(crew_active_objectives) <= objectives_max)
 		if(length(objectives_left))

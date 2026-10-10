@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<style>
 			body {
 				background-image:url('tile.png');
@@ -49,36 +50,36 @@
 		</style>
 	</head>
 	<body>
-		<h1>Class Creation</h1>
+		<h1>职业创建</h1>
 		<hr width='50%'>
 		<table id='formatting' border='0px' width='100%'>
 			<tr>
 				<th>
-					<h2>Stats</h2>
+					<h2>数值</h2>
 					<table id='stat_table'>
-						<tr><th onmouseover="set_helper_text('There is only one race: NASCAR.')">Race:</th><th>Human</th></tr>
-						<tr><th onmouseover="set_helper_text('The amount of karma your character has. The higher your karma, the more good you appear. The lower your karma, the more evil you appear. Karma can affect your ability to cast certain spells and use certain items.')">Karma:</th><th>1000</th></tr>
-						<tr><th onmouseover="set_helper_text('The amount of health your character has. If this reaches 0, you will die.')">Health:</th><th id='health'>100</th></tr>
-						<tr><th onmouseover="set_helper_text('The amount of stamina your character has. Stamina affects your ability to run, block, dodge, parry, attack, and perform actions.')">Stamina:</th><th id='stamina'>100</th></tr>
-						<tr><th onmouseover="set_helper_text('The amount of mana your character has. Mana affects your ability to cast spells, activate abilities, and use special artifacts.')">Mana:</th><th id='mana'>100</th></tr>
-						<tr><th onmouseover="set_helper_text('The amount of mana your character has. Mana affects your ability to cast spells, activate abilities, and use special artifacts.')">Job:</th><th id='job'>Assistant</th></tr>	
-						<tr><th></th><th><button class='extended' onclick='get_job()'>Recalculate</button></th></tr>
+						<tr><th onmouseover="set_helper_text('世上只有一种 race：NASCAR 赛车。')">种族：</th><th>人类</th></tr>
+						<tr><th onmouseover="set_helper_text('角色的善恶值。数值越高，你看起来就越善良；数值越低，就越邪恶。善恶值会影响某些法术的施放及某些物品的使用。')">善恶值：</th><th>1000</th></tr>
+						<tr><th onmouseover="set_helper_text('角色的生命值。降至 0 时，你就会死亡。')">生命值：</th><th id='health'>100</th></tr>
+						<tr><th onmouseover="set_helper_text('角色的体力。体力影响跑步、格挡、闪避、招架、攻击及其他行动。')">体力：</th><th id='stamina'>100</th></tr>
+						<tr><th onmouseover="set_helper_text('角色的法力。法力影响施放法术、激活能力及使用特殊神器。')">法力：</th><th id='mana'>100</th></tr>
+						<tr><th onmouseover="set_helper_text('角色所从事的工作岗位。')">岗位：</th><th id='job'>助理</th></tr>
+						<tr><th></th><th><button class='extended' onclick='get_job()'>重新计算</button></th></tr>
 					</table>
-					<h2>Attributes</h2>
+					<h2>属性</h2>
 					<table id='attribute_table'>
 					</table>
-					Points Left: <div id='attribute_left'>0</div>
+					剩余点数：<div id='attribute_left'>0</div>
 				</th>
 				<th>
-					<h2>Skills</h2>
+					<h2>技能</h2>
 					<table id='skill_table'>
 					</table>
-					Points Left: <div id='skill_left'>0</div>
+					剩余点数：<div id='skill_left'>0</div>
 				</th>
 			</tr>
 			<tr>
 				<th colspan=2>
-					<button class='extended' id="apply_button" onclick="finish_allocation()">Save</button>
+					<button class='extended' id="apply_button" onclick="finish_allocation()">保存</button>
 				</th>
 			</tr>
 		</table>
@@ -86,7 +87,7 @@
 		<table width='100%'>
 			<tr>
 				<th>
-					<div id="help_text">Help text.</div>
+					<div id="help_text">帮助说明。</div>
 				</th>
 			</tr>
 		</table>

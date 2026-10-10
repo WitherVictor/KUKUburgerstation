@@ -1,6 +1,6 @@
 /species/moth/
-	name = "Moth"
-	desc = "Still furry."
+	name = "蛾人"
+	desc = "还是个兽迷。"
 	id = "moth"
 	flags_species = SPECIES_MOTH
 	bite_size = 5

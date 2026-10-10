@@ -8,9 +8,9 @@
 #define MODE_CRATE "crate"
 
 /obj/structure/interactive/diverter/
-	name = "airjet diverter"
-	desc = "Pssssh."
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions."
+	name = "气流分拣器"
+	desc = "嘶——。"
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。"
 	icon = 'icons/obj/structure/conveyor.dmi'
 	icon_state = "diverter"
 
@@ -24,6 +24,7 @@
 	var/list/atom/movable/tracked_movables = list()
 
 	var/mode = MODE_NONE
+	var/list/mode_labels = list(MODE_NONE = "全部", MODE_VALUE = "价值", MODE_DENSITY = "实体", MODE_MATERIAL = "原材料", MODE_LIVING = "生物", MODE_WEAPON = "武器", MODE_BUTCHERABLE = "可屠宰生物", MODE_CRATE = "货箱")
 	var/value_threshold = 50
 
 	density = TRUE
@@ -38,24 +39,27 @@
 		var/obj/item/T = object
 		if(T.flags_tool & FLAG_TOOL_WRENCH)
 			if(anchored)
-				activator.to_chat(span("notice","You un-anchor the diverter."))
+				activator.to_chat(span("notice","你松开了分拣器的固定装置。"))
 				anchored = FALSE
 			else
-				activator.to_chat(span("notice","You anchor the diverter."))
+				activator.to_chat(span("notice","你固定了分拣器。"))
 				anchored = TRUE
 		else if(T.flags_tool & FLAG_TOOL_MULTITOOL && mode == MODE_VALUE) // Should I REALLY make it need a multitool?
-			value_threshold = clamp(input(activator, "What do you want to set the threshold to?","[src]",value_threshold),-1,50000)
-			activator.to_chat(span("notice","You set the threshold to [value_threshold]."))
+			value_threshold = clamp(input(activator, "请设置价值阈值。","[src]",value_threshold),-1,50000)
+			activator.to_chat(span("notice","你将价值阈值设为[value_threshold]。"))
 	else
 		if(activator.attack_flags & CONTROL_MOD_DISARM)
-			var/modes = list(MODE_NONE,MODE_VALUE,MODE_DENSITY,MODE_MATERIAL,MODE_LIVING,MODE_WEAPON,MODE_CRATE,MODE_BUTCHERABLE,"CANCEL")
-			var/whatmode = input(activator, "What do you want to set the mode to?","[src]",mode) as null|anything in modes
-			if(whatmode == null || whatmode == "CANCEL")
+			var/list/modes = list()
+			for(var/mode_value in mode_labels)
+				modes[mode_labels[mode_value]] = mode_value
+			modes["取消"] = "CANCEL"
+			var/whatmode = input(activator, "请选择分拣模式。","[src]",mode_labels[mode]) as null|anything in modes
+			if(whatmode == null || modes[whatmode] == "CANCEL")
 				return
-			mode = whatmode
-			name = "[initial(name)] ([mode])"
+			mode = modes[whatmode]
+			name = "[initial(name)]（[mode_labels[mode]]）"
 		else
-			activator.visible_message(span("notice","\The [activator.name] rotates \the [src.name]."),span("notice","You rotate \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]转动了[src.name]。"),span("notice","你转动了[src.name]。"))
 			set_dir(turn(dir,90))
 
 			update_sprite()
@@ -71,7 +75,7 @@
 
 /obj/structure/interactive/diverter/PostInitialize()
 	. = ..()
-	name = "[initial(name)] ([mode])"
+	name = "[initial(name)]（[mode_labels[mode]]）"
 	update_sprite()
 
 /obj/structure/interactive/diverter/update_icon()
@@ -137,34 +141,34 @@
 /obj/structure/interactive/diverter/get_examine_list(mob/examiner)
 	. = ..()
 	if(mode == MODE_VALUE)
-		. += div("notice","It's set to divert anything with a value equal or higher to [value_threshold].")
+		. += div("notice","当前会分拣价值不低于[value_threshold]信用点的物品。")
 
 /obj/structure/interactive/diverter/high_value
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one scans the value of the object and pushes it if it exceeds a certain amount."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会扫描物品价值，并推走价值达到指定阈值的物品。"
 	mode = MODE_VALUE
 
 /obj/structure/interactive/diverter/density
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one measures the density of the object."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会检测物体是否具有实体碰撞。"
 	mode = MODE_DENSITY
 
 /obj/structure/interactive/diverter/material
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one checks whether or not the object is a raw material."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会检测物体是否为原材料。"
 	mode = MODE_MATERIAL
 
 /obj/structure/interactive/diverter/living
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one checks whether or not the object is a living person or a creature, or is able to be revived."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会检测目标是否为活着或可复苏的人或生物。"
 	mode = MODE_LIVING
 
 /obj/structure/interactive/diverter/weapon
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one checks if it's a weapon."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会检测物体是否为武器。"
 	mode = MODE_WEAPON
 
 /obj/structure/interactive/diverter/butcherable
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one checks whether or not the object can be butchered for food."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会检测目标是否能屠宰成食材。"
 	mode = MODE_BUTCHERABLE
 
 /obj/structure/interactive/diverter/crate
-	desc_extended = "A special conveyor diverter that uses powerful jets of air to push objects off the conveyor belt based on the conditions. This one checks if it's a crate."
+	desc_extended = "一种特殊的传送带分拣设备，用强力气流将符合条件的物体推离传送带。这款会检测物体是否为货箱。"
 	mode = MODE_CRATE
 
 #undef MODE_NONE

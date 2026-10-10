@@ -1,6 +1,6 @@
 /species/diona/
-	name = "Dionae"
-	desc = "Fucking tree people."
+	name = "狄俄娜"
+	desc = "他妈的树人。"
 	id = "diona"
 	flags_species = SPECIES_DIONA
 

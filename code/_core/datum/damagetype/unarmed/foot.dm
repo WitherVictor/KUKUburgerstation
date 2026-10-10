@@ -1,6 +1,6 @@
 //Foot
 /damagetype/unarmed/foot/
-	attack_verbs = list("kick")
+	attack_verbs = list("踢击")
 
 	hit_effect = /obj/effect/temp/impact/combat/kick
 

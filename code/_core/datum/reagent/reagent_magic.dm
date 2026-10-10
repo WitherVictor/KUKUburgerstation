@@ -1,5 +1,5 @@
 /reagent/magic
-	name = "magic medicine"
+	name = "魔法药剂"
 /*
 /reagent/magic/stand_juice
 	name = "Stand Juice"

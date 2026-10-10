@@ -1,5 +1,5 @@
 /obj/hud/button/evade
-	name = "evade"
+	name = "规避"
 	desc = ""
 	desc_extended = ""
 	icon_state = "template"
@@ -37,7 +37,7 @@
 
 	charge_icon = clamp(charge_icon,0,9)
 
-	desc = "[charge_level] and [charge_icon]"
+	desc = "[charge_level] 与 [charge_icon]"
 
 	var/image/I = new/image(initial(icon),"[icon_state]_[charge_icon]")
 	I.alpha = charge_level >= 100 ? 255 : charge_level

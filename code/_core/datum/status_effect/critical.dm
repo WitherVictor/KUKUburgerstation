@@ -1,6 +1,6 @@
 /status_effect/critical
-	name = "Critical"
-	desc = "You're in critical condition!"
+	name = "濒危"
+	desc = "你正处于濒危状态！"
 	id = CRIT
 
 	default_magnitude = 100
@@ -15,8 +15,8 @@
 	return ..()
 
 /status_effect/paincrit
-	name = "Paincrit"
-	desc = "You're in pain!"
+	name = "疼痛休克"
+	desc = "你正承受着剧痛！"
 	id = PAINCRIT
 
 	default_magnitude = 100
@@ -30,8 +30,8 @@
 	return ..()
 
 /status_effect/stamcrit
-	name = "Stamcrit"
-	desc = "You're too tired!"
+	name = "精疲力竭"
+	desc = "你已经精疲力竭了！"
 	id = STAMCRIT
 
 	default_magnitude = 100

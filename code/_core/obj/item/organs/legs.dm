@@ -1,7 +1,7 @@
 /obj/item/organ/leg
-	name = "right leg"
+	name = "右腿"
 	id = BODY_LEG_RIGHT
-	desc = "An organ."
+	desc = "一个器官。"
 	icon_state = BODY_LEG_RIGHT
 	worn_layer = LAYER_MOB_LEGS
 
@@ -34,9 +34,9 @@
 	value = 0
 
 /obj/item/organ/leg/left
-	name = "left leg"
+	name = "左腿"
 	id = BODY_LEG_LEFT
-	desc = "An organ."
+	desc = "一个器官。"
 	icon_state = BODY_LEG_LEFT
 
 	hud_id = "body_leg_left"
@@ -49,7 +49,7 @@
 
 //Reptile
 /obj/item/organ/leg/reptile
-	name = "right reptile leg"
+	name = "原始蜥蜴人右腿"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
 
 	flags_organ = FLAG_ORGAN_BEAST_FEET
@@ -57,7 +57,7 @@
 	armor = /armor/reptile
 
 /obj/item/organ/leg/reptile/left
-	name = "left reptile leg"
+	name = "原始蜥蜴人左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -72,14 +72,14 @@
 
 //Reptile Advanced
 /obj/item/organ/leg/reptile_advanced
-	name = "right advanced reptile leg"
+	name = "蜥蜴人右腿"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
 
 	armor = /armor/reptile
 
 
 /obj/item/organ/leg/reptile_advanced/left
-	name = "left advanced reptile leg"
+	name = "蜥蜴人左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -95,7 +95,7 @@
 
 //Diona
 /obj/item/organ/leg/diona
-	name = "right diona leg"
+	name = "狄俄娜右腿"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 
 	enable_glow = TRUE
@@ -104,7 +104,7 @@
 	armor = /armor/diona
 
 /obj/item/organ/leg/diona/left
-	name = "left diona leg"
+	name = "狄俄娜左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -119,7 +119,7 @@
 
 //Cyborg
 /obj/item/organ/leg/cyborg
-	name = "right cyborg leg"
+	name = "半机械人右腿"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
 
 	armor = /armor/cyborg
@@ -127,7 +127,7 @@
 
 
 /obj/item/organ/leg/cyborg/left
-	name = "left cyborg leg"
+	name = "半机械人左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -141,7 +141,7 @@
 
 //Cyborg 2
 /obj/item/organ/leg/gopro
-	name = "right advanced cyborg leg"
+	name = "高级半机械人右腿"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
 
 	armor = /armor/cyborg
@@ -149,7 +149,7 @@
 
 
 /obj/item/organ/leg/gopro/left
-	name = "left advanced cyborg leg"
+	name = "高级半机械人左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -163,13 +163,13 @@
 
 
 /obj/item/organ/leg/beefman
-	name = "right beef leg"
+	name = "血肉人右腿"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
 
 	armor = /armor/beefman
 
 /obj/item/organ/leg/beefman/left
-	name = "left beef leg"
+	name = "血肉人左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -184,7 +184,7 @@
 
 //Cyborg
 /obj/item/organ/leg/skeleton
-	name = "right skeleton leg"
+	name = "骷髅右腿"
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
 
 	armor = /armor/skeleton
@@ -195,7 +195,7 @@
 
 
 /obj/item/organ/leg/skeleton/left
-	name = "left skeleton leg"
+	name = "骷髅左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -210,12 +210,12 @@
 
 //Cyborg
 /obj/item/organ/leg/monkey
-	name = "right monkey leg"
+	name = "猴子右腿"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
 
 
 /obj/item/organ/leg/monkey/left
-	name = "left monkey leg"
+	name = "猴子左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -230,13 +230,13 @@
 
 //goblin
 /obj/item/organ/leg/goblin
-	name = "right goblin leg"
+	name = "地精右腿"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
 
 	armor = /armor/goblin
 
 /obj/item/organ/leg/goblin/left
-	name = "left goblin leg"
+	name = "地精左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -250,12 +250,12 @@
 
 //Moth
 /obj/item/organ/leg/moth
-	name = "right moth leg"
+	name = "蛾人右腿"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
 
 
 /obj/item/organ/leg/moth/left
-	name = "left moth leg"
+	name = "蛾人左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -270,12 +270,12 @@
 
 
 /obj/item/organ/leg/golem
-	name = "right golem leg"
+	name = "魔像右腿"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
 
 
 /obj/item/organ/leg/golem/left
-	name = "left golem leg"
+	name = "魔像左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 
@@ -289,12 +289,12 @@
 
 
 /obj/item/organ/leg/abductor
-	name = "right abductor leg"
+	name = "绑架者右腿"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
 
 
 /obj/item/organ/leg/abductor/left
-	name = "left abductor leg"
+	name = "绑架者左腿"
 	id = BODY_LEG_LEFT
 	icon_state = BODY_LEG_LEFT
 

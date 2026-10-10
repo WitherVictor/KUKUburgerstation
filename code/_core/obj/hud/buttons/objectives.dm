@@ -1,7 +1,7 @@
 
 
 /obj/hud/button/objectives
-	name = "objectives"
+	name = "任务目标"
 	screen_loc = "RIGHT,BOTTOM+4"
 	maptext_width = TILE_SIZE*VIEW_RANGE
 	maptext_height = TILE_SIZE*VIEW_RANGE

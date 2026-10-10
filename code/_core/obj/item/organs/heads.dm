@@ -1,7 +1,7 @@
 /obj/item/organ/head
-	name = "head"
+	name = "头部"
 	id = BODY_HEAD
-	desc = "So no head?"
+	desc = "所以，没头了？"
 	icon_state = BODY_HEAD_MALE
 	worn_layer = LAYER_MOB_HEAD
 	inventories = list(
@@ -49,9 +49,9 @@
 
 //Reptile
 /obj/item/organ/head/reptile
-	name = "reptile head"
+	name = "原始蜥蜴人头部"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 	flags_organ = FLAG_ORGAN_BEAST_HEAD
 
 	armor = /armor/reptile
@@ -61,9 +61,9 @@
 
 //Reptile Advanced
 /obj/item/organ/head/reptile_advanced
-	name = "advanced reptile head"
+	name = "蜥蜴人头部"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 	flags_organ = FLAG_ORGAN_BEAST_HEAD
 
 	armor = /armor/reptile
@@ -74,10 +74,10 @@
 
 //Diona
 /obj/item/organ/head/diona
-	name = "diona head"
+	name = "狄俄娜头部"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 	icon_state = BODY_HEAD
-	desc = "An organ."
+	desc = "一个器官。"
 	flags_organ = FLAG_ORGAN_BEAST_HEAD
 
 	enable_glow = TRUE
@@ -88,18 +88,18 @@
 
 //cyborg
 /obj/item/organ/head/cyborg
-	name = "cyborg head"
+	name = "半机械人头部"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 //cyborg 2
 /obj/item/organ/head/gopro/
-	name = "advanced cyborg head"
+	name = "高级半机械人头部"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
@@ -107,18 +107,18 @@
 
 //beef
 /obj/item/organ/head/beefman
-	name = "beef head"
+	name = "血肉人头部"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/beefman
 
 
 //skeleton
 /obj/item/organ/head/skeleton
-	name = "skeleton head"
+	name = "骷髅头部"
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/skeleton
 
@@ -129,9 +129,9 @@
 
 //skeleton
 /obj/item/organ/head/monkey
-	name = "monkey head"
+	name = "猴子头部"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/head/monkey/female
 	icon_state = BODY_HEAD_FEMALE
@@ -139,9 +139,9 @@
 
 //skeleton
 /obj/item/organ/head/goblin
-	name = "goblin head"
+	name = "地精头部"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/goblin
 
@@ -150,19 +150,19 @@
 
 
 /obj/item/organ/head/moth
-	name = "moth head"
+	name = "蛾人头部"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/head/moth/female
 	icon_state = BODY_HEAD_FEMALE
 
 /obj/item/organ/head/golem
-	name = "golem head"
+	name = "魔像头部"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/head/abductor
-	name = "abductor head"
+	name = "绑架者头部"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
-	desc = "An organ."
+	desc = "一个器官。"

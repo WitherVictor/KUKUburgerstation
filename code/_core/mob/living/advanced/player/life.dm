@@ -3,7 +3,7 @@
 	if(. && ckey_last)
 		play_sound_target(pick('sound/ambient/death_1.ogg','sound/ambient/death_2.ogg','sound/ambient/death_3.ogg'),src,channel=SOUND_CHANNEL_MUSIC)
 		var/turf/T = get_turf(src)
-		notify_ghosts("[src.name] was killed by [english_list(attackers)]!",T)
+		notify_ghosts("[src.name]被[english_list(attackers,"未知攻击者","、","、")]杀死了！",T)
 
 /mob/living/advanced/player/post_death()
 	. = ..()
@@ -74,7 +74,7 @@
 		var/obj/hud/inventory/where_worn = astype(I.loc)
 		// We are in a space that is persistant and shouldnt be stolen from so its there when we respawn
 		if(where_worn?.ultra_persistant)
-			to_chat(span("danger","Your [I.name] was protected from gravestone collection."))
+			to_chat(span("danger","你的[I.name]受到保护，不会被收进墓碑。"))
 			continue
 		if(I.save_on_death)
 			continue

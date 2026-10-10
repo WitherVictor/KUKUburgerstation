@@ -1,7 +1,7 @@
 /obj/item/rcd
-	name = "rapid construction device"
-	desc = "Rapidly construct items."
-	desc_extended = "Useful for making complex structures fast. Requires a blueprint disk to be loaded."
+	name = "快速建造装置"
+	desc = "快速建造物品。"
+	desc_extended = "可快速建造复杂结构。需要先装入蓝图磁盘。"
 	icon = 'icons/obj/item/weapons/melee/tools/rcd.dmi'
 
 	var/obj/item/disk/rcd_disk
@@ -73,11 +73,11 @@
 
 		var/turf/T = get_turf(object)
 		if(!rcd_disk)
-			activator.to_chat(span("warning","ERROR: There is no construction disk loaded in \the [src.name]!"))
+			activator.to_chat(span("warning","错误：[src.name]中未装入建造磁盘！"))
 			return TRUE
 		var/list/data = rcd_disk.data
 		if(!data || !data["object"] || !data["cost"] || !ispath(data["object"]))
-			activator.to_chat(span("warning","ERROR: Invalid construction disk!"))
+			activator.to_chat(span("warning","错误：建造磁盘无效！"))
 			return TRUE
 
 		if(ispath(data["object"],/turf/) ? !T.can_construct_on(activator,/obj/structure/interactive/construction/girder/) : !T.can_construct_on(activator,data["object"]))
@@ -87,7 +87,7 @@
 		var/delay_time = 0
 
 		if(matter_cost && !spend_matter(matter_cost))
-			activator.to_chat(span("warning","You don't have enough matter to construct this! (You have [matter_current], [matter_cost] needed)."))
+			activator.to_chat(span("warning","建造材料不足！（现有[matter_current]，需要[matter_cost]。）"))
 			return TRUE
 
 		if(ispath(data["effect"]))
@@ -101,13 +101,13 @@
 		spawn(delay_time)
 			if(ispath(data["object"],/turf/))
 				T.change_turf(data["object"])
-				activator.to_chat(span("notice","You construct \a [T.name] with \the [src.name]."))
+				activator.to_chat(span("notice","你使用[src.name]建造了[T.name]。"))
 			else
 				var/atom/A = data["object"]
 				A = new A(T)
 				INITIALIZE(A)
 				FINALIZE(A)
-				activator.to_chat(span("notice","You construct \a [A.name] with \the [src.name]."))
+				activator.to_chat(span("notice","你使用[src.name]建造了[A.name]。"))
 
 		return TRUE
 
@@ -115,18 +115,18 @@
 
 /obj/item/rcd/proc/insert_disk(var/mob/activator,var/obj/item/disk/desired_disk,var/silent=FALSE)
 	if(rcd_disk)
-		if(activator && !silent) activator.to_chat(span("warning","There is already a [rcd_disk.name] installed in \the [src.name]!"))
+		if(activator && !silent) activator.to_chat(span("warning","[src.name]中已经装有[rcd_disk.name]！"))
 		return null
 	desired_disk.drop_item(src)
 	rcd_disk = desired_disk
-	if(activator && !silent) activator.visible_message(span("notice","\The [activator.name] inserts a disk into \the [src.name]."),span("notice","You insert \the [rcd_disk.name] into \the [src.name] and download the data onto the RCD."))
+	if(activator && !silent) activator.visible_message(span("notice","[activator.name]将一张磁盘插入了[src.name]。"),span("notice","你将[rcd_disk.name]插入[src.name]，把数据载入快速建造装置。"))
 	return rcd_disk
 
 /obj/item/rcd/proc/eject_disk(var/mob/activator,var/silent=FALSE)
 	if(!rcd_disk)
-		activator.to_chat(span("warning","There is no disk to eject from \the [src.name]!"))
+		activator.to_chat(span("warning","[src.name]中没有可弹出的磁盘！"))
 		return null
-	if(activator && !silent) activator.visible_message(span("notice","\The [activator.name] removes a disk from \the [src.name]."),span("notice","You remove \the [rcd_disk.name] from \the [src.name]."))
+	if(activator && !silent) activator.visible_message(span("notice","[activator.name]从[src.name]中取出了一张磁盘。"),span("notice","你从[src.name]中取出了[rcd_disk.name]。"))
 	rcd_disk.drop_item(get_turf(src))
 	. = rcd_disk
 	rcd_disk = null

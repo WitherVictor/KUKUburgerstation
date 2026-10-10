@@ -1,7 +1,7 @@
 /obj/item/container/simple/can
-	name = "generic soda can"
-	desc = "ERROR."
-	desc_extended = "Holds reagents."
+	name = "普通汽水罐"
+	desc = "错误。"
+	desc_extended = "用于盛装试剂。"
 	crafting_id = "soda_can"
 
 	icon = 'icons/obj/item/container/cup/cans_new.dmi'
@@ -25,7 +25,7 @@
 	INTERACT_CHECK
 	INTERACT_DELAY(1)
 
-	activator.visible_message(span("notice","\The [activator.name] opens \the [src.name]."),span("notice","You open \the [src.name]."))
+	activator.visible_message(span("notice","[activator.name]打开了[src.name]。"),span("notice","你打开了[src.name]。"))
 	//TODO: Pop sounds for certain objects.
 	open = TRUE
 	allow_reagent_transfer_to = TRUE
@@ -34,7 +34,7 @@
 	return TRUE
 
 /obj/item/container/simple/can/cola/
-	name = "\improper Space Cola"
+	name = "太空可乐"
 	icon_state = "cola"
 	value = 1
 
@@ -44,7 +44,7 @@
 	return ..()
 
 /obj/item/container/simple/can/grape_soda/
-	name = "\improper Starkist Grape Soda"
+	name = "星吻葡萄汽水"
 	icon_state = "grape_soda"
 	value = 1
 
@@ -54,7 +54,7 @@
 	return ..()
 
 /obj/item/container/simple/can/orange_soda/
-	name = "\improper Starkist Orange Soda"
+	name = "星吻橙味汽水"
 	icon_state = "orange_soda"
 	value = 1
 
@@ -64,7 +64,7 @@
 	return ..()
 
 /obj/item/container/simple/can/iced_tea/
-	name = "\improper Disk! Iced Tea"
+	name = "磁盘！冰茶"
 	icon_state = "iced_tea"
 	value = 1
 
@@ -74,7 +74,7 @@
 	return ..()
 
 /obj/item/container/simple/can/grey_bull/
-	name = "\improper Grey Bull"
+	name = "灰牛"
 	icon_state = "grey_bull"
 	reagents = /reagent_container/beaker/
 
@@ -88,7 +88,7 @@
 	return ..()
 
 /obj/item/container/simple/can/mountain_wind/
-	name = "\improper Space Mountain Wind"
+	name = "太空山风"
 	icon_state = "mountain_wind"
 	value = 1
 
@@ -98,7 +98,7 @@
 	return ..()
 
 /obj/item/container/simple/can/dr_gibb
-	name = "\improper Dr. Gibb"
+	name = "吉布博士"
 	icon_state = "dr_gibb"
 	value = 1
 
@@ -108,7 +108,7 @@
 	return ..()
 
 /obj/item/container/simple/can/dr_gibb/explosive
-	name = "Dr. Gibbs"
+	name = "吉布斯博士"
 	var/explosive = TRUE
 	value = 300
 
@@ -119,7 +119,7 @@
 	. = ..()
 
 	if(explosive)
-		. += div("danger","Wait, what the fuck? There is an explosive charge connected to the tab!")
+		. += div("danger","等等，什么鬼？拉环上连着炸药！")
 
 
 /obj/item/container/simple/can/dr_gibb/explosive/click_self(var/mob/activator,location,control,params)
@@ -129,7 +129,7 @@
 	if(. && explosive && open && is_living(activator))
 		var/turf/T = get_turf(src)
 		if(T)
-			T.visible_message(span("danger","You hear a mechanical click when you open the tab... oh fu-"))
+			T.visible_message(span("danger","拉开拉环时，你听到一声机械轻响……哦，操——"))
 			var/mob/living/L = activator
 			explode(T,3,activator,src,L.loyalty_tag)
 			explosive = FALSE
@@ -144,7 +144,7 @@
 	LOADVAR("explosive")
 
 /obj/item/container/simple/can/space_up/
-	name = "\improper Space Up!"
+	name = "太空七喜！"
 	icon_state = "space_up"
 	value = 1
 

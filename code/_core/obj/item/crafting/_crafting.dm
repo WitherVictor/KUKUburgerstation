@@ -1,7 +1,7 @@
 /obj/item/crafting_bench/
-	name = "crafting table"
-	desc = "this is just like that one game wher you uhhhhhhh uuuuummmmm"
-	desc_extended = "This is a crafting bench item path. You shouldn't be seeing this."
+	name = "制作台"
+	desc = "这就像那个游戏里……呃……嗯……的东西。"
+	desc_extended = "这是制作台的基础类型，你不应该看到它。"
 	inventories = list(
 		/obj/hud/inventory/crafting/slotA1,
 		/obj/hud/inventory/crafting/slotA2,
@@ -131,6 +131,6 @@
 
 			return I
 
-	activator.to_chat(span("warning","You fail to craft anything..."))
+	activator.to_chat(span("warning","你没能制作出任何东西……"))
 
 	return FALSE

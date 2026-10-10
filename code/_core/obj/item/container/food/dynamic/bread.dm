@@ -1,5 +1,5 @@
 /obj/item/container/edible/dynamic/bread
-	name = "dough"
+	name = "面团"
 	icon = 'icons/obj/item/consumable/food/dynamic_bread.dmi'
 	icon_state = "dough_ball"
 	crafting_id = "dough"
@@ -36,7 +36,7 @@
 			raw_icon_state = "dough_ball"
 			cooked_icon_state = "bread"
 
-		activator.to_chat(span("notice","You reshape \the [src.name]."))
+		activator.to_chat(span("notice","你重新捏好了[src.name]。"))
 
 	update_sprite()
 
@@ -54,11 +54,11 @@
 			if(amount_to_transfer <= 0)
 				if(is_living(activator))
 					var/mob/living/L = activator
-					L.to_chat(span("warning","You can't add any more dough to \the [B.name]!"))
+					L.to_chat(span("warning","你无法再往[B.name]里添加面团了！"))
 				return TRUE
 			if(is_living(activator))
 				var/mob/living/L = activator
-				L.visible_message(span("notice","\The [activator.name] adds \the [name] to \the [B.name]."),span("notice","You add \the [name] to \the [B.name]."))
+				L.visible_message(span("notice","[activator.name]将[name]揉进了[B.name]。"),span("notice","你将[name]揉进了[B.name]。"))
 			reagents.transfer_reagents_to(B.reagents,amount_to_transfer)
 			if(reagents.volume_current <= 0) qdel(src)
 			return TRUE
@@ -76,7 +76,7 @@
 				if(pieces <= 1 || original_volume < pieces)
 					if(is_living(attacker))
 						var/mob/living/L = attacker
-						L.to_chat(span("warning","There isn't enough dough in \the [src.name] to cut!"))
+						L.to_chat(span("warning","[src.name]的面团太少，无法继续切分！"))
 					return FALSE
 				raw_icon_state = "dough_slice"
 				var/turf/T = get_turf(src)
@@ -94,7 +94,7 @@
 				update_sprite()
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.visible_message(span("notice","\The [L.name] cuts \the [src.name] into several pieces."),span("notice","You cut \the [src.name] into [pieces] pieces."))
+					L.visible_message(span("notice","[L.name]将[src.name]切成了几块。"),span("notice","你将[src.name]切成了[pieces]块。"))
 
 			else if(raw_icon_state == "dough_ball")
 				if(original_volume > 10)
@@ -108,11 +108,11 @@
 					update_sprite()
 					if(is_living(attacker))
 						var/mob/living/L = attacker
-						L.visible_message(span("notice","\The [L.name] cuts some dough from \the [src.name]."),span("notice","You cut some dough from \the [src.name]."))
+						L.visible_message(span("notice","[L.name]从[src.name]上切下了一些面团。"),span("notice","你从[src.name]上切下了一些面团。"))
 				else
 					if(is_living(attacker))
 						var/mob/living/L = attacker
-						L.to_chat(span("warning","There isn't enough dough in \the [src.name] to cut!"))
+						L.to_chat(span("warning","[src.name]的面团太少，无法继续切分！"))
 
 		else if(icon_state == "bun_whole") //It's cooked, and a bun.
 			var/obj/item/container/edible/sandwich/burger/B = new(get_turf(src))
@@ -125,7 +125,7 @@
 			cooked_icon_state = "bun_top"
 			if(is_living(attacker))
 				var/mob/living/L = attacker
-				L.visible_message(span("notice","\The [L.name] cuts \the [src.name] in half."),span("notice","You cut \the [src.name] into two halves."))
+				L.visible_message(span("notice","[L.name]将[src.name]切成了两半。"),span("notice","你将[src.name]切成了两半。"))
 			update_sprite()
 			FINALIZE(B)
 			B.update_sprite()
@@ -143,7 +143,7 @@
 		if(has_prefix(icon_state,"dough"))
 			if(is_living(attacker))
 				var/mob/living/L = attacker
-				L.visible_message(span("notice","\The [L.name] flattens \the [src.name]."),span("notice","You flatten \the [src.name]."))
+				L.visible_message(span("notice","[L.name]压平了[src.name]。"),span("notice","你压平了[src.name]。"))
 			var/obj/item/container/edible/dynamic/pizza/P = new(get_turf(src))
 			INITIALIZE(P)
 			reagents.transfer_reagents_to(P.reagents,reagents.volume_current)
@@ -182,7 +182,7 @@
 	var/best_bread_reagent_amount
 
 	var/wetness = 0
-	var/wetness_prefix = "perfect"
+	var/wetness_prefix = "完美的"
 
 	var/cooked_percent = 0
 
@@ -210,29 +210,29 @@
 
 		switch(wetness)
 			if(-INFINITY to -9)
-				wetness_prefix = "dry"
+				wetness_prefix = "干燥的"
 			if(11 to INFINITY)
-				wetness_prefix = "moist"
+				wetness_prefix = "湿润的"
 
 		if(best_bread_reagent_type)
 			var/reagent/R = REAGENT(best_bread_reagent_type)
-			name = "[wetness_prefix] [R.name]"
+			name = "[wetness_prefix][R.name]"
 		else
-			name = "[wetness_prefix] mystery bread"
+			name = "[wetness_prefix]神秘面包"
 
 	else //It's dough
 
 		switch(wetness)
 			if(-INFINITY to -9)
-				wetness_prefix = "dry"
+				wetness_prefix = "干燥的"
 			if(11 to INFINITY)
-				wetness_prefix = "wet"
+				wetness_prefix = "湿漉漉的"
 
 		if(best_dough_reagent_type)
 			var/reagent/R = REAGENT(best_dough_reagent_type)
-			name = "[wetness_prefix] [R.name]"
+			name = "[wetness_prefix][R.name]"
 		else
-			name = "[wetness_prefix] mystery dough"
+			name = "[wetness_prefix]神秘面团"
 
 	if(reagents.volume_current < 20 && cooked_icon_state == "bread_whole")
 		cooked_icon_state = "bun_whole"

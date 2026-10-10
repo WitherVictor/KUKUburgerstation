@@ -1,6 +1,6 @@
 /status_effect/confused
-	name = "Confused"
-	desc = "You're confused!"
+	name = "混乱"
+	desc = "你陷入了混乱！"
 	id = CONFUSED
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(30)

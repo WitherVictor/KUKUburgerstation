@@ -1,7 +1,7 @@
 /obj/item/container/edible/supermatter_cheese
-	name = "supermatter slice"
-	desc = "Huh. Kind of looks like a slice of cheese..."
-	desc_extended = "A thin crystaline slice of supermatter. NanoTrasen recommended that you do not consume this."
+	name = "超物质薄片"
+	desc = "嗯，看着有点像一片奶酪……"
+	desc_extended = "一片薄薄的超物质晶体。纳米传讯建议你不要食用。"
 
 	icon = 'icons/obj/item/consumable/food/cheese.dmi'
 	icon_state = "supermatter"

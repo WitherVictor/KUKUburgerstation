@@ -39,10 +39,10 @@ SUBSYSTEM_DEF(tips)
 
 /subsystem/tips/on_life()
 	if(length(stored_jokes) && prob(1))
-		broadcast_to_clients(span("bot","TRU FACT: [pick(stored_jokes)]"))
+		broadcast_to_clients(span("bot","千真万确：[pick(stored_jokes)]"))
 	else if(length(stored_tips) && prob(80))
-		broadcast_to_clients(span("bot","Tip: [pick(stored_tips)]"))
+		broadcast_to_clients(span("bot","提示：[pick(stored_tips)]"))
 	else if(length(stored_facts))
-		broadcast_to_clients(span("bot","Fun Fact: [pick(stored_facts)]"))
+		broadcast_to_clients(span("bot","趣闻：[pick(stored_facts)]"))
 	return TRUE
 

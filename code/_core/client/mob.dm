@@ -96,7 +96,7 @@
 
 	U.loaded_data = U.load_json_data_from_id(file_num)
 	U.loaded_data["id"] = file_num
-	to_chat(span("notice","Successfully loaded character [U.loaded_data["name"]]."))
+	to_chat(span("notice","已成功载入角色[U.loaded_data["name"]]。"))
 
 	var/turf/T = length(world_spawnpoints) ? pick(world_spawnpoints) : FALLBACK_TURF
 

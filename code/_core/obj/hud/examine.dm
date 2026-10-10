@@ -1,5 +1,5 @@
 /obj/hud/examine
-	name = "examine effect"
+	name = "查看效果"
 
 	icon = 'icons/hud/hud.dmi'
 	icon_state = "none"
@@ -14,7 +14,7 @@
 
 	user_colors = FALSE
 
-	maptext = "<center>Nothing</center>"
+	maptext = "<center>无</center>"
 	maptext_width = TILE_SIZE*5
 	maptext_height = TILE_SIZE*2
 

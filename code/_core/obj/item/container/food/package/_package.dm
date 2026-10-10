@@ -1,7 +1,7 @@
 /obj/item/container/edible/package
-	name = "packaged food"
-	desc = "Edible reagent that you can grab with a hand."
-	desc_extended = "Edible."
+	name = "包装食品"
+	desc = "能拿在手里的可食用物质。"
+	desc_extended = "可以食用。"
 
 	scale_sprite = FALSE
 
@@ -42,7 +42,7 @@
 /obj/item/container/edible/package/feed(var/mob/activator,var/mob/living/target)
 
 	if(packaging)
-		activator.to_chat(span("warning","You must unwrap \the [src.name] before eating it!"))
+		activator.to_chat(span("warning","你得先拆开[src.name]的包装才能吃！"))
 		return FALSE
 
 	return ..()
@@ -52,7 +52,7 @@
 
 	var/obj/item/trash/T = create_packaging(activator)
 
-	activator.visible_message(span("notice","\The [activator.name] unwraps \the [src.name]."),span("notice","You unwrap \the [src.name]."))
+	activator.visible_message(span("notice","[activator.name]拆开了[src.name]的包装。"),span("notice","你拆开了[src.name]的包装。"))
 
 	if(I)
 		I.add_object(T)

@@ -1,6 +1,6 @@
 /obj/hud/button/research/board
-	name = "research"
-	desc = "Yes, this is research."
+	name = "科研"
+	desc = "没错，这就是科研。"
 
 	//icon = 'icons/hud/game_border.dmi'
 	icon_state = "none"
@@ -46,7 +46,7 @@
 			init_y++
 			if(init_y > RESEARCH_BOARD_SIZE)
 				game_initialized = TRUE
-				linked_text.maptext = "<center><font size='3'>Start!</font></center>"
+				linked_text.maptext = "<center><font size='3'>开始！</font></center>"
 				spawn(20)
 					animate(linked_text,alpha=0,time = 10)
 
@@ -54,7 +54,7 @@
 		time_left--
 
 		if(linked_time)
-			linked_time.maptext = "<center>Time:<br>[get_clock_time(CEILING(time_left/10,1))]</center>"
+			linked_time.maptext = "<center>时间<br>[get_clock_time(CEILING(time_left/10,1))]</center>"
 			if(time_left <= 100)
 				linked_time.color = "#FF0000"
 				if(time_left <= 50 && !(time_left % 2))
@@ -65,11 +65,11 @@
 
 				SSresearch.add_quadrants_score(owner,points)
 
-				var/highscore = "HIGH SCORES:"
+				var/highscore = "最高分："
 				for(var/k in SSresearch.quadrant_high_scores)
 					var/list/v = k
 					highscore += "<br>[v[1]]:&nbsp;&nbsp;[v[2]]"
-				linked_text.maptext = "<center><font size=10>TIMES UP!</font><br>Final Score: [points].<br><br><br>[highscore]</center>"
+				linked_text.maptext = "<center><font size=10>时间到！</font><br>最终得分：[points]。<br><br><br>[highscore]</center>"
 				linked_text.alpha = 255
 
 				return FALSE
@@ -82,12 +82,12 @@
 		time_left = max(time_left,30)
 	points += points_to_add*(1 + FLOOR(level/2,1))
 	if(linked_level)
-		linked_level.maptext = "<center>Level:<br>[level]</center>"
+		linked_level.maptext = "<center>等级<br>[level]</center>"
 	if(linked_score)
-		linked_score.maptext = "<center>Score:<br>[points]</center>"
+		linked_score.maptext = "<center>得分<br>[points]</center>"
 		if(points_to_add > 2)
 			linked_text.alpha = 255
-			linked_text.maptext = "<center><font size=5>Good!</font></center>"
+			linked_text.maptext = "<center><font size=5>干得漂亮！</font></center>"
 			play_sound_target('sound/ui/friendly.ogg',owner, sound_setting = SOUND_SETTING_UI)
 			spawn(20)
 				animate(linked_text,alpha=0,time = 10)

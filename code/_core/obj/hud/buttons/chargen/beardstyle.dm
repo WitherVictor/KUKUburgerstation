@@ -65,7 +65,7 @@ mob/living/advanced/proc/handle_beardstyle_chargen(var/hair_num=-1,var/desired_c
 	return TRUE
 
 /obj/hud/button/chargen/change_beardstyle
-	name = "cycle beardstyle right"
+	name = "下一个胡须样式"
 	dir = EAST
 	icon_state = "arrow"
 
@@ -89,14 +89,14 @@ mob/living/advanced/proc/handle_beardstyle_chargen(var/hair_num=-1,var/desired_c
 
 
 /obj/hud/button/chargen/change_beardstyle/left
-	name = "cycle beardstyle left"
+	name = "上一个胡须样式"
 	dir = WEST
 
 	screen_loc = "CENTER-3,CENTER+3"
 
 /obj/hud/button/chargen/beardstyle/
-	name = "change bearstyle"
-	desc_extended = "This will change your beardstyle."
+	name = "更改胡须样式"
+	desc_extended = "更改你的胡须样式。"
 	icon_state = "square_round"
 	var/hair_num = 0
 	var/hair_color = "#000000"
@@ -137,8 +137,8 @@ mob/living/advanced/proc/handle_beardstyle_chargen(var/hair_num=-1,var/desired_c
 		A.handle_beardstyle_chargen(hair_num)
 
 /obj/hud/button/chargen/beardstyle/main
-	name = "change beard color"
-	desc_extended = "Your currently selected beard style. Clicking here will change the color."
+	name = "更改胡须颜色"
+	desc_extended = "当前选中的胡须样式。点击这里更改颜色。"
 	icon_state = "square_round"
 	screen_loc = "CENTER,CENTER+3"
 
@@ -148,7 +148,7 @@ mob/living/advanced/proc/handle_beardstyle_chargen(var/hair_num=-1,var/desired_c
 
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
-		var/desired_color = input("Beard Color","Beard Color",hair_color) as color|null
+		var/desired_color = input("胡须颜色","胡须颜色",hair_color) as color|null
 		if(desired_color)
 			A.handle_beardstyle_chargen(hair_num,desired_color)
 

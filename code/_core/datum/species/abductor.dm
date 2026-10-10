@@ -1,6 +1,6 @@
 /species/abductor/
-	name = "Abductor"
-	desc = "Ayy lmao."
+	name = "绑架者"
+	desc = "哎哟，笑死了。"
 	id = "abductor"
 	flags_species = SPECIES_ABDUCTOR
 

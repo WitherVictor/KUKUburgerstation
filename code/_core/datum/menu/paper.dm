@@ -66,10 +66,10 @@
 
 		if(href_list["edit"])
 			if(!P.active_paper.editable)
-				P.to_chat(span("notice","\The [P.active_paper.name] cannot be modifed!"))
+				P.to_chat(span("notice","无法修改[P.active_paper.name]！"))
 			else
 				var/desired_page = clamp(text2num(href_list["edit"]),1,length(P.active_paper.data))
-				var/desired_new_text = input(P,"What should the text say?","Edit Text",P.active_paper.data[desired_page]) as message
+				var/desired_new_text = input(P,"你想写些什么？","编辑文本",P.active_paper.data[desired_page]) as message
 				if(P.active_paper && desired_new_text && length(desired_new_text))
 					var/regex/link_remover = new("\\\[.*\\\]\\(.*\\)","g")
 					desired_new_text = link_remover.Replace(desired_new_text,"")

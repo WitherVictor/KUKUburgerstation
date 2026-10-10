@@ -1,7 +1,7 @@
 /obj/item/container/food/burger
-	name = "burger"
-	desc = "Makes you think."
-	desc_extended = "A basic meal, but it's cheap and easy to make, so expect this to be all you eat here."
+	name = "汉堡"
+	desc = "引人深思。"
+	desc_extended = "一份普通餐点，不过价格便宜、做法简单，所以你在这里可能顿顿都得吃这个。"
 
 	icon = 'icons/obj/items/consumable/food/burgers.dmi'
 	icon_state = "burger"
@@ -9,7 +9,7 @@
 	consume_verb = "eat"
 
 /obj/item/container/food/burger/ham
-	name = "hamburger"
+	name = "汉堡包"
 	icon_state = "burger"
 
 /obj/item/container/food/burger/ham/on_spawn()

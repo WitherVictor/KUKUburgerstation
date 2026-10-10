@@ -1,5 +1,5 @@
 /obj/hud/button/close_inventory
-	name = "close inventory"
+	name = "关闭物品栏"
 	icon_state = "close_inventory"
 	screen_loc = "CENTER,CENTER"
 
@@ -25,9 +25,9 @@
 		assoc_item.close_inventory(activator)
 
 /obj/hud/button/hide_show_inventory
-	name = "toggle inventory"
-	desc = "Need more space? Click this button."
-	desc_extended = "Hides your inventory from view. Inventories such as pockets, belts, backpacks, and hands will still be shown."
+	name = "切换物品栏显示"
+	desc = "想腾出更多屏幕空间？点这个按钮。"
+	desc_extended = "隐藏物品栏。口袋、腰带、背包和双手等栏位仍会显示。"
 	icon_state = "view_inventory"
 	screen_loc = "LEFT:1,BOTTOM:12"
 

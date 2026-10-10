@@ -8,8 +8,8 @@ mob/living/advanced/proc/handle_glow_chargen(var/desired_color,var/update_blends
 	return TRUE
 
 /obj/hud/button/chargen/glow
-	name = "change glow color"
-	desc_extended = "Click here to change your character's glow color."
+	name = "更改发光颜色"
+	desc_extended = "点击这里更改角色的发光颜色。"
 	icon_state = "change_glowcolor"
 
 	screen_loc = "CENTER-2.5,CENTER-2"
@@ -26,6 +26,6 @@ mob/living/advanced/proc/handle_glow_chargen(var/desired_color,var/update_blends
 
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
-		var/desired_color = input("Glow Color","Glow Color",glow_color) as color|null
+		var/desired_color = input("发光颜色","发光颜色",glow_color) as color|null
 		if(desired_color)
 			A.handle_glow_chargen(desired_color)

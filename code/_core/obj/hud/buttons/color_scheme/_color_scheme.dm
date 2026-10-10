@@ -11,7 +11,7 @@ var/global/static/list/obj/hud/button/color_scheme_buttons = list(
 )
 
 /obj/hud/button/close_color_scheme
-	name = "close color scheme"
+	name = "关闭界面配色"
 	icon_state = "close_inventory"
 	screen_loc = "CENTER+3.5,CENTER+2"
 
@@ -28,8 +28,8 @@ var/global/static/list/obj/hud/button/color_scheme_buttons = list(
 
 
 /obj/hud/button/default_color_scheme
-	name = "default color scheme"
-	desc_extended = "Clicking here will reset the color scheme to the original burgerstation blue color scheme."
+	name = "默认界面配色"
+	desc_extended = "点击此处，将界面配色恢复为汉堡站原本的蓝色配色。"
 	icon_state = "default"
 	screen_loc = "CENTER-4.5,CENTER+2"
 
@@ -59,8 +59,8 @@ var/global/static/list/obj/hud/button/color_scheme_buttons = list(
 
 
 /obj/hud/button/color_scheme
-	name = "change color scheme"
-	desc = "Pretty colors."
+	name = "更改界面配色"
+	desc = "漂亮的色彩。"
 	icon_state = "color_frame"
 	screen_loc = "CENTER,CENTER"
 
@@ -78,7 +78,7 @@ var/global/static/list/obj/hud/button/color_scheme_buttons = list(
 
 	if(. && is_advanced(activator) && activator.client && activator.client.settings && activator.client.settings.loaded_data)
 		var/mob/living/advanced/A = activator
-		var/desired_color = input("Skin Color","Skin Color",A.client.settings.loaded_data["hud_colors"][color_id]) as color|null
+		var/desired_color = input("选择界面颜色。","界面颜色",A.client.settings.loaded_data["hud_colors"][color_id]) as color|null
 		if(desired_color)
 			A.client.settings.loaded_data["hud_colors"][color_id] = desired_color
 

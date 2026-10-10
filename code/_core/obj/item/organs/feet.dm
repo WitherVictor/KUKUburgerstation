@@ -1,8 +1,8 @@
 //Human
 /obj/item/organ/foot
-	name = "right foot"
+	name = "右脚"
 	id = BODY_FOOT_RIGHT
-	desc = "An organ."
+	desc = "一个器官。"
 	icon_state = BODY_FOOT_RIGHT
 	worn_layer = LAYER_MOB_FEET
 	inventories = list(/obj/hud/inventory/organs/right_foot)
@@ -43,7 +43,7 @@
 	if(is_advanced(loc))
 		var/mob/living/advanced/A = loc
 		if(!A.horizontal && A.add_status_effect(STAGGER,5,5))
-			A.visible_message(span("warning","\The [A.name]'s [src.name] recoils in pain!"),span("danger","Your [src.name] recoils in pain!"))
+			A.visible_message(span("warning","[A.name]的[src.name]疼得缩了回去！"),span("danger","你的[src.name]疼得缩了回去！"))
 			return TRUE
 
 
@@ -58,9 +58,9 @@
 	return original_footsteps
 
 /obj/item/organ/foot/left
-	name = "left foot"
+	name = "左脚"
 	id = BODY_FOOT_LEFT
-	desc = "An organ."
+	desc = "一个器官。"
 	icon_state = BODY_FOOT_LEFT
 
 	attach_flag = BODY_LEG_LEFT
@@ -77,7 +77,7 @@
 
 //Reptile Feral
 /obj/item/organ/foot/reptile
-	name = "right reptile foot"
+	name = "原始蜥蜴人右脚"
 
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
 
@@ -88,7 +88,7 @@
 	armor = /armor/reptile
 
 /obj/item/organ/foot/reptile/left
-	name = "left reptile foot"
+	name = "原始蜥蜴人左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -106,7 +106,7 @@
 
 //Reptile Advanced
 /obj/item/organ/foot/reptile_advanced
-	name = "right advanced reptile foot"
+	name = "蜥蜴人右脚"
 
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
 
@@ -115,7 +115,7 @@
 	armor = /armor/reptile
 
 /obj/item/organ/foot/reptile_advanced/left
-	name = "left advanced reptile foot"
+	name = "蜥蜴人左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -133,7 +133,7 @@
 
 //Reptile Advanced
 /obj/item/organ/foot/diona
-	name = "right diona foot"
+	name = "狄俄娜右脚"
 
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 
@@ -147,7 +147,7 @@
 	armor = /armor/diona
 
 /obj/item/organ/foot/diona/left
-	name = "left diona foot"
+	name = "狄俄娜左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -168,7 +168,7 @@
 
 //cyborg
 /obj/item/organ/foot/cyborg
-	name = "right cyborg foot"
+	name = "半机械人右脚"
 
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
 
@@ -178,7 +178,7 @@
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/foot/cyborg/left
-	name = "left cyborg foot"
+	name = "半机械人左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -196,7 +196,7 @@
 
 //cyborg 2
 /obj/item/organ/foot/gopro
-	name = "right advanced cyborg foot"
+	name = "高级半机械人右脚"
 
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
 
@@ -206,7 +206,7 @@
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/foot/gopro/left
-	name = "left advanced cyborg foot"
+	name = "高级半机械人左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -228,7 +228,7 @@
 
 //Beefman
 /obj/item/organ/foot/beefman
-	name = "right beef foot"
+	name = "血肉人右脚"
 
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
 
@@ -237,7 +237,7 @@
 	armor = /armor/beefman
 
 /obj/item/organ/foot/beefman/left
-	name = "left beef foot"
+	name = "血肉人左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -256,7 +256,7 @@
 
 //Skeleton
 /obj/item/organ/foot/skeleton
-	name = "skeleton right foot"
+	name = "骷髅右脚"
 
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
 
@@ -269,7 +269,7 @@
 	can_gib = FALSE
 
 /obj/item/organ/foot/skeleton/left
-	name = "skeleton left foot"
+	name = "骷髅左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -288,14 +288,14 @@
 
 //Monkey
 /obj/item/organ/foot/monkey
-	name = "right skeleton foot"
+	name = "猴子右脚"
 
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
 
 	inventories = list(/obj/hud/inventory/organs/right_foot)
 
 /obj/item/organ/foot/monkey/left
-	name = "left monkey foot"
+	name = "猴子左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -314,7 +314,7 @@
 
 //Beefman
 /obj/item/organ/foot/goblin
-	name = "right goblin foot"
+	name = "地精右脚"
 
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
 
@@ -323,7 +323,7 @@
 	armor = /armor/goblin
 
 /obj/item/organ/foot/goblin/left
-	name = "left goblin foot"
+	name = "地精左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -342,14 +342,14 @@
 
 //Monkey
 /obj/item/organ/foot/moth
-	name = "right moth foot"
+	name = "蛾人右脚"
 
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
 
 	inventories = list(/obj/hud/inventory/organs/right_foot)
 
 /obj/item/organ/foot/moth/left
-	name = "left moth foot"
+	name = "蛾人左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -369,14 +369,14 @@
 
 //Golem
 /obj/item/organ/foot/golem
-	name = "right golem foot"
+	name = "魔像右脚"
 
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
 
 	inventories = list(/obj/hud/inventory/organs/right_foot)
 
 /obj/item/organ/foot/golem/left
-	name = "left golem foot"
+	name = "魔像左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 
@@ -396,14 +396,14 @@
 
 //abductor
 /obj/item/organ/foot/abductor
-	name = "right abductor foot"
+	name = "绑架者右脚"
 
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
 
 	inventories = list(/obj/hud/inventory/organs/right_foot)
 
 /obj/item/organ/foot/abductor/left
-	name = "left abductor foot"
+	name = "绑架者左脚"
 	id = BODY_FOOT_LEFT
 	icon_state = BODY_FOOT_LEFT
 

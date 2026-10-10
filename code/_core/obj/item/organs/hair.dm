@@ -1,7 +1,7 @@
 /obj/item/organ/hair
-	name = "hair"
+	name = "头发"
 	id = BODY_HAIR_HEAD
-	desc = "Yes. This is hair."
+	desc = "没错，这是头发。"
 	icon_state = "none"
 	worn_layer = LAYER_MOB_HAIR_HEAD
 
@@ -34,9 +34,9 @@
 		qdel(src)
 
 /obj/item/organ/beard
-	name = "facial hair"
+	name = "胡须"
 	id = BODY_HAIR_FACE
-	desc = "Yes, this is your facial hair."
+	desc = "没错，这是你的胡须。"
 	icon_state = "none"
 	worn_layer = LAYER_MOB_HAIR_FACE
 

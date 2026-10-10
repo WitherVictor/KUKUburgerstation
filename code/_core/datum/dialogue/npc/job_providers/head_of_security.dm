@@ -6,7 +6,7 @@
 	. = list()
 
 	.["hello"] = list(
-		"Welcome to the armory. Anyone is welcome to #1 here, and there is a #2 just behind me to test things out. I am also authorized to offer the #3 of #4 as well, if you want it.",
+		"欢迎来到军械库。任何人都可以在这里#1，我身后还有个#2，可以试试装备。如果你愿意，我也有权提供#4这个#3。",
 		"purchase firearms",
 		"firing range",
 		"job",
@@ -14,42 +14,42 @@
 	)
 
 	.["purchase firearms"] = list(
-		"NanoTrasen realized that Cargo Technicians were either pretty lazy, or extremely prone to declaring independence, so they just fired all of them and replaced them with vendors or cyborgs. \
-		If you want to #1, just use the #2 here to vend yourself something good. You can also buy armor and general equipment here, so be sure to check everything out.",
+		"纳米传讯发现，货运技师要么懒得要命，要么动不动就宣布独立，所以干脆全开除了，换成售货机和半机械人。\
+		想#1的话，用这里的#2给自己挑点好东西就行。这里也卖护甲和通用装备，记得都看看。",
 		"purchase firearms",
 		"vending machines"
 	)
 
 	.["vending machines"] = list(
-		"It's simple. Just click on the button of the thing you want to buy, and it will automatically buy it and charge your account for it. No paperwork or licence required. Don't forget to get ammo for it."
+		"很简单。点击想买的物品对应的按钮，机器就会自动售货并从你的账户扣款。不需要填表，也不用许可证。别忘了买弹药。"
 	)
 
 	.["job"] = list(
-		"NanoTrasen wants some sort of cohesion in this shitfuck of an operation, so they encourage people to take on a #1. I offer the #2 role. Other heads may offer other roles, if you're less interesting in killing things.",
+		"纳米传讯希望这场狗屁行动多少能有点组织，所以鼓励大家找个#1。我这里提供#2的职位。如果你对杀戮没那么感兴趣，其他主管也许有别的岗位。",
 		"job",
 		"security officer"
 	)
 
 	if(P.job == /job/security)
 		.["security officer"] = list(
-			"I sometimes forget this too, but you're already a #1.",
+			"我有时候也会忘，不过你已经是#1了。",
 			"security officer"
 		)
 	else
 		.["security officer"] = list(
-			"I can certify you as a #1, if you want. No minimum requirements. Pays well, and you earn your paycheck by killing anything and everything on the planet. You can earn promotions with this job, unlike assistant. This will replace your old job, if you had one. Want it?NEWLINE#2NEWLINE#3",
+			"只要你愿意，我就能任命你为#1，没有最低要求。待遇不错，杀光这颗星球上的一切就能领工资。这个岗位可以晋升，助理可没这待遇。如果你已有岗位，这会替换原来的岗位。要来吗？NEWLINE#2NEWLINE#3",
 			"security officer",
 			"*Yes, become a security officer.",
 			"*No, do not become a security officer."
 		)
 
 	.["*Yes, become a security officer."] = list(
-		"By the powers vested in me, you are now officially a #1. Congrats, now go kill things.",
+		"根据授予我的职权，你现在正式成为#1了。恭喜，去大开杀戒吧。",
 		"security officer"
 	)
 
 	.["*No, do not become a security officer."] = list(
-		"Suit yourself. The #1 still stands.",
+		"随你。这个#1仍为你敞开。",
 		"job"
 	)
 

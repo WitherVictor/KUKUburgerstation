@@ -1,6 +1,6 @@
 /obj/item/material/trash_cube
-	name = "trash cube"
-	desc = "I am error."
+	name = "压缩垃圾块"
+	desc = "我是个错误。"
 	icon = 'icons/obj/item/material.dmi'
 	icon_state = "trash_cube"
 
@@ -16,10 +16,10 @@
 /obj/item/material/trash_cube/update_icon()
 	var/material/M = SSmaterials.all_materials[material_id]
 	if(!M)
-		name = "ERROR cube"
+		name = "异常压缩块"
 		log_error("Warning! [src.get_debug_name()] had incorrect material type \"[material_id]\"!")
 	else
-		name = "[deunderscore(M.name)] cube"
-		desc_extended = "A cube made of [deunderscore(M.name)]. It came from a trash compactor."
+		name = "[M.display_name]压缩块"
+		desc_extended = "由[M.display_name]压成的方块，来自垃圾压缩机。"
 		color = M.color
 	return ..()

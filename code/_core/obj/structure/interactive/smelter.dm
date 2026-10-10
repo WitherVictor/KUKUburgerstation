@@ -1,7 +1,7 @@
 /obj/structure/interactive/smelter
-	name = "smelter"
-	desc = "A furnace used to smelt ores"
-	desc_extended = "Ore that goes from one side via conveyor comes out smelted into ingots out the other."
+	name = "熔炉"
+	desc = "用于熔炼矿石的炉子。"
+	desc_extended = "矿石由传送带从一侧送入，熔炼成锭后从另一侧送出。"
 	icon = 'icons/obj/structure/smelter.dmi'
 	icon_state = "furnace"
 
@@ -77,13 +77,13 @@
 		var/obj/item/T = object
 		if(T.flags_tool & FLAG_TOOL_WRENCH)
 			if(anchored)
-				activator.to_chat(span("notice","You un-anchor the smelter."))
+				activator.to_chat(span("notice","你松开了熔炉的固定装置。"))
 				anchored = FALSE
 			else
-				activator.to_chat(span("notice","You anchor the smelter."))
+				activator.to_chat(span("notice","你固定了熔炉。"))
 				anchored = TRUE
 	else
 		for(var/obj/item/T in contents)
 			T.drop_item(get_turf(activator))
-		activator.to_chat(span("notice","You empty the smelter."))
+		activator.to_chat(span("notice","你清空了熔炉。"))
 	. = ..()

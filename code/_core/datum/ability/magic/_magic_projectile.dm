@@ -1,6 +1,6 @@
 /ability/magic/projectile/
-	name = "projectile ability"
-	desc = "An ability that shoots a projectile."
+	name = "弹体能力"
+	desc = "一种发射弹体的能力。"
 
 	resource_type = MANA
 	cost = 25

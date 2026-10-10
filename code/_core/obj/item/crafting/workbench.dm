@@ -1,5 +1,5 @@
 /obj/item/crafting_bench/workbench
-	name = "portable workbench"
+	name = "便携工作台"
 	icon = 'icons/obj/item/ore.dmi'
 	icon_state = "workbench"
 

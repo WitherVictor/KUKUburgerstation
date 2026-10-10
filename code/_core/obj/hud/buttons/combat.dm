@@ -1,7 +1,7 @@
 /obj/hud/button/resist
-	name = "resist"
-	desc = "DON'T FORGET TO SMASH THAT RESIST BUTTON."
-	desc_extended = "Press this button if you want to resist out of whatever situation your in. (That doesn't mean that it will do it.)"
+	name = "挣脱"
+	desc = "别忘了猛按挣脱按钮！"
+	desc_extended = "想挣脱当前困境时，就按这个按钮。（这可不代表一定有效。）"
 	icon_state = "resist"
 	screen_loc = "RIGHT-3:8,BOTTOM:10+1"
 
@@ -17,9 +17,9 @@
 
 
 /obj/hud/button/resist_auto
-	name = "toggle auto resist"
-	desc = "For when you don't like clicking."
-	desc_extended = "Automatically attempts to resist in some situations."
+	name = "切换自动挣脱"
+	desc = "不想一直点鼠标时就用这个。"
+	desc_extended = "在某些情况下自动尝试挣脱。"
 	icon_state = "auto"
 	screen_loc = "RIGHT-1,BOTTOM:11+1"
 

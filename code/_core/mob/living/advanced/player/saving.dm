@@ -14,10 +14,10 @@
 		if(4 to INFINITY)
 			desired_premium_amount = 0
 	if(desired_premium_amount > insurance_premiums)
-		if(messages) to_chat(span("warning","Your insurance premiums have increased from <b>[insurance_premiums*100]%</b> to <b>[desired_premium_amount*100]%</b>..."))
+		if(messages) to_chat(span("warning","你的保费费率已从 <b>[insurance_premiums*100]%</b> 上调至 <b>[desired_premium_amount*100]%</b>……"))
 		insurance_premiums = desired_premium_amount
 	else if (desired_premium_amount < insurance_premiums)
-		if(messages) to_chat(span("notice","Your insurance premiums have decreased from <b>[insurance_premiums*100]%</b> to <b>[desired_premium_amount*100]%</b>!"))
+		if(messages) to_chat(span("notice","你的保费费率已从 <b>[insurance_premiums*100]%</b> 下调至 <b>[desired_premium_amount*100]%</b>！"))
 		insurance_premiums = desired_premium_amount
 
 /mob/living/advanced/player/proc/set_mob_data(var/list/loaded_data,var/appearance_only=FALSE)
@@ -61,7 +61,7 @@
 		job_next_promotion = loaded_data["job_next_promotion"] ? loaded_data["job_next_promotion"] : 0
 
 		if(loaded_data["last_saved_date"] && loaded_data["last_saved_date"] != get_date())
-			to_chat(span("notice","<h2>You are rewarded 1000 credits for logging in with this character today! Make sure to log in tomorrow to receive this reward again.</h2>"))
+			to_chat(span("notice","<h2>今天使用此角色登录，奖励1000信用点！明天再来登录，还能领取一次奖励。</h2>"))
 			adjust_currency(1000)
 
 		if(loaded_data["prestige_count"])
@@ -77,13 +77,13 @@
 				var/insurance_to_pay = clamp(insurance,0,INSURANCE_PAYOUT)
 				insurance -= insurance_to_pay
 				currency_to_give = insurance_to_pay
-				to_chat(span("notice","You were paid <b>[insurance_to_pay] credits</b> in insurance. You have <b>[insurance] credits</b> left in your insurance pool."))
+				to_chat(span("notice","你获得了 <b>[insurance_to_pay]信用点</b> 的保险赔付。保险资金池还剩 <b>[insurance]信用点</b>。"))
 				update_premiums()
 			if(currency >= 10000)
 				var/death_tax = FLOOR(currency*0.1,1)
 				if(death_tax)
 					currency_to_give -= death_tax
-					to_chat(span("warning","You paid [death_tax] credits in cloning fees."))
+					to_chat(span("warning","你支付了[death_tax]信用点的克隆费用。"))
 			if(currency_to_give)
 				adjust_currency(currency_to_give)
 

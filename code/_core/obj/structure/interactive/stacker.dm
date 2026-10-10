@@ -1,7 +1,7 @@
 /obj/structure/interactive/stacker
-	name = "stacker"
-	desc = "Stacks things."
-	desc_extended = "Stacks things and attempts to stack them to their maximum item count size."
+	name = "堆垛机"
+	desc = "把物品堆在一起。"
+	desc_extended = "将同类物品尽量合并为达到数量上限的堆叠。"
 	icon = 'icons/obj/structure/stacking.dmi'
 	icon_state = "stacker"
 
@@ -57,13 +57,13 @@
 		var/obj/item/T = object
 		if(T.flags_tool & FLAG_TOOL_WRENCH)
 			if(anchored)
-				activator.to_chat(span("notice","You un-anchor the stacker."))
+				activator.to_chat(span("notice","你松开了堆垛机的固定装置。"))
 				anchored = FALSE
 			else
-				activator.to_chat(span("notice","You anchor the stacker."))
+				activator.to_chat(span("notice","你固定了堆垛机。"))
 				anchored = TRUE
 	else
 		for(var/obj/item/T in contents)
 			T.drop_item(get_turf(activator))
-		activator.to_chat(span("notice","You empty the stacker."))
+		activator.to_chat(span("notice","你清空了堆垛机。"))
 	. = ..()

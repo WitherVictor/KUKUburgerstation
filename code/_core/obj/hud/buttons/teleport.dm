@@ -7,8 +7,8 @@
 
 /obj/hud/button/teleport/teleport_here
 
-	name = "wishgranter teleport"
-	desc = "Click here to whisk away."
+	name = "许愿机传送"
+	desc = "点击此处传送离开。"
 
 	screen_loc = "CENTER-0.5,CENTER-0.5+3"
 
@@ -63,7 +63,7 @@
 		callback_list["start_turf"] = get_turf(P)
 		callback_list["end_turf"] = desired_turf
 		if(add_progress_bar(P,"teleport",SECONDS_TO_DECISECONDS(3),callback_list))
-			P.to_chat(span("notice","You begin walking into the light..."))
+			P.to_chat(span("notice","你开始步入光芒……"))
 			P.show_hud(FALSE,FLAGS_HUD_TELEPORT,FLAGS_HUD_NONE,speed=1)
 
 	return ..()

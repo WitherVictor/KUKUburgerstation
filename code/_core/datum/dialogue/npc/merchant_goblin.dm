@@ -5,7 +5,7 @@
 	. = list()
 
 	.["hello"] = list(
-		"Welcome to Bawse loot. We don't actually sell boss loot, but we do sell #1! We also provide #2, where you can #3, for a small price. We also provide banking services where you can #4 or #5 for gold.",
+		"欢迎光临鲍斯战利品。我们其实不卖首领战利品，但我们卖#1！我们还提供#2，花点小钱就能#3。此外也有银行服务，你可以#4，或者#5换取金币。",
 		"*supply crates",
 		"*deathbox services",
 		"*reclaim deathbox",
@@ -14,21 +14,21 @@
 	)
 
 	.["*supply crates"] = list(
-		"We sell supply crates for those who feel lucky. Truth be told, we hate getting splinters and rather just sell the crates themselves. \
-		No need to worry about us ripping you off; we never looked inside them or modifed their contents!"
+		"我们向自信运气好的人出售补给箱。说实话，我们讨厌被木刺扎到，干脆把箱子整个卖掉。\
+		不用担心我们坑人，我们从没看过里面，也没动过内容物！"
 	)
 
 	.["*deathbox services"] = list(
-		"Our perfectly legal goblin scavengers sometimes aquire lost equipment belonging to certain questionably legal NanoTrasen operatives. We don't have much use for \
-		gross death-equipment, so we sell it back to NanoTrasen for a nominal fee! Oh and by NanoTrasen, I mean you. Note that we don't have much storage in our er... \
-		headquarters, so we only store 5 per person."
+		"我们完全合法的地精拾荒者，有时会捡到某些合法性存疑的纳米传讯特工遗失的装备。\
+		这些死人装备怪恶心的，我们用不上，就收点象征性费用卖回纳米传讯！哦，我说的纳米传讯就是你。\
+		注意，我们的呃……总部仓储空间不多，所以每人只保存五个箱子。"
 	)
 
-	.["*reclaim deathbox"] = list("...")
+	.["*reclaim deathbox"] = list("……")
 
-	.["*sell items"] = list("...")
+	.["*sell items"] = list("……")
 
-	.["*access your bank"] = list("...")
+	.["*access your bank"] = list("……")
 
 
 /dialogue/npc/goblin_merchant/set_topic(var/mob/living/advanced/player/P,var/topic)

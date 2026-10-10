@@ -26,12 +26,13 @@
 	if(!client)
 		return FALSE
 
-	var/decision = input("Are you sure you want to observe? You can join again any time you want.","Observe Round?") as null|anything in list("Yes","No","Cancel")
-	if(decision != "Yes")
+	var/list/observe_choices = list("是" = "Yes", "否" = "No", "取消" = "Cancel")
+	var/decision = input("确定要旁观吗？你随时可以重新加入游戏。","旁观回合？") as null|anything in observe_choices
+	if(!decision || observe_choices[decision] != "Yes")
 		return FALSE
 
 	if(type == /mob/abstract/observer/ghost)
-		to_chat(span("warning","You are already observing!"))
+		to_chat(span("warning","你已经在旁观了！"))
 		return FALSE
 
 	make_ghost()

@@ -1,6 +1,6 @@
 /damagetype/npc/chicken
-	attack_verbs = list("pecks","claws","kicks")
-	weapon_name = "beak"
+	attack_verbs = list("啄击","爪击","踢击")
+	weapon_name = "喙"
 
 	hit_effect = /obj/effect/temp/impact/combat/claw
 

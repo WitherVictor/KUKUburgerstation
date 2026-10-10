@@ -1,5 +1,5 @@
 /menu/appearance/
-	name = "Appearance Editor"
+	name = "外观编辑器"
 	id = "appearance_editor"
 	file = 'html/chargen_appearance.html'
 	resources = list(
@@ -136,8 +136,9 @@
 		forged_data["blush"]["icon_state"] = href_list["blush_enabled"] == "true" ? "blush" : "none"
 
 		if(href_list["save_and_quit"] && href_list["save_and_quit"] == "true")
-			var/choice = input(usr,"Are you sure you want to save and finish creating your character? You won't be able to change your character again until later in the game.") in list("Yes","No")
-			if(choice == "Yes")
+			var/list/confirmation_choices = list("是" = "Yes","否" = "No")
+			var/choice = input(usr,"确定要保存并完成角色创建吗？只有推进到游戏后续阶段，你才能再次更改角色。") in confirmation_choices
+			if(choice && confirmation_choices[choice] == "Yes")
 				winset(usr, "browser([id])","is-visible:false")
 				if(is_advanced(usr))
 					var/mob/living/advanced/A = usr

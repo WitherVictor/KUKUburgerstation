@@ -1,7 +1,7 @@
 /obj/item/container/cigarette
-	name = "cigarette"
-	desc = "Kills you slowly."
-	desc_extended = "An old cigarette containing all the dangerous toxins that you crave."
+	name = "香烟"
+	desc = "慢慢地要你的命。"
+	desc_extended = "一根旧香烟，含有你渴求的各种危险毒素。"
 	icon = 'icons/obj/item/smoking/cigarette.dmi'
 	icon_state = "inventory"
 	icon_state_worn = "worn"

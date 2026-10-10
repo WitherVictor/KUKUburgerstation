@@ -1,6 +1,6 @@
 /obj/hud/button/stat/screen_effect
-	name = "screen blood"
-	desc = "This does something, I think."
+	name = "屏幕血迹"
+	desc = "这东西应该有点用吧。"
 	id = "screen"
 
 	icon = 'icons/hud/injury.dmi'
@@ -56,7 +56,7 @@
 
 		if(L.dead)
 			alpha = 200
-			maptext = "<center>You have died.</center>"
+			maptext = "<center>你已死亡。</center>"
 			health = 0
 		else
 			alpha = clamp(100 - (100*(1/0.4))*(health/max_health),0,100)

@@ -14,23 +14,23 @@
 
 
 /obj/hud/button/robust/piece/attack
-	name = "attack"
-	maptext = "<center>ATTACK</center>"
+	name = "攻击"
+	maptext = "<center>攻击</center>"
 
 /obj/hud/button/robust/piece/regen
-	name = "regen"
-	maptext = "<center>REGEN</center>"
+	name = "再生"
+	maptext = "<center>再生</center>"
 
 /obj/hud/button/robust/piece/heal
-	name = "heal"
-	maptext = "<center>HEAL</center>"
+	name = "治疗"
+	maptext = "<center>治疗</center>"
 
 
 /obj/hud/button/robust/piece/player_stats
-	name = "your stats"
+	name = "你的状态"
 
 /obj/hud/button/robust/piece/antag_stats
-	name = "enemy stats"
+	name = "敌人状态"
 
 /obj/hud/button/robust/board
 

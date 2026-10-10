@@ -3,9 +3,9 @@
 	set category = "Menu"
 	var/discord_link = CONFIG("SERVER_DISCORD",null)
 	if(!discord_link)
-		to_chat(span("warning","No Discord URL provided! Yell at the server owner to set one up!"))
+		to_chat(span("warning","未设置 Discord 链接！快叫服主去设置一个！"))
 		return TRUE
-	to_chat(span("notice","Opening discord in your browser..."))
+	to_chat(span("notice","正在浏览器中打开 Discord……"))
 	src << link(discord_link)
 
 /client/verb/open_github()
@@ -13,9 +13,9 @@
 	set category = "Menu"
 	var/github_link = CONFIG("SERVER_GITHUB",null)
 	if(!github_link)
-		to_chat(span("warning","No Github URL provided! Yell at the server owner to set one up!"))
+		to_chat(span("warning","未设置 GitHub 链接！快叫服主去设置一个！"))
 		return TRUE
-	to_chat(span("notice","Opening Github in your browser..."))
+	to_chat(span("notice","正在浏览器中打开 GitHub……"))
 	src << link(github_link)
 
 /client/verb/open_patreon()
@@ -23,9 +23,9 @@
 	set category = "Menu"
 	var/patreon_link = CONFIG("SERVER_PATREON",null)
 	if(!patreon_link)
-		to_chat(span("warning","No Patreon URL provided! Yell at the server owner to set one up!"))
+		to_chat(span("warning","未设置 Patreon 链接！快叫服主去设置一个！"))
 		return TRUE
-	to_chat(span("notice","Opening Patreon in your browser..."))
+	to_chat(span("notice","正在浏览器中打开 Patreon……"))
 	src << link(patreon_link)
 
 /client/verb/player_who()
@@ -37,7 +37,7 @@
 	for(var/k in SSclient.all_clients)
 		active_players += k
 
-	to_chat("<b>[length(active_players)] Online Players</b><br>[english_list(active_players)]")
+	to_chat("<b>[length(active_players)] 名玩家在线</b><br>[english_list(active_players)]")
 
 /client/verb/staff_who()
 	set name = "Staff Who"
@@ -51,4 +51,4 @@
 			var/list/ranks = SSadmin.stored_user_ranks[k]
 			active_staff += "[k] ([english_list(ranks)])"
 
-	to_chat("<b>[length(active_staff)] Online Staff</b><br>[english_list(active_staff)]")
+	to_chat("<b>[length(active_staff)] 名管理人员在线</b><br>[english_list(active_staff)]")

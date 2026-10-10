@@ -1,7 +1,7 @@
 /obj/item/container/edible/dynamic/meat
-	name = "meat"
-	desc = "IT'S RAW!"
-	desc_extended = "You need plenty of proteins for soldiering, soldier."
+	name = "肉"
+	desc = "这还是生的！"
+	desc_extended = "士兵，想上阵打仗，就得补充足够的蛋白质。"
 	crafting_id = /obj/item/container/edible/dynamic/meat
 
 	icon = 'icons/obj/item/consumable/food/meat.dmi'
@@ -26,12 +26,12 @@
 
 	if(icon_state == "ground")
 		icon_state = "meatball"
-		activator.to_chat(span("notice","You reshape \the [src.name] into a meatball."))
+		activator.to_chat(span("notice","你将[src.name]捏成了肉丸。"))
 		pixel_height = 1
 		update_sprite()
 	else if(icon_state == "meatball")
 		icon_state = "patty"
-		activator.to_chat(span("notice","You reshape \the [src.name] into a patty."))
+		activator.to_chat(span("notice","你将[src.name]捏成了肉饼。"))
 		pixel_height = 1
 		update_sprite()
 	else
@@ -123,7 +123,7 @@
 			if(pieces <= 1 || original_volume < pieces)
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.to_chat(span("warning","There isn't enough meat in \the [src.name] to cut!"))
+					L.to_chat(span("warning","[src.name]的肉太少，无法继续切分！"))
 				return FALSE
 
 			for(var/i=1,i<=pieces-1,i++)
@@ -136,7 +136,7 @@
 
 			if(is_living(attacker))
 				var/mob/living/L = attacker
-				L.visible_message(span("notice","\The [L.name] cuts \the [src.name] into cutlets."),span("notice","You cut \the [src.name] into [pieces] cutlets."))
+				L.visible_message(span("notice","[L.name]将[src.name]切成了肉片。"),span("notice","你将[src.name]切成了[pieces]块肉片。"))
 
 		else if(has_prefix(icon_state,"cutlet"))
 			//Make bacon.
@@ -144,7 +144,7 @@
 			if(pieces <= 1 || original_volume < pieces)
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.to_chat(span("warning","There isn't enough meat in \the [src.name] to cut!"))
+					L.to_chat(span("warning","[src.name]的肉太少，无法继续切分！"))
 				return FALSE
 
 			for(var/i=1,i<=pieces-1,i++)
@@ -158,7 +158,7 @@
 
 			if(is_living(attacker))
 				var/mob/living/L = attacker
-				L.visible_message(span("notice","\The [L.name] cuts \the [src.name] into bacon slices."),span("notice","You cut \the [src.name] into [pieces] bacon slices."))
+				L.visible_message(span("notice","[L.name]将[src.name]切成了培根片。"),span("notice","你将[src.name]切成了[pieces]片培根。"))
 
 
 	else if( (!damage_table[BLADE] && damage_table[BLUNT]) || damage_table[BLADE] < damage_table[BLUNT]) //Flatten
@@ -171,7 +171,7 @@
 			if(pieces <= 1 || original_volume < pieces)
 				if(is_living(attacker))
 					var/mob/living/L = attacker
-					L.to_chat(span("warning","There isn't enough meat in \the [src.name] to pound!"))
+					L.to_chat(span("warning","[src.name]的肉太少，无法捣碎！"))
 				return FALSE
 
 			src.icon_state = "ground"
@@ -186,7 +186,7 @@
 
 			if(is_living(attacker))
 				var/mob/living/L = attacker
-				L.visible_message(span("notice","\The [L.name] pounds \the [src.name] into ground beef."),span("notice","You pound \the [src.name] into [pieces] portion\s of ground beef."))
+				L.visible_message(span("notice","[L.name]将[src.name]捣成了肉馅。"),span("notice","你将[src.name]捣成了[pieces]份肉馅。"))
 
 	return TRUE
 

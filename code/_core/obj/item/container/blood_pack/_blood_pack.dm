@@ -1,7 +1,7 @@
 /obj/item/container/blood_pack
-	name = "blood pack"
-	desc = "Keep away from Vampires."
-	desc_extended = "A special plastic blood pack that comes with it's own butterfly needle. Can be attached to living beings to draw or inject blood at a steady rate. When injecting, it auto-detaches if the patient's blood level is 10% greater than normal. Alt-Click to toggle mode."
+	name = "血袋"
+	desc = "请远离吸血鬼。"
+	desc_extended = "配有蝶翼针的特制塑料血袋。可以连接到生物身上，以稳定速率抽血或输血。输血时，若患者血量达到正常值的110%，便会自动脱离。按住Alt键点击可切换模式。"
 	icon = 'icons/obj/item/container/bloodpack.dmi'
 	icon_state = "regular"
 	var/icon_count = 15
@@ -44,10 +44,10 @@
 	if(!allow_hostile_action(activator.loyalty_tag,target))
 		if(desired_inject)
 			if(reagents.contains_lethal)
-				if(messages) activator.to_chat(span("warning","Your loyalty tag prevents you from injecting lethal reagents!"))
+				if(messages) activator.to_chat(span("warning","你的忠诚标记不允许你向友方注射致命试剂！"))
 				return FALSE
 		else
-			if(messages) activator.to_chat(span("warning","Your loyalty tag prevents you from draining the blood of allies!"))
+			if(messages) activator.to_chat(span("warning","你的忠诚标记不允许你抽取友方的血液！"))
 			return FALSE
 
 	return TRUE
@@ -73,9 +73,9 @@
 /obj/item/container/blood_pack/proc/detach(var/mob/activator)
 	var/turf/T = get_turf(src)
 	if(activator)
-		T.visible_message(span("notice","\The [activator.name] detaches \the [src.name] from [attached_to.name]."))
+		T.visible_message(span("notice","[activator.name]将[src.name]从[attached_to.name]身上取下。"))
 	else
-		T.visible_message(span("notice","\The [src.name] detaches itself from \the [attached_to.name]."))
+		T.visible_message(span("notice","[src.name]自动从[attached_to.name]身上脱离。"))
 	attached_to = null
 	STOP_THINKING(src)
 	update_sprite()
@@ -85,7 +85,7 @@
 	draw_delay = initial(draw_delay)
 	var/turf/T = get_turf(src)
 	attached_to = target
-	T.visible_message(span("notice","\The [activator.name] attaches \the [src.name] to \the [attached_to.name]."),span("notice","You attach \the [src.name] to \the [attached_to.name]."))
+	T.visible_message(span("notice","[activator.name]将[src.name]连接到[attached_to.name]身上。"),span("notice","你将[src.name]连接到[attached_to.name]身上。"))
 	START_THINKING(src)
 	update_sprite()
 	return TRUE
@@ -107,11 +107,11 @@
 		if(attached_to)
 			detach(activator)
 		else
-			activator.to_chat(span("warning","There is nothing to detach \the [src.name] from!"))
+			activator.to_chat(span("warning","[src.name]没有连接到任何人身上，无需取下！"))
 	else
 		if(!attached_to || is_safe_to_attach(activator,attached_to,desired_inject = !injecting))
 			injecting = !injecting
-			activator.to_chat(span("notice","You toggle \the [src.name] to [injecting ? "inject" : "draw"] its contents."))
+			activator.to_chat(span("notice","你将[src.name]切换为[injecting ? "注入" : "抽取"]模式。"))
 			update_sprite()
 
 	return TRUE
@@ -121,7 +121,7 @@
 	if(!can_attach_to(activator,target))
 		return FALSE
 
-	activator.visible_message(span("warning","\The [activator.name] begins to attach \the [src.name] to \the [target.name]..."),span("notice","You begin to attach \the [src.name] to \the [target.name]..."))
+	activator.visible_message(span("warning","[activator.name]开始将[src.name]连接到[target.name]身上……"),span("notice","你开始将[src.name]连接到[target.name]身上……"))
 
 	PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(3),src::attach(),activator,target)
 	PROGRESS_BAR_CONDITIONS(activator,src,src::can_attach_to(),activator,target)
@@ -134,7 +134,7 @@
 	INTERACT_CHECK_NO_DELAY(target)
 
 	if(!target.reagents)
-		activator.to_chat(span("warning","You can't find a way to attach \the [src.name] to \the [target.name]!"))
+		activator.to_chat(span("warning","你找不到将[src.name]连接到[target.name]身上的办法！"))
 		return FALSE
 
 	return TRUE
@@ -197,28 +197,28 @@
 
 
 /obj/item/container/blood_pack/full/o_negative/
-	name = "blood pack (O-)"
+	name = "血袋（O-）"
 
 /obj/item/container/blood_pack/full/o_negative/Generate()
 	reagents.add_reagent(/reagent/blood/human/o_negative,reagents.volume_max)
 	return ..()
 
 /obj/item/container/blood_pack/full/reptile/
-	name = "blood pack (L)"
+	name = "血袋（L）"
 
 /obj/item/container/blood_pack/full/reptile/Generate()
 	reagents.add_reagent(/reagent/blood/reptile,reagents.volume_max)
 	return ..()
 
 /obj/item/container/blood_pack/full/rad_be_gone
-	name = "rad-b-gone pack"
+	name = "辐无踪药剂袋"
 
 /obj/item/container/blood_pack/full/rad_be_gone/Generate()
 	reagents.add_reagent(/reagent/medicine/rad_b_gone,reagents.volume_max)
 	return ..()
 
 /obj/item/container/blood_pack/full/synthblood/
-	name = "blood pack (synthblood)"
+	name = "合成血液袋"
 
 /obj/item/container/blood_pack/full/synthblood/Generate()
 	reagents.add_reagent(/reagent/medicine/synthblood,reagents.volume_max)

@@ -1,7 +1,7 @@
 /obj/item/organ/torso
-	name = "torso"
+	name = "躯干"
 	id = BODY_TORSO
-	desc = "An organ."
+	desc = "一个器官。"
 	icon_state = BODY_TORSO_MALE
 	worn_layer = LAYER_MOB_TORSO
 	inventories = list(
@@ -42,22 +42,22 @@
 		qdel(old_owner)
 
 /obj/item/organ/torso/female
-	desc = "A torso. Female variant"
+	desc = "一副女性躯干。"
 	icon_state = BODY_TORSO_FEMALE
 
 /obj/item/organ/torso/stand
-	name = "stand torso"
+	name = "替身躯干"
 	icon = 'icons/mob/living/advanced/species/stand.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/torso/stand/female
 	icon_state = BODY_TORSO_FEMALE
 
 //Reptile
 /obj/item/organ/torso/reptile
-	name = "reptile torso"
+	name = "原始蜥蜴人躯干"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/reptile
 
@@ -67,9 +67,9 @@
 
 //Reptile Advanced
 /obj/item/organ/torso/reptile_advanced
-	name = "advanced reptile torso"
+	name = "蜥蜴人躯干"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/reptile
 
@@ -77,10 +77,10 @@
 	icon_state = BODY_TORSO_FEMALE
 
 /obj/item/organ/torso/diona
-	name = "diona torso"
+	name = "狄俄娜躯干"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 	icon_state = BODY_TORSO
-	desc = "An organ."
+	desc = "一个器官。"
 
 	enable_glow = TRUE
 	enable_detail = TRUE
@@ -90,34 +90,34 @@
 
 //Cyborg
 /obj/item/organ/torso/cyborg
-	name = "cyborg torso"
+	name = "半机械人躯干"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 //Cyborg 2
 /obj/item/organ/torso/gopro
-	name = "advanced cyborg torso"
+	name = "高级半机械人躯干"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/torso/beefman
-	name = "beefman torso"
+	name = "血肉人躯干"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/beefman
 
 
 /obj/item/organ/torso/skeleton
-	name = "skeleton torso"
+	name = "骷髅躯干"
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/skeleton
 
@@ -127,18 +127,18 @@
 
 
 /obj/item/organ/torso/monkey
-	name = "monkey torso"
+	name = "猴子躯干"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/torso/monkey/female
 	icon_state = BODY_TORSO_FEMALE
 
 
 /obj/item/organ/torso/goblin
-	name = "goblin torso"
+	name = "地精躯干"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 	armor = /armor/goblin
 
@@ -147,9 +147,9 @@
 
 
 /obj/item/organ/torso/moth
-	name = "moth torso"
+	name = "蛾人躯干"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/torso/moth/female
 	icon_state = BODY_TORSO_FEMALE
@@ -157,11 +157,11 @@
 
 
 /obj/item/organ/torso/golem
-	name = "golem torso"
+	name = "魔像躯干"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
-	desc = "An organ."
+	desc = "一个器官。"
 
 /obj/item/organ/torso/abductor
-	name = "abductor torso"
+	name = "绑架者躯干"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
-	desc = "An organ."
+	desc = "一个器官。"

@@ -1,8 +1,8 @@
 /obj/item/organ/internal/brain
-	name = "brain"
+	name = "大脑"
 	id = BODY_BRAIN
 	icon_state = BODY_BRAIN
-	desc = "Produces thoughts. Requires oxygenated blood."
+	desc = "产生思维。需要含氧血液。"
 
 	attach_flag = BODY_HEAD
 
@@ -39,5 +39,5 @@
 
 
 /obj/item/organ/internal/brain/robotic
-	name = "robotic brain"
+	name = "机械大脑"
 	health = /health/obj/item/organ/synthetic

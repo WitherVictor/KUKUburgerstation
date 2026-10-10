@@ -1,6 +1,6 @@
 /plant_type/
-	var/name = "plant name"
-	var/desc = "plant description"
+	var/name = "植物名称"
+	var/desc = "植物说明"
 
 	var/plant_icon = 'icons/obj/structure/botany.dmi'
 	var/plant_icon_state = ""
@@ -28,8 +28,8 @@
 	var/can_slice = FALSE
 
 /plant_type/nitrogen_flower
-	name = "nitrogen flower"
-	desc = "An extremely cold flower filled with liquid nitrogen."
+	name = "液氮花"
+	desc = "一朵极寒的花，内部充满液氮。"
 	plant_icon_state = "nitrogen"
 	harvest_icon_state = "nitrogen_flower"
 	seed_icon_state = "seed"
@@ -43,8 +43,8 @@
 
 
 /plant_type/oxygen_fruit
-	name = "oxygen fruit"
-	desc = "An extremely cold watermelon-like plant filled with liquid oxygen."
+	name = "液氧果"
+	desc = "一种形似西瓜的极寒植物，内部充满液氧。"
 	plant_icon_state = "oxygen"
 	harvest_icon_state = "oxygen_fruit"
 	seed_icon_state = "seed"
@@ -57,8 +57,8 @@
 	typical_volume = 15
 
 /plant_type/wheat
-	name = "wheat"
-	desc = "The staple of everything."
+	name = "小麦"
+	desc = "万物的主食。"
 	plant_icon_state = "wheat"
 	harvest_icon_state = "wheat"
 	seed_icon_state = "wheat"
@@ -71,8 +71,8 @@
 
 
 /plant_type/sugarcane
-	name = "sugarcane chute"
-	desc = "Some sort of health sugar? Who knows."
+	name = "甘蔗茎"
+	desc = "某种健康糖？谁知道呢。"
 	plant_icon_state = "sugarcane"
 	harvest_icon_state = "sugarcane"
 	seed_icon_state = "sugarcane"
@@ -85,8 +85,8 @@
 
 
 /plant_type/liberty_cap
-	name = "liberty cap"
-	desc = "A magic mushroom that makes you feel LIBERTY."
+	name = "自由帽菇"
+	desc = "让你感受自由的魔法蘑菇。"
 	plant_icon_state = "liberty"
 	harvest_icon_state = "liberty_cap"
 	seed_icon_state = "liberty"
@@ -99,8 +99,8 @@
 
 
 /plant_type/chanterelle
-	name = "chanterelle mushroom"
-	desc = "A safe, edible mushroom."
+	name = "鸡油菌"
+	desc = "一种安全可食用的蘑菇。"
 	plant_icon_state = "chanter"
 	harvest_icon_state = "chanterelle"
 	seed_icon_state = "chanterelle"
@@ -113,8 +113,8 @@
 
 
 /plant_type/destroying_angel
-	name = "destroying angel mushroom"
-	desc = "An extremely poisonous white mushroom."
+	name = "毁灭天使菇"
+	desc = "一种剧毒的白色蘑菇。"
 	plant_icon_state = "destroying_angel"
 	harvest_icon_state = "destroying_angel"
 	seed_icon_state = "destroying_angel"
@@ -127,8 +127,8 @@
 
 
 /plant_type/fly_amanita
-	name = "fly amanita mushroom"
-	desc = "A toxic and hallucinagetic mushroom."
+	name = "毒蝇伞"
+	desc = "一种有毒、能致幻的蘑菇。"
 	plant_icon_state = "amanita"
 	harvest_icon_state = "fly_amanita"
 	seed_icon_state = "fly_amanita"
@@ -142,8 +142,8 @@
 
 
 /plant_type/glowshroom
-	name = "glowshroom"
-	desc = "A radioactive, glowing mushroom."
+	name = "荧光菇"
+	desc = "一种会发光、具有放射性的蘑菇。"
 	plant_icon_state = "glowshroom"
 	harvest_icon_state = "glowshroom"
 	seed_icon_state = "glowshroom"
@@ -155,8 +155,8 @@
 	typical_volume = 10
 
 /plant_type/glowcap
-	name = "glowcap"
-	desc = "A radioactive, glowing mushroom."
+	name = "荧光伞菇"
+	desc = "一种会发光、具有放射性的蘑菇。"
 	plant_icon_state = "glowcap"
 	harvest_icon_state = "glowcap"
 	seed_icon_state = "glowcap"
@@ -168,8 +168,8 @@
 	typical_volume = 10
 
 /plant_type/tomato
-	name = "tomato"
-	desc = "A classic red tomato plant."
+	name = "番茄"
+	desc = "经典的红番茄植株。"
 	plant_icon_state = "tomato"
 	harvest_icon_state = "tomato"
 	seed_icon_state = "tomato"
@@ -183,8 +183,8 @@
 	can_slice = TRUE
 
 /plant_type/lettuce
-	name = "lettuce"
-	desc = "A patch that grows lettuce."
+	name = "生菜"
+	desc = "一丛生菜。"
 	plant_icon_state = "lettuce"
 	harvest_icon_state = "lettuce"
 	seed_icon_state = "lettuce"
@@ -198,8 +198,8 @@
 	can_slice = TRUE
 
 /plant_type/cabbage
-	name = "cabbage"
-	desc = "A patch that grows cabbage."
+	name = "卷心菜"
+	desc = "一丛卷心菜。"
 	plant_icon_state = "cabbage"
 	harvest_icon_state = "cabbage"
 	seed_icon_state = "cabbage"
@@ -211,8 +211,8 @@
 	typical_volume = 30
 
 /plant_type/poppy
-	name = "breadseed poppy"
-	desc = "A flower that grows poppy."
+	name = "食籽罂粟"
+	desc = "会结出罂粟籽的花。"
 	plant_icon_state = "poppy"
 	harvest_icon_state = "poppy"
 	seed_icon_state = "poppy"
@@ -225,8 +225,8 @@
 	typical_volume = 10
 
 /plant_type/cannabis
-	name = "cannabis"
-	desc = "The green good good."
+	name = "大麻"
+	desc = "绿色的好东西。"
 	plant_icon_state = "cannabis"
 	harvest_icon_state = "cannabis"
 	seed_icon_state = "cannabis"
@@ -239,8 +239,8 @@
 	typical_volume = 10
 
 /plant_type/cannabis/life
-	name = "life cannabis"
-	desc = "The white good good."
+	name = "生命大麻"
+	desc = "白色的好东西。"
 	plant_icon_state = "whitecannabis"
 	harvest_icon_state = "whitecannabis"
 	seed_icon_state = "whitecannabis"
@@ -251,8 +251,8 @@
 	)
 
 /plant_type/cannabis/death
-	name = "death cannabis"
-	desc = "The black bad bad."
+	name = "死亡大麻"
+	desc = "黑色的坏东西。"
 	plant_icon_state = "blackcannabis"
 	harvest_icon_state = "blackcannabis"
 	seed_icon_state = "blackcannabis"
@@ -263,8 +263,8 @@
 	)
 
 /plant_type/corn
-	name = "corn"
-	desc = "I know why you're growing this, you monster"
+	name = "玉米"
+	desc = "我知道你种它是为了什么，你这个怪物。"
 	plant_icon_state = "corn"
 	harvest_icon_state = "corn"
 	seed_icon_state = "corn"
@@ -276,8 +276,8 @@
 	typical_volume = 10
 
 /plant_type/potato
-	name = "potato"
-	desc = "A staple food from many countries. Edible, fermentable, collectable?"
+	name = "土豆"
+	desc = "许多国家的主食。能吃，能酿酒，还能收藏？"
 	plant_icon_state = "potato"
 	harvest_icon_state = "potato"
 	seed_icon_state = "potato"
@@ -290,8 +290,8 @@
 	typical_volume = 10
 
 /plant_type/cactus_fruit
-	name = "cactus fruit"
-	desc = "A prickly plant native to Lavaland containing cactus juice."
+	name = "仙人掌果"
+	desc = "熔岩地带原生的带刺植物，含有仙人掌汁。"
 	plant_icon_state = "cactus"
 	harvest_icon_state = "cactus"
 	seed_icon_state = "cactus"
@@ -305,8 +305,8 @@
 	typical_volume = 50
 
 /plant_type/chili
-	name = "chili pepper"
-	desc = "Why do you eat plants that make your face hurt?"
+	name = "辣椒"
+	desc = "你为什么要吃这种辣得脸疼的植物？"
 	plant_icon_state = "chili"
 	harvest_icon_state = "chilipepper"
 	seed_icon_state = "chili"
@@ -318,8 +318,8 @@
 	typical_volume = 10
 
 /plant_type/chili/ghost
-	name = "ghost pepper"
-	desc = "Why do you eat plants that make your soul hurt?"
+	name = "魔鬼椒"
+	desc = "你为什么要吃这种辣得灵魂都疼的植物？"
 	plant_icon_state = "chili"
 	harvest_icon_state = "icepepper"
 	seed_icon_state = "chili_ghost"
@@ -332,8 +332,8 @@
 	typical_volume = 10
 
 /plant_type/polypore_mushroom
-	name = "polypore mushroom"
-	desc = "A strange grey mushroom. Harvested for the exterior skin."
+	name = "多孔菌"
+	desc = "一种奇怪的灰色蘑菇，人们采集它的外皮。"
 	plant_icon_state = "polypore"
 	harvest_icon_state = "polypore"
 	seed_icon_state = "polypore"
@@ -348,8 +348,8 @@
 
 
 /plant_type/porcini_mushroom
-	name = "porcini mushroom"
-	desc = "A strange leafy grey mushroom. Havested for the leaf-like part."
+	name = "牛肝菌"
+	desc = "一种奇怪的灰色蘑菇，带有叶状结构，人们采集它的叶状部分。"
 	plant_icon_state = "porcini"
 	harvest_icon_state = "porcini"
 	seed_icon_state = "porcini"
@@ -363,8 +363,8 @@
 	typical_volume = 20
 
 /plant_type/inocybe_mushroom
-	name = "inocybe mushroom"
-	desc = "A tall and skinny grey mushroom. Harvested for their caps."
+	name = "丝盖伞"
+	desc = "一种细长的灰色蘑菇，人们采集它的菌盖。"
 	plant_icon_state = "inocybe"
 	harvest_icon_state = "inocybe"
 	seed_icon_state = "inocybe"
@@ -377,8 +377,8 @@
 	typical_volume = 20
 
 /plant_type/embershroom_mushrrom
-	name = "ember mushroom"
-	desc = "A dark and skinny mushroom. Harvested for their stalks."
+	name = "余烬蘑菇"
+	desc = "一种细长的深色蘑菇，人们采集它的菌柄。"
 	plant_icon_state = "ember"
 	harvest_icon_state = "ember"
 	seed_icon_state = "ember"
@@ -392,8 +392,8 @@
 	typical_volume = 20
 
 /plant_type/forest_berry
-	name = "forest berry bush"
-	desc = "Magical!"
+	name = "森林浆果灌木"
+	desc = "充满魔力！"
 	plant_icon_state = "forest_berry"
 	harvest_icon_state = "forest_berry"
 	seed_icon_state = "seed"
@@ -404,8 +404,8 @@
 	typical_volume = 2
 
 /plant_type/forest_nut
-	name = "forest nut bush"
-	desc = "Magical!"
+	name = "森林坚果灌木"
+	desc = "充满魔力！"
 	plant_icon_state = "forest_nut"
 	harvest_icon_state = "forest_nut"
 	seed_icon_state = "seed"
@@ -416,8 +416,8 @@
 	typical_volume = 2
 
 /plant_type/snow_daisy
-	name = "snow daisy patch"
-	desc = "Livingwood Maker"
+	name = "雪雏菊丛"
+	desc = "活木制造者。"
 	plant_icon_state = "snow_daisy"
 	harvest_icon_state = "snow_daisy"
 	seed_icon_state = "seed"
@@ -428,8 +428,8 @@
 	typical_volume = 2
 
 /plant_type/space_cotton
-	name = "space cotton"
-	desc = "Something something racism"
+	name = "太空棉花"
+	desc = "总之就是些种族歧视的破梗。"
 	plant_icon_state = "space_cotton"
 	harvest_icon_state = "space_cotton"
 	seed_icon_state = "seed"
@@ -441,8 +441,8 @@
 	typical_volume = 2
 
 /plant_type/devil_shroom
-	name = "devils mushroom"
-	desc = "From a distant Rimworld"
+	name = "恶魔菇"
+	desc = "来自遥远的《环世界》。"
 	plant_icon_state = "devil_shroom"
 	harvest_icon_state = "devil_shroom"
 	seed_icon_state = "seed"

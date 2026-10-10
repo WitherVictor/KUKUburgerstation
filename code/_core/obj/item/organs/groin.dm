@@ -1,7 +1,7 @@
 /obj/item/organ/groin
-	name = "groin"
+	name = "腹股沟"
 	id = BODY_GROIN
-	desc = "An organ."
+	desc = "一个器官。"
 	icon_state = BODY_GROIN_MALE
 	worn_layer = LAYER_MOB_GROIN
 	inventories = list(
@@ -38,12 +38,12 @@
 	value = 0
 
 /obj/item/organ/groin/female
-	desc = "A groin. Female variant"
+	desc = "女性腹股沟。"
 	icon_state = BODY_GROIN_FEMALE
 
 //Reptile Feral
 /obj/item/organ/groin/reptile
-	name = "reptile groin"
+	name = "原始蜥蜴人腹股沟"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
 
 	armor = /armor/reptile
@@ -54,7 +54,7 @@
 
 //Reptile Advanced
 /obj/item/organ/groin/reptile_advanced
-	name = "reptile groin"
+	name = "蜥蜴人腹股沟"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
 
 	armor = /armor/reptile
@@ -64,7 +64,7 @@
 
 //Diona
 /obj/item/organ/groin/diona
-	name = "diona groin"
+	name = "狄俄娜腹股沟"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 	icon_state = BODY_GROIN
 
@@ -75,7 +75,7 @@
 
 //cyborg
 /obj/item/organ/groin/cyborg
-	name = "cyborg groin"
+	name = "半机械人腹股沟"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
 
 	armor = /armor/cyborg
@@ -83,7 +83,7 @@
 
 //cyborg2
 /obj/item/organ/groin/gopro
-	name = "advanced cyborg groin"
+	name = "高级半机械人腹股沟"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
 
 	armor = /armor/cyborg
@@ -92,7 +92,7 @@
 
 //Beefman
 /obj/item/organ/groin/beefman
-	name = "beef groin"
+	name = "血肉人腹股沟"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
 
 	armor = /armor/beefman
@@ -102,7 +102,7 @@
 
 //Skeleton
 /obj/item/organ/groin/skeleton
-	name = "skeleton groin"
+	name = "骷髅腹股沟"
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
 
 	armor = /armor/skeleton
@@ -114,7 +114,7 @@
 
 //Monkey
 /obj/item/organ/groin/monkey
-	name = "monkey groin"
+	name = "猴子腹股沟"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
 
 /obj/item/organ/groin/monkey/female
@@ -123,7 +123,7 @@
 
 //goblin
 /obj/item/organ/groin/goblin
-	name = "goblin groin"
+	name = "地精腹股沟"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
 
 	armor = /armor/goblin
@@ -134,7 +134,7 @@
 
 //Monkey
 /obj/item/organ/groin/moth
-	name = "moth groin"
+	name = "蛾人腹股沟"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
 
 /obj/item/organ/groin/moth/female
@@ -143,12 +143,12 @@
 
 //Golem
 /obj/item/organ/groin/golem
-	name = "golem groin"
+	name = "魔像腹股沟"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
 
 
 
 //abductor
 /obj/item/organ/groin/abductor
-	name = "abductor groin"
+	name = "绑架者腹股沟"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'

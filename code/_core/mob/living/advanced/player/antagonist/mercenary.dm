@@ -39,15 +39,15 @@ var/global/list/possible_merc_loadouts = list(
 		SStext.last_codenames -= codename_last
 		name = "[codename_first] [codename_last]"
 	else
-		name = "Generic Merc #[rand(1,90000)]"
+		name = "普通雇佣兵#[rand(1,90000)]"
 
 	setup_name()
 
-	to_chat(span("danger","You are a trained Mercenary hired by the Solarian Government tasked with securing owed taxes from NanoTrasen, non-lethally."))
-	to_chat(span("danger","Work with your team, if any, to fulton extract NanoTrasen Soldiers and equipment. Note that they must be laying on the floor alive in order to extract them. You are given lethal and non-lethal equipment to defend yourself."))
-	to_chat(span("danger","<h1>Killing NanoTrasen operatives is not recommended as it is considered an act of war. We will disable the damage-resistant NanoMachines in your body if we witness you kill a NanoTrasen soldier.</h1>"))
+	to_chat(span("danger","你是一名受太阳系政府雇用、训练有素的雇佣兵，任务是以非致命手段向纳米传讯追缴欠税。"))
+	to_chat(span("danger","若有队友，请与他们合作，使用富尔顿回收纳米传讯士兵和装备。回收士兵时，对方必须仍然活着并倒在地上。你配有致命和非致命装备，用于自卫。"))
+	to_chat(span("danger","<h1>不建议杀害纳米传讯特工，因为这会被视为战争行为。如果我们发现你杀害纳米传讯士兵，就会停用你体内提供伤害抗性的纳米机械。</h1>"))
 
-	do_say("; This is [name]. Kept you waiting, huh?")
+	do_say("; 我是[name]。让你久等了，嗯？")
 
 /mob/living/advanced/player/antagonist/merc/setup_name() //Don't do anything special as it was already generated.
 	return TRUE

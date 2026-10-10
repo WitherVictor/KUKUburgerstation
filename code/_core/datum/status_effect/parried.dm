@@ -1,6 +1,6 @@
 /status_effect/parried
-	name = "Parried"
-	desc = "You're parried!"
+	name = "被招架"
+	desc = "你的攻击被招架了！"
 	id = PARRIED
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(4)

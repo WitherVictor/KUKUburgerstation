@@ -1,6 +1,6 @@
 /obj/item/material/sheet
-	name = "sheet"
-	desc = "I am error."
+	name = "板材"
+	desc = "我是个错误。"
 	icon = 'icons/obj/item/material.dmi'
 	icon_state = "sheet"
 
@@ -14,12 +14,12 @@
 /obj/item/material/sheet/update_icon()
 	var/material/M = SSmaterials.all_materials[material_id]
 	if(!M)
-		name = "ERROR sheet"
+		name = "异常板材"
 		log_error("Warning! [src.get_debug_name()] had incorrect material type \"[material_id]\"!")
 	else
-		name = "[deunderscore(M.name)] sheet"
-		desc = "If you build it..."
-		desc_extended = "A sheet made of [deunderscore(M.name)]. Useful for building and crafting."
+		name = "[M.display_name]板"
+		desc = "只要你把它建好……"
+		desc_extended = "一张由[M.display_name]制成的板材，可用于建造和制作物品。"
 		icon_state = "[M.icon_state_sheet]_[min(CEILING(amount/10,1),amount_max_icon)]"
 		color = M.color
 	return ..()
@@ -38,7 +38,7 @@
 			INITIALIZE(R)
 			GENERATE(R)
 			FINALIZE(R)
-			activator.visible_message(span("notice","\The [activator.name] cuts some [src.name] into some [R.name]s."),span("notice","You cut \the [src.name] into 4 [R.name]."))
+			activator.visible_message(span("notice","[activator.name]将[src.name]剪成了一些[R.name]。"),span("notice","你将[src.name]剪成了4根[R.name]。"))
 			add_item_count(-1)
 			R.Move(get_turf(I))
 			return TRUE

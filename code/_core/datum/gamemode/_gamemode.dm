@@ -1,6 +1,6 @@
 /gamemode/
-	var/name = "Gamemode Name"
-	var/desc = "Gamemode Description"
+	var/name = "游戏模式名称"
+	var/desc = "游戏模式说明"
 
 	var/list/objective/crew_active_objectives = list()
 	var/list/objective/crew_completed_objectives = list()
@@ -14,7 +14,7 @@
 
 	var/state = GAMEMODE_PRELOAD
 
-	var/objective_text = "No objectives listed."
+	var/objective_text = "暂无任务目标。"
 
 	var/next_objective_update = 0
 
@@ -98,9 +98,9 @@
 					"gamemode_announce_code",\
 					SECONDS_TO_DECISECONDS(10),\
 					.proc/announce,\
-					"Station Alert System",\
-					"Alert Level Increased",\
-					"Attention. Condition Blue set throughout the station. Exercise Term: Fade Out.",\
+					"站内警报系统",\
+					"警戒等级提升",\
+					"请注意，全站进入蓝色警报状态。演习代号：渐隐。",\
 					ANNOUNCEMENT_STATION,\
 					'sound/voice/announcement/code_blue.ogg'\
 				)
@@ -109,9 +109,9 @@
 					"gamemode_announce_code",\
 					SECONDS_TO_DECISECONDS(10),\
 					.proc/announce,\
-					"Station Alert System",\
-					"Alert Level Increased",\
-					"Attention. Condition Amber set throughout the station. Exercise Term: Double Take. Additional Enemy Reinforcements detected in route to Area of Operations.",\
+					"站内警报系统",\
+					"警戒等级提升",\
+					"请注意，全站进入琥珀色警报状态。演习代号：再度确认。侦测到更多敌军增援正在前往作战区域。",\
 					ANNOUNCEMENT_STATION,\
 					'sound/voice/announcement/code_amber.ogg'\
 				)
@@ -120,9 +120,9 @@
 					"gamemode_announce_code",\
 					SECONDS_TO_DECISECONDS(10),\
 					.proc/announce,\
-					"Station Alert System",\
-					"Alert Level Increased",\
-					"Warning. Warning. Condition Red set throughout the station. Exercise Term: Fast Pace. All personnel to prepare for potential borders on station..",\
+					"站内警报系统",\
+					"警戒等级提升",\
+					"警告，警告！全站进入红色警报状态。演习代号：快步。全体人员做好敌军登站的准备。",\
 					ANNOUNCEMENT_STATION,\
 					'sound/voice/announcement/code_red.ogg'\
 				)
@@ -131,9 +131,9 @@
 					"gamemode_announce_code",\
 					SECONDS_TO_DECISECONDS(10),\
 					.proc/announce,\
-					"Station Alert System",\
-					"Alert Level Increased",\
-					"Warning. Warning. Condition Delta set throughout the station. Exercise Term: Cocked Pistol. Nuclear Strike is imminent. All personnel are ordered to evacuate the Area of Operations.",\
+					"站内警报系统",\
+					"警戒等级提升",\
+					"警告，警告！全站进入德尔塔警报状态。演习代号：手枪待击。核打击即将到来，命令全体人员撤离作战区域。",\
 					ANNOUNCEMENT_STATION,\
 					'sound/voice/announcement/code_delta.ogg'\
 				)
@@ -193,25 +193,25 @@
 
 	for(var/k in crew_active_objectives)
 		var/objective/O = k
-		objective_text += "[O.desc] (ACTIVE)[O.is_new ? div("good bold"," (NEW)") : ""]<br>"
+		objective_text += "[O.desc]（进行中）[O.is_new ? div("good bold","（新任务）") : ""]<br>"
 		if(O.is_new) has_new = TRUE
 		O.is_new = FALSE
 
 	for(var/k in crew_completed_objectives)
 		var/objective/O = k
-		objective_text += "[O.desc] (COMPLETED)[O.is_new ? div("good bold"," (NEW)") : ""]<br>"
+		objective_text += "[O.desc]（已完成）[O.is_new ? div("good bold","（新任务）") : ""]<br>"
 		if(O.is_new) has_new = TRUE
 		O.is_new = FALSE
 
 	for(var/k in crew_failed_objectives)
 		var/objective/O = k
-		objective_text += "[O.desc] (FAILED)[O.is_new ? div("good bold"," (NEW)") : ""]<br>"
+		objective_text += "[O.desc]（已失败）[O.is_new ? div("good bold","（新任务）") : ""]<br>"
 		if(O.is_new) has_new = TRUE
 		O.is_new = FALSE
 
 	announce(
-		"Central Command Mission Update",
-		has_new ? "New Objectives Added" : "Objectives Updated",
+		"中央指挥部任务更新",
+		has_new ? "新增任务目标" : "任务目标已更新",
 		objective_text,
 		sound_to_play = 'sound/alert/airplane.ogg')
 

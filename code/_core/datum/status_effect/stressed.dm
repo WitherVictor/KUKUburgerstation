@@ -1,6 +1,6 @@
 /status_effect/stressed
-	name = "Stressed"
-	desc = "You're stressed!"
+	name = "精神紧绷"
+	desc = "你精神紧绷！"
 	id = STRESSED
 
 	minimum = SECONDS_TO_DECISECONDS(10)

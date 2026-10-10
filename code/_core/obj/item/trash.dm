@@ -1,7 +1,7 @@
 /obj/item/trash
-	name = "trash"
-	desc = "Useless."
-	desc_extended = "Wrappers, cigarette butts and any remains that have no use other than to be recycled. Dispose responsibly."
+	name = "垃圾"
+	desc = "没用了。"
+	desc_extended = "包装纸、烟头，以及其他只能回收的残余物。请妥善处理。"
 	icon = 'icons/obj/item/trash.dmi'
 	icon_state = "candy"
 	value = 0

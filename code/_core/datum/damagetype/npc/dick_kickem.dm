@@ -1,5 +1,5 @@
 /damagetype/npc/dick_kickem
-	attack_verbs = list("dick kick")
+	attack_verbs = list("踢裆")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/cqc/crashing_wave_kick.ogg',

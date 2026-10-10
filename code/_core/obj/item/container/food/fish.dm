@@ -1,7 +1,7 @@
 /obj/item/container/edible/fishing
-	name = "fish"
-	desc = "morning!! if it was a GOOD morning i'd be FISHING"
-	desc_extended = "A fresh catch."
+	name = "鱼"
+	desc = "早啊！！要真是个美好的早晨，我现在就该在钓鱼。"
+	desc_extended = "新鲜的渔获。"
 	icon = 'icons/obj/item/consumable/food/fish.dmi'
 	icon_state = "fish"
 	value = 100
@@ -21,7 +21,7 @@
 		if(S.reagents) src.reagents.transfer_reagents_to(S.reagents,original_volume)
 		FINALIZE(S)
 		animate(S,pixel_x=rand(-8,8),pixel_y=rand(-8,8),time=5)
-		attacker.visible_message(span("notice","\The [attacker.name] prepares \the [src.name]."),span("notice","You prepare \the [src.name]."))
+		attacker.visible_message(span("notice","[attacker.name]处理好了[src.name]。"),span("notice","你处理好了[src.name]。"))
 		if(icon_state == "goldfish")
 			var/obj/item/currency/telecrystals/C = new(get_turf(src))
 			FINALIZE(C)
@@ -30,7 +30,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/generic
-	name = "cool fish"
+	name = "酷鱼"
 	icon_state = "fish"
 
 /obj/item/container/edible/fishing/generic/Generate()
@@ -39,7 +39,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/salmon
-	name = "salmon"
+	name = "鲑鱼"
 	icon_state = "salmon"
 
 /obj/item/container/edible/fishing/salmon/Generate()
@@ -48,7 +48,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/catfish
-	name = "catfish"
+	name = "鲶鱼"
 	icon_state = "catfish"
 
 /obj/item/container/edible/fishing/catfish/Generate()
@@ -57,7 +57,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/babycarp
-	name = "baby carp"
+	name = "鲤鱼苗"
 	icon_state = "babycarp"
 
 /obj/item/container/edible/fishing/babycarp/Generate()
@@ -66,7 +66,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/clownfish
-	name = "clown fish"
+	name = "小丑鱼"
 	icon_state = "clownfish"
 
 /obj/item/container/edible/fishing/clownfish/Generate()
@@ -76,7 +76,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/eel
-	name = "eel"
+	name = "鳗鱼"
 	icon_state = "electric_eel"
 
 /obj/item/container/edible/fishing/eel/Generate()
@@ -86,7 +86,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/glofish
-	name = "glofish"
+	name = "荧光鱼"
 	icon_state = "glofish"
 
 /obj/item/container/edible/fishing/glofish/Generate()
@@ -96,7 +96,7 @@
 	return ..()
 
 /obj/item/container/edible/fishing/goldfish
-	name = "goldfish"
+	name = "金鱼"
 	icon_state = "goldfish"
 
 /obj/item/container/edible/fishing/goldfish/Generate()
@@ -105,8 +105,8 @@
 	return ..()
 
 /obj/item/container/edible/fishing/shark
-	name = "shark"
-	desc = "what"
+	name = "鲨鱼"
+	desc = "什么玩意？"
 	icon_state = "shark"
 
 /obj/item/container/edible/fishing/shark/Generate()

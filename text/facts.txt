@@ -1,11 +1,11 @@
-Burgerstation was created as a joke during December 2019. Some scholars say it still is.
-Burgerstation was going to be a PvP heavy RPG called "The Realm of Nar'sie" but they thought that was a bad idea.
-The early tests for Burgerstation was a team-based deathmatch with limited weapons.
-BurgerBB has two todo lists; one on Trello and one on a noteboard attached to a wall near his computer.
-BurgerBB made all the menu music for Burgerstation, but can't make combat music to save his life.
-The server running Burgerstation is hosted inside a cardboard pizza box. This isn't a joke.
-The first Burgerstation map was a detailess flat grass area. The first public Burgerstation map was a bunch of houses with sabre swords in them.
-The sabre sword was the first weapon in Burgerstation.
-You can download and play the very first version of Burgerstation here: https://github.com/BurgerLUA/burgerstation/releases/tag/1.1
-Did you know that Byond Games can be played in your browser? I don't recommend it.
-BurgerBB, being the sole Host, Head Admin, and Head developer, is one of the few hosts who has access to Hostchat as well as the Headcoderbus.
+汉堡站诞生于 2019 年 12 月，起初只是个玩笑。有些学者认为它现在也是。
+汉堡站原本打算做成一款名为“纳尔西之域”、以玩家对战为主的角色扮演游戏，后来觉得这主意不太好。
+汉堡站早期的试验版本是一个武器种类有限的团队死斗游戏。
+BurgerBB 有两份待办清单：一份在 Trello 上，另一份在电脑旁墙上的记事板上。
+汉堡站的菜单音乐全是 BurgerBB 做的，可要他做战斗音乐，简直要了他的命。
+运行汉堡站的服务器放在一个披萨纸盒里。这可不是开玩笑。
+汉堡站最初的地图是一片没有细节的平坦草地。第一张公开地图上有一堆房子，里面放着军刀。
+军刀是汉堡站的第一件武器。
+你可以在这里下载并游玩汉堡站的最初版本：https://github.com/BurgerLUA/burgerstation/releases/tag/1.1
+你知道 BYOND 游戏可以在浏览器里玩吗？不过我不推荐。
+BurgerBB 独自兼任服主、首席管理员和首席开发者，是少数同时能进入服主聊天频道和首席程序员交流群的服主之一。

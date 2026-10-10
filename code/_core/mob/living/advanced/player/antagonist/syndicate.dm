@@ -9,13 +9,13 @@
 
 /mob/living/advanced/player/antagonist/syndicate/Finalize()
 	. = ..()
-	to_chat(span("danger","You are a highly skilled syndicate agent tasked with sabotaging and destroying the incoming NanoTrasen forces with extreme prejudice."))
-	to_chat(span("danger","Work with your team, if any, and purchase your equipment from the donksoft vendor next to where you spawn. Some extra equipment is also lying around the base as well."))
-	to_chat(span("danger","<h1>An explosive implant was implanted in your body that triggers when you leave the mission area. Avoid getting captured!</h1>"))
+	to_chat(span("danger","你是一名训练有素的辛迪加特工，任务是不惜一切代价破坏并消灭来袭的纳米传讯部队。"))
+	to_chat(span("danger","若有队友，请与他们合作。你可以从出生点旁的咚克软件售货机购买装备，基地里也散放着一些额外装备。"))
+	to_chat(span("danger","<h1>你的体内装有爆炸植入体，离开任务区域就会引爆。别被俘虏！</h1>"))
 
 /mob/living/advanced/player/antagonist/syndicate/setup_name()
 	. = ..()
-	name = "Operative [real_name]"
+	name = "特工[real_name]"
 	return TRUE
 
 

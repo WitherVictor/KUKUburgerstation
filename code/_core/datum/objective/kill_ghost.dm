@@ -1,5 +1,5 @@
 /objective/kill_ghost
-	name = "Kill Ghost"
+	name = "消灭幽灵"
 	credit_reward = 1000
 	burgerbux_reward = 1
 	points_reward = 25
@@ -35,7 +35,7 @@
 	return pick(valid_targets)
 
 /objective/kill_ghost/get_description()
-	return "Stop the haunting of [english_list(get_locations())] . Location: [english_list(get_locations(),"Unknown")]."
+	return "消灭幽灵，终结闹鬼事件。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/kill_ghost/start()
 	var/mob/living/L = get_random_target()

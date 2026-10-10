@@ -68,7 +68,7 @@
 	if(!max_length) max_length = CONFIG("MAX_MESSAGE_LENGTH",512)
 
 	if(max_length)
-		input = copytext(input,1,max_length)
+		input = copytext_char(input,1,max_length)
 
 	if(extra)
 		input = replace_characters(input, list("\n"=" ","\t"=" "))
@@ -100,23 +100,23 @@
 	input = sanitize(input,max_length,encode=encode,trim=trim,extra=extra)
 
 	if(length(input) < min_length)
-		activator?.to_chat(span("danger","Your text was too short!"))
+		activator?.to_chat(span("danger","输入的文字太短了！"))
 		return FALSE
 
 	if(check_name && SSconfig && SSconfig.forbidden_characters_name && SSconfig.forbidden_characters_name.Find(input))
-		var/warning_to_send = CONFIG("FORBIDDEN_CHARACTERS_NAME_WARNING","That is not an acceptable name.")
+		var/warning_to_send = CONFIG("FORBIDDEN_CHARACTERS_NAME_WARNING","这个名字不符合要求。")
 		if(warning_to_send)
 			activator?.to_chat(span("warning",warning_to_send))
 		return FALSE
 
 	if(check_characters && SSconfig && SSconfig.forbidden_characters && SSconfig.forbidden_characters.Find(input)) //Буквально 1984
-		var/warning_to_send = CONFIG("FORBIDDEN_CHARACTERS_WARNING","That is not an acceptable text.")
+		var/warning_to_send = CONFIG("FORBIDDEN_CHARACTERS_WARNING","输入的文字不符合要求。")
 		if(warning_to_send)
 			activator?.to_chat(span("warning",warning_to_send))
 		return FALSE
 
 	if(SSbadwords.has_badword(input))
-		activator?.to_chat(span("danger","Your text \"[input]\" contains one or more forbidden words and cannot be used."))
+		activator?.to_chat(span("danger","输入的文字“[input]”包含违禁词，无法使用。"))
 		return FALSE
 
 	return input
@@ -146,12 +146,12 @@
 
 //Returns a string with the first element of the string capitalized.
 /proc/capitalize(var/t as text)
-	return uppertext(copytext(t, 1, 2)) + copytext(t, 2)
+	return uppertext(copytext_char(t, 1, 2)) + copytext_char(t, 2)
 
 /proc/periodize(var/t as text)
-	var/last_char = t[length(t)]
+	var/last_char = copytext_char(t,-1)
 
-	var/static/list/valid_ends = make_associative(list("~","-",".",",","?","!"))
+	var/static/list/valid_ends = make_associative(list("~","-",".",",","?","!","。","，","？","！","～","…"))
 
 	if(!valid_ends[last_char])
 		t += "."
@@ -164,7 +164,7 @@
 
 
 /proc/getCharacter(string, pos=1) //Stolen from goon.
-	return ascii2text(text2ascii(string, pos))
+	return copytext_char(string,pos,pos+1)
 
 
 /proc/has_prefix(var/haystack,var/needle)
@@ -180,19 +180,19 @@
 /proc/get_pronoun_he_she_it(var/mob/M)
 	switch(M.gender)
 		if(MALE)
-			return "he"
+			return "他"
 		if(FEMALE)
-			return "she"
+			return "她"
 
-	return "it"
+	return "它"
 
 /proc/get_pronoun_his_her_their(var/mob/M)
 	switch(M.gender)
 		if(MALE)
-			return "his"
+			return "他的"
 		if(FEMALE)
-			return "her"
-	return "their"
+			return "她的"
+	return "它的"
 
 /proc/proper_url_encode(var/input)
 	return url_encode(replacetextEx(input,"\n",""))

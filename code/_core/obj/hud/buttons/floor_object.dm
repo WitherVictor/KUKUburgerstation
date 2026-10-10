@@ -1,5 +1,5 @@
 /obj/hud/button/floor_object
-	name = "floor object"
+	name = "地面物品"
 	var/atom/associated_object //set before the object is initialized
 	var/atom/associated_loc //set before the object is initialized
 
@@ -50,7 +50,7 @@
 	. = ..()
 
 	if(!associated_object)
-		name = "missing object"
+		name = "物品不存在"
 		color = "#888888"
 		desc_extended = initial(desc_extended)
 	else

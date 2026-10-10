@@ -1,6 +1,6 @@
 /status_effect/painkiller
-	name = "Painkiller"
-	desc = "You're under the influence of painkillers!"
+	name = "镇痛"
+	desc = "止痛药正在你体内发挥作用！"
 	id = PAINKILLER
 
 	minimum = SECONDS_TO_DECISECONDS(10)

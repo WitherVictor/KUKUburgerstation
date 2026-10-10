@@ -1,5 +1,5 @@
 /obj/hud/map
-	name = "map"
+	name = "地图"
 	icon_state = null
 	screen_loc = "CENTER+0.5,CENTER+0.5"
 
@@ -48,7 +48,7 @@
 			I.pixel_x = SL.x - 16
 			I.pixel_y = SL.y - 16
 			if(SL.linked_computer)
-				I.maptext = "<center><font color='white' style='-dm-text-outline: 1 black'>Landing Zone [SL.linked_computer.shuttle_number]</center>"
+				I.maptext = "<center><font color='white' style='-dm-text-outline: 1 black'>着陆区 [SL.linked_computer.shuttle_number]</center>"
 			add_overlay(I)
 
 		for(var/k in SSshuttle.all_shuttle_controlers)
@@ -72,7 +72,7 @@
 	if(desired_z > 0)
 		current_z = desired_z
 		icon = SSmap.z_icons[current_z]
-		name = "map of z [current_z]"
+		name = "第 [current_z] 层地图"
 
 	current_zoom = round(clamp(current_zoom,1,5),1)
 	offset_x = round(clamp(offset_x,0,world.maxx),1)
@@ -120,7 +120,7 @@
 
 		if(best_marker && connected_background.linked_shuttle_controller.set_destination(activator,best_marker))
 			update_sprite()
-			activator.to_chat(span("notice","New shuttle destination selected: [best_marker.name] [best_marker.linked_computer.shuttle_number]."))
+			activator.to_chat(span("notice","已选择新的穿梭机目的地：[best_marker.name] [best_marker.linked_computer.shuttle_number]。"))
 
 		return TRUE
 
@@ -128,30 +128,30 @@
 	if(connected_background?.linked_pod)
 		var/turf/T = locate(x_pos,y_pos,z_pos)
 		if(!T)
-			activator.to_chat(span("warning","Error: Invalid location ([x_pos],[y_pos],[z_pos])."))
+			activator.to_chat(span("warning","错误：位置无效（[x_pos],[y_pos],[z_pos]）。"))
 		else
 			var/turf/safe_check = get_step(T,SOUTH)
 			if(!safe_check || safe_check.density)
-				activator.to_chat(span("warning","Error: Unsafe location."))
+				activator.to_chat(span("warning","错误：该位置不安全。"))
 			else
 				connected_background.x_drop = x_pos
 				connected_background.y_drop = y_pos
 				connected_background.z_drop = z_pos
 				update_sprite()
-				activator.to_chat(span("notice","Coords set to: ([x_pos],[y_pos],[z_pos]); Area: [T.loc.name]."))
+				activator.to_chat(span("notice","坐标已设为（[x_pos],[y_pos],[z_pos]）；区域：[T.loc.name]。"))
 		return TRUE
 
 
 	var/turf/T = locate(x_pos,y_pos,z_pos)
 	if(!T)
-		activator.to_chat(span("warning","Failed to give valid information on coords ([x_pos],[y_pos],[z_pos])."))
+		activator.to_chat(span("warning","无法获取坐标（[x_pos],[y_pos],[z_pos]）的有效信息。"))
 	else
-		activator.to_chat(span("notice","Coords: ([x_pos],[y_pos],[z_pos]); Area: [T.loc.name]."))
+		activator.to_chat(span("notice","坐标：（[x_pos],[y_pos],[z_pos]）；区域：[T.loc.name]。"))
 		if(istype(activator,/mob/abstract/observer))
 			activator.force_move(T)
 
 /obj/hud/button/map_background
-	name = "map background"
+	name = "地图背景"
 	icon = null
 	icon_state = null
 
@@ -250,7 +250,7 @@
 
 
 /obj/hud/button/map_control/
-	name = "map control"
+	name = "地图控制"
 	icon = 'icons/hud/hud.dmi'
 
 	plane = PLANE_HUD
@@ -313,61 +313,61 @@
 	. = ..()
 
 /obj/hud/button/map_control/close
-	name = "close map"
+	name = "关闭地图"
 	icon_state = "close"
 	close = 1
 	screen_loc = "CENTER+3,BOTTOM+2"
 
 /obj/hud/button/map_control/launch
-	name = "launch"
+	name = "发射"
 	icon_state = "launch"
 	launch = 1
 	screen_loc = "CENTER-2,BOTTOM+2"
 
 /obj/hud/button/map_control/base
-	name = "return to base"
+	name = "返回基地"
 	icon_state = "base"
 	launch = 1
 	close = 1
 	screen_loc = "CENTER-3,BOTTOM+2"
 
 /obj/hud/button/map_control/up
-	name = "scroll up"
+	name = "向上滚动"
 	icon_state = "arrow"
 	dir = NORTH
 	offset_y = 1
 	screen_loc = "CENTER,BOTTOM+3"
 
 /obj/hud/button/map_control/down
-	name = "scroll down"
+	name = "向下滚动"
 	icon_state = "arrow"
 	dir = SOUTH
 	offset_y = -1
 	screen_loc = "CENTER,BOTTOM+2"
 
 /obj/hud/button/map_control/right
-	name = "scroll right"
+	name = "向右滚动"
 	icon_state = "arrow"
 	dir = EAST
 	offset_x = 1
 	screen_loc = "CENTER+1,BOTTOM+2"
 
 /obj/hud/button/map_control/left
-	name = "scroll left"
+	name = "向左滚动"
 	icon_state = "arrow"
 	dir = WEST
 	offset_x = -1
 	screen_loc = "CENTER-1,BOTTOM+2"
 
 /obj/hud/button/map_control/zoom_in
-	name = "zoom in"
+	name = "放大"
 	icon_state = "plus"
 	dir = NORTH
 	zoom = 1
 	screen_loc = "CENTER+2,BOTTOM+3"
 
 /obj/hud/button/map_control/zoom_out
-	name = "zoom out"
+	name = "缩小"
 	icon_state = "minus"
 	dir = NORTH
 	zoom = -1

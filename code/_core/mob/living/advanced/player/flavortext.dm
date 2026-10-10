@@ -37,47 +37,47 @@
 		weight_fat *= 1.2
 		weight_muscle *= 0.8
 
-	var/returning_text = "You see \a "
+	var/returning_text = "你看到一名"
 
 	switch(height)
 		if(-INFINITY to 130)
-			returning_text += "extremely short"
+			returning_text += "极其矮小"
 		if(130 to 150)
-			returning_text += "very short"
+			returning_text += "十分矮小"
 		if(150 to 170)
-			returning_text += "short"
+			returning_text += "矮小"
 		if(170 to 180)
-			returning_text += "relatively tall"
+			returning_text += "比较高挑"
 		if(180 to 190)
-			returning_text += "tall"
+			returning_text += "高挑"
 		if(190 to 200)
-			returning_text += "very tall"
+			returning_text += "十分高挑"
 		if(200 to INFINITY)
-			returning_text += "extremely tall"
+			returning_text += "极其高大"
 
 	switch(height/weight_total)
 		if(-INFINITY to 0.5)
-			returning_text += " but "
+			returning_text += "，却"
 		if(0.5 to 1.5)
-			returning_text += " and "
+			returning_text += "，而且"
 		if(1.5 to INFINITY)
-			returning_text += " but "
+			returning_text += "，却"
 
 	switch(weight_total)
 		if(-INFINITY to 40)
-			returning_text += "incredibly skinny"
+			returning_text += "骨瘦如柴"
 		if(40 to 60)
-			returning_text += "skinny"
+			returning_text += "瘦削"
 		if(60 to 80)
-			returning_text += "lithe"
+			returning_text += "身形轻盈"
 		if(80 to 110)
-			returning_text += "medium-built"
+			returning_text += "体格中等"
 		if(110 to 130)
-			returning_text += "large"
+			returning_text += "体格壮硕"
 		if(130 to INFINITY)
-			returning_text += "wide"
+			returning_text += "体格宽厚"
 
-	returning_text += " [S.name]."
+	returning_text += "的[S.name]。"
 
 	return returning_text
 

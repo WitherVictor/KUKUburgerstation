@@ -1,9 +1,9 @@
 /reagent/medicine/painkiller/
-	name = "Painkiller"
-	desc = "A generic painkiller."
+	name = "止痛药"
+	desc = "一种普通止痛药。"
 	color = "#880000"
 	alpha = 225
-	flavor = "pure painkilling"
+	flavor = "纯粹的镇痛感"
 	metabolism_stomach = 5/30
 	metabolism_blood = 5/15
 	overdose_threshold = 15
@@ -50,12 +50,12 @@
 
 
 /reagent/medicine/painkiller/opium
-	name = "Opium"
-	desc = "A medicinal, addictive chemical found in poppies and some alien plants. Used in making opioids."
+	name = "鸦片"
+	desc = "一种具有药用价值且会成瘾的化学物质，存在于罂粟和某些外星植物中，可用于制造阿片类药物。"
 	color = "#913A00"
 	alpha = 200
 
-	flavor = "opium"
+	flavor = "鸦片"
 
 	metabolism_blood = 2/60 // Lasts a minute per 2u
 	metabolism_stomach = 4/60 // Lasts a minute per 4u
@@ -77,12 +77,12 @@
 	addiction_threshold = 20
 
 /reagent/medicine/painkiller/morphine
-	name = "Morphine"
-	desc = "A potent painkilling and addictive chemical extracted from opium in a pure form. More stronger and addictive than opium."
+	name = "吗啡"
+	desc = "从鸦片中提纯的强效镇痛物质，比鸦片作用更强，也更易成瘾。"
 	color = "#C2D1C5"
 	alpha = 225
 
-	flavor = "opium"
+	flavor = "鸦片"
 
 	metabolism_blood = 2/60 // Lasts a minute per 2u
 	metabolism_stomach = 4/60 // Lasts a minute per 4u
@@ -104,12 +104,12 @@
 	blood_toxicity_multiplier = 3
 
 /reagent/medicine/painkiller/assprin
-	name = "Assprin"
-	desc = "A generic painkiller."
+	name = "屁司匹林"
+	desc = "一种普通止痛药。"
 	color = "#D1DBDB"
 	alpha = 255
 
-	flavor = "ass"
+	flavor = "屁股"
 
 	metabolism_stomach = 10/60 // Takes a minute to metabolize 10u
 	metabolism_blood = 20/60 // Takes a minute to metabolize 20u

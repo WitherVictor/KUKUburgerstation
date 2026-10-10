@@ -1,9 +1,9 @@
 /obj/item/crafting_bench/filter
-	name = "portable filtering device"
+	name = "便携过滤器"
 	icon = 'icons/obj/item/ore.dmi'
 	icon_state = "filter"
-	desc= "Another thing that needs instructions."
-	desc_extended = "It filters chems out of some things into another! Alt-click to set the filter size!"
+	desc= "又是个得看说明书的东西。"
+	desc_extended = "将物品中的化学试剂过滤到另一个容器中！按住Alt键点击可设置过滤孔径！"
 
 	inventories = list(
 		/obj/hud/inventory/crafting/slotB1,
@@ -36,18 +36,18 @@
 			var/input_name = "[i]"
 			switch(i)
 				if(0)
-					input_name = "[input_name](fine)"
+					input_name = "[input_name]（细滤）"
 				if(1)
-					input_name = "[input_name](dense)"
+					input_name = "[input_name]（粗滤）"
 			if(filter_setting == i)
 				current_setting = input_name
 			possible_inputs[input_name] = i
-		possible_inputs["Cancel"] = "Cancel"
-		var/desired_input = input("What filter setting would you like to choose?","Filter Setting",current_setting) as null|anything in possible_inputs
-		if(!desired_input || desired_input == "Cancel")
+		possible_inputs["取消"] = "Cancel"
+		var/desired_input = input("请选择过滤孔径。","过滤设置",current_setting) as null|anything in possible_inputs
+		if(!desired_input || possible_inputs[desired_input] == "Cancel")
 			return TRUE
 		filter_setting = possible_inputs[desired_input]
-		activator.to_chat(span("notice","You set the filter to [desired_input]."))
+		activator.to_chat(span("notice","你将过滤孔径设为[desired_input]。"))
 		return TRUE
 
 	. = ..()
@@ -63,7 +63,7 @@
 			break
 
 	if(!C)
-		activator.to_chat(span("warning","You're missing a valid container in the product slot!"))
+		activator.to_chat(span("warning","请在成品槽放入可用的收集容器！"))
 		return FALSE
 
 	var/list/item_table = generate_crafting_table(activator,src)
@@ -97,7 +97,7 @@
 		C.reagents.update_container(activator)
 		C.reagents.process_recipes(activator)
 	else
-		activator.to_chat(span("warning","\The [src.name] could not filter anything!"))
+		activator.to_chat(span("warning","[src.name]没能滤出任何东西！"))
 
 	return TRUE
 

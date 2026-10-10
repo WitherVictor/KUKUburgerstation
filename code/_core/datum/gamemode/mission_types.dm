@@ -1,5 +1,5 @@
 /gamemode/mission/syndicate
-	name = "Mission - Syndicate"
+	name = "任务模式：辛迪加"
 	gamemode_horde_data = /horde_data/syndicate
 
 	interior_corpse_type = /mob/living/advanced/npc/citizen
@@ -12,7 +12,7 @@
 
 
 /gamemode/mission/zombie
-	name = "Mission - Zombies + Blob"
+	name = "任务模式：僵尸与异形菌毯"
 	gamemode_horde_data = /horde_data/zombies
 
 	interior_corpse_type = /mob/living/advanced/npc/zombie/normal/decapitated
@@ -29,7 +29,7 @@
 			break
 
 /gamemode/mission/xeno
-	name = "Mission - Xenomorphs + Soldiers"
+	name = "任务模式：异形与士兵"
 	gamemode_horde_data = /horde_data/xeno_plus_soliders
 
 	interior_corpse_type = /mob/living/advanced/npc/citizen
@@ -41,7 +41,7 @@
 	add_objective(/objective/artifact)
 
 /gamemode/mission/revolutionaries
-	name = "Mission - Revolutionaries"
+	name = "任务模式：革命军"
 	gamemode_horde_data = /horde_data/revolutionary
 
 	interior_corpse_type = /mob/living/advanced/npc/citizen
@@ -53,7 +53,7 @@
 	add_objective(/objective/artifact)
 
 /gamemode/mission/raging_mages
-	name = "Mission - Raging Mages"
+	name = "任务模式：狂怒法师"
 	gamemode_horde_data = /horde_data/raging_mages
 
 	interior_corpse_type = /mob/living/advanced/npc/citizen

@@ -1,16 +1,23 @@
 /obj/hud/button/chargen/difficulty/
-	name = "change difficulty"
+	name = "更改难度"
 	icon = 'icons/hud/difficulty.dmi'
 	icon_state = "hud_outline"
 	screen_loc = "CENTER-2,CENTER+0"
 
-	desc_extended = "Click here to change your difficulty. Higher difficulties give more rewards and experience at the cost of fighting against a stronger force. The recommended experience is \"Normal\"."
+	desc_extended = "点击这里更改难度。较高难度会提供更多奖励和经验，但你要面对更强的敌人。推荐选择“普通”难度。"
 
 	user_colors = TRUE
 
 	chargen_flags = CHARGEN_NONE
 
 	var/chosen_difficulty = DIFFICULTY_NORMAL
+	var/list/difficulty_display_names = list(
+		DIFFICULTY_EASY = "简单",
+		DIFFICULTY_NORMAL = "普通",
+		DIFFICULTY_HARD = "困难",
+		DIFFICULTY_EXTREME = "极限",
+		DIFFICULTY_NIGHTMARE = "梦魇"
+	)
 
 	maptext_x = -TILE_SIZE*0.5
 	maptext_y = -10
@@ -29,11 +36,14 @@
 	if(. && is_player(activator))
 		var/mob/living/advanced/player/A = activator
 
-		var/difficulty_choice = input("What difficulty do you wish to change to?",chosen_difficulty) as null|anything in DIFFICULTY_ALL
+		var/list/difficulty_choices = list()
+		for(var/difficulty in DIFFICULTY_ALL)
+			difficulty_choices[difficulty_display_names[difficulty]] = difficulty
+		var/difficulty_choice = input("你想切换到什么难度？",difficulty_display_names[chosen_difficulty]) as null|anything in difficulty_choices
 		if(!difficulty_choice)
 			return TRUE
 
-		chosen_difficulty = difficulty_choice
+		chosen_difficulty = difficulty_choices[difficulty_choice]
 
 		A.difficulty = chosen_difficulty
 		A.setup_difficulty()
@@ -42,7 +52,7 @@
 
 /obj/hud/button/chargen/difficulty/update_sprite()
 	. = ..()
-	maptext = "<center>[chosen_difficulty]</center>"
+	maptext = "<center>[difficulty_display_names[chosen_difficulty]]</center>"
 
 /obj/hud/button/chargen/difficulty/update_overlays()
 

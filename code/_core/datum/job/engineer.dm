@@ -1,6 +1,6 @@
 /job/engineer
-	name = "Engineer"
-	desc = "Job Description."
+	name = "工程师"
+	desc = "岗位说明。"
 
 	passive_income = 0
 	passive_income_bonus = 300 //Per rank
@@ -20,8 +20,8 @@
 	)
 
 	ranks = list(
-		"Intern Engineer",
-		"Engineer",
-		"Senior Engineer",
-		"Chief Engineer"
+		"实习工程师",
+		"工程师",
+		"资深工程师",
+		"总工程师"
 	)

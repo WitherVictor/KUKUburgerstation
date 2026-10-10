@@ -1,5 +1,5 @@
 /obj/hud/inventory/organs/
-	name = "organ slot"
+	name = "身体装备槽"
 
 	max_slots = 0
 	worn = FALSE

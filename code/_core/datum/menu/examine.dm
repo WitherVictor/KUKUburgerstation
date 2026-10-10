@@ -1,5 +1,5 @@
 /menu/examine/
-	name = "Examine Menu"
+	name = "查看菜单"
 	id = "examine"
 
 	file = 'html/examine.html'

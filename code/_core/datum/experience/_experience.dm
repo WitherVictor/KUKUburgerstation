@@ -7,7 +7,7 @@
 
 	/// If your survival skill is lower than this value, you will see a vague description instead of a normal extended description
 	var/skill_for_examine = 0
-	var/desc_vague = "Affects... something"
+	var/desc_vague = "会影响……某些东西。"
 	/// If you want, you can also optionally add in tips that show up at different levels of survival by making skill_for_examine into a list
 	var/list/tips = list()
 
@@ -31,7 +31,7 @@
 	var/examine_level = istype(examiner) ? examiner.get_skill_level(SKILL_SURVIVAL) : 1
 	var/list/completed_list = list(div("examine_title","[name]"),div("examine_description","[desc]"),div("examine_description","[desc]"),)
 	if(!islist(skill_for_examine))
-		var/more_xp_text = span("notice", "\n... you feel as if raising your survival skill would greatly help with evaluating this skill")
+		var/more_xp_text = span("notice", "\n……你觉得提升生存技能会大大帮助你理解这项技能。")
 		completed_list += div("examine_description_long", examine_level >= skill_for_examine ? src.desc_extended : "[src.desc_vague]\n[more_xp_text]")
 		return completed_list
 
@@ -44,7 +44,7 @@
 		current_tip++
 
 	if(examine_level < examine_list[length(examine_list)])
-		completed_list[4] += span("notice", "\n... you feel as if raising your survival skill would greatly help with evaluating this skill")
+		completed_list[4] += span("notice", "\n……你觉得提升生存技能会大大帮助你理解这项技能。")
 
 	completed_list[4] += "</div>"
 	return completed_list
@@ -67,14 +67,14 @@
 
 /experience/proc/xp_to_level(var/xp) //Convert xp to level
 	if(xp < 0)
-		owner.to_chat(span("danger","Your [src.name] level is negative! Report this bug on discord!"))
+		owner.to_chat(span("danger","你的[src.name]等级为负数！请在 Discord 报告此漏洞！"))
 		log_error("Warning: [src.name] xp was negative for [owner.get_debug_name()].")
 		return 1
 	return FLOOR((xp ** (1/experience_power)) / (experience_multiplier * (1 + src.get_prestige_count()*0.1)), 1)
 
 /experience/proc/level_to_xp(var/level) //Convert level to xp
 	if(level < 0)
-		owner.to_chat(span("danger","Your [src.name] level is negative! Report this bug on discord!"))
+		owner.to_chat(span("danger","你的[src.name]等级为负数！请在 Discord 报告此漏洞！"))
 		log_error("Warning: [src.name] xp was negative for [owner.get_debug_name()].")
 		return 0
 	return CEILING((level*experience_multiplier*(1 + src.get_prestige_count()*0.1)) ** experience_power,1)

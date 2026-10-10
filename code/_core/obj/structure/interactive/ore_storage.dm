@@ -1,6 +1,6 @@
 /obj/structure/interactive/ore_storage
-	name = "ore storage"
-	desc = "A container that stores ores"
+	name = "矿石仓"
+	desc = "储存矿石的容器。"
 	icon = 'icons/obj/structure/ore_storage.dmi'
 	icon_state = "ore_storage_map"
 
@@ -14,7 +14,7 @@
 	INTERACT_CHECK_OBJECT
 	INTERACT_DELAY(5)
 
-	activator.visible_message(span("notice","\The [activator.name] rotates \the [src.name]."),span("notice","You rotate \the [src.name]."))
+	activator.visible_message(span("notice","[activator.name]转动了[src.name]。"),span("notice","你转动了[src.name]。"))
 	set_dir(turn(dir,90))
 
 	update_sprite()
@@ -74,7 +74,7 @@
 			if(store_ore(O))
 				did_store = TRUE
 		if(did_store)
-			OB.visible_message(span("notice","\The [OB.name] dumps all the ore inside \the [src.name]."))
+			OB.visible_message(span("notice","[OB.name]将所有矿石倒进了[src.name]。"))
 		return TRUE
 
 	return FALSE

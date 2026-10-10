@@ -1,5 +1,5 @@
 /obj/hud/click_and_drag
-	name = "click and drag effect"
+	name = "拖放效果"
 
 	icon = 'icons/hud/hud.dmi'
 	icon_state = "slot"

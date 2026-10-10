@@ -8,7 +8,7 @@
 	. = ..()
 
 /damagetype/unarmed/cqc/sleeping_carp/crashing_wave_kick
-	attack_verbs = list("crashing wave kick")
+	attack_verbs = list("破浪踢")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/cqc/crashing_wave_kick.ogg',
@@ -117,7 +117,7 @@
 
 
 /damagetype/unarmed/cqc/sleeping_carp/gnashing_teeth
-	attack_verbs = list("gnashing teeth punch")
+	attack_verbs = list("噬齿拳")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/cqc/gnashing_teeth_01.ogg',

@@ -1,7 +1,7 @@
 /obj/hud/button/sneak
-	name = "sneak"
-	desc = "sneaker no sneaking"
-	desc_extended = "Click here to toggle sneak. Sneaking makes it much harder to be detected by NPCs, and prevents players from seeing you unless you are in their character's line of sight. Moving while sneaking costs stamina."
+	name = "潜行"
+	desc = "潜行者，不许偷偷摸摸！"
+	desc_extended = "点击这里切换潜行。潜行会让 NPC 更难发现你；除非你进入其他玩家角色的视线，否则他们也看不到你。潜行移动会消耗体力。"
 	icon_state = "sneak_0"
 	screen_loc = "RIGHT-3:1,BOTTOM:12"
 
@@ -35,9 +35,9 @@
 	..()
 
 /obj/hud/button/move
-	name = "change movement"
-	desc = "who fucking walks lmao"
-	desc_extended = "Changes your default movement stance."
+	name = "切换移动方式"
+	desc = "谁他妈还慢慢走路啊，笑死。"
+	desc_extended = "更改默认的移动姿态。"
 	icon_state = "move_1"
 	screen_loc = "RIGHT:1-3,BOTTOM:11"
 
@@ -85,9 +85,9 @@
 
 
 /obj/hud/button/rest
-	name = "rest"
-	desc = "No sleeping on the job!"
-	desc_extended = "Click here to allow your character to rest. Resting makes it much more unlikely to be hit by stray projectiles and makes it harder to be detected by NPCs."
+	name = "休息"
+	desc = "上班不许睡觉！"
+	desc_extended = "点击这里让角色休息。休息会大幅降低被流弹击中的可能，也让 NPC 更难发现你。"
 	icon_state = "rest"
 	screen_loc = "RIGHT-2:11,BOTTOM:10+1"
 
@@ -103,9 +103,9 @@
 
 
 /obj/hud/button/stand
-	name = "stand"
-	desc = "Summons and unsummons your stand."
-	desc_extended = "Press to toggle your stand. Put yourself on harm intent to make your stand attack your enemies. Help intent doesn't."
+	name = "替身"
+	desc = "召唤或收回你的替身。"
+	desc_extended = "点击这里召唤或收回替身。切换到伤害意图，替身才会攻击敌人；帮助意图下不会攻击。"
 	icon_state = "stand"
 	screen_loc = "RIGHT-2:8,BOTTOM:12+1"
 
@@ -120,5 +120,5 @@
 		if(L.stand && L.stand.linked_stand)
 			L.stand.linked_stand.set_enabled(!L.stand.linked_stand.enabled)
 		else
-			L.to_chat(span("danger","You don't have a stand for some reason!"))
+			L.to_chat(span("danger","不知为何，你没有替身！"))
 

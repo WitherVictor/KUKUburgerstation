@@ -1,5 +1,5 @@
 /obj/hud/button/chargen/color
-	name = "color bar"
+	name = "颜色栏"
 	icon_state = "full"
 	icon = 'icons/hud/colorwheels.dmi'
 

@@ -1,40 +1,40 @@
 /obj/hud/button/research/info
-	name = "info"
+	name = "信息"
 	icon = 'icons/hud/hud.dmi'
 	icon_state = "square_round"
-	maptext = "<center>Info</center>"
+	maptext = "<center>信息</center>"
 	layer = LAYER_SCREEN_BLOOD+3
 
 /obj/hud/button/research/info/time
-	name = "time left"
+	name = "剩余时间"
 	screen_loc = "LEFT,TOP"
-	maptext = "<center>Time:<br>1:00</center>"
+	maptext = "<center>时间<br>1:00</center>"
 	layer = LAYER_SCREEN_BLOOD+3
 
 /obj/hud/button/research/info/level
-	name = "current level"
+	name = "当前等级"
 	screen_loc = "LEFT,TOP-1"
-	maptext = "<center>Level:<br>1</center>"
+	maptext = "<center>等级<br>1</center>"
 	layer = LAYER_SCREEN_BLOOD+3
 
 /obj/hud/button/research/info/score
-	name = "score"
+	name = "得分"
 	screen_loc = "LEFT,TOP-2"
-	maptext = "<center>Score:<br>0</center>"
+	maptext = "<center>得分<br>0</center>"
 	layer = LAYER_SCREEN_BLOOD+3
 
 /obj/hud/button/research/info/effect
-	name = "text"
+	name = "文字"
 	screen_loc = "CENTER,CENTER"
 	icon_state = "none"
 	maptext = "<center>+1</center>"
 	layer = LAYER_SCREEN_BLOOD+5
 
 /obj/hud/button/research/info/quit
-	name = "quit button"
+	name = "退出按钮"
 	screen_loc = "TOP,RIGHT"
 	icon_state = "square_round_small"
-	maptext = "<center>Quit</center>"
+	maptext = "<center>退出</center>"
 	layer = LAYER_SCREEN_BLOOD+4
 	mouse_opacity = 1
 
@@ -58,7 +58,7 @@
 	return TRUE
 
 /obj/hud/button/research/info/text
-	name = "text"
+	name = "文字"
 	screen_loc = "CENTER,CENTER"
 	icon_state = "none"
 

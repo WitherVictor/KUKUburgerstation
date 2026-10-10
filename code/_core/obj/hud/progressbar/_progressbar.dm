@@ -1,5 +1,5 @@
 /obj/hud/progress_bar
-	name = "progress bar"
+	name = "进度条"
 	icon = 'icons/hud/progress.dmi'
 	icon_state = "progress"
 

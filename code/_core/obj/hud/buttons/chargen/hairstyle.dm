@@ -65,7 +65,7 @@ mob/living/advanced/proc/handle_hairstyle_chargen(var/hair_num=-1,var/desired_co
 	return TRUE
 
 /obj/hud/button/chargen/change_hairstyle
-	name = "cycle hairstyle right"
+	name = "下一个发型"
 	dir = EAST
 	icon_state = "arrow"
 
@@ -88,7 +88,7 @@ mob/living/advanced/proc/handle_hairstyle_chargen(var/hair_num=-1,var/desired_co
 		A.handle_hairstyle_chargen(desired_hair_num)
 
 /obj/hud/button/chargen/change_hairstyle/left
-	name = "cycle hairstyle left"
+	name = "上一个发型"
 	dir = WEST
 
 	screen_loc = "CENTER-3,CENTER+4"
@@ -134,8 +134,8 @@ mob/living/advanced/proc/handle_hairstyle_chargen(var/hair_num=-1,var/desired_co
 	return TRUE
 
 /obj/hud/button/chargen/hairstyle/main
-	name = "change hair style"
-	desc_extended = "Your currently selected hair style. Clicking here will change the color."
+	name = "更改发型"
+	desc_extended = "当前选中的发型。点击这里更改颜色。"
 	icon_state = "square_round"
 	screen_loc = "CENTER,CENTER+4"
 
@@ -145,7 +145,7 @@ mob/living/advanced/proc/handle_hairstyle_chargen(var/hair_num=-1,var/desired_co
 
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
-		var/desired_color = input("Hair Color","Hair Color",hair_color) as color|null
+		var/desired_color = input("头发颜色","头发颜色",hair_color) as color|null
 		if(desired_color)
 			A.handle_hairstyle_chargen(hair_num,desired_color)
 

@@ -1,6 +1,6 @@
 /status_effect/resting
-	name = "Resting"
-	desc = "You're resting!"
+	name = "休息"
+	desc = "你正在休息！"
 	id = REST
 
 	minimum = -1

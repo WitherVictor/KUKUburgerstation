@@ -1,6 +1,6 @@
 /job/medical
-	name = "Medical Doctor"
-	desc = "A doctor is someone who specializes in medicine and its various ways of treating people. They have bonuses in medical skills as well as attributes."
+	name = "医生"
+	desc = "医生专精于医疗及各种治疗方法，医疗技能和相关属性均有加成。"
 
 	passive_income = 0
 	passive_income_bonus = 200
@@ -20,10 +20,10 @@
 	)
 
 	ranks = list(
-		"Medical Intern",
-		"Medical Doctor",
-		"Senior Medical Doctor",
-		"Chief Medical Officer"
+		"实习医生",
+		"医生",
+		"资深医生",
+		"医疗主管"
 	)
 
 	job_flags = FLAG_JOB_HEALING

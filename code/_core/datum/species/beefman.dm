@@ -1,6 +1,6 @@
 /species/beefman/
-	name = "Beefman"
-	desc = "Meat."
+	name = "血肉人"
+	desc = "肉。"
 	id = "beefman"
 	flags_species = SPECIES_BEEF
 

@@ -1,6 +1,6 @@
 /reagent/toxin/
-	name = "toxin"
-	desc = "A common toxin found nearly everywhere."
+	name = "毒素"
+	desc = "一种几乎随处可见的常见毒素。"
 	color = "#FF8411"
 	alpha = 200
 
@@ -32,59 +32,59 @@
 	owner.tox_regen_buffer -= .*damage_per_unit*multiplier
 
 /reagent/toxin/angel_toxin
-	name = "angel toxin"
-	desc = "An incredibly lethal toxin. Injecting this will make you see angels."
+	name = "天使毒素"
+	desc = "一种致命性极高的毒素。注射后，你就能见到天使了。"
 
 	damage_per_unit = 15
 
-	flavor = "mushroom"
+	flavor = "蘑菇"
 
 	particle_size = 0.4
 
 
 /reagent/toxin/fly_amanita_toxin
-	name = "fly amanita toxin"
-	desc = "An moderately lethal toxin."
+	name = "毒蝇伞毒素"
+	desc = "一种致命性中等的毒素。"
 
 	damage_per_unit = 4
 
-	flavor = "mushroom"
+	flavor = "蘑菇"
 
 	particle_size = 0.5
 
 /reagent/toxin/polypnium_toxin
-	name = "polypnium toxin"
-	desc = "An very lethal toxin."
+	name = "剧毒蕈素"
+	desc = "一种致命性很高的毒素。"
 
 	damage_per_unit = 10
 
-	flavor = "mushroom"
+	flavor = "蘑菇"
 
 	particle_size = 0.3
 
 /reagent/toxin/xeno_acid
-	name = "xeno acid"
-	desc = "Literal fucking acid."
+	name = "异形酸液"
+	desc = "这他妈就是酸。"
 
 	damage_per_unit = 2
 
-	flavor = "pain"
+	flavor = "痛苦"
 
 	particle_size = 0.3
 
 /reagent/toxin/spider_toxin
-	name = "spider toxin"
-	desc = "Toxins bad."
+	name = "蜘蛛毒素"
+	desc = "毒素可不是好东西。"
 
 	damage_per_unit = 3
 
-	flavor = "arachnophobia"
+	flavor = "蜘蛛恐惧症"
 
 	particle_size = 0.2
 
 /reagent/toxin/sulfur_dioxide
-	name = "Sulfur Dioxide"
-	desc = "Toxic fumes from burning sulfur with coal."
+	name = "二氧化硫"
+	desc = "硫与煤一同燃烧时产生的有毒烟气。"
 
 	damage_per_unit = 1
 
@@ -96,22 +96,22 @@
 	particle_size = 0.7
 
 /reagent/toxin/mercury
-	name = "mercury"
-	desc = "Toxins bad."
+	name = "汞"
+	desc = "毒素可不是好东西。"
 
 	color = "#808080"
 	alpha = 255
 
 	damage_per_unit = 5
 
-	flavor = "venus"
+	flavor = "金星"
 
 	particle_size = 1
 
 
 /reagent/toxin/blob_spore
-	name = "blob spores"
-	desc = "Don't breathe this in."
+	name = "异形菌毯孢子"
+	desc = "别吸入这东西。"
 
 	damage_per_unit = 2
 

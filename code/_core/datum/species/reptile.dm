@@ -1,6 +1,6 @@
 /species/reptile/
-	name = "Reptile"
-	desc = "Fucking furries"
+	name = "原始蜥蜴人"
+	desc = "该死的兽迷"
 	id = "reptile"
 	flags_species = SPECIES_REPTILE_FERAL
 

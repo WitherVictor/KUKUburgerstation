@@ -1,6 +1,6 @@
 /species/zombie/
-	name = "Zombie"
-	desc = "BRAINS."
+	name = "僵尸"
+	desc = "脑子！"
 	id = "zombie"
 	flags_species = SPECIES_ZOMBIE
 

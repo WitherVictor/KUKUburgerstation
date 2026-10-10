@@ -1,7 +1,7 @@
 /obj/hud/button/cash_money
-	name = "credits"
-	desc = "Currency of the universe."
-	desc_extended = "The amount of credits your character has in their intergalatic NanoTrasen bank account. Credits can be earned by completing objectives or by selling items."
+	name = "信用点"
+	desc = "宇宙通用货币。"
+	desc_extended = "你的角色在纳米传讯星际银行账户中持有的信用点数量。完成任务目标或出售物品都能赚取信用点。"
 
 	var/amount = 0
 
@@ -49,8 +49,8 @@
 
 
 /obj/hud/button/microstransactions
-	name = "burgerbux"
-	desc_extended = "The amount of burgerbux your account has. Burgerbux is bound to your ckey, and cannot be traded. You can gain burgerbux by playing the game, and spend it on (almost) useless cosmetics in the theatre."
+	name = "汉堡币"
+	desc_extended = "你的账号持有的汉堡币数量。汉堡币绑定账号，无法交易。游玩游戏即可获得汉堡币，并可在剧院兑换（几乎）没有实际用途的外观物品。"
 	screen_loc = "RIGHT,TOP-1:-32"
 	icon_state = "currency"
 

@@ -1,7 +1,7 @@
 /species/dummy/
 
-	name = "Target Practice Dummy"
-	desc = "It's a dummy, dummy."
+	name = "练习靶人"
+	desc = "这是个假人，笨蛋。"
 	id = "dummy"
 
 	flags_species = SPECIES_DUMMY

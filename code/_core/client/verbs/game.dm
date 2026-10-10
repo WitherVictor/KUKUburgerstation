@@ -1,6 +1,6 @@
 /client/verb/ghost()
 	set name = "Ghost"
-	set desc = "Abandon your body and become a ghost."
+	set desc = "放弃身体，成为幽灵。"
 	set category = "Game"
 
 	if(is_player(mob))
@@ -9,8 +9,9 @@
 			var/obj/structure/interactive/bed/sleeper/S = locate() in P.loc.contents
 			var/in_sleeper = istype(S,/obj/structure/interactive/bed/sleeper/cryo/no_spawn) || istype(S,/obj/structure/interactive/bed/sleeper/cryo)
 			if(in_sleeper)
-				var/choice = input("Are you sure you want to save your character and cryo? Your items and character will be saved..","Cryogenics","No") in list("Yes","No") | null
-				if(choice == "Yes")
+				var/list/confirmation_choices = list("是" = "Yes","否" = "No")
+				var/choice = input("确定要保存角色并进入冷冻休眠吗？你的物品和角色都会保存。","冷冻休眠","否") in confirmation_choices | null
+				if(choice && confirmation_choices[choice] == "Yes")
 					if(P.dead)
 						return FALSE
 					var/savedata/client/mob/mobdata = MOBDATA(ckey)
@@ -22,17 +23,18 @@
 				return FALSE
 
 	if(!mob || !is_living(mob))
-		to_chat(span("warning","You have no body to abandon!"))
+		to_chat(span("warning","你没有可以放弃的身体！"))
 		return FALSE
 
 	var/mob/living/L = mob
 
 	if(!L.dead)
-		to_chat(span("warning","You can't abandon your body while alive!"))
+		to_chat(span("warning","活着时不能放弃身体！"))
 		return FALSE
 
-	var/choice = input("Are you sure you want to abandon your body and become a ghost? You will no longer be able to be revived.","Abandon Body","No") in list("Yes","No") | null
-	if(choice != "Yes")
+	var/list/confirmation_choices = list("是" = "Yes","否" = "No")
+	var/choice = input("确定要放弃身体，成为幽灵吗？这样做之后，你将无法再被复活。","放弃身体","否") in confirmation_choices | null
+	if(!choice || confirmation_choices[choice] != "Yes")
 		return FALSE
 
 	L.make_unrevivable()
@@ -44,7 +46,7 @@
 	set name = "Stop Sounds"
 	set category = "Game"
 	mob << sound(null)
-	to_chat(span("warning","All sounds have been stopped."))
+	to_chat(span("warning","已停止播放所有声音。"))
 
 
 /client/verb/check_objectives()
@@ -52,11 +54,11 @@
 	set category = "Game"
 
 	if(!SSgamemode || !SSgamemode.active_gamemode)
-		to_chat(span("warning","The game is not ready yet!"))
+		to_chat(span("warning","游戏尚未准备就绪！"))
 		return FALSE
 
 	if(!mob)
-		to_chat(span("warning","You're not controlling a valid mob!"))
+		to_chat(span("warning","你没有控制有效的角色！"))
 		return FALSE
 
 
@@ -66,54 +68,54 @@
 	var/gamemode/G = SSgamemode.active_gamemode
 
 	if(display_crew_objectives)
-		to_chat("<br><h2>Active Crew Objectives</h2>")
+		to_chat("<br><h2>进行中的船员目标</h2>")
 		if(length(G.crew_active_objectives))
 			for(var/k in G.crew_active_objectives)
 				var/objective/O = k
 				to_chat(O.get_description())
 		else
-			to_chat("No active crew objectives.")
+			to_chat("没有进行中的船员目标。")
 
-		to_chat("<br><h2>Completed Crew Objectives</h2>")
+		to_chat("<br><h2>已完成的船员目标</h2>")
 		if(length(G.crew_completed_objectives))
 			for(var/k in G.crew_completed_objectives)
 				var/objective/O = k
 				to_chat(O.get_description())
 		else
-			to_chat("No completed crew objectives.")
+			to_chat("没有已完成的船员目标。")
 
-		to_chat("<br><h2>Failed Crew Objectives</h2>")
+		to_chat("<br><h2>失败的船员目标</h2>")
 		if(length(G.crew_failed_objectives))
 			for(var/k in G.crew_failed_objectives)
 				var/objective/O = k
 				to_chat(O.get_description())
 		else
-			to_chat("No failed crew objectives.")
+			to_chat("没有失败的船员目标。")
 
 	if(display_antagonist_objectives)
-		to_chat("<br><h2>Active Antagonist Objectives</h2>")
+		to_chat("<br><h2>进行中的对抗角色目标</h2>")
 		if(length(G.antagonist_active_objectives))
 			for(var/k in G.antagonist_active_objectives)
 				var/objective/O = k
 				to_chat(O.get_description())
 		else
-			to_chat("No active antagonist objectives.")
+			to_chat("没有进行中的对抗角色目标。")
 
-		to_chat("<br><h2>Completed Antagonist Objectives</h2>")
+		to_chat("<br><h2>已完成的对抗角色目标</h2>")
 		if(length(G.antagonist_completed_objectives))
 			for(var/k in G.antagonist_completed_objectives)
 				var/objective/O = k
 				to_chat(O.get_description())
 		else
-			to_chat("No completed antagonist objectives.")
+			to_chat("没有已完成的对抗角色目标。")
 
-		to_chat("<br><h2>Failed Antagonist Objectives</h2>")
+		to_chat("<br><h2>失败的对抗角色目标</h2>")
 		if(length(G.antagonist_failed_objectives))
 			for(var/k in G.antagonist_failed_objectives)
 				var/objective/O = k
 				to_chat(O.get_description())
 		else
-			to_chat("No failed antagonist objectives.")
+			to_chat("没有失败的对抗角色目标。")
 
 
 

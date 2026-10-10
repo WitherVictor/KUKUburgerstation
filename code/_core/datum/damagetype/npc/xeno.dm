@@ -1,5 +1,5 @@
 /damagetype/npc/xeno
-	attack_verbs = list("claw","scratch","maul")
+	attack_verbs = list("爪击","抓挠","撕打")
 
 	hit_effect = /obj/effect/temp/impact/combat/claw
 

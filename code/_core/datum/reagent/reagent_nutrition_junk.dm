@@ -1,13 +1,13 @@
 /reagent/nutrition/junk/
-	name = "junk food"
-	desc = "Nutrition and flavor from junk food."
+	name = "垃圾食品"
+	desc = "垃圾食品提供的营养与风味。"
 	color = "#AAAAAA"
 
 	nutrition_fast_amount = 8
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -2
 
-	flavor = "grease"
+	flavor = "油脂"
 
 	flags_flavor = FLAG_FLAVOR_JUNK
 
@@ -16,130 +16,130 @@
 	particle_size = 0.8
 
 /reagent/nutrition/junk/chips
-	name = "chips"
-	desc = "Nutrition and flavor from chips."
+	name = "薯片"
+	desc = "薯片提供的营养与风味。"
 	color = "#FFDE7C"
 
 	nutrition_fast_amount = 16
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -4
 
-	flavor = "chips"
+	flavor = "薯片"
 
 	flags_flavor = FLAG_FLAVOR_JUNK | FLAG_FLAVOR_GRAIN
 
 /reagent/nutrition/junk/chocolate
-	name = "low quality milk chocolate"
-	desc = "Nutrition and flavor from low quality chocolate."
+	name = "劣质牛奶巧克力"
+	desc = "劣质巧克力提供的营养与风味。"
 	color = "#68452A"
 
 	nutrition_fast_amount = 24
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -6
 
-	flavor = "bland chocolate"
+	flavor = "寡淡的巧克力"
 
 /reagent/nutrition/junk/nougat
-	name = "low quality nougat"
-	desc = "Nutrition and flavor from low quality nougat."
+	name = "劣质牛轧糖"
+	desc = "劣质牛轧糖提供的营养与风味。"
 	color = "#C4A06D"
 
 	nutrition_fast_amount = 16
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -4
 
-	flavor = "bitter nougat"
+	flavor = "发苦的牛轧糖"
 
 /reagent/nutrition/junk/crisp_rice
-	name = "crispy rice"
-	desc = "Nutrition and flavor from crispy rice."
+	name = "脆米"
+	desc = "脆米提供的营养与风味。"
 	color = "#EAEAC7"
 
 	nutrition_fast_amount = 8
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -2
 
-	flavor = "stale crispy rice"
+	flavor = "不新鲜的脆米"
 
 /reagent/nutrition/junk/wafer
-	name = "wafer"
-	desc = "Nutrition and flavor from wafers."
+	name = "威化饼"
+	desc = "威化饼提供的营养与风味。"
 	color = "#FFD897"
 
 	nutrition_fast_amount = 12
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -3
 
-	flavor = "stale wafer"
+	flavor = "不新鲜的威化饼"
 
 /reagent/nutrition/junk/cookie
-	name = "cookie"
-	desc = "Nutrition and flavor from cookies."
+	name = "曲奇"
+	desc = "曲奇提供的营养与风味。"
 	color = "#B77100"
 
 	nutrition_fast_amount = 20
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -5
 
-	flavor = "cookie"
+	flavor = "曲奇"
 
 /reagent/nutrition/junk/jerky
-	name = "soy jerky"
-	desc = "Nutrition and flavor from soy jerky."
+	name = "大豆素肉干"
+	desc = "大豆素肉干提供的营养与风味。"
 	color = "#683013"
 
 	nutrition_fast_amount = 28
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -7
 
-	flavor = "soy meat"
+	flavor = "大豆素肉"
 
 	flags_flavor = FLAG_FLAVOR_JUNK | FLAG_FLAVOR_MEAT
 
 /reagent/nutrition/junk/raisins
-	name = "dried sweet raisins"
-	desc = "Nutrition and flavor from dried sweet raisins."
+	name = "香甜葡萄干"
+	desc = "香甜葡萄干提供的营养与风味。"
 	color = "#470068"
 
 	nutrition_fast_amount = 20
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -5
 
-	flavor = "sour raisins"
+	flavor = "酸葡萄干"
 
 /reagent/nutrition/junk/cake
-	name = "yellow cake"
-	desc = "Nutrition and flavor from yellow cake."
+	name = "黄油蛋糕"
+	desc = "黄油蛋糕提供的营养与风味。"
 	color = "#FFE97C"
 
 	nutrition_fast_amount = 20
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -5
 
-	flavor = "bland overmoist cake"
+	flavor = "寡淡又过湿的蛋糕"
 
 	flags_flavor = FLAG_FLAVOR_JUNK | FLAG_FLAVOR_GRAIN
 
 
 /reagent/nutrition/junk/cream_filling
-	name = "sugar cream filling"
-	desc = "Nutrition and flavor from cream filling cake."
+	name = "甜奶油夹心"
+	desc = "奶油夹心蛋糕提供的营养与风味。"
 	color = "#E1FFFF"
 
 	nutrition_fast_amount = 24
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -6
 
-	flavor = "sugary cream filling"
+	flavor = "甜腻的奶油夹心"
 
 /reagent/nutrition/junk/cheese_powder
-	name = "cheese powder"
-	desc = "Nutrition and flavor from cheese powder."
+	name = "奶酪粉"
+	desc = "奶酪粉提供的营养与风味。"
 	color = "#FF6A00"
 
 	nutrition_fast_amount = 20
 	nutrition_normal_amount = 0
 	nutrition_quality_amount = -5
 
-	flavor = "cheese powder"
+	flavor = "奶酪粉"
 

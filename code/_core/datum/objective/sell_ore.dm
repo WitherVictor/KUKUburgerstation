@@ -1,6 +1,6 @@
 /objective/sell_ore
-	name = "Sell Material"
-	desc = "Sell a certain amount of material to cargo."
+	name = "出售材料"
+	desc = "向货运部出售一定数量的材料。"
 
 	credit_reward = 1000
 	burgerbux_reward = 1
@@ -9,7 +9,7 @@
 	var/desired_quota = 50
 
 /objective/sell_ore/get_description()
-	return "Sell [desired_quota]u of ore or material (any type) to cargo."
+	return "向货运部出售[desired_quota]单位的矿石或材料（类型不限）。"
 
 /objective/sell_ore/on_object_sold(var/atom/movable/object)
 

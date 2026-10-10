@@ -1,5 +1,5 @@
 /damagetype/
-	var/list/attack_verbs = list("strike","hit","pummel") //Verbs to use
+	var/list/attack_verbs = list("击打","打击","猛揍") //Verbs to use
 	var/list/miss_verbs = list("swing")
 	var/weapon_name
 	var/swing_sounds = list(
@@ -515,11 +515,11 @@
 			if(src.can_be_parried)
 				var/mob/living/A = victim
 				if(A.parry(attacker,weapon,hit_object,src))
-					A.to_chat(span("warning","You parried [attacker.name]'s attack!"),CHAT_TYPE_COMBAT)
+					A.to_chat(span("warning","你招架了[attacker.name]的攻击！"),CHAT_TYPE_COMBAT)
 					play_sound('sound/effects/parry.ogg',victim_turf,range_max=VIEW_RANGE)
 					if(is_living(attacker))
 						var/mob/living/LA = attacker
-						LA.to_chat(span("danger","Your attack was parried by \the [A.name]!"),CHAT_TYPE_ALL)
+						LA.to_chat(span("danger","你的攻击被[A.name]招架了！"),CHAT_TYPE_ALL)
 						if(get_dist(A,LA) <= 1)
 							LA.add_status_effect(PARRIED,30,30, source = A)
 					A.on_parried_hit(attacker,weapon,hit_object,blamed,damage_multiplier)
@@ -769,11 +769,11 @@
 
 	if(enable_logs >= 1 && is_living(victim) && victim.health)
 		var/mob/living/L = victim
-		L.to_chat(span("warning","Took <b>[round(total_damage_dealt,0.1)]</b> damage to [hit_object == victim ? "yourself" : "your [hit_object.name]"] by \the [attacker == weapon ? "[attacker.name]'s attack" : "[attacker.name]'s [weapon.name]"] (<b>[max(0,victim.health.health_current - total_damage_dealt)]/[victim.health.health_max]</b>)."),CHAT_TYPE_COMBAT)
+		L.to_chat(span("warning","[hit_object == victim ? "你" : "你的[hit_object.name]"]遭到[attacker == weapon ? "[attacker.name]的攻击" : "[attacker.name]的[weapon.name]"]，受到 <b>[round(total_damage_dealt,0.1)]</b> 点伤害（<b>[max(0,victim.health.health_current - total_damage_dealt)]/[victim.health.health_max]</b>）。"),CHAT_TYPE_COMBAT)
 
 	if(enable_logs >= 2 && is_living(blamed) && victim.health && blamed != victim) //TODO: Seperate log for blamed.
 		var/mob/living/L = blamed
-		L.to_chat(span("notice","Dealt <b>[round(total_damage_dealt,0.1)]</b> damage with your [weapon.name] to \the [victim == hit_object ? victim.name : "[victim.name]\'s [hit_object.name]"] (<b>[max(0,victim.health.health_current - total_damage_dealt)]/[victim.health.health_max]</b>)."),CHAT_TYPE_COMBAT)
+		L.to_chat(span("notice","你用[weapon.name]对[victim == hit_object ? victim.name : "[victim.name]的[hit_object.name]"]造成 <b>[round(total_damage_dealt,0.1)]</b> 点伤害（<b>[max(0,victim.health.health_current - total_damage_dealt)]/[victim.health.health_max]</b>）。"),CHAT_TYPE_COMBAT)
 
 	if(!total_damage_dealt)
 		display_glance_message(attacker,victim,weapon,hit_object)
@@ -911,8 +911,9 @@
 			var/list/final_experience = list()
 			for(var/k in experience_gained)
 				var/v = experience_gained[k]
-				final_experience += "[v] [k] xp"
-			attacker.to_chat(span("notice","You gained [english_list(final_experience)]."),CHAT_TYPE_COMBAT)
+				var/experience/E = SSexperience.all_skills[k] ? SSexperience.all_skills[k] : SSexperience.all_attributes[k]
+				final_experience += "[v] 点[E ? E.name : k]经验"
+			attacker.to_chat(span("notice","你获得了[jointext(final_experience,"、")]。"),CHAT_TYPE_COMBAT)
 			. = TRUE
 
 
@@ -1005,7 +1006,7 @@
 		return weapon_name
 	if(backup)
 		return backup.name
-	return "weapon"
+	return "武器"
 
 /damagetype/proc/get_attack_message_3rd(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
 
@@ -1013,16 +1014,16 @@
 	var/attacker_text
 
 	if(hit_object && hit_object != victim)
-		victim_text = "\the [victim.name]'s [hit_object.name]"
+		victim_text = "[victim.name]的[hit_object.name]"
 	else
-		victim_text = "\the [victim.name]"
+		victim_text = "[victim.name]"
 
 	if(weapon && attacker != weapon)
-		attacker_text = " with \the [weapon.name]."
+		attacker_text = "用[weapon.name]"
 	else
-		attacker_text = "."
+		attacker_text = ""
 
-	return "\The [attacker.name] [pick(attack_verbs)]s [victim_text][attacker_text]"
+	return "[attacker.name][attacker_text]对[victim_text]发动了[pick(attack_verbs)]。"
 
 /damagetype/proc/get_attack_message_1st(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
 
@@ -1030,37 +1031,37 @@
 	var/attacker_text
 
 	if(hit_object && hit_object != victim)
-		victim_text = "\the [victim.name]'s [hit_object.name]"
+		victim_text = "[victim.name]的[hit_object.name]"
 	else
-		victim_text = "\the [victim.name]"
+		victim_text = "[victim.name]"
 
 	if(weapon && attacker != weapon)
-		attacker_text = " with your [weapon.name]."
+		attacker_text = "用[weapon.name]"
 	else
-		attacker_text = "."
+		attacker_text = ""
 
-	return "You [pick(attack_verbs)] [victim_text][attacker_text]"
+	return "你[attacker_text]对[victim_text]发动了[pick(attack_verbs)]。"
 
 /damagetype/proc/get_attack_message_sound(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "You hear a strong [pick(attack_verbs)]."
+	return "你听到一声猛烈的[pick(attack_verbs)]声。"
 
 /damagetype/proc/get_miss_message_3rd(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "[copytext(get_attack_message_3rd(attacker,victim,weapon,hit_object),1,-1)], but the attack was #REASON!"
+	return "[copytext_char(get_attack_message_3rd(attacker,victim,weapon,hit_object),1,-1)]，但攻击#REASON！"
 
 /damagetype/proc/get_miss_message_1st(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "[copytext(get_attack_message_1st(attacker,victim,weapon,hit_object),1,-1)], but the attack was #REASON!"
+	return "[copytext_char(get_attack_message_1st(attacker,victim,weapon,hit_object),1,-1)]，但攻击#REASON！"
 
 /damagetype/proc/get_miss_message_sound(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "You hear a swoosh..."
+	return "你听到一阵破空声……"
 
 /damagetype/proc/get_glance_message_sound(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "You hear a weak [pick(attack_verbs)]."
+	return "你听到一声轻微的[pick(attack_verbs)]声。"
 
 /damagetype/proc/get_glance_message_3rd(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "[copytext(get_attack_message_3rd(attacker,victim,weapon,hit_object),1,-1)]... but it has no effect!"
+	return "[copytext_char(get_attack_message_3rd(attacker,victim,weapon,hit_object),1,-1)]……但没有产生效果！"
 
 /damagetype/proc/get_glance_message_1st(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
-	return "[copytext(get_attack_message_1st(attacker,victim,weapon,hit_object),1,-1)]... but it has no effect!"
+	return "[copytext_char(get_attack_message_1st(attacker,victim,weapon,hit_object),1,-1)]……但没有产生效果！"
 
 /damagetype/proc/display_glance_message(var/atom/attacker,var/atom/victim,var/atom/weapon,var/atom/hit_object)
 
@@ -1099,11 +1100,13 @@
 
 	if(!CONFIG("ENABLE_HIT_MESSAGES",FALSE))
 		return FALSE
+	var/list/miss_reason_display = list("missed" = "落空了", "misses!" = "落空了", "blocked" = "被格挡了", "parried" = "被招架了", "dodged" = "被闪避了")
+	var/miss_reason = miss_reason_display[miss_text] ? miss_reason_display[miss_text] : miss_text
 
 	attacker.visible_message(\
-		span("warning", replacetext(get_miss_message_3rd(attacker,victim,weapon,hit_object),"#REASON",miss_text)),\
-		span("danger",  replacetext(get_miss_message_1st(attacker,victim,weapon,hit_object),"#REASON",miss_text)),\
-		span("warning", replacetext(get_miss_message_sound(attacker,victim,weapon,hit_object),"#REASON",miss_text))\
+		span("warning", replacetext(get_miss_message_3rd(attacker,victim,weapon,hit_object),"#REASON",miss_reason)),\
+		span("danger",  replacetext(get_miss_message_1st(attacker,victim,weapon,hit_object),"#REASON",miss_reason)),\
+		span("warning", replacetext(get_miss_message_sound(attacker,victim,weapon,hit_object),"#REASON",miss_reason))\
 	)
 	return TRUE
 

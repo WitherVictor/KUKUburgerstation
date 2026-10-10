@@ -1,6 +1,6 @@
 /reagent/drug/ //Found in the snow biome as a magic plant
-	name = "drug"
-	desc = "What the fuck is this?"
+	name = "迷幻药"
+	desc = "这他妈是什么东西？"
 	color = "#FFFFFF"
 	alpha = 255
 	metabolism_stomach = 1
@@ -38,12 +38,12 @@
 	)
 
 /reagent/drug/liberty_dust
-	name = "space liberty dust"
-	desc = "The taste of liberty AND FREEDOM."
+	name = "太空自由之尘"
+	desc = "自由！无拘无束的自由！"
 	color = "#FFFFFF"
 	alpha = 255
 
-	flavor = "freedom"
+	flavor = "自由"
 
 	strength = 75
 	duration_mod = 10
@@ -55,12 +55,12 @@
 	particle_size = 0.4
 
 /reagent/drug/space
-	name = "space drugs"
-	desc = "It's like space weed."
+	name = "太空迷幻药"
+	desc = "类似太空大麻。"
 	color = "#FFFFFF"
 	alpha = 255
 
-	flavor = "dude weed bro"
+	flavor = "哥们儿，来口大麻"
 
 	strength = 25
 	duration_mod = 15
@@ -71,12 +71,12 @@
 
 
 /reagent/drug/dust
-	name = "space dust"
-	desc = "It's like space weed but better."
+	name = "太空粉尘"
+	desc = "类似太空大麻，不过劲儿更大。"
 	color = "#7A9BFF"
 	alpha = 255
 
-	flavor = "regret"
+	flavor = "后悔"
 
 	strength = 200
 	duration_mod = 15
@@ -88,12 +88,12 @@
 	particle_size = 0.4
 
 /reagent/drug/supermatter
-	name = "supermatter dust"
-	desc = "Dust harvested directly from a supermatter. Neat."
+	name = "超物质粉尘"
+	desc = "直接从超物质上采集的粉尘。真不错。"
 	color = "#FFFA7C"
 	alpha = 255
 
-	flavor = "cheese"
+	flavor = "奶酪"
 
 	strength = 500
 	duration_mod = 15
@@ -106,12 +106,12 @@
 
 
 /reagent/drug/lithium
-	name = "lithium"
-	desc = "Batteries!"
+	name = "锂"
+	desc = "电池！"
 	color = "#B6D8D8"
 	alpha = 255
 
-	flavor = "batteries"
+	flavor = "电池"
 
 	strength = 100
 	duration_mod = 10
@@ -126,12 +126,12 @@
 
 
 /reagent/drug/armotol
-	name = "Armo-tol"
-	desc = "An odd chemical that makes you tougher."
+	name = "坚甲醇"
+	desc = "一种让你更加坚韧的奇特化学物质。"
 	color = "#2600ff"
 	alpha = 200
 
-	flavor = "steel"
+	flavor = "钢铁"
 
 	strength = 25
 	duration_mod = 15

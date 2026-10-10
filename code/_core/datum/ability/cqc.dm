@@ -1,6 +1,6 @@
 /ability/cqc
-	name = "CQC: Big Boss"
-	desc = "A cqc ability."
+	name = "近身格斗：大首领"
+	desc = "一种近身格斗能力。"
 	category = "CQC"
 	icon_state = "big_boss"
 
@@ -32,7 +32,7 @@
 	return FALSE
 
 /ability/cqc/sleeping_carp
-	name = "CQC: Sleeping Carp"
+	name = "近身格斗：眠鲤"
 	cqc_category_to_learn = "Sleeping Carp"
 	icon_state = "sleeping_carp"
 

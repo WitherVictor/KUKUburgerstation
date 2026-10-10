@@ -1,5 +1,5 @@
 /damagetype/unarmed/brass/
-	attack_verbs = list("punch","hit","strike","pummel","pound")
+	attack_verbs = list("拳击","打击","击打","猛揍","重击")
 
 	hit_effect = /obj/effect/temp/impact/combat/punch
 

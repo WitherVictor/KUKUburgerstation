@@ -8,7 +8,7 @@
 		return
 
 	if(next_allowed_topic > world.time)
-		to_chat(span("danger","You're sending information too fast! Please wait [next_allowed_topic - world.time] second\s!"))
+		to_chat(span("danger","你发送信息的速度太快！请等待 [next_allowed_topic - world.time] 秒！"))
 		return FALSE
 
 	/*
@@ -32,62 +32,63 @@
 				var/turf/T = locate(text2num(href_list["x"]),text2num(href_list["y"]),text2num(href_list["z"]))
 				if(T)
 					O.force_move(T)
-					to_chat(span("notice","Jumping to new location..."))
+					to_chat(span("notice","正在跳转到新位置……"))
 				else
-					to_chat(span("warning","Could not find that location!"))
+					to_chat(span("warning","找不到该位置！"))
 			else
-				to_chat(span("warning","You can't do this!"))
+				to_chat(span("warning","你不能这样做！"))
 		if(href_list["vote"])
 			var/vote/vote_datum = locate(href_list["vote"]) in SSvote.active_votes
 			if(!vote_datum)
-				to_chat(span("warning","Could not locate a valid poll!"))
+				to_chat(span("warning","找不到有效的投票！"))
 			else
 				if(href_list["vote_option"])
 					var/option = text2num(href_list["vote_option"])
 					vote_datum.set_vote(src.ckey,option)
 					//src << browse(null,"window=Voting")
-					to_chat(span("notice","Your vote has been recorded."))
+					to_chat(span("notice","已记录你的投票。"))
 					vote_datum.show(src)
 				else
 					vote_datum.show(src)
 		else if(href_list["change_key"])
 			//Changing Macros
 			var/key = href_list["change_key"]
+			var/list/confirmation_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
 			if(key == "quit")
-				var/confirm = input("Are you sure you want to quit? All unsaved changes will be lost.","Quit Macro Editor","No") in list("Yes","No","Cancel")
-				if(confirm == "Yes")
+				var/confirm = input("确定要退出吗？所有未保存的修改都会丢失。","退出按键宏编辑器","否") in confirmation_choices
+				if(confirmation_choices[confirm] == "Yes")
 					winset(mob, "browser(edit_macros)","is-visible:false")
 			else if(key == "load")
-				var/confirm = input("Are you sure you want to clear your changes?","Clear Changes","No") in list("Yes","No","Cancel")
-				if(confirm == "Yes")
+				var/confirm = input("确定要清除当前修改吗？","清除修改","否") in confirmation_choices
+				if(confirmation_choices[confirm] == "Yes")
 					macros.macros = controls.loaded_data
 			else if(key == "save")
-				var/confirm = input("Are you sure you want to save your macros, overwriting saved data?","Save Macros","No") in list("Yes","No","Cancel")
-				if(confirm == "Yes")
+				var/confirm = input("确定要保存按键宏并覆盖已有存档吗？","保存按键宏","否") in confirmation_choices
+				if(confirmation_choices[confirm] == "Yes")
 					controls.loaded_data = macros.macros
 					controls.save()
 			else if(key == "QWERTY")
-				var/confirm = input("Are you sure you want to reset your macros to QWERTY?","QWERTY Macros","No") in list("Yes","No","Cancel")
-				if(confirm == "Yes")
+				var/confirm = input("确定要将按键宏重置为 QWERTY 布局吗？","QWERTY 按键宏","否") in confirmation_choices
+				if(confirmation_choices[confirm] == "Yes")
 					macros.macros = QWERTY_MACROS
-					to_chat(span("notice","Successfully reset macros."))
+					to_chat(span("notice","已成功重置按键宏。"))
 			else if(key == "AZERTY")
-				var/confirm = input("Are you sure you want to change your macros to AZERTY?","AZERTY Macros","No") in list("Yes","No","Cancel")
-				if(confirm == "Yes")
+				var/confirm = input("确定要将按键宏切换为 AZERTY 布局吗？","AZERTY 按键宏","否") in confirmation_choices
+				if(confirmation_choices[confirm] == "Yes")
 					macros.macros = AZERTY_MACROS
-					to_chat(span("notice","Successfully reset macros to AZERTY."))
+					to_chat(span("notice","已成功将按键宏重置为 AZERTY 布局。"))
 			else if(key == "new")
-				var/new_key = input("What would you like the new key to be? Leave blank to cancel.","New Key Bind") as text | null
+				var/new_key = input("要绑定哪个新按键？留空取消。","新按键绑定") as text | null
 				if(new_key)
-					var/new_command = input("What would you like the new command to be? Leave blank to cancel.","New Command Bind") as text | null
+					var/new_command = input("要绑定哪个新命令？留空取消。","新命令绑定") as text | null
 					if(new_command)
 						macros.macros[new_key] = new_command
-						to_chat(span("notice","Successfully added new command '[new_command]' to key '[new_key]'"))
+						to_chat(span("notice","已成功将新命令“[new_command]”绑定到按键“[new_key]”。"))
 			else
-				var/new_command = input("What command would you like to bind '[key]' to? Leave blank to remove.","Change Existing Bind") as text | null
+				var/new_command = input("要将哪个命令绑定到“[key]”？留空移除绑定。","更改已有绑定") as text | null
 				if(new_command)
 					macros.macros[key] = new_command
-					to_chat(span("notice","Successfully added '[new_command]' to '[key]'."))
+					to_chat(span("notice","已成功将“[new_command]”绑定到“[key]”。"))
 				else
 					macros.macros -= key
 

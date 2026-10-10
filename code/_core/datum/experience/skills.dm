@@ -8,26 +8,26 @@
 /experience/skill/melee/ //ATTRIBUTE_STRENGTH
 	//Each point of damage dealt = 1xp
 	//Level 100 is 2 million xp.
-	name = "Melee"
+	name = "近战"
 	id = SKILL_MELEE
-	desc = "Be the ninja weeb space samurai you always wanted to be."
+	desc = "成为你梦寐以求的忍者宅太空武士。"
 	skill_for_examine = list(2, 15)
-	desc_vague = "Affects your damage in some way."
-	desc_extended = "Your skill in performing attacks with melee weapons. Affects the damage of swords, clubs, and even a toolbox."
+	desc_vague = "会影响你的伤害。"
+	desc_extended = "你使用近战武器攻击的技巧。影响刀剑、棍棒，甚至工具箱造成的伤害。"
 	tips = list(
-		"You can perform a strong swing by holding alt and clicking on an enemy.\nThis deals 2 times the damage but requires a wind-up and consumes some stamina.",
+		"按住 ALT 并点击敌人，可以使出重挥。\n重挥造成两倍伤害，但需要蓄力，并消耗一些体力。",
 	)
 	experience_power = 1.6
 	experience_multiplier = 43
 
 /experience/skill/prayer/ //ATTRIBUTE_CONSTITUTION
 	//Each point of damage dealt or healed = 1xp
-	name = "Prayer"
+	name = "祈祷"
 	id = SKILL_PRAYER
-	desc = "Have a little faith in space jesus."
+	desc = "对太空耶稣多一点信心。"
 	skill_for_examine = 6
-	desc_vague = "Affects some of your spells in some way."
-	desc_extended = "Your skill in praying to the gods. Affects the strength, speed, and success rate of casting prayer-based spells and abilities."
+	desc_vague = "会影响你的部分法术。"
+	desc_extended = "你向神明祈祷的技巧。影响祈祷类法术和能力的强度、施放速度及成功率。"
 	experience_power = 1.6
 	experience_multiplier = 43
 
@@ -35,15 +35,15 @@
 /experience/skill/block/ //ATTRIBUTE_FORTITUDE
 	//Each point of damage blocked = 1xp
 	//Level 100 is 1 million xp.
-	name = "Block"
+	name = "格挡"
 	id = SKILL_BLOCK
-	desc = "YOU SHALL NOT PASS!"
+	desc = "你休想通过！"
 	skill_for_examine = list(3, 7, 8)
-	desc_vague = "Affects your blocking in some way."
-	desc_extended = "Your skill in blocking attacks with a weapon or a shield. Affects the chance of a successful block of swords, bucklers, or even your fists."
+	desc_vague = "会影响你的格挡。"
+	desc_extended = "你使用武器或盾牌格挡攻击的技巧。影响用刀剑、小圆盾，甚至拳头成功格挡的概率。"
 	tips = list(
-		"When blocking, if an enemy attacks you in 1 second you will parry them, avoiding all damage and possibly stunning the opponent.",
-		"Perfect parrying whilst avoiding all damage, does not grant you blocking expirience.",
+		"进入格挡后的 1 秒内，若敌人攻击你，你会招架其攻击，免受所有伤害，并可能使对方昏迷。",
+		"完美招架虽然能避免全部伤害，但不会提供格挡经验。",
 	)
 	experience_power = 1.6
 	experience_multiplier = 28
@@ -51,12 +51,12 @@
 /experience/skill/armor/ //ATTRIBUTE_FORTITUDE
 	//Each point of damage blocked by armor = 1xp
 	//Level 100 is 1 million xp.
-	name = "Armor"
+	name = "护甲"
 	id = SKILL_ARMOR
-	desc = "As close to immortality as you can get."
+	desc = "尽你所能，接近不死之身。"
 	skill_for_examine = 3
-	desc_vague = "Affects your armor in some way."
-	desc_extended = "Your skill in blocking attacks with your armor."
+	desc_vague = "会影响你的护甲。"
+	desc_extended = "你利用护甲抵挡攻击的技巧。"
 	experience_power = 1.6
 	experience_multiplier = 28
 
@@ -65,89 +65,89 @@
 /experience/skill/ranged/ //ATTRIBUTE_DEXTERITY
 	//Each point of damage dealt = 1xp
 	//Level 100 is 2 million xp.
-	name = "Ranged"
+	name = "远程"
 	id = SKILL_RANGED
-	desc = "Space Texas Sharpshooter."
+	desc = "太空得克萨斯神枪手。"
 	skill_for_examine = 4
-	desc_vague = "Affects your damage in some way."
-	desc_extended = "Your skill in performing attacks with ranged weapons. Affects the damage and accuracy of bows, crossbows, guns, and throwing objects."
+	desc_vague = "会影响你的伤害。"
+	desc_extended = "你使用远程武器攻击的技巧。影响弓、弩、枪械及投掷物的伤害和命中率。"
 	experience_power = 1.6
 	experience_multiplier = 43
 
 /experience/skill/evasion/ //ATTRIBUTE_AGILITY
 	//Each time you dodge = 1 xp
-	name = "Evasion"
+	name = "闪避"
 	id = SKILL_EVASION
-	desc = "\"Turns on bullet time and dodges your every attack\""
+	desc = "“开启子弹时间，躲掉你的每一次攻击。”"
 	skill_for_examine = 4
-	desc_vague = "Affects your dodging in some way."
-	desc_extended = "Your skill in dodging incoming attacks. Affects the chance of a successful dodge from melee weapons, ranged weapons, and magic."
+	desc_vague = "会影响你的闪避。"
+	desc_extended = "你躲避来袭攻击的技巧。影响成功闪避近战武器、远程武器和魔法攻击的概率。"
 	experience_power = 1.6
 	experience_multiplier = 2.6
 
 /experience/skill/unarmed/ //ATTRIBUTE_RESILIENCE
 	//Each point of damage dealt = 1xp
 	//Level 100 is 1 million xp.
-	name = "Unarmed"
+	name = "徒手"
 	id = SKILL_UNARMED
-	desc = "Kapooooooooooooooooooooooooooooooooooooooooooooooow."
+	desc = "砰————————！"
 	skill_for_examine = 2
-	desc_vague = "Affects your damage in some way."
-	desc_extended = "Your skill in performing attacks with your fists. Affects the damage of your bare hands, brass knuckles, or power fists."
+	desc_vague = "会影响你的伤害。"
+	desc_extended = "你用拳头攻击的技巧。影响空手、指虎或动力拳套造成的伤害。"
 	experience_power = 1.6
 	experience_multiplier = 28
 
 /experience/skill/survival //ATTRIBUTE_RESILIENCE
-	name = "Survival"
+	name = "生存"
 	id = SKILL_SURVIVAL
-	desc = "Doesn't make you immortal."
-	desc_extended = "Your skill in analyzing people, objects, or situations. Affects the chance of detecting traps and illusions, and how robust descriptions are when you examine things."
+	desc = "可不会让你永生。"
+	desc_extended = "你分析人物、物品或状况的技巧。影响发现陷阱和幻象的概率，以及查看事物时说明信息的详尽程度。"
 	experience_power = 1.6
 	experience_multiplier = 28
 
 
 //Mage
 /experience/skill/magic/ //ATTRIBUTE_INTELLIGENCE
-	name = "Magic"
+	name = "魔法"
 	id = SKILL_MAGIC
-	desc = "Not to be confused with sorcery."
+	desc = "别和巫术搞混了。"
 	skill_for_examine = 6
-	desc_vague = "Affects your spells in some way."
-	desc_extended = "Your skill in casting support and defensive spells like summoning magic."
+	desc_vague = "会影响你的法术。"
+	desc_extended = "你施放辅助和防御法术的技巧，例如召唤魔法。"
 	experience_power = 1.6
 	experience_multiplier = 43
 
 /experience/skill/summoning //ATTRIBUTE_SOUL
-	name = "Summoning"
+	name = "召唤"
 	id = SKILL_SUMMONING
-	desc = "Not to be confused with prayer."
+	desc = "别和祈祷搞混了。"
 	skill_for_examine = list(5, 30)
-	desc_extended = "Your skill in casting summoning related magic such as summon skeleton."
+	desc_extended = "你施放召唤类魔法的技巧，例如召唤骷髅。"
 	experience_power = 1.6
 	experience_multiplier = 43
 
 /experience/skill/summoning/get_examine_list(var/mob/living/examiner)
-	tips = list("Your summoning slots are expanded as you level up summoning, currently you can maintain [floor(max(1,1 + get_power(0,1,2)*3))] creatures")
+	tips = list("提升召唤等级可以增加召唤栏位。目前你能维持 [floor(max(1,1 + get_power(0,1,2)*3))] 个生物。")
 	return ..()
 
 /experience/skill/medicine/ //ATTRIBUTE_WILLPOWER
-	name = "Medicine"
+	name = "医疗"
 	id = SKILL_MEDICINE
-	desc = "Surgery isn't in, yet!"
+	desc = "外科手术还没实装呢！"
 	skill_for_examine = 5
-	desc_vague = "Affects your treatment in some way."
-	desc_extended = "Your skill in treating yourself and others with actual medicine. Affects the treatment times and strength of bandages."
+	desc_vague = "会影响你的治疗。"
+	desc_extended = "你使用真正的药物治疗自己和他人的技巧。影响治疗耗时及绷带的治疗效果。"
 	experience_power = 1.6
 	experience_multiplier = 28
 
 /experience/skill/precision/ //ATTRIBUTE_WILLPOWER
 	//Each point of extra damage in a critical hit = 1xp
 	//Level 100 is 1 million xp.
-	name = "Precision"
+	name = "精准"
 	id = SKILL_PRECISION
-	desc = "There is actually a difference between precision and accuracy."
+	desc = "精密度和准确度其实是两回事。"
 	skill_for_examine = 7
-	desc_vague = "Affects your damage in some way."
-	desc_extended = "Your skill in striking vital points of creatures and humanoids. Affects the rate in which critical hits occur."
+	desc_vague = "会影响你的伤害。"
+	desc_extended = "你击中生物和类人生物要害的技巧。影响暴击概率。"
 	experience_power = 1.6
 	experience_multiplier = 28

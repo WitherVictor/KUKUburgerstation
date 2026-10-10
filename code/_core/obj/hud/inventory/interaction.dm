@@ -4,7 +4,7 @@
 	if(is_living(activator))
 		var/mob/living/L = activator
 		if(L.dead && !(object.interaction_flags & FLAG_INTERACTION_DEAD))
-			L.to_chat(span("warning","You're dead!"))
+			L.to_chat(span("warning","你已经死了！"))
 			return TRUE
 		//Reinforced grabbing. Doesn't matter what your intent is as long as you're clicking with the same hand.
 		if(grabbed_object && grabbed_object == object && is_living(object))
@@ -56,7 +56,7 @@
 			if(click_flags & LEFT_HAND)
 				rotation = 90
 			M.set_dir(turn(M.dir,rotation))
-			activator.to_chat(span("notice","You rotate \the [M.name] [rotation == -90 ? "clockwise" : "counter-clockwise"]."))
+			activator.to_chat(span("notice","你将[M.name][rotation == -90 ? "顺时针" : "逆时针"]旋转了。"))
 			return TRUE //Needs to be here. At this level.
 
 	//Throw the object if we are telling it to throw.
@@ -74,10 +74,10 @@
 		if(istype(object_to_throw))
 			if(is_living(object_to_throw))
 				if(!allow_hostile_action(L.loyalty_tag,object_to_throw))
-					activator.to_chat(span("warning","You can't throw allies!"))
+					activator.to_chat(span("warning","你不能把盟友扔出去！"))
 					return TRUE
 				if(grab_level < 2) //To throw mob you need an agressive grab
-					activator.to_chat(span("warning","You need a better grip to do that!"))
+					activator.to_chat(span("warning","你需要抓得更紧才能这么做！"))
 					return TRUE
 			var/vel_x = object.x - activator.x //Activator pos is the same as object anyway
 			var/vel_y = object.y - activator.y
@@ -86,7 +86,7 @@
 			if(is_item(object_to_throw)) //Item needs aditional procedures
 				var/obj/item/I = object_to_throw
 				if(I.additional_clothing_parent || I.no_drop) //Can't throw additional clothing
-					activator.to_chat(span("warning","You can't throw this!"))
+					activator.to_chat(span("warning","你不能把这个扔出去！"))
 					return TRUE
 				if(!highest) //We want to throw it in us?.. No velocity
 					I.drop_item(get_turf(activator)) //Drop if we can't throw.
@@ -111,7 +111,7 @@
 			object_to_throw.throw_self((grabbed_object ? grabbed_object : activator),object,target_cords[1],target_cords[2],vel_x,vel_y,lifetime=SECONDS_TO_DECISECONDS(1),desired_loyalty_tag = L.loyalty_tag)
 
 		else if(top_object)
-			activator.to_chat(span("warning","You can't throw \the [top_object.name]!"))
+			activator.to_chat(span("warning","你不能把[top_object.name]扔出去！"))
 
 		return TRUE
 
@@ -124,7 +124,7 @@
 		if(is_item(top_object))
 			var/obj/item/I = top_object
 			if(I.no_drop)
-				activator.to_chat(span("warning","You can't drop this!"))
+				activator.to_chat(span("warning","你不能丢下这个！"))
 				return TRUE
 		if(grabbed_object)
 			release_object(activator)
@@ -254,17 +254,17 @@
 /obj/hud/inventory/proc/can_wield(var/mob/activator,var/obj/item/item_to_wield)
 
 	if(src.is_occupied())
-		activator.to_chat(span("warning","Your hand must be unoccupied in order to wield this!"))
+		activator.to_chat(span("warning","你需要空出这只手才能双手持握！"))
 		return FALSE
 
 	if(!is_inventory(item_to_wield.loc) || item_to_wield.loc == src)
-		activator.to_chat(span("warning","You must be holding this object in another hand in order to wield this!"))
+		activator.to_chat(span("warning","另一只手必须拿着这个物品，才能双手持握！"))
 		return FALSE
 
 	var/obj/hud/inventory/holding = item_to_wield.loc
 
 	if(!(holding.click_flags & (LEFT_HAND | RIGHT_HAND)))
-		activator.to_chat(span("warning","You must be holding this object in another hand in order to wield this!"))
+		activator.to_chat(span("warning","另一只手必须拿着这个物品，才能双手持握！"))
 		return FALSE
 
 	return TRUE
@@ -273,7 +273,7 @@
 
 /obj/hud/inventory/proc/unwield(var/mob/activator,var/obj/item/item_to_wield)
 
-	activator.to_chat(span("notice","You unbrace \the [item_to_wield] with your [src.loc.name]."))
+	activator.to_chat(span("notice","你的[src.loc.name]不再辅助持握[item_to_wield]。"))
 
 	var/obj/hud/inventory/holding = item_to_wield.loc
 
@@ -292,17 +292,17 @@
 /obj/hud/inventory/proc/wield(var/mob/activator,var/obj/item/item_to_wield)
 
 	if(!is_item(item_to_wield) || !item_to_wield.can_wield)
-		activator.to_chat(span("warning","You can't wield this!"))
+		activator.to_chat(span("warning","你无法双手持握这个物品！"))
 		return FALSE
 
 	if(src.parent_inventory)
-		activator.to_chat(span("warning","You are already wielding something!"))
+		activator.to_chat(span("warning","你已经在双手持握其他物品了！"))
 		return FALSE
 
 	if(!can_wield(activator,item_to_wield))
 		return FALSE
 
-	activator.to_chat(span("notice","You brace \the [item_to_wield] with your [src.loc.name]."))
+	activator.to_chat(span("notice","你用[src.loc.name]辅助持握[item_to_wield]。"))
 
 	var/obj/hud/inventory/holding = item_to_wield.loc
 

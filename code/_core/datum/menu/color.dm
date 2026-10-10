@@ -1,5 +1,5 @@
 /menu/color/
-	name = "Color Selection"
+	name = "选择颜色"
 	id = "color_selection"
 	file = 'html/color_selector.html'
 	resources = list(

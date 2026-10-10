@@ -1,6 +1,6 @@
 /status_effect/consencrated
-	name = "Consencrated"
-	desc = "You've been consencrated!"
+	name = "圣化"
+	desc = "你受到了圣化效果的影响！"
 	id = CONSECRATED
 
 	minimum = SECONDS_TO_DECISECONDS(10)

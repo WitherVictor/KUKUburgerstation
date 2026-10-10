@@ -1,6 +1,6 @@
 /obj/item/material/rod
-	name = "rod"
-	desc = "I am error."
+	name = "材料棒"
+	desc = "我是个错误。"
 	icon = 'icons/obj/item/material.dmi'
 	icon_state = "rod"
 
@@ -16,12 +16,12 @@
 /obj/item/material/rod/update_icon()
 	var/material/M = SSmaterials.all_materials[material_id]
 	if(!M)
-		name = "ERROR rod"
+		name = "异常材料棒"
 		log_error("Warning! [src.get_debug_name()] had incorrect material type \"[material_id]\"!")
 	else
-		name = "[deunderscore(M.name)] rod"
-		desc = "...they will come."
-		desc_extended = "A rod made of [deunderscore(M.name)]. Useful for building and crafting."
+		name = "[M.display_name]棒"
+		desc = "……他们就会来。"
+		desc_extended = "一根由[M.display_name]制成的棒材，可用于建造和制作物品。"
 		icon_state = "[M.icon_state_rod]_[min(CEILING(amount/10,1),amount_max_icon)]"
 		color = M.color
 	return ..()
@@ -40,7 +40,7 @@
 			INITIALIZE(R)
 			GENERATE(R)
 			FINALIZE(R)
-			activator.visible_message(span("notice","\The [activator.name] cuts some [src.name] into some [R.name]."),span("notice","You cut \the [src.name] into 8 [R.name]."))
+			activator.visible_message(span("notice","[activator.name]将[src.name]剪成了一些[R.name]。"),span("notice","你将[src.name]剪成了8颗[R.name]。"))
 			add_item_count(-1)
 			R.Move(get_turf(I))
 			return TRUE
@@ -49,7 +49,7 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(amount < 4)
-				activator.to_chat(span("notice","You need 4 rods to weld a sheet!"))
+				activator.to_chat(span("notice","需要4根棒材才能焊成一张板材！"))
 				return ..()
 			var/obj/item/material/sheet/R = new(get_turf(src))
 			R.material_id = material_id
@@ -57,7 +57,7 @@
 			INITIALIZE(R)
 			GENERATE(R)
 			FINALIZE(R)
-			activator.visible_message(span("notice","\The [activator.name] crudely welds the [src.name] into \a [R.name]s."),span("notice","You crudely weld \the [src.name] into \a [R.name]."))
+			activator.visible_message(span("notice","[activator.name]将[src.name]粗略焊成了[R.name]。"),span("notice","你将[src.name]粗略焊成了[R.name]。"))
 			add_item_count(-4)
 			R.Move(get_turf(I))
 			return TRUE

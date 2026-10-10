@@ -1,6 +1,6 @@
 /species/cyborg/
-	name = "Cyborg"
-	desc = "Fucking metal people."
+	name = "半机械人"
+	desc = "他妈的金属人。"
 	id = "cyborg"
 	flags_species = SPECIES_CYBORG
 

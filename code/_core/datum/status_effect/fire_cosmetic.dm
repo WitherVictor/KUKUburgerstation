@@ -1,6 +1,6 @@
 /status_effect/fire //This is entirely cosmetic.
-	name = "Fire"
-	desc = "You're on fire!"
+	name = "着火"
+	desc = "你着火了！"
 	id = FIRE
 	minimum = 0
 	maximum = 300
@@ -16,4 +16,4 @@
 	var/initial_fire = owner.on_fire
 
 	if(owner.ignite(magnitude,source) && !initial_fire)
-		owner.visible_message(span("danger","\The [owner.name] is set on fire!"),span("danger","You're set on fire!"))
+		owner.visible_message(span("danger","[owner.name]着火了！"),span("danger","你着火了！"))

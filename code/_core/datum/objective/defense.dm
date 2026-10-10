@@ -1,5 +1,5 @@
 /objective/defense
-	name = "Defend Supermatter"
+	name = "保卫超物质"
 
 	var/obj/structure/interactive/supermatter/defend
 
@@ -10,9 +10,9 @@
 /objective/defense/on_gamemode_playable()
 
 	announce(
-		"Central Command Mission Update",
-		"Supermatter Defense",
-		"Our bluespace drives are ready to teleport the Supermatter Crystal once it is charged with emitter energy. Please activate the emitters to start the charging process.",
+		"中央指挥部任务更新",
+		"超物质防卫",
+		"我们的蓝空间驱动器已准备就绪，待超物质晶体吸收足够的发射器能量后即可将其传送。请启用发射器，开始充能。",
 		ANNOUNCEMENT_STATION
 	)
 
@@ -40,7 +40,7 @@
 	return pick(valid_targets)
 
 /objective/defense/get_description()
-	return "Defend [english_list(tracked_atoms)] until we can teleport it safely. Location: [english_list(get_locations())]."
+	return "保卫[english_list(tracked_atoms,"未知目标","、","、")]，直到我们能将其安全传送。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/defense/setup()
 	if(!length(possible_supermatter_spawns))

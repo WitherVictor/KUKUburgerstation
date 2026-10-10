@@ -1,6 +1,6 @@
 /job/assistant
-	name = "Assistant"
-	desc = "An assistant is a jack of all trades helper that assists others with their own jobs. They have bonuses in all skill and attribute fields."
+	name = "助理"
+	desc = "助理是协助他人工作的多面手，所有技能和属性均有加成。"
 	passive_income = 200
 
 	bonus_skills = list(

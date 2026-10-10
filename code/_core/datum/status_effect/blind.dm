@@ -1,6 +1,6 @@
 /status_effect/blind
-	name = "Blinded"
-	desc = "You're blinded!"
+	name = "失明"
+	desc = "你失明了！"
 	id = BLINDED
 	minimum = SECONDS_TO_DECISECONDS(1)
 	maximum = SECONDS_TO_DECISECONDS(10)

@@ -1,8 +1,8 @@
 /obj/hud/button/slot
-	name = "slot button"
+	name = "快捷栏按钮"
 	var/id = null
-	desc = "Slot button for quick actions."
-	desc_extended = "Press this button to activate that item on the tile you're pointing."
+	desc = "用于快捷操作的栏位按钮。"
+	desc_extended = "按下此按钮，使用对应物品作用于鼠标指向的地块。"
 	icon_state = "square_trim"
 	screen_loc = "LEFT+0.25,TOP-0.25"
 	alpha = 0

@@ -4,7 +4,7 @@
 		return FALSE
 
 	if(activator == object)
-		activator.to_chat(span("notice","You cannot grab yourself, ERP is against the rules!"))
+		activator.to_chat(span("notice","你不能抓住自己，规则禁止色情角色扮演！"))
 		return FALSE
 
 	if(!ismovable(object) || !object.can_be_grabbed(activator))
@@ -23,17 +23,17 @@
 		release_object(activator) //Release the old object, if any.
 
 	if(is_occupied())
-		activator.to_chat(span("notice","You need an empty hand to grab this!"))
+		activator.to_chat(span("notice","你需要空出一只手才能抓住它！"))
 		return FALSE
 
 	if(get_dist(activator,object) > 1)
 		if(next_move > 0 || !activator.Move(get_step(activator.loc,get_dir(activator,object))))
-			activator.to_chat(span("notice","You're too far away!"))
+			activator.to_chat(span("notice","你离得太远了！"))
 			return FALSE
 
 	if(object.grabbing_hand) //Someone else is grabbing already.
 		if(object.grabbing_hand.grab_level >= 2)
-			activator.to_chat(span("warning","\The [object.grabbing_hand.owner.name] has too strong of a grip on \the [object.name]!"))
+			activator.to_chat(span("warning","[object.grabbing_hand.owner.name]把[object.name]抓得太紧了！"))
 			return FALSE
 		else
 			object.grabbing_hand.release_object(activator) //Steal the grab.
@@ -60,7 +60,7 @@
 
 	HOOK_CALL_ADV("grab_changed",owner,args)
 
-	activator.visible_message(span("warning","\The [activator.name] grabs \the [object.name]."),span("notice","You grab \the [object.name]."))
+	activator.visible_message(span("warning","[activator.name]抓住了[object.name]。"),span("notice","你抓住了[object.name]。"))
 
 	return TRUE
 
@@ -93,11 +93,11 @@
 		return FALSE
 	if(activator && owner)
 		if(activator == owner)
-			activator.to_chat(span("notice","You release \the [grabbed_object.name]."))
+			activator.to_chat(span("notice","你松开了[grabbed_object.name]。"))
 		else
 			owner.visible_message(
-				span("danger","\The [activator.name] forces \the [owner.name] to release their grip on \the [grabbed_object.name]!"),
-				span("danger","\The [activator.name] forces you to release your grip on \the [grabbed_object.name]!")
+				span("danger","[activator.name]迫使[owner.name]松开了[grabbed_object.name]！"),
+				span("danger","[activator.name]迫使你松开了[grabbed_object.name]！")
 			)
 	var/mob/living/L
 	if(is_living(grabbed_object))
@@ -150,8 +150,8 @@
 		return FALSE
 
 	activator.visible_message(
-		span("warning","\The [activator.name] tightens their grip on \the [grabbed_living.name]!"),
-		span("warning","You tighten your grip on \the [grabbed_living.name]!")
+		span("warning","[activator.name]把[grabbed_living.name]抓得更紧了！"),
+		span("warning","你把[grabbed_living.name]抓得更紧了！")
 	)
 
 	grab_level = 2 //Agressive grab

@@ -1,6 +1,6 @@
 /status_effect/disarm
-	name = "Disarmed"
-	desc = "You're disarmed!"
+	name = "被缴械"
+	desc = "你被缴械了！"
 	id = DISARM
 	minimum = 0
 	maximum = 0

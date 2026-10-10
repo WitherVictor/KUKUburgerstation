@@ -4,14 +4,14 @@
 		if("take")
 			var/obj/item/I = callback_list["target"]
 			if(!I || I.qdeleting)
-				to_chat(span("notice","The object no longer exists!"))
+				to_chat(span("notice","目标物品已不存在！"))
 				return TRUE
 			if(right_hand && !length(right_hand.held_objects))
 				I.transfer_item(right_hand)
 			else if(left_hand && !length(left_hand.held_objects))
 				I.transfer_item(left_hand)
 			else
-				to_chat(span("notice","One of your hands needs to be empty on order to do this!"))
+				to_chat(span("notice","需要空出一只手才能这样做！"))
 
 			return TRUE
 
@@ -21,6 +21,6 @@
 
 	switch(id)
 		if("take")
-			to_chat(span("notice","You and the target must remain still!"))
+			to_chat(span("notice","你和目标都必须保持静止！"))
 
 	..()

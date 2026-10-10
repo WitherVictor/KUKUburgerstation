@@ -1,7 +1,7 @@
 /obj/structure/interactive/plant
-	name = "plant"
-	desc = "A plant grows here."
-	desc_extended =  "A growing plant."
+	name = "植物"
+	desc = "这里长着一株植物。"
+	desc_extended =  "一株正在生长的植物。"
 	//Icon stand and icon is generated.
 	icon = 'icons/obj/markers/plant.dmi'
 	icon_state = null
@@ -64,10 +64,10 @@
 	. = ..()
 
 	if(dead)
-		. += span("danger","It's dead, and shriveled...")
+		. += span("danger","它已经枯萎死去了……")
 	else
 		if(growth >= growth_produce_max)
-			. += span("notice bold","It is ready for harvest.")
+			. += span("notice bold","它已经可以收获了。")
 		/*
 		if(health)
 			switch(health.health_current/health.health_max)
@@ -83,39 +83,39 @@
 
 	switch(age/lifetime)
 		if(0.6 to 0.7)
-			. += span("warning","It looks a little old.")
+			. += span("warning","它看起来有些老了。")
 		if(0.8 to 1)
-			. += span("warning","It looks old.")
+			. += span("warning","它看起来老了。")
 		if(1 to INFINITY)
-			. += span("danger","It looks very old.")
+			. += span("danger","它看起来已经很老了。")
 
 	switch(hydration)
 		if(-INFINITY to 10)
-			. += span("danger","It looks severely underwatered!")
+			. += span("danger","它看起来严重缺水！")
 		if(10 to 50)
-			. += span("warning","It looks underwatered, and will not grow.")
+			. += span("warning","它看起来缺水，无法生长。")
 		if(50 to 75)
-			. += span("notice","It looks like it could use some water.")
+			. += span("notice","它看起来需要浇点水。")
 		if(75 to 100)
-			. += span("notice","It looks properly watered.")
+			. += span("notice","它的水分看起来很充足。")
 		if(100 to 125)
-			. += span("warning","It looks overwatered.")
+			. += span("warning","它看起来浇水过多了。")
 		if(125 to INFINITY)
-			. += span("danger","It looks severely overwatered!")
+			. += span("danger","它看起来严重积水！")
 
 	switch(nutrition)
 		if(-INFINITY to 10)
-			. += span("danger","It looks severely underfertilized!")
+			. += span("danger","它看起来严重缺肥！")
 		if(10 to 50)
-			. += span("warning","It looks underfertilized, and will not grow.")
+			. += span("warning","它看起来缺肥，无法生长。")
 		if(50 to 75)
-			. += span("notice","It looks like it could use some fertilizer.")
+			. += span("notice","它看起来需要施点肥。")
 		if(75 to 100)
-			. += span("notice","It looks properly fertilized.")
+			. += span("notice","它的肥料看起来很充足。")
 		if(100 to 125)
-			. += span("warning","It looks overfertilized.")
+			. += span("warning","它看起来施肥过多了。")
 		if(125 to INFINITY)
-			. += span("danger","It looks severely overfertilized!")
+			. += span("danger","它看起来施肥严重过量！")
 
 
 /obj/structure/interactive/plant/on_destruction(var/damage = TRUE)
@@ -266,16 +266,16 @@
 	else
 		icon_state = "[associated_plant.plant_icon_state]-grow[max(1,CEILING((min(growth,growth_max)/growth_max)*associated_plant.plant_icon_count, 1))]"
 
-	desc = "Icon state: [icon_state]"
+	desc = "图标状态：[icon_state]"
 
 /obj/structure/interactive/plant/proc/harvest(var/mob/living/advanced/activator,var/obj/item/harvest_item)
 
 	if(dead)
-		activator.to_chat(span("warning","\The [src.name] is dead!"))
+		activator.to_chat(span("warning","[src.name]已经枯死！"))
 		return TRUE
 
 	if(growth < growth_produce_max)
-		activator.to_chat(span("warning","\The [src.name] is not ready to be harvested!"))
+		activator.to_chat(span("warning","[src.name]还不能收获！"))
 		return TRUE
 
 	var/turf/activator_turf = get_turf(activator)
@@ -289,7 +289,7 @@
 	var/plant_type/associated_plant = SSbotany.all_plant_types[plant_type]
 
 	if(!associated_plant || potency <= 0 || yield_max <= 0)
-		activator.to_chat(span("warning","You fail to harvest anything from \the [src.name]!"))
+		activator.to_chat(span("warning","你没能从[src.name]上收获任何东西！"))
 		return TRUE
 	else
 
@@ -344,9 +344,9 @@
 				total_harvests += 1
 
 		if(total_harvests <= 0)
-			activator.visible_message(span("warning","\The [activator.name] fails to harvest anything from \the [src.name]!"),span("warning","You fail to harvest anything from \the [src.name]!"))
+			activator.visible_message(span("warning","[activator.name]没能从[src.name]上收获任何东西！"),span("warning","你没能从[src.name]上收获任何东西！"))
 		else
-			activator.visible_message(span("notice","\The [activator.name] harvests from \the [src.name]."),span("notice","You harvest [total_harvests] [associated_plant.name]\s from \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]采收了[src.name]。"),span("notice","你从[src.name]上收获了[total_harvests]份[associated_plant.name]。"))
 
 	if(delete_after_harvest)
 		growth = 0 //just in case

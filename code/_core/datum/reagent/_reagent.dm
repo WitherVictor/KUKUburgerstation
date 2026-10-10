@@ -1,7 +1,7 @@
 /reagent/
-	var/name = "Reagent"
-	var/desc = "The basic description of the reagent."
-	var/desc_extended = "The extended description of the reagent, usually a detailed note of its effects."
+	var/name = "试剂"
+	var/desc = "试剂的基本说明。"
+	var/desc_extended = "试剂的详细说明，通常介绍其具体作用。"
 	var/value = 0 //Value per unit.
 
 	var/color = "#FFFFFF" //Reagent's color.
@@ -23,7 +23,7 @@
 	var/flags_metabolism = REAGENT_METABOLISM_NONE
 
 	var/flags_flavor = FLAG_FLAVOR_NONE
-	var/flavor = "nothing"
+	var/flavor = "无味"
 	var/flavor_strength = 1
 
 

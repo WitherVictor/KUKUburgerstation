@@ -1,5 +1,5 @@
 /objective/kill_blob
-	name = "Kill Rogue Crewmember"
+	name = "摧毁异形菌毯"
 	credit_reward = 1000
 	burgerbux_reward = 1
 	points_reward = 15
@@ -13,7 +13,7 @@
 
 
 /objective/kill_blob/get_description()
-	return "Destroy [english_list(tracked_atoms)]. Location: [english_list(get_locations(),"Unknown")]."
+	return "摧毁[english_list(tracked_atoms,"未知目标","、","、")]。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/kill_blob/start()
 	var/obj/marker/M = pick(possible_blob_locations)

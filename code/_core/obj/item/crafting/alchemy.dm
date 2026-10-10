@@ -1,5 +1,5 @@
 /obj/item/crafting_bench/alchemy
-	name = "portable alchemy table"
+	name = "便携炼金台"
 	icon = 'icons/obj/item/ore.dmi'
 	icon_state = "alchemy"
 

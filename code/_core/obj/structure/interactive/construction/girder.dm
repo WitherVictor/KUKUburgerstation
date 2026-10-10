@@ -1,7 +1,7 @@
 /obj/structure/interactive/construction/girder
-	name = "girder"
-	desc = "A metal girder."
-	desc_extended = "Could probably add some plates for a wall, or a couple rods for a door."
+	name = "梁架"
+	desc = "一副金属梁架。"
+	desc_extended = "加上板材可以建墙，加上两根棒材可以装门。"
 	icon_state = "girder"
 
 	collision_flags = FLAG_COLLISION_WALL
@@ -19,13 +19,13 @@
 	INTERACT_CHECK_NO_DELAY(S)
 
 	if(istype(src.loc,/turf/simulated/wall/))
-		activator.to_chat(span("warning","There is already a wall here... somehow."))
+		activator.to_chat(span("warning","不知为何，这里已经有一堵墙了……"))
 		return FALSE
 	if(S.amount < 1)
-		activator.to_chat(span("warning","You need a sheet in order to build a wall!"))
+		activator.to_chat(span("warning","建墙需要1张板材！"))
 		return FALSE
 	if(S.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	return TRUE
 /obj/structure/interactive/construction/girder/proc/can_construct_door(var/mob/activator,var/obj/item/material/sheet/S)
@@ -34,13 +34,13 @@
 	INTERACT_CHECK_NO_DELAY(S)
 
 	if(istype(src.loc,/turf/simulated/wall/))
-		activator.to_chat(span("warning","There is already a wall here... somehow."))
+		activator.to_chat(span("warning","不知为何，这里已经有一堵墙了……"))
 		return FALSE
 	if(S.amount < 2)
-		activator.to_chat(span("warning","You need 2 rods in order to build a door!"))
+		activator.to_chat(span("warning","装门需要2根棒材！"))
 		return FALSE
 	if(S.material_id != material_id)
-		activator.to_chat(span("warning","You don't have the correct material for this!"))
+		activator.to_chat(span("warning","材料种类不匹配！"))
 		return FALSE
 	return TRUE
 /obj/structure/interactive/construction/girder/proc/construct_door(var/mob/activator,var/obj/item/material/sheet/S)
@@ -50,7 +50,7 @@
 	INITIALIZE(W)
 	GENERATE(W)
 	FINALIZE(W)
-	activator?.visible_message(span("notice","\The [activator.name] places \the [W.name]."),span("notice","You place \the [W.name]."))
+	activator?.visible_message(span("notice","[activator.name]安装了[W.name]。"),span("notice","你安装了[W.name]。"))
 	S.add_item_count(-2)
 	qdel(src)
 	return TRUE
@@ -60,7 +60,7 @@
 	T.change_turf(/turf/simulated/wall/metal/)
 	T.material_id = material_id
 	T.color = color
-	activator?.visible_message(span("notice","\The [activator.name] places \the [T.name]."),span("notice","You place \the [T.name]."))
+	activator?.visible_message(span("notice","[activator.name]建造了[T.name]。"),span("notice","你建造了[T.name]。"))
 	S.add_item_count(-1)
 	qdel(src)
 	return TRUE
@@ -91,13 +91,13 @@
 		var/obj/item/T = object
 		if(T.flags_tool & FLAG_TOOL_WRENCH)
 			if(anchored)
-				activator.to_chat(span("notice","You un-anchor the girder."))
+				activator.to_chat(span("notice","你松开了梁架的固定装置。"))
 				anchored = FALSE
 			else
-				activator.to_chat(span("notice","You anchor the girder."))
+				activator.to_chat(span("notice","你固定了梁架。"))
 				anchored = TRUE
 		if(T.flags_tool & FLAG_TOOL_WIRECUTTER)
-			activator.to_chat(span("notice","You dissasemble the [src.name]"))
+			activator.to_chat(span("notice","你拆解了[src.name]。"))
 			INTERACT_CHECK
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(10)

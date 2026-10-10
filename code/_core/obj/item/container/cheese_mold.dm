@@ -1,7 +1,7 @@
 /obj/item/container/cheese_mold
-	name = "cheese mold"
-	desc = "Make cheese with this."
-	desc_extended = "Cheesemaking is a delicate process. In order to make the best cheese, it needs to be mixed in open air and left undisturbed until it is fully formed. This can take up to a minute."
+	name = "奶酪模具"
+	desc = "用它来制作奶酪。"
+	desc_extended = "制作奶酪是一门细致活。想做出最好的奶酪，就得在露天环境中混合原料，然后静置，直到完全成形。这个过程最多需要一分钟。"
 
 	icon = 'icons/obj/item/container/cheese_mold.dmi'
 	icon_state = "wheel"
@@ -40,11 +40,11 @@
 /obj/item/container/cheese_mold/get_examine_list(var/mob/activator)
 	. = ..()
 	if(process_count >= CHEESE_PROCESS_TIME)
-		. += div("notice","The cheese is ready to be removed!")
+		. += div("notice","奶酪已经做好，可以取出了！")
 	else if(process_count)
-		. += div("notice","It is currently curdling cheese...")
+		. += div("notice","奶酪正在凝固……")
 	else
-		. += div("notice","Add at least 40 units milk and 10 units enzymes to start the cheesemaking process.")
+		. += div("notice","加入至少40单位牛奶和10单位酶，即可开始制作奶酪。")
 
 /obj/item/container/cheese_mold/block
 	icon_state = "block"
@@ -62,7 +62,7 @@
 			cheese_mix[A.cheese_type] = 1
 		update_sprite()
 		if(process_count >= CHEESE_PROCESS_TIME)
-			src.visible_message(span("notice","The cheese in \the [src.name] finishes curdling, and is ready to be removed!"))
+			src.visible_message(span("notice","[src.name]里的奶酪已经凝固，可以取出了！"))
 			return TRUE
 
 	CALLBACK("\ref[src]_process_cheese",SECONDS_TO_DECISECONDS(1),src,src::process())
@@ -117,7 +117,7 @@
 
 	C.reagents.process_recipes() //Update container is called in FINALIZE(C)
 
-	activator.to_chat(span("notice","You take \the [C.name] out of \the [src.name]."))
+	activator.to_chat(span("notice","你从[src.name]中取出了[C.name]。"))
 
 	process_count = 0
 	cheese_mix.Cut()
@@ -129,12 +129,16 @@
 
 /obj/item/container/cheese_mold/click_self(var/mob/activator,location,control,params)
 
-	var/answer = input("Are you sure you want to empty the contents of \the [src.name]?","Empty Contents","Cancel") in list("Yes","No","Cancel")
+	var/list/answer_choices = list("是" = "Yes", "否" = "No", "取消" = "Cancel")
+	var/answer = input("确定要倒空[src.name]的内容物吗？","倒空容器","取消") in answer_choices
+	if(isnull(answer))
+		return FALSE
+	answer = answer_choices[answer]
 	if(answer == "Yes")
 		INTERACT_CHECK
 		INTERACT_DELAY(1)
 		reagents.remove_all_reagents(reagents.volume_current)
-		activator.visible_message(span("notice","\The [activator.name] empties \the [src.name] of its contents."),span("notice","You empty \the [src.name] of its contents."))
+		activator.visible_message(span("notice","[activator.name]倒空了[src.name]。"),span("notice","你倒空了[src.name]。"))
 
 	return TRUE
 
@@ -157,7 +161,7 @@
 		if(milk_count >= 40 && enzyme_count >= 10)
 			allow_reagent_transfer_from = FALSE
 			var/turf/T = get_turf(src)
-			T.visible_message(span("notice","The milk starts to curdle!"))
+			T.visible_message(span("notice","牛奶开始凝固了！"))
 			src.process()
 
 	return ..()

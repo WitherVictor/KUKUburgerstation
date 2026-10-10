@@ -1,6 +1,6 @@
 /reagent/tinea_luxor
-	name = "tinea luxor"
-	desc = "A strange reagent that makes the consumer glow. One unit lasts 5 seconds."
+	name = "萤蕈素"
+	desc = "一种让服用者发光的奇特试剂。每单位可维持5秒。"
 	metabolism_stomach = 1/5
 	metabolism_blood = 1/5
 

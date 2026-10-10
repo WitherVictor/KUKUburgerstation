@@ -1,6 +1,6 @@
 /obj/hud/button/widget/
 
-	name = "widget"
+	name = "控件"
 
 	essential = TRUE
 
@@ -13,8 +13,8 @@
 	has_quick_function = FALSE
 
 /obj/hud/button/widget/experience
-	name = "Check Experience"
-	desc_extended = "Click here to check your character's experience."
+	name = "查看经验"
+	desc_extended = "点击此处查看角色的经验。"
 	icon_state = "xp_new"
 	screen_loc = "RIGHT-1,TOP"
 
@@ -35,10 +35,10 @@
 			J = JOB(P.job)
 			if(J)
 				job_rank = P.job_rank
-				final_text += div("bold underlined","Job:\n")
-				final_text += div("notice","[J.get_rank_title(job_rank)] (Rank: [job_rank])\n")
+				final_text += div("bold underlined","岗位：\n")
+				final_text += div("notice","[J.get_rank_title(job_rank)]（职级：[job_rank]）\n")
 
-		final_text += div("bold underlined","Attributes\n")
+		final_text += div("bold underlined","属性\n")
 		for(var/k in L.attributes)
 			var/experience/attribute/A = L.attributes[k]
 			var/current_level = A.get_current_level()
@@ -54,11 +54,11 @@
 			else
 				bonus = ""
 			if(next_xp - last_xp > 0)
-				final_text += div("notice","[A.name] ([information_link]): [A.get_current_level(current_level)][bonus] ([current_xp - last_xp]/[next_xp - last_xp]xp)")
+				final_text += div("notice","[A.name] ([information_link]): [A.get_current_level(current_level)][bonus]（[current_xp - last_xp]/[next_xp - last_xp] 经验）")
 			else
 				final_text += div("notice","[A.name] ([information_link]): <b>[A.get_current_level(current_level)][bonus]</b>")
 
-		final_text += div("bold underlined","Skills\n")
+		final_text += div("bold underlined","技能\n")
 		for(var/k in L.skills)
 			var/experience/skill/A = L.skills[k]
 			var/current_level = A.get_current_level()
@@ -77,10 +77,10 @@
 			if(is_player(L))
 				var/mob/living/advanced/player/P = L
 				if(P.prestige_count[k])
-					prestige_text = " Prestige [P.prestige_count[k]]\Roman"
+					prestige_text = " 转生 [P.prestige_count[k]]\Roman"
 
 			if(next_xp - last_xp > 0)
-				final_text += div("notice","[A.name] ([information_link]): [A.get_current_level(current_level)][bonus][prestige_text] ([current_xp - last_xp]/[next_xp - last_xp]xp)")
+				final_text += div("notice","[A.name] ([information_link]): [A.get_current_level(current_level)][bonus][prestige_text]（[current_xp - last_xp]/[next_xp - last_xp] 经验）")
 			else
 				final_text += div("notice","[A.name] ([information_link]): <b>[A.get_current_level(current_level)][bonus][prestige_text]</b>")
 
@@ -89,8 +89,8 @@
 
 
 /obj/hud/button/widget/logout
-	name = "Logout"
-	desc_extended = "Click here to force your character to logout. You can only logout while in a sleeper. You can rejoin as the same character or a new character any time after logging out."
+	name = "退出角色"
+	desc_extended = "点击此处让角色退出。你只能在休眠舱内退出。退出后，随时可以选择原角色或新角色重新加入。"
 	icon_state = "logout_new"
 	screen_loc = "RIGHT,TOP"
 
@@ -104,8 +104,8 @@
 
 
 /obj/hud/button/widget/change_theme
-	name = "Change Theme"
-	desc_extended = "Click here to change your HUD's theme."
+	name = "更改主题"
+	desc_extended = "点击此处更改状态界面的主题。"
 	icon_state = "theme_new"
 	screen_loc = "RIGHT-2,TOP"
 
@@ -125,8 +125,8 @@
 
 
 /obj/hud/button/widget/view_map
-	name = "View Map"
-	desc_extended = "Click here to view the current z-level's map."
+	name = "查看地图"
+	desc_extended = "点击此处查看当前层的地图。"
 	icon_state = "map_new"
 	screen_loc = "RIGHT-3,TOP"
 
@@ -138,8 +138,8 @@
 
 	if(M_control)
 		M_control.update_owner(null)
-		activator.to_chat(span("notice","You close the map."))
+		activator.to_chat(span("notice","你关闭了地图。"))
 	else
 		M_control = new(activator)
 		M_control.update_owner(activator)
-		activator.to_chat(span("notice","You open the map."))
+		activator.to_chat(span("notice","你打开了地图。"))

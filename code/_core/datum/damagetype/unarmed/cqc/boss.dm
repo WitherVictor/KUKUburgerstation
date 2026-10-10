@@ -1,5 +1,5 @@
 /damagetype/unarmed/cqc/boss/fast_grab
-	attack_verbs = list("fast grab")
+	attack_verbs = list("快速擒拿")
 
 	hit_effect = /obj/effect/temp/impact/combat/disarm
 
@@ -53,7 +53,7 @@
 
 
 /damagetype/unarmed/cqc/boss/grab_slam
-	attack_verbs = list("grab slam")
+	attack_verbs = list("抱摔")
 
 	hit_effect = /obj/effect/temp/impact/combat/disarm
 
@@ -103,7 +103,7 @@
 
 
 /damagetype/unarmed/cqc/boss/staggering_punch
-	attack_verbs = list("staggering punch")
+	attack_verbs = list("硬直拳")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/medium_punch_01.ogg',
@@ -157,7 +157,7 @@
 	return ..()
 
 /damagetype/unarmed/cqc/boss/stunning_punch
-	attack_verbs = list("stunning punch")
+	attack_verbs = list("眩晕拳")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/heavy_punch_01.ogg',
@@ -212,7 +212,7 @@
 
 
 /damagetype/unarmed/cqc/boss/disarm_theft
-	attack_verbs = list("tactical disarm")
+	attack_verbs = list("战术缴械")
 
 	hit_effect = /obj/effect/temp/impact/combat/punch
 
@@ -268,14 +268,14 @@
 			var/obj/item/I = pick(possible_thefts)
 			I.drop_item(get_turf(A))
 			A.put_in_hands(I)
-			V.visible_message(span("warning","\The [A.name] tactically steals \the [I.name] from \the [V.name]!"),span("danger","\The [A.name] steals your [I.name]!"))
+			V.visible_message(span("warning","[A.name]巧妙地夺走了[V.name]的[I.name]！"),span("danger","[A.name]夺走了你的[I.name]！"))
 
 
 	return ..()
 
 
 /damagetype/unarmed/cqc/boss/tactical_hug
-	attack_verbs = list("tactical hug")
+	attack_verbs = list("战术拥抱")
 
 	hit_effect = /obj/effect/temp/impact/combat/punch
 

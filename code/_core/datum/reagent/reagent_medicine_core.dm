@@ -1,10 +1,10 @@
 /reagent/medicine/bicaridine
-	name = "Bicaridine"
-	desc = "Red for brute."
+	name = "比卡利定"
+	desc = "红色药剂，用于治疗物理伤害。"
 	color = "#FF0000"
 	alpha = 200
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 0.5
 	metabolism_stomach = 0.1
@@ -27,7 +27,7 @@
 	owner.brute_regen_buffer += 8*.*multiplier
 
 /reagent/medicine/bicaridine_plus
-	name = "Bicaridine+"
+	name = "比卡利定+"
 	color = "#FF0080"
 	alpha = 225
 
@@ -50,12 +50,12 @@
 	owner.brute_regen_buffer += 12*.*multiplier
 
 /reagent/medicine/caridone
-	name = "Caridone"
-	desc = "Red for brute."
+	name = "卡利酮"
+	desc = "用于治疗物理伤害。"
 	color = "#FFEB87"
 	alpha = 200
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 0.4
 	metabolism_stomach = 0.1
@@ -78,12 +78,12 @@
 	owner.brute_regen_buffer += rand(10,15)*.*multiplier
 
 /reagent/medicine/percardone
-	name = "Percardone"
-	desc = "Red for brute."
+	name = "培卡酮"
+	desc = "用于治疗物理伤害。"
 	color = "#B200FF"
 	alpha = 150
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 0.4
 	metabolism_stomach = 0.1
@@ -108,12 +108,12 @@
 		owner.brute_regen_buffer += CEILING(1 + owner.health.damage[BRUTE]*0.01,1)*.*multiplier
 
 /reagent/medicine/dicarditane
-	name = "Dicarditane"
-	desc = "Red for brute."
+	name = "双卡利烷"
+	desc = "用于治疗物理和灼烧伤害。"
 	color = "#E4FF00"
 	alpha = 200
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 0.4
 	metabolism_stomach = 0.1
@@ -139,12 +139,12 @@
 
 
 /reagent/medicine/kelotane
-	name = "Kelotane"
-	desc = "Yellow for burn."
+	name = "克罗烷"
+	desc = "黄色药剂，用于治疗灼烧伤害。"
 	color = "#FFFF00"
 	alpha = 200
 
-	flavor = "ointment"
+	flavor = "药膏"
 
 	metabolism_blood = 0.5
 	metabolism_stomach = 0.1
@@ -165,12 +165,12 @@
 	owner.burn_regen_buffer += 4*.*multiplier
 
 /reagent/medicine/arentane
-	name = "Arentane"
-	desc = "Red for brute."
+	name = "阿伦烷"
+	desc = "用于治疗灼烧伤害。"
 	color = "#0080C9"
 	alpha = 150
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 1
 	metabolism_stomach = 0.1
@@ -193,12 +193,12 @@
 	owner.burn_regen_buffer += rand(5,10)*.*multiplier
 
 /reagent/medicine/kenotone
-	name = "Kenotone"
-	desc = "Red for brute."
+	name = "克诺酮"
+	desc = "用于治疗灼烧伤害。"
 	color = "#0080C9"
 	alpha = 225
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 1
 	metabolism_stomach = 0.1
@@ -225,12 +225,12 @@
 	owner.stamina_regen_buffer -= rand(1,10)*.*multiplier
 
 /reagent/medicine/extinatane
-	name = "Extinatane"
-	desc = "Red for brute."
+	name = "熄焰烷"
+	desc = "外用药剂，用于治疗灼烧伤害并抑制火焰。"
 	color = "#FFF0BF"
 	alpha = 150
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 1
 	metabolism_stomach = 1
@@ -253,12 +253,12 @@
 		owner.adjust_fire_stacks(-5*.*multiplier)
 
 /reagent/medicine/carotane
-	name = "Carotane"
-	desc = "Red for brute."
+	name = "卡洛烷"
+	desc = "用于治疗物理和灼烧伤害。"
 	color = "#808080"
 	alpha = 225
 
-	flavor = "bandaids"
+	flavor = "创可贴"
 
 	metabolism_blood = 0.1
 	metabolism_stomach = 0.01
@@ -285,12 +285,12 @@
 	owner.burn_regen_buffer += 5*.*mul*multiplier
 
 /reagent/medicine/dylovene
-	name = "Dylovene"
-	desc = "Green for toxin."
+	name = "地洛文"
+	desc = "绿色药剂，用于治疗毒素伤害。"
 	color = "#00FF00"
 	alpha = 200
 
-	flavor = "sweetness"
+	flavor = "甜味"
 
 	metabolism_blood = 0.5
 	metabolism_stomach = 0.1
@@ -311,12 +311,12 @@
 	owner.tox_regen_buffer += ((owner.health ? owner.health.damage[TOX]*0.04 : 0) + 4)*.*multiplier
 
 /reagent/medicine/dexalin
-	name = "Dexalin"
-	desc = "Blue for oxy."
+	name = "右旋林"
+	desc = "蓝色药剂，用于应对缺氧。"
 	color = "#1111FF"
 	alpha = 150
 
-	flavor = "bitterness"
+	flavor = "苦味"
 
 	metabolism_blood = 0.5
 	metabolism_stomach = 0.1
@@ -338,12 +338,12 @@
 		L.blood_oxygen -= 0.2 * .
 
 /reagent/medicine/tricordrazine
-	name = "Tricordrazine"
-	desc = "Heals everything except for oxygen loss."
+	name = "三科达嗪"
+	desc = "能治疗除缺氧外的各种伤害。"
 	color = "#B21FFF"
 	alpha = 225
 
-	flavor = "sourness"
+	flavor = "酸味"
 
 	metabolism_blood = 0.5
 	metabolism_stomach = 0.1
@@ -368,13 +368,13 @@
 	owner.tox_regen_buffer += 3*.*multiplier
 
 /reagent/medicine/omnizine
-	name = "Omnizine"
-	desc = "Heals everything."
-	desc_extended = "Works just as good when consumed, albeit at a slower rate."
+	name = "全能灵药"
+	desc = "包治百病。"
+	desc_extended = "口服效果同样好，但起效较慢。"
 	color = "#F7F7F7"
 	alpha = 255
 
-	flavor = "bitter sourness"
+	flavor = "酸苦味"
 
 	metabolism_blood = 0.5
 	metabolism_stomach = 0.1
@@ -399,13 +399,13 @@
 	owner.tox_regen_buffer += 3*.*multiplier
 
 /reagent/medicine/adminomnizine
-	name = "Adminomnizine"
-	desc = "Heals everything. EVERYTHING."
-	desc_extended = "Works just as good when consumed. Doesn't matter anyways because THIS IS THE STUFF OF THE GODS."
+	name = "神级全能灵药"
+	desc = "包治百病。<b>所有病！</b>"
+	desc_extended = "口服效果同样好。其实怎么用都无所谓，因为<b>这是神的灵药。</b>"
 	color = "#FFFFFF"
 	alpha = 255
 
-	flavor = "god"
+	flavor = "神性"
 
 	metabolism_blood = 10
 	metabolism_stomach = 10
@@ -434,13 +434,13 @@
 	owner.health_regen_delay = 0
 
 /reagent/medicine/silver_sulfadiazine
-	name = "Silver Sulfadiazine"
-	desc = "Heals burn damage. Only works when applied to skin."
+	name = "磺胺嘧啶银"
+	desc = "治疗灼烧伤害。仅外用于皮肤时有效。"
 	desc_extended = ""
 	color = "#E8BEED"
 	alpha = 255
 
-	flavor = "bitter silver"
+	flavor = "苦涩的银味"
 
 	metabolism_skin = 1
 
@@ -475,13 +475,13 @@
 		owner.burn_regen_buffer += 3*.*multiplier
 
 /reagent/medicine/styptic_powder
-	name = "Styptic Powder"
-	desc = "Heals brute damage. Only works when applied to skin."
+	name = "止血粉"
+	desc = "治疗物理伤害。仅外用于皮肤时有效。"
 	desc_extended = ""
 	color = "#FFC9DD"
 	alpha = 255
 
-	flavor = "baby powder"
+	flavor = "爽身粉"
 
 	metabolism_skin = 1
 
@@ -516,10 +516,10 @@
 		owner.brute_regen_buffer += 3*.*multiplier
 
 /reagent/medicine/synthflesh
-	name = "synthflesh"
-	desc = "Experimental synthetic flesh. Significantly heals brute and burn damage of the affected limb instantly. Warning: Do not use on open cuts."
+	name = "合成血肉"
+	desc = "实验性合成血肉，能立即大幅治疗目标肢体的物理和灼烧伤害。警告：请勿用于开放性伤口。"
 	color = "#FFEBEB"
-	flavor = "rotten flesh"
+	flavor = "腐肉"
 	metabolism_skin = 1
 	value = 1.5
 	liquid = -0.5
@@ -562,12 +562,12 @@
 
 
 /reagent/medicine/vitamins
-	name = "space vitamins"
-	desc = "All the essential vitamins as spaceman needs. Consume vitamins normalizes your nutrition to a healthy level. Note that taking too much is bad for you. Metabolizes slowly, and addictive."
+	name = "太空维生素"
+	desc = "包含太空人所需的各种必需维生素。服用后可将营养状况调节至健康水平。注意，过量服用有害。代谢缓慢，并会成瘾。"
 	color = "#DCFF9B"
 	alpha = 255
 
-	flavor = "gummy vitamins"
+	flavor = "维生素软糖"
 
 	overdose_threshold = 20
 
@@ -601,11 +601,11 @@
 
 
 /reagent/medicine/inaprovaline
-	name = "Inaprovaline"
-	desc = "A common stabilizer synthesised from basic elements and compounds. Only works when injected. Has a high overdose threshold."
+	name = "伊纳普罗林"
+	desc = "由基础元素和化合物合成的常用生命体征稳定剂。仅注射时有效，过量阈值较高。"
 	color = "#C291FF"
 	alpha = 200
-	flavor = "sour metal"
+	flavor = "酸涩的金属味"
 	metabolism_stomach = 5/60 // Lasts a minute per 5u
 	metabolism_blood = 10/60 // Lasts a minute per 10u
 

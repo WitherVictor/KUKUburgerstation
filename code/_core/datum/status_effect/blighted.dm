@@ -1,6 +1,6 @@
 /status_effect/blighted
-	name = "Blighted"
-	desc = "You've been blighted!"
+	name = "枯萎"
+	desc = "你受到了枯萎效果的影响！"
 	id = BLIGHTED
 
 	minimum = SECONDS_TO_DECISECONDS(10)

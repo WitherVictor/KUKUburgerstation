@@ -9,34 +9,34 @@
 	if(L.following) //If we're following someone
 		if(L.following == P) //If we're following the person we're talking to.
 			.["hello"] = list(
-				"Awaiting orders.NEWLINE#1",
+				"等候命令。NEWLINE#1",
 				"*stop following me"
 			)
 			.["*stop following me"] = list(
-				"I will wait here.NEWLINE#1",
+				"我会在这里等候。NEWLINE#1",
 				"*follow me"
 			)
 		else //If we're following someone else.
 			.["hello"] = list(
-				"Awaiting orders.NEWLINE#1",
+				"等候命令。NEWLINE#1",
 				"*follow me"
 			)
 			.["*follow me"] = list(
-				"I am currently following the orders of [L.following.real_name], so I cannot follow you."
+				"我正在执行[L.following.real_name]的命令，不能跟随你。"
 			)
 	else //We're not following someone.
 		.["hello"] = list(
-			"Awaiting orders.NEWLINE#1",
+			"等候命令。NEWLINE#1",
 			"*follow me"
 		)
 		if(length(P.followers) < 3) //They have less than 3 followers
 			.["*follow me"] = list(
-				"I will follow.NEWLINE#1",
+				"我会跟随你。NEWLINE#1",
 				"*stop following me"
 			)
 		else
 			.["*follow me"] = list(
-				"You already have too many people with you."
+				"跟着你的人已经太多了。"
 			)
 
 /dialogue/npc/soldier/set_topic(var/mob/living/advanced/player/P,var/topic)

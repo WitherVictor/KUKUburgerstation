@@ -1,8 +1,8 @@
 //Inventory system. Basically anything that can hold an object needs an inventory.
 
 /obj/hud/inventory/
-	name = "Inventory Holder"
-	desc = "Inventory"
+	name = "物品栏槽位"
+	desc = "物品栏"
 	var/id = "BADINVENTORY"
 
 	alpha = 225
@@ -381,9 +381,9 @@
 
 	if(I.loc != src) //Something went wrong.
 		if(!owner)
-			usr.to_chat(span("danger","Inventory glitch detected. Please report this bug on discord. Error Code: 01"))
+			usr.to_chat(span("danger","检测到物品栏异常。请在 Discord 反馈此问题。错误代码：01"))
 		else
-			owner.to_chat(span("danger","Inventory glitch detected. Please report this bug on discord. Error Code: 02"))
+			owner.to_chat(span("danger","检测到物品栏异常。请在 Discord 反馈此问题。错误代码：02"))
 		I.drop_item(get_turf(src))
 		if(debug) log_error("add_object() fail: Inventory glitch!")
 		return FALSE
@@ -557,7 +557,7 @@
 
 	if(is_occupied(TRUE,TRUE))
 		if(messages && src.loc)
-			owner.to_chat(span("warning","\The [src.loc.name] is already occupied!"))
+			owner.to_chat(span("warning","[src.loc.name]已经被占用了！"))
 		return FALSE
 
 	if(bypass)
@@ -576,7 +576,7 @@
 			if(!istype(I,o))
 				continue
 			if(messages && src.loc)
-				owner.to_chat(span("warning","\The [src.loc.name] doesn't seem suitable to hold \the [I.name]!"))
+				owner.to_chat(span("warning","[src.loc.name]似乎不适合放置[I.name]！"))
 			return FALSE
 
 	if(length(item_whitelist))
@@ -589,14 +589,14 @@
 
 		if(!whitelist_found)
 			if(messages && src.loc)
-				owner.to_chat(span("warning","\The [src.loc.name] doesn't seem suitable to hold \the [I.name]!"))
+				owner.to_chat(span("warning","[src.loc.name]似乎不适合放置[I.name]！"))
 			return FALSE
 
 	if(worn)
 
 		if(!(I.item_slot & item_slot))
 			if(messages)
-				owner.to_chat(span("notice","\The [I.name] doesn't fit on \the [src.loc.name]!"))
+				owner.to_chat(span("notice","[I.name]不适合穿戴在[src.loc.name]上！"))
 			return FALSE
 
 		if(item_slot_mod & (SLOT_MOD_LEFT | SLOT_MOD_RIGHT) && !((I.item_slot_mod & SLOT_MOD_RIGHT) && (I.item_slot_mod & SLOT_MOD_LEFT))) //has left or right ,but not both.
@@ -604,14 +604,14 @@
 			var/is_right_item = I.item_slot_mod & SLOT_MOD_RIGHT
 			if(is_right_hand != is_right_item)
 				if(messages)
-					owner.to_chat(span("notice","\The [I.name] doesn't fit on \the [src.loc.name]!"))
+					owner.to_chat(span("notice","[I.name]不适合穿戴在[src.loc.name]上！"))
 				return FALSE
 
 		if(worn_allow_duplicate)
 			for(var/k in contents)
 				var/obj/item/I2 = k
 				if(I.item_slot & I2.item_slot)
-					if(messages) owner.to_chat(span("warning","You cannot wear \the [I.name] and \the [I2.name] at the same time!"))
+					if(messages) owner.to_chat(span("warning","你不能同时穿戴[I.name]和[I2.name]！"))
 					return FALSE
 
 		if(is_advanced(owner))
@@ -623,7 +623,7 @@
 						continue
 					if(existing_clothing.item_slot_layer && existing_clothing.item_slot_layer < I.item_slot_layer)
 						continue
-					if(messages) owner.to_chat(span("warning","\The [existing_clothing.name] prevents you from wearing \the [I.name]!"))
+					if(messages) owner.to_chat(span("warning","[existing_clothing.name]妨碍你穿戴[I.name]！"))
 					return FALSE
 			if(is_clothing(I))
 				var/obj/item/clothing/C = I
@@ -631,15 +631,15 @@
 					for(var/k in A.organs)
 						var/obj/item/organ/O = k
 						if(C.flags_clothing & FLAG_CLOTHING_NOBEAST_FEET && O.flags_organ & FLAG_ORGAN_BEAST_FEET)
-							if(messages) owner.to_chat(span("warning","You cannot seem to fit \the [I.name] on your non-humanoid feet..."))
+							if(messages) owner.to_chat(span("warning","你的脚部形态与人类不同，无法穿戴[I.name]……"))
 							return FALSE
 						if(C.flags_clothing & FLAG_CLOTHING_NOBEAST_HEAD && O.flags_organ & FLAG_ORGAN_BEAST_HEAD)
-							if(messages) owner.to_chat(span("warning","You cannot seem to fit \the [I.name] on your non-humanoid head..."))
+							if(messages) owner.to_chat(span("warning","你的头部形态与人类不同，无法穿戴[I.name]……"))
 							return FALSE
 	else
 		if(max_size >= 0 && I.size > max_size && !(item_bypass && I.type in item_bypass) && !(I.inventory_bypass && src.type in I.inventory_bypass))
 			if(messages && src.loc)
-				owner.to_chat(span("warning","\The [I] is too large to be put in \the [src.loc.name]."))
+				owner.to_chat(span("warning","[I]太大了，[src.loc.name]里放不下。"))
 			return FALSE
 
 	return TRUE

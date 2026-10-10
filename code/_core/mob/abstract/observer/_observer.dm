@@ -1,7 +1,7 @@
 /mob/abstract/observer/
-	name = "observer"
-	desc = "Forever damned. Their spirit is powered by pure salt."
-	desc_extended = "Those who perish in this world turn into these beings to then later be resurrected to die again and again."
+	name = "旁观者"
+	desc = "永受诅咒，靠满腔怨气维系灵魂。"
+	desc_extended = "在这个世界死去的人会变成这样的存在，随后复活，再一次又一次地死去。"
 	icon = 'icons/mob/abstract/ghosts.dmi'
 	icon_state = "basic"
 
@@ -57,13 +57,13 @@
 		qdel(src)
 		CRASH("Tired to initialize an observer without a client!")
 
-	name = "ghost of [ckey]"
+	name = "[ckey]的幽灵"
 
 	for(var/v in spawning_buttons)
 		var/obj/hud/button/B = new v(src)
 		B.update_owner(src)
 
-	to_chat(span("notice","Please load a character or create a new character to play using the buttons below."))
+	to_chat(span("notice","请使用下方按钮载入已有角色，或创建新角色开始游戏。"))
 
 	for(var/k in SSlanguage.all_languages)
 		src.known_languages |= k

@@ -1,5 +1,5 @@
 /damagetype/npc/gorilla
-	attack_verbs = list("punch","pummel")
+	attack_verbs = list("拳击","猛揍")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/cqc/crashing_wave_kick.ogg',

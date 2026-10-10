@@ -1,6 +1,6 @@
 /obj/hud/button/boss_health
-	name = "Boss Health"
-	desc = "Health bar for bosses"
+	name = "首领生命值"
+	desc = "首领的生命条。"
 
 	icon = 'icons/hud/boss_bar.dmi'
 	icon_state = "frame"

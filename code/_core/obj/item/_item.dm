@@ -1,7 +1,7 @@
 /obj/item/
-	name = "item"
-	desc = "It's a... thing."
-	desc_extended = "This item has no description available."
+	name = "物品"
+	desc = "这是个……东西。"
+	desc_extended = "此物品暂无详细说明。"
 
 	vis_flags = VIS_INHERIT_PLANE | VIS_INHERIT_DIR | VIS_INHERIT_ID
 
@@ -305,7 +305,7 @@
 	if(!src.z)
 		if(messages && is_living(grabber))
 			var/mob/living/L = grabber
-			L.to_chat(span("warning","\The [src.name] needs to be out in the open before you can grab it!"))
+			L.to_chat(span("warning","必须先把[src.name]取出来，才能抓住它！"))
 		return FALSE
 
 	return ..()
@@ -347,7 +347,7 @@
 			var/obj/hud/inventory/found_inventory = result
 			found_inventory.add_object(object,enable_messages,bypass,silent=silent)
 			if(activator && enable_messages)
-				activator.to_chat(span("notice","You stuff \the [object.name] in \the [src.name]."))
+				activator.to_chat(span("notice","你将[object.name]塞进了[src.name]。"))
 			return TRUE //No need to loop.
 		if(is_item(result))
 			var/obj/item/I = result
@@ -357,14 +357,14 @@
 	if(did_add)
 		if(object.qdeleting) //Means that the stacks were likely transfered to another object.
 			if(activator && enable_messages)
-				activator.to_chat(span("notice","You stuff \the [object.name] in \the [src.name]."))
+				activator.to_chat(span("notice","你将[object.name]塞进了[src.name]。"))
 			return TRUE
 		if(activator && enable_messages)
-			activator.to_chat(span("notice","You stuff some of \the [object.name] in \the [src.name]."))
+			activator.to_chat(span("notice","你将一部分[object.name]塞进了[src.name]。"))
 		return TRUE
 
 	if(activator && enable_messages)
-		activator.to_chat(span("warning","You don't have enough inventory space inside \the [src.name] to hold \the [object.name]!"))
+		activator.to_chat(span("warning","[src.name]中的空间不足，装不下[object.name]！"))
 
 	return FALSE
 
@@ -460,59 +460,62 @@
 
 	. = list()
 	. += div("examine_title","[ICON_TO_HTML(src.icon,src.icon_state,32,32)][src.name]")
-	. += div("rarity [rarity]",capitalize(rarity))
+	var/list/rarity_display_names = list(RARITY_BROKEN = "破损",RARITY_COMMON = "普通",RARITY_UNCOMMON = "少见",RARITY_RARE = "稀有",RARITY_MYTHICAL = "神话",RARITY_LEGENDARY = "传奇")
+	. += div("rarity [rarity]",rarity_display_names[rarity] ? rarity_display_names[rarity] : capitalize(rarity))
+	var/list/tier_type_display_names = list("wand" = "魔杖","support gem" = "辅助宝石","shotgun" = "霰弹枪","pistol" = "手枪","grenade launcher" = "榴弹发射器","rifle" = "步枪","rocket launcher" = "火箭发射器","revolver" = "左轮手枪","carbine" = "卡宾枪","marksman rifle" = "精确射手步枪","sniper rifle" = "狙击步枪","heavy weapon" = "重武器","smg" = "冲锋枪")
+	var/tier_type_display = tier_type_display_names[tier_type] ? tier_type_display_names[tier_type] : tier_type
 	if(tier >= 1)
-		. += div("rarity center","Tier \Roman[tier][tier_type ? " [tier_type]" : ""].")
+		. += div("rarity center","\Roman[tier]阶[tier_type_display ? " [tier_type_display]" : ""]")
 	else if(tier == 0)
-		. += div("rarity center","Tier [tier][tier_type ? " [tier_type]" : ""].")
+		. += div("rarity center","[tier]阶[tier_type_display ? " [tier_type_display]" : ""]")
 
 	if(!can_save)
-		. += div("bad bold center","CLASSIFIED")
+		. += div("bad bold center","机密物品")
 	else if(contraband)
-		. += div("bad bold center","CONTRABAND")
+		. += div("bad bold center","违禁品")
 
 	if(quality != -1)
 
 		//Maximum Quality
 		if(quality_max >= 200)
-			. += div("rarity legendary","<b>Masterwork</b>")
+			. += div("rarity legendary","<b>大师之作</b>")
 		else if(quality_max > 120)
-			. += div("rarity good","<b>Superior</b>")
+			. += div("rarity good","<b>精良</b>")
 		else if(quality_max > 100)
-			. += div("rarity good","<b>Crafted</b>")
+			. += div("rarity good","<b>匠造</b>")
 		else if(quality_max == 100)
-			. += div("rarity common","<b>Factory New</b>")
+			. += div("rarity common","<b>崭新出厂</b>")
 		else if(quality_max > 60)
-			. += div("rarity bad","<b>Used</b>")
+			. += div("rarity bad","<b>二手</b>")
 		else if(quality_max > 0)
-			. += div("rarity bad","<b>Surplus</b>")
+			. += div("rarity bad","<b>库存旧品</b>")
 		else
-			. += div("rarity bad","<b>UNSALVAGEABLE</b>")
+			. += div("rarity bad","<b>无法修复</b>")
 
 		var/display_quality = FLOOR(quality,1)
 		var/display_quality_max = FLOOR(quality_max,1)
 
 		//Current Quality
 		if(quality >= 200)
-			. += div("rarity legendary","<b>Condition</b>: [display_quality]% / [display_quality_max]%")
+			. += div("rarity legendary","<b>耐久</b>：[display_quality]% / [display_quality_max]%")
 		else if(quality > 100)
-			. += div("rarity good","<b>Condition</b>: [display_quality]% / [display_quality_max]%")
+			. += div("rarity good","<b>耐久</b>：[display_quality]% / [display_quality_max]%")
 		else if(quality > 60)
-			. += div("rarity common","<b>Condition</b>: [display_quality]% / [display_quality_max]%")
+			. += div("rarity common","<b>耐久</b>：[display_quality]% / [display_quality_max]%")
 		else if(quality >= 0)
-			. += div("rarity bad","<b>Condition</b>: [display_quality]% / [display_quality_max]%")
+			. += div("rarity bad","<b>耐久</b>：[display_quality]% / [display_quality_max]%")
 		else
-			. += div("rarity bad","<b>Condition</b>: BROKEN")
+			. += div("rarity bad","<b>耐久</b>：已损坏")
 
 	if(luck < 50)
-		. += div("rarity bad","<b>Luck</b>: -[50 - luck]")
+		. += div("rarity bad","<b>幸运</b>：-[50 - luck]")
 	else if(luck > 50)
-		. += div("rarity good","<b>Luck</b>: +[luck-50]")
+		. += div("rarity good","<b>幸运</b>：+[luck-50]")
 
-	. += div("rarity","Base Value: [get_display_value()]cr.")
-	. += div("weightsize","Size: [size], Weight: [weight]")
+	. += div("rarity","基础价值：[get_display_value()]信用点")
+	. += div("weightsize","尺寸：[size]，重量：[weight]")
 
-	if(amount > 1) . += div("weightsize","Quantity: [amount].")
+	if(amount > 1) . += div("weightsize","数量：[amount]")
 	. += div("examine_description","\"[src.desc]\"")
 	. += div("examine_description_long",src.desc_extended)
 
@@ -624,19 +627,19 @@
 
 /obj/item/proc/can_be_worn(var/mob/living/advanced/owner,var/obj/hud/inventory/I,var/messages=FALSE)
 	if(delete_on_drop)
-		if(messages) owner.to_chat("\The [src.name] cannot be removed this way!")
+		if(messages) owner.to_chat("无法用这种方式取下[src.name]！")
 		return FALSE
 	if(anchored)
-		if(messages) owner.to_chat("\The [src.name] cannot be removed this way!")
+		if(messages) owner.to_chat("无法用这种方式取下[src.name]！")
 		return FALSE
 	if(unremovable)
-		if(messages) owner.to_chat("\The [src.name] cannot be removed this way!")
+		if(messages) owner.to_chat("无法用这种方式取下[src.name]！")
 		return FALSE
 	if(additional_clothing_parent && is_inventory(src.loc))
-		if(messages) owner.to_chat("\The [src.name] cannot be removed this way!")
+		if(messages) owner.to_chat("无法用这种方式取下[src.name]！")
 		return FALSE
 	if(!can_wear)
-		if(messages) owner.to_chat("\The [src.name] cannot be worn!")
+		if(messages) owner.to_chat("[src.name]无法穿戴！")
 		return FALSE
 	return TRUE
 
@@ -695,24 +698,24 @@
 		//TODO: Add liquid transfer sounds.
 		if(object.allow_reagent_transfer_to && allow_reagent_transfer_from)
 			if(reagents.volume_current <= 0)
-				activator.to_chat(span("warning","\The [src.name] is empty!"))
+				activator.to_chat(span("warning","[src.name]已经空了！"))
 				return FALSE
 			if(object.reagents.volume_current >= object.reagents.volume_max)
-				activator.to_chat(span("warning","\The [object.name] is full!"))
+				activator.to_chat(span("warning","[object.name]已经装满了！"))
 				return FALSE
 			var/actual_transfer_amount = reagents.transfer_reagents_to(object.reagents,transfer_amount, activator = activator)
-			activator.to_chat(span("notice","You transfer [actual_transfer_amount] units of liquid to \the [object]."))
+			activator.to_chat(span("notice","你向[object]转移了[actual_transfer_amount]单位液体。"))
 			play_sound('sound/items/consumables/pourwater.ogg',get_turf(activator),range_max=VIEW_RANGE*0.5)
 			return TRUE
 		else if(object.allow_reagent_transfer_from && allow_reagent_transfer_to)
 			if(object.reagents.volume_current <= 0)
-				activator.to_chat(span("warning","\The [object.name] is empty!"))
+				activator.to_chat(span("warning","[object.name]已经空了！"))
 				return FALSE
 			if(reagents.volume_current >= reagents.volume_max)
-				activator.to_chat(span("warning","\The [src.name] is full!"))
+				activator.to_chat(span("warning","[src.name]已经装满了！"))
 				return FALSE
 			var/actual_transfer_amount = object.reagents.transfer_reagents_to(reagents,transfer_amount, activator = activator)
-			activator.to_chat(span("notice","You transfer [actual_transfer_amount] units of liquid to \the [src]."))
+			activator.to_chat(span("notice","你向[src]转移了[actual_transfer_amount]单位液体。"))
 			play_sound('sound/items/consumables/pourwater.ogg',get_turf(activator),range_max=VIEW_RANGE*0.5)
 			return TRUE
 
@@ -732,18 +735,18 @@
 	var/mob/living/L = target
 
 	if(L.dead)
-		activator.to_chat(span("warning","\The [L.name] is dead!"))
+		activator.to_chat(span("warning","[L.name]已经死亡！"))
 		return FALSE
 
 	if(!reagents.volume_current)
-		activator.to_chat(span("notice","\The [src.name] is empty!"))
+		activator.to_chat(span("notice","[src.name]已经空了！"))
 		return FALSE
 
 	if(L.is_stuffed())
 		if(activator == L)
-			activator.to_chat(span("warning","You can't eat anymore! You're stuffed!"))
+			activator.to_chat(span("warning","你已经吃撑了，吃不下更多东西！"))
 		else
-			activator.to_chat(span("warning","You can't forcefeed [L.name] anymore! They're stuffed!"))
+			activator.to_chat(span("warning","[L.name]已经吃撑了，你无法继续强行喂食！"))
 		return FALSE
 
 	if(is_living(activator))
@@ -751,7 +754,7 @@
 		if(C.attack_flags & CONTROL_MOD_DISARM) //Splash
 			return FALSE
 		if(reagents.contains_lethal && L != C && !allow_hostile_action(C.loyalty_tag,L))
-			C.to_chat(span("warning","Your loyalties prevent you from feeding dangerous reagents to your allies!"))
+			C.to_chat(span("warning","你的忠诚限制阻止你向友军喂食危险药剂！"))
 			return FALSE
 
 	return TRUE
@@ -789,7 +792,7 @@
 	if(quality != -1 && quality <= 0)
 		if(ismob(attacker))
 			var/mob/M = attacker
-			M.to_chat(span("danger","\The [src.name] is broken!"))
+			M.to_chat(span("danger","[src.name]已经损坏！"))
 		return FALSE
 	return ..()
 

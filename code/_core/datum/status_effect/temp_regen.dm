@@ -1,6 +1,6 @@
 /status_effect/temp_regen
-	name = "Regeneration"
-	desc = "Your wounds are healing!"
+	name = "再生"
+	desc = "你的伤口正在愈合！"
 	id = TEMP_REGEN
 	maximum = SECONDS_TO_DECISECONDS(150)
 	minimum = SECONDS_TO_DECISECONDS(1)

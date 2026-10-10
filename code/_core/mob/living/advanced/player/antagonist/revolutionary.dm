@@ -10,13 +10,13 @@
 
 /mob/living/advanced/player/antagonist/revolutionary/Finalize()
 	. = ..()
-	to_chat(span("danger","You are a highly skilled revolutionary tasked with sabotaging and destroying the incoming NanoTrasen forces with extreme prejudice."))
-	to_chat(span("danger","Work with your team, if any, and purchase your equipment from the donksoft vendor next to where you spawn. Some extra equipment is also lying around the base as well."))
+	to_chat(span("danger","你是一名身手不凡的革命军战士，任务是不惜一切代价破坏并消灭来袭的纳米传讯部队。"))
+	to_chat(span("danger","若有队友，请与他们合作。你可以从出生点旁的咚克软件售货机购买装备，基地里也散放着一些额外装备。"))
 	//to_chat(span("danger","<h1>An explosive implant was implanted in your head that triggers when you leave the Area of Operations. Avoid getting captured if you can.</h1>"))
 
 /mob/living/advanced/player/antagonist/revolutionary/setup_name()
 	. = ..()
-	name = "Comrade [real_name]"
+	name = "[real_name]同志"
 	return TRUE
 
 /mob/living/advanced/player/antagonist/revolutionary/species_initialize(var/set_default=FALSE)

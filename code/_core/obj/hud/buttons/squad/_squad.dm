@@ -1,7 +1,7 @@
 /obj/hud/button/squad/main
-	name = "squad button"
-	desc = "We ARMA now."
-	desc_extended = "Click here to open the squad menu."
+	name = "小队按钮"
+	desc = "这下成《武装突袭》了。"
+	desc_extended = "点击此处打开小队菜单。"
 	icon = 'icons/hud/hud.dmi'
 	icon_state = "squad"
 	screen_loc = "LEFT,TOP-2"
@@ -34,26 +34,26 @@
 
 			var/list/squad_table = list()
 
-			squad_table["Create New Squad"] = "Create New Squad"
+			squad_table["创建新小队"] = "Create New Squad"
 
 			if(P.current_squad)
-				squad_table["Leave Existing Squad"] = "Leave Existing Squad"
+				squad_table["离开当前小队"] = "Leave Existing Squad"
 
 			for(var/k in SSsquad.all_squads)
 				var/squad/S = k
 				var/name_format = "[S.name] ([length(S.members)]/[SQUAD_MEMBERS_MAX])"
 				squad_table[name_format] = S
 
-			var/answer = input("Which squad would you like to join?","Squad Selection",null) as null|anything in squad_table
+			var/answer = input("你想加入哪个小队？","选择小队",null) as null|anything in squad_table
 
 			if(!P || !answer)
 				return FALSE
 
-			if(P.current_squad && answer == "Leave Existing Squad")
+			if(P.current_squad && squad_table[answer] == "Leave Existing Squad")
 				P.current_squad.remove_member(P)
 				return ..()
 
-			else if(answer == "Create New Squad")
+			else if(squad_table[answer] == "Create New Squad")
 				new_squad(P)
 				return ..()
 
@@ -63,20 +63,21 @@
 					S.add_member(P)
 					update_sprite()
 				else
-					activator.to_chat(span("danger","For some reason that squad doesn't exist. Please tell burger you can't join the squad [answer]."))
+					activator.to_chat(span("danger","由于某种原因，该小队不存在。请向 Burger 反馈你无法加入小队 [answer]。"))
 
 		else
-			var/answer = input("There aren't any squads available to join. Would you like to create a squad?","Squad Creation","Cancel") in list("Yes","No","Cancel")
-			if(answer == "Yes")
+			var/list/squad_creation_choices = list("是" = "Yes", "否" = "No", "取消" = "Cancel")
+			var/answer = input("目前没有可以加入的小队。你想创建一个小队吗？","创建小队","取消") in squad_creation_choices
+			if(answer && squad_creation_choices[answer] == "Yes")
 				new_squad(P)
 
 
 /obj/hud/button/squad/main/proc/new_squad(var/mob/living/advanced/player/P)
 	while(P.client)
-		var/squad_name = input("Please enter your squad name. Enter nothing to cancel.","Squad Creation",null) as text|null
+		var/squad_name = input("请输入小队名称。留空则取消。","创建小队",null) as text|null
 
 		if(squad_name == "Cancel" || squad_name == "Create New Squad" || squad_name == "Cancel")
-			P.to_chat(span("danger","You cheeky bastard. That's an invalid name!"))
+			P.to_chat(span("danger","你这家伙还挺皮！这个名称无效！"))
 			return FALSE
 
 		if(!squad_name)
@@ -95,7 +96,7 @@
 				found_name = TRUE
 
 		if(found_name)
-			P.to_chat(span("warning","The squad name \"[found_name]\" is already taken!"))
+			P.to_chat(span("warning","小队名称“[squad_name]”已被占用！"))
 			continue
 
 		var/squad/S = new
@@ -106,13 +107,13 @@
 		return TRUE
 
 /obj/hud/button/squad/member
-	name = "squad member button"
-	desc = "Represents a squad member."
+	name = "小队成员按钮"
+	desc = "代表一名小队成员。"
 
 	icon = 'icons/hud/progress.dmi'
 	icon_state = "progress"
 
-	maptext = "Name Here"
+	maptext = "成员姓名"
 	maptext_width = TILE_SIZE*3
 	maptext_y = 8
 

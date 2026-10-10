@@ -1,6 +1,6 @@
 /damagetype/unarmed/slaughter
 
-	attack_verbs = list("claw")
+	attack_verbs = list("爪击")
 
 	hit_effect = /obj/effect/temp/impact/combat/claw
 

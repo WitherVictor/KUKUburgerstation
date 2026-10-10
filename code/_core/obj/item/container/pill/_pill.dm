@@ -1,7 +1,7 @@
 /obj/item/container/edible/pill
-	name = "pill"
-	desc = "FLOORPILL"
-	desc_extended = "A reagent carrier for quick oral ingestion, be it medicine, poison or something else entirely."
+	name = "药片"
+	desc = "地上捡的药片。"
+	desc_extended = "用于快速口服的化学物质载体，里面可能是药物、毒药，也可能是完全不同的东西。"
 	icon = 'icons/obj/item/container/pills.dmi'
 	icon_state = "rectangle"
 

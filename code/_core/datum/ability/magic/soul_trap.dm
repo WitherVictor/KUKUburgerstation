@@ -1,5 +1,5 @@
 /ability/magic/summon_item/soultrap
-	name = "prepare soultrap"
+	name = "准备灵魂捕获"
 	desc = ""
 	icon_state = "soultrap"
 	cost = 100

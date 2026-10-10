@@ -1,6 +1,6 @@
 /status_effect/mana_armor
-	name = "Mana Armor"
-	desc = "Your mana protects your health, as long as you have more than half your maximum mana. Protection granted is based on arcane armor."
+	name = "法力护甲"
+	desc = "法力高于上限的一半时，会保护你的生命。保护效果取决于奥术护甲。"
 	id = MANA_ARMOR
 	maximum = SECONDS_TO_DECISECONDS(300)
 	minimum = SECONDS_TO_DECISECONDS(1)

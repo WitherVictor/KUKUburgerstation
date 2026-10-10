@@ -6,9 +6,9 @@ mob/living/advanced/proc/handle_eyecolor_chargen(var/desired_color,var/update_bl
 	return TRUE
 
 /obj/hud/button/chargen/eye_color
-	name = "change eye color"
+	name = "更改眼睛颜色"
 	icon_state = "change_eyecolor"
-	desc_extended = "Click here to change your character's eye color."
+	desc_extended = "点击这里更改角色的眼睛颜色。"
 
 	screen_loc = "CENTER+1.5,CENTER-2"
 
@@ -30,7 +30,7 @@ mob/living/advanced/proc/handle_eyecolor_chargen(var/desired_color,var/update_bl
 
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
-		var/desired_color = input("Eye Color","Eye Color",eye_color) as color|null
+		var/desired_color = input("眼睛颜色","眼睛颜色",eye_color) as color|null
 		if(desired_color)
 			A.handle_eyecolor_chargen(desired_color)
 

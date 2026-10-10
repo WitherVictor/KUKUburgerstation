@@ -1,7 +1,7 @@
 //TODO: Convert to accent.
 
 /language/canuck
-	name = "Canuckian"
+	name = "加拿大口音"
 	id = LANGUAGE_CANUCK
 
 	var/regex/regex_eh
@@ -14,27 +14,27 @@
 	var/regex/regex_fuck
 
 	var/list/possible_chirps = list(
-		"go for a soda" = 100,
-		"fuckin looser" = 100,
-		"pheasants" = 100,
-		"figger it out" = 100,
-		"give your balls a tug you titfucker" = 25,
-		"titfucker, give your balls a tug" = 25,
-		"titfucker" = 25,
-		"give your balls a tug" = 25,
-		"three things will happen. I hit you, you hit the pavement, the ambulance hits 60" = 5,
-		"your mom just liked my NanoBook post from 2 years ago in the beach gateway, tell her I'll put my swimtrunks on for her any time she likes" = 5,
-		"tell your mom to top up the PDA she bought me so I can text her latenight" = 5,
-		"tell your mom that I drained the bank account she setup for me; top it up so I can get some NtBurger" = 5,
-		"I made your mom so wet, John Trasen deployed a 24 hour infantry unit to stack sandbags around my bed" = 5,
-		"your life is so pathetic, I made 15k running a charity event to raise awareness for it" = 5,
-		"your voice is an existential crisis an made me question my whole fucking life" = 5,
-		"your mom groped me two shifts ago, shut the fuck up or I'll take it to NanoBook" = 5,
-		"tell your mom to leave me alone, she's been laying in my fuckin waterbed since Labour day" = 5,
-		"your life is so sad I get a charity tax break just for hanging out with you" = 5,
-		"you should've heard your mom last night; she sounded like a window closing on a catgirl's tail. She was like: \"AAAAAAAAAAAH.\"" = 5,
-		"you should've heard your mom last night; she sounded like my great aunt when I pull a suprise visit. She was like: \"OOOOOOOOOOOOOOOOOOOH.\"" = 5,
-		"your mom ugly cried because she left the lens cap on the camcorder last night; it's fucking amateur hour over there" = 5
+		"喝汽水去吧" = 100,
+		"他妈的废物" = 100,
+		"菜鸟们" = 100,
+		"自己想办法" = 100,
+		"拽拽你的蛋吧，你这乳交狂" = 25,
+		"乳交狂，拽拽你的蛋吧" = 25,
+		"乳交狂" = 25,
+		"拽拽你的蛋吧" = 25,
+		"接下来会发生三件事：我打你，你撞地，救护车飙到60" = 5,
+		"你妈刚点赞了我两年前在纳米书海滩传送门里发的帖子，告诉她，只要她想，我随时能为她穿上泳裤" = 5,
+		"让你妈给她送我的个人数据终端充点话费，这样我半夜才能给她发消息" = 5,
+		"告诉你妈，她给我开的银行账户已经被我花光了，充点钱，我还要买 NT汉堡" = 5,
+		"我把你妈弄得太湿了，约翰·特拉森都派了一支全天待命的步兵队来我床边堆沙袋" = 5,
+		"你的人生太可悲了，我办了场慈善活动让大家关注这事，筹了15000" = 5,
+		"你的声音简直是存在危机，听得我他妈开始怀疑整个人生" = 5,
+		"你妈前两个班次摸我，赶紧闭嘴，不然我就发到纳米书上" = 5,
+		"让你妈别缠着我，她从劳动节起就赖在我那张破水床上没走" = 5,
+		"你的人生太悲惨了，光是跟你待在一起，我就能拿到慈善减税" = 5,
+		"你真该听听你妈昨晚的叫声，跟窗户夹住猫娘尾巴似的：啊啊啊啊啊" = 5,
+		"你真该听听你妈昨晚的叫声，跟我突然登门时我姨婆的反应似的：哦哦哦哦哦" = 5,
+		"你妈昨晚忘了打开摄像机镜头盖，哭得可难看了，那边简直是一群他妈的业余选手" = 5
 	)
 
 /language/canuck/New()
@@ -56,22 +56,22 @@
 
 	if(regex_eh.Find(text)) //Is a question.
 		if(prob(80))
-			text = regex_eh.Replace(text,", eh?")
+			text = regex_eh.Replace(text,"，嗯？")
 		else
-			text = regex_eh.Replace(text,", bud?")
+			text = regex_eh.Replace(text,"，哥们？")
 	else
 		if(regex_fuck.Find(text))
-			regex_end.Replace(", [pickweight(possible_chirps)].")
+			regex_end.Replace("，[pickweight(possible_chirps)]。")
 		else if(prob(80))
 			if(regex_all.Find(text))
-				text = regex_end.Replace(text,", boys.")
+				text = regex_end.Replace(text,"，伙计们。")
 			else
 				if(prob(80))
-					text = regex_end.Replace(text,", bud.")
+					text = regex_end.Replace(text,"，哥们。")
 				else
-					text = regex_end.Replace(text,", my guy.")
+					text = regex_end.Replace(text,"，老兄。")
 		else
-			text = regex_end.Replace(text,", okay?")
+			text = regex_end.Replace(text,"，好吗？")
 
 	text = regex_ue.Replace(text,"oe")
 	text = regex_ou.Replace(text,"oo")

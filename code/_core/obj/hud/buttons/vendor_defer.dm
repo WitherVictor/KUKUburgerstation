@@ -1,5 +1,5 @@
 /obj/hud/button/vendor_defer
-	name = "vendor defer"
+	name = "售货机交互按钮"
 	icon_state = "square"
 	screen_loc = "CENTER,CENTER"
 
@@ -24,7 +24,7 @@
 
 
 /obj/hud/button/vendor_close
-	name = "close vendor"
+	name = "关闭售货界面"
 	icon_state = "arrow"
 	screen_loc = "CENTER,CENTER"
 

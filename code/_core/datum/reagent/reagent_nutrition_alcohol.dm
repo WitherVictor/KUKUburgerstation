@@ -1,12 +1,12 @@
 // https://en.wikipedia.org/wiki/Alcohol_by_volume#Typical_levels
 
 /reagent/nutrition/ethanol //Found through organic things
-	name = "ethanol"
-	desc = "What most lifeforms drink."
+	name = "乙醇"
+	desc = "大多数生物喝的东西。"
 	color = "#778877"
 	alpha = 225
 
-	flavor = "ethanol"
+	flavor = "酒精"
 	flavor_strength = 3
 
 	liquid = 0.75
@@ -51,202 +51,202 @@
 		owner.sanity_regen_buffer += power*.*multiplier
 
 /reagent/nutrition/ethanol/fernet
-	name = "fernet"
+	name = "菲奈特苦酒"
 	color = "#370000"
 
-	flavor = "fernet"
+	flavor = "菲奈特苦酒"
 	flavor_strength = 4
 
 	power = 45
 
 
 /reagent/nutrition/ethanol/beer
-	name = "beer"
+	name = "啤酒"
 	color = "#CCAE57"
 
-	flavor = "beer"
+	flavor = "啤酒"
 	flavor_strength = 2
 
 	power = 5
 
 /reagent/nutrition/ethanol/ale
-	name = "ale"
+	name = "艾尔啤酒"
 	color = "#C67217"
 
-	flavor = "ale"
+	flavor = "艾尔啤酒"
 	flavor_strength = 2
 
 	power = 25
 
 /reagent/nutrition/ethanol/cider
-	name = "cider"
+	name = "苹果酒"
 	color = "#FFBE3D"
 
-	flavor = "cider"
+	flavor = "苹果酒"
 	flavor_strength = 3
 
 	power = 6
 
 /reagent/nutrition/ethanol/rum
-	name = "rum"
+	name = "朗姆酒"
 	color = "#D37D43"
 
-	flavor = "rum"
+	flavor = "朗姆酒"
 	flavor_strength = 2
 
 	power = 40
 
 /reagent/nutrition/ethanol/whiskey
-	name = "whiskey"
+	name = "威士忌"
 	color = "#CD6500"
 
-	flavor = "whiskey"
+	flavor = "威士忌"
 	flavor_strength = 3
 
 	power = 43
 
 /reagent/nutrition/ethanol/vodka
-	name = "vodka"
+	name = "伏特加"
 	color = "#F4FFFF"
 
-	flavor = "vodka"
+	flavor = "伏特加"
 	flavor_strength = 4
 
 	power = 40
 
 /reagent/nutrition/ethanol/vodka/premium
-	name = "premium vodka"
+	name = "高级伏特加"
 	color = "#FFFFFF"
 
-	flavor = "premium vodka"
+	flavor = "高级伏特加"
 	flavor_strength = 3
 
 	power = 95
 
 /reagent/nutrition/ethanol/gin
-	name = "gin"
+	name = "金酒"
 	color = "#FFFFFF"
 
-	flavor = "gin"
+	flavor = "金酒"
 	flavor_strength = 4
 
 	power = 45
 
 /reagent/nutrition/ethanol/brandy
-	name = "brandy"
+	name = "白兰地"
 	color = "#CE4A1E"
 
-	flavor = "brandy"
+	flavor = "白兰地"
 	flavor_strength = 6
 
 	power = 45
 
 /reagent/nutrition/ethanol/schnapps/gold
-	name = "gold schnapps"
+	name = "金箔烈酒"
 	color = "#FFF6CC"
 
-	flavor = "gold"
+	flavor = "黄金"
 	flavor_strength = 2
 
 	power = 40
 
 /reagent/nutrition/ethanol/nothing
-	name = "nothing"
+	name = "虚无"
 	color = "#FFFFFF"
 
-	flavor = "nothing"
+	flavor = "无味"
 	flavor_strength = 1
 
 	power = 0
 
 /reagent/nutrition/ethanol/coffee_liqueur
-	name = "coffee liqueur"
+	name = "咖啡利口酒"
 	color = "#A85721"
 
-	flavor = "coffee liqueur"
+	flavor = "咖啡利口酒"
 	flavor_strength = 2
 
 	power = 20
 
 /reagent/nutrition/ethanol/tequila
-	name = "tequila"
+	name = "龙舌兰酒"
 	color = "#CC9B4E"
 
-	flavor = "tequila"
+	flavor = "龙舌兰酒"
 	flavor_strength = 4
 
 	power = 40
 
 /reagent/nutrition/ethanol/tequila/premium
-	name = "premium tequila"
+	name = "高级龙舌兰酒"
 	color = "#CC9B4E"
 
-	flavor = "premium tequila"
+	flavor = "高级龙舌兰酒"
 	flavor_strength = 5
 
 	power = 60
 
 /reagent/nutrition/ethanol/wine
-	name = "red wine"
+	name = "红葡萄酒"
 	color = "#7F0000"
 
-	flavor = "red wine"
+	flavor = "红葡萄酒"
 	flavor_strength = 3
 
 	power = 12.5
 
 /reagent/nutrition/ethanol/wine/vermouth
-	name = "vermouth"
+	name = "味美思"
 	color = "#F3FFD6"
 
-	flavor = "vermouth"
+	flavor = "味美思"
 	flavor_strength = 4
 
 	power = 14.5
 
 /reagent/nutrition/ethanol/wine/lizard
-	name = "lizard wine"
+	name = "蜥蜴酒"
 	color = "#2EC17A"
 
-	flavor = "lizard wine"
+	flavor = "蜥蜴酒"
 	flavor_strength = 5
 
 	power = 16
 
 
 /reagent/nutrition/ethanol/hearty_punch
-	name = "hearty punch"
+	name = "暖心潘趣酒"
 	color = "#E06967"
 
-	flavor = "hearty punch"
+	flavor = "暖心潘趣酒"
 	flavor_strength = 3
 	heal_amount = 4
 
 	power = 30
 
 /reagent/nutrition/ethanol/absinthe
-	name = "absinthe"
+	name = "苦艾酒"
 	color = "#26A300"
 
-	flavor = "absinthe"
+	flavor = "苦艾酒"
 	flavor_strength = 6
 
 	power = 45
 
 /reagent/nutrition/ethanol/absinthe/premium
-	name = "premium absinthe"
+	name = "高级苦艾酒"
 	color = "#2DC400"
 
-	flavor = "absinthe"
+	flavor = "苦艾酒"
 	flavor_strength = 8
 
 	power = 89.9
 
 /reagent/nutrition/ethanol/grappa
-	name = "grappa"
+	name = "格拉帕果渣白兰地"
 	color = "#FFF9C9"
 
-	flavor = "grappa"
+	flavor = "格拉帕果渣白兰地"
 	flavor_strength = 3
 
 	power = 50

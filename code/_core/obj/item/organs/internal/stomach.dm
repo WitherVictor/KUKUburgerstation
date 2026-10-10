@@ -1,8 +1,8 @@
 /obj/item/organ/internal/stomach
-	name = "stomach"
+	name = "胃"
 	id = BODY_STOMACH
 	icon_state = BODY_STOMACH
-	desc = "Produces digested nutrients and digested liquid. Requires food, water, and oxygenated blood."
+	desc = "产生消化后的营养物质和液体。需要食物、水和含氧血液。"
 
 	attach_flag = BODY_TORSO
 
@@ -13,4 +13,4 @@
 	value = 0
 
 /obj/item/organ/internal/stomach/robotic
-	name = "robotic stomach"
+	name = "机械胃"

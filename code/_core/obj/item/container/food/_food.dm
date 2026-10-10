@@ -1,7 +1,7 @@
 /obj/item/container/edible
-	name = "food"
-	desc = "Edible reagent"
-	desc_extended = "Edible."
+	name = "食物"
+	desc = "可食用的物质。"
+	desc_extended = "可以食用。"
 
 	allow_reagent_transfer_from = FALSE
 

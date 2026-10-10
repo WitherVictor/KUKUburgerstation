@@ -1,5 +1,5 @@
 /obj/hud/inventory/container
-	name = "container"
+	name = "容器"
 	id = "container_debug"
 	screen_loc = "CENTER,CENTER" //This is set elsewhere.
 	alpha = 0 //Invisible until set elsewhere
@@ -22,5 +22,5 @@
 	flags = FLAGS_HUD_MOB
 
 /obj/hud/inventory/container/backpack
-	name = "backpack"
+	name = "背包"
 	id = "backpack"

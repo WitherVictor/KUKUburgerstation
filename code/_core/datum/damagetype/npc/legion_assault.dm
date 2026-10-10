@@ -1,5 +1,5 @@
 /damagetype/npc/legion_assault
-	attack_verbs = list("bite","chomp","gnaw")
+	attack_verbs = list("撕咬","啃咬","啮咬")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/bite.ogg'
@@ -48,7 +48,7 @@
 				L.convert(A)
 
 /damagetype/npc/snowlegion_asault
-	attack_verbs = list("bite","chomp","gnaw")
+	attack_verbs = list("撕咬","啃咬","啮咬")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/bite.ogg'

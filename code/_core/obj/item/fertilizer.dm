@@ -1,7 +1,7 @@
 /obj/item/fertilizer
-	name = "plant-b-grown fertilizer"
-	desc = "The best space-age fertilizer in the galaxy."
-	desc_extended = "A large bag of fertilizer that's enough to cover one square meter of tile with extra-powerful fast-growing fertilizer."
+	name = "长得旺肥料"
+	desc = "银河系最好的太空时代肥料。"
+	desc_extended = "一大袋强效速生肥料，足以为一平方米地面铺上肥沃土壤。"
 	icon = 'icons/obj/item/fertilizer.dmi'
 	icon_state = "inventory"
 
@@ -47,17 +47,17 @@
 	INTERACT_DELAY(10)
 
 	if(uses_left <= 0)
-		activator.to_chat(span("warning","There is no more fertilizer left!"))
+		activator.to_chat(span("warning","肥料已经用完了！"))
 		return TRUE
 
 	if(ispath(object.type,turf_type))
-		activator.to_chat(span("notice","This turf already has soil!"))
+		activator.to_chat(span("notice","这块地面已经有土壤了！"))
 		return TRUE
 
 	var/turf/simulated/floor/T = object
 	var/old_type = T.type
 
-	activator.visible_message(span("notice","\The [activator.name] pours \the [src.name] on \the [T.name], adding soil."))
+	activator.visible_message(span("notice","[activator.name]将[src.name]倒在[T.name]上，铺出了一层土壤。"))
 
 	T.change_turf(turf_type)
 	T.destruction_turf = old_type

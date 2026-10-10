@@ -10,15 +10,15 @@
 		var/tox_description
 		switch(tox_mod)
 			if(0.05 to 0.25)
-				tox_description = "<i>off color</i>"
+				tox_description = "<i>气色不佳</i>"
 			if(0.25 to 0.5)
-				tox_description = "sickly"
+				tox_description = "病恹恹的"
 			if(0.5 to 0.75)
-				tox_description = "<b>ill</b>"
+				tox_description = "<b>病得不轻</b>"
 			if(0.75 to 1)
-				tox_description = "<b>ailing</b>"
+				tox_description = "<b>病重虚弱</b>"
 			if(1 to INFINITY)
-				tox_description = "<u><b>diseased</u></b>"
+				tox_description = "<u><b>病入膏肓</b></u>"
 		damage_description += "<font color='green'>[tox_description]</font>"
 
 	var/rad_mod = health.damage[RAD]/health.health_max
@@ -26,27 +26,27 @@
 		var/rad_description
 		switch(rad_mod)
 			if(0.25 to 0.5)
-				rad_description = "contaminated"
+				rad_description = "受到辐射污染"
 			if(0.5 to 0.75)
-				rad_description = "<b>irradiated</b>"
+				rad_description = "<b>受到严重辐照</b>"
 			if(0.75 to 1)
-				rad_description = "<b>ratioactive</b>"
+				rad_description = "<b>浑身带着放射性</b>"
 			if(1 to INFINITY)
-				rad_description = "<u><b>mutating</u></b>"
+				rad_description = "<u><b>正在变异</b></u>"
 		damage_description += "<font color='greenyellow'>[rad_description]</font>"
 
 	if(!length(damage_description))
 		return null
 
-	var/prefix = "They look"
+	var/prefix = "对方看起来"
 	if(examiner == src)
-		prefix = "You look"
+		prefix = "你看起来"
 	else
 		switch(gender)
 			if(MALE)
-				prefix = "He looks"
+				prefix = "他看起来"
 			if(FEMALE)
-				prefix = "She looks"
+				prefix = "她看起来"
 
 	var/div_class = "notice"
 	switch(health.health_current/health.health_max)
@@ -57,7 +57,7 @@
 		if(0.75 to INFINITY)
 			div_class = "notice"
 
-	return div(div_class,"[prefix] [english_list(damage_description)].")
+	return div(div_class,"[prefix][english_list(damage_description,"状态正常","、","，而且")]。")
 
 
 /mob/living/get_examine_list(var/mob/examiner)
@@ -65,7 +65,7 @@
 	var/object_icon = ICON_TO_HTML(icon,icon_state,32,32)
 	. = list(
 		div("examine_title","[object_icon][src.name]"),
-		div("center bold","Level [level] [initial(src.name)]"),
+		div("center bold","[level]级 [initial(src.name)]"),
 		div("examine_description_long",src.desc_extended)
 	)
 
@@ -81,14 +81,14 @@
 
 	if(dead)
 		if(is_player_controlled())
-			return div("danger","They are dead, but there may still be some hope.")
+			return div("danger","对方已经死亡，但或许还有一线生机。")
 		else
-			return div("warning","They are dead and lifeless, and their soul has departed...")
+			return div("warning","对方已经死亡，毫无生气，灵魂也已离去……")
 	else if(!ai)
 		if(ckey_last && !client)
-			return div("warning","They seem to be affected by space sleep disorder. They may recover soon.")
+			return div("warning","对方似乎患上了太空嗜睡症，或许很快就会恢复。")
 		else if(client && client.inactivity >= SECONDS_TO_TICKS(60))
-			return div("warning","They seem to be blanking out for [TICKS_TO_SECONDS(client.inactivity)] seconds. They may snap out of it soon.")
+			return div("warning","对方似乎已经发呆了[TICKS_TO_SECONDS(client.inactivity)]秒，或许很快就会回过神来。")
 
 	return null
 
@@ -101,12 +101,12 @@
 	if(ai && ai.use_alerts)
 		switch(ai.alert_level)
 			if(ALERT_LEVEL_NOISE)
-				. += div("warning","[capitalize(pronoun)] seems to be looking for a source of noise.")
+				. += div("warning","[pronoun]似乎正在寻找噪声的来源。")
 			if(ALERT_LEVEL_CAUTION)
-				. += div("warning","[capitalize(pronoun)] seems to be looking for someone.")
+				. += div("warning","[pronoun]似乎正在寻找某个人。")
 			if(ALERT_LEVEL_COMBAT)
 				if(ai.objective_attack)
-					. += div("danger","[capitalize(pronoun)] appears to be in a combative stance, with intent to fight [ai.objective_attack]!")
+					. += div("danger","[pronoun]摆出了战斗姿态，似乎打算攻击[ai.objective_attack]！")
 				else
-					. += div("danger","[capitalize(pronoun)] appears to be in a combative stance!")
+					. += div("danger","[pronoun]摆出了战斗姿态！")
 

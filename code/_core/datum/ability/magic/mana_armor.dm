@@ -1,6 +1,6 @@
 /ability/magic/mana_armor
-	name = "toggle mana armor"
-	desc = "A togglable ability that adds 25% of your total overall arcane armor rating to your overall blunt, blade, and pierce armor rating as long as you have more mana than half of your maximum mana. Taking damage removes mana equal to the amount of blunt, blade and pierce damage dealt."
+	name = "开关法力护甲"
+	desc = "可开关的能力。法力高于上限的一半时，将总奥术护甲值的 25% 加到总钝击、切割和穿刺护甲值上。受到钝击、切割或穿刺伤害时，会消耗与伤害量相等的法力。"
 	icon_state = "mana_armor"
 	cost = 25
 	cooldown = SECONDS_TO_DECISECONDS(3)

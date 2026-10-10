@@ -1,5 +1,5 @@
 /obj/item/analyzer
-	name = "analyzer"
+	name = "分析仪"
 	var/next_scan = 0
 	weight = 3
 	has_quick_function = TRUE //use analyzers from the belt slots
@@ -22,7 +22,7 @@
 
 /obj/item/analyzer/proc/can_scan(var/mob/activator,var/atom/target)
 	if(next_scan >= world.time)
-		activator.to_chat(span("warning","\The [src.name] is recharging, please wait!"))
+		activator.to_chat(span("warning","[src.name]正在充能，请稍候！"))
 		return FALSE
 	return TRUE
 
@@ -32,7 +32,7 @@
 		INTERACT_CHECK
 		INTERACT_DELAY(10)
 		if(can_scan(activator,object))
-			activator.visible_message(span("notice","\The [activator.name] scans \the [object.name]."),span("notice","You scan \the [object.name]."))
+			activator.visible_message(span("notice","[activator.name]扫描了[object.name]。"),span("notice","你扫描了[object.name]。"))
 			on_scan(activator,object,location,control,params)
 		return TRUE
 

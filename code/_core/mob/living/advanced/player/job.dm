@@ -16,7 +16,7 @@
 	job_rank = 1
 	job_next_promotion = world.realtime + 604800*10 //1 week
 
-	src.to_chat(span("notice","You are now \a [J.name]."))
+	src.to_chat(span("notice","你现在的岗位是[J.name]。"))
 
 	return TRUE
 
@@ -42,6 +42,6 @@
 	job_rank++
 	job_next_promotion = world.realtime + 604800*10 //1 week
 
-	src.to_chat(span("notice","You have been promoted from [J.get_rank_title(job_rank-1)] to [J.get_rank_title(job_rank)]! Your skills, attributes, and paycheck have been increased!"))
+	src.to_chat(span("notice","你已从[J.get_rank_title(job_rank-1)]晋升为[J.get_rank_title(job_rank)]！你的技能、属性和薪水都提高了！"))
 
 	return TRUE

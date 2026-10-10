@@ -1,7 +1,7 @@
 /obj/item/container/syringe
-	name = "syringe"
-	desc = "For when you want to poke holes into people and get away with it."
-	desc_extended = "Injects reagent directly into people's bloodstream for higher effectiveness, but will lose durability when administering. Can be toggled to inject or draw."
+	name = "注射器"
+	desc = "想在人身上扎洞又不惹麻烦时用得上。"
+	desc_extended = "将化学物质直接注入血液，以提高效果，但使用时会损耗耐久。可在注射和抽取模式之间切换。"
 	crafting_id = "syringe"
 
 	reagents = /reagent_container/syringe/
@@ -64,9 +64,9 @@
 	//Normal operation.
 	if(last_amount != inject_amount_desired)
 		if(spam_fix_time <= world.time)
-			activator.to_chat(span("notice","You change \the [src.name]'s injection limit to [inject_amount_desired]u..."))
+			activator.to_chat(span("notice","你将[src.name]的注射量上限调为[inject_amount_desired]单位……"))
 		else
-			activator.to_chat(span("notice","...[inject_amount_desired]u..."))
+			activator.to_chat(span("notice","……[inject_amount_desired]单位……"))
 
 	spam_fix_time = world.time + 20
 
@@ -114,20 +114,20 @@
 	INTERACT_CHECK_NO_DELAY(target)
 
 	if(quality <= 0)
-		activator.to_chat(span("warning","\The [src.name] is too broken to be used!"))
+		activator.to_chat(span("warning","[src.name]损坏得太严重，无法使用！"))
 		return FALSE
 
 	if(!target.reagents)
-		activator.to_chat(span("warning","You can't target \the [target.name]!"))
+		activator.to_chat(span("warning","你无法对[target.name]使用它！"))
 		return FALSE
 
 	if(injecting)
 		if(reagents.volume_current <= 0)
-			activator.to_chat(span("warning","\The [src.name] is empty!"))
+			activator.to_chat(span("warning","[src.name]已经空了！"))
 			return FALSE
 	else
 		if(reagents.volume_current >= reagents.volume_max)
-			activator.to_chat(span("warning","\The [src.name] is full!"))
+			activator.to_chat(span("warning","[src.name]已经装满了！"))
 			return FALSE
 
 	if(is_living(activator))
@@ -143,15 +143,15 @@
 			if(!allow_hostile_action(attacker.loyalty_tag,victim))
 				if(injecting)
 					if(reagents.contains_lethal)
-						attacker.to_chat(span("warning","Your loyalty tag prevents you from harming \the [victim.name]!"))
+						attacker.to_chat(span("warning","你的忠诚标记阻止你伤害[victim.name]！"))
 						return FALSE
 				else
 					if(!victim.blood_type || !victim.blood_volume_max)
-						attacker.to_chat(span("notice","There is nothing to extract from \the [victim.name]!"))
+						attacker.to_chat(span("notice","[victim.name]体内没有可抽取的东西！"))
 						return FALSE
 
 					if((victim.blood_volume-inject_amount_desired)/victim.blood_volume_max < 0.9)
-						attacker.to_chat(span("warning","Your loyalty tag prevents you from harming \the [victim.name]!"))
+						attacker.to_chat(span("warning","你的忠诚标记阻止你伤害[victim.name]！"))
 						return FALSE
 
 
@@ -188,17 +188,17 @@
 
 		var/real_object_name = object.name
 		if(victim != object)
-			real_object_name = "[victim.name]'s [object.name]"
+			real_object_name = "[victim.name]的[object.name]"
 			if(victim == activator)
 				self_inject = TRUE
 
 		var/transfer_amount = 0
 		if(injecting)
 			transfer_amount = inject_amount_desired
-			if(!stealthy) activator.visible_message(span("danger","\The [activator.name] tries to inject \the [real_object_name] with \the [src.name]!"),span("warning","You try to inject \the [real_object_name] with \the [src.name]."))
+			if(!stealthy) activator.visible_message(span("danger","[activator.name]试图用[src.name]向[real_object_name]注射！"),span("warning","你试图用[src.name]向[real_object_name]注射。"))
 		else
 			transfer_amount = -inject_amount_desired
-			if(!stealthy) activator.visible_message(span("danger","\The [activator.name] tries to draw blood from \the [real_object_name] with \the [src.name]!"),span("warnning","You try to draw blood from \the [real_object_name] with \the [src.name]."))
+			if(!stealthy) activator.visible_message(span("danger","[activator.name]试图用[src.name]从[real_object_name]抽血！"),span("warning","你试图用[src.name]从[real_object_name]抽血。"))
 
 		if(injection_time > 0)
 			var/injection_time_to_use = injection_time
@@ -222,16 +222,16 @@
 				var/mob/living/L = object.loc
 				L.draw_blood(activator,src,-amount)
 			else
-				activator.to_chat(span("warning","You can't seem to find a way to draw anything from \the [object] with \the [src]!"))
+				activator.to_chat(span("warning","你似乎无法用[src]从[object]抽取任何东西！"))
 		else if(is_living(object)) //Living object with blood, hopefully.
 			var/mob/living/L = object
 			L.draw_blood(activator,src,-amount)
 		else if(object.reagents) //Non-organ object with reagents.
 			var/transfer_amount = object.reagents.transfer_reagents_to(reagents,-amount, activator = activator)
 			if(transfer_amount)
-				activator.visible_message(span("warning","\The [activator.name] draws liquid from \the [object.name]."),span("notice","You draw [transfer_amount] units of liquid from \the [object.name]."))
+				activator.visible_message(span("warning","[activator.name]从[object.name]抽取了液体。"),span("notice","你从[object.name]抽取了[transfer_amount]单位液体。"))
 		else
-			activator.to_chat(span("warning","You can't seem to find a way to draw anything from \the [object.name] with \the [src.name]!"))
+			activator.to_chat(span("warning","你似乎无法用[src.name]从[object.name]抽取任何东西！"))
 		if(!injecting && reagents.volume_current >= reagents.volume_max && can_inject)
 			injecting = TRUE
 			update_sprite()
@@ -246,9 +246,9 @@
 			if(transfer_amount)
 				if(injection_sound)
 					play_sound(injection_sound,get_turf(src))
-				activator.visible_message(span("warning","\The [activator.name] injects \the [src.name] into \the [object.name]."),span("notice","You inject [transfer_amount] units of liquid into \the [object.name]."))
+				activator.visible_message(span("warning","[activator.name]用[src.name]向[object.name]注入了液体。"),span("notice","你向[object.name]注入了[transfer_amount]单位液体。"))
 		else
-			activator.to_chat(span("warning","You can't seem to find a way to inject \the [object.name] with \the [src.name]!"))
+			activator.to_chat(span("warning","你似乎无法用[src.name]向[object.name]注射！"))
 		if(injecting && reagents.volume_current <= 0 && can_draw)
 			injecting = FALSE
 			update_sprite()
@@ -258,18 +258,18 @@
 		var/obj/item/organ/O = object
 		if(O.health && O.health.organic)
 			var/mob/living/L = is_living(O.loc) ? O.loc : null
-			L?.to_chat(span("warning","Your [O.name] feels a tiny prick."))
+			L?.to_chat(span("warning","你的[O.name]感到轻微的针刺。"))
 			var/damage_to_deal = quality > 50 ? 0 : min(1 - quality/100,1)*20
 			if(damage_to_deal > 0 && object.health?.adjust_loss_smart(brute=damage_to_deal*0.25,pain=damage_to_deal,organic=TRUE,robotic=FALSE) && O.send_pain_response(10) && !stealthy)
-				L?.to_chat(span("danger","\The roughness of \the [src.name] hurts!"))
+				L?.to_chat(span("danger","[src.name]粗糙的针头扎得很疼！"))
 		adjust_quality(-quality_reduction_on_use)
 	else if(is_living(object))
 		var/mob/living/L = object
 		if(L.health && L.health.organic)
-			L.to_chat(span("warning","You feel a tiny prick."))
+			L.to_chat(span("warning","你感到轻微的针刺。"))
 			var/damage_to_deal = quality > 50 ? 0 : min(1 - quality/100,1)*20
 			if(damage_to_deal > 0 && L.health.adjust_loss_smart(brute=damage_to_deal*0.25,pain=damage_to_deal,organic=TRUE,robotic=FALSE) && L.send_pain_response(10) && !stealthy)
-				L.to_chat(span("danger","\The roughness of \the [src.name] hurts!"))
+				L.to_chat(span("danger","[src.name]粗糙的针头扎得很疼！"))
 		adjust_quality(-quality_reduction_on_use)
 
 	return FALSE

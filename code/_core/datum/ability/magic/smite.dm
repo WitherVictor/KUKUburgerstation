@@ -1,6 +1,6 @@
 /ability/magic/summon_item/smite
-	name = "prepare smite"
-	desc = "A lesser but still powerful variant of the smite hand. Deals 25% of the target's current health as dark damage. Only works on humanoids."
+	name = "准备惩击"
+	desc = "惩击之手的弱化版本，依然威力强大。造成相当于目标当前生命值 25% 的黑暗伤害。仅对类人生物有效。"
 	icon_state = "disintegrate"
 	cost = 100
 	cooldown = SECONDS_TO_DECISECONDS(30)

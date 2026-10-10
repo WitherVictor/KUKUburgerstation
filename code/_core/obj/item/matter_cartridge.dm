@@ -1,9 +1,9 @@
 /obj/item/matter_cartridge
-	name = "matter cartridge"
+	name = "物质补充匣"
 	icon = 'icons/obj/item/matter_cartridge.dmi'
 	icon_state = "rcd"
-	desc = "Contains a lot of atoms!"
-	desc_extended = "RCDs use this as ammo. Stick inside an RCD when empty to refill it of atoms."
+	desc = "里面有很多原子！"
+	desc_extended = "快速建造装置的“弹药”。装置材料耗尽时，将它装入即可补充物质。"
 	value = 50
 
 	weight = 5
@@ -19,7 +19,7 @@
 		INTERACT_DELAY(10)
 		var/obj/item/rcd/R = object
 		R.add_matter(R.matter_max)
-		activator.to_chat(span("notice","You refill \the [R.name]."))
+		activator.to_chat(span("notice","你为[R.name]补充了物质。"))
 		qdel(src)
 		return TRUE
 

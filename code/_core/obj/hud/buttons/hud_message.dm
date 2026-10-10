@@ -14,7 +14,7 @@
 	return TRUE
 
 /obj/hud/button/message/
-	name = "hud message"
+	name = "界面消息"
 	desc = ""
 	icon_state = "invisible"
 	screen_loc = "CENTER,TOP"
@@ -24,7 +24,7 @@
 	maptext_x = -(TILE_SIZE*VIEW_RANGE) + 16
 	maptext_width = TILE_SIZE*VIEW_RANGE*2
 	maptext_height = TILE_SIZE*VIEW_RANGE
-	maptext = "ERROR"
+	maptext = "错误"
 
 	mouse_opacity = 0
 

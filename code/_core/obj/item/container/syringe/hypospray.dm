@@ -1,7 +1,7 @@
 /obj/item/container/syringe/hypospray
-	name = "hypospray"
-	desc = ";CMO IS A CHANGELING!!"
-	desc_extended = "A bulky, sterile, reusuable air-needle autoinjector for rapid administration of drugs to patients. Injects up to 15 units at a time, almost instantly."
+	name = "高压注射器"
+	desc = ";医疗主管是变形怪！！"
+	desc_extended = "一款体积较大、无菌且可重复使用的气压式自动注射器，可快速向患者给药。每次最多注射15单位，几乎瞬间完成。"
 
 	value = 800
 	icon = 'icons/obj/item/container/hypospray.dmi'
@@ -33,19 +33,19 @@
 	INTERACT_DELAY(5)
 
 	if(!istype(object,/obj/item/container/simple/beaker/bottle/hypospray))
-		activator.to_chat(span("warning","You don't know how to put \the [object.name] into \the [src.name]... maybe a special container will work?"))
+		activator.to_chat(span("warning","你不知道该怎么把[object.name]装入[src.name]……也许需要特殊容器？"))
 		return TRUE
 
 	var/obj/item/container/simple/beaker/bottle/hypospray/H = object
 	if(H.spent)
-		activator.to_chat(span("warning","\The [H.name]'s gas canister is spent and cannot inject its contents!"))
+		activator.to_chat(span("warning","[H.name]的气罐已经耗尽，无法注入其中的液体！"))
 		return TRUE
 	H.spent = TRUE
 
 	if(H.reagents.transfer_reagents_to(src.reagents))
-		activator.to_chat(span("notice","You insert \the [H.name] into \the [src.name], activating the pressurized gas."))
+		activator.to_chat(span("notice","你将[H.name]装入[src.name]，释放了加压气体。"))
 	else
-		activator.to_chat(span("warning","You insert \the [H.name] into \the [src.name], activating the pressurized gas, but the reagents fail to transfer into \the [src.name]!"))
+		activator.to_chat(span("warning","你将[H.name]装入[src.name]，释放了加压气体，但药剂未能转移到[src.name]中！"))
 
 	return TRUE
 
@@ -66,9 +66,9 @@
 		add_underlay(I)
 
 /obj/item/container/syringe/hypospray/combat
-	name = "combat hypospray"
-	desc = ";CMO IS A CHANGELING!!"
-	desc_extended = "A sterile, reusuable air-needle autoinjector for rapid administration of drugs to patients. About half the size of a regular hypospray, and just as powerful. Injects up to 30 units at a time, instantly."
+	name = "战斗高压注射器"
+	desc = ";医疗主管是变形怪！！"
+	desc_extended = "一款无菌且可重复使用的气压式自动注射器，可快速向患者给药。体积约为普通高压注射器的一半，效果同样强劲。每次最多瞬间注射30单位。"
 
 	value = 1600
 	icon = 'icons/obj/item/container/hypospray_combat.dmi'

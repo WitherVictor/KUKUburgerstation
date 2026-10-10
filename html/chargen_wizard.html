@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<style>
 			body {
@@ -70,14 +71,14 @@
 		
 		
 		function Question01() {
-			var question = "At birth, you were born into..."
+			var question = "你出生在一个怎样的家庭……"
 			var choices = new Object()
 			
 			
-			choices["wealth"] = "Fortune. Your great great grandparents made a substantial amount of profit owning and trading asteroid mines and stocks in NanoTrasen products, so your family was quite well off."
-			choices["common"] = "Labor. Your parents managed to get by working low-position 14 hour shifts in the social services sector.",
-			choices["poor"] = "Poverty. Both of your parents worked day shifts and night shifts in a waste recycling plant to provide you with clean water, air, and food.",
-			choices["orphan"] = "Nothing. Your mother and father are unknown to you and the man who found you alone in an alley."
+			choices["wealth"] = "富裕之家。你的高祖父母靠持有、买卖小行星矿场，以及投资纳米传讯产品相关股票赚了一大笔钱，因此家境相当优渥。"
+			choices["common"] = "劳动之家。你的父母在社会服务行业从事基层工作，每班长达 14 小时，勉强维持生计。",
+			choices["poor"] = "贫困之家。你的父母在废物回收厂日夜轮班，只为给你提供干净的水、空气和食物。",
+			choices["orphan"] = "无依无靠。你不知道自己的父母是谁，那个在小巷里发现你独自一人的男人也不知道。"
 		
 			
 			//family_type
@@ -85,58 +86,58 @@
 		
 		
 		function Question02() {
-			var question = "During your childhood, your caretaker was..."
+			var question = "童年时，照顾你的人是……"
 			
 			var choices = new Object()
 			
 			if(family_type == "orphan") {
-				choices["abusive"] = "Abusive. The only reason you were saved from the streets was for the child benifits check that man would spend on drugs and booze. Beatings were all too common during their drunken rants and ravings."
+				choices["abusive"] = "残暴的人。那个男人把你从街上捡回来，只是为了领儿童补助，再拿去买毒品和酒。他醉酒后骂骂咧咧时，殴打你是家常便饭。"
 			}
 			if(family_type == "wealth") {
-				choices["abusive"] = "Abusive. Your family hired an nanny to raise you, as they were too busy attending parties and socializing to deal with you. The nanny would occasiionally hit you with a stick or force you to stick your hand in boiling water if you did not speak in the way she wanted you to speak."
+				choices["abusive"] = "残暴的人。你的家人忙于聚会和社交，无暇照顾你，于是雇了个保姆。如果你说话不合她的心意，她有时就会用棍子打你，或强迫你把手伸进沸水里。"
 			}
 			else {
-				choices["abusive"] = "Abusive. Due to the lack of proper healthcare available to your family, your mother died during childbirth. Your father blamed you for it, and let you know with occasionally beatings."
+				choices["abusive"] = "残暴的人。由于家里得不到合适的医疗服务，你的母亲在分娩时去世。父亲将此归咎于你，并时不时用拳脚提醒你这一点。"
 			}
 
 			if(family_type == "orphan") {
-				choices["protective"] = "Protective. The man would shelter you from the outer world, saying that someone as innocent as you should not be exposed to any more evil or corruption."
+				choices["protective"] = "保护欲强的人。那个男人让你远离外界，说像你这样天真的孩子，不该再接触更多邪恶与腐化。"
 			}
 			if(family_type == "wealth") {
-				choices["protective"] = "Protective. Fearing that a rival corporation would send assassins to kill the next in line for the company, your parents hired a professional bodyguard to protect and watch over you."
+				choices["protective"] = "保护欲强的人。你的父母担心竞争企业会派刺客杀害公司的下一任继承人，于是雇了专业保镖保护、照看你。"
 			}
 			else {
-				choices["protective"] = "Protective. Not wanting for you to experience the hell that your parents experienced during their childhood, they sheltered you as much as they could from the outside world."
+				choices["protective"] = "保护欲强的人。父母不愿你经历他们童年时的苦难，于是尽可能让你远离外界。"
 			}
 			
 			if(family_type == "orphan") {
-				choices["demanding"] = "Demanding. The old man wanted to see you succeed in this strange new world, and pushed you to your mental and physical limits by training you to be street smart."
+				choices["demanding"] = "严厉的人。老人希望你在这个陌生的新世界出人头地，于是教你街头生存的本事，将你的身心都逼到了极限。"
 			}
 			if(family_type == "wealth") {
-				choices["demanding"] = "Demanding. They expected nothing but the best grades from you in your overly-extensive education. They did not want an idiot to run their company when they die."
+				choices["demanding"] = "严厉的人。你接受着繁重得过头的教育，他们只接受最优秀的成绩。他们可不想死后让一个傻子接管公司。"
 			}
 			else {
-				choices["demanding"] = "Demanding. In order to make ends meet, they put you to work as soon as you were physically able. You did not have time for friends."
+				choices["demanding"] = "严厉的人。为了维持生计，你刚有力气干活，他们就让你去工作。你根本没有时间交朋友。"
 			}
 			
 			if(family_type == "orphan") {
-				choices["religous"] = "Religious. The old man was actually quite insane and thought you were the third coming of Jesus. You believe it as a child."
+				choices["religous"] = "虔诚的人。其实老人疯得不轻，认为你是第三次降临人间的耶稣。小时候的你对此深信不疑。"
 			}
 			if(family_type == "wealth") {
-				choices["religous"] = "Religious. Your parents believed that you were a literal gift from god, and treated you as such."
+				choices["religous"] = "虔诚的人。你的父母相信你真的是上天赐予的礼物，并以此来对待你。"
 			}
 			else {
-				choices["religous"] = "Relgious. Your parents replaced their off time with Buddhism, in hope that in the next life, they would live better lives."
+				choices["religous"] = "虔诚的人。你的父母将休息时间都用来修习佛法，盼望来世能过得更好。"
 			}	
 			
 			if(family_type == "orphan") {
-				choices["rebellious"] = "Rebellious. The old man was a powerful leader of a resistance group and revealed this to you at the age of eight."
+				choices["rebellious"] = "反叛的人。老人是一支抵抗组织中很有影响力的领袖，在你八岁时向你坦白了这一身份。"
 			}
 			if(family_type == "wealth") {
-				choices["rebellious"] = "Rebellious. Your parents believed that you were a literal gift from god, and treated you as such."
+				choices["rebellious"] = "反叛的人。你的父母相信你真的是上天赐予的礼物，并以此来对待你。"
 			}
 			else {
-				choices["rebellious"] = "Rebellious. Your parents replaced their off time with Buddhism, in hope that in the next life, they would live better lives."
+				choices["rebellious"] = "反叛的人。你的父母将休息时间都用来修习佛法，盼望来世能过得更好。"
 			}				
 			
 

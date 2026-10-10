@@ -1,10 +1,10 @@
 /reagent/tobacco
-	name = "Tobacco"
-	desc = "Space Tobacco grown on space plantations."
+	name = "烟草"
+	desc = "种植在太空农场中的太空烟草。"
 	color = "#63391C"
 	alpha = 255
 
-	flavor = "tobacco"
+	flavor = "烟草"
 	flavor_strength = 10
 
 	liquid = -0.75
@@ -30,8 +30,8 @@
 		container.add_reagent(R,.*0.1)
 
 /reagent/tobacco/cigarette
-	name = "Low-grade Tobacco"
-	flavor = "cheap tobacco"
+	name = "劣质烟草"
+	flavor = "廉价烟草"
 	hidden_chance = 25
 	hidden_reagents = list(
 		/reagent/fuel/welding = 25,

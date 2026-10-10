@@ -1,5 +1,5 @@
 /language/slavic
-	name = "Slavic"
+	name = "斯拉夫语"
 	id = LANGUAGE_SLAVIC
 
 	var/list/possible_replacements = list(

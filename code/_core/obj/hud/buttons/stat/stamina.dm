@@ -1,6 +1,6 @@
 /obj/hud/button/stat/stamina
-	name = "stamina"
-	desc = "Stamina for your body."
+	name = "体力"
+	desc = "身体的体力。"
 	id = "stamina"
 
 	icon = 'icons/hud/stamina.dmi'

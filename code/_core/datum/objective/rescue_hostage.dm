@@ -1,5 +1,5 @@
 /objective/hostage
-	name = "Rescue Hostage"
+	name = "营救人质"
 
 	var/mob/living/created_hostage
 
@@ -10,7 +10,7 @@
 	points_reward = 15
 
 /objective/hostage/get_description()
-	return "Rescue [english_list(tracked_atoms)] and bring them shipside. Location: [english_list(get_locations(),"Unknown")]."
+	return "营救[english_list(tracked_atoms,"未知目标","、","、")]，并将其带回汉堡站。位置：[english_list(get_locations(),"未知","、","、")]。"
 
 /objective/hostage/setup()
 	if(!length(possible_hostage_spawns))

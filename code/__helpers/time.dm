@@ -20,27 +20,27 @@ proc/time_x_newer_than_y(var/x_date,var/x_time,var/y_date,var/y_time)
 	return FALSE
 
 
-/proc/get_nice_time(var/seconds)
+/proc/get_nice_time(var/seconds,var/chinese = FALSE)
 
 	var/time_list = list()
 
 	var/day_value = FLOOR(seconds/(60*60*24), 1)
-	time_list += "[day_value] day\s"
+	time_list += chinese ? "[day_value]天" : "[day_value] day\s"
 	seconds -= day_value*60*60*24
 
 	var/hour_value = FLOOR(seconds/(60*60), 1)
-	time_list += "[hour_value] hour\s"
+	time_list += chinese ? "[hour_value]小时" : "[hour_value] hour\s"
 	seconds -= hour_value*60*60
 
 	var/minute_value = FLOOR(seconds/60, 1)
-	time_list += "[minute_value] minute\s"
+	time_list += chinese ? "[minute_value]分钟" : "[minute_value] minute\s"
 	seconds -= minute_value*60
 
 	var/second_value = FLOOR(seconds, 1)
-	time_list += "[seconds] second\s"
+	time_list += chinese ? "[seconds]秒" : "[seconds] second\s"
 	seconds -= second_value
 
-	return english_list(time_list)
+	return chinese ? english_list(time_list,"","","") : english_list(time_list)
 
 
 #define FORMAT_HOUR 0x1

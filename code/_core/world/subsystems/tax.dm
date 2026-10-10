@@ -39,15 +39,15 @@ SUBSYSTEM_DEF(tax)
 	var/partial_tax = FALSE
 
 	if(P.currency < taxes_to_pay)
-		if(!silent) P.to_chat(span("danger","You don't have enough credits to pay your taxes in full! You paid what you could..."))
+		if(!silent) P.to_chat(span("danger","你的信用点不足以缴清税款！你已尽力支付能付的部分……"))
 		partial_tax = TRUE
 
 	var/pay_amount = -P.adjust_currency(-taxes_to_pay,FALSE)
 
 	if(partial_tax)
-		if(!silent) P.to_chat(span("warning","You have partially paid [pay_amount] of your taxes..."))
+		if(!silent) P.to_chat(span("warning","你已支付部分税款，共[pay_amount]信用点……"))
 	else
-		if(!silent) P.to_chat(span("notice","You have successfully paid [pay_amount] of your taxes. Check back in 1 week ([time2text(world.realtime+(604800*10),"Month DD")]) to pay your taxes again!"))
+		if(!silent) P.to_chat(span("notice","你已成功缴清税款，共[pay_amount]信用点。一周后（[time2text(world.realtime+(604800*10),"MM-DD")]）再来缴纳下一期税款！"))
 		P.last_tax_payment = world.realtime
 
 	P.revenue = 0
@@ -82,12 +82,12 @@ SUBSYSTEM_DEF(tax)
 	var/sales_tax_amount = CEILING(P.expenses * sales_tax * 0.01,1)
 	var/revenue_tax_amount = CEILING(P.revenue * revenue_tax * 0.01,1)
 
-	var/total_tax = bracket_tax_amount + sales_tax_amount + revenue_tax_amount
+	var/total_tax = get_tax_amount(P)
 
-	return "Your tax total is the following:\n\
-	[revenue_tax]% of your revenue (which is currently [revenue_tax_amount] credits) is taxed as revenue tax. \
-	[sales_tax]% of your expenses, which are classified as \"sales\" under the current tax code, (which is currently [sales_tax_amount] credits) is taxed as sales tax. \
-	You currently owe [P.partial_tax] credits in outstanding tax amount owed, interest free... \
-	Your business tax is a bit more complex, with [length(business_tax_percent)] different brackets between [business_tax_percent[1]]% and [business_tax_percent[length(business_tax_percent)]]% taxed on a per bracket basis, which is based on your total profit (revenue minus expenses, before taxes)...\n\
-	... with the math all together, you will be paying [bracket_tax_amount] credits in business tax...\n\
-	... and your total tax for this week and all possible weeks you missed is [total_tax] credits in total."
+	return "你的税款明细如下：\n\
+	收入的[revenue_tax]%作为收入税征收，本期为[revenue_tax_amount]信用点。\
+	按现行税法，你的支出被归类为“销售”，其中的[sales_tax]%作为销售税征收，本期为[sales_tax_amount]信用点。\
+	你还有[P.partial_tax]信用点的未缴税款，不计利息……\
+	营业税稍微复杂一些：按你的税前总利润（收入减去支出），分为[length(business_tax_percent)]个税档，税率从[business_tax_percent[1]]%到[business_tax_percent[length(business_tax_percent)]]%，各档分别计税……\n\
+	……全部算下来，你需要缴纳[bracket_tax_amount]信用点的营业税……\n\
+	……加上本周税款和此前所有欠税，应缴总额为[total_tax]信用点。"

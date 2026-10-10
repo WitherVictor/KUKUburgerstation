@@ -1,5 +1,5 @@
 /obj/hud/button/vehicle/
-	name = "vehicle button"
+	name = "载具按钮"
 	desc = ""
 	icon = 'icons/hud/vehicle.dmi'
 	icon_state = ""
@@ -10,11 +10,11 @@
 	has_quick_function = FALSE
 
 /obj/hud/button/vehicle/weapon
-	name = "left weapon"
+	name = "左侧武器"
 	icon = 'icons/hud/vehicle_long.dmi'
 	icon_state = "right"
 	screen_loc = "CENTER-2.5,BOTTOM:12"
-	maptext = "Left Weapon"
+	maptext = "左侧武器"
 	maptext_width = TILE_SIZE*3 - 8
 	maptext_x = 4
 	var/weapon_slot = 1
@@ -34,10 +34,10 @@
 
 
 /obj/hud/button/vehicle/weapon/right
-	name = "right weapon"
+	name = "右侧武器"
 	icon_state = "left"
 	screen_loc = "CENTER+0.5,BOTTOM:12"
-	maptext = "<div style='text-align:right'>Right Weapon</div>"
+	maptext = "<div style='text-align:right'>右侧武器</div>"
 	maptext_width = TILE_SIZE*3 - 8
 	maptext_x = 4
 	weapon_slot = 2
@@ -48,7 +48,7 @@
 
 //Eject
 /obj/hud/button/vehicle/eject
-	name = "eject"
+	name = "离开载具"
 	icon_state = "eject"
 	screen_loc = "RIGHT,BOTTOM:12+2"
 

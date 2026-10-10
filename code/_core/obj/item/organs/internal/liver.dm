@@ -1,12 +1,12 @@
 /obj/item/organ/internal/liver
-	name = "liver"
+	name = "肝脏"
 	id = BODY_LIVER
 	icon_state = BODY_LIVER
-	desc = "Produces bile. Requires vitamins and oxygenated blood."
+	desc = "产生胆汁。需要维生素和含氧血液。"
 
 	attach_flag = BODY_TORSO
 
 	value = 0
 
 /obj/item/organ/internal/liver/robotic
-	name = "robotic liver"
+	name = "机械肝脏"

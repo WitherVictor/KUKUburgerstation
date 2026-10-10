@@ -1,6 +1,6 @@
 /species/monkey
-	name = "Monkey"
-	desc = "OOK"
+	name = "猴子"
+	desc = "喔喔"
 	id = "monkey"
 	flags_species = SPECIES_MONKEY
 

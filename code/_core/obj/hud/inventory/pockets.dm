@@ -1,5 +1,5 @@
 /obj/hud/inventory/organs/groin/pocket
-	name = "pocket"
+	name = "口袋"
 	id = "pocket"
 	icon_state = "slot_pocket"
 	screen_loc = "CENTER,BOTTOM:10+3"
@@ -22,7 +22,7 @@
 	light_mod = 0.5
 
 /obj/hud/inventory/organs/groin/pocket/right
-	name = "left lower pocket"
+	name = "左下口袋"
 	id = "pocket01"
 	screen_loc = "CENTER+3,BOTTOM:11"
 
@@ -40,7 +40,7 @@
 	. = ..()
 
 /obj/hud/inventory/organs/groin/pocket/left
-	name = "right lower pocket"
+	name = "右下口袋"
 	id = "pocket02"
 	screen_loc = "CENTER+4,BOTTOM:11"
 
@@ -58,7 +58,7 @@
 	. = ..()
 
 /obj/hud/inventory/organs/groin/pocket/contract
-	name = "contract slot"
+	name = "契约槽"
 	icon_state = "slot_contract"
 	id = "contract"
 	screen_loc = "RIGHT,TOP-3"

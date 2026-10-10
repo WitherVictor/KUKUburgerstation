@@ -1,3 +1,3 @@
 /language/basic
-	name = "Basic"
+	name = "通用语"
 	id = LANGUAGE_BASIC

@@ -1,7 +1,7 @@
 /obj/item/container/simple/beaker/bottle/medium
-	name = "medium bottle"
-	desc = "Remember to read the label before drinking."
-	desc_extended = "A bottle used by chemists to contain medicines and other reagents."
+	name = "中型药瓶"
+	desc = "喝之前记得看标签。"
+	desc_extended = "化学家用来存放药物和其他试剂的瓶子。"
 	icon = 'icons/obj/item/container/cup/bottle_medium.dmi'
 	icon_state = "bottle"
 	icon_count = 10
@@ -14,7 +14,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/bicaridine
-	name = "bottle of bicaridine"
+	name = "比卡利定药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/bicaridine/Generate()
 	reagents.add_reagent(/reagent/medicine/bicaridine,reagents.volume_max)
@@ -22,7 +22,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/kelotane
-	name = "bottle of kelotane"
+	name = "克罗烷药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/kelotane/Generate()
 	reagents.add_reagent(/reagent/medicine/kelotane,reagents.volume_max)
@@ -30,14 +30,14 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/dylovene
-	name = "bottle of dylovene"
+	name = "地洛文药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/dylovene/Generate()
 	reagents.add_reagent(/reagent/medicine/dylovene,reagents.volume_max)
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/medium/epinephrine
-	name = "bottle of epinephrine"
+	name = "急救肾上腺素药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/epinephrine/Generate()
 	reagents.add_reagent(/reagent/medicine/adrenaline/epinephrine,reagents.volume_max)
@@ -45,7 +45,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/morphine
-	name = "bottle of morphine"
+	name = "吗啡药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/morphine/Generate()
 	reagents.add_reagent(/reagent/medicine/painkiller/morphine,reagents.volume_max)
@@ -53,7 +53,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/calomel
-	name = "bottle of calomel"
+	name = "甘汞药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/calomel/Generate()
 	reagents.add_reagent(/reagent/medicine/purge,reagents.volume_max)
@@ -61,7 +61,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/inaprovaline
-	name = "bottle of inaprovaline"
+	name = "伊纳普罗林药瓶"
 
 /obj/item/container/simple/beaker/bottle/medium/inaprovaline/Generate()
 	reagents.add_reagent(/reagent/medicine/inaprovaline,reagents.volume_max)
@@ -69,7 +69,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/brute_mix
-	name = "syndicate brute prevention mix"
+	name = "辛迪加外伤防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/brute_mix/Generate()
@@ -81,7 +81,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/medium/burn_mix
-	name = "syndicate burn prevention mix"
+	name = "辛迪加烧伤防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/burn_mix/Generate()
@@ -93,7 +93,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/medium/toxin_mix
-	name = "syndicate toxin prevention mix"
+	name = "辛迪加毒素防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/toxin_mix/Generate()
@@ -105,7 +105,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/medium/death_mix
-	name = "syndicate death prevention mix"
+	name = "辛迪加保命混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/death_mix/Generate()
@@ -117,7 +117,7 @@
 	return ..()
 
 /obj/item/container/simple/beaker/bottle/medium/rad_mix
-	name = "syndicate radiation prevention mix"
+	name = "辛迪加辐射防护混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/rad_mix/Generate()
@@ -129,7 +129,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/combat_mix
-	name = "syndicate combat mix"
+	name = "辛迪加战斗混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/combat_mix/Generate()
@@ -142,7 +142,7 @@
 
 
 /obj/item/container/simple/beaker/bottle/medium/poison
-	name = "syndicate poison mix"
+	name = "辛迪加毒药混合剂"
 	rarity = RARITY_RARE
 
 /obj/item/container/simple/beaker/bottle/medium/poison/Generate()

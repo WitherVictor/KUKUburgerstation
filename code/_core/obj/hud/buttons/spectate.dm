@@ -1,5 +1,5 @@
 /obj/hud/button/vr_spectate
-	name = "spectate"
+	name = "旁观"
 
 
 /obj/hud/button/vr_spectate/clicked_on_by_object(var/mob/caller,var/atom/object,location,control,params)
@@ -22,14 +22,14 @@
 	if(!length(team_list))
 		return FALSE
 	team_list = team_list.Copy()
-	team_list += "Cancel"
+	team_list["取消"] = "Cancel"
 
-	var/mob/living/desired_spectate = input("Who do you wish to spectate?","Spectate","Cancel") as null|anything in team_list
-	if(!desired_spectate || desired_spectate == "Cancel")
+	var/mob/living/desired_spectate = input("你想旁观谁？","旁观","取消") as null|anything in team_list
+	if(!desired_spectate || team_list[desired_spectate] == "Cancel")
 		return .
 
 	if(!L.dead || desired_spectate.qdeleting)
-		caller.to_chat(span("warning","Failed to spectate."))
+		caller.to_chat(span("warning","旁观失败。"))
 		return .
 
 	L.client.spectate(desired_spectate)

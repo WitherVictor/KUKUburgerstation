@@ -1,7 +1,7 @@
 /obj/item/organ/arm
-	name = "right arm"
+	name = "右臂"
 	id = BODY_ARM_RIGHT
-	desc = "A right arm."
+	desc = "一条右臂。"
 	icon_state = BODY_ARM_RIGHT
 	worn_layer = LAYER_MOB_ARMS
 	attach_flag = BODY_TORSO
@@ -33,10 +33,10 @@
 	value = 0
 
 /obj/item/organ/arm/left
-	name = "left arm"
+	name = "左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
-	desc = "A left arm."
+	desc = "一条左臂。"
 
 	hud_id = "body_arm_left"
 
@@ -49,13 +49,13 @@
 
 //Reptile Feral
 /obj/item/organ/arm/reptile
-	name = "reptile right arm"
+	name = "原始蜥蜴人右臂"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
 
 	armor = /armor/reptile
 
 /obj/item/organ/arm/reptile/left
-	name = "reptile left arm"
+	name = "原始蜥蜴人左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -69,13 +69,13 @@
 
 //Reptile Advanced
 /obj/item/organ/arm/reptile_advanced
-	name = "reptile advanced right arm"
+	name = "蜥蜴人右臂"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
 
 	armor = /armor/reptile
 
 /obj/item/organ/arm/reptile_advanced/left
-	name = "reptile advanced left arm"
+	name = "蜥蜴人左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -89,7 +89,7 @@
 
 //Diona
 /obj/item/organ/arm/diona
-	name = "diona right arm"
+	name = "狄俄娜右臂"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 	enable_glow = TRUE
 	enable_detail = TRUE
@@ -97,7 +97,7 @@
 	armor = /armor/diona
 
 /obj/item/organ/arm/diona/left
-	name = "diona left arm"
+	name = "狄俄娜左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -111,14 +111,14 @@
 
 //Cyborg
 /obj/item/organ/arm/cyborg
-	name = "cyborg right arm"
+	name = "半机械人右臂"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/arm/cyborg/left
-	name = "cyborg left arm"
+	name = "半机械人左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -132,14 +132,14 @@
 
 //Cyborg2
 /obj/item/organ/arm/gopro
-	name = "advanced cyborg right arm"
+	name = "高级半机械人右臂"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/arm/gopro/left
-	name = "advanced cyborg left arm"
+	name = "高级半机械人左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -155,13 +155,13 @@
 
 //Beefman
 /obj/item/organ/arm/beefman
-	name = "beef right arm"
+	name = "血肉人右臂"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
 
 	armor = /armor/beefman
 
 /obj/item/organ/arm/beefman/left
-	name = "beef left arm"
+	name = "血肉人左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -177,7 +177,7 @@
 
 //Beefman
 /obj/item/organ/arm/skeleton
-	name = "skeleton right arm"
+	name = "骷髅右臂"
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
 
 	armor = /armor/skeleton
@@ -187,7 +187,7 @@
 	can_gib = FALSE
 
 /obj/item/organ/arm/skeleton/left
-	name = "skeleton left arm"
+	name = "骷髅左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -202,11 +202,11 @@
 
 //STANDU
 /obj/item/organ/arm/stand
-	name = "stand right arm"
+	name = "替身右臂"
 	icon = 'icons/mob/living/advanced/species/stand.dmi'
 
 /obj/item/organ/arm/stand/left
-	name = "stand left arm"
+	name = "替身左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -221,11 +221,11 @@
 
 //Monkey
 /obj/item/organ/arm/monkey
-	name = "monkey right arm"
+	name = "猴子右臂"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
 
 /obj/item/organ/arm/monkey/left
-	name = "monkey left arm"
+	name = "猴子左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -240,13 +240,13 @@
 
 //Goblin
 /obj/item/organ/arm/goblin
-	name = "goblin right arm"
+	name = "地精右臂"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
 
 	armor = /armor/goblin
 
 /obj/item/organ/arm/goblin/left
-	name = "goblin left arm"
+	name = "地精左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -260,11 +260,11 @@
 
 //Moth
 /obj/item/organ/arm/moth
-	name = "moth right arm"
+	name = "蛾人右臂"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
 
 /obj/item/organ/arm/moth/left
-	name = "moth left arm"
+	name = "蛾人左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -279,11 +279,11 @@
 
 //Golem
 /obj/item/organ/arm/golem
-	name = "golem right arm"
+	name = "魔像右臂"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
 
 /obj/item/organ/arm/golem/left
-	name = "golem left arm"
+	name = "魔像左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 
@@ -298,11 +298,11 @@
 
 //Abductor
 /obj/item/organ/arm/abductor
-	name = "abductor right arm"
+	name = "绑架者右臂"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
 
 /obj/item/organ/arm/abductor/left
-	name = "abductor left arm"
+	name = "绑架者左臂"
 	id = BODY_ARM_LEFT
 	icon_state = BODY_ARM_LEFT
 

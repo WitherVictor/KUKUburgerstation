@@ -1,7 +1,7 @@
 /obj/item/container/spray
-	name = "medical spray"
-	desc = "Spray and Pray."
-	desc_extended = "A Spray. Can be used to infuse bandages or and ointments, highening their effectiveness, or applied directly to wounds. Of course, be sure it contains a medicine, and not polytrinic acid, before you do either"
+	name = "医疗喷雾"
+	desc = "喷完就祈祷吧。"
+	desc_extended = "一种喷雾，可用于浸润绷带或混入药膏来增强效果，也可直接喷在伤口上。当然，无论怎么用，都要先确认里面装的是药物，而不是强腐蚀酸。"
 
 	icon = 'icons/obj/item/container/spray.dmi'
 	icon_state = "spray"
@@ -39,13 +39,13 @@
 		var/obj/item/container/healing/M = object
 		var/reagent_transfer = min(5,reagents.volume_current)
 		if(reagent_transfer <= 0)
-			activator.to_chat(span("warning","\The [src.name] is empty!"))
+			activator.to_chat(span("warning","[src.name]已经空了！"))
 			return TRUE
 		if(M.reagents.volume_current >= M.reagents.volume_max)
-			activator.to_chat(span("warning","\The [M.name] is full!"))
+			activator.to_chat(span("warning","[M.name]已经装满了！"))
 			return TRUE
 		reagents.transfer_reagents_to(M.reagents,reagent_transfer, activator = activator)
-		activator.visible_message(span("warning","\The [activator.name] sprays \the [M.name] with \the [src.name], infusing it."),span("notice","You spray \the [M.name] with \the [src.name], infusing it."))
+		activator.visible_message(span("warning","[activator.name]用[src.name]喷洒[M.name]，使其浸润。"),span("notice","你用[src.name]喷洒[M.name]，使其浸润。"))
 		return TRUE
 
 	if(is_advanced(object) && is_advanced(activator))
@@ -56,7 +56,7 @@
 		var/mob/living/advanced/attacker = activator
 
 		if(victim != attacker && reagents.contains_lethal && !allow_hostile_action(attacker.loyalty_tag,victim))
-			attacker.to_chat(span("warning","Your loyalty tag prevents you from harming \the [victim.name]!"))
+			attacker.to_chat(span("warning","你的忠诚标记阻止你伤害[victim.name]！"))
 			return FALSE
 
 		var/list/new_x_y = attacker.get_current_target_cords(params)
@@ -71,15 +71,15 @@
 
 		var/reagent_transfer = min(5,reagents.volume_current)
 		if(reagent_transfer <= 0)
-			activator.to_chat(span("warning","\The [src.name] is empty!"))
+			activator.to_chat(span("warning","[src.name]已经空了！"))
 			return TRUE
 
 		reagents.transfer_reagents_to(O.reagents,reagent_transfer, activator = activator)
 
 		if(activator == O.loc)
-			activator.visible_message(span("notice","\The [activator.name] sprays their [O.name] with \the [src]."),span("notice","You spray your [O.name] with \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]用[src]喷洒了自己的[O.name]。"),span("notice","你用[src.name]喷洒了自己的[O.name]。"))
 		else
-			activator.visible_message(span("warning","\The [activator.name] sprays \the [O.loc.name]'s [O.name] with \the [src]."),span("notice","You spray \the [O.loc.name]'s [O.name] with \the [src.name]."))
+			activator.visible_message(span("warning","[activator.name]用[src]喷洒了[O.loc.name]的[O.name]。"),span("notice","你用[src.name]喷洒了[O.loc.name]的[O.name]。"))
 
 		update_sprite()
 

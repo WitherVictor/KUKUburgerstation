@@ -1,7 +1,7 @@
 /obj/item/container/edible/sandwich
-	name = "sandwich"
-	desc = "SANDWICH MAKES ME STRONG!"
-	desc_extended = "A clusterfuck of food. ALT+Click to open and add ingredients, preferably edible ones."
+	name = "三明治"
+	desc = "三明治让我变强！"
+	desc_extended = "一堆乱七八糟夹在一起的食物。按住Alt键点击可打开并添加配料，最好放能吃的东西。"
 
 	size = SIZE_2
 
@@ -61,13 +61,13 @@
 	update_sprite()
 
 /obj/item/container/edible/sandwich/burger
-	name = "burger"
-	desc = "The meal of champions."
+	name = "汉堡"
+	desc = "冠军的餐点。"
 	icon_state = "bun_bottom"
 	value = 0
 
 
 /obj/item/container/edible/sandwich/bread
-	name = "sandwich"
+	name = "三明治"
 	icon_state = "bread_slice"
 	value = 0

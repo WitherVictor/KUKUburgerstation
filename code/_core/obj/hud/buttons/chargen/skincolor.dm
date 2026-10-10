@@ -8,8 +8,8 @@ mob/living/advanced/proc/handle_skincolor_chargen(var/desired_color,var/update_b
 	return TRUE
 
 /obj/hud/button/chargen/skin_color
-	name = "change skin color"
-	desc_extended = "Click here to change your character's skin color."
+	name = "更改肤色"
+	desc_extended = "点击这里更改角色的肤色。"
 	icon_state = "change_skincolor"
 
 	screen_loc = "CENTER-1.5,CENTER-2"
@@ -26,6 +26,6 @@ mob/living/advanced/proc/handle_skincolor_chargen(var/desired_color,var/update_b
 
 	if(. && is_advanced(activator))
 		var/mob/living/advanced/A = activator
-		var/desired_color = input("Skin Color","Skin Color",skin_color) as color|null
+		var/desired_color = input("肤色","肤色",skin_color) as color|null
 		if(desired_color)
 			A.handle_skincolor_chargen(desired_color)

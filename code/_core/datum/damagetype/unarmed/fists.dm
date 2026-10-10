@@ -1,6 +1,6 @@
 //Fists
 /damagetype/unarmed/fists/
-	attack_verbs = list("punch","hit","slap","strike","pummel","pound")
+	attack_verbs = list("拳击","打击","拍打","击打","猛揍","重击")
 
 	hit_effect = /obj/effect/temp/impact/combat/punch
 
@@ -47,7 +47,7 @@
 	. = ..()
 
 /damagetype/unarmed/fists/help
-	attack_verbs = list("tap")
+	attack_verbs = list("轻拍")
 
 	hit_effect = null
 
@@ -89,7 +89,7 @@
 	draw_blood = FALSE
 
 /damagetype/unarmed/fists/disarm
-	attack_verbs = list("shove")
+	attack_verbs = list("推搡")
 
 	hit_effect = /obj/effect/temp/impact/combat/disarm
 
@@ -142,7 +142,7 @@
 	return ..()
 
 /damagetype/unarmed/fists/grab
-	attack_verbs = list("grab")
+	attack_verbs = list("抓取")
 
 	hit_effect = /obj/effect/temp/impact/combat/disarm
 

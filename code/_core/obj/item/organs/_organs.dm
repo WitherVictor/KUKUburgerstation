@@ -1,6 +1,6 @@
 /obj/item/organ/
-	name = "ORGAN"
-	desc = "An organ."
+	name = "器官"
+	desc = "一个器官。"
 	var/id = null
 
 	icon = 'icons/mob/living/advanced/species/human.dmi'
@@ -175,7 +175,7 @@
 	broken = TRUE
 	if(display_mesage && is_advanced(src.loc))
 		var/mob/living/advanced/A = src.loc
-		A.visible_message(span("warning","\The [A.name]\s [broken_name] breaks!"),span("danger","Your [broken_name] breaks!"))
+		A.visible_message(span("warning","[A.name]的[broken_name]骨折了！"),span("danger","你的[broken_name]骨折了！"))
 	src.health.adjust_loss_smart(pain=health.health_max*0.25,organic=TRUE,robotic=FALSE)
 	return TRUE
 
@@ -422,15 +422,15 @@ obj/item/organ/proc/get_damage_description(var/mob/examiner)
 		var/brute_description
 		switch(brute_mod)
 			if(0.05 to 0.25)
-				brute_description = "<i>bruised<i/>"
+				brute_description = "<i>有些淤青</i>"
 			if(0.25 to 0.5)
-				brute_description = "battered"
+				brute_description = "伤痕累累"
 			if(0.5 to 0.75)
-				brute_description = "<b>crushed</b>"
+				brute_description = "<b>被砸伤</b>"
 			if(0.75 to 1)
-				brute_description = "<b>mangled</b>"
+				brute_description = "<b>严重损毁</b>"
 			if(1 to INFINITY)
-				brute_description = "<u><b>mutilated</b></u>"
+				brute_description = "<u><b>残破不堪</b></u>"
 		damage_description += "<font color='red'>[brute_description]</font>"
 
 	var/burn_mod = health.damage[BURN]/src.health.health_max
@@ -438,15 +438,15 @@ obj/item/organ/proc/get_damage_description(var/mob/examiner)
 		var/burn_description
 		switch(burn_mod)
 			if(0.05 to 0.25)
-				burn_description = "<i>singed<i/>"
+				burn_description = "<i>轻微灼伤</i>"
 			if(0.25 to 0.5)
-				burn_description = "burned"
+				burn_description = "烧伤"
 			if(0.5 to 0.75)
-				burn_description = "seared"
+				burn_description = "严重烧伤"
 			if(0.75 to 1)
-				burn_description = "<b>scorched</b>"
+				burn_description = "<b>烧焦</b>"
 			if(1 to INFINITY)
-				burn_description = "<u><b>charred</b></u>"
+				burn_description = "<u><b>完全炭化</b></u>"
 		damage_description += "<font color='orange'>[burn_description]</font>"
 
 	if(src.loc && is_advanced(src.loc))
@@ -456,15 +456,15 @@ obj/item/organ/proc/get_damage_description(var/mob/examiner)
 			var/pain_description
 			switch(pain_mod)
 				if(0.05 to 0.25)
-					pain_description = "<i>tender<i/>"
+					pain_description = "<i>一碰就疼</i>"
 				if(0.25 to 0.5)
-					pain_description = "sore"
+					pain_description = "酸痛"
 				if(0.5 to 0.75)
-					pain_description = "<b>stinging</b>"
+					pain_description = "<b>刺痛</b>"
 				if(0.75 to 1)
-					pain_description = "<u><b>aching</b></u>"
+					pain_description = "<u><b>剧痛</b></u>"
 				if(1 to INFINITY)
-					pain_description = "<u><b>numb from the pain</b></u>"
+					pain_description = "<u><b>痛得麻木</b></u>"
 			damage_description += "<font color='grey'>[pain_description]</font>"
 
 	if(bleeding > 1)
@@ -472,32 +472,32 @@ obj/item/organ/proc/get_damage_description(var/mob/examiner)
 		switch(bleeding)
 			if(1 to 3)
 				if(health.organic)
-					bleeding_description = "trickling blood"
+					bleeding_description = "渗血"
 				else
-					bleeding_description = "trickling fluid"
+					bleeding_description = "渗出液体"
 			if(3 to 6)
 				if(health.organic)
-					bleeding_description = "<b>bleeding</b>"
+					bleeding_description = "<b>流血</b>"
 				else
-					bleeding_description = "<b>leaking fluid</b>"
+					bleeding_description = "<b>漏液</b>"
 			if(6 to INFINITY)
 				if(health.organic)
-					bleeding_description = "<u><b>gushing blood</b></u>"
+					bleeding_description = "<u><b>大量涌血</b></u>"
 				else
-					bleeding_description = "<u><b>gushing fluid</b></u>"
+					bleeding_description = "<u><b>液体大量涌出</b></u>"
 		damage_description += "<font color='crimson'>[bleeding_description]</font>"
 
 	if(broken)
-		damage_description += "<font color='black'><u><b>broken</b></u></font>"
+		damage_description += "<font color='black'><u><b>骨折</b></u></font>"
 
 	if(!length(damage_description))
 		return null
 
-	var/noun = "The"
+	var/noun = "这个"
 	if(src.loc && is_advanced(src.loc))
 		var/mob/living/advanced/A = src.loc
 		if(examiner == A)
-			noun = "Your"
+			noun = "你的"
 		else
 			noun = capitalize(get_pronoun_his_her_their(A))
 
@@ -510,7 +510,7 @@ obj/item/organ/proc/get_damage_description(var/mob/examiner)
 		if(0.75 to INFINITY)
 			div_class = "notice"
 
-	return div(div_class,"[noun] [src.name] looks [english_list(damage_description)].")
+	return div(div_class,"[noun][src.name]看起来[english_list(damage_description,"完好无损","、","，而且")]。")
 
 
 

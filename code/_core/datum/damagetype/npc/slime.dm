@@ -1,5 +1,5 @@
 /damagetype/npc/slime
-	attack_verbs = list("blob","pounce","absorb","slime")
+	attack_verbs = list("黏液冲击","飞扑","吸收","黏液侵蚀")
 
 
 	//The base attack damage of the weapon. It's a flat value, unaffected by any skills or attributes.

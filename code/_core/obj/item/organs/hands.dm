@@ -1,7 +1,7 @@
 /obj/item/organ/hand
-	name = "right hand"
+	name = "右手"
 	id = BODY_HAND_RIGHT
-	desc = "A right hand."
+	desc = "一只右手。"
 	icon_state = BODY_HAND_RIGHT
 	worn_layer = LAYER_MOB_HANDS
 	inventories = list(
@@ -64,7 +64,7 @@
 				if(length(I.drop_objects(T)))
 					did_drop = TRUE
 			if(did_drop)
-				L.visible_message(span("warning","\The [L.name]'s [src.name] recoils from their injury!"),span("danger","You cry in pain as your [src.name] recoils from your injury!"))
+				L.visible_message(span("warning","[L.name]的[src.name]因伤痛而缩了回去！"),span("danger","你的[src.name]因伤痛而缩了回去，你疼得叫出了声！"))
 				return TRUE
 
 	return .
@@ -90,9 +90,9 @@
 		return damage_type
 
 /obj/item/organ/hand/left
-	name = "left hand"
+	name = "左手"
 	id = BODY_HAND_LEFT
-	desc = "A left hand."
+	desc = "一只左手。"
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
 		/obj/hud/inventory/organs/left_hand_worn,
@@ -113,7 +113,7 @@
 
 //Reptile Advanced
 /obj/item/organ/hand/reptile
-	name = "right reptile hand"
+	name = "原始蜥蜴人右手"
 	icon = 'icons/mob/living/advanced/species/reptile.dmi'
 
 	armor = /armor/reptile
@@ -121,7 +121,7 @@
 	damage_type = /damagetype/unarmed/claw
 
 /obj/item/organ/hand/reptile/left
-	name = "left reptile hand"
+	name = "原始蜥蜴人左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -143,7 +143,7 @@
 
 //Reptile Advanced
 /obj/item/organ/hand/reptile_advanced
-	name = "right advanced reptile hand"
+	name = "蜥蜴人右手"
 	icon = 'icons/mob/living/advanced/species/reptile_advanced.dmi'
 
 	armor = /armor/reptile
@@ -151,7 +151,7 @@
 	damage_type = /damagetype/unarmed/claw
 
 /obj/item/organ/hand/reptile_advanced/left
-	name = "left advanced reptile hand"
+	name = "蜥蜴人左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -174,7 +174,7 @@
 
 //Diona
 /obj/item/organ/hand/diona
-	name = "right diona hand"
+	name = "狄俄娜右手"
 	icon = 'icons/mob/living/advanced/species/diona.dmi'
 
 	enable_glow = TRUE
@@ -184,7 +184,7 @@
 
 
 /obj/item/organ/hand/diona/left
-	name = "left diona hand"
+	name = "狄俄娜左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -207,14 +207,14 @@
 
 //Cyborg
 /obj/item/organ/hand/cyborg
-	name = "right cyborg hand"
+	name = "半机械人右手"
 	icon = 'icons/mob/living/advanced/species/cyborg.dmi'
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/hand/cyborg/left
-	name = "left cyborg hand"
+	name = "半机械人左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -236,14 +236,14 @@
 
 //Cyborg 2
 /obj/item/organ/hand/gopro
-	name = "right advanced cyborg hand"
+	name = "高级半机械人右手"
 	icon = 'icons/mob/living/advanced/species/gopro.dmi'
 
 	armor = /armor/cyborg
 	health = /health/obj/item/organ/synthetic
 
 /obj/item/organ/hand/gopro/left
-	name = "left advanced cyborg hand"
+	name = "高级半机械人左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -267,7 +267,7 @@
 
 //Beefman
 /obj/item/organ/hand/beefman
-	name = "right beef hand"
+	name = "血肉人右手"
 	icon = 'icons/mob/living/advanced/species/beefman.dmi'
 	damage_type = /damagetype/unarmed/beef/
 
@@ -277,7 +277,7 @@
 	return damage_type
 
 /obj/item/organ/hand/beefman/left
-	name = "left beef hand"
+	name = "血肉人左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -299,13 +299,13 @@
 
 //Stand
 /obj/item/organ/hand/stand
-	name = "right fast hand"
+	name = "迅捷右手"
 
 /obj/item/organ/hand/stand/get_damage_type(var/atom/attacker,var/atom/victim)
 	return /damagetype/unarmed/fists/stand
 
 /obj/item/organ/hand/stand/left
-	name = "left fast hand"
+	name = "迅捷左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -328,7 +328,7 @@
 
 //Skeleton
 /obj/item/organ/hand/skeleton
-	name = "right skeleton hand"
+	name = "骷髅右手"
 	icon = 'icons/mob/living/advanced/species/skeleton.dmi'
 
 	armor = /armor/skeleton
@@ -338,7 +338,7 @@
 	can_gib = FALSE
 
 /obj/item/organ/hand/skeleton/left
-	name = "left skeleton hand"
+	name = "骷髅左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -363,11 +363,11 @@
 
 //Skeleton
 /obj/item/organ/hand/monkey
-	name = "right monkey hand"
+	name = "猴子右手"
 	icon = 'icons/mob/living/advanced/species/monkey.dmi'
 
 /obj/item/organ/hand/monkey/left
-	name = "left monkey hand"
+	name = "猴子左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -392,7 +392,7 @@
 
 //Zombie
 /obj/item/organ/hand/zombie
-	name = "right zombie hand"
+	name = "僵尸右手"
 
 /obj/item/organ/hand/zombie/get_damage_type(var/atom/attacker,var/atom/victim)
 
@@ -421,7 +421,7 @@
 	return pickweight(possible_damage_types)
 
 /obj/item/organ/hand/zombie/left
-	name = "left zombie hand"
+	name = "僵尸左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -444,13 +444,13 @@
 
 //Goblin
 /obj/item/organ/hand/goblin
-	name = "right goblin hand"
+	name = "地精右手"
 	icon = 'icons/mob/living/advanced/species/goblin.dmi'
 
 	armor = /armor/goblin
 
 /obj/item/organ/hand/goblin/left
-	name = "left goblin hand"
+	name = "地精左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -472,11 +472,11 @@
 
 //Moth
 /obj/item/organ/hand/moth
-	name = "right moth hand"
+	name = "蛾人右手"
 	icon = 'icons/mob/living/advanced/species/moth.dmi'
 
 /obj/item/organ/hand/moth/left
-	name = "left moth hand"
+	name = "蛾人左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -501,11 +501,11 @@
 
 //Moth
 /obj/item/organ/hand/golem
-	name = "right golem hand"
+	name = "魔像右手"
 	icon = 'icons/mob/living/advanced/species/golem.dmi'
 
 /obj/item/organ/hand/golem/left
-	name = "left golem hand"
+	name = "魔像左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(
@@ -529,11 +529,11 @@
 
 //Abductor
 /obj/item/organ/hand/abductor
-	name = "right abductor hand"
+	name = "绑架者右手"
 	icon = 'icons/mob/living/advanced/species/abductor.dmi'
 
 /obj/item/organ/hand/abductor/left
-	name = "left abductor hand"
+	name = "绑架者左手"
 	id = BODY_HAND_LEFT
 	icon_state = BODY_HAND_LEFT
 	inventories = list(

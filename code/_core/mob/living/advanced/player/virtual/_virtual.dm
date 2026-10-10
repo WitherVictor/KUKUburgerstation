@@ -1,5 +1,5 @@
 /mob/living/advanced/player/virtual
-	name = "virtual avatar"
+	name = "虚拟化身"
 	allow_save = FALSE
 	damage_received_multiplier = 0.25
 
@@ -38,8 +38,9 @@
 	if(!istype(fallback_mob.loc,/obj/structure/interactive/vr_pod/))
 		return FALSE
 
-	var/choice = input("Are you sure you want to quit virtual reality? You won't be able to reenter until the current virtual reality round is over.","Quit Virtual Reality Round","Cancel") as null|anything in list("Yes","No","Cancel")
-	if(choice != "Yes")
+	var/list/exit_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
+	var/choice = input("确定要退出虚拟现实吗？本轮虚拟现实结束前，你将无法再次进入。","退出虚拟现实回合","取消") as null|anything in exit_choices
+	if(!choice || exit_choices[choice] != "Yes")
 		return FALSE
 
 	if(!is_player(fallback_mob))

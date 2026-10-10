@@ -1,6 +1,6 @@
 /status_effect/slow
-	name = "Slowed"
-	desc = "You've been slowed!"
+	name = "减速"
+	desc = "你的行动变慢了！"
 	id = SLOW
 
 	minimum = SECONDS_TO_DECISECONDS(4)

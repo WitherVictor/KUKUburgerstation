@@ -1,6 +1,6 @@
 /status_effect/soul_trap
-	name = "Soul Trap"
-	desc = "You've been soul trapped!"
+	name = "灵魂捕获"
+	desc = "你的灵魂被标记为捕获目标了！"
 	id = SOULTRAP
 	minimum = SECONDS_TO_DECISECONDS(4)
 	maximum = SECONDS_TO_DECISECONDS(60)

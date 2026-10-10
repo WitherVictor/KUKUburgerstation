@@ -5,31 +5,31 @@
 	. = list()
 
 	.["hello"] = list(
-		"Are you seeking #1 guidance, looking to join us as a #2, or just staring?",
+		"你是来寻求#1的指引，想成为#2加入我们，还是只想盯着看？",
 		"Her",
 		"clown"
 	)
 
 	.["Her"] = list(
-		"Our patron goddess. #1 true form lays unknown to all, but Her effects are known if you look. Do you seek Her #2?",
+		"我们的守护女神。无人知晓#1的真身，但只要留心，就能发现祂的影响。你想寻求祂的#2吗？",
 		"Her",
 		"wisdom"
 	)
 
 	.["wisdom"] = list(
-		"A true #1 does not seek Fun out, rather becoming the Fun themselves.",
+		"真正的#1不会追寻欢乐，而是让自己成为欢乐本身。",
 		"clown"
 	)
 
 	if(P.job == /job/clown)
 		.["clown"] = list(
-			"A #1 may forget, but they will eventually remember.",
+			"#1或许会遗忘，但终究会想起来。",
 			"clown"
 		)
 
 	else
 		.["clown"] = list(
-			"Anyone can be a #1. All is forgiven under #2 eyes, but you must abandon your past self. I must warn you, however. If you become one of us without being strong enough, you might find you're too weak to do anything.NEWLINE#3NEWLINE#4",
+			"任何人都能成为#1。在#2眼中，一切都能得到宽恕，但你必须舍弃过去的自己。不过我得警告你：如果还不够强就加入我们，你可能会发现自己虚弱得什么都做不了。NEWLINE#3NEWLINE#4",
 			"clown",
 			"Her",
 			"*Yes, become a clown.",
@@ -37,13 +37,13 @@
 		)
 
 	.["*Yes, become a clown."] = list(
-		"By the powers vested in me, you are now a #1 in #2 circus.",
+		"根据授予我的职权，你现在是#2的马戏团中的一名#1了。",
 		"clown",
 		"Her"
 	)
 
 	.["*No, do not become a clown."] = list(
-		"#1 generosity endures, if you change your mind.",
+		"如果你改变主意，#1的慷慨始终如一。",
 		"Her"
 	)
 

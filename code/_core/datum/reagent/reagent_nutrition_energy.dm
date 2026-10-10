@@ -45,11 +45,11 @@
 		L.remove_status_effect(ADRENALINE)
 
 /reagent/nutrition/energy/grey_bull
-	name = "\improper Grey Bull"
-	desc = "Grey Bull gives you gloves!"
+	name = "灰牛"
+	desc = "灰牛给你一双手套！"
 	color = "#F2C12E"
 
-	flavor = "electricity"
+	flavor = "电流"
 
 	nutrition_fast_amount = 15
 	nutrition_normal_amount = 0
@@ -62,11 +62,11 @@
 	particle_size = 0.25
 
 /reagent/nutrition/energy/coffee
-	name = "coffee"
-	desc = "Basic black coffee."
+	name = "咖啡"
+	desc = "普通黑咖啡。"
 	color = "#824C28"
 
-	flavor = "coffee"
+	flavor = "咖啡"
 
 	nutrition_fast_amount = 0
 	nutrition_normal_amount = 5
@@ -82,11 +82,11 @@
 
 
 /reagent/nutrition/energy/coffee/espresso
-	name = "espresso"
-	desc = "Coffee in its purest form."
+	name = "意式浓缩咖啡"
+	desc = "最纯粹的咖啡。"
 	color = "#824C28"
 
-	flavor = "expresso"
+	flavor = "意式浓缩咖啡"
 
 	nutrition_fast_amount = 0
 	nutrition_normal_amount = 5

@@ -1,5 +1,5 @@
 /damagetype/melee/club/broom
-	attack_verbs = list("sweeps")
+	attack_verbs = list("横扫")
 
 	attack_damage_base = list(
 		BLUNT = 5

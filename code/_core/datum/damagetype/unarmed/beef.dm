@@ -1,5 +1,5 @@
 /damagetype/unarmed/beef/
-	attack_verbs = list("maul")
+	attack_verbs = list("撕打")
 
 	impact_sounds = list(
 		'sound/weapons/unarmed/beef/beef_hit.ogg'

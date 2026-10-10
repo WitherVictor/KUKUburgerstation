@@ -15,9 +15,9 @@
 	return TRUE
 
 /obj/structure/interactive/status_display
-	name = "status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display."
+	name = "状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示相应的文本。"
 	icon = 'icons/obj/structure/status_display.dmi'
 	icon_state = "icon"
 
@@ -58,7 +58,7 @@
 /obj/structure/interactive/status_display/New(var/desired_loc)
 	. = ..()
 	update_sprite()
-	set_text("Hello")
+	set_text("你好")
 
 /obj/structure/interactive/status_display/proc/set_text(var/desired_text)
 	maptext = "<center valign='middle'>[desired_text]</center>"
@@ -82,77 +82,77 @@
 	. = ..()
 
 /obj/structure/interactive/status_display/global_display/arrivals_01
-	name = "arrivals ship 1 status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the Arrivals Shuttle."
+	name = "抵达穿梭机一号状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示抵达穿梭机的状态。"
 	status_id = "arrivals_01"
 
 /obj/structure/interactive/status_display/global_display/arrivals_02
-	name = "arrivals ship 2 status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the Arrivals Shuttle."
+	name = "抵达穿梭机二号状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示抵达穿梭机的状态。"
 	status_id = "arrivals_02"
 
 
 /obj/structure/interactive/status_display/global_display/cargo_inbound
-	name = "cargo inbound status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the Cargo Shuttle."
+	name = "货运到港状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示货运穿梭机的状态。"
 	status_id = "cargo_inbound"
 
 /obj/structure/interactive/status_display/global_display/cargo
-	name = "cargo status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the Inbound Cargo Shuttle."
+	name = "货运状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示驶入的货运穿梭机的状态。"
 	status_id = "cargo"
 
 /obj/structure/interactive/status_display/global_display/round
-	name = "mission status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of Nanotrasen's mission."
+	name = "任务状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示纳米传讯任务的状态。"
 	frame_color = "#E5C14B"
 	status_id = "mission"
 
 /obj/structure/interactive/status_display/global_display/lz420_elevator
-	name = "elevator status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the Elevator."
+	name = "升降机状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示升降机的状态。"
 	status_id = "lz420_elevator"
 
 /obj/structure/interactive/status_display/global_display/drop_pod
-	name = "drop pod status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the next drop pod cluster launch."
+	name = "空降舱状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示下一批空降舱的发射状态。"
 	frame_color = "#2E00AF"
 	status_id = "drop_pod"
 
 
 /obj/structure/interactive/status_display/global_display/alpha
-	name = "alpha shuttle status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the next shuttle launch for alpha."
+	name = "阿尔法穿梭机状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示阿尔法穿梭机的下次起飞状态。"
 	status_id = "alpha"
 
 /obj/structure/interactive/status_display/global_display/bravo
-	name = "bravo shuttle status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the next shuttle launch for bravo."
+	name = "布拉沃穿梭机状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示布拉沃穿梭机的下次起飞状态。"
 	status_id = "bravo"
 
 /obj/structure/interactive/status_display/global_display/charlie
-	name = "charlie shuttle status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the next shuttle launch for charlie."
+	name = "查理穿梭机状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示查理穿梭机的下次起飞状态。"
 	status_id = "charlie"
 
 /obj/structure/interactive/status_display/global_display/delta
-	name = "delta shuttle status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the next shuttle launch for delta."
+	name = "德尔塔穿梭机状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示德尔塔穿梭机的下次起飞状态。"
 	status_id = "delta"
 
 /obj/structure/interactive/status_display/global_display/debug
-	name = "debug shuttle status display"
-	desc = "ASS BLAST USA"
-	desc_extended = "Displays text, depending on what it's supposed to display. This one shows status of the next shuttle launch for a debug shuttle."
+	name = "调试穿梭机状态显示屏"
+	desc = "美国爆菊"
+	desc_extended = "根据设定显示文本。这块屏幕显示调试穿梭机的下次起飞状态。"
 	status_id = "debug"

@@ -1,5 +1,5 @@
 /obj/hud/inventory/organs/secure
-	name = "secure bluespace storage slot"
+	name = "安全蓝空间储物槽"
 	icon_state = "slot_secure"
 	id = "secure"
 	screen_loc = "LEFT+1:1,BOTTOM:12"
@@ -28,7 +28,7 @@
 	light_mod = 0
 
 /obj/hud/inventory/dynamic/secure
-	name = "secure space"
+	name = "安全储物格"
 	icon_state = "square_round"
 
 	max_size = SIZE_2
@@ -47,15 +47,15 @@
 
 	if(!bypass)
 		if(length(I.inventories) && I.size >= SIZE_2)
-			if(messages) owner.to_chat(span("warning","The secure storage does not allow the storage of large containers."))
+			if(messages) owner.to_chat(span("warning","安全储物空间不允许存放大型容器。"))
 			return FALSE
 
 		if(!I.can_save)
-			if(messages) owner.to_chat(span("warning","This type of object cannot be stored."))
+			if(messages) owner.to_chat(span("warning","无法存放这类物品。"))
 			return FALSE
 
 		if(I.contraband)
-			if(messages) owner.to_chat(span("warning","Contraband cannot be stored inside this."))
+			if(messages) owner.to_chat(span("warning","无法在此存放违禁品。"))
 			return FALSE
 
 	. = ..()
