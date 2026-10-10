@@ -1,7 +1,7 @@
 /obj/item/map/
-	name = "digital map"
-	desc = "Hmmm."
-	desc_extended = "A special electronic device that digitally shows a map of the current user's location."
+	name = "电子地图"
+	desc = "唔。"
+	desc_extended = "一种特殊电子设备，可以显示使用者当前位置的数字地图。"
 	icon = 'icons/obj/item/map.dmi'
 	icon_state = "inventory"
 	value = 100
@@ -12,10 +12,10 @@
 
 	if(M_control)
 		M_control.update_owner(null)
-		caller.to_chat(span("notice","You close the map."))
+		caller.to_chat(span("notice","你收起了地图。"))
 	else
 		M_control = new(caller)
 		M_control.update_owner(caller)
-		caller.to_chat(span("notice","You open the map."))
+		caller.to_chat(span("notice","你打开了地图。"))
 
 	return TRUE

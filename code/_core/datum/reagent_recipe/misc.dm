@@ -1,13 +1,13 @@
 /reagent_recipe/chemistry/
 	category = "Chemistry"
-	name = "chemistry recipe"
-	desc = "a chemistry recipe"
+	name = "化学配方"
+	desc = "一种化学配方。"
 	results = list()
 
 /reagent_recipe/chemistry/sodium_chloride
 
-	name = "Sodium Chloride"
-	desc = "no dude, that is iodized table salt, which in addition to sodium chloride, contains anti-caking agents and potassium iodide- Which is added to prevent iodide defficiency. So not only are you being overly pretentious by insisting on using scientific terminology for every day items, you are factually wrong. Your arrogance will be your downfall."
+	name = "氯化钠"
+	desc = "不，老兄，那是加碘食盐，除了氯化钠，还含有抗结剂和用来预防缺碘的碘化钾。所以你坚持用科学术语称呼日常用品，不只是装腔作势，而且事实也说错了。你的傲慢终将害了你。"
 
 	required_reagents = list(
 		/reagent/sodium = 1,
@@ -21,8 +21,8 @@
 
 /reagent_recipe/chemistry/ammonia
 
-	name = "Ammonia"
-	desc = "Ammonia from lifeforms."
+	name = "氨"
+	desc = "来自生物的氨。"
 
 	required_reagents = list(
 		/reagent/fuel/hydrogen = 3,
@@ -35,8 +35,8 @@
 
 /reagent_recipe/chemistry/sulfur_dioxide
 
-	name = "Sulfur Dioxide"
-	desc = "Toxic fumes from burning sulfur with coal."
+	name = "二氧化硫"
+	desc = "硫与煤一同燃烧产生的有毒烟气。"
 
 	required_reagents = list(
 		/reagent/sulfur = 1,
@@ -53,8 +53,8 @@
 
 /reagent_recipe/chemistry/space_cleaner
 
-	name = "Space Cleaner"
-	desc = "Cleaner in space."
+	name = "太空清洁剂"
+	desc = "太空里用的清洁剂。"
 
 	required_reagents = list(
 		/reagent/ammonia = 1,
@@ -67,8 +67,8 @@
 
 /reagent_recipe/chemistry/space_lube
 
-	name = "Space Lube"
-	desc = "If I get an AHELP where someone has released smoke grenades of this all over the station, I am going to code it out. -V"
+	name = "太空润滑剂"
+	desc = "要是有人向管理员求助，说谁把装了这玩意儿的烟雾弹扔得全站都是，我就把它从代码里删掉。——V"
 
 	required_reagents = list(
 		/reagent/fuel/oxygen = 1,
@@ -82,8 +82,8 @@
 
 /reagent_recipe/chemistry/acetone
 
-	name = "Acetone"
-	desc = "A colorless, corrosive flammable liquid used for solvents."
+	name = "丙酮"
+	desc = "一种用作溶剂的无色液体，具有腐蚀性且易燃。"
 
 	required_reagents = list(
 		/reagent/fuel/oil = 1,
@@ -98,8 +98,8 @@
 
 /reagent_recipe/chemistry/diethylamine
 
-	name = "Diethylamine"
-	desc = "A solvent of sorts."
+	name = "二乙胺"
+	desc = "某种溶剂。"
 
 	required_reagents = list(
 		/reagent/ammonia = 1,
@@ -112,8 +112,8 @@
 
 /reagent_recipe/chemistry/phenol
 
-	name = "Phenol"
-	desc = "A corrosive flammable solid used as a component in most recipes. Works as a good disinfectant."
+	name = "苯酚"
+	desc = "一种有腐蚀性、易燃的固体，是许多配方的原料，也是一种有效的消毒剂。"
 
 	required_reagents = list(
 		/reagent/fuel/oil = 1,
@@ -127,8 +127,8 @@
 
 /reagent_recipe/chemistry/saltpetre
 
-	name = "Saltpetre"
-	desc = "A mineral."
+	name = "硝石"
+	desc = "一种矿物。"
 
 	required_reagents = list(
 		/reagent/fuel/oxygen = 3,
@@ -143,8 +143,8 @@
 
 /reagent_recipe/chemistry/lye
 
-	name = "Lye"
-	desc = "The Never Song: WKYK."
+	name = "碱液"
+	desc = "WKYK的《绝不之歌》。"
 
 	required_reagents = list(
 		/reagent/sodium = 1,
@@ -159,8 +159,8 @@
 
 /reagent_recipe/chemistry/hydrogen_peroxide
 
-	name = "Hydrogen Peroxide"
-	desc = "an antiseptic."
+	name = "过氧化氢"
+	desc = "一种消毒剂。"
 
 	required_reagents = list(
 		/reagent/chlorine = 1,
@@ -175,8 +175,8 @@
 
 /reagent_recipe/chemistry/sugar_breakdown_01
 
-	name = "Sugar into Glucose"
-	desc = "turn sugar into glucose."
+	name = "糖转化为葡萄糖"
+	desc = "将糖转化为葡萄糖。"
 
 	required_reagents = list(
 		/reagent/nutrition/sugar = 1,
@@ -189,8 +189,8 @@
 
 /reagent_recipe/chemistry/sugar_breakdown_02
 
-	name = "Sugar into Glucose"
-	desc = "turn cane sugar into glucose."
+	name = "蔗糖转化为葡萄糖"
+	desc = "将蔗糖转化为葡萄糖。"
 
 	required_reagents = list(
 		/reagent/nutrition/sugar/cane = 1,

@@ -1,7 +1,7 @@
 /obj/item/light_sensor
-	name = "ambient light sensor"
-	desc = "Let there be light."
-	desc_extended = "A special passive light sensor that detects ambient light levels."
+	name = "环境光线传感器"
+	desc = "要有光。"
+	desc_extended = "一种特殊的被动光线传感器，用于探测环境光照强度。"
 
 	icon = 'icons/obj/item/analyzers/light.dmi'
 	icon_state = "inventory"
@@ -29,7 +29,7 @@
 
 	active = !active
 
-	activator.to_chat(span("notice","You turn \the [src.name] [active ? "on" : "off"]."))
+	activator.to_chat(span("notice","你[active ? "打开" : "关闭"]了[src.name]。"))
 
 	play_sound('sound/machines/click.ogg',get_turf(src),range_max=VIEW_RANGE*0.25)
 

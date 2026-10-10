@@ -1,14 +1,14 @@
 /obj/item/paper/
-	name = "Paper"
-	desc = "Paper!"
-	desc_extended = "Historically used to write things on."
+	name = "纸张"
+	desc = "纸！"
+	desc_extended = "自古以来，人们就用它来写东西。"
 
 	icon = 'icons/obj/item/paper.dmi'
 	icon_state = "normal"
 
 	var/last_page = 1
 
-	var/list/data = list("There is nothing here.","Also nothing here.")
+	var/list/data = list("这里什么也没有。","这里也什么都没有。")
 
 	value = 1
 

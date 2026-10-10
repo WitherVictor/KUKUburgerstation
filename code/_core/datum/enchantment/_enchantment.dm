@@ -1,7 +1,8 @@
 /enchantment/
-	var/name = "Enchantment Name"
-	var/desc = "Enchantment Description"
+	var/name = "附魔名称"
+	var/desc = "附魔说明"
 	var/enchanting_phrase = "Memes"
+	var/enchanting_phrase_meaning = "梗。"
 	var/max_charge = 0
 	var/charge = 0
 	var/cost = 100

@@ -1,7 +1,7 @@
 /obj/item/soulgem
-	name = "bluespace gem"
-	desc = "Holds the souls of lesser beings. Not to be confused with bluespace crystals."
-	desc_extended = "Used in enchanting items or refilling the magic of staves."
+	name = "蓝空间宝石"
+	desc = "容纳低等生物的灵魂。别和蓝空间水晶搞混了。"
+	desc_extended = "用于物品附魔，或为法杖补充魔力。"
 	icon = 'icons/obj/item/soulgem.dmi'
 	icon_state = "common"
 
@@ -55,13 +55,13 @@
 
 /obj/item/soulgem/get_examine_list(var/mob/activator)
 	. = ..()
-	. += span("notice","It has a soul worth [total_charge] total charge.")
+	. += span("notice","其中的灵魂共提供[total_charge]点能量。")
 	if(total_charge)
 		if(stored_soul_path)
-			. += span("notice","Throwing this will [do_not_consume ? "" : "shatter the gem and "]release \a [initial(stored_soul_path.name)] under your control.")
-			. += span("notice","Souls can be recaptured using soul gems, with no penalty.")
+			. += span("notice","投掷它会[do_not_consume ? "" : "使宝石碎裂，并"]释放出受你控制的[initial(stored_soul_path.name)]。")
+			. += span("notice","可以用灵魂宝石重新捕获灵魂，不会受到惩罚。")
 		else
-			. += span("warning","While it is charged, it does not have a complete soul inside, and will not release a minion when thrown.")
+			. += span("warning","虽然它有能量，但里面没有完整灵魂，投掷后不会释放仆从。")
 
 /obj/item/soulgem/on_thrown(var/atom/owner,var/atom/hit_atom) //What happens after the soulgem is thrown and it hits an object.
 
@@ -83,13 +83,13 @@
 			if(master.ckey)
 				master.add_skill_xp(SKILL_SUMMONING,CEILING(mob_to_spawn.soul_size*0.02,1))
 			if(do_not_consume)
-				mob_to_spawn.visible_message(span("notice","\The [src.name] vanishes, releasing [mob_to_spawn.name]!"))
+				mob_to_spawn.visible_message(span("notice","[src.name]隐去身形，释放出了[mob_to_spawn.name]！"))
 				if(is_advanced(master))
 					var/mob/living/advanced/A = master
 					src.quick_equip(A,ignore_worn=TRUE,ignore_dynamic=TRUE,silent=TRUE)
 				update_sprite()
 			else
-				mob_to_spawn.visible_message(span("notice","\The [src.name] shatters, releasing [mob_to_spawn.name]!"))
+				mob_to_spawn.visible_message(span("notice","[src.name]碎裂，释放出了[mob_to_spawn.name]！"))
 				qdel(src)
 
 
@@ -99,46 +99,46 @@
 	name = initial(name)
 	icon = initial(icon)
 	if(do_not_consume)
-		name = "unbreaking [name]"
+		name = "不碎[name]"
 		icon_state = "azuras"
 		rarity = RARITY_LEGENDARY
 	else
 		switch(total_capacity)
 			if(0 to SOUL_SIZE_COMMON)
-				name = "common [name]"
+				name = "普通[name]"
 				icon_state = "common"
 				rarity = RARITY_COMMON
 			if(SOUL_SIZE_COMMON to SOUL_SIZE_UNCOMMON)
-				name = "uncommon [name]"
+				name = "少见[name]"
 				icon_state = "uncommon"
 				rarity = RARITY_UNCOMMON
 			if(SOUL_SIZE_UNCOMMON to SOUL_SIZE_RARE)
-				name = "rare [name]"
+				name = "稀有[name]"
 				icon_state = "rare"
 				rarity = RARITY_RARE
 			if(SOUL_SIZE_RARE to SOUL_SIZE_MYSTIC)
-				name = "mystic [name]"
+				name = "神秘[name]"
 				icon_state = "mystic"
 				rarity = RARITY_MYTHICAL
 			if(SOUL_SIZE_MYSTIC to INFINITY)
-				name = "godly [name]"
+				name = "神级[name]"
 				icon_state = "godly"
 				rarity = RARITY_LEGENDARY
 	if(total_charge > 0)
 		switch(total_charge)
 			if(0 to SOUL_SIZE_COMMON)
-				name = "[name] (common)"
+				name = "[name]（普通灵魂）"
 			if(SOUL_SIZE_COMMON to SOUL_SIZE_UNCOMMON)
-				name = "[name] (uncommon)"
+				name = "[name]（少见灵魂）"
 			if(SOUL_SIZE_UNCOMMON to SOUL_SIZE_RARE)
-				name = "[name] (rare)"
+				name = "[name]（稀有灵魂）"
 			if(SOUL_SIZE_RARE to SOUL_SIZE_MYSTIC)
-				name = "[name] (mystic)"
+				name = "[name]（神秘灵魂）"
 			if(SOUL_SIZE_MYSTIC to INFINITY)
-				name = "[name] (godly)"
+				name = "[name]（神级灵魂）"
 		icon_state = "[icon_state]_1"
 	else
-		name = "[name] (empty)"
+		name = "[name]（空）"
 
 
 
@@ -157,10 +157,10 @@
 		if(L.qdeleting)
 			return TRUE
 		if(total_charge != 0)
-			activator.to_chat(span("warning","You need an empty soul gem in order to capture souls!"))
+			activator.to_chat(span("warning","捕获灵魂需要空的灵魂宝石！"))
 			return TRUE
 		if(initial(L.soul_size) > src.total_capacity)
-			activator.to_chat(span("warning","This soul is too large to be contained in \the [src.name]!"))
+			activator.to_chat(span("warning","这个灵魂太强大，[src.name]容纳不下！"))
 			return TRUE
 		total_charge = min(L.soul_size,total_capacity)
 		stored_soul_path = L.type
@@ -177,7 +177,7 @@
 		INTERACT_DELAY(1)
 
 		if(total_charge != 0)
-			activator.to_chat(span("warning","You need an empty soul gem in order to capture souls!"))
+			activator.to_chat(span("warning","捕获灵魂需要空的灵魂宝石！"))
 			return TRUE
 
 		var/obj/effect/temp/soul/S = object
@@ -185,11 +185,11 @@
 			return TRUE
 
 		if(S.soul_size > src.total_capacity)
-			activator.to_chat(span("warning","This soul is too large to be contained in \the [src.name]!"))
+			activator.to_chat(span("warning","这个灵魂太强大，[src.name]容纳不下！"))
 			return TRUE
 
 		total_charge = min(S.soul_size,total_capacity)
-		activator.visible_message(span("danger","\The [activator.name] traps \the [S.name] with \the [src.name]!"),span("warning","You trap \the [S.name] with \the [src.name]!"))
+		activator.visible_message(span("danger","[activator.name]用[src.name]捕获了[S.name]！"),span("warning","你用[src.name]捕获了[S.name]！"))
 		if(is_living(activator))
 			var/mob/living/L = activator
 			L.add_skill_xp(SKILL_SUMMONING,CEILING(S.soul_size*0.01,1))
@@ -208,19 +208,19 @@
 
 		var/obj/item/weapon/ranged/magic/staff/S = object
 		if(total_charge)
-			activator.visible_message(span("notice","\The [activator.name] recharges \the [S.name] with \the [src.name]."),span("notice","You charge \the [S] with \the [src]."))
+			activator.visible_message(span("notice","[activator.name]用[src.name]为[S.name]补充了魔力。"),span("notice","你用[src]为[S]补充了魔力。"))
 			S.total_charge += total_charge
 			total_charge -= total_charge
 			if(soul_gives_xp && is_living(activator))
 				var/mob/living/L = activator
 				L.add_skill_xp(SKILL_SUMMONING,CEILING(total_charge*0.0025,1))
 			if(!do_not_consume && total_charge <= 0)
-				activator.to_chat(span("warning","\The [src] shatters!"))
+				activator.to_chat(span("warning","[src]碎裂了！"))
 				qdel(src)
 			else
 				stored_soul_path = null
 		else
-			activator.to_chat(span("warning","\The [src] is empty!"))
+			activator.to_chat(span("warning","[src]已经没有能量了！"))
 		update_sprite()
 
 		return TRUE

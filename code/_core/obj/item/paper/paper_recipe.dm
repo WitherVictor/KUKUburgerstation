@@ -1,7 +1,7 @@
 /obj/item/paper/recipe
-	name = "Recipe for disaster"
-	desc = "A used piece of paper"
-	desc_extended = "A recipe for something, obscured by time."
+	name = "灾难配方"
+	desc = "一张用过的纸。"
+	desc_extended = "某种东西的配方，字迹已随着时间而模糊。"
 	data = list()
 /obj/item/paper/recipe/Generate()
 	. = ..()
@@ -66,41 +66,43 @@
 						c2 = recipe_item_name
 					if(9)
 						c3 = recipe_item_name
-			data += list("Top: [a1],[a2],[a3].\n\n","Middle: [b1],[b2],[b3].\n\n","Bottom: [c1],[c2],[c3].\n\n")
+			data += list("上排：[a1]、[a2]、[a3]。\n\n","中排：[b1]、[b2]、[b3]。\n\n","下排：[c1]、[c2]、[c3]。\n\n")
 		if(stored_recipe.required_items.len >= 1)
 			for(var/any_item in stored_recipe.required_items)
 				var/obj/item/item_path = text2path_safe(any_item)
 				var/item_name = initial(item_path.name)
-				data += list("Anywhere: [item_name] x [stored_recipe.required_items[any_item]]\n\n")
+				data += list("任意位置：[item_name] × [stored_recipe.required_items[any_item]]\n\n")
 		if(stored_recipe.required_item_grid_amount.len >= 1)
 			for(var/unconsumed in stored_recipe.required_item_grid_amount)
 				var/obj/item/item_path = text2path_safe(unconsumed)
 				var/item_name = initial(item_path.name)
 				if(stored_recipe.required_item_grid_amount[unconsumed] >=1)
-					data += list("Amount: [item_name] -> [stored_recipe.required_item_grid_amount[unconsumed]]\n\n")
+					data += list("数量：[item_name] → [stored_recipe.required_item_grid_amount[unconsumed]]\n\n")
 				else
-					data += list("Unconsumed: [item_name]")
+					data += list("不消耗：[item_name]")
 		if(stored_recipe.reagents_to_add.len >= 1)
 			for(var/reagent_path in stored_recipe.reagents_to_add)
 				var/reagent/reagent = text2path_safe(reagent_path)
-				data += list("Product reagent: [initial(reagent.name)] x [stored_recipe.reagents_to_add[reagent_path]]\n\n")
+				data += list("产出试剂：[initial(reagent.name)] × [stored_recipe.reagents_to_add[reagent_path]]\n\n")
 		if(length(stored_recipe.product) == 1)
 			var/product_path = stored_recipe.product[1]
 			var/product_name = initial(text2path_safe(product_path).name)
 			var/product_chance = stored_recipe.product[product_path]
-			name = "Recipe for [product_name]"
-			desc = "Some sort of recipe?"
-			desc_extended = "Looks like a recipe for \a [product_name],whatever that is.Made in the [deunderscore(stored_recipe.recipe_type)], it makes [stored_recipe.amount[1]] at a [product_chance]% chance."
+			name = "[product_name]配方"
+			desc = "似乎是某种配方？"
+			var/list/recipe_type_labels = list("alchemy" = "炼金台", "bullet_press" = "弹药压制机", "filter" = "过滤器", "smelter" = "熔炉", "workbench" = "工作台")
+			var/recipe_type_label = recipe_type_labels[stored_recipe.recipe_type] ? recipe_type_labels[stored_recipe.recipe_type] : deunderscore(stored_recipe.recipe_type)
+			desc_extended = "看起来是制作[product_name]的配方，虽然不知道那是什么。在[recipe_type_label]中制作，有[product_chance]%的概率产出[stored_recipe.amount[1]]个。"
 		else
 			for(var/i = 1,i <= length(stored_recipe.product),i++)
 				var/product_path = stored_recipe.product[i]
 				var/product_name = initial(text2path_safe(product_path).name)
 				var/product_chance = stored_recipe.product[product_path]
-				name = "Recipe for Many"
-				desc = "Thats a lot of items."
-				desc_extended += "It looks like it makes [product_name], at a [product_chance]% chance. Makes [stored_recipe.amount[i]]."
+				name = "多种物品配方"
+				desc = "能做出来的东西还真不少。"
+				desc_extended += "看起来有[product_chance]%的概率产出[stored_recipe.amount[i]]个[product_name]。"
 	else
-		data = list("Its just scribbles and garbled text.")
+		data = list("上面只有涂鸦和无法辨认的字迹。")
 
 /obj/item/paper/recipe/save_item_data(mob/living/advanced/player/P, save_inventory, died)
 	//This has a special description, we need to save it!

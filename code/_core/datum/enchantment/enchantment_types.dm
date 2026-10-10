@@ -1,7 +1,8 @@
 /enchantment/fire
-	name = "Blaze"
-	desc = "Sets targets on fire."
+	name = "烈焰"
+	desc = "点燃目标。"
 	enchanting_phrase = "Woah Momma, Thats a spicy meatball!"
+	enchanting_phrase_meaning = "我的妈呀，这肉丸真辣！"
 	cost = 75
 
 /enchantment/fire/on_hit(var/atom/attacker,var/atom/victim,var/obj/item/weapon/weapon,var/atom/hit_object,var/atom/blamed,var/total_damage_dealt=0)
@@ -12,9 +13,10 @@
 
 
 /enchantment/stagger
-	name = "Stagger"
-	desc = "Has a chance to stagger opponents."
+	name = "硬直"
+	desc = "有概率使对手陷入硬直。"
 	enchanting_phrase = "Oh fuck I slipped! Fucking nerf soap!"
+	enchanting_phrase_meaning = "操，我滑倒了！快他妈削弱肥皂！"
 	cost = 100
 
 /enchantment/stagger/on_hit(var/atom/attacker,var/atom/victim,var/obj/item/weapon/weapon,var/atom/hit_object,var/atom/blamed,var/total_damage_dealt=0)
@@ -25,9 +27,10 @@
 
 
 /enchantment/stun
-	name = "Stun"
-	desc = "Has a chance to stun opponents."
+	name = "眩晕"
+	desc = "有概率使对手眩晕。"
 	enchanting_phrase = "Fucking stunlockers are fucking noobs, Im tired of this shit!"
+	enchanting_phrase_meaning = "只会连晕人的都是他妈的菜鸟，老子受够了！"
 	cost = 200
 
 /enchantment/stun/on_hit(var/atom/attacker,var/atom/victim,var/obj/item/weapon/weapon,var/atom/hit_object,var/atom/blamed,var/total_damage_dealt=0)
@@ -38,9 +41,10 @@
 
 
 /enchantment/disarm
-	name = "Disarm"
-	desc = "Has a chance to disarm opponents."
+	name = "缴械"
+	desc = "有概率使对手被缴械。"
 	enchanting_phrase = "Why are my fucking hands made of butter?"
+	enchanting_phrase_meaning = "老子的手怎么他妈跟抹了黄油似的？"
 	cost = 150
 
 /enchantment/disarm/on_hit(var/atom/attacker,var/atom/victim,var/obj/item/weapon/weapon,var/atom/hit_object,var/atom/blamed,var/total_damage_dealt=0)
@@ -50,9 +54,10 @@
 	return ..()
 
 /enchantment/blood_leech
-	name = "Blood Leech"
-	desc = "Restores blood relative to damage dealt. Only works on living targets."
+	name = "吸血"
+	desc = "根据造成的伤害恢复血量。仅对活着的目标有效。"
 	enchanting_phrase = "Blood for the blood god!"
+	enchanting_phrase_meaning = "血祭血神！"
 	cost = 125
 
 /enchantment/blood_leech/on_hit(var/atom/attacker,var/atom/victim,var/obj/item/weapon/weapon,var/atom/hit_object,var/atom/blamed,var/total_damage_dealt=0)
@@ -68,9 +73,10 @@
 	return ..()
 
 /enchantment/soul_trap
-	name = "Soul Trap"
-	desc = "Traps the soul of most living beings."
+	name = "灵魂捕获"
+	desc = "捕获大多数生物的灵魂。"
 	enchanting_phrase = "Gingers have souls!"
+	enchanting_phrase_meaning = "红头发的人也有灵魂！"
 	cost = 50
 
 /enchantment/soul_trap/on_hit(var/atom/attacker,var/atom/victim,var/obj/item/weapon/weapon,var/atom/hit_object,var/atom/blamed,var/total_damage_dealt=0)

@@ -1,7 +1,7 @@
 /obj/item/paper/book/enchanting
-	name = "enchanting book"
-	desc = "No experience required!"
-	desc_extended = "A magical book of enchanting that has the power to enchant weapons with special effects."
+	name = "附魔书"
+	desc = "无需经验！"
+	desc_extended = "一本有魔力的附魔书，可以为武器附加特殊效果。"
 	icon = 'icons/obj/item/enchanting/books.dmi'
 	icon_state = "normal"
 
@@ -21,12 +21,13 @@
 
 	if(stored_enchantment)
 		enchanting_phrase = initial(stored_enchantment.enchanting_phrase)
-		name = "[initial(name)]: [initial(stored_enchantment.name)]"
+		name = "[initial(name)]：[initial(stored_enchantment.name)]"
 
 	var/language/L = SSlanguage.all_languages[LANGUAGE_LIZARD]
 	var/enchanting_phrase_language = L.process_text(null,enchanting_phrase)
 
-	data += "*[enchanting_phrase_language]*"
+	var/phrase_meaning = stored_enchantment ? initial(stored_enchantment.enchanting_phrase_meaning) : "梗。"
+	data += "## 咒语\n\n*[enchanting_phrase_language]*\n\n含义：[phrase_meaning]\n\n施法时请完整念出上面的咒语。"
 
 	return ..()
 

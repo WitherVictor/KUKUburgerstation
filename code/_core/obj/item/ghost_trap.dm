@@ -1,7 +1,7 @@
 /obj/item/ghost_box
-	name = "ghost box"
-	desc = "No infringement intended."
-	desc_extended = "A specialized box that traps hunting ghosts that \"walk\" over them, when active."
+	name = "捕鬼盒"
+	desc = "无意侵权。"
+	desc_extended = "一种特殊盒子，启动后可以困住从上方“走过”的猎杀幽灵。"
 
 	icon = 'icons/obj/item/ghost_trap.dmi'
 
@@ -55,12 +55,12 @@
 	INTERACT_DELAY(1)
 
 	if(stored_ghost)
-		activator.to_chat(span("warning","\The [src.name] is locked!"))
+		activator.to_chat(span("warning","[src.name]锁住了！"))
 	else if(active)
-		activator.to_chat(span("notice","You turn off \the [src.name]."))
+		activator.to_chat(span("notice","你关闭了[src.name]。"))
 		active = FALSE
 	else
-		activator.to_chat(span("notice","You turn on \the [src.name]."))
+		activator.to_chat(span("notice","你启动了[src.name]。"))
 		active = TRUE
 
 	update_sprite()

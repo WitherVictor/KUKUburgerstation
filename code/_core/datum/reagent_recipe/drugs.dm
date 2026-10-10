@@ -4,8 +4,8 @@
 
 /reagent_recipe/drugs/space_drugs
 
-	name = "Space Drugs"
-	desc = "bro... space drugs."
+	name = "太空迷幻药"
+	desc = "老兄……太空迷幻药。"
 
 	required_reagents = list(
 		/reagent/drug/lithium = 1,
@@ -20,8 +20,8 @@
 
 /reagent_recipe/drugs/space_dust
 
-	name = "Space Dust"
-	desc = "like space drugs, but more expensive."
+	name = "太空粉尘"
+	desc = "类似太空迷幻药，不过更贵。"
 
 	required_reagents = list(
 		/reagent/fuel/acetone = 1,

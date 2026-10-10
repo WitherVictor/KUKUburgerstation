@@ -1,7 +1,7 @@
 /obj/item/consumable/soulgem
-	name = "bluespace gem"
-	desc = "Holds the souls of lesser beings. Not to be confused with bluespace crystals."
-	desc_extended = "Used in enchanting items or refilling the magic of staves."
+	name = "蓝空间宝石"
+	desc = "容纳低等生物的灵魂。别和蓝空间水晶搞混了。"
+	desc_extended = "用于物品附魔，或为法杖补充魔力。"
 	icon = 'icons/obj/items/soulgem.dmi'
 	icon_state = "common"
 
@@ -12,7 +12,7 @@
 	total_charge = 1000
 
 /obj/item/consumable/soulgem/get_examine_text(var/mob/caller)
-	return ..() + span("notice","It has [total_charge] total charge.")
+	return ..() + span("notice","当前共有[total_charge]点能量。")
 
 /obj/item/consumable/soulgem/update_icon()
 	if(total_charge)
@@ -28,11 +28,11 @@
 	if(is_staff(object))
 		var/obj/item/weapon/ranged/magic/staff/S = object
 		if(total_charge)
-			caller.to_chat(span("notice","You refill \the [S] with \the [src]."))
+			caller.to_chat(span("notice","你用[src]为[S]补充了魔力。"))
 			S.total_charge += total_charge
 			total_charge = 0
 		else
-			caller.to_chat(span("notice","\The [src] is empty!"))
+			caller.to_chat(span("notice","[src]已经没有能量了！"))
 		update_icon()
 
 		return TRUE

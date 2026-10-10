@@ -1,18 +1,18 @@
 /obj/item/paper/book/firearms/
-	name = "Manual: A Guide to Firearms"
-	desc = "Use more gun."
+	name = "手册：枪械指南"
+	desc = "火力还不够。"
 	icon_state = "bookSpaceLaw"
-	desc_extended = "A guide on how to use and mantain modern firearms."
+	desc_extended = "介绍现代枪械使用与保养方法的指南。"
 
 /obj/item/paper/book/firearms/Initialize()
 	. = ..()
 	data = SSpaper.all_paper_data["a guide to firearms"].Copy()
 
 /obj/item/paper/book/cooking/
-	name = "Manual: A Guide to Cooking"
-	desc = "she cookk me"
+	name = "手册：烹饪指南"
+	desc = "她把我给煮了。"
 	icon_state = "cooked_book"
-	desc_extended = "A guide on how to cook, and hopefully not burn the kitchen down or summoning demons."
+	desc_extended = "教你如何烹饪的指南，希望不会让你烧掉厨房或召唤出恶魔。"
 
 /obj/item/paper/book/cooking/Initialize()
 	. = ..()
@@ -20,40 +20,40 @@
 
 
 /obj/item/paper/book/fishing/
-	name = "Manual: A Guide to Fishing"
-	desc = "how to enjoy life"
+	name = "手册：钓鱼指南"
+	desc = "享受生活的方法。"
 	icon_state = "hydrobucket"
-	desc_extended = "A guide on how to fish. Gnarly!"
+	desc_extended = "教你钓鱼的指南。酷毙了！"
 
 /obj/item/paper/book/fishing/Initialize()
 	. = ..()
 	data = SSpaper.all_paper_data["a guide to fishing"].Copy()
 
 /obj/item/paper/book/ghost/
-	name = "Manual: Ghosthunting Manual"
-	desc = "How not to die to ghosts."
+	name = "手册：捉鬼指南"
+	desc = "如何避免死在幽灵手里。"
 	icon_state = "bookDetective"
-	desc_extended = "A reference guide on how to successfully ghosthunt."
+	desc_extended = "指导你成功捉鬼的参考手册。"
 
 /obj/item/paper/book/ghost/Initialize()
 	. = ..()
 	data = SSpaper.all_paper_data["ghosthunting guide"].Copy()
 
 /obj/item/paper/book/controls/
-	name = "Manual: A Guide to Controlling Yourself"
-	desc = "How do i switch hands"
+	name = "手册：控制自己指南"
+	desc = "我该怎么换手？"
 	icon_state = "book2"
-	desc_extended = "A guide on how to master self-control. Quite literally shows you the basic Burgerstation controls when used in your hands."
+	desc_extended = "教你掌握自我控制的指南。这里的控制就是字面意思：拿在手中使用，即可查看汉堡站的基本操作。"
 
 /obj/item/paper/book/controls/Initialize()
 	. = ..()
 	data = SSpaper.all_paper_data["a guide to controlling yourself"].Copy()
 
 /obj/item/paper/book/enchanting_guide
-	name = "Manual: A Guide to Enchanting"
-	desc = "Don't ERP."
+	name = "手册：附魔指南"
+	desc = "别搞色情角色扮演。"
 	icon_state = "tome_old"
-	desc_extended = "A guide on how to master the art of enchanting."
+	desc_extended = "教你掌握附魔技艺的指南。"
 
 
 /obj/item/paper/book/enchanting_guide/Initialize()
@@ -61,10 +61,10 @@
 	data = SSpaper.all_paper_data["a guide to enchanting"].Copy()
 
 /obj/item/paper/book/crafting_guide/
-	name = "Manual: How to Create"
-	desc = "Whats this about a 'Mince-raft'?"
+	name = "手册：制作指南"
+	desc = "这跟什么《肉末世界》有啥关系？"
 	icon_state = "bookCrafting"
-	desc_extended = "A reference for crafting recipes."
+	desc_extended = "收录制作配方的参考手册。"
 
 /obj/item/paper/book/crafting_guide/Initialize()
 	. = ..()

@@ -91,12 +91,12 @@ SUBSYSTEM_DEF(reagent)
 			var/temperature_max = length(RR.required_temperature_max) ? RR.required_temperature_max[r_id] : null
 			recipe_text += "- [amount]u [R.name]"
 			if(temperature_min)
-				recipe_text += ", at least [temperature_min]k"
+				recipe_text += "，温度至少为[temperature_min] K"
 			if(temperature_max)
-				recipe_text += ", at most [temperature_max]k"
+				recipe_text += "，温度不超过[temperature_max] K"
 			recipe_text += "\n"
 
-		var/result_text = "Makes:\n\n"
+		var/result_text = "产物：\n\n"
 
 		var/atom/A = RR.result
 		if(A && !length(RR.results))

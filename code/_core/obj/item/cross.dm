@@ -1,7 +1,7 @@
 /obj/item/cross
-	name = "wooden cross"
-	desc = "SPIRITS BE GONE."
-	desc_extended = "A special wooden cross that prevents ghosts from hunting once, as well as block any unholy things."
+	name = "木制十字架"
+	desc = "恶灵退散。"
+	desc_extended = "一种特殊的木制十字架，可以阻止一次幽灵猎杀，也能阻挡邪秽之物。"
 	icon = 'icons/obj/item/cross.dmi'
 	icon_state = "inventory"
 

@@ -1,12 +1,12 @@
 /reagent_recipe/drink
-    name = "Drink recipe"
-    desc = "a recipe for a drink"
+    name = "饮料配方"
+    desc = "一种饮料的配方。"
     category = "drinks"
     results = list()
 
 /reagent_recipe/drink/hearty_punch
-    name = "Hearty Punch"
-    desc = "stoic players rejoice"
+    name = "暖心潘趣酒"
+    desc = "坚忍的玩家有福了。"
     category = "drinks"
 
     required_reagents = list(

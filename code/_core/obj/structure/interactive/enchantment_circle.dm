@@ -1,5 +1,5 @@
 /obj/structure/interactive/enchantment_circle
-	name = "circle of enchanting"
+	name = "附魔法阵"
 	icon = 'icons/obj/decal/enchanting_circle.dmi'
 	icon_state = "0"
 
@@ -43,7 +43,7 @@
 	stored_items += I
 	HOOK_ADD("post_move","enchantment_sanity_\ref[src]",I,src,src::unstore_item())
 	if(active)
-		I.visible_message(span("notice","\The [I.name] glows faintly..."))
+		I.visible_message(span("notice","[I.name]发出微光……"))
 	return TRUE
 
 /obj/structure/interactive/enchantment_circle/proc/unstore_item(var/obj/item/I)
@@ -53,7 +53,7 @@
 	HOOK_REMOVE("post_move","enchantment_sanity_\ref[src]",I)
 	if(active)
 		src.set_active(FALSE)
-		I.visible_message(span("warning","\The [I.name] stops glowing..."))
+		I.visible_message(span("warning","[I.name]不再发光……"))
 	return TRUE
 
 /obj/structure/interactive/enchantment_circle/proc/set_active(var/desired_active=TRUE)
@@ -71,11 +71,11 @@
 			return FALSE
 		for(var/k in found_contents)
 			store_item(k)
-		src.visible_message(span("notice","\The [src.name] brightens up and indicates it's ready for enchanting..."))
+		src.visible_message(span("notice","[src.name]亮了起来，似乎已准备好进行附魔……"))
 	else
 		for(var/k in stored_items)
 			unstore_item(k)
-		src.visible_message(span("warning","\The [src.name] quietly fades..."))
+		src.visible_message(span("warning","[src.name]悄然暗淡下来……"))
 
 	update_sprite()
 
@@ -93,7 +93,7 @@
 
 	set_active(!active)
 
-	activator.visible_message(span("notice","\The [activator.name] [active ? "activates" : "deactivates"] \the [src.name]."))
+	activator.visible_message(span("notice","[activator.name][active ? "启动" : "关闭"]了[src.name]。"))
 
 	return TRUE
 
@@ -122,14 +122,14 @@
 
 
 	if(!soulgem || !soulgem.total_charge || !weapon_to_enchant || weapon_to_enchant.enchantment || !stored_book.stored_enchantment)
-		activator.visible_message(span("warning","\The [src.name] reacts to [activator.name]'s words... but slowly fizzles out."),span("warning","\The [src.name] reacts to your words... but slowly fizzles out."))
+		activator.visible_message(span("warning","[src.name]对[activator.name]的咒语作出了反应……却渐渐熄灭了。"),span("warning","[src.name]对你的咒语作出了反应……却渐渐熄灭了。"))
 		return FALSE
 
-	activator.visible_message(span("danger","\The [src.name] reacts to [activator.name]'s words!"),span("warning","\The [src.name] reacts to your words!"))
+	activator.visible_message(span("danger","[src.name]对[activator.name]的咒语作出了反应！"),span("warning","[src.name]对你的咒语作出了反应！"))
 
 	weapon_to_enchant.enchantment = new stored_book.stored_enchantment
 	var/experience_to_give = weapon_to_enchant.enchantment.generate_stats(activator,weapon_to_enchant,soulgem)
-	weapon_to_enchant.visible_message(span("notice","\The [weapon_to_enchant.name] shines brightly as it's new enchantment is applied."))
+	weapon_to_enchant.visible_message(span("notice","[weapon_to_enchant.name]随着新附魔的生效，绽放出耀眼的光芒。"))
 	activator.add_skill_xp(SKILL_SUMMONING,experience_to_give)
 	if(soulgem.do_not_consume)
 		soulgem.total_charge = 0

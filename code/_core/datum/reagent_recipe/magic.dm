@@ -4,8 +4,8 @@
 
 /reagent_recipe/magic/health_potion
 
-	name = "Healing Juice"
-	desc = "heals over time."
+	name = "治疗药水"
+	desc = "持续恢复生命值。"
 
 	required_reagents = list(
 		/reagent/blood/ancient = 1,
@@ -21,8 +21,8 @@
 
 /reagent_recipe/magic/stamina_potion
 
-	name = "Stamina Juice"
-	desc = "restores stamina over time."
+	name = "体力药水"
+	desc = "持续恢复体力。"
 
 	required_reagents = list(
 		/reagent/blood/xeno = 1,
@@ -37,8 +37,8 @@
 
 /reagent_recipe/magic/mana_potion
 
-	name = "Mana Juice"
-	desc = "restores mana over time."
+	name = "法力药水"
+	desc = "持续恢复法力。"
 
 	required_reagents = list(
 		/reagent/blood/goliath = 1,

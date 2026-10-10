@@ -8,8 +8,8 @@
 
 /reagent_recipe/medicine/inaprovaline
 
-	name = "Inaprovaline"
-	desc = "a common stabilizer synthesised from basic elements and compounds. Only works when injected. Has a high overdose threshold. Provides the UNDYING effect."
+	name = "伊纳普罗林"
+	desc = "由基础元素与化合物合成的常见生命体征稳定剂。仅注射有效，过量阈值较高。提供不死效果。"
 
 	required_reagents = list(
 		/reagent/carbon = 1,
@@ -23,8 +23,8 @@
 
 /reagent_recipe/medicine/bicaridine
 
-	name = "Bicaridine"
-	desc = "Red for brute."
+	name = "比卡利定"
+	desc = "红色治物理伤害。"
 
 	required_reagents = list(
 		/reagent/carbon = 1,
@@ -37,8 +37,8 @@
 
 /reagent_recipe/medicine/dylovene
 
-	name = "Dylovene"
-	desc = "Green for toxin."
+	name = "地洛文"
+	desc = "绿色治毒素伤害。"
 
 	required_reagents = list(
 		/reagent/nitrogen = 1,
@@ -52,8 +52,8 @@
 
 /reagent_recipe/medicine/tricordrazine
 
-	name = "Tricordrazine"
-	desc = "Heals everything except for oxygen loss."
+	name = "三科达嗪"
+	desc = "治疗除缺氧以外的各种伤害。"
 
 	required_reagents = list(
 		/reagent/medicine/inaprovaline = 1,
@@ -67,8 +67,8 @@
 
 /reagent_recipe/medicine/synthflesh
 
-	name = "Synthflesh"
-	desc = "Experimental synthetic flesh. Significantly heals brute and burn damage of the affected limb instantly. Warning: Do not use on open cuts."
+	name = "合成血肉"
+	desc = "实验性合成血肉，能立即大幅治疗作用肢体的物理与灼烧伤害。警告：不要用于开放性伤口。"
 
 	required_reagents = list(
 		/reagent/medicine/bicaridine = 1,
@@ -82,8 +82,8 @@
 
 /reagent_recipe/medicine/dexalin
 
-	name = "Dexalin"
-	desc = "Blue for oxy."
+	name = "右旋林"
+	desc = "蓝色治缺氧。"
 
 	required_reagents = list(
 		/reagent/fuel/acetone = 1,
@@ -97,8 +97,8 @@
 
 /reagent_recipe/medicine/kelotane
 
-	name = "Kelotane"
-	desc = "Yellow for burn."
+	name = "克罗烷"
+	desc = "黄色治灼烧伤害。"
 
 	required_reagents = list(
 		/reagent/carbon = 1,
@@ -111,8 +111,8 @@
 
 /reagent_recipe/medicine/charcoal
 
-	name = "Charcoal"
-	desc = "Purges poisons from the system while healing a slight amount of toxins. Works just as well when consumed."
+	name = "活性炭"
+	desc = "清除体内毒物，并治疗少量毒素伤害。口服同样有效。"
 
 	required_reagents = list(
 		/reagent/ash = 1,
@@ -131,8 +131,8 @@
 
 /reagent_recipe/medicine/silver_sulfadiazine
 
-	name = "Silver Sulfadiazine"
-	desc = "Heals burn damage. Only works when applied to skin."
+	name = "磺胺嘧啶银"
+	desc = "治疗灼烧伤害。仅涂抹皮肤有效。"
 
 	required_reagents = list(
 		/reagent/ammonia = 1,
@@ -148,8 +148,8 @@
 
 /reagent_recipe/medicine/styptic_powder
 
-	name = "Styptic Powder"
-	desc = "Heals brute damage. Only works when applied to skin."
+	name = "止血粉"
+	desc = "治疗物理伤害。仅涂抹皮肤有效。"
 
 	required_reagents = list(
 		/reagent/aluminium = 1,
@@ -164,8 +164,8 @@
 
 /reagent_recipe/medicine/epinephrine
 
-	name = "Epinephrine"
-	desc = "Used for reviving dying patients. Provides the ADRENALINE! effect for a short period of time."
+	name = "急救肾上腺素"
+	desc = "用于复苏濒死患者，短时间提供肾上腺素效果。"
 
 	required_reagents = list(
 		/reagent/fuel/acetone = 1,
@@ -182,8 +182,8 @@
 
 /reagent_recipe/medicine/antihol
 
-	name = "Antihol"
-	desc = "Purges alcohol from your system quickly."
+	name = "解酒剂"
+	desc = "快速清除体内酒精。"
 
 	required_reagents = list(
 		/reagent/medicine/charcoal = 1,
@@ -197,8 +197,8 @@
 
 /reagent_recipe/medicine/synthblood
 
-	name = "Synthblood"
-	desc = "A special synthetic blood that replicates the blood type of any organic being when injected. Usually more expensive than just using real blood, however it has some chemical applications."
+	name = "合成血液"
+	desc = "一种特殊合成血液，注射后能适配任何有机生物的血型。通常比直接使用真实血液更昂贵，但也有一些化学用途。"
 
 	required_reagents = list(
 		/reagent/medicine/inaprovaline = 1,
@@ -221,7 +221,7 @@
 
 /reagent_recipe/medicine/caridone
 
-	name = "Caridone"
+	name = "卡利酮"
 
 	required_reagents = list(
 		/reagent/medicine/bicaridine = 1,
@@ -237,7 +237,7 @@
 
 /reagent_recipe/medicine/percardone
 
-	name = "Percardone"
+	name = "培卡酮"
 
 	required_reagents = list(
 		/reagent/medicine/bicaridine = 1,
@@ -254,7 +254,7 @@
 
 /reagent_recipe/medicine/carotane
 
-	name = "Carotane"
+	name = "卡洛烷"
 
 	required_reagents = list(
 		/reagent/medicine/kelotane = 1,
@@ -270,7 +270,7 @@
 
 /reagent_recipe/medicine/dicarditane
 
-	name = "Dicarditane"
+	name = "双卡利烷"
 
 	required_reagents = list(
 		/reagent/medicine/carotane = 1,
@@ -285,7 +285,7 @@
 
 /reagent_recipe/medicine/arentane
 
-	name = "Arentane"
+	name = "阿伦烷"
 
 	required_reagents = list(
 		/reagent/medicine/kelotane = 1,
@@ -301,7 +301,7 @@
 
 /reagent_recipe/medicine/kenotone
 
-	name = "Kenotone"
+	name = "克诺酮"
 
 	required_reagents = list(
 		/reagent/medicine/kelotane = 2,
@@ -316,7 +316,7 @@
 
 /reagent_recipe/medicine/extinatane
 
-	name = "Extinatane "
+	name = "熄焰烷"
 
 	required_reagents = list(
 		/reagent/medicine/kelotane = 1,

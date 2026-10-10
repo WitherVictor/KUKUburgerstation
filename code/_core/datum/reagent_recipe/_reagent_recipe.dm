@@ -1,8 +1,8 @@
 //Recipe reactions are handled in _reagent_container
 
 /reagent_recipe/
-	var/name = "reagent recipe"
-	var/desc = "A recipe for a reagent."
+	var/name = "试剂配方"
+	var/desc = "一种试剂的配方。"
 	var/category = "None" //For books
 
 	var/list/required_reagents = list()

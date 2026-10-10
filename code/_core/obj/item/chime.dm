@@ -1,7 +1,7 @@
 /obj/item/chime
-	name = "chime"
-	desc = "Beep."
-	desc_extended = "A special box that emits a sound when triggered by an attached device. By default, comes with a proximity sensor."
+	name = "蜂鸣器"
+	desc = "哔。"
+	desc_extended = "一种特殊盒子，连接的设备触发时会发出声音。默认附带接近传感器。"
 	icon = 'icons/obj/item/chime.dmi'
 	icon_state = "inventory"
 
@@ -47,20 +47,20 @@
 		var/obj/item/I = object
 		if(I.flags_tool == FLAG_TOOL_SCREWDRIVER)
 			if(stored_device)
-				caller.to_chat(span("warning","You remove \the [stored_device.name] from \the [src.name]."))
+				caller.to_chat(span("warning","你从[src.name]上拆下了[stored_device.name]。"))
 				stored_device.drop_item(get_turf(src))
 				stored_device = null
 			else
-				caller.to_chat(span("warning","There is nothing to remove from \the [src.name]!"))
+				caller.to_chat(span("warning","[src.name]上没有可拆下的设备！"))
 			return TRUE
 		if(istype(I,/obj/item/device))
 			if(stored_device)
-				caller.to_chat(span("warning","There is already a [stored_device.name] inside \the [src.name]!"))
+				caller.to_chat(span("warning","[src.name]里面已经装有[stored_device.name]！"))
 				return TRUE
 			var/obj/item/device/D = I
 			D.drop_item(src)
 			stored_device = D
-			caller.to_chat(span("notice","You attach \the [D.name] to \the [src.name]."))
+			caller.to_chat(span("notice","你把[D.name]装到了[src.name]上。"))
 			return TRUE
 
 	if(stored_device)

@@ -3,8 +3,8 @@
 	results = list()
 
 /reagent_recipe/explosion/emp
-	name = "Electro-Magnetic Pulse"
-	desc = "Disables electronics."
+	name = "电磁脉冲"
+	desc = "使电子设备失效。"
 
 	required_reagents = list(
 		/reagent/iron = 1,
@@ -26,8 +26,8 @@
 
 
 /reagent_recipe/explosion/holy_water_potassium
-	name = "Holy Water-Potassium Explosion"
-	desc = "hallelujah!"
+	name = "圣水与钾爆炸"
+	desc = "哈利路亚！"
 
 	required_reagents = list(
 		/reagent/nutrition/water/holy = 1,
@@ -68,8 +68,8 @@
 
 
 /reagent_recipe/explosion/water_potassium
-	name = "Water-Potassium Explosion"
-	desc = "a grayshirt's favorite recipe."
+	name = "水与钾爆炸"
+	desc = "灰衣助理最喜欢的配方。"
 
 	required_reagents = list(
 		/reagent/nutrition/water = 1,
@@ -105,8 +105,8 @@
 	return TRUE
 
 /reagent_recipe/explosion/smoke
-	name = "Sugar-Phosphorous-Potassium Smoke"
-	desc = "PROBABLY a warcrime!"
+	name = "糖、磷与钾烟雾"
+	desc = "这大概算战争罪吧！"
 
 	required_reagents = list(
 		/reagent/nutrition/sugar = 1,
@@ -127,8 +127,8 @@
 	return TRUE
 
 /reagent_recipe/explosion/potassium_perchlorate
-	name = "Potassium Perchlorate"
-	desc = "do. not. inhale."
+	name = "高氯酸钾"
+	desc = "千万。别。吸入。"
 
 	required_reagents = list(
 		/reagent/potassium = 1,
@@ -141,8 +141,8 @@
 	)
 
 /reagent_recipe/explosion/flash_powder
-	name = "Aluminium Flash Powder"
-	desc = "blind your friends with this."
+	name = "铝制闪光粉混合物"
+	desc = "拿它闪瞎朋友的眼睛。"
 
 	required_reagents = list(
 		/reagent/fuel/potassium_perchlorate = 1,
@@ -153,8 +153,8 @@
 	)
 
 /reagent_recipe/explosion/oxygen_phoron_reaction
-	name = "Oxygen-Phoron Reaction"
-	desc = "Liquid oxygen reacts very strongly with liquid phoron. Can create fires or explosions depending on temperature."
+	name = "氧与佛隆反应"
+	desc = "液氧与液态佛隆会剧烈反应，视温度不同，可能起火或爆炸。"
 
 	required_reagents = list(
 		/reagent/fuel/oxygen = 0,

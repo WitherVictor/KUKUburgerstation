@@ -1,7 +1,7 @@
 /reagent_recipe/chemistry/oil/
 
-	name = "Crude Oil"
-	desc = "crude oil, used in reactions."
+	name = "原油"
+	desc = "用于化学反应的原油。"
 
 	required_reagents = list(
 		/reagent/fuel/welding = 1,
@@ -14,8 +14,8 @@
 
 /reagent_recipe/chemistry/carbonized_oil
 
-	name = "Carbonized Oil"
-	desc = "refined oil, used in machines and reactions."
+	name = "碳化油"
+	desc = "用于机械和化学反应的精炼油。"
 
 	required_reagents = list(
 		/reagent/fuel/oil/crude = 2,
@@ -28,8 +28,8 @@
 
 /reagent_recipe/chemistry/welding_fuel
 
-	name = "Welding Fuel"
-	desc = "used for fuel in welding tools, has... other applications."
+	name = "焊接燃料"
+	desc = "用作焊接工具的燃料，还有……其他用途。"
 
 	required_reagents = list(
 		/reagent/fuel/hydrogen = 1,

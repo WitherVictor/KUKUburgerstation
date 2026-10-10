@@ -1,8 +1,8 @@
 /obj/item/paper/book/cargo_catalog/
-	name = "reference: Cargo Catalog Vol 1"
-	desc = "FIRE SALE ON TOOTHPASTE? FINALLY!!!"
+	name = "参考书：货运目录第一卷"
+	desc = "牙膏大甩卖？终于等到了！！！"
 	icon_state = "book3"
-	desc_extended = "A catalog featuring the many items you can buy from cargo."
+	desc_extended = "收录货运部可购物品的目录。"
 
 
 /obj/item/paper/book/cargo_catalog/Initialize()
@@ -10,10 +10,10 @@
 	data = SScargo.catalog_data.Copy()
 
 /obj/item/paper/book/chemistry/
-	name = "reference: Chemistry"
-	desc = "Winners don't use drugs! Besides meth."
+	name = "参考书：化学"
+	desc = "赢家不吸毒！冰毒除外。"
 	icon_state = "chemistrybook"
-	desc_extended = "A catalog featuring all the medical recipes known to man."
+	desc_extended = "收录人类已知全部药物配方的目录。"
 
 /obj/item/paper/book/chemistry/Initialize()
 	. = ..()
