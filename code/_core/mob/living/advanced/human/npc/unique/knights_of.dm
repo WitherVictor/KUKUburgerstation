@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/knight
-	name = "Knight Template"
-	desc = "Using guns is DISHONORABLE."
+	name = "骑士"
+	desc = "用枪是可耻的。"
 	sex = MALE
 	gender = MALE
 
@@ -38,18 +38,18 @@
 	update_all_blends()
 
 /mob/living/advanced/npc/unique/knight/red
-	name = "Red Knight"
+	name = "红骑士"
 	loadout = /loadout/knight/red
 
 /mob/living/advanced/npc/unique/knight/blue
-	name = "Blue Knight"
+	name = "蓝骑士"
 	loadout = /loadout/knight/blue
 
 /mob/living/advanced/npc/unique/knight/green
-	name = "Green Knight"
+	name = "绿骑士"
 	loadout = /loadout/knight/green
 
 /mob/living/advanced/npc/unique/knight/yellow
-	name = "Yellow Knight"
+	name = "黄骑士"
 	loadout = /loadout/knight/yellow
 

@@ -1,7 +1,7 @@
 /obj/structure/interactive/light_switch
-	name = "light switch"
-	desc = "Off. On. Off. On."
-	desc_extended = "An incredibly complex space-age lightswitch that allows you to magically toggle the lights in the area. Has science gone too far?"
+	name = "电灯开关"
+	desc = "关。开。关。开。"
+	desc_extended = "复杂到难以置信的太空时代电灯开关，能神奇地开关整个区域的灯。科学是不是发展得太过头了？"
 
 	icon = 'icons/obj/structure/light_switch.dmi'
 	icon_state = "setup"
@@ -85,7 +85,7 @@
 
 	var/area/A = get_area(src)
 	if(!A || !A.linked_apc || !A.linked_apc.cell || !A.linked_apc.cell.charge_current)
-		activator.to_chat(span("warning","This doesn't seem to be working..."))
+		activator.to_chat(span("warning","这东西似乎无法使用……"))
 		return FALSE
 
 	play_sound('sound/machines/click.ogg',get_turf(src),range_max=VIEW_RANGE*0.5)

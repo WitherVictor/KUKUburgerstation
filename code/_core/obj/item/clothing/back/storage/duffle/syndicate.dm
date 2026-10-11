@@ -1,8 +1,8 @@
 /obj/item/clothing/back/storage/dufflebag/syndicate
-	name = "syndicate dufflebag"
+	name = "辛迪加行李袋"
 	icon = 'icons/obj/item/clothing/back/dufflebag/syndicate.dmi'
-	desc = "EVIL!"
-	desc_extended = "A sturdy, yet lightweight black dufflebag. Doesn't slow you down at all for some reason."
+	desc = "邪恶！"
+	desc_extended = "结实而轻便的黑色行李袋。不知为何，完全不会拖慢你的移动速度。"
 
 
 	dynamic_inventory_count = MAX_INVENTORY_X*3

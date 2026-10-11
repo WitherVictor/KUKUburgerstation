@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/tranq_11m
-	name = "\improper 11.43x25mm tranquilizer cartridge"
-	desc = "Makes people sleep. Aim at the head for best results."
-	desc_extended = "For guns that use tranquilizer rounds."
+	name = "\improper 11.43x25mm麻醉弹"
+	desc = "让人睡个好觉，瞄准头部效果最佳。"
+	desc_extended = "供使用麻醉弹的枪械装填。"
 	rarity = RARITY_COMMON
 	icon = 'icons/obj/item/bullet/tranq.dmi'
 
@@ -24,7 +24,7 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/tranq_11m/surplus
-	name = "\improper surplus 11.43x25mm tranquilizer cartridge"
+	name = "\improper 库存旧式11.43x25mm麻醉弹"
 	damage_type_bullet = /damagetype/ranged/bullet/tranq_11mm/surplus
 	misfire_chance = 1
 	rarity = RARITY_BROKEN

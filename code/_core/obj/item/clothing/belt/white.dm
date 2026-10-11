@@ -1,8 +1,8 @@
 /obj/item/clothing/belt/storage/colored
-	name = "storage belt"
+	name = "储物腰带"
 	icon = 'icons/obj/item/clothing/belts/white.dmi'
-	desc = "Don't make me get the belt."
-	desc_extended = "Stores a robust amount of items that can easily and quickly be accessed."
+	desc = "别逼我拿腰带出来。"
+	desc_extended = "能存放不少物品，取用方便快捷。"
 	dyeable = TRUE
 
 /obj/item/clothing/belt/storage/colored/black

@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/vest/
-	name = "tactical storage vest"
+	name = "战术储物背心"
 	icon = 'icons/obj/item/clothing/suit/black_vest.dmi'
 
-	desc = "I NEED MORE POCKETS."
-	desc_extended = "A sturdy vest that protects against bullets and inventory management."
+	desc = "我需要更多口袋。"
+	desc_extended = "结实的背心，既挡子弹，也省得为整理物品发愁。"
 
 	size = SIZE_1*6
 
@@ -29,36 +29,36 @@
 	return ..()
 
 /obj/item/clothing/overwear/coat/vest/colored
-	name = "colored vest"
+	name = "彩色背心"
 	icon = 'icons/obj/item/clothing/suit/white_vest.dmi'
 
 	dyeable = TRUE
 
 /obj/item/clothing/overwear/coat/vest/colored/brown
-	name = "industrial vest"
+	name = "工业背心"
 	color = COLOR_BROWN_LIGHT
 
 /obj/item/clothing/overwear/coat/vest/colored/medical
-	name = "medical vest"
+	name = "医疗背心"
 	color = COLOR_WHITE
 
 /obj/item/clothing/overwear/coat/vest/colored/grey
-	name = "grey vest"
+	name = "灰色背心"
 	color = COLOR_GREY
 
 /obj/item/clothing/overwear/coat/vest/colored/merc
-	name = "merc vest"
+	name = "佣兵背心"
 	color = "#BCAC86"
 
 /obj/item/clothing/overwear/coat/vest/colored/black
-	name = "tactical vest"
+	name = "战术背心"
 	color = "#212121"
 
 /obj/item/clothing/overwear/coat/vest/sleeveless_leather_jacket
-	name = "sleeveless leather jacket"
+	name = "无袖皮夹克"
 	icon = 'icons/obj/item/clothing/suit/leather_jacket_sleeveless.dmi'
 
-	desc = "For when you need pockets but not many."
+	desc = "需要口袋，但又不需要太多的时候穿。"
 
 	size = SIZE_2*2
 
@@ -71,10 +71,10 @@
 
 
 /obj/item/clothing/overwear/coat/vest/webbing
-	name = "webbing"
+	name = "携行具"
 	icon = 'icons/obj/item/clothing/suit/webbing.dmi'
-	desc = "For a big guy."
-	desc_extended = "A minimalistic set of webbing harness meant to hold the basics. Holds less than storage vests, but can fit larger items."
+	desc = "给大块头准备的。"
+	desc_extended = "一套简洁的携行具，用来携带基本用品。有三个口袋，每个可容纳一件尺寸不超过2的物品。"
 
 	size = SIZE_2*3
 
@@ -85,7 +85,7 @@
 
 
 /obj/item/clothing/overwear/coat/vest/poly
-	name = "polycolored vest"
+	name = "拼色背心"
 	icon = 'icons/obj/item/clothing/suit/white_vest_poly.dmi'
 
 	dyeable = TRUE
@@ -96,7 +96,7 @@
 	)
 
 /obj/item/clothing/overwear/coat/vest/poly/merc
-	name = "mercenary polycolored vest"
+	name = "佣兵拼色背心"
 
 	polymorphs = list(
 		"shirt" = COLOR_OLIVE_DRAB,
@@ -104,7 +104,7 @@
 	)
 
 /obj/item/clothing/overwear/coat/vest/poly/pockets_only
-	name = "webbing pockets"
+	name = "携行袋"
 
 	polymorphs = list(
 		"pockets" = COLOR_BLACK
@@ -118,9 +118,9 @@
 	)
 
 /obj/item/clothing/overwear/coat/vest/syndicate
-	name = "syndicate combat webbing"
-	desc = "The pinnacle of torso storaging."
-	desc_extended = "Heavy-duty military webbing designed to hold lots of small (size two) items with ease. Issued to the Syndicate's high-ranking personnel."
+	name = "辛迪加作战携行具"
+	desc = "上身储物装备的巅峰。"
+	desc_extended = "结实耐用的军用携行具，能轻松收纳许多尺寸不超过2的物品。配发给辛迪加高级人员。"
 	icon = 'icons/obj/item/clothing/suit/webbing_syndie.dmi'
 
 	size = SIZE_2*5
@@ -133,9 +133,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/overwear/coat/vest/revolutionary
-	name = "revolutionary combat webbing"
-	desc = "The pinnacle of torso storaging."
-	desc_extended = "Ancient military webbing designed to hold lots of small (size two) items with ease. Issued to the revoluionaries' high-ranking personnel."
+	name = "革命军作战携行具"
+	desc = "上身储物装备的巅峰。"
+	desc_extended = "古老的军用携行具，能轻松收纳许多尺寸不超过2的物品。配发给革命军高级人员。"
 	icon = 'icons/obj/item/clothing/suit/webbing_rev.dmi'
 
 	size = SIZE_2*5

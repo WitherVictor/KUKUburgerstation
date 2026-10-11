@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/jungle
-	name = "jungle light"
+	name = "丛林发光植物"
 	icon = 'icons/obj/structure/flora/jungle_lights.dmi'
 	icon_state = ""
 	layer = LAYER_FLOOR_SCENERY
@@ -43,25 +43,25 @@
 	add_overlay(I)
 
 /obj/structure/interactive/lighting/jungle/stick
-	name = "jungle lightstick"
+	name = "丛林光枝"
 	icon_state = "stick"
 	max_types = 9
 	desired_light_range = 2
 
 /obj/structure/interactive/lighting/jungle/flower
-	name = "jungle lightflower"
+	name = "丛林光花"
 	icon_state = "flower"
 	max_types = 2
 	desired_light_range = 6
 
 /obj/structure/interactive/lighting/jungle/lamp
-	name = "jungle lightlamp"
+	name = "丛林灯株"
 	icon_state = "lamp"
 	max_types = 2
 	desired_light_range = 4
 
 /obj/structure/interactive/lighting/jungle/mine
-	name = "jungle lightbud"
+	name = "丛林光芽"
 	icon_state = "mine"
 	max_types = 5
 	desired_light_range = 5

@@ -5,7 +5,7 @@
 
 /obj/item/weapon/ranged/bullet/magazine/misc/sentry
 
-	name = "\improper Sentry Gun"
+	name = "\improper 哨戒机枪"
 	desc = ""
 	desc_extended = ""
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/minigun.dmi'

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/military
-	name = "9mm Auto 18 pistol"
-	desc = "An old relic from an oppressive police force."
-	desc_extended = "A burst fire machine pistol chambered in 9mm. Good for getting out of tricky situations quickly."
+	name = "9mm Auto 18手枪"
+	desc = "来自一支专横警队的旧时代遗物。"
+	desc_extended = "使用9mm弹药、采用点射的冲锋手枪，适合迅速摆脱棘手局面。"
 	value = 400
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm.dmi'
 	shoot_delay = 1.5
@@ -75,9 +75,9 @@
 	return max(0,0.01 - (0.02 * L.get_skill_power(SKILL_RANGED)) )
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/military/prototype
-	name = ".40 Auto-18 Prototype"
+	name = ".40 Auto-18原型手枪"
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_2.dmi'
-	desc_extended = "A modified variant of the 9mm Auto Pistol. The barrel width was increased to support .40 The slider has been shortened, the frame replaced with lighter materials, and a recoil compensator was added for extra accuracy."
+	desc_extended = "9mm Auto手枪的改装版本，扩大枪管口径以使用.40弹药。套筒缩短，枪身换用更轻的材料，还加装了后坐力补偿器以提高精度。"
 	value = 600
 	shoot_delay = 2
 	tier = 2
@@ -116,7 +116,7 @@
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/military/nanotrasen
 	name = "9mm NT-Auto-18"
-	desc = "An old relic from an oppressive police force."
-	desc_extended = "An automatic machine pistol chambered in 9mm. Good for getting out of tricky situations quickly. This one has been modifed with a new lighrweight frame and paintjob."
+	desc = "来自一支专横警队的旧时代遗物。"
+	desc_extended = "使用9mm弹药的自动冲锋手枪，适合迅速摆脱棘手局面。这把换装了新的轻量化枪身和涂装。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_nt.dmi'
 	weight = 3

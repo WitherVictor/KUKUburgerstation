@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/junk
-	name = "snack vendor"
+	name = "零食售货机"
 	icon_state = "snack"
 
 /obj/structure/interactive/vending/junk/New(var/desired_loc)
@@ -30,7 +30,7 @@
 	accepts_item = /obj/item/currency/dosh
 
 /obj/structure/interactive/vending/junk/syndicate
-	name = "hacked snack vendor"
+	name = "被破解的零食售货机"
 	stored_types = list(
 		/obj/item/container/simple/can/dr_gibb,
 		/obj/item/container/simple/can/grey_bull,

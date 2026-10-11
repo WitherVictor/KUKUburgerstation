@@ -1,7 +1,7 @@
 /obj/item/clothing/neck/cape
-	name = "cape"
-	desc = "Is it a bird? Is it a plane?"
-	desc_extended = "Attaches to the neck slot for extra fashion."
+	name = "披风"
+	desc = "是鸟吗？是飞机吗？"
+	desc_extended = "装备在颈部槽，为造型增添时尚感。"
 	icon = 'icons/obj/item/clothing/suit/cape.dmi'
 
 	item_slot = SLOT_NECK
@@ -41,7 +41,7 @@
 	)
 
 /obj/item/clothing/neck/cape/hide
-	name = "hide cape"
+	name = "兽皮披风"
 	polymorphs = list(
 		"base" = COLOR_BROWN,
 		"design" = COLOR_BROWN,
@@ -53,10 +53,10 @@
 	value = 30
 
 /obj/item/clothing/neck/cape/goliath
-	name = "goliath cloak"
+	name = "歌利亚斗篷"
 	icon = 'icons/obj/item/clothing/suit/goliath_cloak.dmi'
-	desc = "Is it a bird? Is it a plane? No, it's a Shaft Miner!"
-	desc_extended = "A protective cloak made from goliath hide."
+	desc = "是鸟吗？是飞机吗？不，是矿工！"
+	desc_extended = "用歌利亚皮制成的防护斗篷。"
 
 	armor = /armor/leather/goliath
 

@@ -1,7 +1,7 @@
 /obj/item/plate
-	name = "plate"
-	desc = "Dinner is served."
-	desc_extended = "A basic plate meant for holding food."
+	name = "餐盘"
+	desc = "开饭了。"
+	desc_extended = "用来盛放食物的普通餐盘。"
 	icon = 'icons/obj/item/plate.dmi'
 	icon_state = "plate_medium"
 	mouse_opacity = 1
@@ -74,7 +74,7 @@
 
 /obj/item/plate/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","This object holds up to [max_load] items that are size [max_size] or lower.")
+	. += div("notice","最多可盛放[max_load]件尺寸不超过[max_size]的物品。")
 
 /obj/item/plate/Crossed(atom/movable/O,atom/OldLoc)
 	. = ..()
@@ -120,7 +120,7 @@
 				I.reagents.transfer_reagents_to(spawned_item.reagents,I.reagents.volume_current,activator=activator)
 			qdel(I)
 
-		activator.to_chat(span("notice","You've created \a [R.name]! Bon appétit!"))
+		activator.to_chat(span("notice","你做出了[R.name]！祝你用餐愉快！"))
 
 		return TRUE
 

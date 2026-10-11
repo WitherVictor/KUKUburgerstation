@@ -1,7 +1,7 @@
 /mob/living/simple/rat_king
-	name = "rat king"
-	desc = "King of the underground."
-	desc_extended = "A rare mutated rat from some experiment gone wrong."
+	name = "鼠王"
+	desc = "地下之王。"
+	desc_extended = "某场失败实验产生的罕见变异老鼠。"
 	icon = 'icons/mob/living/simple/rat_king.dmi'
 	icon_state = "living"
 

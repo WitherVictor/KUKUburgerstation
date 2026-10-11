@@ -1,7 +1,7 @@
 /obj/structure/interactive/teleporter
-	name = "teleporter"
-	desc = "Beam me up Scotty!"
-	desc_extended = "A machine that is used for sending down or bringing up stuff through the power of nearly instantaneous molecular relaying."
+	name = "传送机"
+	desc = "斯科蒂，把我传送上去！"
+	desc_extended = "一台利用近乎瞬时的分子中继，将人或物品传送下去或接收上来的机器。"
 	icon = 'icons/obj/structure/telesciencepads.dmi'
 	icon_state = "pad-idle"
 	var/teleport_cooldown = 0
@@ -13,31 +13,33 @@
 	SPAM_CHECK(10)
 
 	if(!SSgamemode.active_gamemode.allow_launch)
-		activator.to_chat(span("warning","The teleporter is still setting up, wait until given permission!"))
+		activator.to_chat(span("warning","传送机还在准备中，请等到获准使用！"))
 		return FALSE
 	if(teleport_cooldown > world.time)
-		activator.to_chat(span("warning","The teleporter is still on cooldown, wait some time before using it again!"))
+		activator.to_chat(span("warning","传送机仍在冷却，请稍候再使用！"))
 		return FALSE
 	if(!length(SSobj.gps_list))
-		activator.to_chat(span("warning","There are no active GPS currently, try again later!"))
+		activator.to_chat(span("warning","当前没有启用的GPS，请稍后再试！"))
 		return FALSE
-	var/choice1 = input("Send or Receive?", "Teleport Direction") in list("Send", "Receive", "Cancel")|null
+	var/list/teleport_choices = list("发送" = "Send", "接收" = "Receive", "取消" = "Cancel")
+	var/choice1 = input("发送还是接收？", "传送方向") in teleport_choices|null
+	choice1 = teleport_choices[choice1]
 	if(choice1 == "Cancel")
-		activator.to_chat(span("notice","You decided against using the teleporter."))
+		activator.to_chat(span("notice","你决定不使用传送机。"))
 		return FALSE
-	var/obj/item/analyzer/gps/choice2 = input("Select the GPS for coordinates.", "GPS Selection") as null|anything in SSobj.gps_list
+	var/obj/item/analyzer/gps/choice2 = input("选择用于提供坐标的GPS。", "选择GPS") as null|anything in SSobj.gps_list
 	if(!choice2)
 		return
 	if(choice2.assigned_passkey && choice2.secure)
-		var/passwordcheck = input("Enter the password for this GPS.","GPS Password Entry") as null|password
+		var/passwordcheck = input("输入这台GPS的密码。","GPS密码") as null|password
 		if(passwordcheck != choice2.assigned_passkey)
-			activator.to_chat(span("notice","Incorrect password."))
+			activator.to_chat(span("notice","密码错误。"))
 			return FALSE
 	var/turf/gpsTURF = get_turf(choice2)
 	var/turf/srcTURF = get_turf(src)
 	var/turf/activatorTURF = get_turf(activator)
 	if(!gpsTURF)
-		activator.to_chat(span("warning","The GPS is currently not available, try again later!"))
+		activator.to_chat(span("warning","这台GPS目前不可用，请稍后再试！"))
 		return FALSE
 	if(teleport_cooldown > world.time)
 		return FALSE

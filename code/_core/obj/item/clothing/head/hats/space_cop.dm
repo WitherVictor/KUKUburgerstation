@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/space_cop
-	name = "space cop's hood"
-	desc = "Conform to hair standards."
-	desc_extended = "A hood commonly used by the Space Cops."
+	name = "太空警察头套"
+	desc = "让发型符合规定。"
+	desc_extended = "太空警察常用的头套。"
 	icon = 'icons/obj/item/clothing/hats/space_cop.dmi'
 
 

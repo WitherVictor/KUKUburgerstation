@@ -1,7 +1,7 @@
 /mob/living/simple/bot/medibot
-	name = "medical bot"
-	desc = "I NEED HEALING."
-	desc_extended = "A medical bot programmed to heal those in need. It is not afraid to defend itself."
+	name = "医疗机器人"
+	desc = "我需要治疗。"
+	desc_extended = "按程序救治伤患的医疗机器人。必要时也会自卫。"
 
 	loyalty_tag = "NanoTrasen"
 	iff_tag = "NanoTrasen"
@@ -106,15 +106,15 @@
 			var/v = inject_amount[k]
 			target.reagents.add_reagent(k,v,activator=src)
 
-		target.visible_message(span("danger","\The [src.name] injects \the [target.name] with the hypospray."),span("danger","\The [src.name] injects you with the hypospray."))
+		target.visible_message(span("danger","[src.name]用高压注射器给[target.name]注射了药物。"),span("danger","[src.name]用高压注射器给你注射了药物。"))
 
 		switch(rand(1,2))
 			if(1)
 				play_sound('sound/voice/medbot/feelbetter.ogg',get_turf(src),range_max=VIEW_RANGE)
-				src.do_say("Feel better soon!")
+				src.do_say("祝你早日康复！")
 			if(2)
 				play_sound('sound/voice/medbot/patchedup.ogg',get_turf(src),range_max=VIEW_RANGE)
-				src.do_say("All patched up!")
+				src.do_say("处理完毕！")
 
 		update_icon()
 
@@ -153,10 +153,10 @@
 	if(get_inject_amount(target))
 		PROGRESS_BAR(src,src,SECONDS_TO_DECISECONDS(5),src::treat(),target)
 		PROGRESS_BAR_CONDITIONS(src,src,src::can_treat(),target)
-		target.visible_message(span("warning","\The [src.name] is trying to inject [target.name]!"),span("danger","\The [src.name] is trying to inject you!"))
+		target.visible_message(span("warning","[src.name]正试图给[target.name]注射！"),span("danger","[src.name]正试图给你注射！"))
 		if(target.dead || target.has_status_effect(CRIT))
 			play_sound('sound/voice/medbot/no.ogg',get_turf(src),range_max=VIEW_RANGE)
-			src.do_say("No, stay with me!")
+			src.do_say("不，撑住！")
 		update_icon()
 		return TRUE
 
@@ -165,7 +165,7 @@
 
 
 /mob/living/simple/bot/medibot/syndicate
-	name = "Dr. Malpractice"
+	name = "医疗事故医生"
 	overlay_icon_state = "tactical"
 
 	loyalty_tag = "Syndicate"
@@ -174,7 +174,7 @@
 	health_base = 100
 
 /mob/living/simple/bot/medibot/rogue
-	name = "rogue medical bot"
+	name = "失控医疗机器人"
 
 	loyalty_tag = "Robot"
 	iff_tag = "Robot"
@@ -193,7 +193,7 @@
 
 
 /mob/living/simple/bot/medibot/maint_pvp
-	name = "fight club medic"
+	name = "搏击俱乐部医疗员"
 
 	overlay_icon_state = "tactical"
 	loyalty_tag = "NanoTrasen"

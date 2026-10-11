@@ -1,5 +1,5 @@
 /area/lz_420/interior/basement
-	name = "LZ 420 Basement"
+	name = "420号登陆区地下室"
 	trackable = TRUE
 	area_identifier = "LZ-420 Basement"
 	icon_state = "pink"
@@ -11,37 +11,37 @@
 
 
 /area/lz_420/interior/basement/lobby
-	name = "Basement Lobby"
+	name = "地下室大厅"
 	icon_state = "lobby"
 	allow_ghost = FALSE
 
 /area/lz_420/interior/basement/bathroom
-	name = "Basement Bathroom Lobby"
+	name = "地下室卫生间前厅"
 	icon_state = "bathroom"
 	sound_environment = ENVIRONMENT_BATHROOM
 
 /area/lz_420/interior/basement/bathroom/male
-	name = "Basement Bathroom Lobby - Mens"
+	name = "地下室卫生间前厅－男厕"
 	icon_state = "blue"
 
 /area/lz_420/interior/basement/bathroom/female
-	name = "Basement Bathroom Lobby - Womens"
+	name = "地下室卫生间前厅－女厕"
 	icon_state = "red"
 
 /area/lz_420/interior/basement/medical
-	name = "Basement Medical"
+	name = "地下室医疗部"
 	icon_state = "med"
 
 /area/lz_420/interior/basement/kitchen
-	name = "Basement Kitchen"
+	name = "地下室厨房"
 	icon_state = "kitchen"
 
 /area/lz_420/interior/basement/cafe
-	name = "Basement Cafe"
+	name = "地下室咖啡厅"
 	icon_state = "kitchen"
 
 /area/lz_420/interior/basement/hallway
-	name = "Basement Main Hallway"
+	name = "地下室主走廊"
 	icon_state = "hall"
 
 	sound_environment = ENVIRONMENT_HALLWAY

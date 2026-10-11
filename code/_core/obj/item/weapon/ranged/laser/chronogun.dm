@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/chronogun
-	name = "chrono gun"
-	desc = "Shoots timey wimey...stuff."
-	desc_extended = "A gun that shoots beam that age the opponent's skin until it necrotizes. Somehow not a war crime to use."
+	name = "时光枪"
+	desc = "发射时来时去的……玩意儿。"
+	desc_extended = "发射光束，让对手的皮肤加速衰老直至坏死。不知为何，用它居然不算战争罪。"
 	icon = 'icons/obj/item/weapons/ranged/laser/chronogun.dmi'
 
 	projectile = /obj/projectile/bullet/laser/strong

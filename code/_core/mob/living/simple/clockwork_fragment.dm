@@ -1,7 +1,7 @@
 /mob/living/simple/clockwork_fragment
-	name = "clockwork fragment"
-	desc = "Spooky!"
-	desc_extended = "A fragment of an old soul that previously served Ratvar."
+	name = "发条残魂"
+	desc = "阴森森的！"
+	desc_extended = "一缕古老灵魂的碎片，曾效忠于拉特瓦尔。"
 	icon = 'icons/mob/living/simple/clockwork_fragment.dmi'
 	icon_state = "living"
 

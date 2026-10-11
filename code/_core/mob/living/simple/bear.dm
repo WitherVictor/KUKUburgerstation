@@ -1,7 +1,7 @@
 /mob/living/simple/bear
-	name = "brown bear"
-	desc = "She will devour you, blyat!"
-	desc_extended = "A harmful critter."
+	name = "棕熊"
+	desc = "它会把你吃掉，操！"
+	desc_extended = "一只危险的动物。"
 	icon = 'icons/mob/living/simple/bears.dmi'
 	icon_state = "brown"
 	damage_type = /damagetype/unarmed/claw/
@@ -55,7 +55,7 @@
 	update_sprite()
 
 /mob/living/simple/bear/armored
-	name = "armored bear"
+	name = "披甲熊"
 
 	armor = /armor/tough_furred/armored
 
@@ -64,7 +64,7 @@
 	level = 9
 
 /mob/living/simple/bear/armored/revolutionary
-	name = "armored slavic bear"
+	name = "斯拉夫披甲熊"
 	loyalty_tag = "Revolutionary"
 	iff_tag = "Revolutionary"
 
@@ -74,7 +74,7 @@
 	level = 12
 
 /mob/living/simple/bear/snow
-	name = "snow bear"
+	name = "雪熊"
 	icon_state = "white"
 
 	armor = /armor/tough_furred/snow
@@ -82,13 +82,13 @@
 	level = 7
 
 /mob/living/simple/bear/black
-	name = "black bear"
+	name = "黑熊"
 	icon_state = "black"
 
 	level = 8
 
 /mob/living/simple/bear/space
-	name = "space bear"
+	name = "太空熊"
 	icon_state = "space"
 
 	armor = /armor/tough_furred/space

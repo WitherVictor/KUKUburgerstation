@@ -91,9 +91,9 @@
 
 	if(open)
 		eject_stored_bullets_spent(activator,T,TRUE)
-		activator.to_chat(span("notice","You open \the [src]. It contains [get_ammo_count()] bullet\s."))
+		activator.to_chat(span("notice","你打开了[src]，里面有[get_ammo_count()]发弹药。"))
 	else
-		activator.to_chat(span("notice","You close \the [src]."))
+		activator.to_chat(span("notice","你合上了[src]。"))
 
 	play_sound('sound/weapons/ranged/generic/revolver_click2.ogg',T,range_max=VIEW_RANGE*0.25)
 
@@ -112,7 +112,7 @@
 /obj/item/weapon/ranged/bullet/revolver/can_gun_shoot(var/mob/activator,var/atom/object,location,params,var/check_time=TRUE,var/messages=TRUE)
 
 	if(!can_shoot_while_open && open)
-		if(messages) activator.to_chat(span("warning","Close \the [src.name] before firing!"))
+		if(messages) activator.to_chat(span("warning","开火前请先合上[src.name]！"))
 		return FALSE
 
 	return ..()
@@ -132,7 +132,7 @@
 		if(last_value)
 			var/obj/item/bullet_cartridge/B = eject_stored_bullet(activator,last_value,get_turf(src))
 			if(B)
-				activator?.to_chat(span("notice","You remove \the [B.name] from \the [src.name]."))
+				activator?.to_chat(span("notice","你从[src.name]中取出了[B.name]。"))
 				I.add_object(B)
 				//TODO: Bullet removal sounds?
 

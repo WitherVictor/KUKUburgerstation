@@ -1,9 +1,9 @@
 /obj/item/corrupting_frog
-	name = "corrupting frog"
+	name = "腐化蛙"
 	icon = 'icons/obj/item/corrupting_frog.dmi'
 	icon_state = "inventory"
-	desc = "One frog was harmed in the making of this item."
-	desc_extended = "A magical wooden frog doll that has the abiltity to turn a weapon or clothing item into another similiar object, with unpredictable results..."
+	desc = "制作此物品时有一只青蛙受到了伤害。"
+	desc_extended = "神奇的木制青蛙玩偶，可以将武器或衣物变成另一件类似物品，结果难以预料……"
 	rarity = RARITY_LEGENDARY
 	value = 6000
 	value_burgerbux = 1
@@ -19,7 +19,9 @@
 	if(!can_corrupt_target(activator,object))
 		return TRUE
 
-	var/choice = input("Are you sure you want to corrupt \the [I.name]? This may have unpredictable effects...","Corrupting Frog") as null|anything in list("Yes","No","Cancel")
+	var/list/confirmation_labels = list("是"="Yes","否"="No","取消"="Cancel")
+	var/choice = input("确定要腐化[I.name]吗？这可能产生难以预料的效果……","腐化蛙") as null|anything in confirmation_labels
+	choice = confirmation_labels[choice]
 	if(choice != "Yes")
 		return ..()
 
@@ -38,11 +40,11 @@
 		return FALSE
 
 	if(target.no_drop || !target.can_save || !target.can_corrupt)
-		activator.to_chat(span("warning","You can't use \the [src.name] on \the [target.name]... perhaps try a different object."))
+		activator.to_chat(span("warning","你无法对[target.name]使用[src.name]……换件物品试试吧。"))
 		return FALSE
 
 	if(!isturf(target.loc))
-		activator.to_chat(span("warning","Put \the [src.name] on the ground before trying to corrupt it!"))
+		activator.to_chat(span("warning","请先将[target.name]放到地上，再尝试腐化它！"))
 		return FALSE
 
 	return TRUE
@@ -55,11 +57,11 @@
 	var/obj/item/corruption_result = target.corrupt()
 
 	if(corruption_result)
-		corruption_result.visible_message(span("warning","\The [target.name] transforms into \the [corruption_result.name]!"))
+		corruption_result.visible_message(span("warning","[target.name]变成了[corruption_result.name]！"))
 		play_sound('sound/weapons/magic/zap_large.ogg',get_turf(corruption_result))
 		qdel(src)
 	else
 		can_use = TRUE
-		activator.to_chat(span("warning","Corruption failed... perhaps try using this on a different object."))
+		activator.to_chat(span("warning","腐化失败了……换件物品试试吧。"))
 
 	can_use = TRUE

@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/cigarette
-	name = "cigarette vendor"
+	name = "香烟售货机"
 	icon_state = "cigs"
 
 	stored_types = list(

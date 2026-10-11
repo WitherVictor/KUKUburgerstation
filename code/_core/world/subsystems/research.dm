@@ -39,7 +39,7 @@ SUBSYSTEM_DEF(research)
 	GENERATE(PT)
 	FINALIZE(PT)
 	P.put_in_hands(PT)
-	P.to_chat(span("notice","The arcade machine vends [PT.amount] prize tickets!"))
+	P.to_chat(span("notice","街机吐出了[PT.amount]张兑奖券！"))
 
 	return FALSE
 

@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/abductor
-	name = "abductor"
-	desc = "Ayy lmao. The most annoying thing in the known universe."
+	name = "绑架者"
+	desc = "哎哟，笑死。已知宇宙中最烦人的东西。"
 	ai = /ai/advanced/abductor
 
 	loadout = /loadout/abductor

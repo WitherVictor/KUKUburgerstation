@@ -1,7 +1,7 @@
 /obj/structure/interactive/scanner
-	name = "body scanner"
-	desc = "YOU. SHALL NOT. PASS."
-	desc_extended = "A very invasive full body scanner that magically blocks movement based on the conditions coded inside."
+	name = "全身扫描仪"
+	desc = "你。休想。通过。"
+	desc_extended = "极其侵犯隐私的全身扫描仪，会神奇地按照内置规则阻止通行。"
 	icon = 'icons/obj/structure/scanner.dmi'
 	icon_state = "pad"
 
@@ -12,7 +12,7 @@
 	desired_light_color = "#00FF00"
 
 /obj/structure/interactive/scanner/abnormality
-	name = "abnormality scanner"
+	name = "异常体扫描仪"
 
 /obj/structure/interactive/scanner/abnormality/Cross(atom/movable/O,atom/oldloc)
 
@@ -22,17 +22,17 @@
 	return ..()
 
 /obj/structure/interactive/scanner/iff
-	name = "\improper IFF body scanner"
-	desc = "YOU. SHALL NOT. PASS. Unless the conditions are met."
-	desc_extended = "A very invasive full body scanner that magically blocks movement based on the conditions coded inside. This one is programmed to prevent those without IFF implants from accessing the area."
+	name = "\improper 敌我识别全身扫描仪"
+	desc = "你。休想。通过。除非满足条件。"
+	desc_extended = "极其侵犯隐私的全身扫描仪，会按内置规则阻止通行。这台会拦下没有敌我识别标记的生物。"
 
 /obj/structure/interactive/scanner/iff/Cross(atom/movable/O,atom/oldloc)
 
 	if(is_living(O))
 		var/mob/living/L = O
 		if(!L.iff_tag)
-			L.to_chat(span("warning","The barrier prevents you from moving!"))
-			src.do_say("IFF implant not detected.")
+			L.to_chat(span("warning","屏障挡住了你的去路！"))
+			src.do_say("未检测到敌我识别植入体。")
 			return FALSE
 
 	if(istype(O,/obj/structure/interactive/crate))
@@ -43,17 +43,17 @@
 	return ..()
 
 /obj/structure/interactive/scanner/iff_nanotrasen
-	name = "\improper NanoTrasen IFF body scanner"
-	desc = "YOU. SHALL NOT. PASS. Unless the conditions are met."
-	desc_extended = "A very invasive full body scanner that magically blocks movement based on the conditions coded inside. This one is programmed to prevent those without NanoTrasen IFF implants from accessing the area."
+	name = "\improper 纳米传讯敌我识别全身扫描仪"
+	desc = "你。休想。通过。除非满足条件。"
+	desc_extended = "极其侵犯隐私的全身扫描仪，会按内置规则阻止通行。这台会拦下没有纳米传讯敌我识别标记的生物。"
 
 /obj/structure/interactive/scanner/iff_nanotrasen/Cross(atom/movable/O,atom/oldloc)
 
 	if(is_living(O))
 		var/mob/living/L = O
 		if(!L.iff_tag || L.iff_tag != "NanoTrasen")
-			L.to_chat(span("warning","The barrier prevents you from moving!"))
-			src.do_say("IFF implant not detected.")
+			L.to_chat(span("warning","屏障挡住了你的去路！"))
+			src.do_say("未检测到敌我识别植入体。")
 			return FALSE
 
 	if(istype(O,/obj/structure/interactive/crate))
@@ -66,25 +66,25 @@
 
 
 /obj/structure/interactive/scanner/iff_reverse
-	name = "\improper anti-IFF body scanner"
-	desc = "YOU. SHALL NOT. PASS. Unless the conditions are met."
-	desc_extended = "A very invasive full body scanner that magically blocks movement based on the conditions coded inside. This one is programmed to prevent those WITH IFF implants from accessing the area."
+	name = "\improper 反敌我识别全身扫描仪"
+	desc = "你。休想。通过。除非满足条件。"
+	desc_extended = "极其侵犯隐私的全身扫描仪，会按内置规则阻止通行。这台会拦下带有敌我识别标记的人形生物。"
 
 /obj/structure/interactive/scanner/iff_reverse/Cross/(var/atom/movable/M)
 
 	if(is_advanced(M))
 		var/mob/living/advanced/A = M
 		if(A.iff_tag)
-			A.to_chat(span("warning","The barrier prevents you from moving!"))
-			src.do_say("IFF implant detected. Your employment is not over.")
+			A.to_chat(span("warning","屏障挡住了你的去路！"))
+			src.do_say("检测到敌我识别植入体。你的雇佣关系尚未结束。")
 			return FALSE
 
 	return ..()
 
 /obj/structure/interactive/scanner/living
-	name = "door safety scanner"
-	desc = "Don't block the doors!"
-	desc_extended = "A general proximity scanner that detects whether or not a person is present in the tile."
+	name = "门禁安全扫描仪"
+	desc = "别堵门！"
+	desc_extended = "检测所在格内是否有生物的通用近距扫描仪。"
 	icon_state = "door"
 
 	plane = PLANE_MOVABLE
@@ -105,9 +105,9 @@
 
 
 /obj/structure/interactive/scanner/anti_dead
-	name = "\improper living body scanner"
-	desc = "YOU. SHALL NOT. PASS. Unless the conditions are met."
-	desc_extended = "A very invasive full body scanner that magically blocks movement based on the conditions coded inside. This one is programmed to only allow living silicons and carbons."
+	name = "\improper 活体扫描仪"
+	desc = "你。休想。通过。除非满足条件。"
+	desc_extended = "极其侵犯隐私的全身扫描仪，会按内置规则阻止通行。这台只允许尚未死亡的生物通过。"
 
 /obj/structure/interactive/scanner/anti_dead/Cross/(var/atom/movable/M)
 
@@ -121,9 +121,9 @@
 
 
 /obj/structure/interactive/scanner/crate_only
-	name = "\improper crate scanner"
-	desc = "YOU. SHALL NOT. PASS. Unless the conditions are met."
-	desc_extended = "A very invasive full body scanner that magically blocks movement based on the conditions coded inside. This one is programmed to only allow secure crates."
+	name = "\improper 货箱扫描仪"
+	desc = "你。休想。通过。除非满足条件。"
+	desc_extended = "极其侵犯隐私的全身扫描仪，会按内置规则阻止通行。这台只允许安全货箱通过。"
 
 /obj/structure/interactive/scanner/crate_only/Cross/(var/atom/movable/M)
 
@@ -135,9 +135,9 @@
 
 
 /obj/structure/interactive/scanner/cop
-	name = "cop scanner"
-	desc = "Don't block the doors!"
-	desc_extended = "A general proximity scanner that detects whether or not a person is a cop"
+	name = "警察扫描仪"
+	desc = "别堵门！"
+	desc_extended = "检测阵营身份、只允许太空警察通过的门禁扫描仪。"
 	icon_state = "door"
 
 	plane = PLANE_MOVABLE
@@ -157,9 +157,9 @@
 
 
 /obj/structure/interactive/scanner/rich
-	name = "rich person scanner"
-	desc = "Poor people get out."
-	desc_extended = "A proximity door scanner that prevents those with less than 20,000 credits from entering. Or leaving..."
+	name = "富人扫描仪"
+	desc = "穷人走开。"
+	desc_extended = "门禁近距扫描仪，阻止持有信用点少于20,000的玩家进入。或者离开……"
 	icon_state = "door"
 
 /obj/structure/interactive/scanner/rich/Cross/(var/atom/movable/M)
@@ -170,7 +170,7 @@
 	var/mob/living/advanced/player/P = M
 
 	if(!P.client || P.currency < 20000)
-		P.to_chat(span("warning","You are too poor to cross the rich person scanner..."))
+		P.to_chat(span("warning","你太穷，无法通过富人扫描仪……"))
 		return FALSE
 
 	return ..()

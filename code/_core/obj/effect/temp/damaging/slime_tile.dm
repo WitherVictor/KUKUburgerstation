@@ -1,5 +1,5 @@
 /obj/structure/interactive/slime_tile
-	name = "slimed tile"
+	name = "黏液地砖"
 	icon = 'icons/obj/effects/slime_tile.dmi'
 	icon_state = "tile"
 

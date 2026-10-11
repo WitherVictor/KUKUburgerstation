@@ -5,7 +5,7 @@
 
 
 /turf/simulated/floor/light/reebe
-	name = "abyss"
+	name = "深渊"
 	icon = 'icons/turf/space/abyss.dmi'
 	icon_state = "abyss"
 

@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/science/wardrobe
-	name = "science wardrobe vendor"
+	name = "科研服装售货机"
 	icon_state = "scidrobe"
 	stored_types = list(
 		/obj/item/clothing/underbottom/underwear/boxers,
@@ -22,7 +22,7 @@
 	)
 
 /obj/structure/interactive/vending/science/equipment
-	name = "science equipment vendor"
+	name = "科研装备售货机"
 	icon_state = "robotics"
 	stored_types = list(
 		/obj/item/weapon/melee/torch/flashlight,
@@ -33,10 +33,10 @@
 	)
 
 /obj/structure/interactive/vending/experimental
-	name = "experimental vendor"
+	name = "试验装备售货机"
 	icon_state = "experimental"
-	desc = "For science! (And balance.)"
-	desc_extended = "An experimental vendor that vends even more experimental weapons, armor, and clothing. Use at your own risk!"
+	desc = "为了科学！（还有平衡。）"
+	desc_extended = "一台试验用售货机，出售更加具有试验性质的武器、护甲和服装。使用后果自负！"
 
 	stored_types = list(
 
@@ -45,10 +45,10 @@
 
 
 /obj/structure/interactive/vending/genetic
-	name = "genetic vendor"
+	name = "基因售货机"
 	icon_state = "cart"
-	desc = "For science! (And balance.)"
-	desc_extended = "An experimental vendor that vends genetic disks."
+	desc = "为了科学！（还有平衡。）"
+	desc_extended = "一台出售基因磁盘的试验用售货机。"
 
 	stored_types = list(
 

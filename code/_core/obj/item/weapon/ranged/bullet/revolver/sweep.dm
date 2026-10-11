@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/sweep
-	name = "\improper 12g Station Sweeper shotgun"
-	desc = "Clean the station with one easy trick!"
-	desc_extended = "An oddly designed semi-automatic shotgun with its own internal revolving magazine. The trigger pull is quite stiff and the recoil is even worse. Reloading requires manual removal of spent shells as there is no atuomatic shell eject system."
+	name = "\improper 12号空间站清扫者霰弹枪"
+	desc = "只需一招，清扫全站！"
+	desc_extended = "设计古怪的半自动霰弹枪，带有内置转轮弹仓。扳机很硬，后坐力更糟。没有自动抛壳机构，重新装填前必须手动取出已击发的弹壳。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/nanotrasen/sweep.dmi'
 	icon_state = "inventory"
 	value = 400
@@ -93,5 +93,5 @@
 	INTERACT_DELAY(1)
 
 	rotate_cylinder(-1)
-	activator?.to_chat(span("notice","You rotate the cylinder backwards."))
+	activator?.to_chat(span("notice","你反向转动了弹巢。"))
 	return TRUE

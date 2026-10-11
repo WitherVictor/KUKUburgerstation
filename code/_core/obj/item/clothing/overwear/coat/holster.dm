@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/holster
-	name = "holster"
-	desc = "DRAW."
-	desc_extended = "A regular holster that can hold nearly any pistol."
+	name = "枪套"
+	desc = "拔枪。"
+	desc_extended = "普通枪套，几乎能容纳任何手枪。"
 	icon = 'icons/obj/item/clothing/suit/holster.dmi'
 
 	size = SIZE_3

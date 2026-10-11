@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/heretic
-	name = "heretic"
+	name = "异端"
 
 	loadout = /loadout/heretic/basic
 
@@ -19,7 +19,7 @@
 
 
 /mob/living/advanced/npc/heretic/black
-	name = "heretic"
+	name = "异端"
 
 	loadout = /loadout/heretic/black
 

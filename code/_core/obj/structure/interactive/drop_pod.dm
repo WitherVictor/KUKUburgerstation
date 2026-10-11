@@ -1,7 +1,7 @@
 /obj/structure/interactive/drop_pod
-	name = "orbital drop pod"
-	desc = "YEHAAAAAAAAAAAAAW."
-	desc_extended = "A drop pod that drops from orbit."
+	name = "轨道空降舱"
+	desc = "呀——呼——！"
+	desc_extended = "一种从轨道投下的空降舱。"
 	icon = 'icons/obj/structure/drop_pod.dmi'
 	icon_state = "pod"
 
@@ -103,7 +103,7 @@
 				return FALSE
 			var/obj/hud/button/map_background/M_background = locate() in activator.buttons
 			if(M_background)
-				activator.to_chat(span("warning","Close your current map to enter \the [src.name]!"))
+				activator.to_chat(span("warning","先关闭当前地图才能进入[src.name]！"))
 				return FALSE
 			if(!activator.Move(src))
 				return FALSE
@@ -112,22 +112,22 @@
 			icon_state = "pod_closed"
 		if(POD_LAUNCHING) //IT BEGINS. We're launching now.
 			if(!SSgamemode.active_gamemode.allow_launch)
-				activator.to_chat(span("warning","Invalid drop location: NanoTrasen has deemed it's unsafe to launch at this time!"))
+				activator.to_chat(span("warning","空降地点无效：纳米传讯认为现在发射并不安全！"))
 				return FALSE
 			if(!desired_loc)
-				activator.to_chat(span("warning","Invalid drop location: No drop location selected."))
+				activator.to_chat(span("warning","空降地点无效：尚未选择空降地点。"))
 				return FALSE
 			for(var/d in DIRECTIONS_ALL)
 				var/turf/T = get_step(desired_loc,d)
 				if(!T || T.has_dense_atom)
-					activator.to_chat(span("warning","Invalid drop location: Target area is obstructed."))
+					activator.to_chat(span("warning","空降地点无效：目标区域存在障碍物。"))
 					return FALSE
 				if(!T.is_safe() || !T.can_move_to())
-					activator.to_chat(span("warning","Invalid drop location: Unsafe area."))
+					activator.to_chat(span("warning","空降地点无效：该区域不安全。"))
 					return FALSE
 				var/area/A = T.loc
 				if(A.interior)
-					activator.to_chat(span("warning","Invalid drop location: Target area is obstructed."))
+					activator.to_chat(span("warning","空降地点无效：目标区域存在障碍物。"))
 					return FALSE
 			icon_state = "none"
 			flick("drop_anim",src)

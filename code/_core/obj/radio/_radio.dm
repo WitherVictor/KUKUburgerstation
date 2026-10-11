@@ -1,5 +1,5 @@
 /obj/radio
-	name = "radio"
+	name = "无线电"
 	desc = "Radio holder. You shouldn't see this."
 
 	var/frequency = RADIO_FREQ_COMMON //The broadcasting frequency of the radio.
@@ -22,14 +22,14 @@
 
 /obj/radio/click_self(var/mob/caller,location,control,params)
 	broadcasting = !broadcasting
-	caller.to_chat(span("notice","You toggle the receiver to <b>[broadcasting ? "always broadcast." : "only broadcast when pressed."]</b>"))
+	caller.to_chat(span("notice","你将无线电设为<b>[broadcasting ? "持续发话" : "按下时才发话"]</b>。"))
 	return TRUE
 
 /obj/radio/clicked_on_by_object(var/mob/caller as mob,var/atom/object,location,control,params)
 	if(!is_inventory(object))
 		return ..()
 	receiving = !receiving
-	caller.to_chat(span("notice","You toggle the speaker <b>[receiving ? "on" : "off"]</b>."))
+	caller.to_chat(span("notice","你将扬声器<b>[receiving ? "开启" : "关闭"]</b>。"))
 	return TRUE
 
 
@@ -48,11 +48,11 @@
 	var/freq = frequency_string ? " (<b>[frequency_string]</b>)" : ""
 
 	if(old_frequency == frequency)
-		caller.to_chat("The frequency can't seem to go any [frequency == frequency_min ? "lower" : "higher"].")
+		caller.to_chat("频率似乎不能再[frequency == frequency_min ? "降低" : "升高"]了。")
 	else if(spam_fix_time <= world.time)
-		caller.to_chat("You change \the [src.name]'s frequency to [frequency] kHz[freq]...")
+		caller.to_chat("你将[src.name]的频率调至[frequency]千赫兹[freq]……")
 	else
-		caller.to_chat("...[frequency] kHz[freq]...")
+		caller.to_chat("……[frequency]千赫兹[freq]……")
 
 	spam_fix_time = world.time + 20
 

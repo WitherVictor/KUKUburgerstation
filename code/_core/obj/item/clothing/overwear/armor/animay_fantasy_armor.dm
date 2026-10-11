@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/armor/animay_fantasy_armor
-	name = "generic anime armor"
+	name = "普通动漫护甲"
 	icon = 'icons/obj/item/clothing/suit/animay_fantasy_armor.dmi'
 
-	desc = "Generic 90s/80s fantasy armor."
-	desc_extended = "God has abandoned us, animay is proof."
+	desc = "典型的八九十年代奇幻护甲。"
+	desc_extended = "上帝抛弃了我们，动漫就是证据。"
 
 	defense_rating = list(
 		BLADE = 20,

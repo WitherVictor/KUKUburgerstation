@@ -1,5 +1,5 @@
 /turf/simulated/floor/tile/shuttle
-	name = "shuttle floor"
+	name = "穿梭机地板"
 	icon = 'icons/turf/floor/spaceship.dmi'
 	icon_state = "tile"
 	color = COLOR_WHITE

@@ -1,5 +1,5 @@
 /obj/item/storage/bags/goodie
-	name = "goodie bag"
+	name = "礼品袋"
 	icon = 'icons/obj/item/event_bag.dmi'
 
 	dynamic_inventory_count = 9
@@ -13,9 +13,9 @@
 	return loot_to_generate ? 5 : initial(value)
 
 /obj/item/storage/bags/goodie/halloween
-	name = "halloween goodie bag"
-	desc = "Trick or treat!"
-	desc_extended = "A small bag. Contains halloween goodies!"
+	name = "万圣节礼品袋"
+	desc = "不给糖就捣蛋！"
+	desc_extended = "一个小袋子，装着万圣节礼物！"
 	icon_state = "halloween"
 
 	loot_to_generate = /loot/halloween

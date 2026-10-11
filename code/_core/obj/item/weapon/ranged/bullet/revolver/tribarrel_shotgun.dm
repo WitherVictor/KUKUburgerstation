@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/tribarrel
-	name = "\improper 23x75mmR Tri-Barrel Shotgun"
-	desc = "Best against demons."
-	desc_extended = "An absolutely ridiculous 3 barreled shotgun that holds giant 23x75mmR rounds."
+	name = "\improper 23x75mmR三管霰弹枪"
+	desc = "对付恶魔最合适。"
+	desc_extended = "荒唐至极的三管霰弹枪，使用硕大的23x75mmR弹药。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/power.dmi'
 	icon_state = "inventory"
 	value = 1800

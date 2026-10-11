@@ -1,6 +1,6 @@
 /obj/structure/interactive/bar_sign
-	name = "store sign"
-	desc = "Come on in!"
+	name = "商店招牌"
+	desc = "欢迎光临！"
 	icon = 'icons/obj/structure/store_signs.dmi'
 	icon_state = "blank"
 	plane = PLANE_WALL
@@ -10,132 +10,132 @@
 
 
 /obj/structure/interactive/bar_sign/the_lightbulb
-	name = "The Lightbulb"
-	desc = "For all your lighting needs!"
+	name = "灯泡之家"
+	desc = "满足你的一切照明需求！"
 	icon_state = "the_lightbulb"
 
 obj/structure/interactive/bar_sign/dan
-	name = "Discount Dan's"
-	desc = "Stay awhile, and listen!"
+	name = "折扣丹商店"
+	desc = "留下来歇一会儿，听我说！"
 	icon_state = "discount_dan"
 
 obj/structure/interactive/bar_sign/the_net
-	name = "The Net"
-	desc = "NTNet Browsing at a premium price!"
+	name = "网络之家"
+	desc = "高价享受纳米传讯网浏览服务！"
 	icon_state = "the_net"
 
 obj/structure/interactive/bar_sign/toolbox_tavern
-	name = "\improper Toolbox Tavern"
-	desc = "For all your robust construction needs!"
+	name = "\improper 工具箱酒馆"
+	desc = "满足你的一切硬派建造需求！"
 	icon_state = "toolbox_tavern"
 
 
 obj/structure/interactive/bar_sign/honked_and_loaded
-	name = "\improper HONKed and Loaded"
-	desc = "For all your robust construction needs!"
+	name = "\improper 鸣笛上膛"
+	desc = "满足你的一切硬派建造需求！"
 	icon_state = "honked_and_loaded"
 
 obj/structure/interactive/bar_sign/the_harmbaton
-	name = "\improper The harmbaton"
-	desc = "For all your robust batoning needs!"
+	name = "\improper 伤害警棍"
+	desc = "满足你的一切硬派挥棍需求！"
 	icon_state = "the_harmbaton"
 
 obj/structure/interactive/bar_sign/robusta_cafe
-	name = "\improper Robusta Cafe"
-	desc = "The most robust coffee in town!"
+	name = "\improper 罗布斯塔咖啡馆"
+	desc = "全城最硬派的咖啡！"
 	icon_state = "robusta_cafe"
 
 
 obj/structure/interactive/bar_sign/assistant
-	name = "The Greytide"
-	desc = "The most robust prices in town!"
+	name = "灰潮"
+	desc = "全城最硬派的价格！"
 	icon_state = "assistant"
 
 obj/structure/interactive/bar_sign/the_chem_lab
-	name = "The Chem Lab"
-	desc = "The only thing that won't explode is your wallet!"
+	name = "化学实验室"
+	desc = "唯一不会爆炸的就是你的钱包！"
 	icon_state = "the_chem_lab"
 
 obj/structure/interactive/bar_sign/bawse_loot
-	name = "Bawse Loot"
-	desc = "Nothing is stolen*! We promise!"
+	name = "鲍斯战利品"
+	desc = "保证没有赃物*！我们发誓！"
 	icon_state = "bawse_loot"
 
 
 
 obj/structure/interactive/bar_sign/narsie
-	name = "Nar-sie Bistro"
-	desc = "\[Cult Noises\]"
+	name = "纳尔西小酒馆"
+	desc = "\[邪教的低语\]"
 	icon_state = "cult"
 
 
 obj/structure/interactive/bar_sign/die_lab
-	name = "DIE LAB"
-	desc = "When you want to look fabulous when killing people."
+	name = "染杀实验室"
+	desc = "让你杀人时也能光彩照人。"
 	icon_state = "die_lab"
 
 
 obj/structure/interactive/bar_sign/security
-	name = "The Harm Baton"
-	desc = "SHITSEC"
+	name = "伤害警棍"
+	desc = "狗屎安保"
 	icon_state = "security"
 
 obj/structure/interactive/bar_sign/debug
-	name = "Coderbus"
-	desc = "Wait what?"
+	name = "程序员整活巴士"
+	desc = "等等，什么？"
 	icon_state = "thecoderbus"
 
 obj/structure/interactive/bar_sign/the_outer_spess
-	name = "The Outer Spess"
-	desc = "Wait what?"
+	name = "外太空"
+	desc = "等等，什么？"
 	icon_state = "the_outer_spess"
 
 obj/structure/interactive/bar_sign/adminbus
-	name = "The adminbus"
-	desc = "Wait what?"
+	name = "管理员整活巴士"
+	desc = "等等，什么？"
 	icon_state = "theadminbus"
 
 obj/structure/interactive/bar_sign/combocafe
-	name = "combo cafe"
-	desc = "Wait what?"
+	name = "连击咖啡馆"
+	desc = "等等，什么？"
 	icon_state = "combocafe"
 
 obj/structure/interactive/bar_sign/scotchservinwill
-	name = "Scotch Servin' Willy's"
-	desc = "Wait what?"
+	name = "威利的苏格兰酒馆"
+	desc = "等等，什么？"
 	icon_state = "scotchservinwill"
 
 obj/structure/interactive/bar_sign/newmed_clinic
-	name = "Dr. Newmed's (TM) Clinic"
-	desc = "Wait what?"
+	name = "纽梅德医生的（TM）诊所"
+	desc = "等等，什么？"
 	icon_state = "newmed_clinic"
 
 obj/structure/interactive/bar_sign/chess
-	name = "Chess"
-	desc = "Wait what?"
+	name = "国际象棋"
+	desc = "等等，什么？"
 	icon_state = "chess"
 
 obj/structure/interactive/bar_sign/the_coderbus
-	name = "The Coderbus"
-	desc = "Wait what?"
+	name = "程序员整活巴士"
+	desc = "等等，什么？"
 	icon_state = "the_coderbus"
 
 obj/structure/interactive/bar_sign/vlads_salad_bar
-	name = "Vlad's Salad Bar"
-	desc = "Wait what?"
+	name = "弗拉德沙拉吧"
+	desc = "等等，什么？"
 	icon_state = "vlads_salad_bar"
 
 obj/structure/interactive/bar_sign/traitor_joes
-	name = "Traitor Joe's"
-	desc = "For all your traitor needs!"
+	name = "叛徒乔商店"
+	desc = "满足你的一切叛徒需求！"
 	icon_state = "traitor_joes"
 
 obj/structure/interactive/bar_sign/the_ale_nath
-	name = "The Ale'Nath"
-	desc = "Wait what?"
+	name = "艾尔·纳斯"
+	desc = "等等，什么？"
 	icon_state = "the_ale_nath"
 
 obj/structure/interactive/bar_sign/the_greytide
-	name = "The Greytide"
-	desc = "Wait what?"
+	name = "灰潮"
+	desc = "等等，什么？"
 	icon_state = "the_greytide"

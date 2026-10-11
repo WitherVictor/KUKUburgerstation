@@ -2,9 +2,9 @@ obj/structure/interactive/misc/ //TODO: RENAME THIS ENTIRE CATEGORY
 	icon = 'icons/obj/structure/misc.dmi'
 
 obj/structure/interactive/misc/tv
-	name = "tv"
-	desc = "Don't sit too close to the television!"
-	desc_extended = "A vintage television as decor to liven up the area."
+	name = "电视机"
+	desc = "别坐得离电视太近！"
+	desc_extended = "一台复古电视机，用作装饰，为周围增添生气。"
 	icon_state = "tv"
 	collision_flags = FLAG_COLLISION_WALL
 	collision_bullet_flags = FLAG_COLLISION_BULLET_INORGANIC
@@ -13,9 +13,9 @@ obj/structure/interactive/misc/tv
 
 
 obj/structure/interactive/misc/dresser
-	name = "dresser"
-	desc = "Undie dispenser."
-	desc_extended = "A clothing dresser as decor to liven up the area. Doesn't actually dispense underwear, sadly."
+	name = "衣柜"
+	desc = "内裤分配器。"
+	desc_extended = "一只用作装饰的衣柜，为周围增添生气。可惜它其实不会发放内裤。"
 	icon_state = "dresser"
 	collision_flags = FLAG_COLLISION_WALL
 	collision_bullet_flags = FLAG_COLLISION_BULLET_INORGANIC
@@ -41,22 +41,22 @@ obj/structure/interactive/misc/dresser/chargen/clicked_on_by_object(var/mob/acti
 	return TRUE
 
 obj/structure/interactive/misc/toilet
-	name = "toilet"
-	desc = "*obligatory poop joke*"
-	desc_extended = "A toilet as decor to liven up the area. Warranty void if used for swirlies."
+	name = "马桶"
+	desc = "*此处应有大便笑话*"
+	desc_extended = "一只用作装饰的马桶，为周围增添生气。把别人的头按进去冲水会导致保修失效。"
 	icon_state = "toilet"
 
 obj/structure/interactive/misc/urinal
-	name = "urinal"
-	desc = "*obligatory piss joke*"
-	desc_extended = "A urinal on the wall as decor to liven up the area."
+	name = "小便池"
+	desc = "*此处应有小便笑话*"
+	desc_extended = "一只挂墙式小便池，用作装饰，为周围增添生气。"
 	icon_state = "urinal"
 	plane = PLANE_MOVABLE
 
 obj/structure/interactive/misc/mirror
-	name = "mirror"
-	desc = "Magic mirror on the wall, who is the most robust of them all?"
-	desc_extended = "Stand in front of this to change your appearance."
+	name = "镜子"
+	desc = "魔镜魔镜告诉我，谁是这里最能打的人？"
+	desc_extended = "站在镜子前可以改变你的外貌。"
 	icon_state = "mirror"
 	plane = PLANE_MOVABLE
 
@@ -91,9 +91,9 @@ obj/structure/interactive/misc/mirror/chargen/Uncrossed(atom/movable/O)
 
 
 /obj/structure/interactive/misc/mirror/cracked
-	name = "cracked mirror"
-	desc = "It's broken."
-	desc_extended = "Who could even use this?"
+	name = "破裂的镜子"
+	desc = "它碎了。"
+	desc_extended = "这还能给谁用？"
 	icon_state = "mirror_broke"
 
 /obj/structure/interactive/misc/mirror/cracked/chargen/Crossed(atom/movable/O,atom/OldLoc)
@@ -112,15 +112,15 @@ obj/structure/interactive/misc/mirror/chargen/Uncrossed(atom/movable/O)
 
 
 obj/structure/interactive/misc/curtain_open
-	name = "curtain"
-	desc = "For warding off peeping toms."
-	desc_extended = "A curtain attached to the wall/ceiling as decor to liven up the area."
+	name = "帘子"
+	desc = "用于挡住偷窥者的视线。"
+	desc_extended = "一幅固定在墙上或天花板上的帘子，用作装饰，为周围增添生气。"
 	icon_state = "curtain_open"
 	alpha = 175
 
 obj/structure/interactive/misc/sink
-	name = "sink"
-	desc = "Wa'tr. Wa'tr free o' charge."
-	desc_extended = "A standing sink as decor to liven up the area. What? You actually expected this to dispense water free of charge?"
+	name = "洗手池"
+	desc = "水儿。不要钱的水儿。"
+	desc_extended = "一座立式洗手池，用作装饰，为周围增添生气。怎么？你还真指望它免费供水？"
 	icon_state = "sink"
 	plane = PLANE_MOVABLE

@@ -1,7 +1,7 @@
 /obj/structure/interactive/fire_alarm
-	name = "fire alarm"
-	desc = "'Pull in case of emergency' Hence, keep pulling it forever."
-	desc_extended = "Decorative item. Currently has no use."
+	name = "火警报警器"
+	desc = "‘紧急时拉动’，所以要一直拉个不停。"
+	desc_extended = "装饰物，目前没有实际用途。"
 	icon = 'icons/obj/structure/fire_alarm.dmi'
 	icon_state = "fire_alarm"
 

@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/armor/xeno
-	name = "xeno chitin armor"
+	name = "异形几丁质护甲"
 	icon = 'icons/obj/item/clothing/suit/xeno_armor.dmi'
-	desc = "Wearing the corpses of your enemies since 5000 BC."
-	desc_extended = "Makeshift armor made from the corpse of a xeno. Offers some pretty robust protection for its size and weight."
+	desc = "自公元前5000年起，把敌人的尸体穿在身上。"
+	desc_extended = "用异形尸体制成的简易护甲。以它的体积和重量而言，防护相当不错。"
 
 	protected_limbs = list(BODY_TORSO,BODY_GROIN,BODY_LEG_LEFT,BODY_LEG_RIGHT)
 

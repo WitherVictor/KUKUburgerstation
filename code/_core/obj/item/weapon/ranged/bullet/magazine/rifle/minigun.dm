@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/minigun
-	name = "\improper 4.6mm Gatling Gun"
-	desc = "It costs 10,000 credits to fire this weapon for 12 seconds."
-	desc_extended = "A behemoth of a weapon, handle with care."
+	name = "\improper 4.6mm加特林机枪"
+	desc = "让这把武器开火12秒，要花10,000信用点。"
+	desc_extended = "武器中的庞然大物，小心使用。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/minigun.dmi'
 	icon_state = "inventory"
 	value = 10000

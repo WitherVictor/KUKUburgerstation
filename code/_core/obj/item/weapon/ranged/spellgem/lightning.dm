@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/lightning
-	name = "holy lightning bolt spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a fast moving holy lightning bolt that deals damage to other living targets in an area if it hits another living target."
+	name = "神圣闪电法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射快速移动的神圣闪电。命中生物时，还会伤害周围其他生物。"
 	icon_state = "damage"
 	shoot_delay = 2
 

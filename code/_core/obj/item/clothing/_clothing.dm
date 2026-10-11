@@ -1,6 +1,6 @@
 /obj/item/clothing
-	name = "CLOTHING"
-	desc = "THIS IS CLOTHING."
+	name = "服装"
+	desc = "这是一件服装。"
 	worn_layer = LAYER_MOB
 	var/flags_clothing = FLAG_CLOTHING_NONE
 

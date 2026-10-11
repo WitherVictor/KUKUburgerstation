@@ -1,5 +1,5 @@
 /obj/item/cable
-	name = "cable"
+	name = "电缆"
 	icon_state = "inventory"
 	icon = 'icons/obj/item/cable.dmi'
 
@@ -35,9 +35,9 @@
 			A.health.update_health()
 
 	if(caller == A.loc)
-		caller.visible_message("\The [caller.name] replaces the wires in their [A.name].")
+		caller.visible_message("[caller.name]更换了自己[A.name]里的电线。")
 	else
-		caller.visible_message("\The [caller.name] replaces the wires in \the [A.loc.name]'s [A.name].")
+		caller.visible_message("[caller.name]更换了[A.loc.name]的[A.name]里的电线。")
 
 	add_item_count(-1)
 
@@ -49,11 +49,11 @@
 	INTERACT_CHECK_OTHER(target)
 
 	if(!is_organ(target) && !is_living(target))
-		caller.to_chat("You can't treat this!")
+		caller.to_chat("你无法修理这个目标！")
 		return FALSE
 
 	if(!target || !target.health)
-		caller.to_chat("You can't treat this!")
+		caller.to_chat("你无法修理这个目标！")
 		return FALSE
 
 	return TRUE

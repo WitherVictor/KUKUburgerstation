@@ -6,6 +6,6 @@
 	color = "#4C3323"
 
 /obj/structure/interactive/door/airlock/magic
-	name = "magic airlock"
+	name = "魔法气闸门"
 	color = "#8034B2"
 	fill_color = "#458CBA"

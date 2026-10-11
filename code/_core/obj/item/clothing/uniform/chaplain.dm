@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/priest
-	name = "priest's uniform"
-	desc = "The void of space turns men to religion, especially if they get thrown into it without a suit."
-	desc_extended = "The uniform of NT approved Chaplains, which already tells you they're rarely gonna be good chaplains."
+	name = "牧师制服"
+	desc = "太空的虚无会让人皈依宗教，尤其是没穿宇航服就被扔进去的时候。"
+	desc_extended = "NT认证牧师的制服。光凭这点，你就知道他们多半算不上好牧师。"
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 	icon = 'icons/obj/item/clothing/uniforms/religious.dmi'
 

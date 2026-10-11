@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/citizen
-	name = "solarian citizen"
-	desc = "RIP."
+	name = "太阳系公民"
+	desc = "安息吧。"
 
 	dna = /dna/human
 

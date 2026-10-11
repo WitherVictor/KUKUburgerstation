@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/bullet/magazine/misc/browning
-	name = "mounted.50 machine gun"
+	name = "架设式.50机枪"
 	desc = ""
 	desc_extended = ""
 	icon = 'icons/obj/item/weapons/ranged/mech.dmi'
@@ -76,5 +76,5 @@
 	if(angle2dir_cardinal(get_angle(activator,object))==linked_gun.dir)
 		return TRUE
 	else
-		activator.to_chat(span("warning","Your finger slips!"))
+		activator.to_chat(span("warning","你的手指打滑了！"))
 	return FALSE

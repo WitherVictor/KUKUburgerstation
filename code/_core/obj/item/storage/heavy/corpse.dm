@@ -1,6 +1,6 @@
 /obj/item/storage/heavy/corpse
-	name = "pile of bones"
-	desc = "There might be something inside."
+	name = "骨堆"
+	desc = "里面可能有东西。"
 	icon = 'icons/obj/effects/death.dmi'
 	icon_state = "remains"
 

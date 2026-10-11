@@ -1,15 +1,15 @@
 /obj/item/clothing/underbottom/underwear
-	name = "underwear"
-	desc = "Use this to cover your naughty bits."
-	desc_extended = "A regular pait of underwear."
+	name = "内裤"
+	desc = "用来遮住你的私密部位。"
+	desc_extended = "一条普通内裤。"
 
 	size = SIZE_1
 
 
 /obj/item/clothing/underbottom/underwear/boxers
-	name = "boxers"
-	desc = "Smaller pants that go under your regular pants."
-	desc_extended = "Just a regular pair of boxers."
+	name = "平角内裤"
+	desc = "穿在普通裤子里面的小裤子。"
+	desc_extended = "一条普通的平角内裤。"
 	icon = 'icons/obj/item/clothing/underwear/boxers_new.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 
@@ -37,15 +37,15 @@
 	color = COLOR_CRIMSON
 
 /obj/item/clothing/underbottom/underwear/boxers/heart
-	name = "heart boxers"
-	desc = "The layabout's classic."
-	desc_extended = "A pair of boxers with hearts on them."
+	name = "爱心平角内裤"
+	desc = "懒汉的经典款。"
+	desc_extended = "一条印有爱心图案的平角内裤。"
 	icon = 'icons/obj/item/clothing/underwear/heart_boxers.dmi'
 
 /obj/item/clothing/underbottom/underwear/long_johns
-	name = "long johns"
-	desc = "Comfy, if slightly old fashioned."
-	desc_extended = "A pair of very long underwear."
+	name = "秋裤"
+	desc = "虽然有点老派，但穿着舒服。"
+	desc_extended = "一条很长的贴身内裤。"
 	icon = 'icons/obj/item/clothing/underwear/long_john.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 
@@ -60,8 +60,8 @@
 
 /obj/item/clothing/underbottom/underwear/panty
 	icon = 'icons/obj/item/clothing/underwear/panty.dmi'
-	desc = "The choice of women, femme boys, and Programmers alike"
-	desc_extended = "A pair of slim underwear."
+	desc = "女性、女装男孩和程序员共同的选择。"
+	desc_extended = "一条窄小的内裤。"
 
 	dyeable = TRUE
 
@@ -82,17 +82,17 @@
 	return ..()
 
 /obj/item/clothing/underbottom/underwear/panty/neko
-	name = "cursed cat panty"
-	desc = "who the fuck what the fuck"
-	desc_extended = "why"
+	name = "诅咒猫咪内裤"
+	desc = "谁他妈弄的，这他妈是什么。"
+	desc_extended = "为什么。"
 	icon = 'icons/obj/item/clothing/underwear/neko_panty.dmi'
 
 	value = 500
 
 /obj/item/clothing/underbottom/underwear/thong
-	name = "thong"
-	desc = "Underwear, but just barely."
-	desc_extended = "Possibly the barest minimum legal requirement to qualify as underwear."
+	name = "丁字裤"
+	desc = "勉强算条内裤。"
+	desc_extended = "大概刚好够得上法律对内裤的最低要求。"
 	icon = 'icons/obj/item/clothing/underwear/thong.dmi'
 	color = COLOR_WHITE
 
@@ -103,9 +103,9 @@
 	value = 30
 
 /obj/item/clothing/underbottom/underwear/loincloth
-	name = "loincloth"
-	desc = "Emergency Underwear"
-	desc_extended = "For when you don't have sewing tools available, this will do."
+	name = "兜裆布"
+	desc = "应急内裤。"
+	desc_extended = "没有缝纫工具时，用这个凑合吧。"
 	icon = 'icons/obj/item/clothing/underwear/loincloth.dmi'
 
 	value = 5

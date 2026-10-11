@@ -1,7 +1,7 @@
 /obj/structure/metal_foam
-	name = "metal foam"
-	desc = "Foamy!"
-	desc_extended = "An annoying block of metal foam meant for patching holes like a lazy person. Slightly fragile."
+	name = "金属泡沫"
+	desc = "泡沫十足！"
+	desc_extended = "一块碍事的金属泡沫，专供懒人拿来堵洞。有点脆弱。"
 
 	icon = 'icons/obj/structure/metal_foam.dmi'
 	icon_state = "0,0"

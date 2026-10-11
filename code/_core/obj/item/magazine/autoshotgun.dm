@@ -1,7 +1,7 @@
 /obj/item/magazine/shotgun_auto
-	name = "\improper 20g bulldog magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains slug shells for a magazine-fed bullpup shotgun. Make sure you're trying to use the right caliber."
+	name = "\improper 20号斗牛犬弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有弹匣供弹式无托霰弹枪使用的弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/auto_shotgun.dmi'
 	icon_state = "auto"
 	bullet_count_max = 9
@@ -29,7 +29,7 @@
 	value = 15
 
 /obj/item/magazine/shotgun_auto/slug
-	name = "\improper 20g bulldog magazine magazine (slug)"
+	name = "\improper 20号斗牛犬弹匣（独头弹）"
 	ammo = /obj/item/bullet_cartridge/shotgun_20/slug
 
 	rarity = RARITY_UNCOMMON

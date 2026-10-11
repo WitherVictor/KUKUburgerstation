@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/mummy
-	name = "mummy wraps"
-	desc = "Doesn't actually stop bleeding."
-	desc_extended = "For when you want to look like an ancient corpse, or a person who's been in a really bad accident."
+	name = "木乃伊裹布"
+	desc = "其实不能止血。"
+	desc_extended = "想扮成古尸，或者刚遭遇严重事故的人？这套裹布很适合你。"
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 	icon = 'icons/obj/item/clothing/uniforms/mummy.dmi'
 

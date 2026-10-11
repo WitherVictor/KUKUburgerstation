@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/ak47
-	name = "\improper 7.62x39mm KA-47 rifle"
-	desc = "Ancient, with an upgrade."
-	desc_extended = "The Kinetic Action rifle is an old relic created by ancient Space Slavs to be used for lesser colonies in proxy wars. The absurdly large cartridge packs a pretty accurate and deadly punch."
+	name = "\improper 7.62x39mm KA-47步枪"
+	desc = "古老，但升级过。"
+	desc_extended = "动能驱动步枪是古代太空斯拉夫人为小型殖民地的代理人战争制造的旧时代遗物。大得离谱的弹药能打出相当精准、致命的一击。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/762_rifle.dmi'
 	icon_state = "inventory"
 	value = 1600
@@ -91,8 +91,8 @@
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/ak47/mod
 	name = "\improper 7.62x39mm AKSU Type-13"
-	desc = "Tiny tiny gun."
-	desc_extended = "A much more compact variant of the AK Type-13 used and modified by Space Pirates where compactness is a much higher priority than handling and recoil management."
+	desc = "小小的小枪。"
+	desc_extended = "太空海盗使用并改装的AK Type-13紧凑版本。对他们而言，枪身紧凑远比操控性和后坐力控制更重要。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/762_carbine.dmi'
 	icon_state = "inventory"
 	value = 2900

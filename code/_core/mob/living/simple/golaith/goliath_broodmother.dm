@@ -1,5 +1,5 @@
 /mob/living/simple/goliath/broodmother
-	name = "goliath broodmother"
+	name = "歌利亚育母"
 	boss_icon_state = "broodmother"
 	icon = 'icons/mob/living/simple/lavaland/goliath_broodmother.dmi'
 	icon_state = "broodmother"

@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/ninja
-	name = "ninja eye mask"
-	desc = "Made in Space China."
-	desc_extended = "A cheaply made plastic ninja mask. Supposed to make you go faster."
+	name = "忍者眼罩"
+	desc = "太空中国制造。"
+	desc_extended = "制作廉价的塑料忍者眼罩。据说能让你跑得更快。"
 	icon = 'icons/obj/item/clothing/masks/ninja.dmi'
 
 	armor = /armor/mechanical

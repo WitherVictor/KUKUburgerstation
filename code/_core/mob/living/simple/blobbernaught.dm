@@ -1,8 +1,8 @@
 /mob/living/simple/blobbernaught
 
-	name = "blobbernaught"
-	desc = "Protector of blobs."
-	desc_extended = "This hulking mass of organic material only has one purpose: to protect the blob."
+	name = "异形菌毯巨卫"
+	desc = "异形菌毯的守护者。"
+	desc_extended = "这团庞大的有机物只有一个使命：保护异形菌毯。"
 	icon = 'icons/mob/living/simple/blob.dmi'
 	icon_state = "blobbernaut"
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/f50cal
-	name = ".357 spell gem"
-	desc = "The source of all... lead?"
-	desc_extended = "Shoots two homing .357 bullets at a time. Wicked."
+	name = ".357法术宝石"
+	desc = "一切……铅弹的源泉？"
+	desc_extended = "每次发射两枚追踪目标的.357子弹。够狠。"
 	icon_state = "damage"
 
 	rarity = RARITY_LEGENDARY

@@ -1,7 +1,7 @@
 /obj/item/currency/dosh
-	name = "dosh"
-	desc = "Dosh can be exchanged for goods and services."
-	desc_extended = "A paper note used by Solarian government citizens that represents the relationship between supply and demand and the stability of the economic market and- yeah it's dosh."
+	name = "太阳系纸钞"
+	desc = "纸钞可以用来换取商品和服务。"
+	desc_extended = "太阳系政府公民使用的纸币，代表着供需关系、经济市场的稳定以及——好吧，就是钱。"
 	icon = 'icons/obj/item/currency/dosh.dmi'
 	icon_state = "null"
 
@@ -31,4 +31,4 @@
 
 /obj/item/currency/dosh/update_sprite()
 	. = ..()
-	name = "dosh ($[amount*5])"
+	name = "太阳系纸钞（$[amount*5]）"

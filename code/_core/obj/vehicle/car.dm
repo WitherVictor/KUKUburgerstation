@@ -1,5 +1,5 @@
 /mob/living/vehicle/car
-	name = "car"
+	name = "汽车"
 	icon = 'icons/obj/vehicles/car.dmi'
 	icon_state = "Trueno"
 

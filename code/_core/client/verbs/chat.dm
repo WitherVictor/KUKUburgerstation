@@ -34,7 +34,7 @@
 	if(is_living(mob))
 		var/mob/living/L = mob
 		if(L.dead)
-			to_chat(span("warning","You cannot use OOC when dead."))
+			to_chat(span("warning","死亡时不能使用OOC频道。"))
 			return FALSE
 
 	if(!check_spam(src))

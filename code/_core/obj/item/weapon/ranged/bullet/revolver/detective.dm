@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/detective
-	name = "\improper .38 Special revolver"
-	desc = "The detective's trusty sidearm. Uses .38 revolver rounds."
-	desc_extended = "Private Detectives still carry snub-nose revolvers due to them packing a bigger punch in a much smaller guns. Can be useful in a pinch."
+	name = "\improper .38特种左轮手枪"
+	desc = "侦探信赖的配枪，使用.38左轮手枪弹。"
+	desc_extended = "私人侦探仍会携带短管左轮手枪，因为它们能在小巧的枪身中提供可观火力。危急时刻很管用。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/38.dmi'
 	icon_state = "inventory"
 	value = 300

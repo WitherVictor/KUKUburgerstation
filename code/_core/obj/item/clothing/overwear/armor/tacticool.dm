@@ -1,9 +1,9 @@
 // Tacticool or slavic armor for hardened ruskies. Thank you stalkerbuild and Parrot very cool.
 /obj/item/clothing/overwear/armor/slavticool
-	name = "\improper 'Slav-safe' LLC body armor"
+	name = "\improper 斯拉夫卫士有限公司防护背心"
 	icon = 'icons/obj/item/clothing/suit/squad_armor.dmi'
-	desc = "Protecting against the capitalism since 2238."
-	desc_extended = "A sturdy chestplate with shoulder- and knee pads of bulletproof armor. Should protect against most small arms fire. Feels lighter than standard-issued vests."
+	desc = "自2238年起，守护你免受资本主义侵害。"
+	desc_extended = "结实的防弹胸甲，配有肩甲和护膝，应该能抵御大多数轻武器射击。感觉比标准配发背心更轻。"
 
 	protected_limbs = list(BODY_TORSO,BODY_GROIN,BODY_LEG_LEFT,BODY_LEG_RIGHT)
 
@@ -16,10 +16,10 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/head/helmet/slavticool
-	name = "\improper 'Slav-safe' LLC combat helmet"
+	name = "\improper 斯拉夫卫士有限公司战斗头盔"
 	icon = 'icons/obj/item/clothing/hats/squad_helmet.dmi'
-	desc = "Protecting against the capitalism since 2238."
-	desc_extended = "Durable combat helmet made out of complex plastic-based bullet-resistant materials and ceramics. Should save you from a bullet or five."
+	desc = "自2238年起，守护你免受资本主义侵害。"
+	desc_extended = "用复杂的塑料基防弹材料和陶瓷制成的耐用战斗头盔，应该能替你挡下一颗，或者五颗子弹。"
 
 	armor = /armor/military/medium/hard
 
@@ -30,8 +30,8 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/head/helmet/slavticool/thermal
-	name = "\improper 'Slav-safe' LLC thermal combat helmet"
-	desc_extended = "Durable combat helmet made out of complex plastic-based bullet-resistant materials and ceramics. Should save you from a bullet or five. This model has been outfitted with an advanced thermal monocle."
+	name = "\improper 斯拉夫卫士有限公司热成像战斗头盔"
+	desc_extended = "用复杂的塑料基防弹材料和陶瓷制成的耐用战斗头盔，应该能替你挡下一颗，或者五颗子弹。这款还配备了先进的单眼热成像镜。"
 
 	additional_clothing = list(/obj/item/clothing/glasses/thermal/thermal_rev)
 

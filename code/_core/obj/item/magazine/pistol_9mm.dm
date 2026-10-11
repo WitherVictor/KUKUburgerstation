@@ -1,7 +1,7 @@
 /obj/item/magazine/pistol_9mm
-	name = "\improper 9mm pistol magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 9mm手枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/9mmpistol.dmi'
 	icon_state = "9mm"
 	bullet_count_max = 18
@@ -37,9 +37,9 @@
 
 /obj/item/magazine/pistol_9mm/hp
 
-	name = "\improper 9mm HP pistol magazine"
+	name = "\improper 9mm空尖弹手枪弹匣"
 	icon = 'icons/obj/item/magazine/9mmpistol_hp.dmi'
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber. This one has a hollow point tip."
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。这款装有空尖弹。"
 
 	ammo = /obj/item/bullet_cartridge/pistol_9mm/hp
 	ammo_surplus = /obj/item/bullet_cartridge/pistol_9mm/surplus

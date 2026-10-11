@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/clothes
-	name = "clothes vendor"
+	name = "服装售货机"
 	icon_state = "clothes"
 	icon_state_broken = null
 	icon_state_off = null
@@ -7,7 +7,7 @@
 	icon_state_panel = null
 
 /obj/structure/interactive/vending/clothes/dye
-	name = "dye vendor"
+	name = "染料售货机"
 	icon_state = "dye"
 	stored_types = list(
 		/obj/item/slime_core/red,
@@ -19,7 +19,7 @@
 	)
 
 /obj/structure/interactive/vending/clothes/shirt
-	name = "shirt vendor"
+	name = "上衣售货机"
 	icon_state = "shirt"
 	stored_types = list(
 		/obj/item/clothing/shirt/normal,
@@ -33,7 +33,7 @@
 	)
 
 /obj/structure/interactive/vending/clothes/shirt/soccer
-	name = "soccer uniform vendor"
+	name = "足球队服售货机"
 	stored_types = list(
 		/obj/item/clothing/pants/shorts/red_soccer,
 		/obj/item/clothing/shirt/normal/tee/soccer/red,
@@ -48,7 +48,7 @@
 
 
 /obj/structure/interactive/vending/clothes/overshirt
-	name = "overwear vendor"
+	name = "外套售货机"
 	icon_state = "overshirt"
 	stored_types = list(
 		/obj/item/clothing/overwear/coat/hoodie,
@@ -59,7 +59,7 @@
 
 
 /obj/structure/interactive/vending/clothes/underwear
-	name = "underwear vendor"
+	name = "内衣售货机"
 	icon_state = "underwear"
 	stored_types = list(
 		/obj/item/clothing/feet/socks/ankle,
@@ -77,7 +77,7 @@
 
 
 /obj/structure/interactive/vending/clothes/pants
-	name = "pants vendor"
+	name = "长裤售货机"
 	icon_state = "pants"
 	stored_types = list(
 		/obj/item/clothing/pants/normal,
@@ -91,7 +91,7 @@
 	)
 
 /obj/structure/interactive/vending/clothes/shoes
-	name = "shoes vendor"
+	name = "鞋靴售货机"
 	icon_state = "shoe"
 	stored_types = list(
 		/obj/item/storage/shoebox/black,
@@ -100,7 +100,7 @@
 	)
 
 /obj/structure/interactive/vending/clothes/accessories
-	name = "accessories vendor"
+	name = "配饰售货机"
 	icon_state = "accessories"
 	stored_types = list(
 		/obj/item/clothing/back/storage/satchel/poly,
@@ -123,7 +123,7 @@
 	)
 
 /obj/structure/interactive/vending/clothes/hat
-	name = "hat vendor"
+	name = "帽子售货机"
 	icon_state = "hat"
 	stored_types = list(
 		/obj/item/clothing/head/hat/beret,

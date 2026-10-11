@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/zombie
-	name = "zombie"
+	name = "僵尸"
 	ai = /ai/advanced/zombie
 
 	health = /health/mob/living/advanced/zombie/

@@ -1,5 +1,5 @@
 /area/lz_001/forest
-	name = "\improper Boreal Forest"
+	name = "\improper 北方森林"
 	icon_state = "forrest"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 	sunlight_freq = 8
@@ -10,7 +10,7 @@
 	sound_environment = ENVIRONMENT_PLAIN
 
 /area/lz_001/forest/village
-	name = "\improper First Light Village"
+	name = "\improper 晨曦村"
 	icon_state = "village"
 
 /area/lz_001/forest/village/interior
@@ -20,19 +20,19 @@
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_001/forest/village/interior/bar
-	name = "\improper Bar"
+	name = "\improper 酒吧"
 	icon_state = "bar"
 
 /area/lz_001/forest/village/interior/chemistry
-	name = "\improper First Light Chemistry"
+	name = "\improper 晨曦村化学室"
 	icon_state = "chem"
 
 /area/lz_001/forest/village/interior/mining
-	name = "\improper First Light Mining"
+	name = "\improper 晨曦村采矿部"
 	icon_state = "mining"
 
 /area/lz_001/forest/village/interior/armory
-	name = "\improper First Light Armory"
+	name = "\improper 晨曦村军械库"
 	icon_state = "armory"
 
 

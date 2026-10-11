@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue/that_guy
-	name = "That Guy"
-	desc = "Hey, it's that guy. From the demon hunting posters. Haha they're going to kill me."
+	name = "那个家伙"
+	desc = "嘿，是猎魔海报上的那个家伙。哈哈，他要杀我了。"
 
 	sex = MALE
 	gender = MALE

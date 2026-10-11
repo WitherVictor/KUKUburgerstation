@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/clown
-	name = "right clown shoe"
-	desc = "A part of the prankster's attire. Damn, they're huge!"
-	desc_extended = "Squeaky footsteps included for all your clowning needs. Honk!"
+	name = "小丑右鞋"
+	desc = "恶作剧者行头的一部分。该死，这鞋真大！"
+	desc_extended = "自带吱吱作响的脚步声，满足你的一切小丑需求。叭！"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -24,7 +24,7 @@
 	return original_footsteps
 
 /obj/item/clothing/feet/shoes/clown/left
-	name = "left clown shoe"
+	name = "小丑左鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

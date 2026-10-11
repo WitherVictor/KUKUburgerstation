@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/bullpup_sol
 	name = "\improper 5.56mm BP-SOL-S"
-	desc = "A taste of SOL weaponry."
-	desc_extended = "Nicknamed \"Solaris\", the BP-SOL-S is a bullpup rifle with an internal suppressor and a high rate of fire. Often prefered by soldiers who don't like hearing damage."
+	desc = "尝尝太阳系武器的滋味。"
+	desc_extended = "BP-SOL-S绰号‘索拉里斯’，是一把内置消音器、射速很高的无托步枪，深受不想损伤听力的士兵喜爱。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/556.dmi'
 	icon_state = "inventory"
 	value = 2000

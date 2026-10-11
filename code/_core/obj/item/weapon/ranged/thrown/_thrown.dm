@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/thrown
-	name = "thrown weapon"
-	desc = "Special type for thrown."
-	desc_extended = "Left click throws one. Actually throwing the whole thing throws all of them."
+	name = "投掷武器"
+	desc = "专门用来投掷的武器。"
+	desc_extended = "左键点击投出一枚；使用投掷操作则会把整叠一起扔出去。"
 
 	icon_state = "inventory"
 
@@ -47,10 +47,10 @@
 			break
 
 /obj/item/weapon/ranged/thrown/kunai
-	name = "kunai"
+	name = "苦无"
 	icon = 'icons/obj/item/weapons/ranged/thrown/kunai.dmi'
-	desc = "Just like my japanese animes!"
-	desc_extended = "A deadly bladed throwing weapon that pierces flesh and armor."
+	desc = "就像我看的日本动画里那样！"
+	desc_extended = "致命的带刃投掷武器，能够刺穿血肉和护甲。"
 
 	ranged_damage_type = /damagetype/ranged/thrown/kunai
 

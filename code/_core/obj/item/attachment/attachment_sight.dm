@@ -1,10 +1,10 @@
 /obj/item/attachment/sight
-	name = "sight attachment"
+	name = "瞄具配件"
 
 /obj/item/attachment/sight/red_dot
-	name = "red dot sight"
-	desc = "What's wrong with ironsights?"
-	desc_extended = "A red dot sight finely adjusted to increase accuracy by giving a clear sightline to the target, making the gun easier to handle while also increasing precision, at the cost of higher movement spread and recoil."
+	name = "红点瞄具"
+	desc = "机械瞄具哪里不好了？"
+	desc_extended = "精细校准的红点瞄具，让目标瞄准点更加清晰，减轻技能不足造成的散布并提高精度，代价是移动散布增加。"
 	icon_state = "red_dot_sight"
 
 	attachment_stats = list(
@@ -17,9 +17,9 @@
 	value = 200
 
 /obj/item/attachment/sight/laser_sight
-	name = "laser sight"
-	desc = "Laser beams!"
-	desc_extended = "A high power laser sight used for increasing the precision of the gun. Reduces movement spread and increases precision at the cost of making the gun a little more difficult to handle."
+	name = "激光瞄具"
+	desc = "激光束！"
+	desc_extended = "提高枪械精度的高功率激光瞄具。减少移动散布并提高精度，代价是对操控技能的要求略高。"
 	icon_state = "laser_sight"
 
 	attachment_stats = list(
@@ -31,9 +31,9 @@
 	value = 300
 
 /obj/item/attachment/sight/quickfire_adapter
-	name = "quickfire adapter"
-	desc = "Pew faster."
-	desc_extended = "A complex weapon attachment that significantly increases the fire rate of the gun at the cost of decreasesd precision and increased recoil and recoil spread."
+	name = "速射适配器"
+	desc = "咻得更快。"
+	desc_extended = "复杂的武器配件，大幅提高射速，代价是精度降低、后坐散布增加。"
 	icon_state = "quickfire_adapter"
 
 	value = 800
@@ -46,9 +46,9 @@
 	)
 
 /obj/item/attachment/sight/scope
-	name = "rifle scope (x1.5)"
-	desc = "What's wrong with ironsights?"
-	desc_extended = "A bulky rifle scope that increases the zoom range of the weapon, making the weapon more precise. Significantly increases movement spread and heat spread as a penalty."
+	name = "步枪瞄准镜（1.5倍）"
+	desc = "机械瞄具哪里不好了？"
+	desc_extended = "笨重的步枪瞄准镜，提高武器的瞄准倍率和精度，代价是移动散布与后坐散布明显增加。"
 	icon_state = "x2_scope"
 
 	attachment_stats = list(
@@ -61,9 +61,9 @@
 	value = 400
 
 /obj/item/attachment/sight/scope/medium
-	name = "rifle scope (x2)"
-	desc = "What's wrong with ironsights?"
-	desc_extended = "A bulky rifle scope that increases the zoom range of the weapon, making the weapon more precise. Significantly increases movement spread and heat spread as a penalty."
+	name = "步枪瞄准镜（2倍）"
+	desc = "机械瞄具哪里不好了？"
+	desc_extended = "笨重的步枪瞄准镜，提高武器的瞄准倍率和精度，代价是移动散布与后坐散布明显增加。"
 	icon_state = "x3_scope"
 
 	attachment_stats = list(
@@ -76,9 +76,9 @@
 	value = 800
 
 /obj/item/attachment/sight/scope/large
-	name = "sniper scope (x4)"
-	desc = "What's wrong with ironsights?"
-	desc_extended = "A bulky sniper scope that increases the zoom range of the weapon, making the weapon more precise. Significantly increases movement spread and heat spread as a penalty."
+	name = "狙击瞄准镜（4倍）"
+	desc = "机械瞄具哪里不好了？"
+	desc_extended = "笨重的狙击瞄准镜，提高武器的瞄准倍率和精度，代价是移动散布与后坐散布明显增加。"
 	icon_state = "x4_scope"
 
 	attachment_stats  = list(
@@ -91,9 +91,9 @@
 	value = 1600
 
 /obj/item/attachment/sight/scope/massive
-	name = "sniper scope (x6)"
-	desc = "What's wrong with ironsights?"
-	desc_extended = "An absolutely bulky sniper scope that increases the zoom range of the weapon, making the weapon more precise. Significantly increases movement spread and heat spread as a penalty."
+	name = "狙击瞄准镜（6倍）"
+	desc = "机械瞄具哪里不好了？"
+	desc_extended = "极其笨重的狙击瞄准镜，提高武器的瞄准倍率和精度，代价是移动散布与后坐散布明显增加。"
 	icon_state = "x8_scope"
 
 	attachment_stats  = list(
@@ -114,9 +114,9 @@
 	removable = FALSE
 
 /obj/item/attachment/sight/targeting_computer
-	name = "targeting computer"
-	desc = "For nerds."
-	desc_extended = "A series of complex and expensive circuits all packed into a metal holographic display triangle that does nearly all the complex calculations for you. Decreases accuracy penalties from low skill."
+	name = "瞄准计算机"
+	desc = "书呆子专用。"
+	desc_extended = "将复杂昂贵的电路塞进三角形金属全息显示器中，替你完成几乎所有复杂计算，减轻技能不足带来的精度惩罚。"
 	icon_state = "targeting_device"
 
 	value = 800

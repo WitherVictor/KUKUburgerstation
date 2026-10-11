@@ -1,8 +1,8 @@
 /obj/item/doctor_bag
-	name = "doctor's bag"
-	desc = "HOLD STILL!"
-	desc_extended = "A highly advanced set of surgery tools and general medical equipment to make you excel at your duties of being a doctor. \
-	Heals the target's limb by a fixed amount based on your medical skill. Treatment power and time is also based on your medical skill, and is improved if the target is laying down. Cannot be used to self-treat. Using this while taking the Medical Doctor job can earn you credits if you treat your fellow man. Clicking on it will let you change healing modes."
+	name = "医生医疗包"
+	desc = "别乱动！"
+	desc_extended = "一套先进的手术工具与通用医疗设备，助你胜任医生职责。\
+	可治疗目标部位的外伤与烧伤；治疗强度和耗时受医疗技能及工具状态影响，目标躺下时效果更好。不能用于自我治疗。担任医生时，治疗其他玩家可赚取信用点。点击医疗包即可切换单个部位和全身治疗模式。"
 	icon = 'icons/obj/item/doctor_bag.dmi'
 	icon_state = "inventory"
 
@@ -39,9 +39,9 @@
 
 	heal_all_limbs = !heal_all_limbs
 	if(heal_all_limbs)
-		activator.to_chat(span("notice","You decide to heal all limbs at once, at the cost of healing power."))
+		activator.to_chat(span("notice","你决定同时治疗全身，但单个部位的治疗效果会减弱。"))
 	else
-		activator.to_chat(span("warning","You decide to focus on healing a singular limb."))
+		activator.to_chat(span("warning","你决定集中治疗单个部位。"))
 
 	return TRUE
 
@@ -51,7 +51,7 @@
 		var/mob/living/doctor_mob = activator
 		var/mob/living/treating_mob = object
 		if(doctor_mob == treating_mob)
-			activator.to_chat(span("warning","The surgical procedure is too complex to self-treat!"))
+			activator.to_chat(span("warning","手术操作太复杂了，无法用于自我治疗！"))
 			return TRUE
 
 		if(!heal_all_limbs && is_advanced(activator))
@@ -65,8 +65,8 @@
 			INTERACT_CHECK
 			INTERACT_CHECK_OBJECT
 			activator.visible_message(
-				span("notice","[activator] begins treating [is_living(object.loc) ? "[object.loc]'s " : ""][object]..."),
-				span("notice","You begin treating [object].")
+				span("notice","[activator]开始治疗[is_living(object.loc) ? "[object.loc]的" : ""][object]……"),
+				span("notice","你开始治疗[object]。")
 			)
 			PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(3),src::treat(),activator,object) //Takes 3 seconds to get started.
 			PROGRESS_BAR_CONDITIONS(activator,src,src::can_be_treated(),activator,object)
@@ -82,7 +82,7 @@
 	INTERACT_CHECK_NO_DELAY(target)
 
 	if(!target.health)
-		activator.to_chat(span("warning","You can't treat [target]!"))
+		activator.to_chat(span("warning","你无法治疗[target]！"))
 		return FALSE
 
 	var/mob/living/actual_target
@@ -92,26 +92,26 @@
 		actual_target = target.loc
 
 	if(!actual_target || !allow_helpful_action(activator.loyalty_tag,actual_target))
-		activator.to_chat(span("warning","You can't treat [target]!"))
+		activator.to_chat(span("warning","你无法治疗[target]！"))
 		return FALSE
 
 	if(organic)
 		if(!target.health.organic)
-			activator.to_chat(span("warning","[src] can only treat organic limbs!"))
+			activator.to_chat(span("warning","[src]只能治疗有机部位！"))
 			return FALSE
 	else
 		if(target.health.organic)
-			activator.to_chat(span("warning","[src] can only treat non-organic limbs!"))
+			activator.to_chat(span("warning","[src]只能修理非有机部位！"))
 			return FALSE
 
 	if(target.health.damage[BRUTE] <= 0 && target.health.damage[BURN] <= 0)
 		if(is_organ(target))
 			var/obj/item/organ/O = target
 			if(O.bleeding <= 0)
-				activator.to_chat(span("notice","[O] doesn't need any more treatment!"))
+				activator.to_chat(span("notice","[O]已经不需要继续治疗了！"))
 				return FALSE
 		else
-			activator.to_chat(span("notice","[target] doesn't need any more treatment!"))
+			activator.to_chat(span("notice","[target]已经不需要继续治疗了！"))
 			return FALSE
 
 	return TRUE
@@ -168,22 +168,22 @@
 				var/currency_gain = min(target_as_player.insurance,CEILING(total_healed*income_multiplier,1))
 				if(currency_gain > 0)
 					target_as_player.insurance -= currency_gain
-					target_as_player.to_chat(span("notice","Your insurance was charged [currency_gain] credits for the treatment by [P]."))
+					target_as_player.to_chat(span("notice","[P]为你治疗，已从你的医疗保险中扣除[currency_gain]信用点。"))
 				currency_gain += CEILING(total_healed*0.25*income_multiplier,1) //Bonus
 				var/currency_given = P.adjust_currency(currency_gain,silent=TRUE)
 				if(currency_given > 0)
-					P.to_chat(span("notice","You were paid [currency_given] credits for treating [target_as_player]."))
+					P.to_chat(span("notice","你治疗了[target_as_player]，获得[currency_given]信用点报酬。"))
 
 	if(reagents && !reagents.contains_lethal)
 		var/reagent_transfer = min(10,reagents.volume_current)
 		reagents.transfer_reagents_to(healed_atom.reagents,reagent_transfer, activator = activator)
 
 	if(activator == target_as_living) //Self treatment.
-		activator.visible_message(span("notice","[activator] treats their [healed_atom]."),span("notice","You treat your [healed_atom]."))
+		activator.visible_message(span("notice","[activator]治疗了自己的[healed_atom]。"),span("notice","你治疗了自己的[healed_atom]。"))
 	else if(is_organ(healed_atom))
-		activator.visible_message(span("warning","[activator] treats [target_as_living]'s [healed_atom]."),span("notice","You treat [target_as_living]'s [healed_atom]."))
+		activator.visible_message(span("warning","[activator]治疗了[target_as_living]的[healed_atom]。"),span("notice","你治疗了[target_as_living]的[healed_atom]。"))
 	else
-		activator.visible_message(span("warning","[activator] treats [healed_atom]."),span("notice","You treat [healed_atom]."))
+		activator.visible_message(span("warning","[activator]治疗了[healed_atom]。"),span("notice","你治疗了[healed_atom]。"))
 
 
 	PROGRESS_BAR(activator,src,base_delay + max(0,added_delay*(1-medicine_power)),src::treat(),activator,healed_atom)

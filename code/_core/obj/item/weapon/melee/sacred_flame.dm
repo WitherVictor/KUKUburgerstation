@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/sacred_flame
-	name = "book of the sacred flame"
-	desc = "Hot!"
-	desc_extended = "A very dangerous tome that periodically ignites all hostile living beings in view while active. Also makes foor a good book for pummeling."
+	name = "圣焰之书"
+	desc = "烫！"
+	desc_extended = "非常危险的典籍，激活后会周期性点燃附近视野内的敌对生物。拿来砸人也是一本好书。"
 
 
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/inferno.dmi'
@@ -26,12 +26,12 @@
 
 	if(!SSthinking.all_thinkers[src])
 		start_thinking(src)
-		caller.to_chat(span("notice","You activate \the [src.name]'s passive igniting effect."))
+		caller.to_chat(span("notice","你开启了[src.name]的被动点燃效果。"))
 		if(is_living(caller))
 			var/mob/living/liveCaller = caller
 			leveled_effect = round((liveCaller.get_skill_power(SKILL_MAGIC_DEFENSIVE,0,1,2)*5) + (liveCaller.get_skill_power(SKILL_PRAYER,0,1,2)*5) + ((quality - 100)/5)) //15 is the "max" when 100 skill is your max
 	else
-		caller.to_chat(span("notice","You deactivate \the [src.name]'s passive igniting effect."))
+		caller.to_chat(span("notice","你关闭了[src.name]的被动点燃效果。"))
 		stop_thinking(src)
 
 	return TRUE

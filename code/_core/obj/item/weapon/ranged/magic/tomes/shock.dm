@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/shock
-	name = "tome of shock spray"
-	desc = "Sprays an enemy with shock."
-	desc_extended = "Costs mana to use."
+	name = "电击喷射法术典籍"
+	desc = "向敌人喷射电击。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 2
 
 

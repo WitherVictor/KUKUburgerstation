@@ -1,5 +1,5 @@
 /obj/item/clothing/overwear/hardsuit/
-	name = "hardsuit"
+	name = "硬式宇航服"
 	item_slot = SLOT_TORSO_ARMOR
 
 	protected_limbs = list(BODY_TORSO,BODY_GROIN,BODY_ARM_LEFT,BODY_ARM_RIGHT,BODY_HAND_LEFT,BODY_HAND_RIGHT,BODY_LEG_LEFT,BODY_LEG_RIGHT,BODY_FOOT_LEFT,BODY_FOOT_RIGHT)

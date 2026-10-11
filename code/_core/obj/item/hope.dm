@@ -1,7 +1,7 @@
 /obj/item/hope
-	name = "beacon of hope"
-	desc = "For when all is lost."
-	desc_extended = "A magical beacon that can be used to resurrect any allied humanoid to full health, once every 15 minutes. Use on a corpse to trigger resurrection."
+	name = "希望信标"
+	desc = "绝境中的希望。"
+	desc_extended = "神奇的信标，可复活由玩家控制的类人生物并使其恢复健康。对遗体使用即可复活；复活后信标会显示耗尽状态，约15分钟后提示恢复就绪。"
 
 	rarity = RARITY_MYTHICAL
 
@@ -36,7 +36,7 @@
 		update_sprite()
 		if(make_sound)
 			var/turf/T = get_turf(src)
-			T.visible_message(span("notice","\The [src.name] chimes as it is ready to be used again."))
+			T.visible_message(span("notice","[src.name]发出清脆的铃声，提示已经恢复就绪。"))
 			play_sound('sound/weapons/magic/creation.ogg',T)
 	else
 		CALLBACK("\ref[src]_check_ressurection",SECONDS_TO_DECISECONDS(60),src,src::check_resurrection())
@@ -52,7 +52,7 @@
 	var/mob/living/advanced/A = object
 
 	if(!A.dead || !A.is_player_controlled())
-		activator.to_chat(span("warning","You can't seem to use this on \the [A.name]..."))
+		activator.to_chat(span("warning","你似乎无法对[A.name]使用它……"))
 		return FALSE
 
 	A.resurrect()
@@ -60,8 +60,8 @@
 	play_sound('sound/weapons/magic/heal.ogg',get_turf(object))
 
 	A.visible_message(
-		span("notice","\The [A.name] was resurrected with \the [src.name] by \the [activator.name]!"),
-		span("notice","You were resurrected with \the [src.name] by \the [activator.name]!")
+		span("notice","[activator.name]用[src.name]复活了[A.name]！"),
+		span("notice","[activator.name]用[src.name]复活了你！")
 	)
 
 	next_resurrect = world.realtime + SECONDS_TO_DECISECONDS(60)*15 //15 minutes.

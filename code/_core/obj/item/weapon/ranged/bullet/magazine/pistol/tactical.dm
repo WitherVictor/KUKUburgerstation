@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/tactical
-	name = ".45 1984 Tactical pistol"
-	desc = "No rubber rounds here; it's all lethal."
-	desc_extended = "A common pistol used by modern police forces as well as some private military corporations. Also liked by collectors and Space Colonists."
+	name = ".45 1984战术手枪"
+	desc = "这里没有橡胶弹，全是致命弹药。"
+	desc_extended = "现代警队和部分私人军事公司常用的手枪，也受到收藏家和太空殖民者的喜爱。"
 	value = 700
 
 	tier = 2
@@ -76,11 +76,11 @@
 	return max(0,0.01 - (0.03 * L.get_skill_power(SKILL_RANGED)))
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/tactical/mod
-	name = ".45 1984 Pistol MOD"
-	desc_extended = "The feeding ramp is polished to a mirror sheen. The slide's been reinforced. And the interlock with the frame is tightened for added precision. \
-	The sight system is original, too. The thumb safety is extended to make it easier on the finger. A long-type trigger with non-slip grooves. A ring hammer... \
-	The base of the trigger guard's been filed down for a higher grip. And not only that, nearly every part of this gun has been expertly crafted and customized. \
-	Where'd you get something like this?"
+	name = ".45 1984手枪改装型"
+	desc_extended = "供弹坡打磨得光可鉴人，套筒经过加固，与枪身的配合也更加紧密，以提高精度。\
+	瞄准系统也是独家设计。拇指保险经过加长，操作更顺手。带防滑槽的长型扳机，还有环形击锤……\
+	扳机护圈根部经过锉削，可以握得更高。不止如此，这把枪几乎每个部件都经过精心制作和定制。\
+	这种好东西，你从哪儿弄来的？"
 	value = 2000
 	icon = 'icons/obj/item/weapons/ranged/pistol/45_2.dmi'
 	shoot_delay = 1.9

@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/meson
-	name = "meson goggles"
-	desc = "MESON!"
-	desc_extended = "Some almost magical goggles that allow you to see floors and walls through walls."
+	name = "介子护目镜"
+	desc = "介子！"
+	desc_extended = "一副近乎魔法的护目镜，让你隔着墙壁看见地板和墙体。"
 	icon = 'icons/obj/item/clothing/glasses/meson.dmi'
 
 	armor = /armor/mechanical
@@ -15,9 +15,9 @@
 	item_slot_layer = 2
 
 /obj/item/clothing/glasses/meson/night_vision
-	name = "night vision meson goggles"
-	desc = "MESON!"
-	desc_extended = "Some almost magical goggles that allow you to see floors and walls through walls. This one can also see in the dark better."
+	name = "夜视介子护目镜"
+	desc = "介子！"
+	desc_extended = "一副近乎魔法的护目镜，让你隔着墙壁看见地板和墙体。这款还改善了暗处的视野。"
 	icon = 'icons/obj/item/clothing/glasses/meson_night_vision.dmi'
 
 

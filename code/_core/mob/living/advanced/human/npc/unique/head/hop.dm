@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/head/hop
-	name = "Head of Personnel"
-	desc = "All access, please."
+	name = "人事主管"
+	desc = "麻烦给我全权限。"
 	species = "human"
 	dialogue_id = /dialogue/npc/hop/
 	sex = FEMALE

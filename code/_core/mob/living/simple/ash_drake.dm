@@ -1,5 +1,5 @@
 /mob/living/simple/ash_drake
-	name = "ash drake"
+	name = "灰烬飞龙"
 	boss_icon_state = "ash_drake"
 	icon = 'icons/mob/living/simple/lavaland/ashdrake.dmi'
 	icon_state = "living"

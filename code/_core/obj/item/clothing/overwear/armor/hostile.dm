@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/hostile
-	name = "hostile environment suit"
-	desc = "RIP AND TEAR."
-	desc_extended = "An extremely heavy duty armor set only meant for the badest of badasses."
+	name = "恶劣环境护甲"
+	desc = "撕裂，屠戮。"
+	desc_extended = "一套极为厚重的护甲，专为狠人中的狠人打造。"
 	icon = 'icons/obj/item/clothing/suit/hostile.dmi'
 
 	armor = /armor/military/heavy/hard

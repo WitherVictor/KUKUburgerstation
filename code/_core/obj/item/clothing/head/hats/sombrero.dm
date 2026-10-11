@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/sombrero
-	name = "sombrero"
+	name = "墨西哥宽檐草帽"
 	icon = 'icons/obj/item/clothing/hats/sombrero.dmi'
-	desc = "Hola!"
-	desc_extended = "A large brimmed straw hat designed to keep yourself in the shade."
+	desc = "你好！"
+	desc_extended = "一顶用于遮阳的宽檐草帽。"
 
 	armor = /armor/cloth/summer
 
@@ -11,9 +11,9 @@
 	value = 75
 
 /obj/item/clothing/head/hat/sombrero/green
-	name = "green sombrero"
+	name = "绿色墨西哥宽檐草帽"
 	icon = 'icons/obj/item/clothing/hats/sombrero_green.dmi'
 
 /obj/item/clothing/head/hat/sombrero/pink
-	name = "pink sombrero"
+	name = "粉色墨西哥宽檐草帽"
 	icon = 'icons/obj/item/clothing/hats/sombrero_pink.dmi'

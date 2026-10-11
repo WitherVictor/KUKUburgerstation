@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/dynamic
-	name = "\improper dynamic energy pistol"
-	desc = "Technically a revolver!"
-	desc_extended = "A strangly designed energy pistol. For a gunslinger who wants a little more laser in their life."
+	name = "\improper 动态能量手枪"
+	desc = "严格来说是左轮手枪！"
+	desc_extended = "设计奇特的能量手枪，适合想让生活里多点激光的枪手。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/dynamic_revolver.dmi'
 	icon_state = "inventory"
 	value = 700

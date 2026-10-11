@@ -1,7 +1,7 @@
 /obj/item/clothing/hands/gloves/captain
-	name = "right glove of the captain"
-	desc = "Be a comdom with these."
-	desc_extended = "Fancy one-of-a-kind glove, issued to the station Captain. Don't lose the other one!"
+	name = "站长右手套"
+	desc = "戴上它，做个混蛋站长。"
+	desc_extended = "发给空间站站长的独一无二的华丽手套。别把另一只弄丢了！"
 	icon = 'icons/obj/item/clothing/gloves/captain.dmi'
 
 	icon_state = "inventory_right"
@@ -22,9 +22,9 @@
 	rarity = RARITY_LEGENDARY
 
 /obj/item/clothing/hands/gloves/captain/left
-	name = "left glove of the captain"
-	desc = "Be a comdom with these."
-	desc_extended = "Fancy one-of-a-kind glove, issued to the station Captain. Don't lose the other one!"
+	name = "站长左手套"
+	desc = "戴上它，做个混蛋站长。"
+	desc_extended = "发给空间站站长的独一无二的华丽手套。别把另一只弄丢了！"
 
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"

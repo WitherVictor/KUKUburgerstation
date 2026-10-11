@@ -1,7 +1,7 @@
 /obj/item/clothing/hands/gloves/engineering
-	name = "right engineering rig glove"
-	desc = "Spacewalk with these."
-	desc_extended = "Part of the engineering rigsuit. Don't lose them!"
+	name = "工程宇航服右手套"
+	desc = "戴着它去太空漫步。"
+	desc_extended = "工程硬式宇航服的配套手套。别弄丢了！"
 	icon = 'icons/obj/item/clothing/gloves/engineering_rig_gloves.dmi'
 
 	icon_state = "inventory_right"
@@ -22,9 +22,9 @@
 	item_slot_layer = 3
 
 /obj/item/clothing/hands/gloves/engineering/left
-	name = "left engineering rig glove"
-	desc = "Spacewalk with these."
-	desc_extended = "Part of the engineering rigsuit. Don't lose them!"
+	name = "工程宇航服左手套"
+	desc = "戴着它去太空漫步。"
+	desc_extended = "工程硬式宇航服的配套手套。别弄丢了！"
 
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"

@@ -1,7 +1,7 @@
 /obj/item/magazine/thompson
-	name = "\improper .45 ACP drum magazine."
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .45 ACP弹鼓"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/thompson.dmi'
 	icon_state = "thompson"
 	bullet_count_max = 100 // smg perversion

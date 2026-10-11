@@ -2,9 +2,9 @@ obj/structure/interactive/atmospherics
 
 
 obj/structure/interactive/atmospherics/vent
-	name = "vent"
-	desc = "Supplies oxygen. Or spicy air."
-	desc_extended = "Decorative item. Currently has no use."
+	name = "通风口"
+	desc = "供应氧气，或者呛人的空气。"
+	desc_extended = "装饰物，目前没有实际用途。"
 	icon = 'icons/obj/structure/atmos.dmi'
 	icon_state = "vent_1"
 
@@ -16,9 +16,9 @@ obj/structure/interactive/atmospherics/vent
 	layer = LAYER_FLOOR_VENT
 
 obj/structure/interactive/atmospherics/scrubber
-	name = "scrubber"
-	desc = "Law 4: Oxygen is harmful to humans."
-	desc_extended = "Decorative item. Currently has no use."
+	name = "气体过滤器"
+	desc = "第四定律：氧气对人类有害。"
+	desc_extended = "装饰物，目前没有实际用途。"
 	icon = 'icons/obj/structure/atmos.dmi'
 	icon_state = "scrubber_1"
 
@@ -30,9 +30,9 @@ obj/structure/interactive/atmospherics/scrubber
 	layer = LAYER_FLOOR_VENT
 
 obj/structure/interactive/atmospherics/air_alarm
-	name = "air alarm"
-	desc = "'Pull in case of emergency' Hence, keep pulling it forever."
-	desc_extended = "Decorative item. Currently has no use."
+	name = "空气警报器"
+	desc = "“紧急时拉下”，所以一直拉就对了。"
+	desc_extended = "装饰物，目前没有实际用途。"
 	icon = 'icons/obj/structure/atmos.dmi'
 	icon_state = "air_alarm"
 
@@ -60,9 +60,9 @@ obj/structure/interactive/atmospherics/air_alarm/update_overlays()
 
 
 obj/structure/interactive/atmospherics/fan
-	name = "fan"
-	desc = "Law 4: Oxygen is harmful to humans."
-	desc_extended = "Decorative item. Currently has no use."
+	name = "风扇"
+	desc = "第四定律：氧气对人类有害。"
+	desc_extended = "装饰物，目前没有实际用途。"
 	icon = 'icons/obj/structure/atmos.dmi'
 	icon_state = "fan_tiny"
 

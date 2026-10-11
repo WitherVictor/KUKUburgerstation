@@ -1,7 +1,7 @@
 /obj/structure/interactive/tendril
-	name = "necropolis tendril"
-	desc = "The source of all life in lavaland."
-	desc_extended = "A very dangerous tendril that creates life, as well as destroys it. Killing the surrounding fauna will destroy the tendril and grant a reward."
+	name = "亡灵墓城触须"
+	desc = "熔岩地带一切生命的源头。"
+	desc_extended = "一种极其危险的触须，既能创造生命，也能毁灭生命。消灭它生成的怪物，完成击杀计数并清空守卫后，触须便会毁灭并留下奖励。"
 
 	icon = 'icons/obj/structure/tendril.dmi'
 	icon_state = "idle"
@@ -39,7 +39,7 @@
 
 /obj/structure/interactive/tendril/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","\The [src.name] has [max(deaths_until_loot,0)] spawns left, with [length(tracked_mobs_length)] monsters protecting it...")
+	. += div("notice","[src.name]的剩余击杀计数：[max(deaths_until_loot,0)]；当前有[tracked_mobs_length]只怪物守护着它……")
 
 /obj/structure/interactive/tendril/Destroy()
 	. = ..()

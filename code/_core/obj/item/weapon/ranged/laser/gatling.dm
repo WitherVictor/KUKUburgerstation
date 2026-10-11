@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/gatling
-	name = "L055-Prototype Gatling Laser"
-	desc = "It costs 400.000 watts to fire this weapon for 12 seconds."
-	desc_extended = "A behemoth of a weapon, now in laser form. Handle with care."
+	name = "L055原型加特林激光枪"
+	desc = "让这把武器开火12秒，要用上400,000瓦的功率。"
+	desc_extended = "武器中的庞然大物，如今换成了激光版本。小心使用。"
 	icon = 'icons/obj/item/weapons/ranged/laser/gatling_new.dmi'
 	value = 10000
 

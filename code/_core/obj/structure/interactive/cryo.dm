@@ -1,6 +1,6 @@
 obj/structure/interactive/cryopod
-	name = "cryopod"
-	desc = "What the hell is in there?"
+	name = "冷冻休眠舱"
+	desc = "里面到底是什么玩意儿？"
 	icon = 'icons/obj/structure/cryo.dmi'
 	icon_state = "cell_off"
 

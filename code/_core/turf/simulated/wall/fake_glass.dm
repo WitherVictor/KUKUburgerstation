@@ -1,5 +1,5 @@
 /turf/simulated/wall/fake_glass
-	name = "glass window"
+	name = "玻璃窗"
 	icon = 'icons/turf/fake.dmi'
 	icon_state = "line"
 	opacity = 0

@@ -1,7 +1,7 @@
 /obj/structure/interactive/blob/core
-	name = "blob core"
-	desc = "SHIT TYRONE HACK THE FUCKING AUTOLATHES."
-	desc_extended = "The most important segment of the blob, acting as the brains. Destroying this will disable the blob and prevent it from spreading!"
+	name = "异形菌毯核心"
+	desc = "操，泰隆，快黑进那些他妈的自动车床！"
+	desc_extended = "异形菌毯最重要的部分，相当于它的大脑。摧毁核心就能让菌毯失去活性，阻止它继续扩散！"
 	icon_state = "core"
 	health_base = 500
 	var/list/obj/structure/interactive/blob/linked_walls = list()

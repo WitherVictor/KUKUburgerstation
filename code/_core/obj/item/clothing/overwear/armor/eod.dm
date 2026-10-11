@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/eod
-	name = "bomb suit"
-	desc = "Commonly used to assault bank heisters, as well as protect against explosives."
-	desc_extended = "A large, extremely protective suit, made specifically to defend against explosives, but works well enough against bullets too."
+	name = "防爆服"
+	desc = "常用于突袭银行劫匪，也能抵御爆炸。"
+	desc_extended = "体积庞大、防护极强的套装，专门用于抵御爆炸，对子弹也有不错的防护。"
 	icon = 'icons/obj/item/clothing/suit/eod_suit.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 

@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/armor/bone
-	name = "bone armor"
+	name = "骨制护甲"
 	icon = 'icons/obj/item/clothing/suit/bone_armor.dmi'
-	desc = "I've got a BONE to pick with ya!"
-	desc_extended = "Armor made from bones. Metal as fuck."
+	desc = "我要跟你好好算一笔骨头账！"
+	desc_extended = "用骨头制成的护甲，重金属范儿十足。"
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 
 

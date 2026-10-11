@@ -1,13 +1,13 @@
 obj/structure/interactive/computer
-	name = "computer"
-	desc = "Beep boop."
-	desc_extended = "Operates things, depending on what the console is."
+	name = "电脑"
+	desc = "哔哔啵啵。"
+	desc_extended = "用于操控设备，具体功能取决于控制台类型。"
 	icon = 'icons/obj/structure/computer.dmi'
 	var/on = TRUE
 	plane = PLANE_MOVABLE
 
 obj/structure/interactive/computer/console
-	name = "computer console"
+	name = "电脑控制台"
 	var/computer_type = "generic"
 	var/keyboard_type = "generic_key"
 	icon_state = "computer"
@@ -46,14 +46,14 @@ obj/structure/interactive/computer/console/update_overlays()
 		add_overlay(I)
 
 obj/structure/interactive/computer/console/laptop
-	name = "personal laptop"
+	name = "个人笔记本电脑"
 	icon_state = "laptop"
 
 
 obj/structure/interactive/computer/console/old
-	name = "old computer"
-	desc = "It doesn't even work. What gives?!"
-	desc_extended = "An old, non-functional computer."
+	name = "旧电脑"
+	desc = "它压根不能用。搞什么？！"
+	desc_extended = "一台已经无法工作的旧电脑。"
 	pixel_y = 10
 
 	icon_state = "oldcomp"
@@ -62,9 +62,9 @@ obj/structure/interactive/computer/console/old
 
 
 obj/structure/interactive/computer/console/old/cargo/
-	name = "old cargo computer"
-	desc = "At least it works."
-	desc_extended = "An old computer meant to handle cargo orders."
+	name = "旧货运电脑"
+	desc = "至少它还能用。"
+	desc_extended = "一台用于处理货运订单的旧电脑。"
 
 obj/structure/interactive/computer/console/old/cargo/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
 
@@ -87,17 +87,17 @@ obj/structure/interactive/computer/console/old/cargo/clicked_on_by_object(var/mo
 
 
 obj/structure/interactive/computer/console/medical
-	name = "medical console"
+	name = "医疗控制台"
 	computer_type = "medcomp"
 	keyboard_type = "med_key"
 
 obj/structure/interactive/computer/console/old/cargo
-	name = "cargo computer"
+	name = "货运电脑"
 	computer_type = "library"
 	keyboard_type = ""
 
 obj/structure/interactive/computer/console/engineering
-	name = "engineering console"
+	name = "工程控制台"
 
 obj/structure/interactive/computer/console/engineering/Generate()
 	computer_type = pick("power","solar","tank","area_atmos","alert:1")

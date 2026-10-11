@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/
-	name = "bullet"
-	desc = "Try not to bite it."
-	desc_extended = "Bullets can be put in guns with the matching ammo type."
+	name = "子弹"
+	desc = "尽量别用牙咬。"
+	desc_extended = "可装入弹药类型匹配的枪械。"
 	rarity = RARITY_COMMON
 
 	icon_state = "bullet"
@@ -119,10 +119,10 @@
 	. = ..()
 
 	if(is_spent)
-		. += div("notice","It is spent.")
+		. += div("notice","已经击发过了。")
 
 	if(amount > 1)
-		. += div("notice","It contains [amount] [src.name]\s.")
+		. += div("notice","数量：[amount]。")
 
 
 /obj/item/bullet_cartridge/proc/spend_bullet(var/mob/activator,var/bonus_misfire_chance=0)
@@ -161,12 +161,12 @@
 
 	var/bullets_to_add = min(amount,transfer_target.amount_max - transfer_target.get_ammo_count())
 	if(bullets_to_add <= 0)
-		activator.to_chat(span("notice","You have difficulty holding this many bullets at once."))
+		activator.to_chat(span("notice","你很难一次拿住这么多弹药。"))
 		return FALSE
 
 	src.transfer_amount_to(transfer_target,bullets_to_add)
 	if(talk)
-		activator.to_chat(span("notice","You add [bullets_to_add] bullet\s into \the [transfer_target] pile."))
+		activator.to_chat(span("notice","你将[bullets_to_add]份弹药并入了[transfer_target]这一堆。"))
 
 	return TRUE
 
@@ -185,7 +185,7 @@
 		transfer_target.update_sprite()
 
 	if(messages)
-		activator.to_chat(span("notice","You insert [bullets_to_add] bullet\s into \the [transfer_target.name]."))
+		activator.to_chat(span("notice","你向[transfer_target.name]装入了[bullets_to_add]发弹药。"))
 
 	return TRUE
 

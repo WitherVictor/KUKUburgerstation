@@ -1,5 +1,5 @@
 /obj/structure/interactive/door/airlock/lz_420
-	desc_extended = "It opens and closes."
+	desc_extended = "能开也能关。"
 
 /obj/structure/interactive/door/airlock/lz_420/
 	color = COLOR_STEEL

@@ -1,7 +1,7 @@
 /obj/structure/interactive/fulton
-	name = "fulton"
-	desc = "Extraction in progress..."
-	desc_extended = "A deployed fulton pack, about to take something or someone up and away."
+	name = "富尔顿回收气球"
+	desc = "正在回收……"
+	desc_extended = "一个已部署的富尔顿回收包，即将把某件物品或某个人带上天空。"
 
 	icon = 'icons/obj/effects/fulton.dmi'
 	icon_state = "none"
@@ -41,7 +41,7 @@
 		var/mob/living/L = stored_movable
 		L.add_status_effect(STUN,30,30)
 
-	visible_message(span("danger","\The [src.name] fails to extract \the [stored_movable.name]!"))
+	visible_message(span("danger","[src.name]未能回收[stored_movable.name]！"))
 
 	stored_movable = null
 
@@ -57,7 +57,7 @@
 
 
 /obj/structure/interactive/fulton/proc/fly_away()
-	visible_message(span("danger","\The [src.name] flies up in the air, bringing \the [stored_movable.name] with it!"))
+	visible_message(span("danger","[src.name]飞上天空，带走了[stored_movable.name]！"))
 	play_sound('sound/effects/fultext_launch.ogg',get_turf(src))
 	animate(src,pixel_z = TILE_SIZE*VIEW_RANGE,alpha=0,color="#000000",time=SECONDS_TO_DECISECONDS(1),easing=BACK_EASING | EASE_IN)
 	CALLBACK("\ref[src]_sell",SECONDS_TO_DECISECONDS(2),src,src::sell_stored())
@@ -75,7 +75,7 @@
 		var/mob/living/L = stored_movable
 		if(L.is_player_controlled() && L.loyalty_tag == "NanoTrasen")
 
-			L.to_chat(span("danger","You were sold back to NanoTrasen and forced to pay your taxes!"))
+			L.to_chat(span("danger","你被卖回了纳米传讯，还被强制补缴了税款！"))
 			if(is_player(L))
 				var/mob/living/advanced/player/P = L
 				. += -P.adjust_currency(-3000)
@@ -90,7 +90,7 @@
 				return 0
 			return .
 		else
-			L.to_chat(span("danger","You were captured! Better luck next time!"))
+			L.to_chat(span("danger","你被俘虏了！下次好运！"))
 		. = CEILING(L.get_value(),1)
 		L.death(TRUE)
 	else
@@ -100,7 +100,7 @@
 		var/mob/living/advanced/player/P = owner
 		. = FLOOR(.*0.25,1)
 		var/added_funds = P.adjust_currency(.)
-		P.to_chat(span("notice","You've been given a share of [nice_number(added_funds)] credits for selling \the [stored_movable.name]."))
+		P.to_chat(span("notice","出售[stored_movable.name]后，你分得了[nice_number(added_funds)]信用点。"))
 
 	qdel(stored_movable)
 	stored_movable = null
@@ -111,16 +111,16 @@
 	if(is_player(M))
 		var/mob/living/advanced/player/P = M
 		if(P.loyalty_tag == "NanoTrasen" && P.dead)
-			activator.to_chat(span("warning","NanoTrasen doesn't accept dead crewmembers!"))
+			activator.to_chat(span("warning","纳米传讯不接收死去的船员！"))
 			return FALSE
 		return TRUE
 
 	if(!M.is_safe_to_delete(check_loc = FALSE))
-		activator.to_chat(span("warning","Something seems to be preventing \the [M.name] from being extracted..."))
+		activator.to_chat(span("warning","似乎有什么阻止了对[M.name]的回收……"))
 		return FALSE
 
 	if(istype(M,/obj/structure/interactive/artifact))
-		activator.to_chat(span("warning","\The [M.name] is far to heavy to be lifted by \the Fulton System! "))
+		activator.to_chat(span("warning","[M.name]太重，富尔顿回收系统无法将其吊起！"))
 		return FALSE
 	return TRUE
 
@@ -134,7 +134,7 @@
 	M.force_move(src)
 	update_sprite()
 
-	activator.visible_message(span("danger","\The [activator.name] attaches \the [src.name] to \the [M.name]."),span("warning","You attach \the [src.name] to \the [M.name]."))
+	activator.visible_message(span("danger","[activator.name]把[src.name]连接到[M.name]上。"),span("warning","你把[src.name]连接到[M.name]上。"))
 
 	if(can_be_extracted(activator,M))
 		if(is_living(M))

@@ -1,5 +1,5 @@
 /obj/structure/table/window
-	name = "window support"
+	name = "窗户支座"
 	icon = 'icons/obj/structure/table/window.dmi'
 	icon_state = "table"
 

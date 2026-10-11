@@ -1,7 +1,7 @@
 /obj/item/clothing/ring
-	name = "ring"
-	desc = "For your finger."
-	desc_extended = "A shiny circular ring. Wonder what it does?"
+	name = "戒指"
+	desc = "戴在手指上。"
+	desc_extended = "一枚闪亮的圆环戒指。不知道有什么用？"
 
 	weight = 1
 	worn_layer = LAYER_MOB_CLOTHING_RING
@@ -11,45 +11,45 @@
 
 
 /obj/item/clothing/ring/copper
-	name = "copper ring"
+	name = "铜戒指"
 	icon = 'icons/obj/item/clothing/ring/copper.dmi'
 	protected_limbs = BODY_MAIN
-	desc = "A copper circular ring. Wonder what it does?"
+	desc = "一枚铜制圆环戒指。不知道有什么用？"
 	value = 750
 	armor = /armor/ring/copper
 
 /obj/item/clothing/ring/iron
-	name = "iron ring"
+	name = "铁戒指"
 	icon = 'icons/obj/item/clothing/ring/iron.dmi'
 	protected_limbs = BODY_MAIN
-	desc_extended = "A dull circular ring. Wonder what it does?"
+	desc_extended = "一枚暗淡的圆环戒指。不知道有什么用？"
 	value = 100
 
 /obj/item/clothing/ring/gold
-	name = "gold ring"
+	name = "金戒指"
 	icon = 'icons/obj/item/clothing/ring/gold.dmi'
 	protected_limbs = BODY_MAIN
-	desc = "A shiny circular ring. Wonder what it does?"
+	desc = "一枚闪亮的圆环戒指。不知道有什么用？"
 	value = 1500
 
 /obj/item/clothing/ring/silver
-	name = "silver ring"
+	name = "银戒指"
 	icon = 'icons/obj/item/clothing/ring/silver.dmi'
 	protected_limbs = BODY_MAIN
-	desc = "A tarnished circular ring. Wonder what it does?"
+	desc = "一枚失去光泽的圆环戒指。不知道有什么用？"
 	value = 2000
 
 /obj/item/clothing/ring/cat/
-	name = "cat ring"
-	desc = "A fuzzy circular ring. Wonder what it does?"
+	name = "猫咪戒指"
+	desc = "一枚毛茸茸的圆环戒指。不知道有什么用？"
 	protected_limbs = BODY_MAIN
 	icon = 'icons/obj/item/clothing/ring/cat.dmi'
 	value = 3000
 	value_burgerbux = 1
 
 /obj/item/clothing/ring/horsemen/
-	name = "ring of the Horsemen"
-	desc = "May your woes be many; and your days few."
+	name = "天启骑士之戒"
+	desc = "愿你苦难重重，时日无多。"
 	protected_limbs = BODY_MAIN
 	icon = 'icons/obj/item/clothing/ring/horsemen.dmi'
 	value = 2500

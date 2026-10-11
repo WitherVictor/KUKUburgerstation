@@ -1,8 +1,8 @@
 /obj/item/weapon/melee/mezzaluna
-	name = "mezzaluna"
+	name = "半月刀"
 
-	desc = "Haha, razor go schlurrk."
-	desc_extended = "A massive razor blade-like sword, wielded from horozontal handles mounted on either sides of the blade. Devestating when used with chopping attacks, though nigh useless for any other swing."
+	desc = "哈哈，剃刀唰地一下。"
+	desc_extended = "外形像巨型剃刀的剑，通过刀刃两侧的横向握柄使用。劈砍时威力惊人，其他挥击方式却几乎没用。"
 	icon = 'icons/obj/item/weapons/melee/swords/mezzaluna.dmi'
 	damage_type = /damagetype/melee/sword/mezzaluna
 

@@ -1,7 +1,7 @@
 /obj/structure/interactive/vending/random
-	name = "mystery vendor"
-	desc = "What a weird selection of things.."
-	desc_extended = "An old, surprisingly intact vendor that contains... what?"
+	name = "神秘售货机"
+	desc = "这些商品可真够奇怪的……"
+	desc_extended = "一台古旧却保存得出奇完好的售货机，里面装着……什么？"
 	icon_state = "sustenance"
 
 	stored_types = list()

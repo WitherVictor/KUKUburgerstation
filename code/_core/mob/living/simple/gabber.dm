@@ -2,7 +2,7 @@ var/global/list/valid_gabber_sound_files = list()
 
 
 /mob/living/simple/gabber
-	name = "Zechariah the Synthangel"
+	name = "合成天使撒迦利亚"
 	icon = 'icons/mob/living/simple/gabber.dmi'
 	icon_state = "idle"
 	pixel_w = -16
@@ -179,7 +179,43 @@ var/global/list/valid_gabber_sound_files = list()
 		if(T)
 			play_sound(valid_gabber_sound_files[text_to_say],T,volume=75,range_min=VIEW_RANGE*0.5,range_max=VIEW_RANGE*2)
 
-	src.do_say("[uppertext(text_to_say)].")
+	var/translated_voice = uppertext(text_to_say)
+	switch(text_to_say)
+		if("death")
+			translated_voice = "死亡"
+		if("die")
+			translated_voice = "死吧"
+		if("down")
+			translated_voice = "倒下"
+		if("away")
+			translated_voice = "退开"
+		if("escape")
+			translated_voice = "逃吧"
+		if("run")
+			translated_voice = "跑吧"
+		if("blocked")
+			translated_voice = "挡住了"
+		if("denied")
+			translated_voice = "休想"
+		if("failure")
+			translated_voice = "失败"
+		if("fool")
+			translated_voice = "蠢货"
+		if("you are not a threat")
+			translated_voice = "你构不成威胁"
+		if("but \[I am\]")
+			translated_voice = "但我能"
+		if("\[die\]")
+			translated_voice = "死吧"
+		if("challenge")
+			translated_voice = "来挑战我"
+		if("there is \[no escape\]")
+			translated_voice = "你无处可逃"
+		if("there will be \[no mercy\]")
+			translated_voice = "我绝不留情"
+		if("\[waste away\]")
+			translated_voice = "化为尘埃吧"
+	src.do_say("[translated_voice]。")
 
 	next_special_attack = world.time + SECONDS_TO_DECISECONDS(1)
 

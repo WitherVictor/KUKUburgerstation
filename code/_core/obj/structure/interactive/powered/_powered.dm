@@ -1,5 +1,5 @@
 /obj/structure/interactive/powered
-	name = "powered structure"
+	name = "用电构筑物"
 
 
 

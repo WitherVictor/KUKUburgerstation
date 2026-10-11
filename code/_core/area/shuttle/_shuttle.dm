@@ -1,5 +1,5 @@
 /area/shuttle
-	name = "shuttle area"
+	name = "穿梭机区域"
 	icon_state = "shuttle"
 	flags_area = FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
 	safe_storage = TRUE
@@ -21,31 +21,31 @@
 	enable_power_lights = ON
 
 /area/shuttle/flounder
-	name = "\improper NTS Flounder"
+	name = "NTS鲽鱼号"
 
 /area/shuttle/shuttlebus
-	name = "\improper NTS Shuttlebus"
+	name = "NTS穿梭巴士号"
 
 /area/shuttle/xeno
-	name = "\improper NTS Xenobus"
+	name = "NTS异形巴士号"
 
 /area/shuttle/minivan
-	name = "\improper NTS Minivan"
+	name = "NTS小面包车号"
 
 /area/shuttle/arrivals
-	name = "\improper NTS Arrivals"
+	name = "NTS抵达号"
 
 /area/shuttle/escape_pod_one
-	name = "\improper NTS Escape Pod 1"
+	name = "NTS逃生舱1号"
 
 /area/shuttle/escape_pod_two
-	name = "\improper NTS Escape Pod 2"
+	name = "NTS逃生舱2号"
 
 /area/shuttle/teal_bullet
-	name = "\improper NTS Teal"
+	name = "NTS青绿号"
 
 /area/shuttle/hugger
-	name = "\improper NTS Hugger"
+	name = "NTS拥抱者号"
 
 /area/shuttle/sidewinder
-	name = "\improper NTS Sidwinder"
+	name = "NTS响尾蛇号"

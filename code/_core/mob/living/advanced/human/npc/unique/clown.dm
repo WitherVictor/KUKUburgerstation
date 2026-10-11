@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/clown
-	name = "The Clown"
-	desc = "The one and only."
+	name = "小丑"
+	desc = "独一无二。"
 	species = "human"
 	sex = MALE
 	gender = MALE

@@ -1,15 +1,15 @@
 /obj/item/storage/pillbottle/consumer
 	icon = 'icons/obj/item/storage/consumer_pillbottle.dmi'
-	desc_extended = "An unlabelled consumer pill bottle that can hold up to 30 pills."
+	desc_extended = "没有标签的零售药片瓶，最多可装30片药。"
 	fill_icon_count = 0
 	color_lid = COLOR_WHITE
 	color_label = COLOR_WHITE
 	color_canister = COLOR_WHITE
 
 /obj/item/storage/pillbottle/consumer/chlorine
-	name = "chlorine tablet bottle"
-	desc = "A favorite of pool owners, war criminals and unsupervised children alike."
-	desc_extended = "Labelled to contain 20 5u chlorine tablets, for use in chemistry. Not fit for human consumption."
+	name = "氯片瓶"
+	desc = "泳池主人、战争罪犯和无人看管的孩子都爱它。"
+	desc_extended = "标签注明内含20片氯片，每片5单位，用于化学加工。不可食用。"
 	color_lid = COLOR_WHITE
 	color_label = COLOR_CYAN
 	color_canister = COLOR_WHITE
@@ -21,9 +21,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/consumer/carbon
-	name = "carbon tablet bottle"
-	desc = "Forget water, this is actually the stuff of life."
-	desc_extended = "Labelled to contain 20 5u carbon tablets, for use in chemistry. Not fit for human consumption."
+	name = "碳片瓶"
+	desc = "忘了水吧，这才是真正的生命之本。"
+	desc_extended = "标签注明内含20片碳片，每片5单位，用于化学加工。不可食用。"
 	color_lid = COLOR_GREY
 	color_label = COLOR_GREY_LIGHT
 	color_canister = COLOR_GREY_DARK
@@ -35,9 +35,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/consumer/painkillers
-	name = "assprin pill bottle"
-	desc = "To remove that pain in your ass!"
-	desc_extended = "Labelled to contain 20 10u assprin pills, a basic painkiller and for treating feelings of tenderness. Can hold up to 30 pills."
+	name = "屁司匹林药片瓶"
+	desc = "专治让你屁股疼的烦心事！"
+	desc_extended = "标签注明内含20片屁司匹林，每片5单位，是缓解疼痛和压痛的基础止痛药。最多可装30片药。"
 	color_lid = COLOR_RED
 	color_label = COLOR_YELLOW
 	color_canister = COLOR_BLUE
@@ -49,9 +49,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/consumer/charcoal
-	name = "charcoal tablet bottle"
-	desc = "Bad and naughty Chemists get their meth flushed out of their system!"
-	desc_extended = "Labelled to contain contain 20 5u charcoal tablets, a basic reagent to flush the bloodstream. Can hold up to 30 tablets."
+	name = "活性炭片瓶"
+	desc = "不听话的坏化学家，就得把体内的冰毒清个干净！"
+	desc_extended = "标签注明内含20片活性炭，每片5单位，是清除血液中药剂的基础药物。最多可装30片药。"
 	color_lid = COLOR_YELLOW
 	color_label = COLOR_GREY_LIGHT
 	color_canister = COLOR_BLACK

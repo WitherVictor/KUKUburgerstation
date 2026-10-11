@@ -1,5 +1,5 @@
 obj/structure/lattice
-	name = "support strut"
+	name = "支撑桁架"
 	icon = 'icons/obj/structure/lattice.dmi'
 	icon_state = "lattice"
 

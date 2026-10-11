@@ -1,8 +1,8 @@
 /turf/simulated/wall/ash
-	name = "ash wall"
+	name = "灰烬墙"
 
-	desc = "Gotta catch em all"
-	desc_extended = "A solid wall of ash."
+	desc = "一定要把它们全部收服！"
+	desc_extended = "一堵坚实的灰烬墙。"
 
 	real_icon = 'icons/turf/floor/rocky_ash.dmi'
 	real_icon_state = "floor"
@@ -36,9 +36,9 @@
 
 
 /turf/simulated/wall/ash/volcanic
-	name = "volcanic ash wall"
-	desc = "Gotta catch em all"
-	desc_extended = "A solid wall of volcanic ash."
+	name = "火山灰墙"
+	desc = "一定要把它们全部收服！"
+	desc_extended = "一堵坚实的火山灰墙。"
 	color = "#705F5F"
 	map_color = "#1C1714"
 

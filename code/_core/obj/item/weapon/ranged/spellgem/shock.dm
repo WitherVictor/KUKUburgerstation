@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/shock
-	name = "shock stream spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a short stream of fast-moving lightning."
+	name = "电击流法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "短暂喷射一道快速移动的闪电流。"
 	icon_state = "damage"
 
 	shoot_delay = 3

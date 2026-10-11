@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/advanced
-	name = "\improper 7.62mm SOL-15 battle rifle"
-	desc = "HOORAH!"
-	desc_extended = "An old rifle previously used by NanoTrasen when they were contractors of the SolGov army. The SOL-15 is an upgraded version of the SOL-14 rifle. This one features automatic fire capabilities and better recoil dampening."
+	name = "\improper 7.62mm SOL-15战斗步枪"
+	desc = "乌拉！"
+	desc_extended = "纳米传讯为太阳系政府军承包军事业务时期使用的老式步枪。SOL-15是SOL-14的升级版，具备自动射击能力，后坐力抑制也更好。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/762_3.dmi'
 	icon_state = "inventory"
 	value = 3500

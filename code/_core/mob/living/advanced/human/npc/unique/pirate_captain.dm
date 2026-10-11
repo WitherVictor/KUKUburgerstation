@@ -1,8 +1,8 @@
 /mob/living/advanced/npc/unique/pirate_captain
-	name = "Captain Condom"
+	name = "套套船长"
 	boss_icon_state = "captain"
-	desc = "The one and only."
-	desc = "The infamous Captain Condom. They lead a skeleton crew of murderous skeletons called the murderboners. Given their high status, they seem to be immune from everything, including Space Law and Stuns."
+	desc = "独一无二。"
+	desc = "臭名昭著的套套船长，率领一群嗜杀的骷髅海盗，号称嗜杀骷髅团。凭着崇高地位，他似乎能免受一切影响，连太空法和眩晕都不例外。"
 	species = "skeleton"
 	sex = MALE
 	gender = MALE
@@ -77,9 +77,9 @@
 			next_revive = world.time + SECONDS_TO_DECISECONDS(5)
 
 /mob/living/advanced/npc/unique/pirate_mate
-	name = "HOS COOL"
-	desc = "THE FUCKING COOLEST."
-	desc_extended = "Captain Condom's second in command, but we all know he's the one in charge."
+	name = "酷安主管"
+	desc = "他妈的，酷毙了。"
+	desc_extended = "套套船长的副手，不过谁都知道真正说了算的是他。"
 	species = "skeleton"
 	sex = MALE
 	gender = MALE
@@ -109,9 +109,9 @@
 	)
 
 /mob/living/advanced/npc/pirate_crew
-	name = "skeleton crew"
-	desc = "RATTLE ME BONES."
-	desc = "A skeleton pirate belonging to Captain Condom's crew of pirates."
+	name = "骷髅船员"
+	desc = "我的骨头咔咔响。"
+	desc = "套套船长麾下的一名骷髅海盗。"
 	species = "skeleton"
 	sex = MALE
 	gender = MALE
@@ -128,26 +128,26 @@
 
 
 /mob/living/advanced/npc/pirate_crew/ranged
-	name = "skeleton crew marksman"
+	name = "骷髅船员射手"
 	loadout = /loadout/pirate/crew/ranged
 
 	level = 16
 
 /mob/living/advanced/npc/pirate_crew/magic
-	name = "skeleton crew mage"
+	name = "骷髅船员法师"
 	loadout = /loadout/pirate/crew/magic
 
 	level = 18
 
 /mob/living/advanced/npc/pirate_crew/melee
-	name = "skeleton crew brawler"
+	name = "骷髅船员拳手"
 	loadout = /loadout/pirate/crew/melee
 
 	level = 12
 
 
 /mob/living/advanced/npc/pirate_crew/ninja
-	name = "skeleton crew ninja"
+	name = "骷髅船员忍者"
 	loadout = /loadout/pirate/crew/ninja
 
 	level = 30

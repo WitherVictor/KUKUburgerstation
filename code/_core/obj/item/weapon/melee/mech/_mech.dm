@@ -1,6 +1,6 @@
 /obj/item/weapon/melee/mech
-	name = "exosuit weapon"
-	desc = "A weapon for an exosuit."
+	name = "机甲武器"
+	desc = "供机甲使用的武器。"
 
 	icon = 'icons/obj/item/weapons/ranged/mech.dmi'
 
@@ -12,7 +12,7 @@
 	value_burgerbux = 1
 
 /obj/item/weapon/melee/mech/drill
-	name = "mech drill"
+	name = "机甲钻头"
 	icon_state = "mech_drill"
 	damage_type = /damagetype/melee/club/drill
 

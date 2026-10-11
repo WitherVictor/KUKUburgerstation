@@ -1,5 +1,5 @@
 obj/structure/scenery/grass/snow
-	name = "grass"
+	name = "草丛"
 	icon = 'icons/obj/structure/flora/snowflora.dmi'
 	icon_state = "snowgrass1"
 
@@ -10,7 +10,7 @@ obj/structure/scenery/grass/snow/New()
 
 
 obj/structure/scenery/bush/snow
-	name = "berry bush"
+	name = "浆果灌木"
 	icon = 'icons/obj/structure/flora/snowflora.dmi'
 	icon_state = "snowbush1"
 	layer = LAYER_LARGE_OBJ
@@ -46,7 +46,7 @@ obj/structure/scenery/bush/snow/New()
 	layer = (world.maxy - y)*10 + (world.maxx - x)*0.1
 
 /obj/structure/interactive/tree/pine
-	name = "pine tree"
+	name = "松树"
 	icon = 'icons/obj/structure/flora/pinetrees.dmi'
 	icon_state = "pine_2"
 	pixel_x = -16
@@ -63,7 +63,7 @@ obj/structure/scenery/bush/snow/New()
 	return ..()
 
 /obj/structure/interactive/tree/evergreen
-	name = "evergreen tree"
+	name = "常青树"
 	icon = 'icons/obj/structure/flora/evergreen.dmi'
 	icon_state = "evergreen_2"
 	pixel_x = -16
@@ -82,7 +82,7 @@ obj/structure/scenery/bush/snow/New()
 	return ..()
 
 /obj/structure/interactive/tree/jungle_small
-	name = "small jungle tree"
+	name = "小型丛林树"
 	icon = 'icons/obj/structure/flora/jungletreesmall.dmi'
 	icon_state = "tree"
 	pixel_x = -32
@@ -100,7 +100,7 @@ obj/structure/scenery/bush/snow/New()
 	return ..()
 
 /obj/structure/interactive/tree/jungle_large
-	name = "large jungle tree"
+	name = "大型丛林树"
 	icon = 'icons/obj/structure/flora/jungletrees.dmi'
 	icon_state = "tree1"
 	pixel_x = -48
@@ -120,7 +120,7 @@ obj/structure/scenery/bush/snow/New()
 
 
 /obj/structure/interactive/tree/palm
-	name = "palm tree"
+	name = "棕榈树"
 	icon = 'icons/obj/structure/flora/palm.dmi'
 	icon_state = "palm1"
 

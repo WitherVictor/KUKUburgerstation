@@ -1,8 +1,8 @@
 /obj/item/clothing/mask/heretic
-	name = "heretic mask"
+	name = "异端面具"
 	icon = 'icons/obj/item/clothing/masks/cursed.dmi'
-	desc = "You feel like it's staring into your soul..."
-	desc_extended = "An absolutely cursed mask belonging to a heretic."
+	desc = "你觉得它正凝视着你的灵魂……"
+	desc_extended = "一副属于异端的面具，邪门到家了。"
 
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
 	item_slot = SLOT_HEAD | SLOT_FACE

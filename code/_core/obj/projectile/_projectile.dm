@@ -1,5 +1,5 @@
 /obj/projectile/
-	name = "Projectile"
+	name = "投射物"
 	plane = PLANE_PROJECTILE
 	layer = LAYER_PROJECTILE
 

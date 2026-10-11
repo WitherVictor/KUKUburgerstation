@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/armor/burger_coat
-	name = "burger coat"
+	name = "汉堡外套"
 	icon = 'icons/obj/item/clothing/suit/burger_coat_armor.dmi'
-	desc = "Being the best isn't hard, it's letting go."
-	desc_extended = "Burgers never change."
+	desc = "成为最强并不难，难的是放下。"
+	desc_extended = "汉堡，汉堡从未改变。"
 
 	armor = /armor/leather/hard
 
@@ -18,31 +18,31 @@
 
 
 /obj/item/clothing/overwear/armor/burger_coat/courier
-	name = "Courier Jacket"
+	name = "信使夹克"
 	icon = 'icons/obj/item/clothing/suit/courier.dmi'
-	desc = "Being the best isn't hard, it's letting go."
-	desc_extended = "War never changes."
+	desc = "成为最强并不难，难的是放下。"
+	desc_extended = "战争，战争从未改变。"
 
 
 /obj/item/clothing/overwear/armor/burger_coat/courier/ncr
-	name = "NCR Courier Jacket"
+	name = "新加州共和国信使夹克"
 	icon_state = "inventory_ncr"
 	icon_state_worn = "worn_ncr"
-	desc = "Patrolling the Mojave almost makes you wish for a nuclear winter."
-	desc_extended = "When I got this assignment I was hoping there would be more gambling."
+	desc = "在莫哈维巡逻，几乎让人盼着来一场核冬天。"
+	desc_extended = "接到这份差事时，我还以为能多赌上几把。"
 
 
 /obj/item/clothing/overwear/armor/burger_coat/courier/legion
-	name = "Legion Courier Jacket"
+	name = "军团信使夹克"
 	icon_state = "inventory_legion"
 	icon_state_worn = "worn_legion"
-	desc = "Ave, true to Caesar!"
-	desc_extended = "Degenerates like you belong on a cross."
+	desc = "致敬，忠于凯撒！"
+	desc_extended = "你这样的堕落之徒就该钉上十字架。"
 
 
 /obj/item/clothing/overwear/armor/burger_coat/courier/ulysses
-	name = "Ulysses Jacket"
+	name = "尤利西斯夹克"
 	icon_state = "inventory_ulysses"
 	icon_state_worn = "worn_ulysses"
-	desc = "No need for bombs, when hate will do."
-	desc_extended = "You came all this way for answers. Only currency I have."
+	desc = "仇恨足以成事，又何须炸弹。"
+	desc_extended = "你远道而来，只为寻求答案。那也是我仅有的筹码。"

@@ -1,7 +1,7 @@
 /obj/item/tempering/luck
-	name = "lucky four leaf clover"
-	desc = "Lucky!"
-	desc_extended = "A very rare four leaf clover."
+	name = "幸运四叶草"
+	desc = "好运来了！"
+	desc_extended = "非常稀有的四叶草。"
 	icon_state = "luck"
 
 	increase = 1
@@ -16,12 +16,12 @@
 
 /obj/item/tempering/luck/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Increases the luck of items by [increase]%, up to [maximum]%, with a minimum of [minimum]%.")
+	. += span("notice","使物品的幸运值提高[increase]个百分点，最低为[minimum]%，最高为[maximum]%。")
 
 /obj/item/tempering/luck/can_temper(var/mob/activator,var/obj/item/I)
 
 	if(I.luck >= maximum)
-		activator.to_chat(span("warning","\The [I.name] cannot be improved any further!"))
+		activator.to_chat(span("warning","[I.name]无法继续强化！"))
 		return FALSE
 
 	. = ..()
@@ -31,9 +31,9 @@
 	. = ..()
 
 /obj/item/tempering/luck/double
-	name = "double lucky four leaf clover"
-	desc = "Even luckier!"
-	desc_extended = "A very rare conjoined four leaf clover."
+	name = "双生幸运四叶草"
+	desc = "好运加倍！"
+	desc_extended = "非常稀有的连体四叶草。"
 	icon_state = "luck2"
 
 	increase = 1

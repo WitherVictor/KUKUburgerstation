@@ -1,8 +1,8 @@
 /obj/item/clothing/neck/sorcerer
-	name = "sorcerer's cape"
+	name = "术士披风"
 	icon = 'icons/obj/item/clothing/suit/sorcerer_cape.dmi'
-	desc = "A sorcerer's cape. Frequently dyed to show one's proficiency in a specific magical art."
-	desc_extended = "A cape donning colors that represent one's proficiency in a specific magical art."
+	desc = "术士的披风，常染成不同颜色来展示对某种魔法的熟练程度。"
+	desc_extended = "披风上的颜色代表穿戴者对某种魔法的熟练程度。"
 
 	item_slot = SLOT_NECK
 

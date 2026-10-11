@@ -1,6 +1,6 @@
 /obj/item/consumable/food/
-	name = "food"
-	desc = "FOOD!"
+	name = "食物"
+	desc = "吃的！"
 
 	var/heal_amount_health = 0
 	var/heal_amount_stamina = 0
@@ -34,7 +34,7 @@
 		//callback_list["start_turf"] = get_turf(src)
 
 		if(add_progress_bar(A1,"feed_self",SECONDS_TO_DECISECONDS(1),callback_list))
-			A1.to_chat(span("notice","You start eating \the [src]..."))
+			A1.to_chat(span("notice","你开始吃[src]……"))
 
 	else
 		var/list/callback_list = list()
@@ -44,7 +44,7 @@
 		callback_list["start_turf"] = get_turf(src)
 
 		if(add_progress_bar(A1,"feed_other",SECONDS_TO_DECISECONDS(3),callback_list))
-			A1.to_chat(span("notice","You start to forcefeed \the [src] to \the [A2]..."))
+			A1.to_chat(span("notice","你开始把[src]强喂给[A2]……"))
 
 	return TRUE
 
@@ -72,12 +72,12 @@
 
 	. = ..()
 	if(uses_left)
-		. += div("notice","It has about [uses_left] bites left.")
+		. += div("notice","大约还能吃[uses_left]口。")
 	if(heal_amount_health)
-		. += div("notice","Health Restore: [heal_amount_health].")
+		. += div("notice","生命值恢复：[heal_amount_health]。")
 	if(heal_amount_stamina)
-		. += div("notice","Stamina Restore: [heal_amount_stamina].")
+		. += div("notice","体力恢复：[heal_amount_stamina]。")
 	if(heal_amount_mana)
-		. += div("notice","Mana Restore: [heal_amount_mana].")
+		. += div("notice","法力恢复：[heal_amount_mana]。")
 
-	
+

@@ -1,7 +1,7 @@
 /mob/living/simple/goblin
-	name = "stunted loot goblin"
-	desc = "They've come to steal your loot!"
-	desc_extended = "A speedy goblin obsessed with loot. Will do anything to get their hands on it, even breaking moral codes!"
+	name = "矮小的贪财地精"
+	desc = "它们来偷你的战利品了！"
+	desc_extended = "一个动作敏捷、痴迷战利品的地精。为了把东西弄到手，它什么都干得出来，道德底线也拦不住！"
 	icon = 'icons/mob/living/simple/goblin.dmi'
 	icon_state = "living"
 
@@ -64,7 +64,7 @@
 	if(isturf(I.loc))
 		I.force_move(src)
 		bag_contents += I
-		if(!silent) visible_message(span("danger","\The [src.name] steals \the [I.name]!"))
+		if(!silent) visible_message(span("danger","[src.name]偷走了[I.name]！"))
 	return TRUE
 
 /mob/living/simple/goblin/proc/dump_bag()
@@ -73,7 +73,7 @@
 		return FALSE
 	if(!length(bag_contents))
 		return FALSE
-	visible_message(span("warning","\The [src.name]'s loot bag spills its contents!"))
+	visible_message(span("warning","[src.name]的赃物袋里，东西全洒了出来！"))
 	for(var/k in bag_contents)
 		var/obj/item/I = k
 		var/item_move_dir = pick(DIRECTIONS_ALL)

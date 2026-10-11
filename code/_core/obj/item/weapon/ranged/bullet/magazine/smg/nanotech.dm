@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/nanotech
-	name = "\improper 4.6x30mm NanoTech SMG"
-	desc = "For when you can't aim."
-	desc_extended = "Nanotrasen's answer to the fearsome C-20r, this one has a higher firerate at the cost of a smaller round."
+	name = "\improper 4.6x30mm纳米科技冲锋枪"
+	desc = "瞄不准时的选择。"
+	desc_extended = "纳米传讯用来回应可怕的C-20r的武器。弹药口径更小，换来更高的射速。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/4mm.dmi'
 	icon_state = "inventory"
 	value = 2200

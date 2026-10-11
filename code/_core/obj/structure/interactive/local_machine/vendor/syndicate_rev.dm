@@ -49,7 +49,7 @@
 
 
 /obj/structure/interactive/vending/syndicate/guns/rev
-	name = "revolutionary armaments vendor"
+	name = "革命军武器售货机"
 	stored_types = list(
 		/obj/item/weapon/ranged/bullet/revolver/nagant,
 		/obj/item/bullet_cartridge/revolver_762{amount=5},

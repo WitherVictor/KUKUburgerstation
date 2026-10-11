@@ -1,8 +1,8 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/syringe
-	name = "\improper syringe rifle"
+	name = "\improper 注射步枪"
 	icon = 'icons/obj/item/weapons/ranged/misc/syringe.dmi'
-	desc = "Long distance Poisoning"
-	desc_extended = "In the older days, poisoners had to rely on clever tricks, distraction and sleight-of-hand in order to poison their enemies. Luckily, we live in gentler times, so now you can just shoot em with poison syringes."
+	desc = "远距离下毒。"
+	desc_extended = "过去，投毒者得靠巧计、分散注意和手上功夫，才能给敌人下毒。幸好如今时代温柔多了，你直接把毒针射过去就行。"
 	icon_state = "inventory"
 	value = 1200
 

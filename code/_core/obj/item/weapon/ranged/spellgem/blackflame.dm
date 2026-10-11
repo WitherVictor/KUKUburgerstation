@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/blackflame
-	name = "blackflame spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a single slow-moving high-damage unholy fireball that ignites targets and explodes already ignited targets."
+	name = "黑炎法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射一枚缓慢移动的高伤害邪秽火球，点燃目标，并使已经燃烧的目标爆炸。"
 	icon_state = "damage"
 
 	rarity = RARITY_UNCOMMON

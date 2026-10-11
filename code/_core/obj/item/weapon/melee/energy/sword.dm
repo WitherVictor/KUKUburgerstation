@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/energy/sword/
-	name = "energy sword"
-	desc = "A blade made out of ENERGY. Please do not sue."
-	desc_extended = "A lightweight energy blade that has become the standard issue melee pretty much everywhere. Its main issue is that it's not usable as a bayonet due to its lack of weight and its complex mechanisms."
+	name = "能量剑"
+	desc = "由能量构成的刀刃。请别起诉。"
+	desc_extended = "轻巧的能量剑，几乎各地都已将其列为制式近战武器。主要问题是重量太轻、机构复杂，无法当作刺刀使用。"
 	icon = 'icons/obj/item/weapons/melee/laser/sword.dmi'
 
 	value = 400

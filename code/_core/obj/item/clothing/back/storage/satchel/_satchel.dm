@@ -1,7 +1,7 @@
 /obj/item/clothing/back/storage/satchel/
-	name = "satchel"
-	desc = "WEARING BACKPACKS IS LRP!!!"
-	desc_extended = "A satchel for carrying items. Has less space than a backpack, but slows you down the least."
+	name = "挎包"
+	desc = "背双肩包简直就是轻度角色扮演！！！"
+	desc_extended = "用来携带物品的挎包。容量小于双肩包，但对移动速度的影响最小。"
 	icon = 'icons/obj/item/clothing/back/satchel/grey.dmi'
 
 

@@ -64,7 +64,7 @@
 	if(!object_to_damage || !object_to_damage_with)
 		if(ismob(blamed))
 			var/mob/M = blamed
-			M.to_chat(span("notice","You can't attack that!"))
+			M.to_chat(span("notice","你不能攻击它！"))
 		return FALSE
 
 	if(!attacker.can_attack(victim,object_to_damage_with,params))
@@ -147,11 +147,11 @@
 
 	if(is_living(attacker))
 		var/mob/living/L = attacker
-		L.to_chat(span("notice","\The [src.name] blocks your attack!"),CHAT_TYPE_COMBAT)
+		L.to_chat(span("notice","[src.name]格挡了你的攻击！"),CHAT_TYPE_COMBAT)
 
 	if(is_living(src)) //YES, I KNOW
 		var/mob/living/L = src
-		L.to_chat(span("warning","You block \the [attacker.name]'s [weapon == attacker ? "attack" : weapon.name]!"),CHAT_TYPE_COMBAT)
+		L.to_chat(span("warning","你格挡了[attacker.name]的[weapon == attacker ? "攻击" : weapon.name]！"),CHAT_TYPE_COMBAT)
 
 	return TRUE
 
@@ -166,11 +166,11 @@
 
 	if(is_living(attacker))
 		var/mob/living/L = attacker
-		L.to_chat(span("notice","\The [src.name] parries your attack!"),CHAT_TYPE_COMBAT)
+		L.to_chat(span("notice","[src.name]招架了你的攻击！"),CHAT_TYPE_COMBAT)
 
 	if(is_living(src)) //YES, I KNOW
 		var/mob/living/L = src
-		L.to_chat(span("warning","You parry \the [attacker.name]'s [weapon == attacker ? "attack" : weapon.name]!"),CHAT_TYPE_COMBAT)
+		L.to_chat(span("warning","你招架了[attacker.name]的[weapon == attacker ? "攻击" : weapon.name]！"),CHAT_TYPE_COMBAT)
 
 	if(allow_parry_counter)
 		src.attack(src,attacker)
@@ -188,10 +188,10 @@
 
 	if(is_living(attacker))
 		var/mob/living/L = attacker
-		L.to_chat(span("notice","\The [src.name] dodges your attack!"),CHAT_TYPE_COMBAT)
+		L.to_chat(span("notice","[src.name]闪避了你的攻击！"),CHAT_TYPE_COMBAT)
 
 	if(is_living(src)) //YES, I KNOW
 		var/mob/living/L = src
-		L.to_chat(span("warning","You dodge \the [attacker.name]'s [weapon == attacker ? "attack" : weapon.name]!"),CHAT_TYPE_COMBAT)
+		L.to_chat(span("warning","你闪避了[attacker.name]的[weapon == attacker ? "攻击" : weapon.name]！"),CHAT_TYPE_COMBAT)
 
 	return TRUE

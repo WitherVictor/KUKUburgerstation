@@ -1,5 +1,5 @@
 /mob/living/simple/passive
-	name = "passive creature"
+	name = "温顺生物"
 
 	ai = /ai/passive
 

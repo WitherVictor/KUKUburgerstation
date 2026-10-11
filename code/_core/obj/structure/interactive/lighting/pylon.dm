@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/cult_pylon
-	name = "cult pylon"
+	name = "邪教晶柱"
 
 	icon = 'icons/obj/structure/cult/cult.dmi'
 	icon_state = "pylon"

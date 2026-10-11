@@ -1,7 +1,7 @@
 /obj/item/contract/ashwalker
-	name = "contract: Kill Ashwalkers"
+	name = "契约：击杀灰烬行者"
 	type_to_check = /mob/living/advanced/npc/ashwalker
-	objective_text = "Ashwalkers killed"
+	objective_text = "已击杀灰烬行者"
 	value = 0
 
 /obj/item/contract/ashwalker/low

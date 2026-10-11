@@ -1,5 +1,5 @@
 /obj/item/clothing/head/hat/goliath
-	name = "goliath cloak hood"
+	name = "歌利亚斗篷兜帽"
 	icon = 'icons/obj/item/clothing/hats/goliath_cloak.dmi'
 
 

@@ -1,7 +1,7 @@
 /obj/item/storage/death_box
-	name = "death box"
-	desc = "I died, please restart."
-	desc_extended = "A special bluespace box containing items lost on a previous shift."
+	name = "死亡遗物箱"
+	desc = "我死了，请重开。"
+	desc_extended = "一个特殊的蓝空间箱子，装着上个班次遗失的物品。"
 
 	icon = 'icons/obj/item/storage/death_box.dmi'
 	icon_state = "locked"
@@ -28,8 +28,8 @@
 
 /obj/item/storage/death_box/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("danger","Death boxes cannot be stored in banks.")
-	. += div("danger","Anyone can open a death box, even if they don't own it.")
+	. += div("danger","死亡遗物箱不能存入银行。")
+	. += div("danger","任何人都能打开死亡遗物箱，即使不是物主。")
 
 /obj/item/storage/death_box/Finalize()
 	. = ..()
@@ -38,15 +38,15 @@
 /obj/item/storage/death_box/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(owning_mob_name)
-		. += div("notice","This box belongs to [owning_mob_name].")
+		. += div("notice","这个箱子属于[owning_mob_name]。")
 
-	. += div("notice","It holds [length(inventories)] objects.")
+	. += div("notice","共有[length(inventories)]个储物格。")
 
 
 /obj/item/storage/death_box/Finalize()
 	. = ..()
 	update_sprite()
-	if(owning_mob_name) name = "[initial(name)] ([owning_mob_name])"
+	if(owning_mob_name) name = "[initial(name)]（[owning_mob_name]）"
 
 /obj/item/storage/death_box/update_icon()
 	. = ..()

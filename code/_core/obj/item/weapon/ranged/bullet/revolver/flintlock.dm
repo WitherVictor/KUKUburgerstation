@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/flintlock
-	name = "\improper .62 flintlock pistol"
-	desc = "Just like the founding fathers intended."
-	desc_extended = "An incredibly ancient and severely outdated flintlock pistol. Only an idiot or a badass would use one of these; a genius would use several."
+	name = "\improper .62燧发手枪"
+	desc = "一切都如开国先贤所愿。"
+	desc_extended = "极其古老、早已过时的燧发手枪。只有傻瓜或狠人才会用一把这种枪；天才会用好几把。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/flintlock.dmi'
 	icon_state = "inventory"
 	value = 400

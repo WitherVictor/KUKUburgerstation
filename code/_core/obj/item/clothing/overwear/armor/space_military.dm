@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/space_military
-	name = "space military armor"
-	desc = "Military. In space!"
-	desc_extended = "Armor made from hardened carbon fibres."
+	name = "太空军用护甲"
+	desc = "军用装备，进军太空！"
+	desc_extended = "用硬化碳纤维制成的护甲。"
 	icon = 'icons/obj/item/clothing/suit/space_military_new.dmi'
 
 	armor = /armor/military/medium/hard

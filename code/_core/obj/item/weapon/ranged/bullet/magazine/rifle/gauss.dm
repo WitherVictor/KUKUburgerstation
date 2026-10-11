@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/gauss_gun
-	name = "\improper 2.54x12mm Experimental Gauss Rifle"
-	desc = "We thank you, oh Monolith, for revealing the cunning plans of your enemies to us. May your light shine down on the souls of the brave soldiers who gave their lives in service to your will."
-	desc_extended = "A super-accurate hi-tech weapon known as the Gauss rifle, this weapon was developed in secret laboratories located inside the slavic facilities. The weapon operates by accelerating bullets to extremely high speeds using a system of electromagnets, which provides incredible stopping power with virtually no recoil."
+	name = "\improper 2.54x12mm实验型高斯步枪"
+	desc = "感谢你，巨石，为我们揭示敌人的诡计。愿你的光芒照耀那些为践行你的意志而献出生命的勇士之魂。"
+	desc_extended = "精度极高的高科技武器，人称高斯步枪，在斯拉夫设施内的秘密实验室中研发。电磁铁系统将弹丸加速至极高速度，带来惊人的停止作用，却几乎没有后坐力。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/gauss.dmi'
 	icon_state = "inventory"
 	value = 12000
@@ -63,9 +63,9 @@
 	return max(0.001 - (0.001 * L.get_skill_power(SKILL_RANGED)))
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/gauss_gun/auto
-	name = "\improper 2.54x12mm Experimental Gauss Carbine"
-	desc = "STOP POSTING ABOUT MONOLITH! I'M TIRED OF SEEING IT!"
-	desc_extended = "The finalized design of the Gauss Gun. Further research and improvements in materials have given it the durability and power efficiency it needs to fire automatically. However, creating even one of this is such an expense that only the Space Slavic Military are seen using these. You have to be seriously lucky to get your hands on this." //mucho texto
+	name = "\improper 2.54x12mm实验型高斯卡宾枪"
+	desc = "别再发巨石的东西了！我都看烦了！"
+	desc_extended = "高斯枪的定型设计。后续研究和材料改进使其具备了自动射击所需的耐用性和能源效率。然而，哪怕只造一把也耗资巨大，因此只有太空斯拉夫军方在使用。能弄到它，你得相当走运。" //mucho texto
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/gauss_carbine.dmi'
 	icon_state = "inventory"
 

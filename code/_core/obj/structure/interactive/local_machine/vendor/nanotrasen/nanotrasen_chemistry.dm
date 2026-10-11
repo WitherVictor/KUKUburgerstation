@@ -2,7 +2,7 @@
 	icon = 'icons/obj/structure/vending_new.dmi'
 
 /obj/structure/interactive/vending/nanotrasen/chemistry/wardrobe
-	name = "chemist wardrobe vendor"
+	name = "化学师服装售货机"
 	icon_state = "chemistry_clothing"
 
 	stored_types = list(
@@ -18,7 +18,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/chemistry/equipment
-	name = "chemistry equipment vendor"
+	name = "化学装备售货机"
 	icon_state = "chemistry_equipment"
 	stored_types = list(
 		/obj/item/paper/book/chemistry,
@@ -53,7 +53,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/chemistry/reagents
-	name = "smart chemical vendor"
+	name = "智能化学品售货机"
 	icon_state = "chemistry_smartfridge"
 	stored_types = list(
 		/obj/item/container/simple/chemistry/ammonia,

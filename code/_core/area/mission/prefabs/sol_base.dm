@@ -1,5 +1,5 @@
 /area/mission/prefab/sol_base
-	name = "solarian base"
+	name = "太阳系基地"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = FALSE

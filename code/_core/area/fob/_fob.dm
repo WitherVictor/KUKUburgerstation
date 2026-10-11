@@ -1,5 +1,5 @@
 /area/fob
-	name = "FOB"
+	name = "前沿作战基地"
 	area_identifier = "Mission"
 	interior = TRUE
 
@@ -8,9 +8,9 @@
 	flags_generation = FLAG_GENERATION_NO_MOB
 
 /area/fob/main
-	name = "\improper Main Forward Operating Base"
+	name = "\improper 主前沿作战基地"
 	icon_state = "blue"
 
 /area/fob/power
-	name = "\improper Forward Operating Base Power Station"
+	name = "\improper 前沿作战基地发电站"
 	icon_state = "red"

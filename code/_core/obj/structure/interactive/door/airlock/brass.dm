@@ -1,8 +1,8 @@
 obj/structure/interactive/door/airlock/brass
-	name = "glass clockwork airlock"
-	desc = "a powered airlock"
+	name = "发条气闸门"
+	desc = "电动气闸门。"
 	icon = 'icons/obj/structure/clockwork/airlock.dmi'
 
 obj/structure/interactive/door/airlock/brass/glass
-	name = "clockwork airlock"
+	name = "玻璃发条气闸门"
 	filler = "glass"

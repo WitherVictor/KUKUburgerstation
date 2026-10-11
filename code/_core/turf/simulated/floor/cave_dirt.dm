@@ -1,6 +1,6 @@
 /turf/simulated/floor/cave_dirt
 
-	name = "tough dirt"
+	name = "硬土"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "dirt"
@@ -26,7 +26,7 @@
 //WAY too detailed. Don't use.
 /turf/simulated/floor/desert_rock
 
-	name = "desert rock floor"
+	name = "沙漠岩地"
 
 	icon = 'icons/turf/floor/cave_dirt_new.dmi'
 	icon_state = "0,0"

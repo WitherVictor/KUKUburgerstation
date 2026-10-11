@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/ushanka
-	name = "ushanka"
-	desc = "Perfect for weather in Siberia, da?"
-	desc_extended = "Not only fashionable, but also VERY good against the cold."
+	name = "护耳皮帽"
+	desc = "特别适合西伯利亚的天气，对吧？"
+	desc_extended = "不仅时髦，而且非常保暖。"
 
 	icon = 'icons/obj/item/clothing/hats/ushanka.dmi'
 

@@ -1,6 +1,6 @@
 obj/item/weapon/unarmed
-	name = "Unarmed Weapon"
-	desc = "An unarmed weapon"
+	name = "徒手武器"
+	desc = "一件用于徒手格斗的武器。"
 
 	drop_sound = 'sound/items/drop/sword.ogg'
 

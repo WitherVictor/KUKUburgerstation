@@ -1,7 +1,7 @@
 /obj/structure/interactive/vending/magic/enchanting
-	name = "enchanting vendor"
-	desc = "Absolutely magic!"
-	desc_extended = "An almost cartoonish vendor of magical equipment and gear for the aspiring enchanter."
+	name = "附魔售货机"
+	desc = "绝对有魔法！"
+	desc_extended = "一台造型近乎卡通的魔法装备售货机，为有志成为附魔师的人提供装备。"
 	icon_state = "enchanting"
 
 	stored_types = list(
@@ -17,9 +17,9 @@
 
 
 /obj/structure/interactive/vending/magic/spellgem
-	name = "spellgem vendor"
-	desc = "Absolutely magic!"
-	desc_extended = "An almost cartoonish vendor of magical equipment and gear for the aspiring wizard. Only accepts gold coins!"
+	name = "法术宝石售货机"
+	desc = "绝对有魔法！"
+	desc_extended = "一台造型近乎卡通的魔法装备售货机，为有志成为巫师的人提供装备。只收金币！"
 	icon_state = "MagiVend"
 
 	stored_types = list(
@@ -48,9 +48,9 @@
 
 
 /obj/structure/interactive/vending/magic/magicdrobe
-	name = "magicdrobe vendor"
-	desc = "Absolutely magic!"
-	desc_extended = "An almost cartoonish vendor of magical equipment and gear for the aspiring wizard."
+	name = "魔法衣橱售货机"
+	desc = "绝对有魔法！"
+	desc_extended = "一台造型近乎卡通的魔法装备售货机，为有志成为巫师的人提供装备。"
 	icon_state = "wizard_drobe"
 
 	stored_types = list(

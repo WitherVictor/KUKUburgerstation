@@ -1,7 +1,7 @@
 /obj/structure/interactive/limiter/
-	name = "conveyor limiter"
-	desc = "Pssssh."
-	desc_extended = "A special device that limits the amount of items that can be on a conveyor space to one."
+	name = "传送带限流器"
+	desc = "嘶——。"
+	desc_extended = "一种特殊装置，将传送带单格上的物品数量限制为一个。"
 	icon = 'icons/obj/structure/conveyor.dmi'
 	icon_state = "limiter"
 

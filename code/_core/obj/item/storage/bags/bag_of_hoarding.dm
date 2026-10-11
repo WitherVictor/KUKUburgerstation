@@ -1,9 +1,9 @@
 //Doesn't work.
 
 /obj/item/storage/bagofhoarding
-	name = "ancient bag of hoarding"
-	desc = "we just warframe now"
-	desc_extended = "A peculiar bag that can hold unlimited amounts of specific rare currencies. Can be dyed."
+	name = "远古聚宝袋"
+	desc = "这下成《星际战甲》了。"
+	desc_extended = "一个奇特的袋子，可以存放无限数量的某种稀有货币。可以染色。"
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "moneybag"
 	value = 10000
@@ -49,9 +49,9 @@
 /obj/item/storage/bagofhoarding/get_examine_details_list(var/mob/examiner)
 	. = ..()
 	if(goods && hoard > 0)
-		. += span("notice","It currently holds [hoard] [initial(goods.name)]\s.")
+		. += span("notice","当前存有[hoard]个[initial(goods.name)]。")
 	else
-		. += span("notice","It does not currently hold anything.")
+		. += span("notice","当前没有存放任何东西。")
 
 /obj/item/storage/bagofhoarding/clicked_on_by_object(var/mob/caller,var/atom/object,location,control,params)
 
@@ -65,15 +65,15 @@
 				var/obj/item/M = new goods.type
 				M.drop_item(get_turf(caller))
 				C.put_in_hands(M,params)
-				C.to_chat(span("notice","You take out a single [M.name]."))
+				C.to_chat(span("notice","你取出了一个[M.name]。"))
 				hoard--
 				INTERACT_DELAY(1)
 				if (!hoard)
-					caller.to_chat(span("notice","The [src.name] is now empty."))
+					caller.to_chat(span("notice","[src.name]现在空了。"))
 					goods = null
 					return TRUE
 				return TRUE
-			var/choice = input("How many do you want to take out?","Total: [hoard] Max: [maxstack]") as null|num
+			var/choice = input("要取出多少？","总量：[hoard]；最多可取：[maxstack]") as null|num
 			INTERACT_CHECK
 			if(!choice) return TRUE
 			if(choice >= maxstack)
@@ -91,7 +91,7 @@
 				M.drop_item(get_turf(caller))
 				C.put_in_hands(M,params)
 			if (!hoard)
-				caller.to_chat(span("notice","\The [src.name] is now empty."))
+				caller.to_chat(span("notice","[src.name]现在空了。"))
 				goods = null
 			return TRUE
 		var/obj/item/I = object
@@ -112,8 +112,9 @@
 			if(ispath(I.type,O))
 				INTERACT_CHECK
 				INTERACT_CHECK_OBJECT
-				var/choice = input("Would you like to deposit [I.name] in \the [src.name]?","Hoarding Time") as null|anything in list("Yes","No")
-				if(choice == "Yes")
+				var/list/deposit_choices = list("是" = "Yes", "否" = "No")
+				var/choice = input("要把[I.name]存进[src.name]吗？","存入聚宝袋") as null|anything in deposit_choices
+				if(choice && deposit_choices[choice] == "Yes")
 					INTERACT_CHECK
 					INTERACT_CHECK_OBJECT
 					if(ispath(I.type,/obj/item/currency/telecrystals))	//i dont know how else to do this because like "goods" doesnt work here
@@ -133,7 +134,7 @@
 					I.amount = 1
 					if(length(inventory_sounds))
 						play_sound(pick(inventory_sounds),get_turf(src),range_max=VIEW_RANGE*0.2)
-					caller.to_chat(span("notice","The [src.name] now accepts [I.name]\s."))
+					caller.to_chat(span("notice","[src.name]现在收纳[I.name]。"))
 					qdel(I)
 					return TRUE
 	return ..()

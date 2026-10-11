@@ -1,7 +1,7 @@
 /obj/item/clothing/hands/gloves/recall
-	name = "abductor recall glove"
-	desc = "Watch me disappear!"
-	desc_extended = "A highly advanced techical interface device. This is responsible for those damn aliens teleporting. Wish you knew how to use this."
+	name = "绑架者传送回归手套"
+	desc = "看我凭空消失！"
+	desc_extended = "极其先进的技术接口设备。那些该死的外星人就是靠它传送的。真希望你知道怎么用。"
 	icon = 'icons/obj/item/clothing/gloves/recall.dmi'
 
 	icon_state = "inventory_left"

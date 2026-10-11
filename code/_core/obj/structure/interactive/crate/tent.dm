@@ -1,5 +1,5 @@
 /obj/structure/interactive/crate/tent
-	name = "tent"
+	name = "帐篷"
 	icon = 'icons/obj/structure/tent.dmi'
 	icon_state = "tent"
 	anchored = TRUE

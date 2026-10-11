@@ -1,5 +1,5 @@
 /turf/simulated/floor/asteroid
-	name = "sand"
+	name = "沙地"
 	icon = 'icons/turf/floor/natural.dmi'
 	icon_state = "asteroid0"
 

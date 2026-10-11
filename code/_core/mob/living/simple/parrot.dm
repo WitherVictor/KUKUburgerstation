@@ -1,7 +1,7 @@
 /mob/living/simple/parrot
-	name = "parrot"
-	desc = "SQUAWK!"
-	desc_extended = "A basic colorful parrot."
+	name = "鹦鹉"
+	desc = "嘎！"
+	desc_extended = "一只普通的彩色鹦鹉。"
 	icon = 'icons/mob/living/simple/parrot.dmi'
 	icon_state = "fly"
 
@@ -72,19 +72,19 @@
 
 /mob/living/simple/parrot/on_listen(var/atom/speaker,var/datum/source,var/text,var/raw_text,var/language_text,var/talk_type,var/frequency,var/language =LANGUAGE_BASIC,var/talk_range=TALK_RANGE)
 
-	if(!CALLBACK_EXISTS("\ref[src]_parrot") && length(text) <= 30 && speaker != src && prob(5))
+	if(!CALLBACK_EXISTS("\ref[src]_parrot") && length_char(text) <= 30 && speaker != src && prob(5))
 		var/desired_text = text
 		if(prob(80))
-			desired_text = "SQUAWK! [uppertext(remove_trailing_punctuation(desired_text))]!"
-		if(length(desired_text))
+			desired_text = "嘎！[uppertext(remove_trailing_punctuation(desired_text))]！"
+		if(length_char(desired_text))
 			CALLBACK_GLOBAL("\ref[src]_parrot",rand(30,100),.proc/talk,src,src,desired_text,TEXT_TALK,null,language,TALK_RANGE)
 
 	return TRUE
 
 /mob/living/simple/parrot/mono
-	name = "Mono"
-	desc = "SQUAWK! WIRE THE SOLARS! SQUAWK!"
-	desc_extended = "The CE's trusted pet bird."
+	name = "莫诺"
+	desc = "嘎！给太阳能板接线！嘎！"
+	desc_extended = "总工程师信赖的宠物鸟。"
 
 	loyalty_tag = "NanoTrasen"
 	iff_tag = "NanoTrasen"
@@ -96,9 +96,9 @@
 	return TRUE
 
 /mob/living/simple/parrot/clockwork
-	name = "clock hawk"
-	desc = "ROBOTIC SQUAWK!"
-	desc_extended = "A basic brass hawk."
+	name = "发条鹰"
+	desc = "机械般的嘎叫声！"
+	desc_extended = "一只普通的黄铜鹰。"
 	icon = 'icons/mob/living/simple/clockwork_hawk.dmi'
 
 	damage_type = /damagetype/unarmed/claw/

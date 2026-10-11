@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/essentials
-	name = "essentials vendor"
+	name = "生活必需品售货机"
 
 	stored_types = list(
 		/obj/item/clothing/ears/headset/nanotrasen,

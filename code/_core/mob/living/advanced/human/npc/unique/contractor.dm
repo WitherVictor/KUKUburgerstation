@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/contractor
-	name = "Mr. Scratch"
-	desc = "Gives out contracts. Kinda suspicious, but NT says they're okay."
+	name = "抓痕先生"
+	desc = "负责发放契约。有点可疑，不过NT说他没问题。"
 
 	sex = MALE
 	gender = MALE

@@ -1,5 +1,5 @@
 /turf/simulated/floor/catwalk
-	name = "grate"
+	name = "格栅"
 	icon = 'icons/turf/floor/catwalk.dmi'
 	icon_state = "floor"
 

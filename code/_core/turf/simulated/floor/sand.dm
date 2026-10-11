@@ -1,5 +1,5 @@
 /turf/simulated/floor/sand
-	name = "sand"
+	name = "沙地"
 	icon = 'icons/turf/floor/natural.dmi'
 	icon_state = "sand1"
 
@@ -11,7 +11,7 @@
 
 
 /turf/simulated/floor/red_sand
-	name = "sand"
+	name = "沙地"
 	icon = 'icons/turf/floor/natural.dmi'
 	icon_state = "ironsand1"
 

@@ -124,39 +124,39 @@
 		var/list/responses = list()
 		if(old_alert_level == ALERT_LEVEL_COMBAT && new_alert_level == ALERT_LEVEL_CAUTION)
 			responses = list(
-				"VISUAL CONTACT LOST!",
-				"AREA STATUS: OPTIMAL",
-				"CLEAR"
+				"目标脱离视野！",
+				"区域状态：良好",
+				"安全"
 			)
 		else if(old_alert_level == ALERT_LEVEL_COMBAT && new_alert_level == ALERT_LEVEL_NONE)
 			responses = list(
-				"TARGET NEUTRALIZED",
-				"EKIA",
-				"AREA SECURED"
+				"目标已消灭",
+				"敌人已击毙",
+				"区域已控制"
 			)
 		else if(old_alert_level == ALERT_LEVEL_CAUTION && new_alert_level == ALERT_LEVEL_COMBAT)
 			responses = list(
-				"WEWALD",
-				"ALL UNITS, ATTACK",
-				"CARBON DETECTED",
-				"LOYALTY_TAG = NANOTRASEN"
+				"呜哇！",
+				"全体单位，进攻",
+				"检测到碳基生命",
+				"忠诚标记 = 纳米传讯"
 			)
 		else if(old_alert_level == ALERT_LEVEL_NONE && new_alert_level == ALERT_LEVEL_NOISE)
 			responses = list(
-				"NEW_SOUND DETECTED",
-				"INCREASING VOLUME",
-				"AUDITORY DISTURBANCE DETECTED"
+				"检测到新声源",
+				"正在提高音量",
+				"检测到异常声音"
 			)
 		else if(new_alert_level == ALERT_LEVEL_NOISE)
 			responses = list(
-				"MOVEMENT DETECTED",
+				"检测到移动",
 				"10-99",
-				"10-33 NOISE DETECTED"
+				"10-33 检测到噪声"
 			)
 		else if(new_alert_level == ALERT_LEVEL_NONE)
 			responses = list(
-				"MUST HAVE BEEN THE WIND",
-				"AREA CLEAR"
+				"一定是风吹的",
+				"区域安全"
 			)
 
 		if(length(responses))
@@ -169,16 +169,25 @@
 
 	if(next_talk <= world.time && damage_amount >= 10 && . && prob(25))
 		if(prob(10) && get_dist(owner,attacker) >= 3)
-			var/attack_dir = dir2text(get_dir(owner,attacker))
-			owner.do_say("ENEMY [attack_dir]!")
+			var/attack_dir = "未知方位"
+			switch(get_dir(owner,attacker))
+				if(NORTH) attack_dir = "北方"
+				if(SOUTH) attack_dir = "南方"
+				if(EAST) attack_dir = "东方"
+				if(WEST) attack_dir = "西方"
+				if(NORTHEAST) attack_dir = "东北方"
+				if(NORTHWEST) attack_dir = "西北方"
+				if(SOUTHEAST) attack_dir = "东南方"
+				if(SOUTHWEST) attack_dir = "西南方"
+			owner.do_say("[attack_dir]有敌人！")
 		else if(atom_damaged)
 			var/list/responses = list(
-				"TAKING DAMAGE",
-				"NEED REPAIRS",
-				"FOR THE CORE!",
-				"PROTECT THE CORE!",
-				"NON CITIZEN DETECTED",
-				"PLEASE, I'M DIFFERENT!"
+				"正在遭受损伤",
+				"需要维修",
+				"为了核心！",
+				"保护核心！",
+				"检测到非公民",
+				"求你了，我不一样！"
 			)
 			owner.do_say(pick(responses),language_to_use = owner.default_language)
 			next_talk = world.time + SECONDS_TO_DECISECONDS(5)

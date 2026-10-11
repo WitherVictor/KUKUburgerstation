@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/grenade_40mm/
-	name = "40mm high explosive grenade"
-	desc = "What makes ME a good demoman?"
-	desc_extended = "For Grenade launchers, High explosive."
+	name = "40mm高爆榴弹"
+	desc = "是什么让我成为优秀的爆破手？"
+	desc_extended = "榴弹发射器用高爆弹。"
 	icon = 'icons/obj/item/bullet/40mm_high_explosive.dmi'
 
 	amount_max = 1
@@ -26,9 +26,9 @@
 	. += 300
 
 /obj/item/bullet_cartridge/grenade_40mm/hv
-	name = "40mm high velocity grenade"
-	desc = "Loch n load."
-	desc_extended = "For Grenade launchers, High velocity, low explosive payload."
+	name = "40mm高速榴弹"
+	desc = "锁定，装填。"
+	desc_extended = "榴弹发射器用高速弹，装药量较少。"
 	icon = 'icons/obj/item/bullet/40mm_high_velocity.dmi'
 
 	projectile = /obj/projectile/bullet/grenade/hv
@@ -38,9 +38,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/bullet_cartridge/grenade_40mm/du
-	name = "40mm mini-nuke grenade"
-	desc = "KA-BOOOOOOM"
-	desc_extended = "For Grenade launchers, small nuclear payload."
+	name = "40mm微型核榴弹"
+	desc = "轰——隆！"
+	desc_extended = "榴弹发射器用弹药，搭载小型核装药。"
 	icon = 'icons/obj/item/bullet/40mm_uranium.dmi'
 	rarity = RARITY_UNCOMMON
 	value_burgerbux = 1
@@ -50,9 +50,9 @@
 
 
 /obj/item/bullet_cartridge/grenade_40mm/rubber
-	name = "40mm rubber round"
-	desc = "OW THAT HURTS"
-	desc_extended = "For Grenade launchers, non-lethal"
+	name = "40mm橡胶弹"
+	desc = "嗷，好疼！"
+	desc_extended = "榴弹发射器用非致命弹。"
 	icon = 'icons/obj/item/bullet/40mm_rubber.dmi'
 
 	projectile = /obj/projectile/bullet/grenade/rubber
@@ -62,9 +62,9 @@
 
 
 /obj/item/bullet_cartridge/grenade_40mm/cleaning
-	name = "40mm cleaning round"
-	desc = "For long ranged instant-impact cleaning."
-	desc_extended = "A 40mm grenade designed to clean a moderately sized area on impact."
+	name = "40mm清洁弹"
+	desc = "远距离命中，即刻清洁。"
+	desc_extended = "在命中处清洁中等面积区域的40mm榴弹。"
 	icon = 'icons/obj/item/bullet/40mm_cleaning.dmi'
 
 	projectile = /obj/projectile/bullet/grenade/cleaning
@@ -73,9 +73,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/bullet_cartridge/grenade_40mm/incendiary
-	name = "40mm incendiary round"
-	desc = "For when you need that specific area over there on fire."
-	desc_extended = "A 40mm grenade designed to set fire to a small area on impact."
+	name = "40mm燃烧弹"
+	desc = "需要让那边的一块地方着火时，就用这个。"
+	desc_extended = "在命中处点燃小片区域的40mm榴弹。"
 	icon = 'icons/obj/item/bullet/40mm_incendiary.dmi'
 
 	projectile = /obj/projectile/bullet/grenade/incendiary

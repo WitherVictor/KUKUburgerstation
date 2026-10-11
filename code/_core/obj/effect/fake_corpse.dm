@@ -1,7 +1,7 @@
 /obj/effect/fake_corpse
-	name = "corpse"
-	desc = "Here lies x. They never scored."
-	desc_extended = "The body of someone."
+	name = "尸体"
+	desc = "x长眠于此，至死都没能得手。"
+	desc_extended = "某人的尸体。"
 	appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM | LONG_GLIDE | KEEP_TOGETHER
 
 	anchored = TRUE
@@ -11,7 +11,7 @@
 	appearance = L.appearance
 
 	name = L.name
-	desc = "Here lies [L.name]. They never scored."
+	desc = "[L.name]长眠于此，至死都没能得手。"
 
 	var/matrix/M = get_base_transform()
 	M.Turn(90)

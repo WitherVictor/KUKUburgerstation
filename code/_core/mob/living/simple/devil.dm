@@ -1,7 +1,7 @@
 /mob/living/simple/devil
-	name = "devil demon"
-	desc = "Evil in its skinny form."
-	desc_extended = "A rare, extremely tall and extremely fast demon capable of annoying hit and run attacks. Can be found mostly anywhere."
+	name = "瘦长恶魔"
+	desc = "骨瘦如柴的邪恶化身。"
+	desc_extended = "一种罕见的恶魔，异常高大且迅捷，擅长烦人的打了就跑战术，几乎哪里都可能遇到。"
 	icon = 'icons/mob/living/simple/devil.dmi'
 	icon_state = "living"
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/tactical
-	name = "12g SolTact"
-	desc = "Tactful."
-	desc_extended = "A lightweight 12 gauge pump action Solarian-designed shotgun."
+	name = "12号日耀战术"
+	desc = "懂战术，也懂分寸。"
+	desc_extended = "太阳系设计的轻型12号泵动式霰弹枪。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/sol/tactical.dmi'
 	icon_state = "inventory"
 

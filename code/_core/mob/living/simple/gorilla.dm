@@ -1,6 +1,6 @@
 /mob/living/simple/gorilla
-	name = "gorilla"
-	desc = "Danger: Very robust."
+	name = "大猩猩"
+	desc = "危险：极其能打。"
 	icon = 'icons/mob/living/simple/gorilla.dmi'
 	icon_state = "living"
 

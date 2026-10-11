@@ -1,7 +1,7 @@
 /obj/structure/table/cooking/bonfire
-	name = "bonfire"
-	desc = "Cook things with this."
-	desc_extended = "You can cook or heat up items by dropping it on top of the bonfire."
+	name = "篝火"
+	desc = "用来烹饪食物。"
+	desc_extended = "将物品放在篝火上即可烹饪或加热。"
 	icon = 'icons/obj/structure/bonfire.dmi'
 	icon_state = "bonfire_warm"
 

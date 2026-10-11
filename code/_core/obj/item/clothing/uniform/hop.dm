@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/hop
-	name = "head of personel's uniform"
-	desc = "Nothing personel, kid."
-	desc_extended = "The uniform of choice for giving the clown all access and looking good while doing it."
+	name = "人事主管制服"
+	desc = "别往人事上想，小子。"
+	desc_extended = "想把全站权限发给小丑，还要保持风度？这身制服正合适。"
 	icon = 'icons/obj/item/clothing/uniforms/hop.dmi'
 
 

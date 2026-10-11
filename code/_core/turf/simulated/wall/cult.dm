@@ -1,7 +1,7 @@
 /turf/simulated/wall/cult
-	name = "cult wall"
-	desc = "Spooky"
-	desc_extended = "A wall made of a stange runic metal, simply looking at it makes you nervous."
+	name = "邪教墙壁"
+	desc = "阴森。"
+	desc_extended = "一堵用奇异符文金属制成的墙，光是看着它就让你心神不宁。"
 	icon = 'icons/turf/wall/cult.dmi'
 	icon_state = "wall"
 	corner_category = "cult_wall"

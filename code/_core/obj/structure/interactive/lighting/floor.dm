@@ -1,7 +1,7 @@
 /obj/structure/interactive/lighting/floor
-	name = "tube light"
-	desc = "An electrical storm has been detected in proximity of the station. Please check all equipment for potential overloads."
-	desc_extended = "Used to light up the area."
+	name = "地灯"
+	desc = "已在太空站附近检测到电磁风暴。请检查所有设备是否存在过载风险。"
+	desc_extended = "用于照亮周围区域。"
 
 	icon = 'icons/obj/structure/lights_new.dmi'
 	icon_state = "floor_light"

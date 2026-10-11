@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/goblin_crown
-	name = "Goblin King's crown"
-	desc = "You monster, stealing from the little green men."
-	desc_extended = "The crown is imbued with the life essence of the late Goblin King. Greatly desired by mages."
+	name = "地精王冠"
+	desc = "居然偷小绿人的东西，你这个怪物。"
+	desc_extended = "这顶王冠蕴含着已故地精王的生命精华，深受法师觊觎。"
 	icon = 'icons/obj/item/clothing/hats/goblin_crown.dmi'
 
 	armor = /armor/gold

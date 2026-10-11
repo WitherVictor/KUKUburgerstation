@@ -1,6 +1,6 @@
 /mob/living/vehicle/
-	name = "Vehicle"
-	desc = "A large vehicle that holds a driver"
+	name = "载具"
+	desc = "可供驾驶员乘坐的大型载具。"
 
 	var/list/mob/living/advanced/passengers //Slot 1 is a driver.
 	var/passengers_max = 1
@@ -34,7 +34,7 @@
 
 	for(var/k in equipment)
 		var/obj/item/I = k
-		. += div("notice","It has \the [I.name] attached.")
+		. += div("notice","装有[I.name]。")
 
 /mob/living/vehicle/on_crush(var/message=TRUE)
 
@@ -84,7 +84,7 @@
 		return FALSE
 	if(I.unremovable)
 		return FALSE
-	activator?.to_chat(span("notice","\The [activator.name] attaches \the [I.name] to \the [src.name]."),span("notice","You attach \the [I.name] to \the [src.name]."))
+	activator?.to_chat(span("notice","[activator.name]将[I.name]安装到[src.name]上。"),span("notice","你将[I.name]安装到[src.name]上。"))
 	equipment += I
 	I.drop_item(src)
 	I.unremovable = TRUE
@@ -93,7 +93,7 @@
 /mob/living/vehicle/proc/unattach_equipment(var/mob/activator,var/obj/item/I)
 	if(!(I in equipment))
 		return FALSE
-	activator?.visible_message(span("notice","\The [activator.name] detaches \the [I.name] from \the [src.name]."),span("notice","You detach \the [I.name] from \the [src.name]."))
+	activator?.visible_message(span("notice","[activator.name]从[src.name]上拆下了[I.name]。"),span("notice","你从[src.name]上拆下了[I.name]。"))
 	equipment -= I
 	I.force_move(get_turf(activator))
 	I.unremovable = initial(I.unremovable)
@@ -109,10 +109,10 @@
 /mob/living/vehicle/proc/can_attach_weapon(var/mob/activator,var/obj/item/weapon/W)
 
 	if(ai || length(passengers))
-		activator?.to_chat(span("warning","You can't add this while it's in use!"))
+		activator?.to_chat(span("warning","载具正在使用，无法安装！"))
 		return FALSE
 	if(length(equipment) >= 2)
-		activator?.to_chat(span("warning","You can't fit any more weapons on \the [src.name]!"))
+		activator?.to_chat(span("warning","[src.name]装不下更多武器了！"))
 		return FALSE
 
 	return TRUE
@@ -133,17 +133,17 @@
 				INTERACT_CHECK_OBJECT
 				INTERACT_DELAY(5)
 				if(ai || length(passengers))
-					activator.to_chat(span("warning","You can't remove this while it's in use!"))
+					activator.to_chat(span("warning","载具正在使用，无法拆卸！"))
 					return TRUE
 				if(!length(equipment))
-					activator.to_chat(span("warning","There is nothing to remove from \the [src.name]!"))
+					activator.to_chat(span("warning","[src.name]上没有可拆卸的东西！"))
 					return TRUE
-				var/atom/movable/choice = input("What would you like to remove?","Equipment Removal") as null|anything in equipment
+				var/atom/movable/choice = input("你想拆下什么？","拆卸装备") as null|anything in equipment
 				if(choice && choice in equipment)
-					activator?.visible_message(span("notice","\The [activator.name] removes \the [choice.name] from \the [src.name]."),span("notice","You remove \the [choice.name] from \the [src.name]."))
+					activator?.visible_message(span("notice","[activator.name]从[src.name]上拆下了[choice.name]。"),span("notice","你从[src.name]上拆下了[choice.name]。"))
 					unattach_equipment(activator,choice)
 				else
-					activator.to_chat(span("notice","You choose not to remove anything."))
+					activator.to_chat(span("notice","你决定什么都不拆。"))
 				return TRUE
 
 	if(is_inventory(object))
@@ -167,13 +167,13 @@
 		if(length(equipment) >= 1)
 			equipment[1].click_on_object(activator,object,location,control,params)
 		else
-			src.do_say("No equipment found in slot 1!")
+			src.do_say("1号槽位没有装备！")
 
 	if(params["right"])
 		if(length(equipment) >= 2)
 			equipment[2].click_on_object(activator,object,location,control,params)
 		else
-			src.do_say("No equipment found in slot 2!")
+			src.do_say("2号槽位没有装备！")
 
 	return TRUE
 
@@ -213,11 +213,11 @@
 		return FALSE
 
 	if(dead)
-		to_chat(span("warning","The [src.name] is destroyed!"))
+		to_chat(span("warning","[src.name]已被摧毁！"))
 		return FALSE
 
 	if(length(passengers) >= passengers_max)
-		to_chat(span("warning","There isn't enough space inside \the [src.name] to fit [length(passengers) + 1] people!"))
+		to_chat(span("warning","[src.name]内的空间不足以容纳[length(passengers) + 1]人！"))
 		return FALSE
 
 	var/mob/living/advanced/L = Obj
@@ -268,17 +268,17 @@
 	INTERACT_CHECK_NO_DELAY(src)
 
 	if(length(passengers) >= passengers_max)
-		activator.to_chat(span("warning","\The [src.name] is full!"))
+		activator.to_chat(span("warning","[src.name]已满员！"))
 		return FALSE
 
 	if(!is_advanced(activator))
-		activator.to_chat(span("warning","You can't get inside \the [src.name]!"))
+		activator.to_chat(span("warning","你无法进入[src.name]！"))
 		return FALSE
 
 	var/mob/living/advanced/A = activator
 
 	if(loyalty_tag && loyalty_tag != A.loyalty_tag)
-		activator.to_chat(span("warning","ERROR: Unrecognized IFF tag."))
+		activator.to_chat(span("warning","错误：无法识别敌我识别标记。"))
 		return FALSE
 
 	return TRUE

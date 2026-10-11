@@ -1,9 +1,9 @@
 /obj/item/weapon/melee/crystal
-	name = "conjuring crystals"
+	name = "塑形水晶"
 	icon = 'icons/obj/item/weapons/melee/swords/crystal.dmi'
 	icon_state = "inventory"
-	desc = "A cluster of crystals used in Crystal Guardian Conjuration."
-	desc_extended = "A glimmering crystal that has been used in conjuration by the Crystal Guardians since their origin."
+	desc = "水晶守卫用于塑形魔法的水晶簇。"
+	desc_extended = "闪耀的水晶，自水晶守卫诞生以来，就被它们用于塑形魔法。"
 	var/shape = 0
 	damage_type = /damagetype/melee/sword/crystal
 	drop_sound = 'sound/items/drop/knife.ogg'
@@ -34,15 +34,15 @@
 
 	if(shape < 2)
 		shape++
-		activator.to_chat(span("notice","You alter \the shape of \the [src.name]."))
+		activator.to_chat(span("notice","你改变了[src.name]的形状。"))
 	else
 		shape = 0
-		activator.to_chat(span("notice","You collapse \the [src.name] back into pure crystals."))
+		activator.to_chat(span("notice","你让[src.name]重新化为纯净的水晶。"))
 
 	if(shape == 0)
-		name = "conjuring crystals"
-		desc = "A cluster of crystals used in Crystal Guardian Conjuration."
-		desc_extended = "A glimmering crystal that has been used in conjuration by the Crystal Guardians since their origin."
+		name = "塑形水晶"
+		desc = "水晶守卫用于塑形魔法的水晶簇。"
+		desc_extended = "闪耀的水晶，自水晶守卫诞生以来，就被它们用于塑形魔法。"
 		damage_type = /damagetype/melee/sword/crystal
 		size = SIZE_2
 		weight = 1
@@ -51,9 +51,9 @@
 		return TRUE
 
 	if(shape == 1)
-		name = "crystal rapier"
-		desc = "A crystal rapier conjured from pure crystal essence."
-		desc_extended = "A glimmering crystal rapier of new design, conjured by the Crystal Guardians."
+		name = "水晶刺剑"
+		desc = "由纯净水晶精华塑成的刺剑。"
+		desc_extended = "水晶守卫以新式样塑成的闪耀水晶刺剑。"
 		damage_type = /damagetype/melee/sword/crystal/rapier
 		size = SIZE_4
 		weight = 5
@@ -62,9 +62,9 @@
 		return TRUE
 
 	if(shape == 2)
-		name = "crystal longsword"
-		desc = "A crystal longsword conjured from pure crystal essence."
-		desc_extended = "A glimmering crystal longsword that has been conjured by the Crystal Guardians since their origin."
+		name = "水晶长剑"
+		desc = "由纯净水晶精华塑成的长剑。"
+		desc_extended = "自水晶守卫诞生以来，它们就会塑造这种闪耀的水晶长剑。"
 		damage_type = /damagetype/melee/sword/crystal/longsword
 		size = SIZE_5
 		weight = 8
@@ -98,7 +98,7 @@
 //DO NOT LET THESE BE PICKED UP//
 
 /obj/item/weapon/melee/crystal/rapier
-	name = "crystal rapier"
+	name = "水晶刺剑"
 	damage_type = /damagetype/melee/sword/crystal/rapier
 	size = SIZE_4
 	weight = 5
@@ -106,7 +106,7 @@
 	value_burgerbux = 1
 
 /obj/item/weapon/melee/crystal/longsword
-	name = "crystal longsword"
+	name = "水晶长剑"
 	damage_type = /damagetype/melee/sword/crystal/longsword
 	size = SIZE_5
 	weight = 8

@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/plascrusaderboots
-	name = "right plascrusader boot"
-	desc = "When you gotta walk around in style."
-	desc_extended = "A fine looking gold metal boot made from high quality metals."
+	name = "金甲十字军右靴"
+	desc = "走到哪儿都得有派头。"
+	desc_extended = "用优质金属制成的精美金色金属靴。"
 	rarity = RARITY_RARE
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -31,7 +31,7 @@
 
 
 /obj/item/clothing/feet/shoes/plascrusaderboots/left
-	name = "left plascrusader boot"
+	name = "金甲十字军左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/service
-	name = "\improper 7.62mm SOL-14 Service Rifle"
-	desc = "HOORAH!"
-	desc_extended = "An old rifle previously used by NanoTrasen when they were contractors of the SolGov army. It's occasionally seen in the hands of veteran PMCs."
+	name = "\improper 7.62mm SOL-14制式步枪"
+	desc = "乌拉！"
+	desc_extended = "纳米传讯为太阳系政府军承包军事业务时期使用的老式步枪，偶尔还能在资深私人军事承包人员手中见到。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/762_2.dmi'
 	icon_state = "inventory"
 	value = 2200

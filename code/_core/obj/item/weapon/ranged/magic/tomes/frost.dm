@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/frost
-	name = "tome of frost spray"
-	desc = "Sprays an enemy with frost."
-	desc_extended = "Costs mana to use."
+	name = "寒霜喷射法术典籍"
+	desc = "向敌人喷射寒霜。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 2
 
 	shoot_delay = 15

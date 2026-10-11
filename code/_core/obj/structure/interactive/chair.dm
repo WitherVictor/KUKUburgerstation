@@ -1,7 +1,7 @@
 obj/structure/interactive/chair
-	name = "chair"
-	desc = "You will sit in this. By will or by force."
-	desc_extended = "A chair is a piece of furniture with a raised surface supported by legs, commonly used to seat a single person. Buckling is automatic and will be attempted upon walking over something you can buckle into."
+	name = "椅子"
+	desc = "你会坐上去的。自愿也好，被迫也罢。"
+	desc_extended = "由椅腿支撑座面、通常供一人就座的家具。站在椅子所在位置时，可点击椅子将自己固定在上面。"
 	icon = 'icons/obj/structure/chairs.dmi'
 	icon_state = "chair"
 
@@ -65,45 +65,45 @@ obj/structure/interactive/chair/proc/sit_your_ass_down(var/mob/living/L)
 	. = ..()
 
 obj/structure/interactive/chair/stool
-	name = "stool"
-	desc = "Apply butt."
-	desc_extended = "A chair without back or arm rests, also known as a stool."
+	name = "凳子"
+	desc = "请把屁股放上去。"
+	desc_extended = "没有靠背和扶手的椅子，也就是凳子。"
 	icon_state = "stool"
 
 	bullet_block_chance = 5
 
 obj/structure/interactive/chair/stool/bar
-	name = "bar stool"
-	desc = "Apply butt."
-	desc_extended = "A chair without back or arm rests, also known as a stool. This one is raised up, therefore it classifies as a bar stool."
+	name = "吧台凳"
+	desc = "请把屁股放上去。"
+	desc_extended = "没有靠背和扶手的椅子，也就是凳子。这张比较高，所以算吧台凳。"
 	icon_state = "bar"
 
 
 obj/structure/interactive/chair/wood
-	name = "wooden chair"
-	desc = "You will sit in this. By will or by force."
-	desc_extended = "A chair is a piece of furniture with a raised surface supported by legs, commonly used to seat a single person."
+	name = "木椅"
+	desc = "你会坐上去的。自愿也好，被迫也罢。"
+	desc_extended = "由椅腿支撑座面、通常供一人就座的家具。"
 	icon_state = "wooden_chair"
 
 	bullet_block_chance = 10
 
 obj/structure/interactive/chair/office
-	name = "office chair"
+	name = "办公椅"
 	icon_state = "officechair_white"
 
 obj/structure/interactive/chair/office/dark
-	name = "office chair"
+	name = "办公椅"
 	icon_state = "officechair_dark"
 
 obj/structure/interactive/chair/comfy
-	name = "comfy chair"
+	name = "舒适座椅"
 	icon_state = "comfychair"
 
 	armrest = TRUE
 
 
 obj/structure/interactive/chair/shuttle
-	name = "shuttle chair"
+	name = "穿梭机座椅"
 	icon_state = "shuttle_chair"
 
 	armrest = TRUE

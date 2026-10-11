@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/full/cardborg
-	name = "cardborg helmet"
-	desc = "01000010 01100101 01100101 01110000"
-	desc_extended = "A helmet made from a cardboard box"
+	name = "纸板机器人头盔"
+	desc = "哔——（01000010 01100101 01100101 01110000）"
+	desc_extended = "用纸箱制作的头盔。"
 	icon = 'icons/obj/item/clothing/hats/cardborghelm.dmi'
 
 
@@ -12,9 +12,9 @@
 	value = 200
 
 /obj/item/clothing/head/helmet/full/xeno
-	name = "xeno mask"
-	desc = "Hivmemind not included!"
-	desc_extended = "A mask, part of a xeno costume."
+	name = "异形面具"
+	desc = "不附送蜂巢意识！"
+	desc_extended = "异形装扮中的面具。"
 	icon = 'icons/obj/item/clothing/hats/xenomask.dmi'
 
 	size = SIZE_3
@@ -24,9 +24,9 @@
 	value = 200
 
 /obj/item/clothing/head/helmet/full/ghost_sheet
-	name = "Ghost costume hood"
-	desc = "OOOOoooOOooo!"
-	desc_extended = "The hood of a ghost costume, with holes cut out to see out of."
+	name = "幽灵服装兜帽"
+	desc = "呜呜呜呜！"
+	desc_extended = "幽灵服装的兜帽，剪了几个洞以便看清外面。"
 	icon = 'icons/obj/item/clothing/hats/ghostsheethood.dmi'
 
 	size = SIZE_2
@@ -38,9 +38,9 @@
 	can_save = FALSE
 
 /obj/item/clothing/head/helmet/full/miner
-	name = "blocky helmet"
-	desc = "micheal soft pls no sue"
-	desc_extended = "The helmet included in the blocky skinsuit"
+	name = "方块头盔"
+	desc = "迈克软，求求你别起诉。"
+	desc_extended = "方块紧身服附带的头盔。"
 	icon = 'icons/obj/item/clothing/hats/minefucker.dmi'
 
 	armor = /armor/cloth/flammable

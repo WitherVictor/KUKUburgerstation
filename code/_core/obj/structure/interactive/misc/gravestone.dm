@@ -1,9 +1,9 @@
 //Put this in one file cause there is too many
 
 obj/structure/interactive/misc/grave1
-	name = "Gravestone"
-	desc = "A little damaged gravestone."
-	desc_extended = "Be a good man - don't touch someone graves"
+	name = "墓碑"
+	desc = "一块略有破损的墓碑。"
+	desc_extended = "做个好人，别乱动别人的坟墓。"
 	icon_state = "grave1"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -14,9 +14,9 @@ obj/structure/interactive/misc/grave1
 	density = TRUE
 
 obj/structure/interactive/misc/grave5
-	name = "Gravestone"
-	desc = "A little damaged gravestone."
-	desc_extended = "Be a good man - don't touch someone graves"
+	name = "墓碑"
+	desc = "一块略有破损的墓碑。"
+	desc_extended = "做个好人，别乱动别人的坟墓。"
 	icon_state = "grave5"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -27,9 +27,9 @@ obj/structure/interactive/misc/grave5
 	density = TRUE
 
 obj/structure/interactive/misc/grave2
-	name = "Wooden cross"
-	desc = "Just a wooden cross."
-	desc_extended = "Be a good man - don't touch someone graves"
+	name = "木十字架"
+	desc = "一个普通的木十字架。"
+	desc_extended = "做个好人，别乱动别人的坟墓。"
 	icon_state = "grave2"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -40,9 +40,9 @@ obj/structure/interactive/misc/grave2
 	density = TRUE
 
 obj/structure/interactive/misc/grave3
-	name = "Wooden cross"
-	desc = "Just a wooden cross."
-	desc_extended = "Be a good man - don't touch someone graves"
+	name = "木十字架"
+	desc = "一个普通的木十字架。"
+	desc_extended = "做个好人，别乱动别人的坟墓。"
 	icon_state = "grave3"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -53,9 +53,9 @@ obj/structure/interactive/misc/grave3
 	density = TRUE
 
 obj/structure/interactive/misc/grave4
-	name = "Wooden cross"
-	desc = "Just a wooden cross."
-	desc_extended = "Be a good man - don't touch someone graves"
+	name = "木十字架"
+	desc = "一个普通的木十字架。"
+	desc_extended = "做个好人，别乱动别人的坟墓。"
 	icon_state = "grave4"
 	icon = 'icons/obj/structure/misc_new.dmi'
 

@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/head/cmo
-	name = "Chief Medical Officer"
-	desc = "Turn your head and cough."
+	name = "医疗主管"
+	desc = "把头转过去，咳嗽一下。"
 	species = "human"
 	dialogue_id = /dialogue/npc/chief_medical_officer
 	sex = MALE

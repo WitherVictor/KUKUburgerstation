@@ -1,7 +1,7 @@
 /area/interior/
 
 /area/interior/roof
-	name = "roof"
+	name = "屋顶"
 	icon_state = "roof"
 
 
@@ -26,11 +26,11 @@
 
 
 /area/interior/syndicate_base
-	name = "syndicate base"
+	name = "辛迪加基地"
 	icon_state = "syndie"
 
 /area/interior/station
-	name = "Central Command"
+	name = "中央指挥部"
 	icon_state = "cmd"
 	flags_area = FLAGS_AREA_NO_DAMAGE | FLAGS_AREA_NO_CONSTRUCTION | FLAGS_AREA_NO_ROUND_INFORMATION | FLAGS_AREA_TUTORIAL
 
@@ -52,6 +52,6 @@
 	)
 
 /area/interior/station/singleplayer
-	name = "Home"
+	name = "家"
 	icon_state = "solo"
 	flags_area = FLAGS_AREA_NO_DAMAGE | FLAGS_AREA_NO_CONSTRUCTION | FLAGS_AREA_SINGLEPLAYER

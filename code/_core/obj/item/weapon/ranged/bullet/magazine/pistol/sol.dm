@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/sol
-	name = "10mm Lugernut pistol"
-	desc = "Cheaper than tablewine."
-	desc_extended = "A substandard Solarian pistol commonly distributed to conscripts or those who opened a bank account for the first time. The oversized slider is known to break the thumbs of those who hold it incorrectly."
+	name = "10mm鲁格坚果手枪"
+	desc = "比餐酒还便宜。"
+	desc_extended = "品质低劣的太阳系手枪，通常发给义务兵，或作为首次开立银行账户的赠品。握持不当时，过大的套筒会打断使用者的拇指。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/10mm_sol.dmi'
 	icon_state = "inventory"
 	value = 200

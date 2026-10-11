@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/shotgun_12/
-	name = "\improper 12 gauge buckshot shell"
-	desc = "Shoots a lot of small bullets at once."
-	desc_extended = "This shell is not very accurate and has many projectiles."
+	name = "\improper 12号鹿弹"
+	desc = "一次射出许多小弹丸。"
+	desc_extended = "精度较低，一发内含多颗弹丸。"
 	icon = 'icons/obj/item/bullet/shotgun.dmi'
 	icon_state = "buckshot"
 
@@ -36,10 +36,10 @@
 	return TRUE
 
 /obj/item/bullet_cartridge/shotgun_12/slug
-	name = "\improper 12 gauge slug"
+	name = "\improper 12号独头弹"
 	rarity = RARITY_UNCOMMON
-	desc = "Shoots one really big bullet."
-	desc_extended = "This shell doesn't spread alot, and only has one projectile."
+	desc = "射出一颗大弹丸。"
+	desc_extended = "散布较小，每发只有一颗弹丸。"
 	icon_state = "slug"
 
 	projectile_count = 1
@@ -53,16 +53,16 @@
 	size = 0.04
 
 /obj/item/bullet_cartridge/shotgun_12/slug/surplus
-	name = "\improper surplus 12 gauge slug"
+	name = "\improper 库存旧式12号独头弹"
 	damage_type_bullet = /damagetype/ranged/bullet/shotgun_12/slug/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/shotgun_12/slug/cleaning
-	name = "\improper 12 gauge cleaning slug"
+	name = "\improper 12号清洁独头弹"
 	rarity = RARITY_UNCOMMON
-	desc = "Shoots one really big bullet."
-	desc_extended = "This shell doesn't spread alot, and only has one projectile that also CLEANS."
+	desc = "射出一颗大弹丸。"
+	desc_extended = "散布较小，每发只有一颗弹丸，而且还能清洁！"
 	icon_state = "oldrubber"
 
 	projectile_count = 1
@@ -79,16 +79,16 @@
 
 
 /obj/item/bullet_cartridge/shotgun_12/surplus
-	name = "\improper surplus 12 gauge buckshot"
+	name = "\improper 库存旧式12号鹿弹"
 	damage_type_bullet = /damagetype/ranged/bullet/shotgun_12/surplus
 	jam_chance = 1
 	value = 0
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/shotgun_12/fire
-	name = "\improper 12 gauge drake breath shell"
-	desc = "Sets everything on fire."
-	desc_extended = "A magic imbued shotgun shell that shoots 3 high damaging incendiary rounds. Don't ask how it works."
+	name = "\improper 12号飞龙吐息弹"
+	desc = "把一切都点燃。"
+	desc_extended = "灌注魔力的霰弹枪弹药，一次射出3发高伤害燃烧弹。别问原理。"
 	icon_state = "fire"
 	rarity = RARITY_RARE
 
@@ -106,10 +106,10 @@
 
 
 /obj/item/bullet_cartridge/shotgun_12/flechette
-	name = "\improper 12 gauge flechette shell"
+	name = "\improper 12号箭形弹"
 	rarity = RARITY_UNCOMMON
-	desc = "Shoots a lot of small shards at once."
-	desc_extended = "This shell is not very accurate and has many projectiles. Lower damage but pierces armor better."
+	desc = "一次射出许多小碎片。"
+	desc_extended = "精度较低，一发内含多枚弹体。伤害较低，但穿甲能力更强。"
 	icon_state = "flechette"
 
 	projectile_count = 5
@@ -127,15 +127,15 @@
 	penetrations = 1
 
 /obj/item/bullet_cartridge/shotgun_12/flechette/surplus
-	name = "\improper surplus 12 gauge flechette"
+	name = "\improper 库存旧式12号箭形弹"
 	damage_type_bullet = /damagetype/ranged/bullet/shotgun_12/flechette/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/shotgun_12/rubber // yes i literally just copied the ks-23's rubber slugs shut up
-	name = "\improper 12 gauge rubber slug shell"
-	desc = "Because real men use the concussive force of a huge fucking piece of rubber."
-	desc_extended = "A rubber slug shell, supposedly less lethal. Causes a lot of pain, but not much damage."
+	name = "\improper 12号橡胶独头弹"
+	desc = "真男人就该用一大块橡胶狠狠砸过去。"
+	desc_extended = "据说致命性较低的橡胶独头弹。会造成剧痛，但实际伤害不高。"
 	rarity = RARITY_UNCOMMON
 	icon_state = "rubber"
 
@@ -148,10 +148,10 @@
 
 
 /obj/item/bullet_cartridge/shotgun_12/frag
-	name = "\improper 12 gauge frag"
+	name = "\improper 12号破片弹"
 	rarity = RARITY_RARE
-	desc = "Shoots one really big bullet."
-	desc_extended = "This shell doesn't spread alot, and only has one projectile."
+	desc = "射出一颗大弹丸。"
+	desc_extended = "散布较小，每发只有一颗弹丸。"
 	icon_state = "slug"
 
 	projectile_count = 1
@@ -166,10 +166,10 @@
 
 
 /obj/item/bullet_cartridge/shotgun_12/techshot
-	name = "\improper 12 gauge techshot"
+	name = "\improper 12号科技弹"
 	rarity = RARITY_RARE
-	desc = "Shoots one really big bullet."
-	desc_extended = "Shoots a focused laser."
+	desc = "射出一道聚焦激光。"
+	desc_extended = "发射聚焦激光的霰弹枪弹药。"
 	icon_state = "techshot"
 
 	projectile_count = 1

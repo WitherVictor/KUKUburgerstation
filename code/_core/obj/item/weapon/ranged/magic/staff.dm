@@ -13,7 +13,7 @@
 	. = ..()
 
 	if(total_charge > initial(total_charge)*2)
-		. += span("warning","Overcharged: Uses twice as many charge as it is above capacity.")
+		. += span("warning","过度充能：处于此状态时，每次使用消耗双倍能量。")
 
 
 /obj/item/weapon/ranged/magic/staff/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
@@ -34,7 +34,7 @@
 	return ..()
 
 /obj/item/weapon/ranged/magic/staff/get_examine_list(var/mob/activator)
-	return ..() + div("notice","It has [get_ammo_count()] charges ([total_charge]) remaining.")
+	return ..() + div("notice","剩余[total_charge]点能量（可使用[get_ammo_count()]次）。")
 
 /obj/item/weapon/ranged/magic/staff/handle_ammo(var/mob/activator,var/bullet_position=1)
 	var/charge_to_remove = cost_charge
@@ -48,9 +48,9 @@
 	return round(total_charge / cost_charge)
 
 /obj/item/weapon/ranged/magic/staff/fire
-	name = "Wand of Fireballs"
-	desc = "Shoot fireballs!"
-	desc = "You can also use it to reheat soup in a pinch."
+	name = "火球魔杖"
+	desc = "发射火球！"
+	desc = "急用时，也可以拿它热汤。"
 	cost_charge = SOUL_SIZE_COMMON/10
 	total_charge = SOUL_SIZE_COMMON
 
@@ -84,9 +84,9 @@
 
 /obj/item/weapon/ranged/magic/staff/chaos
 
-	name = "Staff of Chaos"
-	desc = "Summon Chaos!"
-	desc_extended = "For when you need to summon a little chaos."
+	name = "混沌法杖"
+	desc = "召来混沌！"
+	desc_extended = "需要制造一点混乱时，就用它。"
 	cost_charge = SOUL_SIZE_UNCOMMON/20
 	total_charge = SOUL_SIZE_UNCOMMON
 
@@ -124,9 +124,9 @@
 
 
 /obj/item/weapon/ranged/magic/staff/basic
-	name = "Staff of the Magic Missile"
-	desc = "ARCANE MISSILE!"
-	desc_extended = "Point the orb end at the enemy for best result."
+	name = "魔法飞弹法杖"
+	desc = "奥术飞弹！"
+	desc_extended = "把带圆球的那端指向敌人，效果最佳。"
 	cost_charge = SOUL_SIZE_COMMON/20
 	total_charge = SOUL_SIZE_COMMON
 
@@ -168,9 +168,9 @@
 */
 
 /obj/item/weapon/ranged/magic/staff/blackflame
-	name = "Staff of the Blackflame"
-	desc = "Draw unholy power to cast a flame that burns black!"
-	desc_extended = "You can also use it to reheat soup in a pinch."
+	name = "黑炎法杖"
+	desc = "汲取邪秽之力，施放漆黑的火焰！"
+	desc_extended = "急用时，也可以拿它热汤。"
 	cost_charge = SOUL_SIZE_UNCOMMON/10
 	total_charge = SOUL_SIZE_UNCOMMON
 

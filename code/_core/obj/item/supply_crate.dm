@@ -1,7 +1,7 @@
 /obj/item/supply_crate
-	name = "supply crate"
-	desc = "Hey down there! Supplies!"
-	desc_extended = "An old, ancient military supply crate used by various corporations to send shipments across colonies."
+	name = "补给箱"
+	desc = "下面的人注意！补给来了！"
+	desc_extended = "古老的军用补给箱，各家公司用它向不同殖民地运送物资。"
 	icon = 'icons/obj/structure/supply_crate.dmi'
 	icon_state = "supply"
 
@@ -22,7 +22,7 @@
 
 /obj/item/supply_crate/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Attack or throw to open.")
+	. += span("notice","攻击它或将它扔出即可打开。")
 
 
 /obj/item/supply_crate/get_base_value()

@@ -1,8 +1,8 @@
 /turf/simulated/floor/cult
-	name = "cult floor"
+	name = "邪教地板"
 	icon = 'icons/turf/floor/cult.dmi'
-	desc = "An arcane floor"
-	desc_extended = "The patterns on these types of floor can make one mesmorized, but the effect is often ruined due to blood cult antics"
+	desc = "一块秘法地板。"
+	desc_extended = "这种地板上的图案令人着迷，不过血之邪教的胡闹常常破坏这种氛围。"
 	icon_state = "floor1"
 
 	footstep = /footstep/tile

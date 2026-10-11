@@ -71,8 +71,8 @@
 /obj/item/weapon/get_examine_details_list(var/mob/examiner)
 	. = ..()
 	if(enchantment)
-		. += div("notice","It is enchanted with <b>[enchantment.name] \Roman[enchantment.strength]</b>")
-		. += div("notice","The enchantment has [enchantment.charge] charge left ([FLOOR(enchantment.charge/enchantment.cost,1)] uses).")
+		. += div("notice","附有<b>[enchantment.name] \Roman[enchantment.strength]</b>附魔。")
+		. += div("notice","附魔剩余[enchantment.charge]点能量（可使用[FLOOR(enchantment.charge/enchantment.cost,1)]次）。")
 
 /obj/item/weapon/quick(var/mob/activator,var/atom/object,location,params)
 
@@ -144,10 +144,10 @@
 		INTERACT_DELAY(20)
 		var/obj/item/soulgem/G = object
 		if(enchantment.charge >= enchantment.max_charge)
-			activator.to_chat(span("warning","\The [src.name] is already fully recharged!"))
+			activator.to_chat(span("warning","[src.name]已经充满能量了！"))
 			return TRUE
 		if(G.total_charge <= 0)
-			activator.to_chat(span("warning","\The [G.name] is empty and devoid of charge!"))
+			activator.to_chat(span("warning","[G.name]是空的，没有任何能量！"))
 			return TRUE
 		var/chargediff = min(G.total_charge,(enchantment.max_charge - enchantment.charge))
 		enchantment.charge += chargediff
@@ -155,10 +155,10 @@
 		var/mob/living/L = activator
 		L.add_skill_xp(SKILL_SUMMONING,chargediff*0.0025)
 		if(G.total_charge <= 0 && !G.do_not_consume)
-			activator.visible_message(span("notice","\The [activator.name] siphons some energy from \the [G.name] to recharge \the [src.name], consuming it!"),span("notice","You recharge the enchantment on \the [src.name] using the [G.name], consuming it!"))
+			activator.visible_message(span("notice","[activator.name]从[G.name]中抽取能量，为[src.name]充能，宝石随之消耗殆尽！"),span("notice","你用[G.name]为[src.name]的附魔充能，宝石随之消耗殆尽！"))
 			qdel(G)
 		else
-			activator.visible_message(span("notice","\The [activator.name] siphons some energy from \the [G.name] to recharge \the [src.name]"),span("notice","You recharge the enchantment on \the [src.name] using the [G.name]"))
+			activator.visible_message(span("notice","[activator.name]从[G.name]中抽取能量，为[src.name]充能。"),span("notice","你用[G.name]为[src.name]的附魔充能。"))
 		return TRUE
 
 	. = ..()

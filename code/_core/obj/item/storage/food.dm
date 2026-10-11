@@ -1,9 +1,9 @@
 /obj/item/storage/foodbox/
-	name = "food box"
-	desc = "Contains food"
+	name = "食品盒"
+	desc = "里面装着食物。"
 
 /obj/item/storage/foodbox/donkbox/
-	name = "box of donk pockets"
+	name = "咚克口袋饼盒"
 	icon_state = "donkbox"
 	size = 3
 	container_max_size = 1

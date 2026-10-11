@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/sword/combat_knife
-	name = "tactical combat knife"
-	desc = "For professionals."
-	desc_extended = "A high quality combat knife designed to seriously fuck the other person's day up."
+	name = "战术格斗刀"
+	desc = "专业人士专用。"
+	desc_extended = "高品质格斗刀，专为把对方的一天彻底搞砸而设计。"
 	icon = 'icons/obj/item/weapons/melee/swords/combat_knife.dmi'
 
 	damage_type = /damagetype/melee/sword/combat_knife

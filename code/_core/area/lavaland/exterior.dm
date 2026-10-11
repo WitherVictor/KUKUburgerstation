@@ -1,5 +1,5 @@
 /area/lavaland/exterior
-	name = "\improper Lavaland Exterior"
+	name = "\improper 熔岩地带室外"
 	icon_state = "lava_cave"
 
 	//sunlight_power = 1

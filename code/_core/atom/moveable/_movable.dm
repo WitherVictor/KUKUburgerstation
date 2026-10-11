@@ -148,13 +148,13 @@
 	if(grabber == src)
 		if(messages && is_living(grabber))
 			var/mob/living/L = grabber
-			L.to_chat(span("warning","You can't grab yourself! ERP is against the rules!"))
+			L.to_chat(span("warning","你不能抓住自己！色情角色扮演违反规则！"))
 		return FALSE
 
 	if(anchored)
 		if(messages && is_living(grabber))
 			var/mob/living/L = grabber
-			L.to_chat(span("warning","\The [src.name] is secured firmly to the ground!"))
+			L.to_chat(span("warning","[src.name]牢牢固定在地面上！"))
 		return FALSE
 
 	return TRUE

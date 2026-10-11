@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/reagent_ammo/flamethrower
-	name = "flamethrower"
-	desc = "Mphh Mphh!"
-	desc_extended = "A dated flamethrower. Disarm + Fire to release a blast of compressed Fuel"
+	name = "火焰喷射器"
+	desc = "唔唔，唔唔！"
+	desc_extended = "老式火焰喷射器。按住缴械修饰键并开火，可喷出一股压缩燃料。"
 	icon = 'icons/obj/item/weapons/ranged/flamethrower.dmi'
 
 	automatic = TRUE
@@ -106,10 +106,10 @@
 /obj/item/weapon/ranged/reagent_ammo/flamethrower/austrailium/
 	value_burgerbux = 100
 	bypass_balance_check = TRUE //This is an admeme weapon.
-	name = "austrailium flamethrower"
+	name = "澳金火焰喷射器"
 	icon = 'icons/obj/item/weapons/ranged/aussieflamethrower.dmi'
-	desc = "Feel the heat!"
-	desc_extended = "Made from a rare golden element from ancient Austrailia,boasts endless reserves of fuel."
+	desc = "感受这股热浪！"
+	desc_extended = "用产自古老澳大利亚的稀有金色元素打造，号称拥有无尽的燃料储备。"
 	reagent_volume_per_shot = 0
 
 

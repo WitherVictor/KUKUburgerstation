@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/nanotrasen
-	name = "\improper NanoTrasen security personnel"
-	desc = "A security team that doesn't like following orders."
-	desc_extended = "A low-ranking NanoTrasen soldier tasked with defending the station."
+	name = "纳米传讯安保人员"
+	desc = "不爱听从命令的安保队员。"
+	desc_extended = "负责保卫空间站的低阶纳米传讯士兵。"
 	ai = /ai/advanced/nanotrasen
 
 	loadout = /loadout/nanotrasen/soldier
@@ -11,9 +11,9 @@
 	level = 12
 
 /mob/living/advanced/npc/nanotrasen/recruitable
-	name = "\improper NanoTrasen security personnel recruit"
-	desc = "A security team that actually follows orders!"
-	desc_extended = "A low-ranking NanoTrasen soldier tasked with assisting with higher ranking NanoTrasen personnel with missions."
+	name = "纳米传讯安保新兵"
+	desc = "居然真的听从命令的安保队员！"
+	desc_extended = "负责协助高阶纳米传讯人员执行任务的低阶纳米传讯士兵。"
 
 	dialogue_id = /dialogue/npc/soldier/
 	loadout = /loadout/nanotrasen/recruit
@@ -31,7 +31,7 @@
 
 
 /mob/living/advanced/npc/nanotrasen/hanger_guard //For guarding the station against antags.
-	name = "\improper NanoTrasen hanger guard"
+	name = "纳米传讯机库守卫"
 	loadout = /loadout/nanotrasen/hanger_guard
 	level = 40
 	ai = /ai/advanced/guarding
@@ -42,7 +42,7 @@
 
 
 /mob/living/advanced/npc/nanotrasen/hanger_guard/immortal
-	name = "\improper NanoTrasen arrivals guard"
+	name = "纳米传讯抵达区守卫"
 	loadout = /loadout/nanotrasen/hanger_guard/approachable
 	level = 80
 	ai = /ai/advanced/guarding
@@ -55,8 +55,8 @@
 
 
 /mob/living/advanced/npc/nanotrasen/shaft_miner
-	name = "shaft miner"
-	desc = "Someone didn't do their job."
+	name = "矿工"
+	desc = "有人没尽到自己的职责。"
 	dialogue_id = null
 	loadout = /loadout/shaft_miner
 

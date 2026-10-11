@@ -1,12 +1,12 @@
 /obj/item/clothing/mask/voice_of_god
 
-	name = "voice of god"
+	name = "神之声"
 	icon = 'icons/obj/item/clothing/masks/god_voice.dmi'
 
 	rarity = RARITY_LEGENDARY
 
-	desc = "God is here and he's bald."
-	desc_extended = "A terrible brass molding of a deity with the vocal cords of a Colossus attached. Wearing this allows the user to augment their voice with magic. Horrifying."
+	desc = "神降临了，而且是个秃子。"
+	desc_extended = "一副粗劣的黄铜神像面具，上面装着巨像的声带。戴上后就能以魔法强化自己的声音。令人毛骨悚然。"
 
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
 
@@ -71,15 +71,15 @@
 
 /obj/item/clothing/mask/voice_of_god/get_examine_details_list(var/mob/activator)
 	. = ..()
-	. += div("notice bold underline","Available commands:")
-	. += div("notice","<b>Stop, Halt, Hold</b>: Paralyzes all enemies in range for 2 seconds.")
-	. += div("notice","<b>Drop, Down, Fall</b>: Stuns all enemies in range for 4 seconds.")
-	. += div("notice","<b>Mend, Heal, Cure</b>: Grants 50 health to all allies in range over 10 seconds.")
-	. += div("notice","<b>Harm, Hinder, Wilt</b>: Deals 50 dark damage to all enemies in range.")
-	. += div("notice","<b>Kill, Die, Perish</b>: Deals 250 dark damage to all enemies in critical condition in range.")
-	. += div("notice","<b>Gore, Leak, Loss</b>: Drains 50 units of blood from all enemies in range.")
-	. += div("notice","<b>Burn, Fire, Heat</b>: Ignites all enemies in range for 6 seconds.")
-	. += div("notice","All commands share a cooldown of 8 seconds, and require 50 mana and stamina to cast.")
+	. += div("notice bold underline","可用指令（说出以下任一英文词语）：")
+	. += div("notice","<b>Stop / Halt / Hold（停止）</b>：使范围内的所有敌人麻痹2秒。")
+	. += div("notice","<b>Drop / Down / Fall（倒下）</b>：使范围内的所有敌人眩晕4秒。")
+	. += div("notice","<b>Mend / Heal / Cure（治疗）</b>：在10秒内为范围内的所有其他友军恢复50点生命值。")
+	. += div("notice","<b>Harm / Hinder / Wilt（伤害）</b>：对范围内的所有敌人造成50点基础黑暗伤害。")
+	. += div("notice","<b>Kill / Die / Perish（死亡）</b>：对范围内所有处于危急状态的敌人造成250点基础黑暗伤害，命中后将其杀死。")
+	. += div("notice","<b>Gore / Leak / Loss（失血）</b>：使范围内的所有敌人失去50单位血液。")
+	. += div("notice","<b>Burn / Fire / Heat（燃烧）</b>：点燃范围内的所有敌人，持续6秒。")
+	. += div("notice","所有指令共用8秒冷却时间，每次施放消耗50点法力和50点体力。")
 
 /obj/item/clothing/mask/voice_of_god/on_equip(var/atom/old_location,var/silent=FALSE)
 	. = ..()

@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/head/hos
-	name = "Head of Security"
-	desc = "No clowns allowed."
+	name = "安保主管"
+	desc = "小丑禁止入内。"
 	species = "human"
 	dialogue_id = /dialogue/npc/head_of_security/
 	sex = FEMALE

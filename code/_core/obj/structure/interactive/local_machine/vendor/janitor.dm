@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/janitor
-	name = "janitor equipment vendor"
+	name = "清洁装备售货机"
 	icon_state = "janidrobe"
 	stored_types = list(
 		/obj/item/clothing/feet/socks/knee,

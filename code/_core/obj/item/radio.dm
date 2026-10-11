@@ -1,7 +1,7 @@
 /obj/item/radio
-	name = "radio"
-	desc = "; COMMS DOWN"
-	desc_extended = "A compact station bounced radio, for when standard headset-based communication methods fail."
+	name = "无线电对讲机"
+	desc = "; 通信瘫痪了"
+	desc_extended = "小巧的站内中继对讲机，用于常规耳机通信失效的时候。"
 	icon = 'icons/obj/item/radio.dmi'
 	icon_state = "inventory"
 
@@ -13,7 +13,7 @@
 
 /obj/item/radio/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","ALT+Click to start broadcasting nearby speech.<br>Use the mouse wheel to change frequencies.<br>Use in hands to toggle the signal reciever.")
+	. += span("notice","按住Alt点击，可切换附近语音的自动广播。<br>使用鼠标滚轮切换频率。<br>拿在手中使用，可开关信号接收器。")
 
 /obj/item/radio/PreDestroy()
 	QDEL_NULL(stored_radio)

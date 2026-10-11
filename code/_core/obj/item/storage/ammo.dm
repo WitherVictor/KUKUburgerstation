@@ -1,6 +1,6 @@
 /obj/item/storage/ammo/
-	name = "ammo box"
-	desc = "Contains ammo."
+	name = "弹药盒"
+	desc = "装着弹药。"
 	icon = 'icons/obj/item/storage/ammo.dmi'
 	icon_state = "template"
 
@@ -13,8 +13,8 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/storage/ammo/bullet_22/
-	name = "box of .22 LR bullets"
-	desc_extended = "An ammo box that can hold 36 .22 LR bullets."
+	name = ".22 LR弹药盒"
+	desc_extended = "标注可容纳36发.22 LR子弹的弹药盒。"
 	icon_state = "22"
 	size = SIZE_3
 
@@ -29,8 +29,8 @@
 
 
 /obj/item/storage/ammo/slug
-	name = "box of shotgun slugs"
-	desc_extended = "An ammo box that can hold 24 shotgun slugs."
+	name = "霰弹枪独头弹盒"
+	desc_extended = "标注可容纳24发霰弹枪独头弹的弹药盒。"
 	icon_state = "slug"
 
 	dynamic_inventory_count = 4
@@ -43,8 +43,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/buckshot
-	name = "box of shotgun buckshot"
-	desc_extended = "An ammo box that can hold 24 shotgun buckshot."
+	name = "霰弹枪鹿弹盒"
+	desc_extended = "标注可容纳24发霰弹枪鹿弹的弹药盒。"
 	icon_state = "buckshot"
 
 	dynamic_inventory_count = 4
@@ -58,8 +58,8 @@
 
 
 /obj/item/storage/ammo/flechette
-	name = "box of flechette rounds"
-	desc_extended = "An ammo box that can hold 24 shotgun flechette rounds."
+	name = "霰弹枪箭形弹盒"
+	desc_extended = "标注可容纳24发霰弹枪箭形弹的弹药盒。"
 	icon_state = "flechette"
 
 	dynamic_inventory_count = 4
@@ -74,8 +74,8 @@
 
 
 /obj/item/storage/ammo/fire
-	name = "box of drake breath"
-	desc_extended = "An ammo box that can hold 24 shotgun fireball rounds."
+	name = "飞龙吐息弹盒"
+	desc_extended = "标注可容纳24发霰弹枪火球弹的弹药盒。"
 	icon_state = "fire"
 
 	dynamic_inventory_count = 4
@@ -88,8 +88,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/rubber
-	name = "box of shotgun rubber slugs"
-	desc_extended = "An ammo box that can hold 24 shotgun rubber slugs."
+	name = "霰弹枪橡胶独头弹盒"
+	desc_extended = "标注可容纳24发霰弹枪橡胶独头弹的弹药盒。"
 	icon_state = "rubber"
 
 	dynamic_inventory_count = 4
@@ -102,8 +102,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/buckshot_23
-	name = "box of slavic shotgun buckshot"
-	desc_extended = "An ammo box that can hold 16 23x75mmR shotgun buckshot."
+	name = "斯拉夫霰弹枪鹿弹盒"
+	desc_extended = "标注可容纳16发23x75mmR霰弹枪鹿弹的弹药盒。"
 	icon_state = "23buck"
 
 	dynamic_inventory_count = 4
@@ -116,8 +116,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/slug_23
-	name = "box of slavic shotgun slugs"
-	desc_extended = "An ammo box that can hold 16 23x75mmR shotgun slugs."
+	name = "斯拉夫霰弹枪独头弹盒"
+	desc_extended = "标注可容纳16发23x75mmR霰弹枪独头弹的弹药盒。"
 	icon_state = "23slug"
 
 	dynamic_inventory_count = 4
@@ -130,8 +130,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/fire_23
-	name = "box of slavic shotgun incendiary slugs"
-	desc_extended = "An ammo box that can hold 16 23x75mmR shotgun incendiary slugs."
+	name = "斯拉夫霰弹枪燃烧独头弹盒"
+	desc_extended = "标注可容纳16发23x75mmR霰弹枪燃烧独头弹的弹药盒。"
 	icon_state = "23fire"
 
 	dynamic_inventory_count = 4
@@ -144,8 +144,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/rubber_23
-	name = "box of slavic shotgun rubber slugs"
-	desc_extended = "An ammo box that can hold 16 23x75mmR shotgun rubber slugs."
+	name = "斯拉夫霰弹枪橡胶独头弹盒"
+	desc_extended = "标注可容纳16发23x75mmR霰弹枪橡胶独头弹的弹药盒。"
 	icon_state = "23rubber"
 
 	dynamic_inventory_count = 4
@@ -158,8 +158,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/grenade_40mm
-	name = "box of 40mm grenades"
-	desc_extended = "An ammo box that can hold 8 40mm high-explosive grenades."
+	name = "40mm榴弹盒"
+	desc_extended = "标注可容纳8发40mm高爆榴弹的弹药盒。"
 	icon_state = "40mm"
 
 	dynamic_inventory_count = 4
@@ -172,8 +172,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/bullet_762/
-	name = "box of 7.62x38mmR bullets"
-	desc_extended = "An ammo box that can hold 36 7.62x38mmR bullets."
+	name = "7.62x38mmR弹药盒"
+	desc_extended = "标注可容纳36发7.62x38mmR子弹的弹药盒。"
 	icon_state = "762"
 	size = SIZE_3
 
@@ -187,8 +187,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/bullet_38/
-	name = "box of .38 bullets"
-	desc_extended = "An ammo box that can hold 36 .38 bullets."
+	name = ".38弹药盒"
+	desc_extended = "标注可容纳36发.38子弹的弹药盒。"
 	icon_state = "38"
 	size = SIZE_3
 
@@ -202,8 +202,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/bullet_357/
-	name = "box of .357 bullets"
-	desc_extended = "An ammo box that can hold 36 .357 bullets."
+	name = ".357弹药盒"
+	desc_extended = "标注可容纳36发.357子弹的弹药盒。"
 	icon_state = "357"
 	size = SIZE_3
 
@@ -217,8 +217,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/bullet_44/
-	name = "box of .44 bullets"
-	desc_extended = "An ammo box that can hold 36 .44 bullets."
+	name = ".44弹药盒"
+	desc_extended = "标注可容纳36发.44子弹的弹药盒。"
 	icon_state = "44"
 	size = SIZE_3
 
@@ -232,8 +232,8 @@
 	. = ..()
 
 /obj/item/storage/ammo/bullet_300/
-	name = "box of .300 bullets"
-	desc_extended = "An ammo box that can hold 36 .300 bullets."
+	name = ".300弹药盒"
+	desc_extended = "标注可容纳36发.300子弹的弹药盒。"
 	icon_state = "300"
 	size = SIZE_3
 

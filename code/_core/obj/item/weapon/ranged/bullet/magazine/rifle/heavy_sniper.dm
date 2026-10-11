@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/heavy_sniper
-	name = "\improper .50 BFR Sniper"
-	desc = "For when you want to leave a hole the size of a basketball somewhere."
-	desc_extended = "The BFR was primarily desgined to be an Anti-tank Rifle, however was marketed as a perfect solution to NanoTrasen operatives in hardsuits and/or mining equipment."
+	name = "\improper .50 BFR狙击枪"
+	desc = "想在哪儿开个篮球大的洞时，就用它。"
+	desc_extended = "BFR最初是按反坦克步枪设计的，不过宣传时被称为对付穿着硬式宇航服或采矿装备的纳米传讯特工的完美方案。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/50.dmi'
 	icon_state = "inventory"
 	value = 5000

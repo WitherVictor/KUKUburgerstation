@@ -1,5 +1,5 @@
 /obj/structure/interactive/ground_ore_deposit
-	name = "deep ore deposit"
+	name = "深层矿床"
 	icon = 'icons/obj/structure/ore.dmi'
 	icon_state = "deposit"
 	var/ore_score = 1
@@ -75,7 +75,7 @@
 
 /obj/structure/interactive/ground_ore_deposit/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","The meter detects an ore concentration of [ore_score]%.")
+	. += div("notice","仪表检测到的矿石浓度为[ore_score]%。")
 
 /obj/structure/interactive/ground_ore_deposit/update_sprite()
 

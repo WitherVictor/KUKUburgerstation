@@ -1,5 +1,5 @@
 /area/burgerstation
-	name = "\improper NSS Burger"
+	name = "NSS汉堡站"
 	icon_state = "ship"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION
 
@@ -43,7 +43,7 @@
 	default_state_power_doors = ON|AUTO
 
 /area/burgerstation/hall
-	name = "\improper Hallway"
+	name = "走廊"
 	icon_state = "hall"
 
 	sound_environment = ENVIRONMENT_ALLEY
@@ -51,33 +51,33 @@
 	map_color = COLOR_GREY_LIGHT
 
 /area/burgerstation/hall/north
-	name = "\improper North Hallway"
+	name = "北部走廊"
 	icon_state = "hall_n"
 
 /area/burgerstation/hall/east
-	name = "\improper East Hallway"
+	name = "东部走廊"
 	icon_state = "hall_e"
 
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
 
 /area/burgerstation/hall/south
-	name = "\improper South Hallway"
+	name = "南部走廊"
 	icon_state = "hall_s"
 
 /area/burgerstation/hall/west
-	name = "\improper West Hallway"
+	name = "西部走廊"
 	icon_state = "hall_w"
 
 /area/burgerstation/hall/central
-	name = "\improper Central Primary Hallway"
+	name = "中央主走廊"
 	icon_state = "hall_c"
 
 /area/burgerstation/hall/dorms
-	name = "\improper Dorms Hallway"
+	name = "宿舍走廊"
 	icon_state = "dorms_hall"
 
 /area/burgerstation/bathrooms
-	name = "\improper Bathrooms"
+	name = "卫生间"
 	icon_state = "bath"
 
 	sound_environment = ENVIRONMENT_ROOM
@@ -85,19 +85,19 @@
 	map_color = COLOR_CYAN
 
 /area/burgerstation/merchant
-	name = "\improper Merchant's Store"
+	name = "商人的店铺"
 	icon_state = "village"
 
 	map_color = COLOR_GOLD
 
 /area/burgerstation/cafe
-	name = "\improper Cafe"
+	name = "咖啡馆"
 	icon_state = "cafe"
 
 	map_color = COLOR_CYAN
 
 /area/burgerstation/cafe/kitchen
-	name = "\improper Kitchen"
+	name = "厨房"
 	icon_state = "kitchen"
 
 	map_color = COLOR_BLUE
@@ -105,13 +105,13 @@
 	default_state_power_lights = OFF
 
 /area/burgerstation/cafe/kitchen/freezer
-	name = "\improper Kitchen Freezer"
+	name = "厨房冷库"
 	icon_state = "cryo"
 
 	map_color = COLOR_BLUE
 
 /area/burgerstation/cafe/bar
-	name = "\improper Bar"
+	name = "酒吧"
 	icon_state = "bar"
 
 	map_color = COLOR_CYAN
@@ -119,13 +119,13 @@
 	default_state_power_lights = OFF
 
 /area/burgerstation/cafe/botany
-	name = "\improper Botany"
+	name = "植物培育区"
 	icon_state = "hydro"
 
 	map_color = COLOR_GREEN
 
 /area/burgerstation/dressing
-	name = "\improper Dressing Room"
+	name = "试衣间"
 	icon_state = "dressing"
 
 	map_color = COLOR_RED
@@ -133,7 +133,7 @@
 	sound_environment = ENVIRONMENT_BATHROOM
 
 /area/burgerstation/dorm
-	name = "\improper Dorm"
+	name = "宿舍"
 	icon_state = "dorm"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_SAVEZONE
 
@@ -142,7 +142,7 @@
 	map_color = COLOR_BLUE
 
 /area/burgerstation/contractor
-	name = "Mr. Scratch's Office"
+	name = "抓痕先生办公室"
 	icon_state = "dorm"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_SAVEZONE
 
@@ -151,7 +151,7 @@
 	sound_environment = ENVIRONMENT_ROOM
 
 /area/burgerstation/prestige
-	name = "\improper Prestige Center"
+	name = "转生中心"
 	icon_state = "dorm"
 
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
@@ -159,7 +159,7 @@
 	map_color = COLOR_GREEN
 
 /area/burgerstation/soccer
-	name = "\improper Soccer Field"
+	name = "足球场"
 	icon_state = "dorm"
 
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
@@ -167,7 +167,7 @@
 	map_color = COLOR_GREEN
 
 /area/burgerstation/vr
-	name = "\improper VR Rooms"
+	name = "虚拟现实室"
 	icon_state = "dorm"
 
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
@@ -175,7 +175,7 @@
 	map_color = COLOR_GREEN
 
 /area/burgerstation/help_desk
-	name = "\improper Help Desk"
+	name = "服务台"
 	icon_state = "help"
 
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
@@ -183,7 +183,7 @@
 	map_color = COLOR_GREEN
 
 /area/burgerstation/hop_office
-	name = "\improper Head of Personnel's Office"
+	name = "人事主管办公室"
 	icon_state = "cmd"
 
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
@@ -191,41 +191,41 @@
 	map_color = COLOR_COMMAND
 
 /area/burgerstation/cloning
-	name = "\improper Cloning"
+	name = "克隆区"
 	icon_state = "clone"
 
 	map_color = COLOR_MEDICAL
 
 /area/burgerstation/science
-	name = "\improper Mining Science"
+	name = "采矿科研部"
 	icon_state = "science"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
 
 	map_color = COLOR_SCIENCE
 
 /area/burgerstation/science/research_director
-	name = "\improper Research Director's Office"
+	name = "科研主管办公室"
 	icon_state = "cmd"
 
 /area/burgerstation/science/containment
-	name = "\improper Science Containment Area"
+	name = "科研收容区"
 	icon_state = "red"
 
 /area/burgerstation/cryo
-	name = "\improper Cryogenic Storage"
+	name = "冷冻休眠区"
 	icon_state = "cryo"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_SAVEZONE | FLAG_AREA_NO_EVENTS
 
 	map_color = COLOR_GREEN
 
 /area/burgerstation/cryo/locker_room
-	name = "\improper Changing Room"
+	name = "更衣室"
 	icon_state = "armory"
 
 	map_color = COLOR_GREEN_DARK
 
 /area/burgerstation/arrivals
-	name = "\improper Arrivals Dock"
+	name = "抵达码头"
 	icon_state = "ariv"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS
 
@@ -234,17 +234,17 @@
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/burgerstation/arrivals/north
-	name = "\improper North Arrivals Dock"
+	name = "北部抵达码头"
 	map_color = COLOR_YELLOW
 	color = COLOR_YELLOW
 
 /area/burgerstation/arrivals/south
-	name = "\improper South Arrivals Dock"
+	name = "南部抵达码头"
 	map_color = COLOR_ORANGE
 	color = COLOR_RED
 
 /area/burgerstation/chapel
-	name = "\improper Chapel"
+	name = "礼拜堂"
 	icon_state = "chapel"
 
 	sound_environment = ENVIRONMENT_STONEROOM
@@ -252,12 +252,12 @@
 	map_color = COLOR_BROWN
 
 /area/burgerstation/chapel/office
-	name = "\improper Chapel Office"
+	name = "礼拜堂办公室"
 	icon_state = "cmd"
 
 
 /area/burgerstation/library
-	name = "\improper Library"
+	name = "图书馆"
 	icon_state = "library"
 
 	sound_environment = ENVIRONMENT_CARPETTED_HALLWAY
@@ -265,7 +265,7 @@
 	map_color = COLOR_RED_DARK
 
 /area/burgerstation/janitor
-	name = "\improper Janitor's Closet"
+	name = "清洁工储物间"
 	icon_state = "janitor"
 
 	sound_environment = ENVIRONMENT_ROOM
@@ -273,7 +273,7 @@
 	map_color = COLOR_PURPLE
 
 /area/burgerstation/engineering
-	name = "\improper Engineering"
+	name = "工程部"
 	icon_state = "eng"
 
 	sound_environment = ENVIRONMENT_STONEROOM
@@ -281,130 +281,130 @@
 	map_color = COLOR_ENGINEERING
 
 /area/burgerstation/engineering/solars
-	name = "\improper Solars"
+	name = "太阳能板区"
 	icon_state = "solars"
 
 	map_color = COLOR_YELLOW
 
 /area/burgerstation/engineering/solars/ne
-	name = "\improper Starboard Bow Solars"
+	name = "右舷前部太阳能板区"
 
 /area/burgerstation/engineering/solars/se
-	name = "\improper Starboard Quarter Solars"
+	name = "右舷后部太阳能板区"
 
 /area/burgerstation/engineering/solars/nw
-	name = "\improper Port Bow Solars"
+	name = "左舷前部太阳能板区"
 
 /area/burgerstation/engineering/solars/sw
-	name = "\improper Port Quarter Solars"
+	name = "左舷后部太阳能板区"
 
 /area/burgerstation/engineering/lobby
-	name = "\improper Engineering Lobby"
+	name = "工程部大厅"
 	icon_state = "eng"
 	color = "#00FF00"
 
 /area/burgerstation/engineering/ce
-	name = "\improper Chief Engineer's Office"
+	name = "总工程师办公室"
 	icon_state = "cmd"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS | FLAG_AREA_NO_TELEPORT
 
 	map_color = COLOR_ENGINEERING
 
 /area/burgerstation/engineering/telecomms
-	name = "\improper Telecomms"
+	name = "电信机房"
 	icon_state = "cmd"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS | FLAG_AREA_NO_TELEPORT
 
 	map_color = COLOR_ENGINEERING
 
 /area/burgerstation/engineering/supermatter
-	name = "\improper Supermatter"
+	name = "超物质区"
 	icon_state = "cmd"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS | FLAG_AREA_NO_TELEPORT
 
 	map_color = COLOR_ENGINEERING
 
 /area/burgerstation/medical
-	name = "\improper Medical"
+	name = "医疗部"
 	icon_state = "med"
 
 	map_color = COLOR_MEDICAL
 
 /area/burgerstation/medical/cmo
-	name = "\improper Chief Medical Officer's Office"
+	name = "医疗主管办公室"
 	icon_state = "cmd"
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_EVENTS | FLAG_AREA_NO_TELEPORT
 
 	map_color = COLOR_MEDICAL_LIGHT
 
 /area/burgerstation/medical/chemistry
-	name = "\improper Chemistry"
+	name = "化学部"
 	icon_state = "chem"
 
 	map_color = COLOR_CHEMISTRY
 
 /area/burgerstation/medical/lobby
-	name = "\improper Medical Lobby"
+	name = "医疗部大厅"
 	icon_state = "lobby"
 
 /area/burgerstation/briefing
-	name = "\improper Briefing"
+	name = "简报室"
 	icon_state = "brief"
 
 	map_color = COLOR_BROWN
 
 /area/burgerstation/bait_shop
-	name = "\improper Bait Shop"
+	name = "鱼饵店"
 	icon_state = "bait"
 
 	map_color = COLOR_BLUE
 
 /area/burgerstation/goblin_shop
-	name = "\improper Bawse Loot"
+	name = "鲍斯战利品"
 	icon_state = "bait"
 
 	map_color = COLOR_GREEN
 
 /area/burgerstation/mining
-	name = "\improper Mining"
+	name = "采矿部"
 	icon_state = "mining"
 
 	map_color = COLOR_BROWN
 
 /area/burgerstation/mining/lobby
-	name = "\improper Mining Lobby"
+	name = "采矿部大厅"
 	icon_state = "lobby"
 
 /area/burgerstation/mining/foreman
-	name = "\improper Mining Foreman's Office"
+	name = "采矿工头办公室"
 	icon_state = "cmd"
 
 	map_color = COLOR_COMMAND
 
 /area/burgerstation/tax
-	name = "\improper Tax Room"
+	name = "税务室"
 	icon_state = "tax"
 
 	map_color = COLOR_GREEN
 
 /area/burgerstation/armory
-	name = "\improper Armory"
+	name = "军械库"
 	icon_state = "armory"
 
 	map_color = COLOR_NANOTRASEN
 
 /area/burgerstation/armory/special
-	name = "\improper Armory - Special Operations"
+	name = "军械库－特种行动区"
 	icon_state = "armory_special"
 
 /area/burgerstation/armory/shooting_range
-	name = "\improper Shooting Range"
+	name = "射击场"
 	icon_state = "shooting_range"
 
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/burgerstation/hanger
-	name = "\improper Hanger"
+	name = "机库"
 	icon_state = "hanger"
 
 	sound_environment = ENVIRONMENT_CONCERT_HALL
@@ -412,33 +412,33 @@
 	map_color = COLOR_BLUE
 
 /area/burgerstation/hanger/blue
-	name = "\improper Blue Hanger Bay"
+	name = "蓝色机库泊位"
 	color = COLOR_BLUE
 
 /area/burgerstation/hanger/red
-	name = "\improper Red Hanger Bay"
+	name = "红色机库泊位"
 	color = COLOR_RED
 
 /area/burgerstation/hanger/green
-	name = "\improper Green Hanger Bay"
+	name = "绿色机库泊位"
 	color = COLOR_GREEN
 
 /area/burgerstation/hanger/drop_pod_bay
-	name = "\improper Drop Pod Bay"
+	name = "空降舱泊位"
 	color = COLOR_ORANGE
 
 /area/burgerstation/cargo
-	name = "\improper Cargo"
+	name = "货运部"
 	icon_state = "cargo"
 
 	map_color = COLOR_CARGO
 
 /area/burgerstation/cargo/lobby
-	name = "\improper Cargo Lobby"
+	name = "货运部大厅"
 	icon_state = "lobby"
 
 /area/burgerstation/maint
-	name = "\improper Maint"
+	name = "维护区"
 	icon_state = "maint"
 	ambient_sound = 'sound/ambient/vents_loop.ogg'
 
@@ -454,27 +454,27 @@
 	flags_area = FLAG_AREA_NO_TELEPORT | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_DIRTY
 
 /area/burgerstation/maint/north
-	name = "\improper North Maintenance"
+	name = "北部维护区"
 	icon_state = "maint_n"
 
 /area/burgerstation/maint/east
-	name = "\improper East Maintenance"
+	name = "东部维护区"
 	icon_state = "maint_e"
 
 /area/burgerstation/maint/south
-	name = "\improper South Maintenance"
+	name = "南部维护区"
 	icon_state = "maint_s"
 
 /area/burgerstation/maint/west
-	name = "\improper West Maintenance"
+	name = "西部维护区"
 	icon_state = "maint_w"
 
 /area/burgerstation/maint/disposals
-	name = "\improper Disposals Maintenance"
+	name = "废物输送维护区"
 	icon_state = "disposals"
 
 /area/burgerstation/chess
-	name = "\improper Chess"
+	name = "国际象棋区"
 	icon_state = "disposals"
 	ambient_sound = 'sound/ambient/vents_loop.ogg'
 

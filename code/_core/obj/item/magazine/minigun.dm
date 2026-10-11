@@ -1,7 +1,7 @@
 /obj/item/magazine/minigun_46
-	name = "\improper 4.6x30mm caseless large magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 4.6x30mm无壳弹大型弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/minigun.dmi'
 	icon_state = "mini"
 	bullet_count_max = 200
@@ -29,7 +29,7 @@
 	value = 50
 
 /obj/item/magazine/minigun_46/du
-	name = "\improper 4.6x30mm caseless DU large magazine"
+	name = "\improper 4.6x30mm无壳贫铀弹大型弹匣"
 	icon = 'icons/obj/item/magazine/minigun.dmi'
 	icon_state = "mini_du"
 	rarity = RARITY_RARE

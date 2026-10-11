@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/magic_missile
-	name = "magic missile spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots one enemy-seeking magic missiles that deals arcane damage."
+	name = "魔法飞弹法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射一枚追踪敌人的魔法飞弹，造成奥术伤害。"
 	icon_state = "damage"
 
 	rarity = RARITY_COMMON

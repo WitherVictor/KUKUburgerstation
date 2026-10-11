@@ -1,6 +1,6 @@
 /obj/structure/interactive/localmachine/snowflake/airlock
 
-	name = "glass airlock"
+	name = "玻璃气闸门"
 
 	icon = 'icons/obj/structure/airlock/airlock_glass_merged.dmi'
 	icon_state = "closed"
@@ -84,7 +84,7 @@
 	return ..()
 
 /obj/structure/interactive/localmachine/snowflake/airlock/external
-	name = "external airlock"
+	name = "外部气闸门"
 	icon = 'icons/obj/structure/airlock/airlock_external_merged.dmi'
 	icon_state = "closed"
 
@@ -94,4 +94,4 @@ var/global/list/obj/structure/interactive/localmachine/snowflake/airlock/externa
 /obj/structure/interactive/localmachine/snowflake/airlock/external/tutorial_dock/New(var/desired_loc)
 	. = ..()
 	tutorial_docks += src
-	
+

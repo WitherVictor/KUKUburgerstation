@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/welding
-	name = "welding helmet"
-	desc = "Go for not going blind."
-	desc_extended = "A special industrial strength welding helmet that protects the user's head, face, and eyes from welding sparks."
+	name = "焊接面罩"
+	desc = "为了不被闪瞎。"
+	desc_extended = "一种特殊的工业级焊接面罩，保护使用者的头部、面部和眼睛免受焊接火花伤害。"
 	icon = 'icons/obj/item/clothing/hats/welding.dmi'
 
 	armor = /armor/military/medium/hard

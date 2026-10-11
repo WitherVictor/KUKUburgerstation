@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/movitated_coat
-	name = "motivated coat"
+	name = "斗志外套"
 	icon = 'icons/obj/item/clothing/suit/movitated_coat.dmi'
 
-	desc = "This coat enhances your speed, but weakens your body."
-	desc_extended = "I need more power."
+	desc = "这件外套能提高你的速度，但会削弱你的身体。"
+	desc_extended = "我需要更多力量。"
 
 	defense_rating = list(
 		BLADE = -1000,

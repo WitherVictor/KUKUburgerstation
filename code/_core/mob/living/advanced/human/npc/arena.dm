@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/arena_guard
-	name = "arena guard"
+	name = "竞技场守卫"
 	ai = /ai/ranged/immobile/
 
 /mob/living/advanced/npc/arena_guard/Initialize()
@@ -8,17 +8,17 @@
 	pickup(W1)
 
 /mob/living/advanced/npc/arena_guard/red
-	name = "red team guard"
+	name = "红队守卫"
 	starting_factions = list("arena_red")
 
 /mob/living/advanced/npc/arena_guard/blue
-	name = "blue team guard"
+	name = "蓝队守卫"
 	starting_factions = list("arena_blue")
 
 /mob/living/advanced/npc/arena_guard/green
-	name = "green team guard"
+	name = "绿队守卫"
 	starting_factions = list("arena_green")
 
 /mob/living/advanced/npc/arena_guard/yellow
-	name = "yellow team guard"
+	name = "黄队守卫"
 	starting_factions = list("arena_yellow")

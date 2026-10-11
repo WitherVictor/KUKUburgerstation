@@ -1,5 +1,5 @@
 /area/lz_001/outpost
-	name = "\[CLASSIFED\]"
+	name = "\[机密\]"
 	interior = TRUE
 
 	sound_environment = ENVIRONMENT_HANGAR

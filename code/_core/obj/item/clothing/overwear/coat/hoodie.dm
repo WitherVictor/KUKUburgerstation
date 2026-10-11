@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/hoodie
-	name = "hoodie"
-	desc = "Where da hood at? Dere da hood at."
-	desc_extended = "Shift-click this, or any other item that has a hood to bring it up and down. Click the hood or shift-click the hoodie again to bring down the hood."
+	name = "连帽衫"
+	desc = "帽子在哪儿？就在这儿。"
+	desc_extended = "穿戴后，空手点击这件衣服即可戴上或放下兜帽。空手点击已戴上的兜帽，也可以将其放下。"
 	icon = 'icons/obj/item/clothing/suit/hoodie.dmi'
 
 	additional_clothing = list(/obj/item/clothing/head/hat/hoodie)

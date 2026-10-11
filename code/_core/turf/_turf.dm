@@ -350,7 +350,7 @@
 	if(!is_living(activator))
 		return FALSE
 	var/mob/living/C = activator
-	C.to_chat(span("warning","You cannot deploy on this turf!"))
+	C.to_chat(span("warning","你不能在这块地面上部署！"))
 	return FALSE
 
 /turf/proc/is_straight_path_to(var/turf/target_turf,var/check_vision=FALSE,var/check_density=TRUE)

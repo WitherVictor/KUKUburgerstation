@@ -1,5 +1,5 @@
 obj/structure/scenery/lolipops
-	name = "lolipops"
+	name = "棒棒糖"
 	icon = 'icons/obj/structure/flora/lolipops.dmi'
 	icon_state = "1"
 	layer = LAYER_FLOOR_SCENERY

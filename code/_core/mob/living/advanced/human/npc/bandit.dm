@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/bandit
-	name = "bandit"
-	desc = "Never should've come here."
+	name = "强盗"
+	desc = "你就不该来这里。"
 
 	dna = /dna/human
 

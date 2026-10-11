@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/chris
-	name = "\improper 9mm Bearing SMG"
-	desc = "A submachinegun carbine that takes pistol mags? Weird, but okay."
-	desc_extended = "A lightweight fast-firing Syndicate tactical submachinegun carbine designed to send a lot of bullets down-range at once. Uses 9mm pistol magazines."
+	name = "\improper 9mm轴承冲锋枪"
+	desc = "使用手枪弹匣的卡宾型冲锋枪？古怪，但也行。"
+	desc_extended = "轻型辛迪加战术卡宾型冲锋枪，射速很快，能在短时间内向前方倾泻大量弹药。使用9mm手枪弹匣。"
 	icon = 'icons/obj/item/weapons/ranged/smg/syndicate/9mm_2.dmi'
 	icon_state = "inventory"
 	value = 2800

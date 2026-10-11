@@ -68,13 +68,13 @@
 
 		if(activator.attack_flags & CONTROL_MOD_DISARM)
 			if(!stored_bullets[C.type])
-				activator.to_chat(span("warning","There are no charges of that type left in \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里已经没有这种弹药了！"))
 				return TRUE
 			var/amount_added = C.add_item_count(1)
 			if(amount_added)
 				stored_bullets[C.type] -= amount_added
 				bullet_count -= amount_added
-				activator.to_chat(span("notice","You add a charge to your hand. There are [stored_bullets[C.type]] charges of that type left."))
+				activator.to_chat(span("notice","你又取出一发弹药拿在手中，还剩[stored_bullets[C.type]]发同类弹药。"))
 				if(stored_bullets[C.type] <= 0)
 					stored_bullets -= C.type
 				update_sprite()
@@ -97,7 +97,7 @@
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(2)
-		activator.to_chat(span("warning","This type of bullet won't fit into the [src.name]!"))
+		activator.to_chat(span("warning","这种弹药装不进[src.name]！"))
 		return TRUE
 
 	if(istype(object,/obj/hud/inventory))
@@ -106,7 +106,7 @@
 		INTERACT_DELAY(2)
 
 		if(!length(stored_bullets))
-			activator.to_chat(span("warning","There are no bullets left!"))
+			activator.to_chat(span("warning","已经没有弹药了！"))
 			return TRUE
 
 		var/obj/hud/inventory/I = object
@@ -118,7 +118,7 @@
 		C.amount = amount_to_grab
 		stored_bullets[C.type] -= amount_to_grab
 		update_bullet_count()
-		activator.to_chat(span("notice","You take [amount_to_grab] bullet\s from \the [src.name]. There are [stored_bullets[C.type]] bullets of that type left."))
+		activator.to_chat(span("notice","你从[src.name]中取出[amount_to_grab]发弹药，还剩[stored_bullets[C.type]]发同类弹药。"))
 		if(stored_bullets[C.type] <= 0)
 			stored_bullets -= C.type
 		INITIALIZE(C)

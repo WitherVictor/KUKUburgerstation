@@ -1,7 +1,7 @@
 /obj/structure/interactive/blob/node
-	name = "blob node"
+	name = "异形菌毯节点"
 	icon_state = "node"
-	desc_extended = "A segment of the ever-expanding blob. This one creates and deploys blobbernaughts if the blob's expanse is hindered by the living."
+	desc_extended = "不断扩张的异形菌毯的一部分。节点受到攻击时，会生成并派出异形菌毯巨卫。"
 	has_damaged_state = TRUE
 	health_base = 250
 

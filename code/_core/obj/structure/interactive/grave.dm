@@ -1,9 +1,9 @@
 var/global/list/all_graves = list()
 
 /obj/structure/interactive/grave
-	name = "gravestone"
-	desc = "RIP in peace."
-	desc_extended = "A gravestone marking the location of someone's death."
+	name = "墓碑"
+	desc = "安息吧，安息。"
+	desc_extended = "一块标记某人死亡地点的墓碑。"
 
 	icon = 'icons/obj/structure/grave.dmi'
 	icon_state = "stone"
@@ -104,7 +104,7 @@ var/global/list/all_graves = list()
 
 	var/list/obj/hud/inventory/found_inventories = get_storage_for(P)
 	if(!length(found_inventories))
-		P.to_chat(span("warning","There is nothing in here for you!"))
+		P.to_chat(span("warning","这里没有属于你的东西！"))
 		return TRUE
 
 	P.clear_inventory_defers() //Remove existing ones.

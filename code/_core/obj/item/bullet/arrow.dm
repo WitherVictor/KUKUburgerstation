@@ -1,5 +1,5 @@
 /obj/item/bullet_cartridge/arrow
-	name = "arrow"
+	name = "箭矢"
 	icon_state = "arrow"
 	icon = 'icons/obj/item/bullet/arrow.dmi'
 
@@ -25,7 +25,7 @@
 	return src
 
 /obj/item/bullet_cartridge/arrow/ashen
-	name = "ashen arrow"
+	name = "灰烬箭"
 	icon = 'icons/obj/item/bullet/arrow_ashen.dmi'
 	rarity = RARITY_UNCOMMON
 
@@ -38,7 +38,7 @@
 	amount_max_icon = 3
 
 /obj/item/bullet_cartridge/arrow/hardlight
-	name = "hardlight arrow"
+	name = "硬光箭"
 	icon = 'icons/obj/item/bullet/arrow_hardlight.dmi'
 	rarity = RARITY_RARE
 

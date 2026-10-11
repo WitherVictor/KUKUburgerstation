@@ -1,7 +1,7 @@
 /obj/structure/interactive/statue
-	name = "statue"
-	desc = "For the ego."
-	desc_extended = "A fancy statue of something."
+	name = "雕像"
+	desc = "满足虚荣心。"
+	desc_extended = "一尊不知雕的是什么的精美雕像。"
 
 	icon = 'icons/obj/structure/statue.dmi'
 	icon_state = "base"
@@ -98,9 +98,9 @@
 
 
 /obj/structure/interactive/lumin
-	name = "Tomb of the Unknown Employee"
-	desc = "Thank you. All of you. For all that you do."
-	desc_extended = "Here rests an unknown employee, unknown by name or rank, but whose acts will not be forgotten."
+	name = "无名员工之墓"
+	desc = "感谢你们每一个人，感谢你们所做的一切。"
+	desc_extended = "这里安息着一位无名员工。人们不知其姓名与职级，却不会忘记其功绩。"
 
 	icon = 'icons/obj/structure/memorial.dmi'
 	icon_state = "memorial"

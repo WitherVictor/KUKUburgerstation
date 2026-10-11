@@ -64,3 +64,18 @@
 		return "Revolutionary"
 
 	return "Unknown"
+
+/proc/frequency_to_display_name(var/frequency)
+	var/static/list/display_names = list(
+		"Alpha"="阿尔法",
+		"Bravo"="布拉沃",
+		"Charlie"="查理",
+		"Delta"="德尔塔",
+		"Common"="公共",
+		"ShipComm"="舰船通讯",
+		"Syndicate"="辛迪加",
+		"Mercenary"="佣兵",
+		"Revolutionary"="革命者",
+		"Unknown"="未知"
+	)
+	return display_names[frequency_to_name(frequency)]

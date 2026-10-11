@@ -32,16 +32,16 @@
 /song/proc/interact(var/mob/caller)
 
 	if(!is_playing)
-		var/desired_song = input(caller,"What song would you like to play?","Song Selection") as message|null
+		var/desired_song = input(caller,"你想演奏什么曲子？请输入乐谱。","选择曲目") as message|null
 		if(!desired_song)
-			caller.to_chat("No song selected!")
+			caller.to_chat("未选择曲目！")
 			return FALSE
 		parse_song(caller,desired_song)
 		repeat = 1
 		spawn play_song(caller)
 		is_playing = TRUE
 	else
-		caller.to_chat("You stop playing \the [instrument_atom].")
+		caller.to_chat("你停止演奏[instrument_atom]。")
 		is_playing = FALSE
 
 	return TRUE
@@ -147,7 +147,7 @@
 	text = lowertext(text)
 	var/list/lines = splittext(text,"\n")
 	if(!lines.len)
-		caller.to_chat("No sound found!")
+		caller.to_chat("未找到乐谱内容！")
 		return FALSE
 
 	if(copytext(lines[1],1,6) == "bpm: ")
@@ -158,14 +158,14 @@
 	lines.Cut(1,2)
 
 	if(length(lines) > MUSIC_MAXLINES)
-		caller.to_chat("Too many lines!")
+		caller.to_chat("乐谱行数过多！")
 		lines.Cut(MUSIC_MAXLINES + 1)
 
 	processed_lines = list()
 	var/linenum = 1
 	for(var/line in lines)
 		if(length(line) > MUSIC_MAXLINECHARS)
-			caller.to_chat("Line [linenum] is too long!")
+			caller.to_chat("乐谱第[linenum]行过长！")
 			continue
 		processed_lines["[linenum]"] = list()
 		var/list/beats = splittext(line, ",")

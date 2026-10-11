@@ -1,5 +1,5 @@
 /obj/effect/temp/hazard/hierophant
-	name = "hierophant blast"
+	name = "大祭司冲击"
 	icon = 'icons/obj/effects/hierophant.dmi'
 	icon_state = "blast"
 	duration = 7

@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/unique/stand_user
-	name = "Stand User"
+	name = "替身使者"
 	sex = FEMALE
 	gender = FEMALE
 	dir = EAST

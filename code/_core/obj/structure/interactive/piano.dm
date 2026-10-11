@@ -1,5 +1,5 @@
 /obj/structure/interactive/piano
-	name = "piano"
+	name = "钢琴"
 	var/song/current_song
 
 

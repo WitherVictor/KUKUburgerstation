@@ -1,15 +1,15 @@
 /mob/living/proc/can_resist(var/messages = TRUE)
 
 	if(dead)
-		if(messages) to_chat(span("warning","You can't resist while dead!"))
+		if(messages) to_chat(span("warning","死后无法挣扎！"))
 		return FALSE
 
 	if(health?.stamina_current < 20)
-		if(messages) to_chat(span("warning","You're too exhausted to resist!"))
+		if(messages) to_chat(span("warning","你太疲惫了，无法挣扎！"))
 		return FALSE
 
 	if(has_status_effects(STAMCRIT,PARALYZE,SLEEP,PARRIED,FATIGUE,STUN))
-		if(messages) to_chat(span("warning","You can't resist in this state!"))
+		if(messages) to_chat(span("warning","你目前的状态无法挣扎！"))
 		return FALSE
 
 	return TRUE
@@ -47,8 +47,8 @@
 
 		if(grab_resist_counter >= grab_difficulty)
 			src.visible_message(
-				span("danger","\The [src.name] resists out of the grip of \the [attacker.name]!"),
-				span("warning","You resist out of the grip of \the [attacker.name]!")
+				span("danger","[src.name]挣脱了[attacker.name]的抓握！"),
+				span("warning","你挣脱了[attacker.name]的抓握！")
 			)
 			if(grabbing_hand)
 				grabbing_hand.release_object()
@@ -62,8 +62,8 @@
 				attacker.health.adjust_stamina(-src_power*4)
 		else
 			src.visible_message(
-				span("danger","\The [src.name] tries to resist out of \the [attacker.name]'s grip!"),
-				span("warning","You try to resist!"),
+				span("danger","[src.name]试图挣脱[attacker.name]的抓握！"),
+				span("warning","你试图挣脱！"),
 			)
 			if(attacker.health)
 				attacker.health.adjust_stamina(-src_power) //Attacker needs the strength to resist too.
@@ -80,14 +80,14 @@
 		if(horizontal)
 			stacks_to_remove = min(fire_stacks,100)
 			src.visible_message(
-				span("warning","\The [src.name] rolls on the ground!"),
-				span("danger","You quickly roll on the ground!"),
+				span("warning","[src.name]在地上翻滚！"),
+				span("danger","你迅速在地上翻滚！"),
 			)
 		else
 			stacks_to_remove = min(fire_stacks,25)
 			src.visible_message(
-				span("warning","\The [src.name] quickly pats out the flames!"),
-				span("danger","You quickly pat out the flames!"),
+				span("warning","[src.name]迅速拍打身上的火焰！"),
+				span("danger","你迅速拍打身上的火焰！"),
 			)
 		adjust_fire_stacks(-stacks_to_remove)
 		health.adjust_stamina(-5)
@@ -115,7 +115,7 @@
 
 /mob/living/proc/rest()
 	if(dead)
-		to_chat(span("warning","You're already resting... in peace."))
+		to_chat(span("warning","你已经在休息了……安息吧。"))
 		return FALSE
 	if(STATUS_EFFECT_DURATION(src,REST) == -1)
 		PROGRESS_BAR(src,src,3,src::remove_status_effect(),REST)
@@ -137,29 +137,29 @@
 		if(intent == INTENT_HARM)
 			counter_to_add *= 3
 			src.visible_message(
-				span("danger","\The [src.name] tries to resist out of the handcuffs!"),
-				span("danger","You visibly try to resist out of the handcuffs!")
+				span("danger","[src.name]试图挣脱手铐！"),
+				span("danger","你毫不掩饰地试图挣脱手铐！")
 			)
 		else
-			to_chat(span("warning","You attempt to stealthily resist out of the handcuffs..."))
+			to_chat(span("warning","你试图悄悄挣脱手铐……"))
 
 		handcuff_break_counter += counter_to_add
 		health.adjust_stamina(-20)
 
 		switch(handcuff_break_counter)
 			if(0 to 25)
-				src.to_chat(span("warning","...the handcuffs are pretty strong."))
+				src.to_chat(span("warning","……手铐相当牢固。"))
 			if(25 to 50)
-				src.to_chat(span("warning","...the handcuffs are getting a little loose."))
+				src.to_chat(span("warning","……手铐有些松动了。"))
 			if(50 to 75)
-				src.to_chat(span("warning","...the handcuffs start to feel weak!"))
+				src.to_chat(span("warning","……手铐开始撑不住了！"))
 			if(75 to 99)
-				src.to_chat(span("warning","...the handcuffs feel fragile, and could break at any moment!"))
+				src.to_chat(span("warning","……手铐已经很脆弱，随时可能断开！"))
 			else
 				src.set_handcuffs(FALSE)
 				src.visible_message(
-					span("danger","\The [src.name] breaks out of the handcuffs!"),
-					span("danger","You break out of the handcuffs!")
+					span("danger","[src.name]挣断了手铐！"),
+					span("danger","你挣断了手铐！")
 				)
 
 

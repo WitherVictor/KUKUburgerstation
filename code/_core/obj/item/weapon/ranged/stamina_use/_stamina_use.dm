@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/stamina_use //THERE IS NO GOD HERE, ONLY CODE, HOW THE FUCK WILL THIS WORK
-	name = "PSEUDOMELEE"
-	desc = "I STOLE MAGIC CODE TWICE FOR THIS"
-	desc_extended = "HOW THE FUCK? HOW THE FUCK DOES THIS WORK AND WHY DOES IT WORK WHEN IT DIDN'T BEFORE, WHAT THE FUCK LIES IN THE CODE, I WANT TO RIP IT OUT"
+	name = "伪近战武器"
+	desc = "为了这个，我抄了两次魔法代码。"
+	desc_extended = "这他妈怎么回事？这玩意儿怎么能用，之前不能用现在为什么又能用了？代码里到底藏着什么鬼东西，我真想把它扯出来。"
 	icon = 'icons/obj/item/weapons/melee/swords/claymore.dmi'
 
 	var/cost_stamina = 0

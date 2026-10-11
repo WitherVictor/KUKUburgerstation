@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/spec_ops
-	name = "special operative vest"
-	desc = "Lightweight and durable."
-	desc_extended = "A composite kevlar durathread weave used only by the best of the best in tactical operations."
+	name = "特种行动背心"
+	desc = "轻巧耐用。"
+	desc_extended = "采用凯夫拉与耐久布复合织物，只有最顶尖的战术行动人员才会使用。"
 
 	icon = 'icons/obj/item/clothing/suit/stealth.dmi'
 

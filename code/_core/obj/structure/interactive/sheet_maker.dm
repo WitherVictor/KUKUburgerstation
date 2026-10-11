@@ -1,6 +1,6 @@
 obj/structure/interactive/sheet_maker
-	name = "sheet maker"
-	desc = "Makes sheets and sheet."
+	name = "板材制造机"
+	desc = "做板材，也做板材之类的玩意儿。"
 	icon = 'icons/obj/structure/sheet_maker.dmi'
 	icon_state = "sheet_maker_map"
 

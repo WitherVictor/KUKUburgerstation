@@ -464,7 +464,7 @@
 /mob/living/on_crush(var/message=TRUE) //What happens when this object is crushed by a larger object.
 	. = ..()
 	play_sound(pick('sound/effects/impacts/flesh_01.ogg','sound/effects/impacts/flesh_02.ogg','sound/effects/impacts/flesh_03.ogg'),get_turf(src))
-	if(message) visible_message(span("danger","\The [src.name] is violently crushed!"))
+	if(message) visible_message(span("danger","[src.name]被狠狠碾碎了！"))
 	gib(hard=TRUE)
 
 /mob/living/gib(var/gib_direction=0x0,var/hard=FALSE)
@@ -762,7 +762,7 @@
 /mob/living/proc/draw_blood(var/mob/activator,var/atom/needle,var/amount=0,var/messages = TRUE)
 
 	if(!blood_type || !min(amount,blood_volume))
-		if(messages) activator?.to_chat(span("warning","There is no blood to draw!"))
+		if(messages) activator?.to_chat(span("warning","没有血可抽了！"))
 		return FALSE
 
 	var/amount_added = needle.reagents.add_reagent(blood_type,min(amount,blood_volume),activator = activator)
@@ -770,7 +770,7 @@
 	QUEUE_HEALTH_UPDATE(src)
 
 	if(messages)
-		activator?.visible_message(span("notice","\The [activator.name] draws some blood from \the [src.name]."),span("notice","You drew [amount_added]u of blood from \the [src.name]."))
+		activator?.visible_message(span("notice","[activator.name]从[src.name]身上抽取了一些血液。"),span("notice","你从[src.name]身上抽取了[amount_added]单位血液。"))
 
 	return amount_added
 

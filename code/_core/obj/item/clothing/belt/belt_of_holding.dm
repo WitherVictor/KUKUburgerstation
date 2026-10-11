@@ -1,8 +1,8 @@
 /obj/item/clothing/belt/holding
-	name = "belt of holding"
+	name = "次元腰带"
 	icon = 'icons/obj/item/clothing/belts/holding.dmi'
-	desc = "Engineer/medic favorite toolbox"
-	desc_extended = "Stores a massive amount of smaller items in a tiny bluspace pouch."
+	desc = "工程师和医疗兵最爱的工具箱。"
+	desc_extended = "在小小的蓝空间袋中存放大量小件物品。"
 	value_burgerbux = 1
 	is_container = TRUE
 

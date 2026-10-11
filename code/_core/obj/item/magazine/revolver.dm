@@ -1,9 +1,9 @@
 /obj/item/magazine/clip/revolver
 
 /obj/item/magazine/clip/revolver/bullet_38
-	name = "\improper .38 six round speedloader"
-	desc = "IT'S NOT A CLIP. IT'S A MA-- Wait, what?"
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .38六发快速装弹器"
+	desc = "这是弹匣，不是弹——等等，什么？"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/revolver/38.dmi'
 	icon_state = "38"
 	bullet_count_max = 6
@@ -31,9 +31,9 @@
 	value = 15
 
 /obj/item/magazine/clip/revolver/bullet_44
-	name = "\improper .44 revolver speedloader"
-	desc = "IT'S NOT A CLIP. IT'S A MA-- Wait, what?"
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .44左轮快速装弹器"
+	desc = "这是弹匣，不是弹——等等，什么？"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/revolver/44.dmi'
 	icon_state = "44"
 	bullet_count_max = 6
@@ -61,9 +61,9 @@
 	value = 15
 
 /obj/item/magazine/clip/revolver/bullet_357
-	name = "\improper .357 speedloader"
-	desc = "IT'S NOT A CLIP. IT'S A MA-- Wait, what?"
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .357快速装弹器"
+	desc = "这是弹匣，不是弹——等等，什么？"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/revolver/357.dmi'
 	icon_state = "357"
 	bullet_count_max = 6
@@ -90,6 +90,6 @@
 	value = 15
 
 /obj/item/magazine/clip/revolver/bullet_357/heap
-	name = "\improper .357 HEAP speedloader"
+	name = "\improper .357高爆穿甲弹快速装弹器"
 	ammo = /obj/item/bullet_cartridge/revolver_357/heap
 	ammo_surplus = /obj/item/bullet_cartridge/revolver_357/surplus

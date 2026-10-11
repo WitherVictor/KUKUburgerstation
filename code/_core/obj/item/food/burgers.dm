@@ -1,6 +1,6 @@
 /obj/item/consumable/food/burger
-	name = "burger"
-	desc = "Makes you think."
+	name = "汉堡"
+	desc = "引人深思。"
 
 	icon = 'icons/obj/items/consumable/food/burgers.dmi'
 	icon_state = "hburger"
@@ -13,38 +13,38 @@
 	consume_verb = "eat"
 
 /obj/item/consumable/food/burger/ham
-	name = "hamburger"
+	name = "汉堡包"
 	icon_state = "burger"
 
 	heal_amount_health = 20
 	heal_amount_stamina = 10
 
 /obj/item/consumable/food/burger/ham/double
-	name = "bite bite burger"
+	name = "咬咬汉堡"
 	icon_state = "bigbiteburger"
 	uses_left = 8
 
 /obj/item/consumable/food/burger/ham/quad
-	name = "super big bite burger"
+	name = "超级大口汉堡"
 	icon_state = "superbiteburger"
 	uses_left = 16
 
 /obj/item/consumable/food/burger/bacon
-	name = "bacon hamburger"
+	name = "培根汉堡"
 	icon_state = "baconburger"
 
 	heal_amount_health = 30
 	heal_amount_stamina = 10
 
 /obj/item/consumable/food/burger/tofu
-	name = "tofuburger"
+	name = "豆腐汉堡"
 	icon_state = "tofuburger"
 
 	heal_amount_health = 0
 	heal_amount_stamina = 40
 
 /obj/item/consumable/food/burger/brain
-	name = "brainburger"
+	name = "脑肉汉堡"
 	icon_state = "brainburger"
 
 	heal_amount_health = 20
@@ -52,7 +52,7 @@
 	heal_amount_mana = 100
 
 /obj/item/consumable/food/burger/xeno
-	name = "xenoburger"
+	name = "异形汉堡"
 	icon_state = "xburger"
 
 	heal_amount_health = 100
@@ -60,7 +60,7 @@
 	heal_amount_mana = -100
 
 /obj/item/consumable/food/burger/jelly
-	name = "jellyburger"
+	name = "果冻汉堡"
 	icon_state = "jellyburger"
 
 	heal_amount_health = 100
@@ -68,7 +68,7 @@
 	heal_amount_mana = 0
 
 /obj/item/consumable/food/burger/roburger
-	name = "roborger"
+	name = "机器人汉堡"
 	icon_state = "roburger"
 
 	heal_amount_health = 0
@@ -76,7 +76,7 @@
 	heal_amount_mana = 0
 
 /obj/item/consumable/food/burger/spellburger
-	name = "spellburger"
+	name = "法术汉堡"
 	icon_state = "spellburger"
 
 	heal_amount_health = 0
@@ -84,7 +84,7 @@
 	heal_amount_mana = 1000
 
 /obj/item/consumable/food/burger/appendix
-	name = "appendix burger"
+	name = "阑尾汉堡"
 	icon_state = "appendixburger"
 
 	heal_amount_health = 50
@@ -93,7 +93,7 @@
 
 
 /obj/item/consumable/food/burger/fish
-	name = "fish burger"
+	name = "鱼肉汉堡"
 	icon_state = "fishburger"
 
 	heal_amount_health = 50
@@ -101,10 +101,10 @@
 	heal_amount_mana = 0
 
 /obj/item/consumable/food/burger/fish/crab
-	name = "crab burger"
+	name = "蟹肉汉堡"
 
 /obj/item/consumable/food/burger/clown
-	name = "clown burger"
+	name = "小丑汉堡"
 	icon_state = "clownburger"
 
 	heal_amount_health = 0
@@ -118,7 +118,7 @@
 	heal_amount_mana = rand(-10,10) * 10
 
 /obj/item/consumable/food/burger/mime
-	name = "mime burger"
+	name = "默剧演员汉堡"
 	icon_state = "mimeburger"
 
 	heal_amount_health = 20
@@ -126,7 +126,7 @@
 	heal_amount_mana = 20
 
 /obj/item/consumable/food/burger/colored
-	name = "colored burger"
+	name = "彩色汉堡"
 	icon_state = "cburger"
 
 	color = "#FFFFFF"
@@ -147,7 +147,7 @@
 	heal_amount_mana *= total_mod
 
 /obj/item/consumable/food/burger/bear
-	name = "bearger"
+	name = "熊肉汉堡"
 	icon_state = "bearger"
 
 	heal_amount_health = 100
@@ -155,7 +155,7 @@
 	heal_amount_mana = 0
 
 /obj/item/consumable/food/burger/fivealarm
-	name = "five alarm burger"
+	name = "五级火警辣堡"
 	icon_state = "fivealarmburger"
 
 	heal_amount_health = 0
@@ -163,7 +163,7 @@
 	heal_amount_mana = 0
 
 /obj/item/consumable/food/burger/ratburger
-	name = "ratburger"
+	name = "鼠肉汉堡"
 	icon_state = "ratburger"
 
 	heal_amount_health = 50
@@ -171,7 +171,7 @@
 	heal_amount_mana = -25
 
 /obj/item/consumable/food/burger/baseballburger
-	name = "baseball burger"
+	name = "棒球汉堡"
 	icon_state = "baseball"
 
 	heal_amount_health = 25

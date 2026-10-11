@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/fortress
-	name = "12g Fortress Defender"
-	desc = "They don't make them like they used to."
-	desc_extended = "A compact yet still powerful pump action shotgun meant for home and fortress defence. One of the first weapons manufactured by NanoTrasen when they were just an iron mining company."
+	name = "12号堡垒卫士"
+	desc = "再也造不出当年的味道了。"
+	desc_extended = "用于守卫家园和堡垒的泵动式霰弹枪，小巧而威力不减。这是纳米传讯还只是一家铁矿公司时制造的首批武器之一。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/nanotrasen/fortress.dmi'
 	icon_state = "inventory"
 	value = 800

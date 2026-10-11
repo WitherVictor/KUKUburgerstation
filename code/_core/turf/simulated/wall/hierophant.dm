@@ -1,7 +1,7 @@
 /turf/simulated/wall/hierophant
-	name = "hierophant wall"
-	desc = "Very purple"
-	desc_extended = "a wall made of an unknown metal, there are rippling patterns of purple light across it."
+	name = "大祭司墙壁"
+	desc = "紫得很。"
+	desc_extended = "一堵用未知金属制成的墙，紫色光纹在表面荡漾。"
 	icon = 'icons/turf/wall/hierophant.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE

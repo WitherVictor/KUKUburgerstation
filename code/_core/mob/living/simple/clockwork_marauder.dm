@@ -1,7 +1,7 @@
 /mob/living/simple/clockwork_marauder
-	name = "clockwork marauder"
-	desc = "Spooky!"
-	desc_extended = "A fragment of an old soul that previously served Ratvar, kitted in armor."
+	name = "发条掠夺者"
+	desc = "阴森森的！"
+	desc_extended = "一缕披上护甲的古老残魂，曾效忠于拉特瓦尔。"
 	icon = 'icons/mob/living/simple/clockwork_marauder.dmi'
 	icon_state = "living"
 

@@ -1,7 +1,7 @@
 /obj/item/storage/box
-	name = "box"
-	desc = "What's inside the box?"
-	desc_extended = "A regular grey cardboard box."
+	name = "盒子"
+	desc = "盒子里有什么？"
+	desc_extended = "一个普通的灰色纸板盒。"
 
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "box"

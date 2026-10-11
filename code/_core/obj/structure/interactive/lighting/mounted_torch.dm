@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/mounted_torch
-	name = "mounted torch"
+	name = "壁挂火把"
 	icon = 'icons/obj/structure/wall_torch.dmi'
 	icon_state = "torch"
 

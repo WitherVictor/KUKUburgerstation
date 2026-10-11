@@ -1,7 +1,7 @@
 /obj/item/clothing/belt/belt_quiver
-	name = "belt quiver"
-	desc = "For the aspiring archer."
-	desc_extended = "A not-so-fancy belt quiver meant to hold a number of arrows. ALT+Click to grab additional arrows while already holding an arrow."
+	name = "腰挂箭袋"
+	desc = "献给立志成为弓箭手的人。"
+	desc_extended = "朴素的腰挂箭袋，可存放多支箭。手持箭矢时，用ALT+单击可再取出一支同类箭。"
 
 	icon = 'icons/obj/item/clothing/belts/belt_quiver.dmi'
 
@@ -78,7 +78,7 @@
 		var/obj/item/bullet_cartridge/arrow/A = object
 		if(activator.attack_flags & CONTROL_MOD_DISARM)
 			if(!stored_arrows[A.type])
-				activator.to_chat(span("warning","There are no arrows of that type left in \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里已经没有这种箭了！"))
 				return TRUE
 			var/amount_added = A.add_item_count(1)
 			if(amount_added)
@@ -108,13 +108,13 @@
 
 /obj/item/clothing/belt/belt_quiver/proc/take_arrow(var/mob/activator,var/obj/hud/inventory/I)
 	if(!length(stored_arrows))
-		activator.to_chat(span("warning","There are no arrows left!"))
+		activator.to_chat(span("warning","已经没有箭了！"))
 		return FALSE
 	var/obj/item/bullet_cartridge/arrow/A = pickweight(stored_arrows)
 	A = new A(get_turf(src))
 	A.amount = 1
 	stored_arrows[A.type] -= 1
-	activator.to_chat(span("notice","You take 1 arrow from \the [src.name]. There are [stored_arrows[A.type]] arrows left."))
+	activator.to_chat(span("notice","你从[src.name]中取出1支箭，还剩[stored_arrows[A.type]]支同类箭。"))
 	if(stored_arrows[A.type] <= 0)
 		stored_arrows -= A.type
 	INITIALIZE(A)

@@ -1,8 +1,8 @@
 /obj/item/storage/secure
-	name = "secured universal storage device"
-	desc = "It's bluespace, I ain't gotta explain shit."
-	desc_extended = "Also known as an S.U.S. device, this device uses special shared-link storage to access items across the universe and dimensions. Very limited in what it can store, however. \
-	<span class='danger'>WARNING: This device only works when slotted into the secure bluespace storage slot. Storage retrieval may not work if its not in the right slot!</span>"
+	name = "安全通用储物装置"
+	desc = "蓝空间科技，老子没必要解释。"
+	desc_extended = "又称S.U.S.装置，利用特殊的共享连接储物技术，跨越宇宙与维度存取物品。不过，能存放的物品种类非常有限。 \
+	<span class='danger'>警告：此装置只有放在安全蓝空间储物槽中才能正常工作。放错位置可能导致无法取回物品！</span>"
 
 	icon = 'icons/obj/item/storage/secure_box.dmi'
 	icon_state = "basic"

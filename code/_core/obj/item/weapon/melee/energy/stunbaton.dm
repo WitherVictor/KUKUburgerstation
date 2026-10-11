@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/energy/stunbaton
-	name = "stunbaton"
-	desc = "A stunbaton, except the stun setting is stuck on lethal."
-	desc_extended = "A baton used by Private Security and Space Police. Remember to turn it on before applying it to someone's head, or it will just be a weighty stick."
+	name = "电击警棍"
+	desc = "一根电击警棍，只是击晕档卡在了致命模式。"
+	desc_extended = "私人安保与太空警察使用的警棍。敲别人脑袋前记得开启，否则它就只是一根沉重的棍子。"
 	icon = 'icons/obj/item/weapons/melee/clubs/stunbaton.dmi'
 	damage_type = /damagetype/melee/club/stunbaton
 	damage_type_on = /damagetype/melee/club/stunbaton/on

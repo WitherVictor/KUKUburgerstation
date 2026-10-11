@@ -9,9 +9,9 @@
 	return ..()
 
 /obj/item/grenade/device/large/timed/explosive_large
-	name = "timed large explosive grenade"
-	desc = "Kaboom!"
-	desc_extended = "A prebuilt timed explosive grenade. The labeling indicates that the fuse is set to 3 seconds. This one has a larger payload."
+	name = "大型定时爆破手榴弹"
+	desc = "轰！"
+	desc_extended = "预装好的定时爆破手榴弹。标签注明引信设为3秒。这枚装药量更大。"
 	marker_color = COLOR_GREEN
 
 /obj/item/grenade/device/large/timed/explosive_large/Generate()
@@ -22,9 +22,9 @@
 
 
 /obj/item/grenade/device/large/timed/lube_smoke
-	name = "timed lube smoke grenade"
-	desc = "Kaboomish!"
-	desc_extended = "A prebuilt timed lube smoke grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时润滑烟雾手榴弹"
+	desc = "差不多也算轰吧！"
+	desc_extended = "预装好的定时润滑烟雾手榴弹。标签注明引信设为3秒。"
 
 	marker_color = COLOR_BLUE
 
@@ -34,9 +34,9 @@
 	return ..()
 
 /obj/item/grenade/device/large/timed/cleaning_smoke
-	name = "timed BLAM! cleaning smoke grenade"
-	desc = "BLAM!"
-	desc_extended = "A prebuilt timed cleaing smoke grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时砰！清洁烟雾手榴弹"
+	desc = "砰！"
+	desc_extended = "预装好的定时清洁烟雾手榴弹。标签注明引信设为3秒。"
 
 	paint_color = COLOR_GREEN
 	marker_color = COLOR_GREEN
@@ -48,9 +48,9 @@
 
 
 /obj/item/grenade/device/large/timed/apocalypse
-	name = "timed apocalypse grenade"
-	desc = "BLAM!"
-	desc_extended = "A prebuilt timed apocalypse grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时末日手榴弹"
+	desc = "砰！"
+	desc_extended = "预装好的定时末日手榴弹。标签注明引信设为3秒。"
 
 	paint_color = COLOR_RED
 	marker_color = COLOR_ORANGE

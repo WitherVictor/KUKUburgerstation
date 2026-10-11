@@ -1,7 +1,7 @@
 /obj/item/instrument/
-	name = "piano"
-	desc = "Talent not included."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "钢琴"
+	desc = "本品不附赠才华。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	var/song/current_song = /song/
 	var/instrument_type = "piano"
 
@@ -31,106 +31,106 @@
 	return ..()
 
 /obj/item/instrument/accordion
-	name = "accordion"
-	desc = "REMOVE KEBAB."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "手风琴"
+	desc = "清除烤肉。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/accordion.dmi'
 	instrument_type = "accordion"
 	value = 400
 
 /obj/item/instrument/banjo
-	name = "banjo"
-	desc = "For fighting off mudcrabs."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "班卓琴"
+	desc = "用来赶走泥沼蟹。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/banjo.dmi'
 	instrument_type = "banjo"
 	value = 400
 
 /obj/item/instrument/bikehorn
-	name = "bike horn"
-	desc = "HONK."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "自行车喇叭"
+	desc = "嘟！"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/bikehorn.dmi'
 	instrument_type = "bikehorn"
 	value = 300
 
 /obj/item/instrument/eguitar
-	name = "electric guitar"
-	desc = "If you want panties to get thrown at you, this is an all time classic"
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "电吉他"
+	desc = "想让台下朝你扔内裤？这可是经久不衰的经典。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/eguitar.dmi'
 	instrument_type = "eguitar"
 	value = 600
 
 /obj/item/instrument/glockenspiel
-	name = "glockenspiel"
+	name = "钟琴"
 	desc = "D, D, D, A, G#, G, F, D, G, F"
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/glockenspiel.dmi'
 	instrument_type = "glockenspiel"
 	value = 500
 
 /obj/item/instrument/guitar
-	name = "guitar"
-	desc = "YEEEEEEEEEEEEEEHAAAAAAAAAAAAAWWWWW"
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "吉他"
+	desc = "咿——哈——！"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/guitar.dmi'
 	instrument_type = "guitar"
 	value = 400
 
 /obj/item/instrument/harmonica
-	name = "harmonica"
-	desc = "The instrument of choice for working class men with the blues."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "口琴"
+	desc = "满腹忧愁的工人阶级男人最爱的乐器。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/harmonica.dmi'
 	instrument_type = "harmonica"
 	value = 300
 
 /obj/item/instrument/piano
-	name = "piano"
-	desc = "Talent not included."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "钢琴"
+	desc = "本品不附赠才华。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/piano.dmi'
 	instrument_type = "piano"
 	anchored = TRUE
 	value = 1000
 
 /obj/item/instrument/recorder
-	name = "recorder"
-	desc = "This is used mostly to make shitty meme covers of good songs"
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "竖笛"
+	desc = "主要用来把好歌翻吹成难听的搞笑版本。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/recorder.dmi'
 	instrument_type = "recorder"
 	value = 300
 
 /obj/item/instrument/saxophone
-	name = "saxophone"
-	desc = "GUILTY FEET AIN'T GOT NO RYTHM"
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "萨克斯管"
+	desc = "心怀愧疚，脚步再也踩不准节拍。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/saxophone.dmi'
 	instrument_type = "saxophone"
 	value = 500
 
 /obj/item/instrument/trombone
-	name = "trombone"
-	desc = "An instrument fit for a skeleton."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "长号"
+	desc = "很适合骷髅演奏的乐器。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/trombone.dmi'
 	instrument_type = "trombone"
 	value = 500
 
 /obj/item/instrument/violin
-	name = "violin"
-	desc = "Not the smallest violin, but it'll do."
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "小提琴"
+	desc = "虽不是世上最小的小提琴，拿来表达同情也够用了。"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/violin.dmi'
 	instrument_type = "violin"
 	value = 500
 
 /obj/item/instrument/xylophone
-	name = "xylophone"
-	desc = "Just like in pre-school!"
-	desc_extended = "Songs can be found on the /tg/ Station wiki."
+	name = "木琴"
+	desc = "就像幼儿园里那样！"
+	desc_extended = "可在/tg/ Station维基找到乐谱。"
 	icon = 'icons/obj/item/instrument/xylophone.dmi'
 	instrument_type = "xylophone"
 	anchored = TRUE

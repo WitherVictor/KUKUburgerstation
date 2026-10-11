@@ -1,7 +1,7 @@
 /obj/item/storage/pillbottle
-	name = "pill bottle"
-	desc = "Pills here!"
-	desc_extended = "An unlabelled medical pill bottle that can hold up to 30 pills."
+	name = "药片瓶"
+	desc = "药片在这儿！"
+	desc_extended = "没有标签的医用药片瓶，最多可装30片药。"
 	icon = 'icons/obj/item/storage/prescription_pillbottle.dmi'
 	icon_state = "base"
 
@@ -85,9 +85,9 @@
 
 
 /obj/item/storage/pillbottle/bicaridine
-	name = "bicaridine pill bottle"
-	desc = "Red for brute."
-	desc_extended = "Labelled to contain 20 5u bicaridine pills, a basic brute injury medication. Can hold up to 30 pills."
+	name = "比卡利定药片瓶"
+	desc = "红色治外伤。"
+	desc_extended = "标签注明内含20片比卡利定，每片5单位，用于基础外伤治疗。最多可装30片药。"
 
 /obj/item/storage/pillbottle/bicaridine/fill_inventory()
 	for(var/i=1,i<=20,i++)
@@ -95,9 +95,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/bicaridine_small
-	name = "bicaridine pill bottle"
-	desc = "Red for brute."
-	desc_extended = "Labelled to contain 10 5u bicaridine pills, a basic brute injury medication. Can hold up to 30 pills."
+	name = "比卡利定药片瓶"
+	desc = "红色治外伤。"
+	desc_extended = "标签注明内含10片比卡利定，每片5单位，用于基础外伤治疗。最多可装30片药。"
 
 /obj/item/storage/pillbottle/bicaridine_small/fill_inventory()
 	for(var/i=1,i<=10,i++)
@@ -105,9 +105,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/kelotane
-	name = "kelotane pill bottle"
-	desc = "Yellow for burn."
-	desc_extended = "Labelled to contain 20 5u kelotane pills, a basic burn injury medication. Can hold up to 30 pills."
+	name = "克罗烷药片瓶"
+	desc = "黄色治烧伤。"
+	desc_extended = "标签注明内含20片克罗烷，每片5单位，用于基础烧伤治疗。最多可装30片药。"
 
 /obj/item/storage/pillbottle/kelotane/fill_inventory()
 	for(var/i=1,i<=20,i++)
@@ -115,9 +115,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/kelotane_small
-	name = "kelotane pill bottle"
-	desc = "Yellow for burn."
-	desc_extended = "Labelled to contain 10 5u kelotane pills, a basic burn injury medication. Can hold up to 30 pills."
+	name = "克罗烷药片瓶"
+	desc = "黄色治烧伤。"
+	desc_extended = "标签注明内含10片克罗烷，每片5单位，用于基础烧伤治疗。最多可装30片药。"
 
 /obj/item/storage/pillbottle/kelotane_small/fill_inventory()
 	for(var/i=1,i<=10,i++)
@@ -125,9 +125,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/dylovene
-	name = "dylovene pill bottle"
-	desc = "Green for toxins."
-	desc_extended = "Labelled to contain 20 5u dylovene pills, a basic anti-toxin. Can hold up to 30 pills."
+	name = "地洛文药片瓶"
+	desc = "绿色解毒。"
+	desc_extended = "标签注明内含20片地洛文，每片5单位，是基础解毒药。最多可装30片药。"
 
 /obj/item/storage/pillbottle/dylovene/fill_inventory()
 	for(var/i=1,i<=20,i++)
@@ -135,9 +135,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/dylovene_small
-	name = "dylovene pill bottle"
-	desc = "Green for toxins."
-	desc_extended = "Labelled to contain 10 5u dylovene pills, a basic anti-toxin. Can hold up to 30 pills."
+	name = "地洛文药片瓶"
+	desc = "绿色解毒。"
+	desc_extended = "标签注明内含10片地洛文，每片5单位，是基础解毒药。最多可装30片药。"
 
 /obj/item/storage/pillbottle/dylovene_small/fill_inventory()
 	for(var/i=1,i<=10,i++)
@@ -146,9 +146,9 @@
 
 
 /obj/item/storage/pillbottle/iron
-	name = "iron pill bottle"
-	desc = "No blood, no problem!"
-	desc_extended = "Labelled to contain 20 10u iron pills, as supplements for treating blood loss. Can hold up to 30 pills."
+	name = "铁剂药片瓶"
+	desc = "没血了？小事一桩！"
+	desc_extended = "标签注明内含20片铁剂，每片10单位，用于辅助治疗失血。最多可装30片药。"
 
 /obj/item/storage/pillbottle/iron/fill_inventory()
 	for(var/i=1,i<=20,i++)
@@ -156,9 +156,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/iron_small
-	name = "iron pill bottle"
-	desc = "No blood, no problem!"
-	desc_extended = "Labelled to contain 10 10u iron pills, as supplements for treating blood loss. Can hold up to 30 pills."
+	name = "铁剂药片瓶"
+	desc = "没血了？小事一桩！"
+	desc_extended = "标签注明内含10片铁剂，每片10单位，用于辅助治疗失血。最多可装30片药。"
 
 /obj/item/storage/pillbottle/iron_small/fill_inventory()
 	for(var/i=1,i<=10,i++)
@@ -166,9 +166,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/omnizine
-	name = "omnizine pill bottle"
-	desc = "Heals everything! Or your money back!*"
-	desc_extended = "Labelled to contain 20 10u omnizine pills, an universal healing reagent. Can hold up to 30 pills."
+	name = "全能灵药药片瓶"
+	desc = "包治百病！无效退款！*"
+	desc_extended = "标签注明内含20片全能灵药，每片10单位，是通用治疗药剂。最多可装30片药。"
 
 /obj/item/storage/pillbottle/omnizine/fill_inventory()
 	for(var/i=1,i<=20,i++)
@@ -176,9 +176,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/charcoal
-	name = "charcoal pill bottle"
-	desc = "Bad and naughty Chemists get their meth flushed out of their system!"
-	desc_extended = "Labelled to contain 20 10u charcoal pills, a basic reagent to flush the bloodstream. Can hold up to 30 pills."
+	name = "活性炭药片瓶"
+	desc = "不听话的坏化学家，就得把体内的冰毒清个干净！"
+	desc_extended = "标签注明内含20片活性炭，每片5单位，是清除血液中药剂的基础药物。最多可装30片药。"
 
 /obj/item/storage/pillbottle/charcoal/fill_inventory()
 	for(var/i=1,i<=20,i++)
@@ -186,9 +186,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/antihol_small
-	name = "antihol bottle"
-	desc = "Kills your buzz faster than a pay cut."
-	desc_extended = "Labelled to contain 10 10u antihol pills, an anti-toxin that breaks down and flushes alcohol from the body. Can hold up to 30 pills."
+	name = "解酒剂药片瓶"
+	desc = "让你酒醒的速度比降薪还快。"
+	desc_extended = "标签注明内含10片解酒剂，每片10单位，可分解并清除体内的酒精。最多可装30片药。"
 
 /obj/item/storage/pillbottle/antihol_small/fill_inventory()
 	for(var/i=1,i<=10,i++)
@@ -196,9 +196,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/potassium_iodide_small
-	name = "potassium iodide pill bottle"
-	desc = "No dude, you said--"
-	desc_extended = "Labelled to contain 10 10u potassium iodide pills, a basic anti-rad medication. Can hold up to 30 pills."
+	name = "碘化钾药片瓶"
+	desc = "不，老兄，你刚才说的是——"
+	desc_extended = "标签注明内含10片碘化钾，每片10单位，是基础抗辐射药物。最多可装30片药。"
 
 /obj/item/storage/pillbottle/potassium_iodide_small/fill_inventory()
 	for(var/i=1,i<=10,i++)
@@ -206,9 +206,9 @@
 	. = ..()
 
 /obj/item/storage/pillbottle/space_prussian_blue_small
-	name = "space prussian blue pill bottle"
-	desc = "Comes from the bones of old horses, apparently."
-	desc_extended = "Labelled to contain 10 20u space prussian blue pills, an effective anti-rad substance. Can hold up to 30 pills."
+	name = "太空普鲁士蓝药片瓶"
+	desc = "据说是用老马的骨头做的。"
+	desc_extended = "标签注明内含10片太空普鲁士蓝，每片10单位，是有效的抗辐射药物。最多可装30片药。"
 
 /obj/item/storage/pillbottle/space_prussian_blue_small/fill_inventory()
 	for(var/i=1,i<=10,i++)

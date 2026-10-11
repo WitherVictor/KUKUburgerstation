@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/longcon
-	name = ".45 LongCon pistol"
-	desc = "A .45 that looks like a 9mm."
-	desc_extended = "A lightweight and compact Syndicate pistol chambered in .45. Tiny, but still gets the job done."
+	name = ".45长线骗局手枪"
+	desc = "长得像9mm手枪的.45手枪。"
+	desc_extended = "轻巧紧凑的辛迪加.45手枪。个头虽小，照样能办成事。"
 	value = 800
 
 	company_type = "Syndicate"

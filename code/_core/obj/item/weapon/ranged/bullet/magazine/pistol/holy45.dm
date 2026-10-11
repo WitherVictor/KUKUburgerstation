@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/holy45
-	name = "Holy .45 M1984 pistol"
-	desc = "We can't expect God to do all the work."
-	desc_extended = "A special Solarian-Produced replica of a holy artifact used by Pope Benny Bishiop III in the 2042 Holy Wars of United Jesusland. Works quite well for a propaganda device."
+	name = "神圣.45 M1984手枪"
+	desc = "总不能指望上帝包办一切。"
+	desc_extended = "太阳系生产的特殊圣物复刻品，原型曾由教宗本尼·比肖普三世在2042年耶稣合众国圣战中使用。作为宣传道具，效果相当不错。"
 	value = 4000
 
 	company_type = "Solarian"

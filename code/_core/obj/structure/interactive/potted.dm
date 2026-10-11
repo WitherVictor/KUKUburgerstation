@@ -1,7 +1,7 @@
 obj/structure/interactive/potted_plant
-	name = "potted plant"
-	desc = "For replacing the oxygen that these retards waste."
-	desc_extended = "A randomized potted plant as decor to liven up the area."
+	name = "盆栽"
+	desc = "补回这些蠢货白白浪费的氧气。"
+	desc_extended = "随机样式的装饰盆栽，为周围增添生气。"
 	icon = 'icons/obj/structure/flora/potted.dmi'
 
 	bullet_block_chance = 10

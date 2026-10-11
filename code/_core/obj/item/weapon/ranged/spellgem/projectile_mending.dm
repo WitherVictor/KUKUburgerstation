@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/mending_other
-	name = "mend other spell gem"
-	desc = "The source of all magic."
-	desc_extended = "A magical gem filled with pure arcane energy that gives the user the ability to cast spells. Can be augmented onto wands. This one shoots a regeneration inducing blast. ."
+	name = "他人愈合法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "充满纯粹奥术能量的魔法宝石，赋予使用者施放法术的能力，可镶入魔杖。这颗会发射促进再生的法球。"
 	icon_state = "heal"
 	color = "#ff0080"
 	color_2 = "#500028"

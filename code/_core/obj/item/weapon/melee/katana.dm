@@ -1,8 +1,8 @@
 /obj/item/weapon/melee/sword/katana
 
-	name = "ancient katana"
-	desc = "The power of god and anime."
-	desc_extended = "The Ancient Japanese characters on this sword's blade roughly translate to 'Made in China'"
+	name = "古老武士刀"
+	desc = "神明与动漫的力量。"
+	desc_extended = "刀刃上的古代日文大致可以译为“中国制造”。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/katana.dmi'
 

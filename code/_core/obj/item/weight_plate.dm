@@ -1,4 +1,4 @@
 /obj/item/weight_plate
-	name = "digital weight scale"
-	desc = "Fat."
-	desc_extended = "Measures the weight of the object on it."
+	name = "电子秤"
+	desc = "胖。"
+	desc_extended = "测量放在上面的物体的重量。"

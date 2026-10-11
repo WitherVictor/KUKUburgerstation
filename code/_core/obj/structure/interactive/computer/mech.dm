@@ -1,7 +1,7 @@
 /obj/structure/interactive/computer/console/mech_fabricator
-	name = "mech fabricator console"
-	desc = "Print the rights to mechs here."
-	desc_extended = "Use this console if you wish to purchase the rights and insurance to your very own mech! Some assembly required."
+	name = "机甲制造控制台"
+	desc = "在这里打印机甲所有权凭证。"
+	desc_extended = "使用这台控制台，为属于自己的机甲购买所有权和保险！部分组件需要自行组装。"
 	computer_type = "mecha"
 	keyboard_type = "tech_key"
 

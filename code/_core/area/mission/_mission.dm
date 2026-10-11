@@ -10,7 +10,7 @@
 	horde_data = "mission"
 
 /area/mission/below
-	name = "\improper Underground"
+	name = "\improper 地下"
 	icon_state = "cave"
 
 	weather = null
@@ -33,7 +33,7 @@
 	allow_climbing = TRUE
 
 /area/mission/desert
-	name = "\improper Cliffside Sea Desert"
+	name = "\improper 崖海沙漠"
 	icon_state = "desert"
 
 	weather = WEATHER_SANDSTORM
@@ -50,7 +50,7 @@
 	dynamic_rock_gen_turf = /turf/simulated/wall/rock/desert
 
 /area/mission/snow
-	name = "\improper Snow Line"
+	name = "\improper 雪线"
 	icon_state = "snow"
 	weather = WEATHER_SNOW
 	ambient_temperature = T0C - 20
@@ -71,7 +71,7 @@
 	dynamic_rock_gen_turf = /turf/simulated/wall/rock
 
 /area/mission/desert/interior
-	name = "\improper Cliffside Sea Desert Caves"
+	name = "\improper 崖海沙漠洞穴"
 	icon_state = "desert_cave"
 
 	weather = null
@@ -91,7 +91,7 @@
 	)
 
 /area/mission/forest
-	name = "Rael Forest"
+	name = "雷尔森林"
 	icon_state = "forest"
 
 	weather = null
@@ -111,7 +111,7 @@
 	dynamic_rock_gen_turf = /turf/simulated/wall/rock/brown
 
 /area/mission/caves
-	name = "\improper Unexplored Caves"
+	name = "\improper 未探索的洞穴"
 	icon_state = "cave"
 
 	weather = null
@@ -133,7 +133,7 @@
 
 
 /area/mission/jungle
-	name = "\improper Vinetangle Jungle"
+	name = "\improper 缠藤丛林"
 	icon_state = "jungle"
 
 	weather = WEATHER_RAIN
@@ -162,7 +162,7 @@
 	dynamic_rock_gen_turf = /turf/simulated/wall/rock/moss
 
 /area/mission/jungle/interior
-	name = "\improper Deep Vinetangle Jungle"
+	name = "\improper 缠藤丛林深处"
 	icon_state = "jungle_interior"
 
 	weather = null
@@ -187,7 +187,7 @@
 	)
 
 /area/mission/lava
-	name = "\improper The Magmachamber"
+	name = "\improper 岩浆大厅"
 	icon_state = "lava_cave"
 
 	weather = null
@@ -210,7 +210,7 @@
 	dynamic_rock_gen_turf = /turf/simulated/wall/rock/basalt
 
 /area/mission/beach
-	name = "Beach"
+	name = "海滩"
 	icon_state = "beach"
 
 	weather = null
@@ -225,7 +225,7 @@
 	horde_data = /horde_data/beach
 
 /area/mission/ocean
-	name = "\improper Spannic Ocean"
+	name = "\improper 斯潘尼克洋"
 	icon_state = "ocean"
 
 	weather = null
@@ -240,7 +240,7 @@
 	horde_data = /horde_data/beach
 
 /area/mission/out_of_bounds
-	name = "Out of Bounds"
+	name = "边界之外"
 	icon_state = "error"
 
 	interior = TRUE

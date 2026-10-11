@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/pdw
 	name = "\improper 4.6x30mm WT-550"
-	desc = "Something squeaks that isn't supposed to squeak? Put some WT-500 on it."
-	desc_extended = "A NanoTrasen made and used personal defense weapon designed for security forces on stations. The unique 4.6x30mm ammo type offers a robust array of special rounds for all combat situations."
+	desc = "有东西不该吱吱响却偏要响？给它来点WT-500。"
+	desc_extended = "纳米传讯为站内安保部队设计、制造并使用的个人防卫武器。独特的4.6x30mm弹药拥有多种特殊弹种，可应对各种战斗情况。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/4mm_pdw.dmi'
 	icon_state = "inventory"
 	value = 1100

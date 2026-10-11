@@ -1,6 +1,6 @@
 /obj/structure/interactive/conveyor
-	name = "conveyor belt"
-	desc = "A metal conveyor belt, used to move crates and large objects."
+	name = "传送带"
+	desc = "用于运送板条箱和大型物体的金属传送带。"
 	icon = 'icons/obj/structure/conveyor_new.dmi'
 	icon_state = "conveyor"
 
@@ -25,19 +25,19 @@
 		var/obj/item/T = object
 		if(T.flags_tool & FLAG_TOOL_WRENCH)
 			if(anchored)
-				activator.to_chat(span("notice","You un-anchor the conveyor."))
+				activator.to_chat(span("notice","你松开了传送带的固定装置。"))
 				set_anchored(FALSE)
 				disable()
 			else
-				activator.to_chat(span("notice","You anchor the conveyor."))
+				activator.to_chat(span("notice","你固定了传送带。"))
 				set_anchored(TRUE)
 				enable()
 
 	if(activator.movement_flags & MOVEMENT_WALKING)
 		if(anchored)
-			activator.to_chat(span("warning","You need to unsecure \the [src.name] before rotating it!"))
+			activator.to_chat(span("warning","旋转[src.name]前必须先松开固定装置！"))
 		else
-			activator.visible_message(span("notice","\The [activator.name] rotates \the [src.name]."),span("notice","You rotate \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]旋转了[src.name]。"),span("notice","你旋转了[src.name]。"))
 			set_dir(turn(dir,90))
 
 		update_conveyor()

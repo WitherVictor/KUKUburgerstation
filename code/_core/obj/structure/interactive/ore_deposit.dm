@@ -1,8 +1,8 @@
 /obj/structure/interactive/ore_deposit/
 
-	name = "ore deposit"
+	name = "矿床"
 	desc = ""
-	desc_extended = "Chonky"
+	desc_extended = "沉甸甸的一大块。"
 
 	icon = 'icons/obj/structure/ore.dmi'
 	icon_state = "deposit"
@@ -69,7 +69,7 @@
 
 //FLOOR ORE
 /obj/structure/interactive/ore_deposit/floor
-	name = "deep ore deposit"
+	name = "深层矿床"
 	layer = LAYER_FLOOR_PLATING
 	ore_amount = 5
 	anchored = 2
@@ -92,7 +92,7 @@
 
 //WALL ORE
 /obj/structure/interactive/ore_deposit/wall
-	name = "ore deposit"
+	name = "矿床"
 	layer = LAYER_WALL_DECAL
 	plane = PLANE_WALL_ATTACHMENT
 

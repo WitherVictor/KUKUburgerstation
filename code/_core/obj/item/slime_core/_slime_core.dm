@@ -1,6 +1,6 @@
 /obj/item/slime_core
-	name = "dye core"
-	desc = "What wonders does this contained goo have?"
+	name = "染色核心"
+	desc = "这团封装的黏液会带来什么奇迹？"
 	color = "#FFFFFF"
 	icon = 'icons/mob/living/simple/slimes_new.dmi'
 	icon_state = "slime_core"
@@ -38,17 +38,17 @@
 
 	var/prefix = ""
 	if(alpha < 100)
-		prefix = "weak "
+		prefix = "低浓度"
 	else if(alpha > 200)
-		prefix = "strong "
+		prefix = "高浓度"
 
 	name = "[prefix][initial(name)] ([color ? color : "#FFFFFF"])"
 
 	return TRUE
 
 /obj/item/slime_core/custom
-	name = "custom slime core"
-	desc_extended = "Can change into any color. Alt-clicking other items copies the color instead."
+	name = "自定义史莱姆核心"
+	desc_extended = "可以调成任意颜色。按住Alt点击其他可染色物品，可复制其颜色。"
 	value = 1000
 	alpha = 255
 
@@ -62,18 +62,20 @@
 		if(E.attack_flags & CONTROL_MOD_DISARM && O.dyeable)
 			var/choice
 			if(length(O.polymorphs)>1)
-				choice = input("What do you want to copy?","Dye Selection") as null|anything in O.polymorphs
+				var/list/dye_choices = O.get_dye_choices()
+				choice = input("你想复制哪个部分的颜色？","染色选择") as null|anything in dye_choices
+				choice = dye_choices[choice]
 				if(choice)
 					INTERACT_CHECK_NO_DELAY(src)
 					INTERACT_CHECK_NO_DELAY(object)
 					color = O.polymorphs[choice]
-					activator.to_chat(span("notice","You copy \the color from \the [O.name]."))
+					activator.to_chat(span("notice","你复制了[O.name]的颜色。"))
 				return TRUE
 			else
 				INTERACT_CHECK_NO_DELAY(src)
 				INTERACT_CHECK_NO_DELAY(object)
 				color = O.color
-				activator.to_chat(span("notice","You copy \the color from \the [O.name]."))
+				activator.to_chat(span("notice","你复制了[O.name]的颜色。"))
 				return TRUE
 
 	. = ..()
@@ -81,7 +83,7 @@
 /obj/item/slime_core/custom/click_self(var/mob/activator,location,control,params)
 	INTERACT_CHECK
 	INTERACT_DELAY(10)
-	var/choice = input("What would you like the color to be?", null, color) as color|null
+	var/choice = input("你想使用什么颜色？", null, color) as color|null
 	if(choice)
 		color = choice
 		update_sprite()

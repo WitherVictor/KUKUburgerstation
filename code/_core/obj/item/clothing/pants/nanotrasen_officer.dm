@@ -1,7 +1,7 @@
 /obj/item/clothing/pants/nanotrasen_officer
-	name = "nanotrasen officer pants"
-	desc = "Regal blue dye and silver trim, swanky."
-	desc_extended = "A pair of pants worn by officers of NanoTrasen."
+	name = "纳米传讯军官长裤"
+	desc = "高贵的蓝色配上银色镶边，真气派。"
+	desc_extended = "纳米传讯军官穿着的长裤。"
 	icon = 'icons/obj/item/clothing/pants/nanotrasen_officer.dmi'
 
 	armor = /armor/cloth/hard

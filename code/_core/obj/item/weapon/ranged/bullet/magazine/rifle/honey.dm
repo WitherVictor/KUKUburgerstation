@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/honey
-	name = "\improper 5.45x39mm Badger"
-	desc = "MP5SD, but cooler."
-	desc_extended = "A Syndicate carbine designed from stolen Space Slavic tech,"
+	name = "\improper 5.45x39mm獾"
+	desc = "像MP5SD，不过更酷。"
+	desc_extended = "利用窃取的太空斯拉夫技术设计的辛迪加卡宾枪。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/honey.dmi'
 	icon_state = "inventory"
 	value = 2300

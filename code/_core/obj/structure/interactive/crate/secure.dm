@@ -1,7 +1,7 @@
 /obj/structure/interactive/crate/secure
-	name = "secure crate"
-	desc = "No way you're getting in this."
-	desc_extended = "A secure crate."
+	name = "安全货箱"
+	desc = "你休想打开它。"
+	desc_extended = "带锁的安全货箱。"
 	icon_state = "secure"
 
 	var/locked = TRUE
@@ -26,13 +26,13 @@
 
 /obj/structure/interactive/crate/secure/proc/lock(var/mob/activator)
 	locked = TRUE
-	activator?.to_chat(span("notice","You lock \the [src.name]."))
+	activator?.to_chat(span("notice","你锁上了[src.name]。"))
 	update_sprite()
 	return TRUE
 
 /obj/structure/interactive/crate/secure/proc/unlock(var/mob/activator)
 	locked = FALSE
-	activator?.to_chat(span("notice","You unlock \the [src.name]."))
+	activator?.to_chat(span("notice","你解锁了[src.name]。"))
 	update_sprite()
 	return TRUE
 
@@ -51,7 +51,7 @@
 	return ..()
 
 /obj/structure/interactive/crate/secure/cargo
-	name = "secure cargo crate"
+	name = "货运安全货箱"
 	var/owner_name
 	var/credits_required
 
@@ -61,17 +61,17 @@
 	. = ..()
 
 	if(owner_name)
-		. += div("warning","This secure crate belongs to [owner_name]. Those who do not have a matching name cannot open it.")
+		. += div("warning","此安全货箱属于[owner_name]。姓名不符的人无法打开。")
 
 	if(credits_required)
-		. += div("warning","This secure crate will charge [credits_required] credits once unlocked.")
+		. += div("warning","此安全货箱解锁时将收取[credits_required]信用点。")
 
 	var/list/contents_to_display = list()
 	for(var/k in contents)
 		var/atom/movable/M = k
 		contents_to_display += M.name
 
-	. += div("notice","It contains: [english_list(contents_to_display)].")
+	. += div("notice","内含：[length(contents_to_display) ? jointext(contents_to_display,"、") : "无"]。")
 
 
 /obj/structure/interactive/crate/secure/cargo/lock(var/mob/activator)
@@ -85,11 +85,11 @@
 	if(is_advanced(activator))
 		var/mob/living/advanced/A = activator
 		if(lowertext(A.real_name) != lowertext(owner_name))
-			activator.to_chat(span("notice","The [src.name] refuses to lock!"))
+			activator.to_chat(span("notice","[src.name]拒绝上锁！"))
 			return FALSE
 	else
 		if(lowertext(activator.name) != lowertext(owner_name))
-			activator.to_chat(span("notice","The [src.name] refuses to lock!"))
+			activator.to_chat(span("notice","[src.name]拒绝上锁！"))
 			return FALSE
 
 	return ..()
@@ -108,16 +108,16 @@
 
 	var/mob/living/advanced/player/A = activator
 	if(A.real_name != owner_name)
-		src.do_say("Error: Unrecognized user.")
+		src.do_say("错误：无法识别用户。")
 		return FALSE
 	if(credits_required && A.currency < credits_required)
-		src.do_say("Error: Not enough credits.")
+		src.do_say("错误：信用点不足。")
 		return FALSE
 
 	. = ..()
 
 	if(. && credits_required)
 		A.adjust_currency(-credits_required)
-		src.do_say("Transaction complete.")
+		src.do_say("交易完成。")
 		credits_required = null
 

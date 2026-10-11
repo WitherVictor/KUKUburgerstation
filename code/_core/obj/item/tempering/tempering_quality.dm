@@ -1,9 +1,9 @@
 /obj/item/tempering/quality
-	name = "quality improvement"
-	desc = "You shouldn't be seeing this..."
-	desc_extended = "Report this to burger."
+	name = "品质改良用品"
+	desc = "你不该看到这个……"
+	desc_extended = "请将此问题报告给Burger。"
 	has_quick_function = TRUE
-	var/item_type_name = "items"
+	var/item_type_name = "物品"
 
 	var/increase_maximum = 0
 
@@ -19,25 +19,25 @@
 /obj/item/tempering/quality/can_temper(var/mob/activator,var/obj/item/I)
 
 	if(!I.can_adjust_quality())
-		activator.to_chat(span("warning","\The [I.name] cannot be improved!"))
+		activator.to_chat(span("warning","[I.name]无法强化！"))
 		return FALSE
 
 	if(increase_maximum)
 		if(I.quality_max >= 200 && I.quality >= I.quality_max)
-			activator.to_chat(span("warning","\The [I.name] cannot be improved further!"))
+			activator.to_chat(span("warning","[I.name]无法继续强化！"))
 			return FALSE
 	else
 		if(I.quality >= I.quality_max)
-			activator.to_chat(span("warning","\The [I.name] cannot be repaired further!"))
+			activator.to_chat(span("warning","[I.name]无法继续修复！"))
 			return FALSE
 
 	return ..()
 
 /obj/item/tempering/quality/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Increases the quality of [item_type_name] by [increase]%, with a minimum of [minimum]%.")
+	. += span("notice","使[item_type_name]的品质提高[increase]个百分点，至少恢复至[minimum]%。")
 	if(increase_maximum > 0)
-		. += span("notice","Increases the maximum quality of [item_type_name] by [increase_maximum], up to 200%.")
+		. += span("notice","使[item_type_name]的品质上限提高[increase_maximum]个百分点，最高为200%。")
 
 
 /obj/item/tempering/quality/on_temper(var/mob/activator, var/obj/item/I)
@@ -53,9 +53,9 @@
 	return ..()
 
 /obj/item/tempering/quality/general
-	name = "advanced repair kit"
-	desc = "Your gear is your life. Take care of it!"
-	desc_extended = "A collection of scrap, tools, and generally useful materials that can help you maintain the condition any sort of item."
+	name = "高级维修包"
+	desc = "装备就是你的命，保养好它！"
+	desc_extended = "一套包含废料、工具和通用材料的用品，可用于维护各类物品。"
 	icon_state = "repair_kit"
 
 	increase = 25
@@ -66,9 +66,9 @@
 	value = 400
 
 /obj/item/tempering/quality/melee
-	name = "chef's whetstone"
-	desc = "Stay sharp!"
-	desc_extended = "A special whetstone that can improve the quality and maximium quality of melee, unarmed, and thrown weapons. Even works on non-sharp objects!"
+	name = "厨师磨刀石"
+	desc = "保持锋利！"
+	desc_extended = "特殊磨刀石，可提高近战武器、徒手武器和投掷武器的品质及品质上限。连没有刃口的物品也能用！"
 	icon_state = "whetstone"
 
 	increase = 5
@@ -80,9 +80,9 @@
 	value = 500
 
 /obj/item/tempering/quality/clothing
-	name = "armorer's durathread"
-	desc = "Stay protected!"
-	desc_extended = "A patch of rare durathread that can improve the quality and maximum quality of a piece of clothing."
+	name = "护甲匠耐久布"
+	desc = "做好防护！"
+	desc_extended = "一块稀有的耐久布，可提高服装的品质及品质上限。"
 	icon_state = "durathread"
 
 	increase = 5
@@ -95,9 +95,9 @@
 /obj/item/tempering/quality/ranged
 
 /obj/item/tempering/quality/ranged/projectile
-	name = "soldier's spare brass parts"
-	desc = "Stay ahead of the curve!"
-	desc_extended = "A collection of spare brass parts stolen from Clockwork Cultists that can improve the quality and maximum quality of ranged non-energy based weapons."
+	name = "士兵备用黄铜零件"
+	desc = "保持领先！"
+	desc_extended = "一套从发条教徒那里偷来的备用黄铜零件，可提高非能量类远程武器的品质及品质上限。"
 	icon_state = "brass_box"
 
 	increase = 5
@@ -112,9 +112,9 @@
 	value = 1000
 
 /obj/item/tempering/quality/ranged/energy
-	name = "alien focusing mechanism"
-	desc = "Stay ahead of the curve!"
-	desc_extended = "A rare, exotic, and expensive focusing crystal made out of diamonds and alien alloy that improves the quality and maximum quality of ranged energy-based weapons."
+	name = "外星聚焦装置"
+	desc = "保持领先！"
+	desc_extended = "由钻石和外星合金制成的聚焦晶体，稀有、奇异又昂贵，可提高远程能量武器的品质及品质上限。"
 	icon_state = "focusing_crystal"
 
 	increase = 10
@@ -125,9 +125,9 @@
 	value = 3000
 
 /obj/item/tempering/quality/ranged/magic
-	name = "wizard's gemstone crystal"
-	desc = "Stay ahead of the curve!"
-	desc_extended = "A magical phoron composite crystal that improves the quality and maximum quality of spell gems, support gems, and wands."
+	name = "巫师宝石晶体"
+	desc = "保持领先！"
+	desc_extended = "蕴含魔力的佛隆复合晶体，可提高法术宝石、辅助宝石和魔杖的品质及品质上限。"
 	icon_state = "gem_fuel"
 
 	increase = 5

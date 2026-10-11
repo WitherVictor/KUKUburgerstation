@@ -1,43 +1,43 @@
 /obj/item/clothing/ring/gold/ring_of_god
-	name = "ring of God"
-	desc_extended ="A glorious ambrosia ring, crafted by god himself. Increases armor."
+	name = "神之戒"
+	desc_extended ="神亲手打造的华美神赐戒指，能够增强护甲。"
 	armor = /armor/ring/god
 	value_burgerbux = 1
 
 /obj/item/clothing/ring/gold/wedding
-	name = "wedding ring"
-	desc_extended = "Wuv. Twu Wuv."
+	name = "婚戒"
+	desc_extended = "爱爱。真哒爱爱。"
 	armor = /armor/ring/wedding
 
 //Horsemen rings
 /obj/item/clothing/ring/horsemen/death
-	name = "ring of Death"
-	desc = "I looked, and behold, a pale horse; and he who sat on it had the name Death..."
-	desc_extended = "A ring of one of the four horsemen."
+	name = "死亡之戒"
+	desc = "我观看，见有一匹灰色马；骑在马上的，名字叫死亡……"
+	desc_extended = "天启四骑士之一的戒指。"
 	armor = /armor/ring/death
 
 /obj/item/clothing/ring/horsemen/war
-	name = "ring of War"
-	desc = "Ragnarok is upon ye."
-	desc_extended = "A ring of one of the four horsemen."
+	name = "战争之戒"
+	desc = "诸神黄昏已降临于你。"
+	desc_extended = "天启四骑士之一的戒指。"
 	armor = /armor/ring/war
 
 /obj/item/clothing/ring/horsemen/conquest
-	name = "ring of Conquest"
-	desc = "Veni,Vidi,Vici"
-	desc_extended = "A ring of one of the four horsemen."
+	name = "征服之戒"
+	desc = "我来，我见，我征服。"
+	desc_extended = "天启四骑士之一的戒指。"
 	armor = /armor/ring/conquest
 
 /obj/item/clothing/ring/horsemen/famine
-	name = "ring of Famine"
-	desc = "Spare change?"
-	desc_extended = "A ring of one of the four horsemen."
+	name = "饥荒之戒"
+	desc = "有零钱吗？"
+	desc_extended = "天启四骑士之一的戒指。"
 	armor = /armor/ring/famine
 
 /obj/item/clothing/ring/copper/unarmed_booster
-	name = "ring of the unarmed"
-	desc = "For one with nothing."
-	desc_extended = "A special ring that significantly boosts your unarmed skill."
+	name = "徒手之戒"
+	desc = "献给一无所有之人。"
+	desc_extended = "大幅提升徒手格斗技能的特殊戒指。"
 
 	mob_values_add = list(
 		SKILL_UNARMED = 25

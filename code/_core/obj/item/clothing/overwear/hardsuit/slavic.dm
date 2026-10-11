@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/hardsuit/exosuit
-	name = "Slavic exosuit"
+	name = "斯拉夫外骨骼装甲"
 	icon = 'icons/obj/item/clothing/suit/exosuit.dmi'
-	desc = "RIP Tachenko."
-	desc_extended = "An experimental sample of a military exoskeleton. Was never mass-produced due to extraordinary cost and some design flaws. Despite this, it is in demand due to its ability to take on the weight of all carried equipment, and therefore small batches are made in underground facilities."
+	desc = "塔琴科，安息吧。"
+	desc_extended = "军用外骨骼的试验样品。由于造价惊人且存在一些设计缺陷，从未量产。尽管如此，它能承担随身装备的重量，因此仍有需求，地下设施也在小批量制造。"
 
 
 	item_slot = SLOT_TORSO_ARMOR
@@ -22,10 +22,10 @@
 
 
 /obj/item/clothing/overwear/hardsuit/skat
-	name = "SKAT-9"
+	name = "SKAT-9装甲服"
 	icon = 'icons/obj/item/clothing/suit/skat.dmi'
-	desc = "RIP Stingray."
-	desc_extended = "This modern military armored suit is designed for assault operations in anomalous areas. Comprises a PSZ-12p heavy military armored suit, built-in compensation suit, and an anomalous protection bodysuit. The armor provides excellent protection against bullet and fragmentation damage, without greatly reducing the wearer's mobility. Does not come with an artifact container, as there's literally no artifacts anywhere. You know, different universe."
+	desc = "黄貂鱼，安息吧。"
+	desc_extended = "这套现代军用装甲服用于异常区域的突击行动，由PSZ-12p重型军用装甲服、内置补偿服和异常防护紧身服组成。它能有效抵御子弹与破片，同时保持较好的机动性。没有附带异常遗物容器，因为这里根本没有那种遗物。你懂的，毕竟不是同一个宇宙。"
 
 
 	item_slot = SLOT_TORSO_ARMOR
@@ -42,10 +42,10 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/overwear/hardsuit/skat/antag
-	name = "SKAT-10"
+	name = "SKAT-10装甲服"
 	icon = 'icons/obj/item/clothing/suit/skat_antag.dmi'
-	desc = "I am out of S.T.A.L.K.E.R. references, really."
-	desc_extended = "Completely redesigned version of SKAT-9 combined suit, made from ground up in joint forces by the Syndicate's and Space Slav Federation's scientists under an unnamed unofficial peace treaty agreement, yet never went into mass production due to immense cost. Comprises a PSZ-15b ultra-heavy military armored suit, built-in semi-solid frag suit, and an enhanced anomalous protection bodysuit. The armor provides one of the best protections against bullet and fragmentation damage, without greatly reducing the wearer's mobility. Has a built-in wound tending system that passively treats its user's wounds when out of combat."
+	desc = "《潜行者》的梗我真想不出来了。"
+	desc_extended = "SKAT-9组合装甲服的全面重设计版。辛迪加与太空斯拉夫联邦的科学家依据一份未具名的非正式和平协议，从零开始联合研发，但因造价过高而未能量产。由PSZ-15b超重型军用装甲服、内置半固态防破片服和增强型异常防护紧身服组成。在保持较好机动性的同时，提供顶尖的防弹与防破片能力。"
 
 
 	item_slot = SLOT_TORSO_ARMOR

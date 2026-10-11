@@ -1,6 +1,6 @@
 /obj/item/storage/shoebox/
-	name = "shoebox"
-	desc = "Contains a matching pair of shoes."
+	name = "鞋盒"
+	desc = "装着一双配套的鞋子。"
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "shoebox"
 
@@ -12,8 +12,8 @@
 	dynamic_inventory_count = 2
 
 /obj/item/storage/shoebox/black/
-	name = "black shoebox"
-	desc = "Contains a pair of black shoes."
+	name = "黑鞋盒"
+	desc = "装着一双黑色鞋子。"
 	value = 1
 
 /obj/item/storage/shoebox/black/fill_inventory()
@@ -22,8 +22,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/jackboot/
-	name = "black boot shoebox"
-	desc = "Contains a pair of black boots."
+	name = "黑靴盒"
+	desc = "装着一双黑色靴子。"
 	value = 1
 
 /obj/item/storage/shoebox/jackboot/fill_inventory()
@@ -32,8 +32,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/sandal/
-	name = "sandal box"
-	desc = "Contains a pair of sandals."
+	name = "凉鞋盒"
+	desc = "装着一双凉鞋。"
 	value = 1
 
 /obj/item/storage/shoebox/sandal/fill_inventory()
@@ -42,8 +42,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/winter/
-	name = "winter boot shoebox"
-	desc = "Contains a pair of winter boots. Good for protecting against the cold."
+	name = "冬靴盒"
+	desc = "装着一双冬靴，防寒保暖的好选择。"
 	value = 1
 
 /obj/item/storage/shoebox/winter/fill_inventory()
@@ -52,8 +52,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/colored/
-	name = "dyeable shoebox"
-	desc = "Contains a pair of shoes which can be dyed."
+	name = "可染色鞋盒"
+	desc = "装着一双可以染色的鞋子。"
 	value = 1
 
 /obj/item/storage/shoebox/colored/fill_inventory()
@@ -62,8 +62,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/clown/
-	name = "clown shoebox"
-	desc = "Contains a pair of shoes which can be dyed."
+	name = "小丑鞋盒"
+	desc = "装着一双小丑鞋。"
 	value = 1
 
 /obj/item/storage/shoebox/clown/fill_inventory()
@@ -72,8 +72,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/duck/
-	name = "duck shoebox"
-	desc = "Contains a pair of slippers which can quack."
+	name = "鸭子拖鞋盒"
+	desc = "装着一双会嘎嘎叫的拖鞋。"
 	value = 1
 
 /obj/item/storage/shoebox/duck/fill_inventory()
@@ -82,8 +82,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/miner/
-	name = "miner shoebox"
-	desc = "Contains a pair of miner boots"
+	name = "矿工靴盒"
+	desc = "装着一双矿工靴。"
 	value = 1
 
 /obj/item/storage/shoebox/miner/fill_inventory()
@@ -92,8 +92,8 @@
 	. = ..()
 
 /obj/item/storage/shoebox/workboot/
-	name = "workboot shoebox"
-	desc = "Contains a pair of workboots."
+	name = "工作靴盒"
+	desc = "装着一双工作靴。"
 	value = 1
 
 /obj/item/storage/shoebox/workboot/fill_inventory()
@@ -103,8 +103,8 @@
 
 
 /obj/item/storage/shoebox/galosh
-	name = "galoshes shoebox"
-	desc = "Contains a pair of galoshes."
+	name = "胶靴盒"
+	desc = "装着一双胶靴。"
 	value = 1
 
 /obj/item/storage/shoebox/galosh/fill_inventory()

@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/flintlock
-	name = "\improper .62 powder charge and iron ball"
-	desc = "Hm. If only there was a way to combine both the projectile and the powder easier for transport and loading... like in one cartridge."
-	desc_extended = "For ancient weapons that require this bullshit."
+	name = "\improper .62火药包与铁弹丸"
+	desc = "唔，要是能把弹丸和火药合在一起，运输和装填就方便了……比如做成一发完整的子弹。"
+	desc_extended = "供那些非得用这破玩意儿的古董武器装填。"
 	icon = 'icons/obj/item/bullet/flintlock.dmi'
 
 	bullet_length = 15.7
@@ -21,9 +21,9 @@
 	caseless = TRUE
 
 /obj/item/bullet_cartridge/flintlock/premium
-	name = "\improper premium .62 powder charge and iron ball"
-	desc = "Wow, look at how technology's advancing."
-	desc = "It's really just another iron ball and powder charge, but they're wrapped in paper so it's a tiny bit easier to load."
+	name = "\improper 优质.62火药包与铁弹丸"
+	desc = "哇，瞧瞧科技进步得多快。"
+	desc = "其实还是铁弹丸和火药，只是用纸包在一起，装填稍微方便了一点。"
 	icon = 'icons/obj/item/bullet/flintlock_premium.dmi'
 
 	damage_type_bullet = /damagetype/ranged/bullet/flintlock/premium

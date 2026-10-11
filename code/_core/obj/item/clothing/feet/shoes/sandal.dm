@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/sandal
-	name = "right sandal"
-	desc = "DO NOT WEAR WITH SOCKS UNDER ANY CIRCUMSTANCES."
-	desc_extended = "Also increases strength of magic spells."
+	name = "右脚凉鞋"
+	desc = "任何情况下都不许配袜子穿。"
+	desc_extended = "还能提供魔法防护。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -19,7 +19,7 @@
 
 
 /obj/item/clothing/feet/shoes/sandal/left
-	name = "left sandal"
+	name = "左脚凉鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

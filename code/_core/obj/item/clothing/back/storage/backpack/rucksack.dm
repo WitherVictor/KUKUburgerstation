@@ -1,7 +1,7 @@
 obj/item/clothing/back/storage/backpack/rucksack
-	name = "military rucksack"
-	desc = "Tactical and durable!"
-	desc_extended = "A decently sized rucksack issued to some private militaries, military personnel. Perfect for warriors of the battlefield."
+	name = "军用背囊"
+	desc = "战术实用，经久耐用！"
+	desc_extended = "配发给部分私人军事组织及军人的背囊，容量适中，是战场勇士的理想装备。"
 
 	icon = 'icons/obj/item/clothing/back/backpack/rucksack.dmi'
 

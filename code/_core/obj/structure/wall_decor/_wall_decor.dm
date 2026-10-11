@@ -1,5 +1,5 @@
 /obj/structure/wall_decor
-	name = "wall decor"
+	name = "墙面装饰"
 	mouse_opacity = 0
 	plane = PLANE_WALL
 	layer = LAYER_WALL_DECAL

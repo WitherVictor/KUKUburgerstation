@@ -1,7 +1,7 @@
 //Has lots of armor and carries an explosive that it uses to suicide bomb targets.
 
 /mob/living/advanced/npc/zombie/armored
-	name = "zombie juggernaut"
+	name = "重装僵尸"
 	loadout = /loadout/zombie/armored
 
 	level = 20

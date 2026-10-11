@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/m13
-	name = "\improper .308 M13 Service Rifle"
-	desc = "HOORAH!"
-	desc_extended = "The M13 is an Old War service rifle used by old Space Yankee colonies to defend territory as well as conquer it. It doesn't see much use today and can only be found in the hands of collectors and grandchildren of veterans. Uses a special 8 round clip to feed rounds."
+	name = "\improper .308 M13制式步枪"
+	desc = "乌拉！"
+	desc_extended = "M13是旧战争时期的制式步枪，昔日太空扬基殖民地用它守卫领土，也用它开疆拓土。如今已少有使用，通常只在收藏家和老兵后代手中才能见到。使用专用8发漏夹供弹。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/m13.dmi'
 	icon_state = "inventory"
 	value = 800
@@ -103,7 +103,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/m13/accept_bullet(var/mob/activator as mob,var/obj/item/bullet_cartridge/B,var/silent=FALSE)
 
 	if(!stored_magazine)
-		activator.to_chat(span("warning","You can't load \the [B.name] into \the [src.name] without a clip inserted!"))
+		activator.to_chat(span("warning","必须先插入漏夹，才能将[B.name]装入[src.name]！"))
 		return FALSE
 
 	if(chambered_bullet)

@@ -1,7 +1,7 @@
 /obj/decal/poster/
-	name = "poster"
-	desc = "Do not ERP, ERP is bad."
-	desc_extended = "A randomized poster as decor to liven up the area."
+	name = "海报"
+	desc = "别搞色情角色扮演，那可不好。"
+	desc_extended = "随机挑选的装饰海报，让这里更有生气。"
 	icon = 'icons/obj/decal/poster.dmi'
 	mouse_opacity = 1
 	icon_state = null
@@ -34,7 +34,7 @@
 	if(prob(1))
 		stored_poster = pick(SSposter.all_posters)
 		var/collectable_poster/P = SSposter.all_posters[stored_poster]
-		name = "Collectable Poster: [P.name]"
+		name = "收藏海报：[P.name]"
 		icon = P.icon
 		icon_state = P.icon_state
 		desc = P.desc
@@ -49,7 +49,7 @@
 	. = ..()
 	stored_poster = pick(SSposter.all_posters)
 	var/collectable_poster/P = SSposter.all_posters[stored_poster]
-	name = "Collectable Poster: [P.name]"
+	name = "收藏海报：[P.name]"
 	icon = P.icon
 	icon_state = P.icon_state
 	desc = P.desc
@@ -60,7 +60,7 @@
 	if(prob(0.5))
 		stored_poster = pick(SSposter.all_posters)
 		var/collectable_poster/P = SSposter.all_posters[stored_poster]
-		name = "Collectable Poster: [P.name]"
+		name = "收藏海报：[P.name]"
 		icon = P.icon
 		icon_state = P.icon_state
 		desc = P.desc
@@ -73,9 +73,9 @@
 	icon_state = "poster[rand(1,44)]"
 
 /obj/decal/poster/painting
-	name = "painting"
-	desc = "Wow."
-	desc_extended = "A randomized painting to liven up the area."
+	name = "画作"
+	desc = "哇。"
+	desc_extended = "随机挑选的画作，让这里更有生气。"
 
 /obj/decal/poster/painting/PostInitialize() //Random painting poster.
 	. = ..()

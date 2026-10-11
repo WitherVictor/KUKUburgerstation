@@ -1,7 +1,7 @@
 obj/structure/interactive/shower
-	name = "shower"
-	desc = "Hey, it's me. Did I wake you up from your depression nap?"
-	desc_extended = "A functional shower fixture. Splashes anyone under it with water when on."
+	name = "淋浴器"
+	desc = "嘿，是我。把你从抑郁的午睡中叫醒了吗？"
+	desc_extended = "可以正常使用的淋浴装置，开启后会向下方的人喷水。"
 
 	icon = 'icons/obj/structure/shower.dmi'
 	icon_state = "shower"

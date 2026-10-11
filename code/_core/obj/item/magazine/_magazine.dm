@@ -1,7 +1,7 @@
 /obj/item/magazine/
-	name = "weapon magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "武器弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	var/bullet_count_max = 0 //How many bullets can this store
 	var/list/obj/item/bullet_cartridge/stored_bullets = list() //Type to count.
 
@@ -84,7 +84,7 @@
 	update_sprite()
 
 /obj/item/magazine/get_examine_list(var/mob/examiner)
-	var results = div("notice","It contains [get_ammo_count()] bullets.")
+	var results = div("notice","内含[get_ammo_count()]发弹药。")
 	return ..()  + results
 
 /obj/item/magazine/proc/get_ammo_count()
@@ -96,27 +96,27 @@
 /obj/item/magazine/proc/can_load_magazine(var/mob/activator,var/obj/item/bullet_cartridge/B)
 
 	if(B.is_spent)
-		activator?.to_chat(span("warning","The bullet is spent!"))
+		activator?.to_chat(span("warning","这发弹药已经击发了！"))
 		return FALSE
 
 	if(src.bullet_count_max <= src.get_ammo_count())
-		activator?.to_chat(span("warning","The magazine is full."))
+		activator?.to_chat(span("warning","弹匣已满。"))
 		return FALSE
 
 	if(B.bullet_length < bullet_length_min)
-		activator?.to_chat(span("warning","\The [B.name] is too short to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太短，无法装入[src.name]！"))
 		return FALSE
 
 	if(B.bullet_length > bullet_length_max)
-		activator?.to_chat(span("warning","\The [B.name] is too long to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太长，无法装入[src.name]！"))
 		return FALSE
 
 	if(B.bullet_diameter < bullet_diameter_min)
-		activator?.to_chat(span("warning","\The [B.name] is too narrow to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太细，无法装入[src.name]！"))
 		return FALSE
 
 	if(B.bullet_diameter > bullet_diameter_max)
-		activator?.to_chat(span("warning","\The [B.name] is too wide to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太粗，无法装入[src.name]！"))
 		return FALSE
 
 	return TRUE
@@ -124,27 +124,27 @@
 /obj/item/magazine/proc/can_load_magazine_path(var/mob/activator,var/obj/item/bullet_cartridge/B)
 
 	if(initial(B.is_spent))
-		activator?.to_chat(span("warning","The bullet is spent!"))
+		activator?.to_chat(span("warning","这发弹药已经击发了！"))
 		return FALSE
 
 	if(src.bullet_count_max <= src.get_ammo_count())
-		activator?.to_chat(span("warning","The magazine is full."))
+		activator?.to_chat(span("warning","弹匣已满。"))
 		return FALSE
 
 	if(initial(B.bullet_length) < bullet_length_min)
-		activator?.to_chat(span("warning","\The [B.name] is too short to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太短，无法装入[src.name]！"))
 		return FALSE
 
 	if(initial(B.bullet_length) > bullet_length_max)
-		activator?.to_chat(span("warning","\The [B.name] is too long to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太长，无法装入[src.name]！"))
 		return FALSE
 
 	if(initial(B.bullet_diameter) < bullet_diameter_min)
-		activator?.to_chat(span("warning","\The [B.name] is too narrow to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太细，无法装入[src.name]！"))
 		return FALSE
 
 	if(initial(B.bullet_diameter) > bullet_diameter_max)
-		activator?.to_chat(span("warning","\The [B.name] is too wide to be put inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[B.name]太粗，无法装入[src.name]！"))
 		return FALSE
 
 	return TRUE
@@ -230,7 +230,7 @@
 		INTERACT_DELAY(1)
 		var/obj/item/weapon/ranged/bullet/magazine/G = object
 		if(!weapon_whitelist[G.type])
-			if(activator) activator.to_chat(span("warning","You can't insert this type of magazine into \the [G]!"))
+			if(activator) activator.to_chat(span("warning","这种弹匣无法装入[G]！"))
 			return TRUE
 		if(G.stored_magazine)
 			G.eject_magazine(activator)
@@ -244,7 +244,7 @@
 	return ..()
 
 /obj/item/magazine/gold
-	name = "dev magazine"
+	name = "开发者弹匣"
 	icon = 'icons/obj/item/magazine/golden.dmi'
 	icon_state = "inventory"
 
@@ -279,7 +279,7 @@
 		stored_bullets.Cut()
 
 		if(!SSbalance.weapon_to_bullet[G.type])
-			activator.to_chat(span("warning","Could not find any valid bullets..."))
+			activator.to_chat(span("warning","未能找到任何适用弹药……"))
 		else
 			stored_bullets[SSbalance.weapon_to_bullet[G.type]] = bullet_count_max
 

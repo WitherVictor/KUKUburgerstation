@@ -1,5 +1,5 @@
 /area/supermatter_defense/
-	name = "Quadrants"
+	name = "象限区"
 
 	trackable = TRUE
 
@@ -9,35 +9,35 @@
 	interior = FALSE
 
 /area/supermatter_defense/exterior/desert
-	name = "\improper Desert Plains"
+	name = "\improper 沙漠平原"
 	icon_state = "desert"
 
 /area/supermatter_defense/exterior/central
-	name = "\improper Centarl Defense Point"
+	name = "\improper 中央防御点"
 	icon_state = "green"
 
 /area/supermatter_defense/exterior/path/north
-	name = "\improper North Pathway"
+	name = "\improper 北部通道"
 	icon_state = "hall_n"
 
 /area/supermatter_defense/exterior/path/northeast
-	name = "\improper Northeast Pathway"
+	name = "\improper 东北部通道"
 	icon_state = "dorms"
 
 /area/supermatter_defense/exterior/path/east
-	name = "\improper East Pathway"
+	name = "\improper 东部通道"
 	icon_state = "hall_e"
 
 /area/supermatter_defense/exterior/path/south
-	name = "\improper South Pathway"
+	name = "\improper 南部通道"
 	icon_state = "hall_s"
 
 /area/supermatter_defense/exterior/path/west
-	name = "\improper West Pathway"
+	name = "\improper 西部通道"
 	icon_state = "hall_w"
 
 /area/supermatter_defense/exterior/southwest
-	name = "\improper Southwest River"
+	name = "\improper 西南河流"
 	icon_state = "lagoon"
 
 /area/supermatter_defense/interior
@@ -46,25 +46,25 @@
 /area/supermatter_defense/interior/caves
 
 /area/supermatter_defense/interior/caves/northwest
-	name = "\improper Northwest Lava Caves"
+	name = "\improper 西北熔岩洞穴"
 	icon_state = "lava_cave"
 
 /area/supermatter_defense/interior/caves/north
-	name = "\improper North Path Caves"
+	name = "\improper 北部通道洞穴"
 	icon_state = "cave"
 
 /area/supermatter_defense/interior/caves/northeast
-	name = "\improper Northeast Ground Caves"
+	name = "\improper 东北地底洞穴"
 	icon_state = "cave"
 
 /area/supermatter_defense/interior/caves/south
-	name = "\improper South Path Caves"
+	name = "\improper 南部通道洞穴"
 	icon_state = "red"
 
 /area/supermatter_defense/interior/caves/southwest
-	name = "\improper Southwest River Caves"
+	name = "\improper 西南河流洞穴"
 	icon_state = "cave"
 
 /area/supermatter_defense/interior/caves/southeast
-	name = "\improper Southeast Desert Caves"
+	name = "\improper 东南沙漠洞穴"
 	icon_state = "cave"

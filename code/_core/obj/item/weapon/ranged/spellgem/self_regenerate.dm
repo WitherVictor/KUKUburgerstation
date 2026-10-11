@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/self_regenerate
-	name = "self-mending spell gem"
-	desc = "The source of all magic."
-	desc_extended = "A magical gem filled with pure arcane energy that gives the user the ability to cast spells. Can be augmented onto wands. This one gives a light regeneration effect."
+	name = "自身愈合法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "充满纯粹奥术能量的魔法宝石，赋予使用者施放法术的能力，可镶入魔杖。这颗提供轻微的再生效果。"
 	icon_state = "heal"
 	color = "#ff0080"
 
@@ -27,7 +27,7 @@
 			MUL(damage_multiplier_to_use,attachment_stats["damage_multiplier"])
 		var/mob/living/livingcaller = caller
 		if(livingcaller.status_effects[TEMP_REGEN])
-			livingcaller.visible_message(span("warning","\The [livingcaller.name] looks dissapointedly at \the [src]."),span("warning","The Spell Fizzles!"))
+			livingcaller.visible_message(span("warning","[livingcaller.name]失望地看着[src]。"),span("warning","法术消散了！"))
 		else
 			livingcaller.add_status_effect(TEMP_REGEN,damage_multiplier_to_use,SECONDS_TO_DECISECONDS(damage_multiplier_to_use * 15))
 		return TRUE

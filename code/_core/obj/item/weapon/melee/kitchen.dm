@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/sword/chef_knife
-	name = "chef's knife"
-	desc = "What every chef needs."
-	desc_extended = "A sharp blade designed to cut practically anything a chef needs."
+	name = "主厨刀"
+	desc = "每位主厨的必备品。"
+	desc_extended = "锋利的刀刃，几乎能切开主厨需要处理的任何东西。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/kitchen_knife.dmi'
 
@@ -17,9 +17,9 @@
 	rarity = RARITY_COMMON
 
 /obj/item/weapon/melee/sword/butcher_cleaver
-	name = "butcher's cleaver"
-	desc = "What every butcher needs."
-	desc_extended = "A sharp and heavy cleaver designed to cut through flesh and bone."
+	name = "屠夫砍刀"
+	desc = "每位屠夫的必备品。"
+	desc_extended = "锋利沉重的砍刀，用于切开血肉和骨头。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/kitchen_cleaver.dmi'
 
@@ -36,9 +36,9 @@
 
 
 /obj/item/weapon/melee/sword/fork
-	name = "fork"
-	desc = "Oh fork."
-	desc_extended = "An ancient eating utensil used to transfer food from a plate to the user's mouth. Seems outdated given that most spessmen just shove food in their face."
+	name = "叉子"
+	desc = "哦，叉了。"
+	desc_extended = "古老的餐具，用于把食物从盘子送进嘴里。多数太空人都是直接往嘴里塞，这东西似乎已经过时了。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/kitchen_fork.dmi'
 
@@ -55,9 +55,9 @@
 
 
 /obj/item/weapon/melee/sword/spoon
-	name = "spoon"
-	desc = "Oh spoon."
-	desc_extended = "An ancient eating utensil used to transfer liquid food from a bowl to the user's mouth. Seems outdated given that most spessmen just shove food in their face."
+	name = "勺子"
+	desc = "哦，勺了。"
+	desc_extended = "古老的餐具，用于把流食从碗里送进嘴里。多数太空人都是直接往嘴里塞，这东西似乎已经过时了。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/kitchen_spoon.dmi'
 

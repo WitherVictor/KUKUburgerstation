@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/cyborg_assistant
-	name = "cyborg assistant"
-	desc = "DO YOU REQUIRE HELP?"
-	desc_extended = "A NanoTrasen model Cyborg unit programmed to assist those in asking stupid questions."
+	name = "半机械人助手"
+	desc = "你需要帮助吗？"
+	desc_extended = "纳米传讯生产的半机械人，按程序帮助那些提出蠢问题的人。"
 	ai = null
 	move_mod = 1
 	species = "cyborg"

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/mech
-	name = "mech gun"
-	desc = "A gun, but bigger."
-	desc_extended = "A weapon for your mech."
+	name = "机甲枪械"
+	desc = "枪，不过更大。"
+	desc_extended = "供你的机甲使用的武器。"
 	icon = 'icons/obj/item/weapons/ranged/mech.dmi'
 
 	projectile = /obj/projectile/bullet/laser
@@ -29,7 +29,7 @@
 /obj/item/weapon/ranged/energy/mech/can_owner_shoot(var/mob/caller,var/atom/object,location,params)
 
 	if(!istype(loc?.loc,/mob/living/vehicle/))
-		caller?.to_chat(span("warning","This weapon can only be fired in a vehicle!"))
+		caller?.to_chat(span("warning","这件武器只能在载具内开火！"))
 		return FALSE
 
 	return ..()
@@ -45,9 +45,9 @@
 	return ..()
 
 /obj/item/weapon/ranged/energy/mech/smg
-	name = "9x19mm SMG"
-	desc = "Bullet hose."
-	desc_extended = "An SMG-caliber mech weapon that manufactures bullets using battery power. Pretend you have infinite ammo and spray, until the power runs out. Also mounts in the shoulder slot."
+	name = "9x19mm冲锋枪"
+	desc = "子弹水管。"
+	desc_extended = "使用冲锋枪口径的机甲武器，消耗电池电量制造弹药。尽管当作无限弹药扫射，直到电池耗尽。也可安装在肩部槽位。"
 	icon_state = "mech_ballistic"
 
 	automatic = TRUE
@@ -77,9 +77,9 @@
 	return 0
 
 /obj/item/weapon/ranged/energy/mech/lmg
-	name = "5.56mm LMG"
-	desc = "Not a real autocannon."
-	desc_extended = "Mounted machineguns are classic, and now you have one for your mech, too. Moderate energy use and fire rate with good damage make this a solid choice for any situation."
+	name = "5.56mm轻机枪"
+	desc = "算不上真正的机关炮。"
+	desc_extended = "架设机枪堪称经典，现在你的机甲也能用上。能耗和射速适中，伤害不错，在各种情况下都是稳妥选择。"
 	icon_state = "mech_uac2"
 
 	automatic = TRUE
@@ -110,9 +110,9 @@
 
 
 /obj/item/weapon/ranged/energy/mech/laser
-	name = "AER14 Laser Rifle"
-	desc = "Pew pew pew!"
-	desc_extended = "Modular NT laser rifle fitted for mechs. Uses the standard beam, and runs on mech battery power. Better performance than bullets against certain targets, with a slower fire rate."
+	name = "AER14激光步枪"
+	desc = "咻咻咻！"
+	desc_extended = "适配机甲的模块化NT激光步枪，发射标准光束，由机甲电池供能。射速较慢，但对某些目标的效果优于子弹。"
 	icon_state = "mech_lasercarbine"
 
 	projectile = /obj/projectile/bullet/laser
@@ -146,9 +146,9 @@
 
 
 /obj/item/weapon/ranged/energy/mech/ion
-	name = "AER35 Ion Rifle"
-	desc = "THERE CAN ONLY BE ONE (MECH)!"
-	desc_extended = "Modular NT laser rifle fitted for mechs. Fires a heavy ion beam for mech-to-mech combat, at a large energy cost."
+	name = "AER35离子步枪"
+	desc = "只能有一台（机甲）活下来！"
+	desc_extended = "适配机甲的模块化NT激光步枪，发射重型离子束，专用于机甲间的战斗，但能耗很高。"
 	icon_state = "mech_ionrifle"
 
 	projectile = /obj/projectile/bullet/laser/ion
@@ -181,9 +181,9 @@
 
 
 /obj/item/weapon/ranged/energy/mech/missile_pod
-	name = "RK Missile Pod"
-	desc = "Collateral damage in 3..."
-	desc_extended = "Shoulder-mounted mech HE rocket pod with a wide blast radius. Uses large amounts of power to restock its rockets. Fired by holding the ALT key. Mount one on each shoulder for double the fun!"
+	name = "RK导弹巢"
+	desc = "附带损害倒计时，三……"
+	desc_extended = "机甲肩部高爆火箭弹巢，爆炸范围广，消耗大量电量补充火箭弹。按住ALT键开火。两边肩膀各装一个，快乐翻倍！"
 	icon_state = "mech_missile_pod"
 
 	projectile = /obj/projectile/bullet/rocket_he

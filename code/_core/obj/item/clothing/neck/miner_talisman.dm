@@ -1,8 +1,8 @@
 /obj/item/clothing/neck/miner_talisman
-	name = "bone talisman"
+	name = "骨制护符"
 	icon = 'icons/obj/item/clothing/neck/talisman.dmi'
-	desc = "Grody."
-	desc_extended = "A talisman made from sinew and shards of bone."
+	desc = "真恶心。"
+	desc_extended = "用筋腱和碎骨制成的护符。"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
 
 	item_slot = SLOT_NECK

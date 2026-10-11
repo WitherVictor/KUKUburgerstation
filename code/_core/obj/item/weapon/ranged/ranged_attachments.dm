@@ -1,11 +1,11 @@
 /obj/item/weapon/ranged/proc/add_attachment(var/mob/activator,var/obj/item/attachment/A)
 
 	if(!length(attachment_whitelist))
-		activator.to_chat(span("warning","This weapon does not accept attachments!"))
+		activator.to_chat(span("warning","这件武器无法安装配件！"))
 		return FALSE
 
 	if(!attachment_whitelist[A.type])
-		activator.to_chat(span("warning","\The [A.name] cannot fit on \the [src.name]!"))
+		activator.to_chat(span("warning","[A.name]无法安装到[src.name]上！"))
 		return FALSE
 
 	var/list/type_to_var = list(
@@ -25,13 +25,13 @@
 		var/obj/item/I
 		if(vars[v])
 			I = vars[v]
-			activator.visible_message(span("notice","\The [activator.name] swaps out \the [I.name] on \the [src.name] for \the [A.name]."),span("notice","You swap out \the [A.name] on \the [src.name] for \the [I.name]."))
+			activator.visible_message(span("notice","[activator.name]将[src.name]上的[I.name]换成了[A.name]。"),span("notice","你将[src.name]上的[I.name]换成了[A.name]。"))
 			I.drop_item(get_turf(src))
 			vars[v] = null
 			if(is_inventory(A.loc))
 				INV = A.loc
 		else
-			activator.visible_message(span("notice","\The [activator.name] attaches \the [A.name] to \the [src.name]."),span("notice","You attach \the [A.name] to \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]将[A.name]安装到了[src.name]上。"),span("notice","你将[A.name]安装到了[src.name]上。"))
 		A.drop_item(src)
 		vars[v] = A
 		update_sprite()
@@ -65,18 +65,18 @@
 	if(!length(choice_list))
 		return FALSE
 
-	choice_list["Cancel"] = "Cancel"
+	choice_list["取消"] = "Cancel"
 
-	var/attachment_choice = input("What would you like to remove?","Attachment Removal") as null|anything in choice_list
-	if(!attachment_choice || attachment_choice == "Cancel")
-		activator.to_chat(span("notice","You decide not to remove anything."))
+	var/attachment_choice = input("要拆下哪个配件？","拆卸配件") as null|anything in choice_list
+	if(!attachment_choice || choice_list[attachment_choice] == "Cancel")
+		activator.to_chat(span("notice","你决定不拆下任何配件。"))
 		return FALSE
 
 	attachment_choice = choice_list[attachment_choice]
 
 	var/obj/item/I = vars[attachment_choice]
 
-	activator.visible_message(span("notice","\The [activator.name] removes \the [I.name] from \the [src.name]."),span("notice","You remove \the [I.name] from \the [src.name]."))
+	activator.visible_message(span("notice","[activator.name]从[src.name]上拆下了[I.name]。"),span("notice","你从[src.name]上拆下了[I.name]。"))
 	I.drop_item(get_turf(src))
 	vars[attachment_choice] = null
 	update_sprite()
@@ -116,7 +116,9 @@
 
 	. = ..()
 
+	var/list/stat_display_names = list("damage_multiplier"="伤害倍率","projectile_speed"="弹体速度","bullet_spread"="弹丸散布","heat_spread"="后坐散布","shoot_delay"="射击间隔","bullet_color"="弹体颜色","skill_spread"="技能散布","movement_spread"="移动散布","inaccuracy_modifier"="不精确度系数","zoom_mul"="瞄准倍率","heat_per_shot"="每次射击后坐量","static_spread"="基础散布","condition_use_mod"="耐久消耗系数","mana_cost_multiplier"="法力消耗倍率","bullet_count"="弹体数量","max_bursts"="连发次数","bursts_to_use"="连发次数","burst_delay"="连发间隔","projectile"="弹体","ranged_damage_type"="远程伤害类型","penetrations"="额外穿透次数","prone_mul"="卧姿系数","prone_mod"="卧姿系数")
 	for(var/k in attachment_stats)
 		var/v = attachment_stats[k]
-		. += span("notice","[k]: [v]")
+		var/stat_display = stat_display_names[k] ? stat_display_names[k] : k
+		. += span("notice","[stat_display]：[v]")
 

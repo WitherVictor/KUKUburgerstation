@@ -1,7 +1,7 @@
 /obj/item/contract/syndicate
-	name = "contract: Kill Syndicate"
+	name = "契约：击杀辛迪加成员"
 	type_to_check = /mob/living/advanced/npc/syndicate
-	objective_text = "Syndicate killed"
+	objective_text = "已击杀辛迪加成员"
 	value = -1
 
 /obj/item/contract/syndicate/low

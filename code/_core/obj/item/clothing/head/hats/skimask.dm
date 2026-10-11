@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/skimask
-	name = "ski mask"
-	desc = "LOADSAMONEY"
-	desc_extended = "Covers up your face and head. Handy for robbing banks, or for its actual intended purpose."
+	name = "滑雪面罩"
+	desc = "大把大把的钞票。"
+	desc_extended = "遮住你的脸和头，抢银行很好用，拿来滑雪也不错。"
 	icon = 'icons/obj/item/clothing/masks/balaclava.dmi'
 	icon_state = "inventory"
 	slot_icons = TRUE
@@ -45,8 +45,8 @@
 	color = COLOR_BLACK
 
 /obj/item/clothing/head/hat/skimask/medical
-	name = "medical full face mask"
-	desc = "I'm here! And I brought drugs!"
+	name = "医疗全面罩"
+	desc = "我来了！还带了药！"
 	color = COLOR_MEDICAL
 
 /obj/item/clothing/head/hat/skimask/tactical

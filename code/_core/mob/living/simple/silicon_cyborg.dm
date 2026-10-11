@@ -1,6 +1,6 @@
 /mob/living/simple/silicon/cyborg
 
-	name = "cyborg"
+	name = "半机械人"
 	icon = 'icons/mob/living/simple/cyborg.dmi'
 	icon_state = "robot"
 

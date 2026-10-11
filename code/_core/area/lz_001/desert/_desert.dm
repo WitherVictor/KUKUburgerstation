@@ -1,5 +1,5 @@
 /area/lz_001/desert
-	name = "\improper Desert Ruins"
+	name = "\improper 沙漠废墟"
 	icon_state = "desert"
 	weather = WEATHER_SANDSTORM
 	ambient_temperature = T0C + 80

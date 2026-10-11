@@ -1,7 +1,7 @@
 /obj/item/magazine/pistol_50
-	name = "\improper .50 pistol magazine"
-	desc = "Not compatible with the 'Degle'."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .50手枪弹匣"
+	desc = "与“Degle”不兼容。"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/50aepistol.dmi'
 	icon_state = "50ae"
 	bullet_count_max = 7
@@ -36,9 +36,9 @@
 	value = 5
 
 /obj/item/magazine/pistol_50/heartbreaker
-	name = "\improper .50 heartbreaker pistol magazine"
-	desc = "Not compatible with the 'Degle'."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .50碎心弹手枪弹匣"
+	desc = "与“Degle”不兼容。"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 
 	ammo = /obj/item/bullet_cartridge/pistol_50/heartbreaker
 

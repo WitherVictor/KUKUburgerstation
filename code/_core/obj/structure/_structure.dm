@@ -1,7 +1,7 @@
 
 /obj/structure/
-	name = "structure"
-	desc = "Some kind of strange structure."
+	name = "构筑物"
+	desc = "某种奇怪的构筑物。"
 	collision_flags = FLAG_COLLISION_NONE
 	collision_bullet_flags = FLAG_COLLISION_NONE
 	collision_dir = NORTH | EAST | SOUTH | WEST
@@ -68,7 +68,7 @@
 
 /obj/structure/on_crush(var/message=TRUE)
 	. = ..()
-	if(message) loc.visible_message(span("warning","\The [src.name] is crushed under \the [src.loc.name]!"))
+	if(message) loc.visible_message(span("warning","[src.name]被[src.loc.name]压碎了！"))
 	qdel(src)
 
 /obj/structure/Initialize()
@@ -125,7 +125,7 @@
 /obj/structure/proc/buckle(var/mob/living/victim,var/mob/activator,var/silent = FALSE)
 
 	if(victim.anchored)
-		if(activator && !silent) activator.to_chat(span("notice","You cannot buckle \the [victim.name] to \the [src.name]!"))
+		if(activator && !silent) activator.to_chat(span("notice","你无法将[victim.name]固定在[src.name]上！"))
 		return FALSE
 
 	if(!victim.set_anchored(TRUE))
@@ -133,9 +133,9 @@
 
 	if(!silent)
 		if(!activator || activator == victim)
-			victim.visible_message(span("notice","\The [victim.name] buckles themselves to \the [src.name]."),span("notice","You buckle yourself to \the [src.name]."))
+			victim.visible_message(span("notice","[victim.name]将自己固定在了[src.name]上。"),span("notice","你将自己固定在了[src.name]上。"))
 		else
-			victim.visible_message(span("notice","\The [activator.name] buckles \the [victim.name] into \the [src.name]."),span("notice","You buckle \the [victim.name] to \the [src.name]."))
+			victim.visible_message(span("notice","[activator.name]将[victim.name]固定在了[src.name]上。"),span("notice","[activator.name]将你固定在了[src.name]上。"))
 
 	buckled = victim
 	buckled.buckled_object = src
@@ -152,9 +152,9 @@
 
 	if(!silent)
 		if(!activator || activator == buckled)
-			buckled.visible_message(span("notice","\The [buckled.name] unbuckles themselves from \the [src.name]."),span("notice","You unbuckle yourself from \the [src.name]."))
+			buckled.visible_message(span("notice","[buckled.name]解开了[src.name]上的固定带。"),span("notice","你解开了[src.name]上的固定带。"))
 		else
-			buckled.visible_message(span("notice","\The [buckled.name] is unbuckled from \the [src.name] by \the [activator.name]."),span("notice","You were unbuckled from \the [src.name] by \the [activator.name]."))
+			buckled.visible_message(span("notice","[activator.name]替[buckled.name]解开了[src.name]上的固定带。"),span("notice","[activator.name]替你解开了[src.name]上的固定带。"))
 
 	buckled.buckled_object = null
 	buckled = null

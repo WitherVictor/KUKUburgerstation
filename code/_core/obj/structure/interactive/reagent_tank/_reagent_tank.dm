@@ -1,7 +1,7 @@
 /obj/structure/interactive/reagent_tank
-	name = "liquid tank"
-	desc = "Versitile!"
-	desc_extended = "A large portable liquid tank that stores all types of fluids."
+	name = "液体储罐"
+	desc = "用途多多！"
+	desc_extended = "可容纳各种流体的大型便携储罐。"
 
 	allow_reagent_transfer_from = TRUE
 	allow_reagent_transfer_to = FALSE

@@ -1,7 +1,7 @@
 /obj/item/magazine/bizon_9mm
-	name = "\improper 9mm Bison magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 9mm野牛弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/9mm_bizon.dmi'
 	icon_state = "9mm"
 	bullet_count_max = 64

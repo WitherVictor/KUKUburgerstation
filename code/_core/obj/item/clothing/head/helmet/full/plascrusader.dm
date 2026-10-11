@@ -1,9 +1,9 @@
 /obj/item/clothing/head/helmet/plascrusader
 
-	name = "plascrusader helmet"
+	name = "金甲十字军头盔"
 	icon = 'icons/obj/item/clothing/hats/plascrusaderhelm.dmi'
-	desc = "Plasma bro!"
-	desc_extended = "A gold helmet with a large purple colored visor made with fine metals."
+	desc = "等离子兄弟！"
+	desc_extended = "一顶用精良金属制成的金色头盔，带有大型紫色面罩。"
 
 	value = 160
 	rarity = RARITY_UNCOMMON

@@ -1,7 +1,7 @@
 obj/item/weapon/unarmed/holy
-	name = "blessed knuckles"
-	desc = "It is God who guides my hand."
-	desc_extended = "A large piece of gold-plated steel molded to fit around your fist. Consecrates your foe when attacking, but makes you less agile. Blessed by the Space Pope."
+	name = "祝圣指虎"
+	desc = "神明指引我的拳头。"
+	desc_extended = "套在拳头上的大块镀金钢材，攻击时会圣化敌人，但会让动作变得不够灵活。由太空教皇祝圣。"
 
 	icon = 'icons/obj/item/weapons/unarmed/holy_knuckle.dmi'
 
@@ -27,9 +27,9 @@ obj/item/weapon/unarmed/holy/update_icon()
 
 
 obj/item/weapon/unarmed/holy/spiked
-	name = "cursed knuckles"
-	desc = "It is Nar'sie who guides my hand."
-	desc_extended = "A large piece of cursed steel molded to fit around your fist. Curses your foe when attacking, but makes you less agile. Cursed by Nar'sie himself!"
+	name = "诅咒指虎"
+	desc = "纳尔西指引我的拳头。"
+	desc_extended = "套在拳头上的大块诅咒钢材，攻击时会诅咒敌人，但会让动作变得不够灵活。由纳尔西亲自诅咒！"
 
 	icon = 'icons/obj/item/weapons/unarmed/dark_knuckle.dmi'
 

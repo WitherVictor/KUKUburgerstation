@@ -1,11 +1,11 @@
 /obj/item/attachment/stock_mod
-	name = "null stock"
+	name = "占位枪托"
 
 /obj/item/attachment/stock_mod/reinforced_stock
-	name = "reinforced stock"
+	name = "加固枪托"
 
-	desc = "Stronk stock"
-	desc_extended = "A simple reinforcer for the stock, reduces durability loss."
+	desc = "硬邦邦的枪托。"
+	desc_extended = "简单的枪托加固装置，减少耐久消耗。"
 	icon_state = "stock_reinforcement"
 
 	attachment_stats = list(

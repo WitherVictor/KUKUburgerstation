@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/revolver_38
-	name = "\improper .38 revolver cartridge"
-	desc = "For when your gun needs something a little special."
-	desc_extended = "For revolvers that require .38 ammo."
+	name = "\improper .38左轮手枪弹"
+	desc = "给你的枪来点特别的。"
+	desc_extended = "供使用.38弹药的左轮手枪装填。"
 	icon = 'icons/obj/item/bullet/38.dmi'
 
 
@@ -21,15 +21,15 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/revolver_38/surplus
-	name = "\improper surplus .38 revolver cartridge"
+	name = "\improper 库存旧式.38左轮手枪弹"
 	damage_type_bullet = /damagetype/ranged/bullet/revolver_38/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/revolver_357
-	name = "\improper .357 revolver cartridge"
-	desc = "DRAW!"
-	desc_extended = "For revolvers that require .357 ammo."
+	name = "\improper .357左轮手枪弹"
+	desc = "拔枪！"
+	desc_extended = "供使用.357弹药的左轮手枪装填。"
 	icon = 'icons/obj/item/bullet/357.dmi'
 
 
@@ -49,20 +49,20 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/revolver_357/heap
-	name = "\improper .357 HEAP revolver cartridge"
+	name = "\improper .357高爆穿甲左轮手枪弹"
 	damage_type_bullet = /damagetype/ranged/bullet/revolver_357/heap
 
 
 /obj/item/bullet_cartridge/revolver_357/surplus
-	name = "\improper surplus .357 revolver cartridge"
+	name = "\improper 库存旧式.357左轮手枪弹"
 	damage_type_bullet = /damagetype/ranged/bullet/revolver_357/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/revolver_44
-	name = "\improper .44 revolver cartridge"
-	desc = "I'm feeling lucky"
-	desc_extended = "For revolvers that require .44 revolver ammo."
+	name = "\improper .44左轮手枪弹"
+	desc = "我觉得今天运气不错。"
+	desc_extended = "供使用.44弹药的左轮手枪装填。"
 	icon = 'icons/obj/item/bullet/44.dmi'
 
 
@@ -82,15 +82,15 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/revolver_44/surplus
-	name = "\improper surplus .44 revolver cartridge"
+	name = "\improper 库存旧式.44左轮手枪弹"
 	damage_type_bullet = /damagetype/ranged/bullet/revolver_44/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/pistol_22
-	name = "\improper .22 pistol cartridge"
-	desc = "For when you need to mildly bother someone."
-	desc_extended = "For pistols and revolvers that require .22 ammo."
+	name = "\improper .22手枪弹"
+	desc = "只想给别人添点小麻烦时，就用这个。"
+	desc_extended = "供使用.22弹药的手枪和左轮手枪装填。"
 	icon = 'icons/obj/item/bullet/22.dmi'
 
 	bullet_diameter = 5.6
@@ -109,15 +109,15 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/pistol_22/surplus
-	name = "\improper surplus .22 pistol cartridge"
+	name = "\improper 库存旧式.22手枪弹"
 	damage_type_bullet = /damagetype/ranged/bullet/revolver_22/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/revolver_300
-	name = "\improper .300 revolver cartridge"
-	desc = "For pocket sized bear deterrers, ask for no substitute."
-	desc_extended = "For revolvers that require .300 revolver ammo."
+	name = "\improper .300左轮手枪弹"
+	desc = "口袋里的驱熊利器，不接受替代品。"
+	desc_extended = "供使用.300弹药的左轮手枪装填。"
 	icon = 'icons/obj/item/bullet/300.dmi'
 
 	bullet_diameter = 7.62
@@ -136,9 +136,9 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/revolver_762
-	name = "\improper 7.62x38mmR revolver cartridge"
-	desc = "Isn't this just a cut down rifle bullet?"
-	desc_extended = "For revolvers that require 7.62x38mmR revolver ammo."
+	name = "\improper 7.62x38mmR左轮手枪弹"
+	desc = "这不就是截短了的步枪弹吗？"
+	desc_extended = "供使用7.62x38mmR弹药的左轮手枪装填。"
 	icon = 'icons/obj/item/bullet/762_revolver.dmi'
 
 	bullet_diameter = 7.62
@@ -157,7 +157,7 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/revolver_762/surplus
-	name = "\improper surplus 7.62x38mmR revolver cartridge"
+	name = "\improper 库存旧式7.62x38mmR左轮手枪弹"
 	damage_type_bullet = /damagetype/ranged/bullet/revolver_762/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN

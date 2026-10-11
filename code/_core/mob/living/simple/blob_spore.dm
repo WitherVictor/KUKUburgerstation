@@ -1,8 +1,8 @@
 /mob/living/simple/blob_spore
 
-	name = "blob spore"
-	desc = "Get out of my head!"
-	desc_extended = "A fast-moving fragile and volatile spore of a blob designed to latch onto a sapience being's head and inject mind-controlling spores. Full control is granted when the victim succumbs to death."
+	name = "异形菌毯孢子"
+	desc = "从我脑袋里滚出去！"
+	desc_extended = "异形菌毯产生的孢子，移动迅速，脆弱且不稳定。它会附着在智慧生物的头部，注入控制心智的孢子；受害者死亡后便会被彻底控制。"
 	icon = 'icons/mob/living/simple/blob.dmi'
 	icon_state = "blobpod"
 

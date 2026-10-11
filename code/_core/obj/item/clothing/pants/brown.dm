@@ -1,11 +1,11 @@
 /obj/item/clothing/pants/brown
-	name = "brown pants"
-	desc = "An office worker's favorite."
-	desc_extended = "The pants of choice for boring people everywhere."
+	name = "棕色裤子"
+	desc = "办公室职员的最爱。"
+	desc_extended = "各地无趣人士的首选裤子。"
 	icon = 'icons/obj/item/clothing/pants/brown_pants.dmi'
 
-	desc = "Please wear these at least."
-	desc_extended = "The peak of fashion."
+	desc = "拜托，至少把这个穿上。"
+	desc_extended = "时尚的巅峰。"
 
 	armor = /armor/cloth
 
@@ -15,11 +15,11 @@
 
 
 /obj/item/clothing/pants/kilt
-	name = "kilt"
+	name = "苏格兰裙"
 	icon = 'icons/obj/item/clothing/pants/kilt.dmi'
 
-	desc = "THERE CAN ONLY BE ONE."
-	desc_extended = "A very tough and fashionable kilt. Needs to be held up by a kilt belt."
+	desc = "只能有一个。"
+	desc_extended = "一条结实又时髦的苏格兰裙，需要苏格兰裙腰带来固定。"
 
 	armor = /armor/cloth/hard
 
@@ -35,11 +35,11 @@
 
 
 /obj/item/clothing/pants/cloth
-	name = "cloth"
+	name = "裹布"
 	icon = 'icons/obj/item/clothing/pants/cloth.dmi'
 
-	desc = "Modest?"
-	desc_extended = "A basic piece of cloth worn around the torso."
+	desc = "够端庄吗？"
+	desc_extended = "一块简单的裹身布。"
 
 	armor = /armor/cloth
 
@@ -54,10 +54,10 @@
 
 
 /obj/item/clothing/pants/runic
-	name = "runic pants"
+	name = "符文长裤"
 	icon = 'icons/obj/item/clothing/pants/runic.dmi'
-	desc = "No you took all my gold that is unforgivable"
-	desc_extended = "A set of protective runite pants. These look pretty heavy."
+	desc = "不！你拿走了我所有的金币，绝对不可原谅！"
+	desc_extended = "一条符文金属制成的防护长裤，看起来相当沉重。"
 
 	layer = LAYER_MOB_CLOTHING_UNIFORM
 

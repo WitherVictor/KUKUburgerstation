@@ -1,5 +1,5 @@
 /turf/simulated/floor/colored/ash/
-	name = "ash floor"
+	name = "灰烬地面"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "ash"
@@ -22,13 +22,13 @@
 	health_base = 200
 
 /turf/simulated/floor/colored/ash/necro
-	name = "necro ash"
+	name = "亡灵灰烬"
 	color = "#211811"
 	corner_category = "ash_necro"
 	layer = LAYER_FLOOR_WEATHER + 0.2
 
 /turf/simulated/floor/colored/ash/volcanic
-	name = "volcanic ash floor"
+	name = "火山灰地面"
 	color = "#544842"
 	corner_category = "ash_volcanic"
 	layer = LAYER_FLOOR_WEATHER + 0.3

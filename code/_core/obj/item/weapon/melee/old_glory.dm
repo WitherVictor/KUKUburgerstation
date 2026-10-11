@@ -1,8 +1,8 @@
 /obj/item/weapon/melee/flagpole
-	name = "Old Glory"
+	name = "星条旗"
 
-	desc = "Who are you, that do not know your history?"
-	desc_extended = "A heavy two handed flagpole with a golden eagle mounted on the top. Those wings look sharp!"
+	desc = "连自己的历史都不知道，你算什么人？"
+	desc_extended = "沉重的双手旗杆，顶端装有金鹰。那对翅膀看着可真锋利！"
 	icon = 'icons/obj/item/weapons/melee/polearms/old_glory.dmi'
 	damage_type = /damagetype/melee/club/flagpole
 

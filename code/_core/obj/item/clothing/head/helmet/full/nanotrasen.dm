@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/full/nanotrasen
-	name = "\improper NanoERT helmet"
+	name = "\improper 纳米传讯应急响应队头盔"
 	icon = 'icons/obj/item/clothing/hats/nano.dmi'
 	polymorphs = list(
 		"base" = COLOR_BLACK,

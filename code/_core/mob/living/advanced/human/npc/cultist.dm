@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/cultist
-	name = "cultist"
-	desc = "*incomprehensible gibberish*"
-	desc_extended = "A cultist of Nar'sie."
+	name = "邪教徒"
+	desc = "*难以理解的胡言乱语*"
+	desc_extended = "一名信奉纳尔西的邪教徒。"
 	ai = /ai/advanced/cult
 
 	dna = /dna/human
@@ -20,14 +20,14 @@
 	src.add_organ(/obj/item/organ/internal/implant/head/loyalty/cult)
 
 /mob/living/advanced/npc/cultist/old
-	name = "ancient cultist"
+	name = "古老邪教徒"
 	loadout = /loadout/cultist/old
 
 	level = 28
 
 
 /mob/living/advanced/npc/cultist/hard
-	name = "master cultist"
+	name = "邪教大师"
 	loadout = /loadout/cultist/hard
 
 	level = 50

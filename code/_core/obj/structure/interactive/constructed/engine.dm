@@ -1,5 +1,5 @@
 obj/structure/shuttle_engine //TODO: RENAME THIS
-	name = "engine"
+	name = "引擎"
 	icon = 'icons/obj/structure/shuttle.dmi'
 	icon_state = "router"
 	plane = PLANE_SHUTTLE
@@ -9,7 +9,7 @@ obj/structure/shuttle_engine //TODO: RENAME THIS
 	density = TRUE
 
 obj/structure/shuttle_engine/heater
-	name = "engine heater"
+	name = "引擎加热器"
 	icon_state = "heater"
 
 obj/structure/shuttle_engine/burst

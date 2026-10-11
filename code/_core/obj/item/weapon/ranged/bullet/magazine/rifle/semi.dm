@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/semi
 	name = "\improper 5.56mm SA-AR"
-	desc = "Bet you can't guess what SA-AR stands for."
-	desc_extended = "A semi-automatic assault rifle designed for shooters who want to be precise with their shots, but don't want to shell out the extra credits for a high caliber rifle."
+	desc = "赌你猜不出SA-AR是什么意思。"
+	desc_extended = "半自动突击步枪，面向想打得精准、又不愿多花信用点购买大口径步枪的射手。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_4.dmi'
 	icon_state = "inventory"
 	value = 1200

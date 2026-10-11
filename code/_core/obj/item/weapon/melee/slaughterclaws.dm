@@ -1,8 +1,8 @@
 /obj/item/weapon/melee/slaughterclaws
-	name = "slaughter claws"
+	name = "屠戮之爪"
 
-	desc = "HELL IS EMPTY, BLOOD IS FUEL!"
-	desc_extended = "Use Harm intent to rip your enemies a new one! Use disarm intent to punch from afar! Click on a turf on grab intent to bloodcrawl! Then replenish your blood by Helping a corpse!"
+	desc = "地狱空荡，鲜血为燃料！"
+	desc_extended = "用伤害意图撕碎敌人！用缴械意图打出远程重拳！用抓取意图点击地面，发动血行！再以帮助意图对尸体使用，补充鲜血！"
 	// var/user_intent = 1 //will need a more elegant way to change this Later(TM), but it could provide a framework for other intent checks
 	icon = 'icons/obj/item/weapons/unarmed/slaughterclaws.dmi' //thx Nzzy!
 	damage_type = /damagetype/unarmed/slaughter
@@ -32,13 +32,13 @@
 
 	if(L.intent == INTENT_GRAB && next_teleport_command <= world.time)
 		if(!T.can_move_to()) //Alright, that's it. No more water-walking!
-			L.to_chat(span("danger","You can't bloodcrawl there!"))
+			L.to_chat(span("danger","你无法血行到那里！"))
 			return TRUE
 		if(A.flags_area & FLAG_AREA_NO_TELEPORT) // No bloodcrawling into vaults for you!
-			L.to_chat(span("danger","Some sort of forcefield stops you!"))
+			L.to_chat(span("danger","某种力场挡住了你！"))
 			return TRUE
 		if (target_distance > VIEW_RANGE)
-			L.to_chat(span("danger","It's too far to crawl to!"))
+			L.to_chat(span("danger","那里太远，无法血行过去！"))
 			return TRUE
 		L.blood_volume = max(0,L.blood_volume - target_distance*5) //Max distance costs 50. Jumping this far would only be for snacking or retreating, though.
 		QUEUE_HEALTH_UPDATE(L)

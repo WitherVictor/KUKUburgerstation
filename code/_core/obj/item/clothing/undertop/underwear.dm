@@ -1,14 +1,14 @@
 /obj/item/clothing/undertop/underwear/
-	name = "undertop"
-	desc = "Shirt that goes under your shirt."
-	desc_extended = "You can also not wear another shirt over this, but you'll look like an idiot, or an Australian."
+	name = "内搭上衣"
+	desc = "穿在上衣里面的衣服。"
+	desc_extended = "外面也可以不再穿上衣，只是那样看起来像个傻子，或者澳大利亚人。"
 	size = SIZE_2
 
 
 /obj/item/clothing/undertop/underwear/bra
-	name = "brassiere"
-	desc = "For bits that need extra support."
-	desc_extended = "A bra. Does not actually stand for Battle Ready Armor."
+	name = "胸罩"
+	desc = "为需要额外支撑的部位提供支撑。"
+	desc_extended = "胸罩的英文简称是BRA，可不是“战斗就绪护甲”（Battle Ready Armor）的缩写。"
 	icon = 'icons/obj/item/clothing/underwear/bra.dmi'
 
 	dyeable = TRUE
@@ -50,16 +50,16 @@
 	return ..()
 
 /obj/item/clothing/undertop/underwear/bra/neko
-	name = "cursed cat brassiere"
-	desc = "who the fuck what the fuck"
-	desc_extended = "why"
+	name = "诅咒猫咪胸罩"
+	desc = "谁他妈弄的，这他妈是什么。"
+	desc_extended = "为什么。"
 	icon = 'icons/obj/item/clothing/underwear/neko_bra.dmi'
 
 	value = 500
 
 /obj/item/clothing/undertop/underwear/shirt
-	desc = "undershirt"
-	desc_extended = "Slightly more acceptable to wear alone in public than the bra."
+	desc = "汗衫。"
+	desc_extended = "在公共场合单穿这个，比只穿胸罩稍微像样一点。"
 	icon = 'icons/obj/item/clothing/underwear/undershirt.dmi'
 
 	dyeable = TRUE

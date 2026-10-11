@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/antag
-	name = "player antagonist uniform"
-	desc = "Uh oh, salt inbound."
-	desc_extended = "Some antagonist uniform worn by antagonist."
+	name = "玩家反派制服"
+	desc = "糟了，要有人破防了。"
+	desc_extended = "反派穿的一套反派制服。"
 	icon = 'icons/obj/item/clothing/uniforms/util_gen.dmi'
 
 
@@ -20,21 +20,21 @@
 	value = 50
 
 /obj/item/clothing/uniform/antag/syndicate
-	name = "syndicate combat uniform"
-	desc = "WHISKEY ECHO WHISKEY"
-	desc_extended = "Syndicate combat fatigues worn by high-ranking Syndicate combatants."
+	name = "辛迪加作战服"
+	desc = "威士忌，回声，威士忌。"
+	desc_extended = "辛迪加高级战斗人员穿着的作战服。"
 	icon = 'icons/obj/item/clothing/uniforms/syndie_antag.dmi'
 	value = 250
 
 /obj/item/clothing/uniform/antag/rev
-	name = "revolutionary combat uniform"
-	desc = "We're not allowed to die, commissar said so."
-	desc_extended = "Slavic combat fatigues worn by high-ranking Revolutionaries' combatants."
+	name = "革命军作战服"
+	desc = "政委说了，我们不准死。"
+	desc_extended = "革命军高级战斗人员穿着的斯拉夫风格作战服。"
 	icon = 'icons/obj/item/clothing/uniforms/rev_antag.dmi'
 	value = 250
 
 /obj/item/clothing/uniform/antag/rev/officer
-	name = "revolutionary officer uniform"
-	desc = "Red terror."
-	desc_extended = "Slavic officer uniform worn by Revolutionaries' officers."
+	name = "革命军军官制服"
+	desc = "红色恐怖。"
+	desc_extended = "革命军军官穿着的斯拉夫风格制服。"
 	icon = 'icons/obj/item/clothing/uniforms/revficer.dmi'

@@ -1,7 +1,7 @@
 /obj/item/cassette_player
-	name = "cassette player"
-	desc = "Begin audio prompt in three..."
-	desc_extended = "Old cassette player that can play pre-recorded songs. Use it in hand to start playing it for yourself to hear, or turn the currently playing song off."
+	name = "卡式磁带播放器"
+	desc = "音频播放倒计时，三……"
+	desc_extended = "可以播放预录歌曲的老式磁带播放器。手持使用即可开始为自己播放，或停止正在播放的歌曲。"
 	icon = 'icons/obj/item/tape.dmi'
 	icon_state = "taperecorder_empty"
 	value = 1000
@@ -19,8 +19,8 @@
 /obj/item/cassette_player/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(stored_tape)
-		. += div("notice","It currently holding [stored_tape.name] inside.")
-	. += div("notice","It is currently [playing ? "playing" : "not playing"].")
+		. += div("notice","里面目前装着[stored_tape.name]。")
+	. += div("notice","目前[playing ? "正在播放" : "未在播放"]。")
 
 /obj/item/cassette_player/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
 	RUN_PARENT_SAFE
@@ -46,7 +46,7 @@
 /obj/item/cassette_player/proc/disable()
 	if(current_hearer && current_hearer.client)
 		stop_music_track(current_hearer.client)
-		if(playing) current_hearer.to_chat(span("notice","\The [src.name] turns off."))
+		if(playing) current_hearer.to_chat(span("notice","[src.name]关闭了。"))
 		HOOK_REMOVE("post_move","loc_check_\ref[src]",current_hearer)
 		CALLBACK_REMOVE("tape_stop_\ref[src]")
 	playing = FALSE
@@ -58,7 +58,7 @@
 		if(!T)
 			return
 		play_music_track(stored_tape.stored_track,current_hearer.client)
-		if(!playing) current_hearer.to_chat(span("notice","\The [src.name] turns on."))
+		if(!playing) current_hearer.to_chat(span("notice","[src.name]开启了。"))
 		HOOK_ADD("post_move","loc_check_\ref[src]",current_hearer,src,src::check_valid())
 		CALLBACK("tape_stop_\ref[src]",SECONDS_TO_DECISECONDS(T.length),src,src::disable())
 	playing = TRUE
@@ -76,11 +76,11 @@
 		if(stored_tape)
 			old_tape = stored_tape
 			old_tape.drop_item(get_turf(src))
-			activator.to_chat(span("notice","You eject \the [old_tape.name] from \the [src.name]."))
+			activator.to_chat(span("notice","你从[src.name]中弹出了[old_tape.name]。"))
 			stored_tape = null
 		stored_tape = object
 		stored_tape.drop_item(src)
-		activator.to_chat(span("notice","You insert \the [stored_tape.name] into \the [src.name]."))
+		activator.to_chat(span("notice","你将[stored_tape.name]放入了[src.name]。"))
 		if(old_tape && is_advanced(activator))
 			var/mob/living/advanced/A = activator
 			A.put_in_hands(stored_tape,params)
@@ -89,7 +89,7 @@
 	if(stored_tape && is_inventory(object))
 		disable()
 		var/obj/hud/inventory/I = object
-		activator.to_chat(span("notice","You eject \the [stored_tape.name] from \the [src.name]."))
+		activator.to_chat(span("notice","你从[src.name]中弹出了[stored_tape.name]。"))
 		I.add_object(stored_tape)
 		stored_tape = null
 		return TRUE
@@ -104,7 +104,7 @@
 	if(playing)
 		disable()
 	else if(!stored_tape || !stored_tape.stored_track)
-		activator.to_chat(span("warning","There is no tape to play in \the [src.name]!"))
+		activator.to_chat(span("warning","[src.name]中没有可播放的磁带！"))
 	else
 		if(is_inventory(src.loc))
 			var/obj/hud/inventory/I = src.loc
@@ -130,9 +130,9 @@
 
 
 /obj/item/cassette_tape
-	name = "cassette tape"
-	desc = "Finally, some good fucking music."
-	desc_extended = "Old cassette tape that contains pre-recorded music. Requires a cassette tape player to play."
+	name = "卡式磁带"
+	desc = "终于他妈的有点好音乐了。"
+	desc_extended = "录有音乐的老式卡式磁带，需要卡式磁带播放器才能播放。"
 	var/track/stored_track
 	icon = 'icons/obj/item/tape.dmi'
 	icon_state = "tape_white"

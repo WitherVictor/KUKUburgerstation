@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/xeno
-	name = "xeno costume"
-	desc = "Hissss!"
-	desc_extended = "A rather high quality xeno costume, it even comes with a mask!"
+	name = "异形服装"
+	desc = "嘶嘶！"
+	desc_extended = "一套质量相当不错的异形装扮，甚至还附送面具！"
 	icon = 'icons/obj/item/clothing/suit/xeno.dmi'
 
 

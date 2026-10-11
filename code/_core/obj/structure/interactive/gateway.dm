@@ -1,6 +1,6 @@
 /obj/structure/interactive/gateway
-	name = "gateway"
-	desc = "Brings you to places!"
+	name = "传送门"
+	desc = "带你前往别处！"
 	icon = 'icons/obj/structure/gateway.dmi'
 	icon_state = "gateway"
 	pixel_x = -32

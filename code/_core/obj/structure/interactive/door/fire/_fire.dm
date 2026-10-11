@@ -1,6 +1,6 @@
 /obj/structure/interactive/door/fire
-	name = "fire door"
-	desc = "Protects you from stupidity."
+	name = "防火门"
+	desc = "保护你免遭愚蠢行为之害。"
 	collision_flags = FLAG_COLLISION_WALL
 	collision_bullet_flags = FLAG_COLLISION_BULLET_INORGANIC
 

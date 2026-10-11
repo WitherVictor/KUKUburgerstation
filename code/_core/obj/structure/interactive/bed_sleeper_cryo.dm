@@ -1,8 +1,8 @@
 /obj/structure/interactive/bed/sleeper/cryo
-	name = "hypersleep chamber"
+	name = "深度休眠舱"
 	base_color = "#AAAAAA"
-	desc = "Ah shit, I gotta cryo."
-	desc_extended = "Buckle yourself into this <u>and press the \"LOG OUT\" button</u> to safely exit the game."
+	desc = "啊，糟了，我得去冷冻休眠了。"
+	desc_extended = "将自己固定在舱内，<u>然后点击‘退出角色’按钮</u>，即可安全退出当前角色。"
 	secondary_color = "#00FF00"
 	tertiary_color = "#008800"
 	var/spawnpoint = TRUE

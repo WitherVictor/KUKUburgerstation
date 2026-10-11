@@ -1,6 +1,6 @@
 obj/structure/interactive/
-	name = "interactive structure"
-	desc = "What does it do?"
+	name = "可交互设施"
+	desc = "这东西有什么用？"
 	mouse_over_pointer = MOUSE_ACTIVE_POINTER
 
 	var/repair_flag = FLAG_TOOL_NONE //Set this to something if it can be repaired by it.
@@ -106,15 +106,15 @@ obj/structure/interactive/get_examine_list(var/mob/examiner)
 		var/health_percent = health.health_current/health.health_max
 		switch(health_percent)
 			if(-INFINITY to 0.2)
-				. += div("danger","It's falling apart!")
+				. += div("danger","它快散架了！")
 			if(0.2 to 0.4)
-				. += div("danger","It looks seriously damaged.")
+				. += div("danger","它看起来损坏极其严重。")
 			if(0.4 to 0.6)
-				. += div("warning","It looks very damaged.")
+				. += div("warning","它看起来损坏严重。")
 			if(0.6 to 0.9)
-				. += div("warning","It looks damaged.")
+				. += div("warning","它看起来有所损坏。")
 			if(0.9 to 0.95)
-				. += div("notice","It has a few scrapes.")
+				. += div("notice","它有几处刮痕。")
 
 
 obj/structure/interactive/proc/can_repair(var/mob/living/advanced/activator,var/obj/item/I)
@@ -129,18 +129,18 @@ obj/structure/interactive/proc/can_repair(var/mob/living/advanced/activator,var/
 		return FALSE
 
 	if(health.health_current >= health.health_max)
-		activator?.to_chat(span("warning","\The [src.name] is already repaired!"))
+		activator?.to_chat(span("warning","[src.name]已经修好了！"))
 		return FALSE
 
 	if(!(I.flags_tool & repair_flag))
-		activator?.to_chat(span("warning","\The [I.name] cannot be used to repair \the [src.name]!"))
+		activator?.to_chat(span("warning","[I.name]无法用来修理[src.name]！"))
 		return FALSE
 
 	return TRUE
 
 
 obj/structure/interactive/proc/do_repair(var/mob/living/advanced/activator,var/obj/item/I)
-	visible_message(span("notice","\The [activator.name] repairs \the [src.name] with \the [I.name]."))
+	visible_message(span("notice","[activator.name]用[I.name]修理了[src.name]。"))
 	health.adjust_loss_smart(brute=-100,burn=-100)
 
 	return TRUE
@@ -165,7 +165,7 @@ obj/structure/interactive/clicked_on_by_object(var/mob/activator,var/atom/object
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			I2.drop_item(get_turf(activator))
-			activator.to_chat(span("notice","You successfully remove \the [I2.name] from \the [I.name] with \the [src.name]."))
+			activator.to_chat(span("notice","你用[I.name]从[src.name]中取出了[I2.name]。"))
 			return TRUE
 
 
@@ -201,7 +201,7 @@ obj/structure/interactive/proc/check_interactables(var/mob/activator,var/atom/ob
 	if(valid_length == 1)
 		T = valid_interactables[1]
 	else
-		T = input(activator,"Which device do you wish to interact with?","Device Interaction") as null|anything in valid_interactables
+		T = input(activator,"你想操作哪个设备？","设备交互") as null|anything in valid_interactables
 
 	return T
 

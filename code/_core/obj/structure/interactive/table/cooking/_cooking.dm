@@ -1,5 +1,5 @@
 /obj/structure/table/cooking
-	name = "cooking platform"
+	name = "烹饪台"
 	var/enabled = FALSE
 	var/temperature_mod = 590 //How hot to make it. This adds to the turf's temperature.
 	density = TRUE
@@ -33,7 +33,7 @@
 
 /obj/structure/table/cooking/get_examine_details_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","It is currently [enabled ? "on" : "off"].")
+	. += span("notice","目前处于[enabled ? "开启" : "关闭"]状态。")
 
 /obj/structure/table/cooking/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
 
@@ -44,14 +44,14 @@
 		var/obj/item/I = object
 		if(I.flags_tool & FLAG_TOOL_WRENCH && !initial(anchored))
 			src.set_anchored(!anchored)
-			activator.to_chat(span("notice","You [anchored ? "anchor" : "unachor"] \the [src.name]."))
+			activator.to_chat(span("notice","你[anchored ? "固定了" : "解除了固定"][src.name]。"))
 			return TRUE
 		I.drop_item(get_turf(src))
 		return TRUE
 
 	if(!initial(enabled))
 		set_enabled(!enabled)
-		activator.visible_message(span("notice","\The [activator.name] turns [enabled ? "on" : "off"] \the [src.name]."),span("notice","You turn [enabled ? "on" : "off"] \the [src.name]."))
+		activator.visible_message(span("notice","[activator.name][enabled ? "打开" : "关闭"]了[src.name]。"),span("notice","你[enabled ? "打开" : "关闭"]了[src.name]。"))
 		return TRUE
 
 	. = ..()

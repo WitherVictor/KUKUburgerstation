@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/top
-	name = "top hat"
+	name = "高顶礼帽"
 	icon = 'icons/obj/item/clothing/hats/top.dmi'
-	desc = "Classy!"
-	desc_extended = "An expensive top hat."
+	desc = "真有格调！"
+	desc_extended = "一顶昂贵的高顶礼帽。"
 
 	armor = /armor/cloth
 

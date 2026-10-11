@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/head/ce
-	name = "Chief Engineer"
-	desc = "Doesn't have to worry about plasmafloods here."
+	name = "总工程师"
+	desc = "在这里不用担心等离子气体泄漏。"
 	species = "human"
 	dialogue_id = /dialogue/npc/chief_engineer/
 

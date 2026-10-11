@@ -1,7 +1,7 @@
 /mob/living/simple/lobster
-	name = "giant lobster"
-	desc = "Not that shrimple now."
-	desc_extended = "A dangerous armored lobster with giant claws to match."
+	name = "巨型龙虾"
+	desc = "这下可没那么“虾”简单了。"
+	desc_extended = "一只危险的披甲龙虾，长着与庞大身躯相称的巨钳。"
 	icon = 'icons/mob/living/simple/lobster.dmi'
 	icon_state = "living"
 	damage_type = /damagetype/npc/crab

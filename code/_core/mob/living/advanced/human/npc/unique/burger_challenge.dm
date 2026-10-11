@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/burger_challenge
-	name = "mysterious figure"
-	desc = "Take the challenge... if you dare."
+	name = "神秘人"
+	desc = "接受挑战吧……如果你有胆量。"
 
 	level = 30
 

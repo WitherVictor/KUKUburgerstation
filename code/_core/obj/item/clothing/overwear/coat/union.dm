@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/union
-	name = "union coat"
-	desc = "Wish I was in Baltimore."
-	desc_extended = "A fashionable long blue coat and light blue trousers."
+	name = "北军外套"
+	desc = "真希望我在巴尔的摩。"
+	desc_extended = "一件时髦的蓝色长外套，配着浅蓝色长裤。"
 	icon = 'icons/obj/item/clothing/suit/union.dmi'
 
 	is_container = TRUE

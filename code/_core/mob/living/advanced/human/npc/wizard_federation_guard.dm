@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/wizard_federation_guard
-	name = "wizard federation guard"
-	desc = "Investigating warcrimes since 2068."
+	name = "巫师联邦守卫"
+	desc = "自2068年起调查战争罪行。"
 
 	dna = /dna/human
 

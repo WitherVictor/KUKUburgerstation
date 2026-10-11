@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/raging_mage
 
-	name = "raging mage"
+	name = "狂怒法师"
 
 	loadout = /loadout/raging_mage
 
@@ -11,7 +11,7 @@
 
 /mob/living/advanced/npc/raging_mage/apprentice
 
-	name = "raging apprentice"
+	name = "狂怒学徒"
 
 	loadout = /loadout/raging_mage/apprentice
 
@@ -19,13 +19,13 @@
 
 /mob/living/advanced/npc/raging_mage/anti_bullet
 
-	name = "raging anti-bullet mage"
+	name = "狂怒防弹法师"
 	loadout = /loadout/raging_mage/anti_bullet
 
 	level = 20
 
 /mob/living/advanced/npc/raging_mage/witch
-	name = "raging witch"
+	name = "狂怒女巫"
 	gender = FEMALE
 	loadout = /loadout/raging_mage/witch
 

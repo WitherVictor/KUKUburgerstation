@@ -1,8 +1,8 @@
 /obj/structure/interactive/vending/wizard
-	name = "wizard vendor"
-	desc = "Authentic!"
+	name = "巫师售货机"
+	desc = "正版货！"
 	icon_state = "MagiVend"
-	desc_extended = "An authentic Wizard vendor used by the Wizard Federation to equip their Wizards with Wizard federation Wizard stuff. Uses magic shard tokens as currency."
+	desc_extended = "一台正版巫师售货机，巫师联邦用它给旗下巫师配发巫师联邦的巫师装备。使用魔法碎片代币作为货币。"
 
 	stored_types = list(
 		/obj/item/clothing/overwear/armor/knight/battlemage,
@@ -37,9 +37,9 @@
 	health = null
 
 /obj/structure/interactive/vending/wizard/prank
-	name = "magic prank vendor"
-	desc = "... we swear these are pranks and not murder."
-	desc_extended = "A prank vendor containing the absolutely worst pranks and toys of the galaxy."
+	name = "魔法恶作剧售货机"
+	desc = "……我们发誓，这些只是恶作剧，绝不是谋杀。"
+	desc_extended = "一台装着全银河最恶劣的恶作剧道具和玩具的售货机。"
 	icon_state = "games"
 
 	stored_types = list(

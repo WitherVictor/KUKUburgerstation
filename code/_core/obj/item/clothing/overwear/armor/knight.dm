@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/knight
-	name = "heavy knight armor"
-	desc = "Fat roll mode on!"
-	desc_extended = "Heavily padded steel armor. Provides great protection from all physical forms of damage, but makes it hard to move."
+	name = "重型骑士护甲"
+	desc = "重装翻滚模式，启动！"
+	desc_extended = "衬垫厚实的钢制护甲，能有效抵御各类物理伤害，但会让行动变得困难。"
 	icon = 'icons/obj/item/clothing/suit/knight_blank.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 
@@ -30,25 +30,25 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/overwear/armor/knight/red
-	name = "red heavy knight armor"
+	name = "红色重型骑士护甲"
 	icon = 'icons/obj/item/clothing/suit/knight_red.dmi'
 
 /obj/item/clothing/overwear/armor/knight/blue
-	name = "blue heavy knight armor"
+	name = "蓝色重型骑士护甲"
 	icon = 'icons/obj/item/clothing/suit/knight_blue.dmi'
 
 /obj/item/clothing/overwear/armor/knight/green
-	name = "green heavy knight armor"
+	name = "绿色重型骑士护甲"
 	icon = 'icons/obj/item/clothing/suit/knight_green.dmi'
 
 /obj/item/clothing/overwear/armor/knight/yellow
-	name = "yellow heavy knight armor"
+	name = "黄色重型骑士护甲"
 	icon = 'icons/obj/item/clothing/suit/knight_yellow.dmi'
 
 /obj/item/clothing/overwear/armor/knight/special
-	name = "ultra heavy knight armor"
-	desc = "Rolling in this would probably break all your bones."
-	desc_extended = "A huge suit of armor made entirely of steel. Makes you almost impervious to all forms of physical damage, but makes it very hard to move. Plus, it's like being in an oven."
+	name = "超重型骑士护甲"
+	desc = "穿着它翻滚，大概会把全身骨头都压断。"
+	desc_extended = "一套完全由钢制成的巨型护甲，几乎能抵御各种物理伤害，但行动极为困难。而且，穿着就像待在烤箱里。"
 	icon = 'icons/obj/item/clothing/suit/knight_special.dmi'
 
 	armor = /armor/steel/heavy
@@ -62,9 +62,9 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/clothing/overwear/armor/knight/templar
-	name = "templar knight armor"
-	desc = "Fuck Elves."
-	desc_extended = "Once worn by mercenaries who didn't understand religion, now it's often worn by cosplayers who also don't understand religion."
+	name = "圣殿骑士护甲"
+	desc = "去他妈的精灵。"
+	desc_extended = "过去是不懂宗教的佣兵在穿，现在则常被同样不懂宗教的角色扮演爱好者穿着。"
 	icon = 'icons/obj/item/clothing/suit/knight_templar.dmi'
 
 	armor = /armor/steel/holy
@@ -75,9 +75,9 @@
 	value = 200
 
 /obj/item/clothing/overwear/armor/knight/battlemage
-	name = "battlemage armor"
-	desc = "To protect your frail wizard form."
-	desc_extended = "A suit of armor used by those in the Wizard Federation who aren't septuagenarian yet."
+	name = "战斗法师护甲"
+	desc = "保护你脆弱的巫师之躯。"
+	desc_extended = "巫师联邦中还没到七十岁的成员使用的护甲。"
 	icon = 'icons/obj/item/clothing/suit/knight_battlemage.dmi'
 
 	armor = /armor/steel/arcane
@@ -89,10 +89,10 @@
 	value_burgerbux = 1
 
 /obj/item/clothing/overwear/armor/knight/daddy
-	name = "giant father's armor"
+	name = "巨人父亲护甲"
 
-	desc = "THE LEGEND NEVER DIES"
-	desc_extended = "A matching suit of armor for your Chaos Zweihander."
+	desc = "传说永不落幕。"
+	desc_extended = "与你的混沌双手巨剑相配的护甲。"
 	icon = 'icons/obj/item/clothing/suit/knight_daddy.dmi'
 
 	armor = /armor/steel/heavy
@@ -104,10 +104,10 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/clothing/overwear/armor/knight/clockwork
-	name = "clockwork armor"
+	name = "发条护甲"
 
-	desc = "HAIL RATVAR."
-	desc_extended = "A bronze plate of protective armor."
+	desc = "赞美拉特瓦尔。"
+	desc_extended = "一套青铜板甲。"
 	icon = 'icons/obj/item/clothing/suit/clockwork.dmi'
 
 	armor = /armor/brass
@@ -119,7 +119,7 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/overwear/armor/knight/magnus
-	name = "magnus armor"
+	name = "马格努斯护甲"
 	icon = 'icons/obj/item/clothing/suit/magnus.dmi'
 
 	armor = /armor/steel/arcane/light
@@ -139,9 +139,9 @@
 	color = COLOR_GOLD
 
 /obj/item/clothing/overwear/armor/knight/goblin
-	name = "goblin knight torso"
-	desc = "Where's the pants?"
-	desc_extended = "A kinght suit without the pants. Good for short goblins."
+	name = "地精骑士胸甲"
+	desc = "裤子呢？"
+	desc_extended = "一套没有裤装的骑士护甲，很适合矮小的地精。"
 	icon = 'icons/obj/item/clothing/suit/goblin.dmi'
 
 	armor = /armor/steel
@@ -161,9 +161,9 @@
 
 
 /obj/item/clothing/overwear/armor/knight/runic
-	name = "runic platebody"
-	desc = "Free armour trimming U can trust me with ur adamant"
-	desc_extended = "A platebody made out of runite. Provides excellent protection."
+	name = "符文板甲"
+	desc = "免费给护甲镶边，把精金装备交给我，包你放心。"
+	desc_extended = "用符文金属制成的板甲，防护出色。"
 	icon = 'icons/obj/item/clothing/suit/runic.dmi'
 
 	worn_layer = LAYER_MOB_CLOTHING_ARMOR

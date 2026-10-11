@@ -1,8 +1,8 @@
 /mob/living/simple/bull
 
-	name = "angry bull"
-	desc = "Protector of cows."
-	desc_extended = "Can be seen protecting grasslands from pesky humanoids."
+	name = "愤怒的公牛"
+	desc = "奶牛的守护者。"
+	desc_extended = "常见它守护草原，驱赶烦人的人形生物。"
 	icon = 'icons/mob/living/simple/passive.dmi'
 	icon_state = "bull"
 

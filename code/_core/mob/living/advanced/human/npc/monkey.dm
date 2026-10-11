@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/monkey
-	name = "monkey"
-	desc = "OOK."
+	name = "猴子"
+	desc = "吱吱。"
 
 	ai = /ai/advanced/monkey
 

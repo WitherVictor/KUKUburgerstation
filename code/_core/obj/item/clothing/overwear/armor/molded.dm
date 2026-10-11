@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/molded_armor
-	name = "kevlar vest"
-	desc = "Hey, as long as it works."
-	desc_extended = "A reinforced kevlar vest designed to stop small bullets."
+	name = "凯夫拉背心"
+	desc = "嗨，能用就行。"
+	desc_extended = "一件加固凯夫拉背心，设计用于抵挡小口径子弹。"
 
 	icon = 'icons/obj/item/clothing/suit/mod_chest_armor.dmi'
 

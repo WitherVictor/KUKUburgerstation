@@ -1,7 +1,7 @@
 obj/structure/interactive/door
-	name = "door"
-	desc = "AI DOOR"
-	desc_extended = "It opens and closes."
+	name = "门"
+	desc = "AI，开门。"
+	desc_extended = "能开也能关。"
 	collision_flags = FLAG_COLLISION_WALL
 	collision_bullet_flags = FLAG_COLLISION_BULLET_INORGANIC
 
@@ -58,28 +58,28 @@ obj/structure/interactive/door/update_icon()
 	switch(door_state)
 		if(DOOR_STATE_OPENING_01)
 			icon_state = "[initial(icon_state)]opening"
-			desc_extended = "The door is opening."
+			desc_extended = "门正在打开。"
 			update_collisions(FLAG_COLLISION_WALL,FLAG_COLLISION_BULLET_INORGANIC)
 			layer = LAYER_OBJ_DOOR_CLOSED
 			set_opacity(0)
 
 		if(DOOR_STATE_CLOSING_01)
 			icon_state = "[initial(icon_state)]closing"
-			desc_extended = "The door is closing."
+			desc_extended = "门正在关闭。"
 			update_collisions(FLAG_COLLISION_NONE,FLAG_COLLISION_BULLET_NONE)
 			layer = LAYER_OBJ_DOOR_CLOSED
 			set_opacity(0)
 
 		if(DOOR_STATE_OPENED)
 			icon_state = "[initial(icon_state)]open"
-			desc_extended = "The door is open."
+			desc_extended = "门已打开。"
 			update_collisions(FLAG_COLLISION_NONE,FLAG_COLLISION_BULLET_NONE)
 			layer = LAYER_OBJ_DOOR_OPEN
 			set_opacity(0)
 
 		if(DOOR_STATE_CLOSED)
 			icon_state = initial(icon_state)
-			desc_extended = "The door is closed."
+			desc_extended = "门已关闭。"
 			update_collisions(FLAG_COLLISION_WALL,FLAG_COLLISION_BULLET_INORGANIC)
 			layer = LAYER_OBJ_DOOR_CLOSED
 			set_opacity(initial(opacity))
@@ -145,10 +145,10 @@ obj/structure/interactive/door/clicked_on_by_object(var/mob/activator,var/atom/o
 	return TRUE
 
 /obj/structure/interactive/door/wood
-	name = "wooden door"
+	name = "木门"
 
 obj/structure/interactive/door/metal
-	name = "iron door"
+	name = "铁门"
 	icon_state = "silver"
 	color = "#888888"
 

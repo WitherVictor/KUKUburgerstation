@@ -1,7 +1,7 @@
 /obj/item/powercell/
-	name = "standard power cell"
-	desc = "Do not STOMACH."
-	desc_extended = "A power cell for use in recharging energy weaponry. This one has a rating of 10000 megawatts."
+	name = "标准电池"
+	desc = "禁止下肚。"
+	desc_extended = "用于为能量武器供电的电池，标注额定功率为10000兆瓦。"
 	icon = 'icons/obj/item/cells.dmi'
 	icon_state = "cell_basic"
 
@@ -57,9 +57,9 @@
 	add_overlay(I)
 
 /obj/item/powercell/advanced
-	name = "advanced power cell"
-	desc = "r&d can i have a powercell plz i wont use it for stunprod promise"
-	desc_extended = "A power cell for use in recharging energy weaponry. This one has a rating of 25000 megawatts."
+	name = "高级电池"
+	desc = "研发部，给我一块电池好不好？保证不用来做电击棒。"
+	desc_extended = "用于为能量武器供电的电池，标注额定功率为25000兆瓦。"
 	icon_state = "cell_advanced"
 	charge_max = CELL_SIZE_ADVANCED
 
@@ -72,9 +72,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/powercell/industrial
-	name = "industrial power cell"
-	desc = "r&d can i have a powercell plz i wont use it for stunprod promise"
-	desc_extended = "A bulky power cell for use in recharging energy weaponry. This one has a rating of 50000 megawatts."
+	name = "工业电池"
+	desc = "研发部，给我一块电池好不好？保证不用来做电击棒。"
+	desc_extended = "用于为能量武器供电的笨重电池，标注额定功率为50000兆瓦。"
 	icon_state = "cell_industrial"
 	charge_max = CELL_SIZE_INDUSTRIAL
 
@@ -89,9 +89,9 @@
 
 
 /obj/item/powercell/bluespace
-	name = "bluespace power cell"
-	desc = "It's bluespace, I ain't gotta explain shit."
-	desc_extended = "A highly advanced bluespace power cell fitted with a minuture bag of holding packed with an absurd amount of diodes."
+	name = "蓝空间电池"
+	desc = "蓝空间科技，老子懒得解释。"
+	desc_extended = "极其先进的蓝空间电池，内置微型次元袋，里面塞满了多得离谱的二极管。"
 	icon_state = "cell_bluespace"
 	charge_max = CELL_SIZE_BLUESPACE
 
@@ -106,9 +106,9 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/powercell/vehicle
-	name = "mech-grade power cell"
-	desc = "Do not swallow."
-	desc_extended = "A massive mech-grade battery used commonly to power mechs and mech weapons as well as the systems inside the mech."
+	name = "机甲级电池"
+	desc = "禁止吞咽。"
+	desc_extended = "巨大的机甲级电池，通常用于为机甲、机甲武器及其内部系统供电。"
 	icon_state = "cell_vehicle"
 	charge_max = CELL_SIZE_VEHICLE
 
@@ -119,9 +119,9 @@
 	weight = 10
 
 /obj/item/powercell/tiny
-	name = "device power cell"
-	desc = "Do not swallow."
-	desc_extended = "A tiny battery used commonly to power small devices."
+	name = "设备电池"
+	desc = "禁止吞咽。"
+	desc_extended = "通常用于为小型设备供电的微型电池。"
 	icon_state = "cell_tiny"
 	charge_max = CELL_SIZE_TINY
 
@@ -133,9 +133,9 @@
 
 
 /obj/item/powercell/recharging
-	name = "fusion power cell"
-	desc = "Do not STOMACH."
-	desc_extended = "A power cell for use in recharging energy weaponry. This one self charges!"
+	name = "聚变电池"
+	desc = "禁止下肚。"
+	desc_extended = "用于为能量武器供电的电池。它能自行充电！"
 	icon = 'icons/obj/item/cells.dmi'
 	icon_state = "cell_recharging"
 
@@ -167,14 +167,14 @@
 	return ..()
 
 /obj/item/powercell/get_examine_list(var/mob/activator)
-	return ..() + div("notice","It has [charge_current] out of [charge_max] charge remaining.")
+	return ..() + div("notice","剩余电量：[charge_current] / [charge_max]。")
 
 
 
 /obj/item/powercell/dummy
-	name = "dummy power cell"
-	desc = "For dummies."
-	desc_extended = "You shouldn't see this."
+	name = "占位电池"
+	desc = "傻瓜专用。"
+	desc_extended = "你不应该看到这个。"
 	icon = 'icons/obj/item/cells.dmi'
 	icon_state = "cell_recharging"
 

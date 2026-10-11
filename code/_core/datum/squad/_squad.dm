@@ -5,9 +5,9 @@
 #define SQUAD_MEMBERS_MAX 4
 
 /squad/
-	var/name = "Squad Name"
-	var/desc = "Squad description."
-	var/desc_extended = "Squad long description."
+	var/name = "小队名称"
+	var/desc = "小队简介。"
+	var/desc_extended = "小队详细说明。"
 	var/access = SQUAD_INVITE_ONLY
 
 	var/mob/living/advanced/player/leader = null
@@ -57,7 +57,7 @@
 		var/mob/living/advanced/player/P2 = k
 		P2.add_squad_button(P)
 
-	P.to_chat(span("warning","You have joined the squad \"[name]\"."))
+	P.to_chat(span("warning","你已加入小队\"[name]\"。"))
 
 	return TRUE
 
@@ -73,7 +73,7 @@
 
 	members -= P
 
-	P.to_chat(span("warning","You are no longer a squad member of [name]."))
+	P.to_chat(span("warning","你已离开[name]小队。"))
 
 	for(var/k in members)
 		var/mob/living/advanced/player/P2 = k
@@ -98,7 +98,7 @@
 
 	leader = P
 
-	P.to_chat(span("notice","You are now the squad leader of [name]."))
+	P.to_chat(span("notice","你现在是[name]小队的队长。"))
 
 	return TRUE
 
@@ -107,7 +107,7 @@
 	if(!leader)
 		return FALSE
 
-	leader.to_chat(span("warning","You are no longer the squad leader of [name]."))
+	leader.to_chat(span("warning","你不再担任[name]小队的队长。"))
 
 	leader = null
 

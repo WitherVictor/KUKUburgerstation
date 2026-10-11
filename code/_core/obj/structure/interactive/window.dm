@@ -1,6 +1,6 @@
 /obj/structure/window
-	name = "glass window"
-	desc = "A see through window. A few good hits could shatter this."
+	name = "玻璃窗"
+	desc = "透明的窗户，狠狠砸几下就能打碎。"
 	icon = 'icons/obj/structure/window/improved.dmi'
 	icon_state = "window"
 
@@ -67,7 +67,7 @@
 	qdel(src)
 
 /obj/structure/window/reinforced
-	name = "aluminium reinforced glass window"
+	name = "铝加固玻璃窗"
 	icon = 'icons/obj/structure/window/improved_reinforced.dmi'
 
 	reinforced_material_id = /material/aluminium
@@ -76,7 +76,8 @@
 	health_base = 300
 
 /obj/structure/window/reinforced/plasma
-	name = "plasteel reinforced phoron-silicate window"
+	name = "塑钢加固佛隆硅酸盐玻璃窗"
+	desc = "由塑钢加固的佛隆硅酸盐玻璃窗，无法破坏。"
 	color = "#E423C9"
 
 	reinforced_material_id = /material/plasteel
@@ -85,14 +86,15 @@
 	health = null //Indestructable.
 
 /obj/structure/window/tinted
-	name = "tinted window"
-	desc = "Don't see through this."
+	name = "深色玻璃窗"
+	desc = "这可看不穿。"
 	color = "#444444"
 	opacity = 1
 
 
 /obj/structure/window/clockwork
-	name = "clockwork window"
+	name = "发条窗"
+	desc = "无法透视，也无法破坏的发条窗。"
 	opacity = 1
 	icon = 'icons/obj/structure/clockwork/window.dmi'
 	icon_state = "window"
@@ -102,11 +104,11 @@
 
 
 /obj/structure/window/cult
-	name = "cult window"
+	name = "邪教窗"
 	color = "#7F0000"
 
 /obj/structure/window/directional
-	name = "window"
+	name = "窗户"
 	icon = 'icons/obj/structure/window/single_new.dmi'
 	icon_state = "single"
 
@@ -128,7 +130,7 @@
 
 	if(dir in DIRECTIONS_INTERCARDINAL)
 		force_corner = TRUE
-		name = "corner window"
+		name = "转角窗"
 
 	. = ..()
 

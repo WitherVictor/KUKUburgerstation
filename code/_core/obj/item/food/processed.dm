@@ -10,7 +10,7 @@
 
 
 /obj/item/consumable/food/processed/donkpocket
-	name = "donk pocket"
+	name = "咚克口袋饼"
 	icon_state = "donkpocket"
 
 	heal_amount_health = 25

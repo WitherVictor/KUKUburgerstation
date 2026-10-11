@@ -1,9 +1,9 @@
 
 
 /mob/living/simple/antag
-	name = "crewmember"
-	desc = "Uh..."
-	desc_extended = "What the fuck?"
+	name = "船员"
+	desc = "呃……"
+	desc_extended = "什么鬼？"
 	icon = 'icons/mob/living/simple/antag.dmi'
 	icon_state = "living"
 

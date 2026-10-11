@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/coffee
-	name = "coffee vendor"
+	name = "咖啡售货机"
 	icon_state = "coffee"
 
 	stored_types = list(

@@ -1,7 +1,7 @@
 /obj/item/armor_plate
-	name = "armor plate"
-	desc = "Not for eating food off of."
-	desc_extended = "A protective armor plate designed to fit a plate carrier."
+	name = "装甲板"
+	desc = "不是用来盛饭的。"
+	desc_extended = "用于装入插板背心的防护装甲板。"
 	icon = 'icons/obj/item/armor_plate.dmi'
 	icon_state = "light"
 
@@ -31,15 +31,17 @@
 /obj/item/armor_plate/get_examine_list(var/mob/examiner)
 	. = ..()
 	var/list/armor_list = list()
+	var/list/damage_display_names = list(BLADE = "切割",BLUNT = "钝击",PIERCE = "穿刺",LASER = "激光",ARCANE = "奥术",HEAT = "高温",COLD = "寒冷",SHOCK = "电击",ACID = "酸蚀",BOMB = "爆炸",BIO = "生物武器",RAD = "辐射",HOLY = "神圣",DARK = "黑暗",FATIGUE = "疲劳",PAIN = "疼痛",ION = "离子",SANITY = "理智",MENTAL = "精神")
 	for(var/damagetype in armor_base)
 		var/damage_rating = armor_base[damagetype]
 		if(damage_rating)
-			armor_list += "[capitalize(damagetype)]: [damage_rating]"
-	. += div("notice","<b>Armor:</b> [capitalize(english_list(armor_list))].")
-	. += div("notice","<b>Armor rating applies when applied to a plate carrier. Stacking multiple plate carriers gives dimishing returns.</b>")
+			var/damage_display_name = damage_display_names[damagetype] ? damage_display_names[damagetype] : damagetype
+			armor_list += "[damage_display_name]：[damage_rating]"
+	. += div("notice","<b>护甲：</b>[jointext(armor_list,"、")]。")
+	. += div("notice","<b>装入插板背心后才会提供这些防护值。叠加多块装甲板时，正面防护收益会递减。</b>")
 
 /obj/item/armor_plate/light
-	name = "light armor plate"
+	name = "轻型装甲板"
 	icon_state = "light"
 
 	armor_base = list(
@@ -55,7 +57,7 @@
 
 
 /obj/item/armor_plate/medium
-	name = "medium armor plate"
+	name = "中型装甲板"
 	icon_state = "medium"
 
 	armor_base = list(
@@ -73,7 +75,7 @@
 
 
 /obj/item/armor_plate/heavy
-	name = "heavy armor plate"
+	name = "重型装甲板"
 	icon_state = "heavy"
 
 	armor_base = list(
@@ -91,7 +93,7 @@
 	value = 275
 
 /obj/item/armor_plate/super
-	name = "super armor plate"
+	name = "超级装甲板"
 	icon_state = "super"
 
 	armor_base = list(
@@ -107,7 +109,7 @@
 	value = 500
 
 /obj/item/armor_plate/ultra
-	name = "ultra armor plate"
+	name = "终极装甲板"
 	icon_state = "super"
 
 	armor_base = list(

@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/full/explorer
-	name = "explorer helmet"
+	name = "探索者头盔"
 	icon = 'icons/obj/item/clothing/hats/explorer_suit.dmi'
 
 

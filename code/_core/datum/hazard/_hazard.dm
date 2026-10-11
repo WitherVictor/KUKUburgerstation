@@ -9,9 +9,9 @@
 
 	var/base_damage = 0.5 // PER TARGETABLE LIMB. REMEMBER, THERE ARE 11 TARGETABLE LIMBS.
 	var/list/threat_text = list(
-		"You feel cold...",
-		"You shiver as the cold surrounds you...",
-		"The cold air hurts you..."
+		"你感到寒冷……",
+		"寒意袭来，你不禁瑟瑟发抖……",
+		"寒冷的空气冻得你生疼……"
 	)
 
 /* rewrite

@@ -1,5 +1,5 @@
 obj/structure/interactive/plank
-	name = "wood plank"
+	name = "木板"
 	icon = 'icons/turf/floor/plank.dmi'
 	icon_state = "plank_m"
 

@@ -1,5 +1,5 @@
 /mob/living/simple/silicon/spawner
-	name = "cyborg spawner"
+	name = "半机械人制造器"
 	icon = 'icons/mob/living/simple/ai.dmi'
 	icon_state = "spawner"
 

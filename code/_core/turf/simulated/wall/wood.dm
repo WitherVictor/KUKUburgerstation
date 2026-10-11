@@ -1,7 +1,7 @@
 /turf/simulated/wall/wood
-	name = "wall"
-	desc = "A wall made of wood"
-	desc_extended = "It's a wall, made of wood, something made it."
+	name = "木墙"
+	desc = "一堵木制的墙。"
+	desc_extended = "一堵木制的墙，某个家伙造了它。"
 	icon = 'icons/turf/wall/wood.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -32,26 +32,26 @@
 
 /turf/simulated/wall/wood/brown
 	color = "#6F4533"
-	desc = "A wall made of wood"
-	desc_extended = "It's a wall, made of wood, something made it."
+	desc = "一堵木制的墙。"
+	desc_extended = "一堵木制的墙，某个家伙造了它。"
 
 /turf/simulated/wall/wood/rich
 	color = "#53331E"
-	desc = "A wall made of wood"
-	desc_extended = "It's a wall, made of wood, something made it. This one seems to be of a higher quality than most."
+	desc = "一堵木制的墙。"
+	desc_extended = "一堵木制的墙，某个家伙造了它。它的品质似乎比大多数木墙更好。"
 
 /turf/simulated/wall/wood/boat
 	color = "#423022"
-	desc = "A wall made of wood"
-	desc_extended = "It's a wall, made of wood, something made it. This one is part of a boat."
+	desc = "一堵木制的墙。"
+	desc_extended = "一堵木制的墙，某个家伙造了它。它是船体的一部分。"
 
 /turf/simulated/wall/wood/boat/starting
 	color = "#724C34"
-	desc = "A wall made of wood"
-	desc_extended = "It's a wall, made of wood, something made it. This one is part of a boat."
+	desc = "一堵木制的墙。"
+	desc_extended = "一堵木制的墙，某个家伙造了它。它是船体的一部分。"
 
 /turf/simulated/wall/wood/rev //for the rev base, more HP
 	color = "#724C34"
-	desc = "A wall made of wood"
-	desc_extended = "It's a wall, made of wood, something made it, prolly' the Slavs. Maybe not."
+	desc = "一堵木制的墙。"
+	desc_extended = "一堵木制的墙，某个家伙造了它，可能是斯拉夫人。也可能不是。"
 	health_base = 2000

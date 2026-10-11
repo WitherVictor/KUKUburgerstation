@@ -1,7 +1,7 @@
 /mob/living/simple/passive/mouse
-	name = "mouse"
-	desc = "Squeak!"
-	desc_extended = "A harmless mouse."
+	name = "老鼠"
+	desc = "吱吱！"
+	desc_extended = "一只无害的老鼠。"
 	icon = 'icons/mob/living/simple/mouse.dmi'
 	icon_state = "mouse_brown"
 	damage_type = /damagetype/unarmed/bite/
@@ -25,15 +25,15 @@
 	return TRUE
 
 /mob/living/simple/passive/mouse/brown
-	name = "field mouse"
+	name = "田鼠"
 	icon_state = "mouse_brown"
 
 /mob/living/simple/passive/mouse/white
-	name = "snow mouse"
+	name = "雪鼠"
 	icon_state = "mouse_white"
 
 /mob/living/simple/passive/mouse/grey
-	name = "maintenance mouse"
+	name = "维护区老鼠"
 	icon_state = "mouse_gray"
 
 /mob/living/simple/passive/mouse/post_death()

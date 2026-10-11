@@ -1,5 +1,5 @@
 /mob/living/simple/turret
-	name = "turret"
+	name = "炮塔"
 
 	anchored = TRUE
 
@@ -65,7 +65,7 @@
 	return stored_weapon.shoot(attacker,victim,null,params,1)
 
 /mob/living/simple/turret/syndicate/
-	name = "syndicate turret"
+	name = "辛迪加炮塔"
 	icon = 'icons/mob/living/simple/turret_syndie.dmi'
 	icon_state = "active"
 
@@ -77,7 +77,7 @@
 	level = 12
 
 /mob/living/simple/turret/syndicate/ship
-	name = "syndicate ship turret"
+	name = "辛迪加舰载炮塔"
 
 	stored_weapon = /obj/item/weapon/ranged/energy/syndicate_turret/ship
 
@@ -89,7 +89,7 @@
 
 
 /mob/living/simple/turret/nanotrasen/
-	name = "nanotrasen turret"
+	name = "纳米传讯炮塔"
 	icon = 'icons/mob/living/simple/turret_simple.dmi'
 	icon_state = "active"
 
@@ -101,7 +101,7 @@
 	level = 8
 
 /mob/living/simple/turret/nanotrasen/immortal
-	name = "immortal nanotrasen turret"
+	name = "不可摧毁的纳米传讯炮塔"
 	health = null
 
 /mob/living/simple/turret/nanotrasen/post_death()
@@ -110,7 +110,7 @@
 
 
 /mob/living/simple/turret/deployable
-	name = "deployed sentry"
+	name = "已架设的哨戒机枪"
 	icon = 'icons/mob/living/simple/turret_deployable_2.dmi'
 	icon_state = "living"
 
@@ -131,14 +131,14 @@
 
 	var/obj/item/powercell/B = get_battery()
 	if(B)
-		. += div("notice","It has a battery installed. It has ([B.charge_current]/[B.charge_max]) charge.")
+		. += div("notice","已安装电池，电量为（[B.charge_current]/[B.charge_max]）。")
 	else
-		. += div("warning","It is missing a battery.")
+		. += div("warning","尚未安装电池。")
 
 	if(stored_magazine)
-		. += div("notice","It has a magazine installed. It has [stored_magazine.get_ammo_count()]/[stored_magazine.bullet_count_max] bullets.")
+		. += div("notice","已安装弹匣，弹药为[stored_magazine.get_ammo_count()]/[stored_magazine.bullet_count_max]发。")
 	else
-		. += div("warning","It is missing a magazine.")
+		. += div("warning","尚未安装弹匣。")
 
 /mob/living/simple/turret/deployable/get_battery()
 	return stored_battery
@@ -152,11 +152,11 @@
 		var/obj/item/powercell/PC = object
 
 		if(stored_battery)
-			activator.to_chat(span("notice","You swap out the battery of \the [src.name]."))
+			activator.to_chat(span("notice","你更换了[src.name]的电池。"))
 			stored_battery.drop_item(get_turf(src))
 			stored_battery = null
 		else
-			activator.to_chat(span("notice","You insert a new battery into \the [src.name]."))
+			activator.to_chat(span("notice","你给[src.name]装入了一块新电池。"))
 
 		PC.drop_item(src)
 		stored_battery = PC
@@ -169,20 +169,20 @@
 		INTERACT_DELAY(10)
 		var/obj/item/magazine/M = object
 		if(!istype(stored_weapon,/obj/item/weapon/ranged/bullet/magazine))
-			activator.to_chat(span("warning","This turret doesn't accept magazines!"))
+			activator.to_chat(span("warning","这座炮塔不使用弹匣！"))
 			return FALSE
 
 		var/obj/item/weapon/ranged/bullet/magazine/R = stored_weapon
 		if(!M.weapon_whitelist[R.type])
-			activator.to_chat(span("warning","This turret doesn't accept this type of magazine!"))
+			activator.to_chat(span("warning","这座炮塔不兼容这种弹匣！"))
 			return FALSE
 
 		if(stored_magazine)
-			activator.to_chat(span("notice","You swap out the magazine of \the [src.name]."))
+			activator.to_chat(span("notice","你更换了[src.name]的弹匣。"))
 			stored_magazine.drop_item(get_turf(src))
 			stored_magazine = null
 		else
-			activator.to_chat(span("notice","You insert a new magazine into \the [src.name]."))
+			activator.to_chat(span("notice","你给[src.name]装入了一个新弹匣。"))
 
 		M.drop_item(src)
 		stored_magazine = M
@@ -207,22 +207,22 @@
 	INTERACT_CHECK_NO_DELAY(src)
 
 	if(dead)
-		activator.to_chat(span("warning","The turret is destroyed!"))
+		activator.to_chat(span("warning","炮塔已经被摧毁！"))
 		return FALSE
 
 	if(get_dist(activator,src) > 1)
-		activator.to_chat(span("warning","You're too far away to pack up \the [src.name]!"))
+		activator.to_chat(span("warning","你离[src.name]太远，无法收起！"))
 		return FALSE
 
 	if(qdeleting || !src.z)
-		activator.to_chat(span("warning","You can't pack up \the [src.name] here!"))
+		activator.to_chat(span("warning","你无法在这里收起[src.name]！"))
 		return FALSE
 
 	return TRUE
 
 /mob/living/simple/turret/deployable/proc/pack_up(var/mob/activator)
 
-	activator.visible_message(span("warning","\The [activator.name] packs up \the [src.name]."),span("notice","You pack up \the [src.name]."))
+	activator.visible_message(span("warning","[activator.name]收起了[src.name]。"),span("notice","你收起了[src.name]。"))
 
 	var/obj/item/deployable/mob/sentry/S = new(get_turf(src))
 	INITIALIZE(S)
@@ -250,7 +250,7 @@
 	INTERACT_DELAY(10)
 
 	if(can_pack_up(activator))
-		activator.visible_message(span("warning","\The [activator.name] starts to pack up \the [src.name]..."),span("notice","You start to pack up \the [src.name]..."))
+		activator.visible_message(span("warning","[activator.name]开始收起[src.name]……"),span("notice","你开始收起[src.name]……"))
 		PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(5),src::pack_up(),activator)
 		PROGRESS_BAR_CONDITIONS(activator,src,src::can_pack_up(),activator)
 
@@ -258,7 +258,7 @@
 
 
 /mob/living/simple/turret/clockwork/
-	name = "clockwork turret"
+	name = "发条炮塔"
 	icon = 'icons/mob/living/simple/clockwork_turret.dmi'
 	icon_state = "active"
 
@@ -274,7 +274,7 @@
 	return ..()
 
 /mob/living/simple/turret/ai_core
-	name = "ai core turret"
+	name = "AI核心炮塔"
 	icon = 'icons/mob/living/simple/turret_nanotrasen.dmi'
 	icon_state = "closed"
 
@@ -330,7 +330,7 @@
 
 //For the AI
 /mob/living/simple/turret/ai_core/immortalish
-	name = "regenerating core turret"
+	name = "再生核心炮塔"
 	var/mob/living/simple/silicon/ai/linked_ai
 
 /mob/living/simple/turret/ai_core/immortalish/Finalize()

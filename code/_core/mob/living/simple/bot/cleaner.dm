@@ -1,6 +1,6 @@
 /mob/living/simple/bot/cleaner
-	name = "cleaning bot"
-	desc = "The legally distinct cleaning bot that cleans messes!"
+	name = "清洁机器人"
+	desc = "法律意义上绝不雷同的清洁机器人，专治脏乱！"
 	icon = 'icons/mob/living/simple/cleaner.dmi'
 	icon_state = "living"
 

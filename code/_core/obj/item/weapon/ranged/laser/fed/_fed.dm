@@ -15,11 +15,11 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			battery.charge_current += charge_per_feed
-			activator.to_chat(span("notice","You've recharged \the [src.name]."))
+			activator.to_chat(span("notice","你为[src.name]补充了能量。"))
 			qdel(object)
 			return
 		else
-			activator.to_chat(span("warning","You can't use this for refilling!"))
+			activator.to_chat(span("warning","不能用这个补充能量！"))
 			return FALSE
 
 	if(is_item(object))
@@ -29,9 +29,9 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(battery)
-				activator.to_chat(span("warning","You are unable to pry out \the [battery.name]."))
+				activator.to_chat(span("warning","你无法撬出[battery.name]。"))
 			else
-				activator.to_chat(span("warning","There is nothing to pry out of \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里没有可撬出的东西！"))
 			return TRUE
 
 	. = ..()

@@ -1,5 +1,5 @@
 /obj/item/storage/blood_box/
-	name = "blood box"
+	name = "血色箱子"
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "bloodbox"
 

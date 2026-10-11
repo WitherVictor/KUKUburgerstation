@@ -1,7 +1,7 @@
 obj/structure/interactive/fulton_beacon
-	name = "fulton beacon system"
-	desc = "Target extracted."
-	desc_extended = "A drop-off point for fulton extractions. This one is owned by the Solarian Government, and serves as a dropoff point for delinquents after being forced to pay their taxes."
+	name = "富尔顿回收信标系统"
+	desc = "目标已回收。"
+	desc_extended = "富尔顿回收的投送地点。这一套属于太阳系政府，用于接收被强制补缴税款的问题人员。"
 	icon = 'icons/obj/structure/fulton_beacon.dmi'
 	icon_state = "beacon"
 

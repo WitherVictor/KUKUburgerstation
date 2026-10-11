@@ -1,7 +1,7 @@
 /obj/item/magazine/sniper_127
-	name = "\improper 12.7x90mm sniper magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 12.7x90mm狙击枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/127_sniper.dmi'
 	icon_state = "12"
 	bullet_count_max = 8
@@ -28,7 +28,7 @@
 	value = 20
 
 /obj/item/magazine/sniper_127/du
-	name = "\improper 12.7x90mm DU sniper magazine"
+	name = "\improper 12.7x90mm贫铀弹狙击枪弹匣"
 	ammo = /obj/item/bullet_cartridge/sniper_127/du
 	prem_restock_ammo = /obj/item/bullet_cartridge/sniper_127
 	rarity = RARITY_RARE

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/holy_cross
-	name = "holy cross spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a holy cross. Always deals critical strikes against bosses."
+	name = "神圣十字法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射神圣十字，对首领必定暴击。"
 	icon_state = "damage"
 
 	rarity = RARITY_COMMON

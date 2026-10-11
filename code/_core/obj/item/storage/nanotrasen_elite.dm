@@ -1,5 +1,5 @@
 /obj/item/storage/nanotrasen_elite
-	name = "nanotrasen security veteran kit"
+	name = "纳米传讯资深安保装备包"
 
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "largebox"

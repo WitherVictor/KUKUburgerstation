@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/contractor_guard
-	name = "nanotrasen elite guard"
-	desc = "The very best assigned to guard this old man."
+	name = "纳米传讯精英守卫"
+	desc = "被指派保护这位老人的顶尖守卫。"
 
 	dna = /dna/human
 

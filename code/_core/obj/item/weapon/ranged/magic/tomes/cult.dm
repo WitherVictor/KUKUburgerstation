@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/cult
-	name = "cultist's tome"
-	desc = "No normies allowed."
-	desc_extended = "Costs mana to use."
+	name = "邪教徒法术典籍"
+	desc = "普通人免进。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 15
 	shoot_delay = 10
 

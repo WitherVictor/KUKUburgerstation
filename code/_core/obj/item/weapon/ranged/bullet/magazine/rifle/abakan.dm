@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/an94
-	name = "\improper 9x39mm AM84 rifle"
-	desc = "Why shoot one bullet when you can shoot two?"
-	desc_extended = "The AM84, or the AutoMekanism rifle, is one of the standard weapons of the elite troops of the Space Slavic army. It was developed as a replacement for the outdated KA-47 rifle. Its quick 2 round burst system allows for very precise firing and tight groupings."
+	name = "\improper 9x39mm AM84步枪"
+	desc = "能打两发，何必只打一发？"
+	desc_extended = "AM84又称自动机械步枪，是太空斯拉夫军队精锐部队的制式武器之一，用于取代过时的KA-47步枪。快速双发点射系统带来了很高的射击精度和密集的弹着点。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/939_rifle_2.dmi'
 	icon_state = "inventory"
 	value = 4500

@@ -1,7 +1,7 @@
 /mob/living/simple/gutlunch
-	name = "gutlunch"
-	desc = "Nature's vacuum cleaners."
-	desc_extended = "A wild lavaland species whose diet consists of iron, carbon, and calcium from rocks and minerals. Known to eat just about anything, including corpses of their own species and others."
+	name = "食腐兽"
+	desc = "大自然的吸尘器。"
+	desc_extended = "熔岩地带的一种野生生物，以岩石和矿物中的铁、碳、钙为食。据说它几乎什么都吃，连同类和其他生物的尸体也不放过。"
 	icon = 'icons/mob/living/simple/gutlunch.dmi'
 	icon_state = "1"
 
@@ -44,7 +44,7 @@
 	if(length(contents))
 		var/turf/T = get_turf(src)
 		if(T)
-			T.visible_message(span("notice","The contents of \the [src.name] spill out!"))
+			T.visible_message(span("notice","[src.name]肚子里的东西全洒了出来！"))
 			var/list/valid_turfs = list(T)
 			for(var/k in DIRECTIONS_ALL)
 				var/turf/GS = get_step(T,k)
@@ -79,7 +79,7 @@
 
 	if(.)
 		play_sound('sound/effects/gutlunch_eat.ogg',T)
-		T.visible_message(span("warning","\The [src.name] eats up everything on \the [T.name]!"))
+		T.visible_message(span("warning","[src.name]吞掉了[T.name]上的所有东西！"))
 		update_sprite()
 
 

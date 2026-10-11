@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue/runic
-	name = "Runic Knight"
-	desc = "They look like they're trying to buy a girlfriend."
+	name = "符文骑士"
+	desc = "看起来像是正想花钱买个女朋友。"
 
 	sex = MALE
 	gender = MALE

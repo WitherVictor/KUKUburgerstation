@@ -1,7 +1,7 @@
 /obj/structure/interactive/intercom
-	name = "ship intercom"
-	desc = "ONE DAY WHILE-"
-	desc_extended = "A ship intercom that connects to the ship's common frequency. It can be turned on/off by interacting with it."
+	name = "舰内对讲机"
+	desc = "有一天，当——"
+	desc_extended = "连接舰内公共频率的对讲机。空手点击可开关麦克风，按住ALT空手点击可开关接收器。"
 	icon = 'icons/obj/structure/radio.dmi'
 	icon_state = "intercom"
 
@@ -53,10 +53,10 @@
 
 	if(activator.attack_flags & CONTROL_MOD_DISARM)
 		stored_radio.receiving = !stored_radio.receiving
-		activator.to_chat(span("notice","You toggle the intercom receiver [stored_radio.receiving ? "on" : "off"]."))
+		activator.to_chat(span("notice","你[stored_radio.receiving ? "打开" : "关闭"]了对讲机接收器。"))
 	else
 		stored_radio.broadcasting = !stored_radio.broadcasting
-		activator.to_chat(span("notice","You toggle the intercom microphone [stored_radio.broadcasting ? "on" : "off"]."))
+		activator.to_chat(span("notice","你[stored_radio.broadcasting ? "打开" : "关闭"]了对讲机麦克风。"))
 		icon_state = stored_radio.broadcasting ? "intercom_speak" : "intercom"
 
 	return TRUE

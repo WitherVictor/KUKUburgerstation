@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/full/paperbag
-	name = "paper bag"
-	desc = "Put the MONEY in the BAG! PUT IT IN!"
-	desc_extended = "Holds items but preferably food. Can be dyed. Can change the design by Alt-clicking it in your hand. Also a fashion statement when worn (must be empty)."
+	name = "纸袋"
+	desc = "把钱放进袋子里！快放进去！"
+	desc_extended = "能装物品，最好用来装食物。可以染色，拿在手里时按住Alt点击可更换图案。也能当时尚头饰戴上，不过必须先倒空。"
 	icon = 'icons/obj/item/clothing/hats/paperbag.dmi'
 	icon_state = "inventory"
 	var/logo = 0
@@ -43,7 +43,9 @@
 	var/mob/C = activator
 	if(C.attack_flags & CONTROL_MOD_DISARM && istype(src.loc,/obj/hud/inventory/organs/))
 		INTERACT_CHECK
-		var/choice = input("What do you want to change on \the [src.name]?","Design Selection") as null|anything in list("Logo","Background")
+		var/list/design_options = list("标志" = "Logo","背景" = "Background")
+		var/choice = input("你想修改[src.name]的哪一部分？","选择图案部件") as null|anything in design_options
+		choice = design_options[choice]
 		if(choice == "Logo")
 			var/logomenu = list(
 				"none" = 0,
@@ -54,11 +56,13 @@
 				"happy" = 5
 			)
 			INTERACT_CHECK
-			choice = input("What do you want to change the logo to?","Logo Selection") as null|anything in logomenu
+			var/list/logo_options = list("无" = "none","纳米传讯" = "nanotrasen","辛迪加" = "syndicate","麦鸣笛" = "mchonk","爱心" = "heart","笑脸" = "happy")
+			choice = input("你想换成哪种标志？","选择标志") as null|anything in logo_options
+			choice = logo_options[choice]
 			if(choice)
 				INTERACT_CHECK
 				logo = logomenu[choice]
-				activator.to_chat(span("notice","You change \the [src.name]'s logo."))
+				activator.to_chat(span("notice","你更换了[src.name]的标志。"))
 		else if(choice == "Background")
 			var/bgmenu = list(
 				"none" = 0,
@@ -67,13 +71,15 @@
 			)
 
 			INTERACT_CHECK
-			choice = input("What do you want to change the background to?","Background Selection") as null|anything in bgmenu
+			var/list/background_options = list("无" = "none","条纹" = "stripe","圆形" = "circle")
+			choice = input("你想换成哪种背景？","选择背景") as null|anything in background_options
+			choice = background_options[choice]
 			if(choice)
 				INTERACT_CHECK
 				logobg = bgmenu[choice]
-				activator.to_chat(span("notice","You change \the [src.name]'s background."))
+				activator.to_chat(span("notice","你更换了[src.name]的背景。"))
 		else
-			activator.to_chat(span("notice","You decide not to change \the [src.name]'s design."))
+			activator.to_chat(span("notice","你决定不更改[src.name]的图案。"))
 			return TRUE
 		update_sprite()
 		return TRUE

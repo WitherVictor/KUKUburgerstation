@@ -1,5 +1,5 @@
 /turf/simulated/floor/candy/
-	name = "frosted icing"
+	name = "糖霜"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "candy"
@@ -20,7 +20,7 @@
 	footstep_id = "snow"
 
 /turf/simulated/floor/candy_cane/
-	name = "candy cane bridge"
+	name = "拐杖糖桥"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "candy_cane"

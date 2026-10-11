@@ -6,7 +6,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/ops/guns
-	name = "nanotrasen special ops gun vendor"
+	name = "纳米传讯特种作战武器售货机"
 	icon_state = "ops_guns"
 
 
@@ -48,7 +48,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/ops/ammo
-	name = "nanotrasen special ops ammo vendor"
+	name = "纳米传讯特种作战弹药售货机"
 	icon_state = "ops_ammo"
 
 	icon_state_broken = null
@@ -83,7 +83,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/ops/clothing
-	name = "nanotrasen special ops clothing vendor"
+	name = "纳米传讯特种作战服装售货机"
 	icon_state = "ops_clothing"
 
 	icon_state_broken = null

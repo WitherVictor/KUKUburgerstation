@@ -1,5 +1,5 @@
 /turf/simulated/floor/road
-	name = "road"
+	name = "道路"
 	icon = 'icons/turf/floor/road.dmi'
 	icon_state = "road"
 
@@ -12,7 +12,7 @@
 	layer = LAYER_FLOOR_ROAD
 
 /turf/simulated/floor/sidewalk
-	name = "sidewalk"
+	name = "人行道"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "sidewalk"
@@ -64,4 +64,22 @@
 
 	src.dir = desired_shade_direction
 
-	name = "[dir2text(desired_shade_direction)]"
+	switch(desired_shade_direction)
+		if(NORTH)
+			name = "北向人行道"
+		if(SOUTH)
+			name = "南向人行道"
+		if(EAST)
+			name = "东向人行道"
+		if(WEST)
+			name = "西向人行道"
+		if(NORTHEAST)
+			name = "东北向人行道"
+		if(NORTHWEST)
+			name = "西北向人行道"
+		if(SOUTHEAST)
+			name = "东南向人行道"
+		if(SOUTHWEST)
+			name = "西南向人行道"
+		else
+			name = initial(name)

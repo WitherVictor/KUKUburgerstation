@@ -1,7 +1,7 @@
 /obj/structure/table/cooking/grill
-	name = "electric grill"
-	desc = "Cook things with this."
-	desc_extended = "You can cook or heat up items by dropping it on top of the grill. Click on it with an empty hand to toggle the grill."
+	name = "电烤架"
+	desc = "用来烹饪食物。"
+	desc_extended = "将物品放在烤架上即可烹饪或加热。空手点击可开关烤架。"
 	icon = 'icons/obj/structure/table/grill.dmi'
 	icon_state = "grill"
 

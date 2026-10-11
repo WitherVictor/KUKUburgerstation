@@ -1,5 +1,5 @@
 /mob/living/simple/chess_piece
-	name = "chess piece"
+	name = "国际象棋棋子"
 	icon = 'icons/mob/living/simple/chess.dmi'
 	ai = null //Custom AI embedded in mob life.
 
@@ -73,7 +73,7 @@
 
 
 /mob/living/simple/chess_piece/pawn
-	name = "pawn"
+	name = "兵"
 	var/black=FALSE
 	var/times_moved = 0
 	icon_state = "pawn_w"
@@ -136,7 +136,7 @@
 
 
 /mob/living/simple/chess_piece/knight
-	name = "knight"
+	name = "马"
 	icon_state = "knight_w"
 	iff_tag = "ChessWhite"
 	loyalty_tag = "ChessWhite"
@@ -171,7 +171,7 @@
 						.[TL] = score
 
 /mob/living/simple/chess_piece/rook
-	name = "rook"
+	name = "车"
 	icon_state = "rook_w"
 	iff_tag = "ChessWhite"
 	loyalty_tag = "ChessWhite"
@@ -198,7 +198,7 @@
 				break
 
 /mob/living/simple/chess_piece/bishop
-	name = "bishop"
+	name = "象"
 	icon_state = "bishop_w"
 	iff_tag = "ChessWhite"
 	loyalty_tag = "ChessWhite"
@@ -225,7 +225,7 @@
 				break
 
 /mob/living/simple/chess_piece/queen
-	name = "queen"
+	name = "后"
 	icon_state = "queen_w"
 	iff_tag = "ChessWhite"
 	loyalty_tag = "ChessWhite"
@@ -255,7 +255,7 @@
 
 
 /mob/living/simple/chess_piece/king
-	name = "king"
+	name = "王"
 	icon_state = "king_w"
 	iff_tag = "ChessWhite"
 	loyalty_tag = "ChessWhite"
@@ -270,12 +270,12 @@ var/global/regex/bad_opinion = regex(@"en *passant *is *n[^f]*forced")
 
 /mob/living/simple/chess_piece/king/proc/give_response()
 	var/list/what_text = list(
-		"fucking what",
-		"dude what",
-		"ok what",
-		"shut your mouth",
-		"????? what????",
-		"ok???? idiot????"
+		"你他妈说什么",
+		"哥们，你说啥",
+		"行吧，你说啥",
+		"闭上你的嘴",
+		"？？？？？什么？？？？",
+		"行吧？？？？蠢货？？？？"
 	)
 	src.do_say(pick(what_text))
 	PROCESS_LIVING(src)

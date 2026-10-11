@@ -1,7 +1,7 @@
 /obj/item/clothing/belt/kilt
-	name = "kilt belt"
-	desc = "THERE CAN ONLY BE ONE."
-	desc_extended = "For holding up kilts."
+	name = "苏格兰裙腰带"
+	desc = "只能有一个！"
+	desc_extended = "用来系住苏格兰裙。"
 	icon = 'icons/obj/item/clothing/belts/kilt.dmi'
 
 	is_container = TRUE

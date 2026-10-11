@@ -1,7 +1,7 @@
 /obj/item/currency/
-	name = "currency"
-	desc = "Grab it while it's hot!"
-	desc_extended = "For use in vendors or other currency-related purposes. Said to be the root of all evil."
+	name = "货币"
+	desc = "趁热赶紧拿！"
+	desc_extended = "可用于售货机及其他需要货币的地方。据说是万恶之源。"
 
 	amount_max = 10000
 
@@ -42,9 +42,9 @@
 	update_sprite()
 
 /obj/item/currency/telecrystals
-	name = "telecrystals"
-	desc = "These are pretty sus crystals."
-	desc_extended = "Currency primarily used by syndicate operatives."
+	name = "传送晶体"
+	desc = "这些晶体相当可疑。"
+	desc_extended = "主要由辛迪加行动人员使用的货币。"
 	icon = 'icons/obj/item/currency/telecrystals.dmi'
 	icon_state = "1"
 	value = 100
@@ -68,9 +68,9 @@
 	return ..()
 
 /obj/item/currency/prize_ticket
-	name = "prize ticket"
-	desc = "What, another useless currency? Isn't burgerbux enough???"
-	desc_extended = "A prize ticket that can be redeemed at a prize vendor. Earned by completing minigames in arcade vendors."
+	name = "兑奖券"
+	desc = "什么，又一种没用的货币？汉堡币还不够吗？？？"
+	desc_extended = "可在奖品售货机兑换奖品的票券。完成街机小游戏即可获得。"
 	icon = 'icons/obj/item/currency/ticket.dmi'
 	icon_state = "1"
 	value = 0.25
@@ -93,9 +93,9 @@
 
 
 /obj/item/currency/magic_token
-	name = "magic shard token"
-	desc = "Magically delicious!"
-	desc_extended = "A special magic shard token that is commonly used to trade with the Wizard Federation. Used to buy rare magic items."
+	name = "魔法碎片代币"
+	desc = "美味得像魔法一样！"
+	desc_extended = "与巫师联邦交易时常用的特殊魔法碎片代币，可用于购买稀有魔法物品。"
 	icon = 'icons/obj/item/currency/magic_token.dmi'
 	icon_state = "1"
 	value = 1000

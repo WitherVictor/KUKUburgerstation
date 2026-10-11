@@ -1,17 +1,17 @@
 /obj/item/contract
-	name = "contract: error"
+	name = "契约：错误"
 	icon = 'icons/obj/item/contract.dmi'
 	icon_state = "unfilled"
 
-	desc = "They said not to deal with the devil. Now look what you've done."
-	desc_extended = "A spooky contract listing one or more conditions the contract holder should complete. Despite being made out of papyrus, it appears to be very strong."
+	desc = "都说别和魔鬼做交易。瞧瞧你干的好事。"
+	desc_extended = "阴森的契约，列出了持有者应完成的一项或多项目标。虽由莎草纸制成，却似乎十分坚韧。"
 
 	var/atom/type_to_check
 	var/value_current = 0
 	var/value_max = 0
 	var/obj/item/reward
 	var/burgerbux_reward = 0
-	var/objective_text = "objectives completed"
+	var/objective_text = "已完成目标"
 
 	drop_sound = 'sound/items/drop/paper.ogg'
 
@@ -70,11 +70,11 @@
 /obj/item/contract/get_examine_details_list(var/mob/examiner)
 	. = ..()
 	if(burgerbux_reward)
-		. += div("notice","Reward on completion: [reward.name] and [burgerbux_reward] Burgerbux.")
+		. += div("notice","完成奖励：[reward.name]和[burgerbux_reward]汉堡币。")
 	else
-		. += div("notice","Reward on completion: [reward.name].")
-	. += div("notice","[value_current] out of [value_max] [objective_text].")
-	. += div("notice bold","Contract progress is only counted if this object is slotted in the top right contract slot.")
+		. += div("notice","完成奖励：[reward.name]。")
+	. += div("notice","[objective_text]：[value_current]/[value_max]。")
+	. += div("notice bold","只有将契约放入右上方的契约槽，才会累计进度。")
 
 /obj/item/contract/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
 	RUN_PARENT_SAFE
@@ -106,14 +106,14 @@
 /obj/item/contract/proc/turn_in(var/mob/living/advanced/player/P,var/params)
 	var/turf/T = get_turf(P)
 	if(src.value_current < src.value_max)
-		P.to_chat(span("warning","You feel it would be unwise to try to turn in a contract that isn't complete yet!"))
+		P.to_chat(span("warning","你觉得提交尚未完成的契约可不是明智之举！"))
 		return FALSE
 	var/initial_investment = CEILING(get_value(),10)
 	if(burgerbux_reward)
-		P.to_chat(span("notice","You are awarded \the [reward.name] and [burgerbux_reward] burgerbux for completing the contract, as well as your initial investment of [initial_investment] credits."))
+		P.to_chat(span("notice","你完成了契约，获得[reward.name]和[burgerbux_reward]汉堡币，并获退还[initial_investment]信用点的初始投入。"))
 		P.adjust_burgerbux(burgerbux_reward)
 	else
-		P.to_chat(span("notice","You are awarded \the [reward.name] for completing the contract. as well as your initial investment of [initial_investment] credits."))
+		P.to_chat(span("notice","你完成了契约，获得[reward.name]，并获退还[initial_investment]信用点的初始投入。"))
 	src.drop_item(T)
 	reward.drop_item(T)
 	P.put_in_hands(reward,params)

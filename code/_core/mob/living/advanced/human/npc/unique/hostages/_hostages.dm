@@ -10,7 +10,7 @@
 	src.add_organ(/obj/item/organ/internal/implant/head/loyalty/nanotrasen)
 
 /mob/living/advanced/npc/unique/hostage/assistant
-	name = "Urist McRobust"
+	name = "乌瑞斯特·麦硬汉"
 	sex = MALE
 	gender = MALE
 	dialogue_id = /dialogue/npc/hostage/assistant
@@ -21,7 +21,7 @@
 	equip_loadout(/loadout/new_player)
 
 /mob/living/advanced/npc/unique/hostage/clown
-	name = "Charles the Clown"
+	name = "小丑查尔斯"
 	sex = MALE
 	gender = MALE
 	dialogue_id = /dialogue/npc/hostage/assistant
@@ -32,7 +32,7 @@
 	equip_loadout(/loadout/clown)
 
 /mob/living/advanced/npc/unique/hostage/scientist
-	name = "Chad Thundercock"
+	name = "查德·雷霆巨屌"
 	sex = MALE
 	gender = MALE
 	dialogue_id = /dialogue/npc/hostage/assistant

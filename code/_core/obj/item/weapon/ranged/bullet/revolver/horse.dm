@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/horse
-	name = "\improper .45 HOL-Horse Revolver"
-	desc = "Yeehaw chucklefucks."
-	desc_extended = "A replica of a past relic, this double action revolver fires .45 pistol rounds. Not very practical, but at least you'll look cool using it."
+	name = "\improper .45霍尔·荷斯左轮手枪"
+	desc = "驾！蠢货们。"
+	desc_extended = "旧时代武器的复刻品，双动左轮手枪，发射.45手枪弹。不太实用，但至少用起来很帅。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/45.dmi'
 	icon_state = "inventory"
 	value = 400
@@ -87,5 +87,5 @@
 	INTERACT_DELAY(1)
 
 	rotate_cylinder(-1)
-	activator?.to_chat(span("notice","You rotate the cylinder backwards."))
+	activator?.to_chat(span("notice","你反向转动了弹巢。"))
 	return TRUE

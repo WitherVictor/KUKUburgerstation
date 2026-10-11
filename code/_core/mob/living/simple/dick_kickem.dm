@@ -1,7 +1,7 @@
 /mob/living/simple/dick_kickem
-	name = "DICK KICKEM"
-	desc = "HE'S HERE TO EAT ASS."
-	desc_extended = "What the fuck?"
+	name = "迪克·踢爆"
+	desc = "他来这儿就是为了舔屁股。"
+	desc_extended = "什么鬼？"
 	icon = 'icons/mob/living/simple/dick_kickem.dmi'
 	icon_state = "dick"
 

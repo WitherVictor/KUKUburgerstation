@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/iongun
-	name = "AM-ION Cannon"
-	desc = "The solution to all those mechanized units."
-	desc_extended = "A powerful energy weapon that shoots strong ionized bursts of electricity. Excellent for destroying mechs."
+	name = "AM-ION离子炮"
+	desc = "各种机械化单位的克星。"
+	desc_extended = "发射强力离子化电脉冲的能量武器，摧毁机甲的绝佳选择。"
 	icon = 'icons/obj/item/weapons/ranged/laser/ion.dmi'
 
 	company_type = "NanoTrasen"

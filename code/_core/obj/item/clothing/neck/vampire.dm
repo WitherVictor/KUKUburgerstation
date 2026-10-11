@@ -1,8 +1,8 @@
 /obj/item/clothing/neck/vampire
-	name = "vampire cloak"
+	name = "吸血鬼斗篷"
 	icon = 'icons/obj/item/clothing/neck/vampire.dmi'
-	desc = "What is a man? A miserable pile of secrets!"
-	desc_extended = "The centerpiece of vampire attire."
+	desc = "人是什么？不过是一堆可悲的秘密！"
+	desc_extended = "吸血鬼行头的核心。"
 	worn_layer = LAYER_MOB_CLOTHING_ALL
 
 	item_slot = SLOT_NECK

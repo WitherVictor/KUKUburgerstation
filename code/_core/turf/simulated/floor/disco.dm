@@ -1,7 +1,7 @@
 /turf/simulated/floor/disco
-	name = "disco floor"
-	desc = "Pretty colors!"
-	desc_extended = "A disco floor for disco dancing. It's Friday night."
+	name = "迪斯科地板"
+	desc = "漂亮的颜色！"
+	desc_extended = "供人跳迪斯科的地板。周五夜晚到啦。"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "disco"
@@ -21,7 +21,7 @@
 	real_icon_state = "disco_light_[1 + ((x+y) % 4)]"
 	pixel_x = -8
 	pixel_y = -8
-	name = real_icon_state
+	name = "迪斯科灯光[1 + ((x+y) % 4)]"
 	alpha = 255
 
 /turf/simulated/floor/disco/Finalize()

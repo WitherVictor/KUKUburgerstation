@@ -1,5 +1,5 @@
 /obj/structure/interactive/localmachine/snowflake
-	name = "door"
+	name = "门"
 
 	//Cached image is the default image.
 

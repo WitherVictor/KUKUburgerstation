@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/science
-	name = "science goggles"
-	desc = "SCIENCE!"
-	desc_extended = "A special set of robust science goggles that protect your eyes from the dangers of science."
+	name = "科研护目镜"
+	desc = "科学！"
+	desc_extended = "一副特别坚固的科研护目镜，保护你的眼睛免受科研活动中的危险。"
 	icon = 'icons/obj/item/clothing/glasses/science.dmi'
 
 	armor = /armor/glasses

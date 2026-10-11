@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/bartender
-	name = "Miss Flanagan"
-	desc = "Remember the!"
+	name = "弗拉纳根小姐"
+	desc = "记住那个！"
 	species = "human"
 	gender = FEMALE
 	sex = FEMALE

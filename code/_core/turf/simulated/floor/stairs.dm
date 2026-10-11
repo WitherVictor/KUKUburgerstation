@@ -1,5 +1,5 @@
 /turf/simulated/floor/stair
-	name = "stairs"
+	name = "楼梯"
 	icon = 'icons/turf/floor/stairs.dmi'
 	icon_state = "stair"
 	layer = LAYER_FLOOR_TILE

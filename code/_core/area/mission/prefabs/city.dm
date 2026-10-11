@@ -1,7 +1,7 @@
 /area/mission/prefab/city
 
 /area/mission/prefab/city/city_hall
-	name = "city hall"
+	name = "市政厅"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -24,7 +24,7 @@
 	interior = FALSE
 
 /area/mission/prefab/city/the_lightbulb
-	name = "The Lightbulb"
+	name = "灯泡之家"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -48,7 +48,7 @@
 
 
 /area/mission/prefab/city/discount_dans
-	name = "Discount Dan's"
+	name = "折扣丹"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -69,7 +69,7 @@
 
 
 /area/mission/prefab/city/the_net
-	name = "The Net"
+	name = "网络之家"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -81,7 +81,7 @@
 
 
 /area/mission/prefab/city/toolbox_tavern
-	name = "\improper Toolbox Tavern"
+	name = "\improper 工具箱酒馆"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -98,7 +98,7 @@
 
 
 /area/mission/prefab/city/die_lab
-	name = "Die Lab"
+	name = "染杀实验室"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -112,7 +112,7 @@
 
 
 /area/mission/prefab/city/the_chem_lab
-	name = "The Chem Lab"
+	name = "化学实验室"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -129,7 +129,7 @@
 
 
 /area/mission/prefab/city/honked_and_loaded
-	name = "\improper Honked and Loaded"
+	name = "\improper 鸣笛上膛"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -141,7 +141,7 @@
 
 
 /area/mission/prefab/city/the_harmbaton
-	name = "The Harmbaton"
+	name = "伤害警棍"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -157,7 +157,7 @@
 	icon_state = "red"
 
 /area/mission/prefab/city/robusta_cafe
-	name = "\improper Robusta Cafe"
+	name = "\improper 罗布斯塔咖啡馆"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -171,7 +171,7 @@
 
 
 /area/mission/prefab/city/newmed_clinic
-	name = "\improper Dr Newmed's Clinic"
+	name = "\improper 纽梅德医生的诊所"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -188,7 +188,7 @@
 
 
 /area/mission/prefab/city/chess
-	name = "Chess!"
+	name = "国际象棋！"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -202,7 +202,7 @@
 
 
 /area/mission/prefab/city/the_coderbus
-	name = "\improper The Coderbus"
+	name = "\improper 程序员整活巴士"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -217,7 +217,7 @@
 
 
 /area/mission/prefab/city/the_outer_spess
-	name = "\improper The Outer Spess"
+	name = "\improper 外太空"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -229,7 +229,7 @@
 
 
 /area/mission/prefab/city/vlads_salad_bar
-	name = "\improper Vlad's Salad Bar"
+	name = "\improper 弗拉德沙拉吧"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -246,7 +246,7 @@
 
 
 /area/mission/prefab/city/traitor_joes
-	name = "\improper Traitor Joe's"
+	name = "\improper 叛徒乔商店"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -263,7 +263,7 @@
 
 
 /area/mission/prefab/city/the_ale_nath
-	name = "The Ale'Nath"
+	name = "艾尔·纳斯"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -277,7 +277,7 @@
 
 
 /area/mission/prefab/city/the_greytide
-	name = "The Greytide"
+	name = "灰潮"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -295,7 +295,7 @@
 
 
 /area/mission/prefab/city/closed_01
-	name = "closed down shop"
+	name = "停业商店"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -307,7 +307,7 @@
 
 
 /area/mission/prefab/city/closed_02
-	name = "closed down shop"
+	name = "停业商店"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE

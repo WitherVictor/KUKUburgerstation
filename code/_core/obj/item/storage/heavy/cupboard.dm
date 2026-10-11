@@ -1,6 +1,6 @@
 /obj/item/storage/heavy/cupboard
-	name = "cupboard"
-	desc = "There might be something inside."
+	name = "橱柜"
+	desc = "里面可能有东西。"
 	icon = 'icons/obj/item/storage/house.dmi'
 	icon_state = "cupboard"
 

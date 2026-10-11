@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/hardsuit/clown_riot_armor
-	name = "clown riot armor"
+	name = "小丑防暴护甲"
 	icon = 'icons/obj/item/clothing/suit/clown_riot_armor.dmi'
 
-	desc = "The only time a clown gets serious is when another clown gets serious."
-	desc_extended = "The Honk Lands will never be truly the same after its massacre,there were bananas everywhere."
+	desc = "只有另一个小丑认真起来时，小丑才会认真。"
+	desc_extended = "那场屠杀后，鸣笛之地再也回不到从前；当时到处都是香蕉。"
 
 	defense_rating = list(
 		BLADE = 100,

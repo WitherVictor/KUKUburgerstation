@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/val
-	name = "\improper 9x39mm AS Val"
-	desc = "The last thing you'll never hear."
-	desc_extended = "A modified version of the silent Vintorez sniper rifle, the assault rifle was designed as a special forces weapon."
+	name = "\improper 9x39mm AS巨浪"
+	desc = "最后一声，你永远听不到。"
+	desc_extended = "消音绞丝机狙击步枪的改进版本，作为特种部队武器设计的突击步枪。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/939_rifle.dmi'
 	icon_state = "inventory"
 	value = 2000

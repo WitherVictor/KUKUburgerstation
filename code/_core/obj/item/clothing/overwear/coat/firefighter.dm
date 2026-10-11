@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/coat/firefighter
-	name = "firefighter suit"
-	desc = "Fight fire with fire (protection)."
+	name = "消防服"
+	desc = "用防火来对付火。"
 	protected_limbs = list(BODY_TORSO,BODY_GROIN,BODY_ARM_LEFT,BODY_ARM_RIGHT,BODY_HAND_LEFT,BODY_HAND_RIGHT,BODY_LEG_LEFT,BODY_LEG_RIGHT,BODY_FOOT_LEFT,BODY_FOOT_RIGHT)
-	desc_extended = "A very durable and insulated firesuit designed to resist against hazards while working as a firefighter."
+	desc_extended = "一套十分耐用的隔热消防服，用于抵御消防作业中的各种危险。"
 	icon = 'icons/obj/item/clothing/suit/fire.dmi'
 
 	hidden_organs = list(

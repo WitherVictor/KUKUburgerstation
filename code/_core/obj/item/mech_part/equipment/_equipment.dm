@@ -7,7 +7,7 @@
 
 
 /obj/item/mech_part/equipment
-	name = "equipment"
+	name = "机甲装备"
 	icon = 'icons/mob/living/advanced/mecha/equipment.dmi'
 	var/slot = MECH_SLOT_NONE
 	var/current_slot
@@ -16,7 +16,7 @@
 
 
 /obj/item/mech_part/equipment/weapon
-	name = "mech weapon"
+	name = "机甲武器"
 	var/obj/item/weapon/stored_weapon
 
 	pixel_x = 0
@@ -61,7 +61,7 @@
 			icon_state = stored_weapon.icon_state
 
 	else
-		name = "WEAPON ERROR."
+		name = "武器错误。"
 
 	return ..()
 

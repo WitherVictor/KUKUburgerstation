@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/dmca
 	name = "\improper 10x24mm DMCA"
-	desc = "Take down your foes with this DMCA!"
-	desc_extended = "The 10x24mm DMCA is an extremely robust automatic weapon capable of sending a volley of high impact rounds at long ranges."
+	desc = "用这把DMCA，让敌人统统下架！"
+	desc_extended = "10x24mm DMCA是一款极为坚固的自动武器，能向远处倾泻高冲击力弹药。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/dmca.dmi'
 	icon_state = "inventory"
 	value = 5000

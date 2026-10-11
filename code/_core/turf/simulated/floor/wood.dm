@@ -1,5 +1,5 @@
 /turf/simulated/floor/wood
-	name = "wood floor"
+	name = "木地板"
 	icon = 'icons/turf/floor/wood.dmi'
 	icon_state = "wood"
 	layer = LAYER_FLOOR_TILE

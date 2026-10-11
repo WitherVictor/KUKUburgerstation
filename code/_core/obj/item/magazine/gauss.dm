@@ -1,7 +1,7 @@
 /obj/item/magazine/gauss_gun
-	name = "\improper 2.54x12mm Gauss Rifle magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 2.54x12mm高斯步枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/gauss_gun.dmi'
 	icon_state = "fgauss"
 	bullet_count_max = 10
@@ -29,25 +29,25 @@
 	value = 20
 
 /obj/item/magazine/gauss_gun/explosive
-	name = "\improper 2.54x12mm Gauss Rifle magazine - Gibtonite Slug"
+	name = "\improper 2.54x12mm高斯步枪弹匣（爆晶矿独头弹）"
 	icon_state = "fgausshe"
 	ammo = /obj/item/bullet_cartridge/gauss/explosive
 	rarity = RARITY_RARE
 
 /obj/item/magazine/gauss_gun/ion
-	name = "\improper 2.54x12mm Gauss Rifle magazine - Uranium-Iron Alloy"
+	name = "\improper 2.54x12mm高斯步枪弹匣（铀铁合金弹）"
 	icon_state = "fgaussion"
 	ammo = /obj/item/bullet_cartridge/gauss/ion
 	rarity = RARITY_RARE
 
 /obj/item/magazine/gauss_gun/incendiary
-	name = "\improper 2.54x12mm Gauss Rifle magazine - Compressed Napalm"
+	name = "\improper 2.54x12mm高斯步枪弹匣（压缩凝固汽油弹）"
 	icon_state = "fgaussinc"
 	ammo = /obj/item/bullet_cartridge/gauss/incendiary
 	rarity = RARITY_RARE
 
 /obj/item/magazine/gauss_gun/ap
-	name = "\improper 2.54x12mm Gauss Rifle magazine - Armor Piercing"
+	name = "\improper 2.54x12mm高斯步枪弹匣（穿甲弹）"
 	icon_state = "fgaussap"
 	ammo = /obj/item/bullet_cartridge/gauss/ap
 	rarity = RARITY_UNCOMMON

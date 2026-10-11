@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/chaos
-	name = "tome of chaos"
-	desc = "Can't aim? Shoot balls of pure chaos around you."
-	desc_extended = "Costs mana to use."
+	name = "混沌法术典籍"
+	desc = "瞄不准？向周围发射纯粹的混沌球吧。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 7
 	shoot_delay = 14
 

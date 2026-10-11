@@ -1,7 +1,7 @@
 /obj/item/clothing/pants/clown
-	name = "clown pants"
-	desc = "Clown-looking."
-	desc_extended = "A pair of pants worn by a clown. There's the pants!"
+	name = "小丑裤"
+	desc = "一看就是小丑穿的。"
+	desc_extended = "小丑穿的裤子。原来裤子在这里！"
 	icon = 'icons/obj/item/clothing/pants/clown.dmi'
 
 	armor = /armor/cloth

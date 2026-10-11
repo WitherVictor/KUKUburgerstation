@@ -1,9 +1,9 @@
 /obj/item/clothing/pants/shorts
-	name = "shorts"
+	name = "短裤"
 	icon = 'icons/obj/item/clothing/pants/shorts.dmi'
 
-	desc = "Eat Pant."
-	desc_extended = "The peak of fashion."
+	desc = "吃我裤子。"
+	desc_extended = "时尚的巅峰。"
 
 	armor = /armor/cloth/summer
 

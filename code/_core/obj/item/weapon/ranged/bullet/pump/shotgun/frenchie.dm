@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/frenchie
-	name = "12g Frenchie"
-	desc = "Ahhhhhhhhhh, the french-"
-	desc_extended = "An early prototype of an experimental shotgun designed to shoot two slugs at once out of one barrel. That never worked out well."
+	name = "12号法国佬"
+	desc = "啊啊啊啊，法国人——"
+	desc_extended = "实验型霰弹枪的早期原型，设计目标是从一根枪管同时发射两发独头弹。结果一直不怎么样。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/nanotrasen/frenchie.dmi'
 	icon_state = "inventory"
 	value = 800

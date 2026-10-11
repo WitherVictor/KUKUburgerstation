@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/pkm
-	name = "\improper 7.62x54mmR PKA light machine gun"
-	desc = "Killa's weapon of choice."
-	desc_extended = "Not to be confused with the personal kinetic accelerator, the PKA light machine gun is a lightweight beast of a gun designed to lay down suppressive fire on a target, or rather, the general direction of a target."
+	name = "\improper 7.62x54mmR PKA轻机枪"
+	desc = "基拉的首选武器。"
+	desc_extended = "别和便携式动能加速器搞混了。PKA轻机枪是轻巧的火力猛兽，用于压制目标——更准确地说，是压制目标大致所在的方向。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/762_lmg.dmi'
 	icon_state = "inventory"
 	value = 4000

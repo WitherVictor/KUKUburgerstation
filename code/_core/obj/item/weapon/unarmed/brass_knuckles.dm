@@ -1,8 +1,8 @@
 obj/item/weapon/unarmed/brass_knuckles
 
-	name = "iron knuckles"
-	desc = "Cheat at unarmed combat."
-	desc_extended = "A large piece of brass molded to fit around your fist. Delivers an extra punch when attacking, but makes you less agile."
+	name = "铁指虎"
+	desc = "徒手格斗的作弊工具。"
+	desc_extended = "套在拳头上的大块金属，增加拳击威力，但会让动作变得不够灵活。"
 
 	icon = 'icons/obj/item/weapons/unarmed/brass_knuckles.dmi'
 
@@ -29,9 +29,9 @@ obj/item/weapon/unarmed/brass_knuckles/update_icon()
 
 
 obj/item/weapon/unarmed/brass_knuckles/mod
-	name = "spiked knuckles"
-	desc = "Cheat at unarmed combat."
-	desc_extended = "A large piece of brass molded to fit around your fist. Delivers an extra punch when attacking, but makes you less agile. This one is spiked, and is especially deadly."
+	name = "尖刺指虎"
+	desc = "徒手格斗的作弊工具。"
+	desc_extended = "套在拳头上的大块黄铜，增加拳击威力，但会让动作变得不够灵活。这副还带有尖刺，格外致命。"
 
 	icon = 'icons/obj/item/weapons/unarmed/spiked_knuckles.dmi'
 

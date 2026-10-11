@@ -1,7 +1,7 @@
 /obj/item/supportgem
-	name = "support gem"
-	desc = "Not ripping off another game, I swear."
-	desc_extended = "A magical gem that supports socketed skills in wands."
+	name = "辅助宝石"
+	desc = "我发誓，这可没抄别的游戏。"
+	desc_extended = "增强魔杖中所镶嵌法术的魔法宝石。"
 
 	icon = 'icons/obj/item/spellgem.dmi'
 	icon_state = "support"
@@ -69,11 +69,11 @@
 /obj/item/supportgem/get_examine_list(var/mob/examiner)
 	. = ..()
 	. += div("notice",support_desc)
-	. += div("notice","Bolded values above indicate that value scales with quality.")
+	. += div("notice","上方加粗的数值会随品质变化。")
 
 
 /obj/item/supportgem/damage
-	name = "deadly impact support gem"
+	name = "致命冲击辅助宝石"
 	power_base = 0.2 //20%
 	power_per_quality = 1/100 //100% more damage per 100 quality
 	value = 1000
@@ -90,10 +90,10 @@
 		"mana_cost_multiplier" = 2,
 		"shoot_delay" = 1.5
 	)
-	support_desc = "Increases damage dealt by <b>[(damage_mul)*100]</b>%.\nIncreases mana cost by 100%.\nIncreases shoot delay by 50%."
+	support_desc = "伤害提高<b>[(damage_mul)*100]</b>%。\n法力消耗增加100%。\n射击间隔延长50%。"
 
 /obj/item/supportgem/cost
-	name = "cheaper casting support gem"
+	name = "节能施法辅助宝石"
 	power_base = 0.10 //10%
 	power_per_quality = 0.5/100 //50% reduced mana cost per 100 quality
 	value = 500
@@ -109,7 +109,7 @@
 		"projectile_speed" = 0.75,
 		"inaccuracy_modifier" = 1.25
 	)
-	support_desc = "Decreases mana cost by <b>[mana_mul*100]</b>%.\nDecreases projectile speed by 25%.\nDecreases projectile accuracy by 25%."
+	support_desc = "法力消耗减少<b>[mana_mul*100]</b>%。\n弹体速度降低25%。\n不精确度系数增加25%。"
 
 /*
 /obj/item/supportgem/projectiles
@@ -134,7 +134,7 @@
 
 
 /obj/item/supportgem/spread
-	name = "focused shots support gem"
+	name = "集中射击辅助宝石"
 	power_base = 0.5 //50%
 	power_per_quality = 0.2 / 100 //20% less spread per 100 quality
 	value = 750
@@ -151,10 +151,10 @@
 		"projectile_speed" = 1.25,
 		"shoot_delay" = 2
 	)
-	support_desc = "Decreases projectile spread by <b>[bullet_spread*100]</b>%.\nIncreases projectile accuracy by 25%.\nIncreases projectile speed by 25%.\nIncreases shoot delay by 100%."
+	support_desc = "弹体散布减少<b>[bullet_spread*100]</b>%。\n不精确度系数降低25%。\n弹体速度提高25%。\n射击间隔延长100%。"
 
 /obj/item/supportgem/penetrations
-	name = "penetrator support gem"
+	name = "穿透辅助宝石"
 	power_base = 1 //1 extra penetration
 	power_per_quality = 3/100 //3 extra penetrations per 100 quality
 	value = 1000
@@ -169,10 +169,10 @@
 		"penetrations" = 1 + penetration_count,
 		"mana_cost_multiplier" = 1.5
 	)
-	support_desc = "Increases penetration multiplier by <b>[penetration_count*100]%</b>.\nIncreases mana cost by 50%."
+	support_desc = "穿透次数增加<b>[1 + penetration_count]</b>次。\n法力消耗增加50%。"
 
 /obj/item/supportgem/overkill
-	name = "overkill support gem"
+	name = "过度杀伤辅助宝石"
 	power_base = 0.4 //1.4x dmg
 	power_per_quality = 1/100 //100% more damage per 100% qual
 	value = 2500
@@ -191,11 +191,11 @@
 		"mana_cost_multiplier" = manamult + 2.5,
 		"shoot_delay" = 2
 	)
-	support_desc = "Increases damage by <b>[damagemult*100]%</b>.\nIncreases mana cost by <b>[(manamult + 1.5)*100]%</b>.\nIncreases projectile speed by 25%.\nIncreases shoot delay by 100%."
+	support_desc = "伤害提高<b>[damagemult*100]%</b>。\n法力消耗增加<b>[(manamult + 1.5)*100]%</b>。\n弹体速度提高25%。\n不精确度系数增加25%。\n射击间隔延长100%。"
 
 
 /obj/item/supportgem/speed
-	name = "speed support gem"
+	name = "加速辅助宝石"
 	power_base = 0.2 //20% increased speed.
 	power_per_quality = 0.4/100 //40% increased speed per 100 quality.
 	value = 750
@@ -210,11 +210,11 @@
 		"projectile_speed" = 1 + projectile_speed,
 		"mana_cost_multiplier" = 1.5
 	)
-	support_desc = "Increases projectile speed by <b>[projectile_speed*100]%</b>.\nIncreases mana cost by 50%.\nNote: Projectile speed is capped to a certain amount."
+	support_desc = "弹体速度提高<b>[projectile_speed*100]%</b>。\n法力消耗增加50%。\n注意：弹体速度存在上限。"
 
 
 /obj/item/supportgem/precision
-	name = "precision support gem"
+	name = "精准辅助宝石"
 	power_base = 0.2 //20% increased accuracy.
 	power_per_quality = 0.4/100 //40% increased accuracy per 100 quality.
 	value = 500
@@ -229,4 +229,4 @@
 		"inaccuracy_modifier" = 1 - precision,
 		"mana_cost_multiplier" = 1.3
 	)
-	support_desc = "Increases accuracy by <b>[precision*100]%</b>.\nIncreases mana cost by 30%."
+	support_desc = "不精确度系数降低<b>[precision*100]%</b>。\n法力消耗增加30%。"

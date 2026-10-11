@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/bolt
-	name = "crossbow bolt"
-	desc = "For when you need to go medieval on someone's ass."
-	desc_extended = "A crudely constructed bolt meant for crossbow"
+	name = "弩矢"
+	desc = "想用中世纪的方式教训人时，就用这个。"
+	desc_extended = "一支制作粗糙的弩用箭矢。"
 	rarity = RARITY_COMMON
 	icon = 'icons/obj/item/bullet/bolt.dmi'
 	item_count_max = 6

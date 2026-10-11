@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/wizard
-	name = "wizard's robes"
+	name = "巫师长袍"
 	icon = 'icons/obj/item/clothing/suit/wizard.dmi'
 
-	desc = "EI NATH!!"
-	desc_extended = "A cheap mass-produced enchanted set of robes. Not necessairly required to use magic, but wearing this, or any other clothing with magic protection will make your spells stronger."
+	desc = "艾纳斯！！"
+	desc_extended = "廉价量产的附魔长袍，能够提供魔法防护。施法并不一定要穿它。"
 
 	armor = /armor/dark/arcane
 
@@ -33,9 +33,9 @@
 	)
 
 /obj/item/clothing/overwear/coat/wizard/real
-	name = "authentic wizard robes"
-	desc = "The real deal."
-	desc_extended = "A real, entirely authentic enchanted wizard robes with all the protection a serious wizard needs."
+	name = "正统巫师长袍"
+	desc = "货真价实。"
+	desc_extended = "一套真正的正统附魔巫师长袍，提供强大的魔法防护，并增强魔法与召唤技能。"
 
 	armor = /armor/cloth/arcane/bonus
 

@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/dummy
-	name = "target practice dummy"
-	desc = "It's a dummy, dummy."
-	desc_extended = "A standard NanoTrasen practice dummy used to train new recruits how to shoot, and more importantly, how to aim."
+	name = "射击训练假人"
+	desc = "这是个假人，笨蛋。"
+	desc_extended = "纳米传讯的标准训练假人，用来教新兵开枪，更重要的是教他们如何瞄准。"
 	ai = null
 
 	species = "dummy"
@@ -30,9 +30,9 @@
 	return 0.1
 
 /mob/living/advanced/npc/dummy/armor
-	name = "armored target practice dummy"
+	name = "披甲射击训练假人"
 	loadout = /loadout/dummy
 
 /mob/living/advanced/npc/dummy/armor_heavy
-	name = "heavy armored target practice dummy"
+	name = "重甲射击训练假人"
 	loadout = /loadout/dummy/heavy

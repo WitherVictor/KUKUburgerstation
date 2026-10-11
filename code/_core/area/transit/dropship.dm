@@ -1,5 +1,5 @@
 /area/transit/dropship
-	name = "dropship shuttle"
+	name = "登陆穿梭机"
 
 /area/transit/dropship/alpha/bluespace
 	transit_turf = /turf/bluespace

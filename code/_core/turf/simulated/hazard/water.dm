@@ -3,7 +3,7 @@
 #define MAX_DEPTH (VIEW_RANGE)
 
 /turf/simulated/liquid/water
-	name = "stagnant water"
+	name = "死水"
 	icon = 'icons/turf/floor/water.dmi'
 	icon_state = "riverwater_static"
 
@@ -67,24 +67,24 @@
 	. = ..()
 
 /turf/simulated/liquid/water/sea
-	name = "sea water"
+	name = "海水"
 	fishing_rewards = /loot/fishing/sea
 
 /turf/simulated/liquid/water/memorial
-	name = "water"
+	name = "水"
 	fishing_rewards = null
 	depth = VIEW_RANGE * MAX_DEPTH
 
 /turf/simulated/liquid/water/river
-	name = "forest river water"
+	name = "森林河水"
 	fishing_rewards = /loot/fishing/river
 
 /turf/simulated/liquid/water/river/ice
-	name = "ice river water"
+	name = "冰河河水"
 	fishing_rewards = /loot/fishing/river
 
 /turf/simulated/liquid/water/river/jungle
-	name = "jungle river water"
+	name = "丛林河水"
 	fishing_rewards = /loot/fishing/river
 
 /turf/simulated/liquid/water/river/jungle/Finalize()
@@ -96,12 +96,12 @@
 			R.pixel_y = rand(-8,8)
 
 /turf/simulated/liquid/water/cave
-	name = "stagnant cave water"
+	name = "洞穴死水"
 
 /turf/simulated/liquid/water/pond
-	name = "stagnant pond water"
+	name = "池塘死水"
 
 /turf/simulated/liquid/water/desert
-	name = "oasis water"
+	name = "绿洲水"
 
 #undef MAX_DEPTH

@@ -1,5 +1,5 @@
 /obj/item/spellpaper
-	name = "spellcasting paper"
+	name = "施法纸"
 
 	icon = 'icons/obj/items/paper.dmi'
 	icon_state = "clean_blank"

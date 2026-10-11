@@ -1,7 +1,7 @@
 /mob/living/simple/halloween_spirit
-	name = "phantasm"
-	desc = "No, not that one."
-	desc_extended = "Extremely spooky spirits that only exist to bite your ankles."
+	name = "幻影"
+	desc = "别想歪了，说的是这个。"
+	desc_extended = "极其阴森的幽灵，存在的唯一目的就是咬你的脚踝。"
 	icon = 'icons/mob/living/simple/spooky.dmi'
 	icon_state = "red"
 	damage_type = /damagetype/melee/sword/claymore/cult

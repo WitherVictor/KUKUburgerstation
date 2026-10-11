@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/lmg_nt
 	name = "\improper 7.62mm H-LMG"
-	desc = "What's betweeen you and 100 Syndicate? This LMG."
-	desc_extended = "An extremely pricy 7.62mm Light Machine Gun that was originally inteded for use in mounted placements is now available for use in combat situations."
+	desc = "你与100名辛迪加成员之间，隔着什么？这把轻机枪。"
+	desc_extended = "极其昂贵的7.62mm轻机枪，最初用于固定枪位，如今也可带入战斗。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/762_1.dmi'
 	icon_state = "inventory"
 

@@ -1,6 +1,6 @@
 /obj/structure/interactive/localmachine/harvestable_flora
-	name = "harvestable flora"
-	desc = "Harvest me!"
+	name = "可采收植物"
+	desc = "来采收吧！"
 
 	var/obj/item/item_to_harvest
 
@@ -15,7 +15,7 @@
 		var/atom/defer_object = object.defer_click_on_object()
 
 		if(!is_inventory(defer_object))
-			A.to_chat(span("notice","Your hand needs to be empty in order to buy this!"))
+			A.to_chat(span("notice","你需要空出一只手才能采收！"))
 			return TRUE
 
 		var/obj/hud/inventory/I = defer_object
@@ -24,7 +24,7 @@
 		created_item.on_spawn()
 		created_item.update_icon()
 		created_item.transfer_item(I)
-		A.to_chat(span("notice","You harvest from \the [src.name]."))
+		A.to_chat(span("notice","你从[src.name]上采收了产物。"))
 		disallowed_mobs += A
 		clear_existing_images(A)
 
@@ -32,7 +32,7 @@
 
 /obj/structure/interactive/localmachine/harvestable_flora/nitrogen_flower
 
-	name = "nitrogen flower"
+	name = "液氮花"
 
 	icon = 'icons/obj/structure/flora/nitrogenflower.dmi'
 	icon_state = "1"
@@ -46,7 +46,7 @@
 
 /obj/structure/interactive/localmachine/harvestable_flora/oxygen_fruit
 
-	name = "oxygen fruit"
+	name = "液氧果"
 
 	icon = 'icons/obj/structure/flora/oxygen_fruit.dmi'
 	icon_state = "1"

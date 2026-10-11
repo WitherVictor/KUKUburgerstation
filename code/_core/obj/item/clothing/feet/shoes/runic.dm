@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/runic
-	name = "right runic boot"
-	desc = "Free armour trimming U can trust me with ur adamant"
-	desc_extended = "A runite boot that will protect your foot. Or feet if you have both."
+	name = "符文右靴"
+	desc = "免费给护甲镶边，把精金装备交给我，你尽管放心。"
+	desc_extended = "保护脚部的符文金属靴。如果你两只都有，就能保护双脚。"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
@@ -22,7 +22,7 @@
 
 
 /obj/item/clothing/feet/shoes/runic/left
-	name = "left runic boot"
+	name = "符文左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

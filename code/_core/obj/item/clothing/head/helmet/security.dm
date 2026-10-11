@@ -1,8 +1,8 @@
 /obj/item/clothing/head/helmet/old
-	name = "old riot helmet"
+	name = "旧式防暴头盔"
 	icon = 'icons/obj/item/clothing/hats/security.dmi'
-	desc = "Protects against cream pies."
-	desc_extended = "A relatively sturdy riot helmet. It is quite outdated."
+	desc = "防范奶油派袭击。"
+	desc_extended = "一顶比较结实的防暴头盔，已经很过时了。"
 
 	armor = /armor/military/light/hard
 
@@ -15,10 +15,10 @@
 
 
 /obj/item/clothing/head/helmet/tactical
-	name = "tactical helmet"
+	name = "战术头盔"
 	icon = 'icons/obj/item/clothing/hats/tacticool.dmi'
-	desc = "RUSH B"
-	desc_extended = "A sturdy tactical helmet. Protects your head from bullets."
+	desc = "冲B点！"
+	desc_extended = "一顶结实的战术头盔，保护头部免受子弹伤害。"
 
 	armor = /armor/military/medium/hard
 
@@ -29,10 +29,10 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/head/helmet/tactical/advanced
-	name = "advanced tactical helmet"
+	name = "先进战术头盔"
 	icon = 'icons/obj/item/clothing/hats/tacticool2.dmi'
-	desc = "RUSH B"
-	desc_extended = "A sturdy tactical helmet, usually worn by syndicate soliders. Protects your head from bullets."
+	desc = "冲B点！"
+	desc_extended = "辛迪加士兵常用的结实战术头盔，保护头部免受子弹伤害。"
 
 	armor = /armor/military/heavy/hard
 
@@ -42,10 +42,10 @@
 	value = 120
 
 /obj/item/clothing/head/helmet/tactical/advanced/nanotrasen
-	name = "nanotrasen advanced tactical helmet"
+	name = "纳米传讯先进战术头盔"
 	icon = 'icons/obj/item/clothing/hats/nanotrasen_tactical.dmi'
-	desc = "A thick helmet for an even thicker skull."
-	desc_extended = "A sturdy tactical helmet. Protects your head from bullets. This one has a regal blue helmet cover with 'NanoTrasen' printed on the front."
+	desc = "给榆木脑袋准备的厚实头盔。"
+	desc_extended = "一顶结实的战术头盔，保护头部免受子弹伤害。它有一层高贵的蓝色盔罩，正面印着“纳米传讯”。"
 	rarity = RARITY_RARE
 
 	value = 150

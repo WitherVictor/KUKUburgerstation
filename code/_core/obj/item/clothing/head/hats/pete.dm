@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/pete
-	name = "Cuban Pete's hat"
-	desc = "Rhumba beat."
-	desc_extended = "A legendary hat belonging to the notorious Cuban Pete. Legend says that he made toxins bombs so large, god himself came down and said \"That's kinda OP tbh.\" and added  what we know today as a maxcap. This hat has part of his power inside, and makes the user immune to explosion damage when worn."
+	name = "古巴皮特的帽子"
+	desc = "伦巴的节拍。"
+	desc_extended = "臭名昭著的古巴皮特拥有的传奇帽子。传说他在毒物实验室制造的炸弹威力太大，连上帝都亲自下凡说“说真的，这有点太强了”，于是加上了如今所说的爆炸威力上限。帽子蕴含着他的一部分力量，戴上后能免疫爆炸伤害。"
 	icon = 'icons/obj/item/clothing/hats/pete.dmi'
 
 	armor = /armor/pete

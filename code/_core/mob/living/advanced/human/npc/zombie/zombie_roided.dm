@@ -2,7 +2,7 @@
 
 /mob/living/advanced/npc/zombie/roided
 
-	name = "zombie roider"
+	name = "药物强化僵尸"
 	loadout = /loadout/zombie/roided
 
 	level = 25

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/rifle
-	name = "AER13 Laser Rifle"
-	desc = "Pew pew pew!"
-	desc_extended = "A modular model of laser rifle, capable of using different crystals to shoot beams with different effects. This one is the standard variant."
+	name = "AER13激光步枪"
+	desc = "咻咻咻！"
+	desc_extended = "模块化激光步枪，可使用不同晶体发射效果各异的光束。这是标准版本。"
 	icon = 'icons/obj/item/weapons/ranged/laser/modular.dmi'
 	value = 2000
 
@@ -96,8 +96,8 @@
 	bullet_color = polymorphs["barrel"]
 
 /obj/item/weapon/ranged/energy/rifle/hardlight
-	name = "AER13b Hardlight Rifle"
-	desc_extended = "A modular model of laser rifle, capable of using different crystals to shoot beams with different effects. This one shoots a hardlight beam that pierces through people."
+	name = "AER13b硬光步枪"
+	desc_extended = "模块化激光步枪，可使用不同晶体发射效果各异的光束。这把发射能穿透人体的硬光束。"
 	ranged_damage_type = /damagetype/ranged/laser/rifle/hardlight
 
 	projectile_speed = 26
@@ -115,8 +115,8 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/ranged/energy/rifle/xray
-	name = "AER13c X-Ray Rifle"
-	desc_extended = "A modular model of laser rifle, capable of using different crystals to shoot beams with different effects. This one shoots a x-ray beams that completely ignores armor."
+	name = "AER13c X射线步枪"
+	desc_extended = "模块化激光步枪，可使用不同晶体发射效果各异的光束。这把发射完全无视护甲的X射线。"
 	ranged_damage_type = /damagetype/ranged/laser/rifle/xray
 
 	projectile_speed = 20
@@ -136,8 +136,8 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/ranged/energy/rifle/xray/deathsquad
-	name = "AER13c-D X-Ray Rifle"
-	desc_extended = "A modular model of laser rifle, capable of using different crystals to shoot beams with different effects. This one shoots a x-ray beams that completely ignores armor. This one has a phoron crystal, and a special fusion battery that charges over time."
+	name = "AER13c-D X射线步枪"
+	desc_extended = "模块化激光步枪，可使用不同晶体发射效果各异的光束。这把发射完全无视护甲的X射线，配有佛隆晶体和会随时间自行充能的特殊聚变电池。"
 
 	projectile_speed = TILE_SIZE - 1
 	shoot_delay = 4

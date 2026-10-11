@@ -1,5 +1,5 @@
 /turf/simulated/floor/colored/sand
-	name = "grey sand"
+	name = "灰色沙地"
 	color = "#80806D"
 	layer = LAYER_FLOOR_SAND //LAYER_FLOOR + 0.14
 	corner_category = "sand"
@@ -18,25 +18,25 @@
 	health_base = 100
 
 /turf/simulated/floor/colored/sand/beach
-	name = "beach sand"
+	name = "海滩沙地"
 	color = "#DED1BD"
 	layer = LAYER_FLOOR + 0.142
 	corner_category = "sand_beach"
 
 /turf/simulated/floor/colored/sand/beach/shallow
-	name = "shallow beach"
+	name = "浅滩"
 	color = "#C6D1BD"
 	layer = LAYER_FLOOR + 0.141
 	corner_category = "sand_beach_shallow"
 
 /turf/simulated/floor/colored/sand/underwater
-	name = "bed sand"
+	name = "水底沙地"
 	color = "#AECA91"
 	layer = LAYER_FLOOR + 0.140
 	corner_category = "sand_underwater"
 
 /turf/simulated/floor/colored/sand/desert
-	name = "sand"
+	name = "沙地"
 	//color = "#FFC68C"
 	color = "#AE8A67"
 	layer = LAYER_FLOOR + 0.144

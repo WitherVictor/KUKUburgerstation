@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/pdw2
 	name = "\improper 4.6x30mm HL7"
-	desc = "Something squeaks that isn't supposed to squeak? Put some HL7 on it."
-	desc_extended = "An early prototype of a competitor to the WT-550, featuring better quality parts. The design was eventually scrapped by the Solarian Government after they realised there was no space to put a grenade launcher on it."
+	desc = "有东西不该吱吱响却偏要响？给它来点HL7。"
+	desc_extended = "WT-550竞争型号的早期原型，采用了品质更高的零件。太阳系政府发现它没地方安装榴弹发射器后，最终放弃了这项设计。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/4mm_pdw_2.dmi'
 	icon_state = "inventory"
 	value = 1100

@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/clockwork_cultist
-	name = "clockwork cultist"
-	desc = "Hail Ratvar!"
-	desc_extended = "A cultist of Ratvar."
+	name = "发条邪教徒"
+	desc = "拉特瓦尔万岁！"
+	desc_extended = "一名信奉拉特瓦尔的邪教徒。"
 	ai = /ai/advanced/clockwork_cult
 
 	dna = /dna/human

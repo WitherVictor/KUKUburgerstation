@@ -1,7 +1,7 @@
 /obj/item/clothing/ears/headset
-	name = "generic headset"
-	desc = "; HELP MAINT!"
-	desc_extended = "A headset for communicating with your fellows."
+	name = "通用耳机"
+	desc = "; 救命，维护区！"
+	desc_extended = "用来与同伴通信的耳机。"
 	icon = 'icons/obj/item/clothing/ears/headset.dmi'
 
 	var/obj/item/device/radio/stored_radio = /obj/item/device/radio/headset
@@ -10,7 +10,7 @@
 
 /obj/item/clothing/ears/headset/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Use the ';' prefix while speaking to talk into it.<br>Use the mouse wheel to change frequencies.<br>Click/Use in hands to toggle the signal reciever.<br>ALT+Click to change broadcast mode.")
+	. += span("notice","说话时以英文分号';'开头，即可通过耳机发话。<br>使用鼠标滚轮切换频率。<br>拿在手中点击或使用，可开关信号接收器。<br>按住Alt点击可切换广播模式。")
 
 /obj/item/clothing/ears/headset/Finalize()
 	if(ispath(stored_radio))
@@ -45,8 +45,8 @@
 	LOADATOM("stored_radio")
 
 /obj/item/clothing/ears/headset/syndicate
-	name = "syndicate headset"
-	desc = "; WHO HAS THE DISK?!"
+	name = "辛迪加耳机"
+	desc = "; 磁盘在谁手里？！"
 	icon = 'icons/obj/item/clothing/ears/antag_headset.dmi'
 	stored_radio = /obj/item/device/radio/headset/syndicate
 
@@ -55,8 +55,8 @@
 	value = 1
 
 /obj/item/clothing/ears/headset/mercenary
-	name = "mercenary headset"
-	desc = "; Kept you waiting, huh?"
+	name = "佣兵耳机"
+	desc = "; 让你久等了，是吧？"
 	icon = 'icons/obj/item/clothing/ears/antag_headset.dmi'
 	stored_radio = /obj/item/device/radio/headset/mercenary
 
@@ -66,8 +66,8 @@
 
 
 /obj/item/clothing/ears/headset/revolutionary
-	name = "revolutionary headset"
-	desc = "; FOR THE REVOLUTION!"
+	name = "革命军耳机"
+	desc = "; 为了革命！"
 	icon = 'icons/obj/item/clothing/ears/antag_headset.dmi'
 	stored_radio = /obj/item/device/radio/headset/revolutionary
 
@@ -80,17 +80,17 @@
 	value = 1
 
 /obj/item/clothing/ears/headset/nanotrasen/medical
-	name = "nanotrasen medical headset"
-	desc = "; TURN ON SUIT SENSORS!"
+	name = "纳米传讯医疗耳机"
+	desc = "; 打开制服传感器！"
 	icon = 'icons/obj/item/clothing/ears/medical_headset.dmi'
 	stored_radio = /obj/item/device/radio/headset/nanotrasen/medical
 
 
 /obj/item/clothing/ears/headset/nanotrasen/cat
-	name = "\improper cat ear headset"
+	name = "\improper 猫耳耳机"
 	icon = 'icons/obj/item/clothing/hats/cat.dmi'
-	desc = "; HELPIES!"
-	desc_extended = "A pair of authentic-looking cat ears and a tail, embedded with a nanotrasen headset. This may have been a mistake."
+	desc = "; 救救喵！"
+	desc_extended = "一对逼真的猫耳和一条尾巴，内嵌纳米传讯耳机。这可能是个错误。"
 	stored_radio = /obj/item/device/radio/headset/nanotrasen
 
 	no_initial_blend = TRUE

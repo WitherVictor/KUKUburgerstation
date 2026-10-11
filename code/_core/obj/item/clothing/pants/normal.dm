@@ -1,9 +1,9 @@
 /obj/item/clothing/pants/normal
-	name = "pants"
+	name = "裤子"
 	icon = 'icons/obj/item/clothing/pants/normal.dmi'
 
-	desc = "Eat Pant."
-	desc_extended = "The peak of fashion."
+	desc = "吃我裤子。"
+	desc_extended = "时尚的巅峰。"
 
 	armor = /armor/cloth
 
@@ -20,9 +20,9 @@
 
 
 /obj/item/clothing/pants/normal/striped
-	name = "striped pants"
-	desc = "Stripes improve everything."
-	desc_extended = "The pants of choice for Ska dancers, Mimes, and Clowns."
+	name = "条纹长裤"
+	desc = "条纹让一切更美好。"
+	desc_extended = "斯卡舞者、默剧演员和小丑的首选裤子。"
 	polymorphs = list(
 		"pants" = COLOR_BLACK,
 		"stripes" = COLOR_WHITE
@@ -47,9 +47,9 @@
 	)
 
 /obj/item/clothing/pants/normal/striped/janitor
-	name = "janitor pants"
-	desc = "Stripes improve everything."
-	desc_extended = "The pants of choice for janitors."
+	name = "清洁工长裤"
+	desc = "条纹让一切更美好。"
+	desc_extended = "清洁工的首选裤子。"
 	polymorphs = list(
 		"pants" = COLOR_GREY,
 		"stripes" = COLOR_JANITOR
@@ -80,26 +80,26 @@
 	)
 
 /obj/item/clothing/pants/normal/chaps
-	name = "chapped pants"
-	desc = "Damn you're double cheeked up on a wednesday afternoon?"
-	desc_extended = "Pants with chaps around the butt."
+	name = "护腿裤"
+	desc = "靠，星期三下午你就把翘臀秀出来了？"
+	desc_extended = "臀部周围带有皮护腿的裤子。"
 	polymorphs = list(
 		"pants" = COLOR_WHITE,
 		"chaps" = COLOR_BLACK
 	)
 
 /obj/item/clothing/pants/normal/chaps/assless
-	name = "assless chaps"
-	desc = "Damn you're double cheeked up on a wednesday afternoon?"
-	desc_extended = "Pants that don't cover your butt. Please don't wear these."
+	name = "露臀护腿裤"
+	desc = "靠，星期三下午你就把翘臀秀出来了？"
+	desc_extended = "盖不住屁股的裤子。求你别穿。"
 	polymorphs = list(
 		"chaps" = COLOR_WHITE
 	)
 
 /obj/item/clothing/pants/normal/wizard
-	name = "wizard pants"
-	desc = "Wizarding!"
-	desc_extended = "Standard issue Wizard Federation pants."
+	name = "巫师长裤"
+	desc = "魔法风范！"
+	desc_extended = "巫师联邦的标准配发长裤。"
 	polymorphs = list(
 		"pants" = COLOR_PURPLE
 	)
@@ -107,17 +107,17 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/pants/normal/ancient_security
-	name = "ancient security pants"
-	desc = "From a forgotten age."
-	desc_extended = "An ancient pair of security pants. Rumor is that it's red to hide greytide blood."
+	name = "古早安保长裤"
+	desc = "来自被遗忘的年代。"
+	desc_extended = "一条古老的安保长裤。据说红色是为了掩盖灰潮的血迹。"
 	polymorphs = list(
 		"pants" = COLOR_CRIMSON
 	)
 
 /obj/item/clothing/pants/normal/botany
-	name = "botany pants"
-	desc = "Good for plants."
-	desc_extended = "Good pants to wear if you're on your knees a lot. Also good for botany."
+	name = "植物学长裤"
+	desc = "适合照料植物。"
+	desc_extended = "经常跪着干活的话，这条裤子很合适。搞植物学也不错。"
 	polymorphs = list(
 		"pants" = COLOR_GREEN
 	)
@@ -129,33 +129,33 @@
 	)
 
 /obj/item/clothing/pants/normal/chef
-	name = "chef pants"
-	desc = "Good for food stains."
-	desc_extended = "Nondescript grey pants that fight against food stains."
+	name = "厨师长裤"
+	desc = "不怕食物污渍。"
+	desc_extended = "一条不起眼的灰色长裤，能抵挡食物污渍。"
 	polymorphs = list(
 		"pants" = COLOR_GREY
 	)
 
 /obj/item/clothing/pants/normal/medical
-	name = "medical pants"
-	desc = "Smells like disinfectant."
-	desc_extended = "A pair of fastidiously sterilized pants. Looks like extra care was taken to scrub all the blood out."
+	name = "医疗长裤"
+	desc = "闻起来有消毒水味。"
+	desc_extended = "经过细致消毒的长裤，看起来有人格外费心地洗净了所有血迹。"
 	polymorphs = list(
 		"pants" = COLOR_MEDICAL_LIGHT
 	)
 
 /obj/item/clothing/pants/normal/grey
-	name = "assistant pants"
-	desc = "Eat pant."
-	desc_extended = "The signature grey pants of the tide."
+	name = "助理长裤"
+	desc = "吃我裤子。"
+	desc_extended = "灰潮标志性的灰色长裤。"
 	polymorphs = list(
 		"pants" = COLOR_GREY
 	)
 
 /obj/item/clothing/pants/normal/black
-	name = "fancy pants"
-	desc = "Eat pant."
-	desc_extended = "The signature black pants of someone fancy."
+	name = "华丽长裤"
+	desc = "吃我裤子。"
+	desc_extended = "讲究人士标志性的黑色长裤。"
 	polymorphs = list(
 		"pants" = COLOR_BLACK
 	)
@@ -167,41 +167,41 @@
 
 
 /obj/item/clothing/pants/normal/nanotrasen_dark
-	name = "fancy pants"
-	desc = "Eat pant."
-	desc_extended = "The signature black pants of someone fancy."
+	name = "华丽长裤"
+	desc = "吃我裤子。"
+	desc_extended = "讲究人士标志性的黑色长裤。"
 	polymorphs = list(
 		"pants" = COLOR_NANOTRASEN_DARK
 	)
 
 /obj/item/clothing/pants/normal/military_green
-	name = "military pants"
-	desc = "Eat pant."
-	desc_extended = "The signature pants of a revolutionary."
+	name = "军用长裤"
+	desc = "吃我裤子。"
+	desc_extended = "革命军标志性的裤子。"
 	polymorphs = list(
 		"pants" = COLOR_GREEN_MILITARY
 	)
 
 /obj/item/clothing/pants/normal/chemistry
-	name = "chemistry pants"
-	desc = "Stripes improve everything."
-	desc_extended = "The pants of choice for chemists."
+	name = "化学师长裤"
+	desc = "条纹让一切更美好。"
+	desc_extended = "化学师的首选裤子。"
 	polymorphs = list(
 		"pants" = COLOR_WHITE,
 		"stripes" = COLOR_CHEMISTRY
 	)
 
 /obj/item/clothing/pants/normal/space_cop
-	name = "space cop pants"
-	desc = "Stripes improve everything."
-	desc_extended = "The pants of choice for space cops."
+	name = "太空警察长裤"
+	desc = "条纹让一切更美好。"
+	desc_extended = "太空警察的首选裤子。"
 	polymorphs = list(
 		"pants" = "#313E37",
 		"stripes" = "#222F28"
 	)
 
 /obj/item/clothing/pants/normal/reinforced
-	name = "reinforced pants"
+	name = "加固长裤"
 	icon = 'icons/obj/item/clothing/pants/reinforced.dmi'
 
 	armor = /armor/cloth/hard
@@ -209,21 +209,21 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/pants/normal/reinforced/ntops
-	name = "NT ops reinforced pants"
+	name = "NT行动人员加固长裤"
 	polymorphs = list(
 		"pants" = COLOR_WHITE,
 		"stripes" = COLOR_BLACK
 	)
 
 /obj/item/clothing/pants/normal/reinforced/merc
-	name = "mercenary reinforced pants"
+	name = "佣兵加固长裤"
 	polymorphs = list(
 		"pants" = COLOR_OLIVE_DRAB,
 		"kneepad" = COLOR_WHITE
 	)
 
 /obj/item/clothing/pants/normal/reinforced/merc_alt
-	name = "mercenary reinforced pants"
+	name = "佣兵加固长裤"
 	polymorphs = list(
 		"pants" = "#A39D86",
 		"kneepad" = COLOR_WHITE
@@ -243,7 +243,7 @@
 
 
 /obj/item/clothing/pants/normal/reinforced/abductor
-	name = "abductor reinforced pants"
+	name = "绑架者加固长裤"
 	polymorphs = list(
 		"pants" = "#62869E"
 	)

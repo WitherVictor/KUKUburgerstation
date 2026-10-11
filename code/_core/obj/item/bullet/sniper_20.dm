@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/sniper_20
-	name = "\improper 20x117mm sniper round"
-	desc = "For when you really want something to die."
-	desc_extended = "For guns that require 20x117mm ammo."
+	name = "\improper 20x117mm狙击弹"
+	desc = "当你铁了心要让什么东西死掉时，就用这个。"
+	desc_extended = "供使用20x117mm弹药的枪械装填。"
 	icon = 'icons/obj/item/bullet/20mm.dmi'
 
 	bullet_diameter = 20
@@ -23,12 +23,12 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/sniper_20/surplus
-	name = "\improper surplus 20x117mm sniper round"
+	name = "\improper 库存旧式20x117mm狙击弹"
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_20/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/sniper_20/du
-	name = "\improper DU 20x117mm sniper round"
+	name = "\improper 20x117mm贫铀狙击弹"
 	rarity = RARITY_RARE
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_20/du

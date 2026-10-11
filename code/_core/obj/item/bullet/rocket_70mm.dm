@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/rocket_70mm/
-	name = "70mm High Explosive Warhead"
-	desc = "I'm a Rocket Man."
-	desc_extended = "For RPGs, High explosive, do NOT use for rocket jumping."
+	name = "70mm高爆战斗部"
+	desc = "我是火箭人。"
+	desc_extended = "火箭筒用高爆弹，禁止用于火箭跳。"
 	rarity = RARITY_COMMON
 	icon = 'icons/obj/item/bullet/rocket.dmi'
 	icon_state = "HE"
@@ -30,9 +30,9 @@
 	. += 400
 
 /obj/item/bullet_cartridge/rocket_70mm/wp
-	name = "70mm White Phosphorous Warhead"
-	desc = "I'm a Rocket Man."
-	desc_extended = "For RPGs, White Phosphorous, didn't they ban this in the Space Geneva Convention...?"
+	name = "70mm白磷战斗部"
+	desc = "我是火箭人。"
+	desc_extended = "火箭筒用白磷弹。《太空日内瓦公约》不是把这东西禁了吗……？"
 	rarity = RARITY_UNCOMMON
 	icon = 'icons/obj/item/bullet/rocket.dmi'
 	icon_state = "WP"
@@ -51,9 +51,9 @@
 	size = 2
 
 /obj/item/bullet_cartridge/rocket_70mm/nuclear
-	name = "70mm nuclear Warhead"
-	desc = "Look at me im Davy Crocket!"
-	desc_extended = "For RPGs, wAIT IS THAT A FUCKING NUKE?!?"
+	name = "70mm核战斗部"
+	desc = "看我这门戴维·克罗克特！"
+	desc_extended = "火箭筒用弹药。等等，那他妈是核弹？！"
 	rarity = RARITY_RARE
 	value_burgerbux = 1
 	icon = 'icons/obj/item/bullet/rocket.dmi'
@@ -77,9 +77,9 @@
 	. += 200
 
 /obj/item/bullet_cartridge/rocket_70mm/ap
-	name = "70mm Armor Piercing Warhead"
-	desc = "I'm a Rocket Man."
-	desc_extended = "For RPGs, Armor Piercing, dual explosive charge for superb penetration."
+	name = "70mm穿甲战斗部"
+	desc = "我是火箭人。"
+	desc_extended = "火箭筒用穿甲弹，双重装药带来出色的穿透能力。"
 	rarity = RARITY_UNCOMMON
 	icon = 'icons/obj/item/bullet/rocket.dmi'
 	icon_state = "AP"

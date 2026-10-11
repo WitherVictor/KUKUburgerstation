@@ -1,7 +1,7 @@
 /obj/item/magazine/rifle_556
-	name = "\improper 5.56mm rifle magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 5.56mm步枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/556_rifle.dmi'
 	icon_state = "556"
 	bullet_count_max = 40
@@ -38,14 +38,14 @@
 	value = 10
 
 /obj/item/magazine/rifle_556/ap
-	name = "\improper 5.56mm AP rifle magazine"
+	name = "\improper 5.56mm穿甲弹步枪弹匣"
 	icon = 'icons/obj/item/magazine/556_rifle_ap.dmi'
 	icon_state = "556"
 	ammo = /obj/item/bullet_cartridge/rifle_223/nato/ap
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/rifle_556/du
-	name = "\improper 5.56mm DU rifle magazine"
+	name = "\improper 5.56mm贫铀弹步枪弹匣"
 	icon = 'icons/obj/item/magazine/556_rifle_du.dmi'
 	icon_state = "556"
 	rarity = RARITY_RARE

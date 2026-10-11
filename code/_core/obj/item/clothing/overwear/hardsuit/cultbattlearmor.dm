@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/hardsuit/cultbattlearmor
-	name = "cult battle armor"
+	name = "邪教战甲"
 	icon = 'icons/obj/item/clothing/suit/cultbattlearmor.dmi'
 
-	desc = "The occults battle armor, looks incredibly vulnerable to holy attacks."
-	desc_extended = "Deus Malum Sit!"
+	desc = "邪教的战甲，看起来极易受到神圣攻击伤害。"
+	desc_extended = "愿神为恶！"
 
 	defense_rating = list(
 		BLADE = -25,

@@ -1,8 +1,8 @@
 /obj/item/clothing/belt/storage
-	name = "leather belt"
+	name = "皮腰带"
 	icon = 'icons/obj/item/clothing/belts/tool.dmi'
-	desc = "4 strength,4 stam leather belt. Level 18."
-	desc_extended = "Stores a robust amount of items that can easily and quickly be accessed."
+	desc = "4力量、4体力的皮腰带，18级。"
+	desc_extended = "能存放不少物品，取用方便快捷。"
 
 	is_container = TRUE
 
@@ -27,9 +27,9 @@
 	. = ..()
 
 /obj/item/clothing/belt/storage/medical
-	name = "medical belt"
+	name = "医疗腰带"
 	icon = 'icons/obj/item/clothing/belts/medical.dmi'
-	desc_extended = "Stores a robust amount of items that can easily and quickly be accessed. This one is medical themed."
+	desc_extended = "能存放不少物品，取用方便快捷。这条采用医疗主题设计。"
 
 /obj/item/clothing/belt/storage/medical/filled
 	value_burgerbux = 1
@@ -47,10 +47,10 @@
 
 
 /obj/item/clothing/belt/suspenders
-	name = "red suspenders"
+	name = "红色吊带"
 	icon = 'icons/obj/item/clothing/suit/suspenders.dmi'
-	desc = "They suspend the illusion of mimery."
-	desc_extended = "Fancy red suspenders that store a small number of objects. Has better protection of the torso and groin, however."
+	desc = "吊起默剧的幻象。"
+	desc_extended = "漂亮的红色吊带，可存放少量物品，同时为躯干和腹股沟提供更好的防护。"
 
 	is_container = TRUE
 

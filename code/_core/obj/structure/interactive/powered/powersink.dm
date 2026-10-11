@@ -1,5 +1,5 @@
 /obj/structure/interactive/powered/powersink
-	name = "powersink"
+	name = "电力吸收器"
 	icon = 'icons/obj/structure/power.dmi'
 	icon_state = "apc"
 

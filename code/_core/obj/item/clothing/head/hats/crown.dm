@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/crown
-	name = "\improper royal winner's crown"
+	name = "\improper 胜者王冠"
 	icon = 'icons/obj/item/clothing/hats/crown.dmi'
-	desc = "Fit for a King. Or Queen."
-	desc_extended = "A very valuable crown meant to show off your status as royalty. Awarded to those who became the Last Man Standing."
+	desc = "国王的佳选，女王也一样。"
+	desc_extended = "一顶十分贵重的王冠，用来彰显你的王者身份。授予战斗中最后存活的人。"
 
 	armor = /armor/reward
 
@@ -23,11 +23,11 @@
 			var/mob/living/advanced/player/P = examiner
 			var/fucked_name = shift_vowels(winner_name)
 			if(lowertext(P.real_name) == winner_name && fucked_name != winner_name)
-				. += span("notice","The name \"[uppertext(fucked_name)]\" seems to be engraved on it. What the hell, they spelt my name wrong!")
+				. += span("notice","上面似乎刻着“[uppertext(fucked_name)]”。搞什么，他们把我的名字拼错了！")
 			else
-				. += span("notice","The name \"[uppertext(fucked_name)]\" seems to be engraved on it.")
+				. += span("notice","上面似乎刻着“[uppertext(fucked_name)]”。")
 	else
-		. += span("warning","The crown seems to be a fake...")
+		. += span("warning","这顶王冠似乎是赝品……")
 
 
 /obj/item/clothing/head/hat/crown/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)

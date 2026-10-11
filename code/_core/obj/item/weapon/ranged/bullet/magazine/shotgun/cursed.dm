@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/shotgun/bulldog/cursed
-	name = "\improper Cursed Canine"
-	desc = "For when you want to clear a room, but spookier"
-	desc_extended = "Some ammo-obsessed eldritch forces have possessed the lower receiver of this shotgun, and replace normal shells with magical projectiles in their place when fired. Trying to make sense of what gods beyond the edges of reality want with 20g buckshot is how you go crazy."
+	name = "\improper 诅咒猎犬"
+	desc = "想用更阴森的方式清空房间时，就用它。"
+	desc_extended = "痴迷弹药的诡异力量附在了这把霰弹枪的下机匣上，开火时会将普通霰弹替换为魔法弹体。试图弄明白现实边缘之外的神明为何想要20号鹿弹，只会把自己逼疯。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/cursed.dmi'
 	icon_state = "inventory"
 	value = 2700

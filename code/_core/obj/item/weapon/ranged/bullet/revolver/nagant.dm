@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/nagant
-	name = "\improper 7.62x38mmR Nagant Revolver"
-	desc = "A dusty old revolver."
-	desc_extended = "The Nagant is difficult to use, but it pays off in durability and reliability."
+	name = "\improper 7.62x38mmR纳甘左轮手枪"
+	desc = "满是灰尘的老左轮手枪。"
+	desc_extended = "纳甘用起来不太顺手，但坚固耐用，而且可靠。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/762.dmi'
 	icon_state = "inventory"
 	value = 800

@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/energy/clockwork_turret
-	name = "\improper Clockwork Turret"
+	name = "\improper 发条炮塔"
 	icon = 'icons/obj/item/weapons/ranged/laser/captain.dmi'
 
 	projectile = /obj/projectile/bullet/laser

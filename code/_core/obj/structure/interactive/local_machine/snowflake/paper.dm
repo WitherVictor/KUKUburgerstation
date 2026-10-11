@@ -1,6 +1,6 @@
 /obj/structure/interactive/localmachine/snowflake/paper
 
-	name = "paper"
+	name = "纸张"
 
 	icon = 'icons/obj/items/paper.dmi'
 	icon_state = "normal"
@@ -12,7 +12,7 @@
 
 
 /obj/structure/interactive/localmachine/snowflake/paper/chargen
-	name = "skillsheet"
+	name = "技能表"
 	icon_state = "none"
 
 /obj/structure/interactive/localmachine/snowflake/paper/chargen/clicked_on_by_object(caller,object,location,control,params)

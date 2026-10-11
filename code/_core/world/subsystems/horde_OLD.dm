@@ -85,50 +85,50 @@ SUBSYSTEM_DEF(horde)
 
 	if(state == HORDE_STATE_WAITING)
 		var/time_to_display = round_time_next - round_time
-		set_status_display("mission","PREP\n[get_clock_time(time_to_display)]")
+		set_status_display("mission","准备\n[get_clock_time(time_to_display)]")
 		if(time_to_display >= 0)
-			set_message("Round starts in: [get_clock_time(time_to_display)]",TRUE)
+			set_message("本轮开始倒计时：[get_clock_time(time_to_display)]",TRUE)
 			return TRUE
 		state = HORDE_STATE_GEARING
 		round_time = 0
 		round_time_next = HORDE_DELAY_GEARING
-		announce("Central Command Update","Prepare for Landfall","All landfall are ordered to gear up for planetside combat. Estimated time until shuttle functionality: [CEILING(HORDE_DELAY_GEARING/60,1)] minutes.",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
+		announce("中央指挥部通告","准备登陆","所有登陆人员立即整备，准备地面作战。穿梭机预计[CEILING(HORDE_DELAY_GEARING/60,1)]分钟后启用。",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
 
 	if(state == HORDE_STATE_GEARING)
 		var/time_to_display = round_time_next - round_time
-		set_status_display("mission","GEAR\n[get_clock_time(time_to_display)]")
+		set_status_display("mission","整备\n[get_clock_time(time_to_display)]")
 		if(time_to_display >= 0)
-			set_message("Loadout Period: [get_clock_time(time_to_display)]",TRUE)
+			set_message("整备阶段：[get_clock_time(time_to_display)]",TRUE)
 			return TRUE
 		state = HORDE_STATE_BOARDING
 		round_time = 0
 		round_time_next = HORDE_DELAY_BOARDING
-		announce("Central Command Update","Shuttle Boarding","All landfall crew are ordered to proceed to the hanger bay and prep for shuttle launch. Shuttles will be allowed to launch in [CEILING(HORDE_DELAY_BOARDING/60,1)] minutes. Objectives will be announced soon.",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
+		announce("中央指挥部通告","登上穿梭机","所有登陆人员立即前往机库，准备搭乘穿梭机。穿梭机将在[CEILING(HORDE_DELAY_BOARDING/60,1)]分钟后获准起飞。任务目标即将公布。",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
 		next_objectives_update = world.time + 100
 
 
 	if(state == HORDE_STATE_BOARDING)
 		var/time_to_display = round_time_next - round_time
-		set_status_display("mission","BRDN\n[get_clock_time(time_to_display)]")
+		set_status_display("mission","登机\n[get_clock_time(time_to_display)]")
 		if(time_to_display >= 0)
-			set_message("Boarding Period: [get_clock_time(time_to_display)]",TRUE)
+			set_message("登机阶段：[get_clock_time(time_to_display)]",TRUE)
 			return TRUE
 		state = HORDE_STATE_LAUNCHING
 		round_time = 0
 		round_time_next = HORDE_DELAY_LAUNCHING
-		announce("Central Command Update","Mission is a Go","Shuttles are prepped and ready to depart into Syndicate territory. Launch now.",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
+		announce("中央指挥部通告","任务开始","穿梭机整备完毕，可以前往辛迪加领地。立即起飞。",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
 		allow_shuttle_launch = TRUE
 
 	if(state == HORDE_STATE_LAUNCHING)
 		var/time_to_display = round_time_next - round_time
-		set_status_display("mission","LNCH\n[get_clock_time(time_to_display)]")
+		set_status_display("mission","出发\n[get_clock_time(time_to_display)]")
 		if(time_to_display >= 0)
-			set_message("Launch Period: [get_clock_time(time_to_display)]",TRUE)
+			set_message("出发阶段：[get_clock_time(time_to_display)]",TRUE)
 			return TRUE
 		state = HORDE_STATE_FIGHTING
 		round_time = 0
 		round_time_next = 0
-		announce("Central Command Update","Incoming Syndicate Forces","Enemy forces spotted heading towards the Bravo landing zone. Prepare for enemy combatants.",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
+		announce("中央指挥部通告","辛迪加部队来袭","发现敌军正朝布拉沃登陆区进发。准备迎敌。",ANNOUNCEMENT_STATION,'sound/voice/station/new_command_report.ogg')
 		next_threat_update = world.time + 100
 
 	return TRUE
@@ -248,9 +248,9 @@ SUBSYSTEM_DEF(horde)
 		if(isobj(A))
 			var/obj/O = A
 			if(istype(O,/obj/structure/interactive/objective))
-				objective_text += "Secure \the [O.name]. \[<b>[O.qdeleting ? "COMPLETED" : "IN PROGRESS"]</b>\]<br>"
+				objective_text += "回收[O.name]。\[<b>[O.qdeleting ? "已完成" : "进行中"]</b>\]<br>"
 			else
-				objective_text += "Destroy \the [O.name]. \[<b>[O.qdeleting ? "COMPLETED" : "IN PROGRESS"]</b>\]<br>"
+				objective_text += "摧毁[O.name]。\[<b>[O.qdeleting ? "已完成" : "进行中"]</b>\]<br>"
 			if(O.qdeleting)
 				completed_objectives++
 				tracked_objectives -= O
@@ -259,22 +259,22 @@ SUBSYSTEM_DEF(horde)
 			if(istype(L,/mob/living/advanced/npc/unique/hostage/))
 				var/mob/living/advanced/npc/unique/hostage/H = L
 				if(H.qdeleting)
-					objective_text += "Rescue \the [H.name]. \[<b>FAILED</b>\]<br>"
-					additional_text += "It appears that the crew fucked up so hard, [H.name]'s body cannot be recovered.<br>"
+					objective_text += "营救[H.name]。\[<b>失败</b>\]<br>"
+					additional_text += "看来船员们搞砸得太彻底，[H.name]连尸体都找不回来了。<br>"
 					completed_objectives++
 					tracked_objectives -= L
 				else
-					objective_text += "Rescue \the [H.name]. \[<b>[!H.hostage ? "COMPLETED" : "IN PROGRESS"]</b>\]<br>"
+					objective_text += "营救[H.name]。\[<b>[!H.hostage ? "已完成" : "进行中"]</b>\]<br>"
 					if(!H.hostage)
 						if(H.dead)
-							additional_text += "It appears that [H.name] was brought back dead. The crew will not be receiving a bonus for this tragedy.<br>"
+							additional_text += "送回来的[H.name]已经死亡。鉴于这场悲剧，船员们无法获得奖金。<br>"
 						else
-							additional_text += "As [H.name] was brought back in one piece, the crew will be receiving a bonus of 3000 credits.<br>"
+							additional_text += "[H.name]已平安归来，船员们将获得3000信用点奖金。<br>"
 							SSpayday.stored_payday += 3000
 						completed_objectives++
 						tracked_objectives -= L
 			else
-				objective_text += "Kill \the [L.name]. \[<b>[L.dead ? "COMPLETED" : "IN PROGRESS"]</b>\]<br>"
+				objective_text += "击杀[L.name]。\[<b>[L.dead ? "已完成" : "进行中"]</b>\]<br>"
 				if(L.dead)
 					completed_objectives++
 					tracked_objectives -= L
@@ -284,15 +284,15 @@ SUBSYSTEM_DEF(horde)
 	for(var/obj/hud/button/objectives/B in all_objective_buttons)
 		B.set_stored_text(last_update)
 		if(B.owner)
-			B.owner.to_chat(span("notice","Your objectives have been updated!"))
+			B.owner.to_chat(span("notice","你的任务目标已更新！"))
 
 	if(additional_text)
 		objective_text = "[objective_text]<br>[additional_text]"
 
 
 	announce(
-		"Central Command Update",
-		"Objectives Update",
+		"中央指挥部通告",
+		"任务目标更新",
 		"[objective_text]",
 		ANNOUNCEMENT_STATION,
 		'sound/voice/station/new_command_report.ogg'
@@ -307,7 +307,7 @@ SUBSYSTEM_DEF(horde)
 			SSvote.create_vote(/vote/continue_round)
 			return TRUE
 		else
-			broadcast_to_clients(span("vote","There was no vote for round end as there are no objectives to spawn!"))
+			broadcast_to_clients(span("vote","已无可生成的任务目标，因此直接结束本轮，无需投票！"))
 			tick_rate = 0 //Stop horde processing.
 			world.end(WORLD_END_NANOTRASEN_VICTORY)
 
@@ -358,25 +358,25 @@ SUBSYSTEM_DEF(horde)
 		last_threat_level_warning = reported_threat_level
 		switch(reported_threat_level)
 			if(0)
-				set_status_display("mission","CODE:\nGREEN.")
-				announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL CLEARED.","ALERT: THREAT LEVEL SET TO: GREEN. EXCERSIZE TERM: FADE OUT.")
+				set_status_display("mission","警报：\n绿色")
+				announce("紧急警报系统","威胁已解除","警报：威胁等级设为绿色。演习代号：渐隐。")
 			if(25 to 50)
-				set_status_display("mission","CODE:\nBLUE.")
+				set_status_display("mission","警报：\n蓝色")
 				if(increase)
-					announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL INCREASE.","ALERT: THREAT LEVEL RAISED TO: BLUE. EXCERSIZE TERM: SECOND GLANCE.")
+					announce("紧急警报系统","威胁等级上升","警报：威胁等级升至蓝色。演习代号：再次审视。")
 				else
-					announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL INCREASE.","ALERT: THREAT LEVEL LOWERED TO: BLUE. EXCERSIZE TERM: SECOND GLANCE.")
+					announce("紧急警报系统","威胁等级下降","警报：威胁等级降至蓝色。演习代号：再次审视。")
 			if(50 to 75)
-				set_status_display("mission","CODE:\nAMBER.")
+				set_status_display("mission","警报：\n琥珀")
 				if(increase)
-					announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL INCREASE.","ALERT: THREAT LEVEL RAISED TO: AMBER. EXCERSIZE TERM: ROAD HOUSE.\nALL GROUNDSIDE TEAMS ARE ORDERED TO FOCUS ON COMPLETION OF OBJECTIVES AND DEFENSE OF THE ALPHA-BRAVO LZ.")
+					announce("紧急警报系统","威胁等级上升","警报：威胁等级升至琥珀色。演习代号：路边酒馆。\n所有地面小队务必集中完成任务目标，并守住阿尔法—布拉沃登陆区。")
 				else
-					announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL DECREASE.","ALERT: THREAT LEVEL LOWERED TO: AMBER. EXCERSIZE TERM: ROAD HOUSE.\nALL GROUNDSIDE TEAMS ARE ORDERED TO CONTINUE THEIR FOCUS ON OBJECTIVES AND THE DEFENSE OF THE ALPHA-BRAVO LZ.")
+					announce("紧急警报系统","威胁等级下降","警报：威胁等级降至琥珀色。演习代号：路边酒馆。\n所有地面小队务必继续专注于任务目标，并守住阿尔法—布拉沃登陆区。")
 			if(75 to 99)
-				set_status_display("mission","CODE:\nRED.")
-				announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL INCREASE.","ALERT: THREAT LEVEL RAISED TO: RED. EXCERSIZE TERM: MARATHON SPRINT. MISSION FAILURE LIKELY.\n ALL GROUNDSIDE TEAMS ARE ORDERED TO FOCUS ON OBJECTIVE COMPLETION. IGNORING THIS ORDER MAY RESULT IN LOSS OF CREDITS AND/OR DEATH.")
+				set_status_display("mission","警报：\n红色")
+				announce("紧急警报系统","威胁等级上升","警报：威胁等级升至红色。演习代号：马拉松冲刺。任务很可能失败。\n所有地面小队务必集中完成任务目标。违抗命令可能导致信用点损失或死亡。")
 			if(100)
-				set_status_display("mission","CODE:\nBLACK.")
-				announce("EMERGENCY ALERT SYSTEM.","THREAT LEVEL INCREASE.","ALERT: THREAT LEVEL RAISED TO: BLACK. EXCERSIZE TERM: LOADED PISTOL. MISSION FAILURE IMMINENT.\nSTARTING FIREMAN PROTOCOLS. EVACUATION ORDERS UNDERWAY. BLUESPACE CANONS ONLINE IN 5 MINUTES.")
+				set_status_display("mission","警报：\n黑色")
+				announce("紧急警报系统","威胁等级上升","警报：威胁等级升至黑色。演习代号：手枪上膛。任务即将失败。\n正在启动消防员协议，并下达撤离命令。蓝空间炮将在5分钟后上线。")
 
 	return threat_level

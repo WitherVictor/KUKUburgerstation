@@ -4,7 +4,7 @@
 	area_identifier = "Mission"
 
 /area/crystalcanyon/outside
-	name = "\improper Crystal Plains"
+	name = "\improper 水晶平原"
 	icon_state = "snow"
 	weather = WEATHER_SNOW
 	ambient_temperature = T0C - 20
@@ -18,7 +18,7 @@
 
 	sound_environment = ENVIRONMENT_PLAIN
 /area/crystalcanyon/interior/cave
-	name = "\improper Central Crystal Caves"
+	name = "\improper 中央水晶洞穴"
 	icon_state = "cave"
 	tracks = TRACKS_CAVE
 	random_sounds = list(
@@ -30,7 +30,7 @@
 	sound_environment = ENVIRONMENT_QUARRY
 
 /area/crystalcanyon/interior/cave/north
-	name = "\improper Northern Crystal Caves"
+	name = "\improper 北部水晶洞穴"
 	icon_state = "blue"
 
 	sunlight_freq = 8
@@ -46,51 +46,51 @@
 	cheese_type = /reagent/nutrition/cheese/guava
 
 /area/crystalcanyon/interior/cave/south
-	name = "\improper Southern Crystal Caves"
+	name = "\improper 南部水晶洞穴"
 	icon_state = "red"
 
 /area/crystalcanyon/interior/cave/east
-	name = "\improper Eastern Crystal Caves"
+	name = "\improper 东部水晶洞穴"
 	icon_state = "green"
 
 /area/crystalcanyon/interior/cave/west
-	name = "\improper Western Crystal Caves"
+	name = "\improper 西部水晶洞穴"
 	icon_state = "yellow"
 
 /area/crystalcanyon/caves/xenohive
-	name = "\improper Xenomorph Hive"
+	name = "\improper 异形巢穴"
 	icon_state = "hive"
 
 	tracks = null
 
 /area/crystalcanyon/deltaclinic
-	name = "\improper Crystal Caves  Delta Clinic"
+	name = "\improper 水晶洞穴德尔塔诊所"
 	icon_state = "med"
 
 /area/crystalcanyon/bravobngine
-	name = "\improper Crystal Caves  Engineering Outpost"
+	name = "\improper 水晶洞穴工程前哨站"
 	icon_state = "eng"
 
 /area/crystalcanyon/charliebase
-	name = "\improper Crystal Caves Mining Base"
+	name = "\improper 水晶洞穴采矿基地"
 	icon_state = "mining"
 
 /area/crystalcanyon/interior/revbar
-	name = "\improper Revolutionary Bar"
+	name = "\improper 革命军酒吧"
 	icon_state = "red"
 
 /area/crystalcanyon/interior/playerrev
-	name = "\improper Revolutionary Base"
+	name = "\improper 革命军基地"
 	icon_state = "red"
 
 /area/crystalcanyon/downedshuttle
-	name = "\improper Crystal Caves Downed Gulf"
+	name = "\improper 水晶洞穴坠毁的海湾号"
 	icon_state = "red"
 
 /area/crystalcanyon/clownplace
-	name = "\improper Crystal Caves Honk Lab"
+	name = "\improper 水晶洞穴鸣笛实验室"
 	icon_state = "green"
 
 area/crystalcanyon/interior/syndiship
-	name = "\improper Syndicate Ship"
+	name = "\improper 辛迪加飞船"
 	icon_state = "red"

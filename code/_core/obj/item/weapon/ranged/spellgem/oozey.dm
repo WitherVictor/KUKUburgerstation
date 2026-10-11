@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/oozey
-	name = "oozey spell gem"
-	desc = "The source of all... lead?"
-	desc_extended = "Shoots an endless stream of accurate low-damaging bullets."
+	name = "乌兹法术宝石"
+	desc = "一切……铅弹的源泉？"
+	desc_extended = "持续发射精准但伤害较低的子弹。"
 	icon_state = "damage"
 
 	rarity = RARITY_RARE

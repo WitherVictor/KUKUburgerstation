@@ -1,7 +1,7 @@
 /obj/item/storage/emergency
-	name = "survival kit"
-	desc = "Where are your internals man"
-	desc_extended = "A very small box that starts with some basic medical supplies. Could save someone's life in a pinch."
+	name = "生存应急包"
+	desc = "老兄，你的供氧设备呢？"
+	desc_extended = "一个小盒子，配有一些基本医疗用品。紧急时刻能救人一命。"
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "emergency"
 	value = 10

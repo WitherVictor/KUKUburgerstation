@@ -1,11 +1,11 @@
 /obj/item/container/simple/can/coffee/
-	name = "\improper empty coffee cup"
+	name = "\improper 空咖啡杯"
 	icon_state = "coffee"
 	open = TRUE
 
 /obj/item/container/simple/can/coffee/black
-	name = "\improper Robusto Black Coffee"
-	desc = "Pure coffee."
+	name = "\improper 硬派黑咖啡"
+	desc = "纯咖啡。"
 	value = 1
 
 /obj/item/container/simple/can/coffee/black/Generate()
@@ -17,8 +17,8 @@
 //Regular espresso isn't here as that's a proper drink
 
 /obj/item/container/simple/can/coffee/freedomno
-	name = "\improper Robusto Spaceo freedomno"
-	desc = "Expresso with some hot water poured inside."
+	name = "\improper 硬派太空自由式咖啡"
+	desc = "兑了热水的浓缩咖啡。"
 	value = 1
 
 /obj/item/container/simple/can/coffee/freedomno/Generate()
@@ -29,8 +29,8 @@
 
 
 /obj/item/container/simple/can/coffee/latte
-	name = "\improper Robusto Little Latte"
-	desc = "Expresso with hot cream."
+	name = "\improper 硬派小拿铁"
+	desc = "加了热奶油的浓缩咖啡。"
 	value = 1
 
 /obj/item/container/simple/can/coffee/latte/Generate()

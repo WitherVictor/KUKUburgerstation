@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/sniper
-	name = "\improper 7.62mm Dragon Sniper Rifle"
-	desc = "For when you want to be an asshole at an extended range."
-	desc_extended = "The Dragon Sniper Rifle is a versatile option as both a Squad Support weapon and an assassination weapon, but suffers against more heavily armored targets."
+	name = "\improper 7.62mm巨龙狙击步枪"
+	desc = "想隔得老远给人添堵时，就用它。"
+	desc_extended = "巨龙狙击步枪用途广泛，既能作为小队支援武器，也适合暗杀，但对付重甲目标比较吃力。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/762.dmi'
 	icon_state = "inventory"
 	value = 3200

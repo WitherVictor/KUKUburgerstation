@@ -1,9 +1,9 @@
 
 
 /obj/item/device/signaller
-	name = "signaller"
-	desc = "Suspiciously detonator shaped."
-	desc_extended = "A device used to send a signal to the selected frequency."
+	name = "信号器"
+	desc = "外形可疑地像个引爆器。"
+	desc_extended = "向选定频率发送信号的装置。"
 	icon_state = "signaller"
 
 	var/frequency_current = RADIO_FREQ_MIN
@@ -66,7 +66,7 @@
 	INTERACT_CHECK
 	INTERACT_DELAY(1)
 	mode = !mode
-	activator.to_chat(span("notice","You change the mode to [mode ? "frequency" : "signal"]."))
+	activator.to_chat(span("notice","你将模式切换为[mode ? "频率" : "信号码"]。"))
 	spam_fix_time = 0
 	return TRUE
 
@@ -78,20 +78,20 @@
 		var/old_frequency = frequency_current
 		frequency_current = clamp(frequency_current + 0.2*fixed_delta,frequency_min,frequency_max)
 		if(old_frequency == frequency_current)
-			activator.to_chat(span("notice","\The [src.name]'s frequency can't seem to go any [frequency_current == frequency_min ? "lower" : "higher"]."))
+			activator.to_chat(span("notice","[src.name]的频率似乎不能再[frequency_current == frequency_min ? "降低" : "提高"]了。"))
 		else if(spam_fix_time <= world.time)
-			activator.to_chat(span("notice","You change \the [src.name]'s frequency to [frequency_current] kHz..."))
+			activator.to_chat(span("notice","你将[src.name]的频率设为[frequency_current] kHz……"))
 		else
-			activator.to_chat(span("notice","...[frequency_current] kHz..."))
+			activator.to_chat(span("notice","……[frequency_current] kHz……"))
 	else
 		var/old_signal = signal_current
 		signal_current = clamp(signal_current + 1*fixed_delta,signal_min,signal_max)
 		if(old_signal == signal_current)
-			activator.to_chat(span("notice","\The [src.name]'s signal can't seem to go any [signal_current == signal_min ? "lower" : "higher"]."))
+			activator.to_chat(span("notice","[src.name]的信号码似乎不能再[signal_current == signal_min ? "降低" : "提高"]了。"))
 		else if(spam_fix_time <= world.time)
-			activator.to_chat(span("notice","You change \the [src.name]'s signal to [signal_current]..."))
+			activator.to_chat(span("notice","你将[src.name]的信号码设为[signal_current]……"))
 		else
-			activator.to_chat(span("notice","...[signal_current]..."))
+			activator.to_chat(span("notice","……[signal_current]……"))
 
 	spam_fix_time = world.time + 20
 

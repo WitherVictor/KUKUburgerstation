@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/unique/crew
-	name = "ship's crew"
+	name = "舰船船员"
 
 /mob/living/advanced/npc/unique/crew/Initialize()
 	. = ..()
@@ -8,8 +8,8 @@
 
 
 /mob/living/advanced/npc/unique/crew/front_desk/
-	name = "arrivals attendant"
-	desc = "Trained to put up with new crew's bullshit."
+	name = "抵达区接待员"
+	desc = "受过专业训练，能忍受新船员的各种胡扯。"
 	species = "human"
 	gender = FEMALE
 	sex = FEMALE

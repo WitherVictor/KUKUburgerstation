@@ -1,8 +1,8 @@
 /obj/item/mop
-	name = "mop"
+	name = "拖把"
 	icon = 'icons/obj/item/mop.dmi'
-	desc = "Finally, something to clean with."
-	desc_extended = "A very robust mop designed to wash away spills."
+	desc = "总算有件清洁工具了。"
+	desc_extended = "非常结实的拖把，用来清理洒落的液体。"
 
 	damage_type = /damagetype/melee/club/broom
 
@@ -23,7 +23,7 @@
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
 		if(C.reagents.volume_current <= 0)
-			activator.to_chat(span("warning","\The [object.name] is empty!"))
+			activator.to_chat(span("warning","[object.name]是空的！"))
 			return TRUE
 		var/turf/T = get_turf(C)
 		var/space_left = C.reagents.volume_max - C.reagents.volume_current
@@ -48,7 +48,7 @@
 		var/damagetype/DT = SSdamagetype.all_damage_types[damage_type]
 		DT.do_attack_visuals(activator,get_turf(activator),T,T,0)
 		if(src.reagents.volume_current <= 0)
-			activator.to_chat(span("warning","\The [src.name] is dry!"))
+			activator.to_chat(span("warning","[src.name]已经干了！"))
 			return TRUE
 		var/list/valid_sounds = list(
 			'sound/effects/water_wade1.ogg',

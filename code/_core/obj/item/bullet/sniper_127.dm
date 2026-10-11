@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/sniper_127
-	name = "\improper 12.7x90mm sniper round"
-	desc = "For when you want to shoot something so hard their family will feel it too."
-	desc_extended = "For sniper rifles that require 12.7x90mm ammo."
+	name = "\improper 12.7x90mm狙击弹"
+	desc = "一枪狠到连对方的家人都能感受到。"
+	desc_extended = "供使用12.7x90mm弹药的狙击步枪装填。"
 	icon = 'icons/obj/item/bullet/127_mm.dmi'
 
 
@@ -24,26 +24,26 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/sniper_127/surplus
-	name = "\improper surplus 12.7x90mm sniper round"
+	name = "\improper 库存旧式12.7x90mm狙击弹"
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_127/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/sniper_127/ap
-	name = "\improper AP 12.7x90mm sniper round"
-	desc = "For when you want to shoot someone's armor so hard their family will feel it too."
+	name = "\improper 12.7x90mm穿甲狙击弹"
+	desc = "一枪穿甲，狠到连对方的家人都能感受到。"
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_127/ap
 	rarity = RARITY_UNCOMMON
 
 /obj/item/bullet_cartridge/sniper_127/premium //incase you want someone extremely dead.
-	name = "\improper premium 12.7x90mm sniper round"
-	desc = "For when you want to shoot something so hard everone feels it."
+	name = "\improper 优质12.7x90mm狙击弹"
+	desc = "一枪狠到所有人都能感受到。"
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_127/premium
 	rarity = RARITY_RARE
 
 /obj/item/bullet_cartridge/sniper_127/du //incase you want someone EXTREMELY dead.
-	name = "\improper DU 12.7x90mm sniper round"
-	desc = "For when you want to shoot something so hard everone slumps over in pain."
+	name = "\improper 12.7x90mm贫铀狙击弹"
+	desc = "一枪狠到所有人都痛得直不起腰。"
 	rarity = RARITY_RARE
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_127/du
 	penetrations = 3

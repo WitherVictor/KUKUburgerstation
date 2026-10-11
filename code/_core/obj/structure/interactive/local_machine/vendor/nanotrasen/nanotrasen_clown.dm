@@ -3,7 +3,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/clown/clothing
-	name = "costume vendor"
+	name = "演出服售货机"
 	icon_state = "clown_theatre"
 
 	icon_state_broken = null
@@ -55,7 +55,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/clown/fun
-	name = "fun! vendor"
+	name = "玩乐售货机"
 	icon_state = "clown_fun"
 
 	icon_state_broken = null

@@ -1,7 +1,7 @@
 /obj/item/spraycan
-	name = "spray can"
-	desc = "gang shit"
-	desc_extended = "For delinquent vandals, artists and gang takeovers alike. Make sure the nozzle is pointed the right way before use."
+	name = "喷漆罐"
+	desc = "帮派那点破事。"
+	desc_extended = "破坏公物的小混混、艺术家和抢地盘的帮派都用得上。使用前请确认喷嘴朝向正确。"
 	icon_state = "spraycan"
 	icon = 'icons/obj/item/spraycan.dmi'
 
@@ -22,9 +22,9 @@
 /obj/item/spraycan/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(cap_on == TRUE)
-		. += span("notice","Use to select a decal to spray.<br>Click with an empty hand to take off the cap.")
+		. += span("notice","使用可选择喷绘图案。<br>空手点击可取下盖子。")
 	else
-		. += span("notice","Use to select a decal to spray.<br>Click with an empty hand to put the cap back on.")
+		. += span("notice","使用可选择喷绘图案。<br>空手点击可盖回盖子。")
 
 /obj/item/spraycan/PreDestroy()
 	QDEL_NULL(desired_spray)
@@ -67,7 +67,7 @@
 	desired_spray = desired_icon
 	spray_owner = activator.ckey
 
-	activator.to_chat(span("notice","Spray successfully set!"))
+	activator.to_chat(span("notice","喷绘图案设置成功！"))
 
 	return TRUE
 
@@ -82,16 +82,16 @@
 		INTERACT_CHECK
 		INTERACT_DELAY(10)
 		if(cap_on)
-			activator.to_chat(span("warning","The cap is on!"))
+			activator.to_chat(span("warning","盖子还没取下！"))
 			return TRUE
 		if(!desired_spray)
-			activator.to_chat(span("warning","No spray selected."))
+			activator.to_chat(span("warning","尚未选择喷绘图案。"))
 			return TRUE
 		if(existing_spray && !existing_spray.qdeleting)
 			qdel(existing_spray)
 		var/obj/effect/cleanable/spray/C = new(T)
 		C.icon = desired_spray
-		C.name = "\"art\" - by [activator.ckey]"
+		C.name = "“艺术”——作者：[activator.ckey]"
 		play_sound('sound/effects/spray.ogg',T)
 		existing_spray = C
 
@@ -113,7 +113,7 @@
 /obj/item/spraycan/proc/toggle_cap(var/mob/activator)
 	cap_on = !cap_on
 	update_sprite()
-	activator.to_chat(span("notice","You [cap_on ? "add" : "remove"] \the [src.name]'s cap."))
+	activator.to_chat(span("notice","你[cap_on ? "盖回" : "取下"]了[src.name]的盖子。"))
 	return TRUE
 
 /obj/item/spraycan/update_icon()

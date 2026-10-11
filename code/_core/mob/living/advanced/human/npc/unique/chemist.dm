@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/unique/chemist
-	name = "Walt Black"
+	name = "沃尔特·布莱克"
 	sex = MALE
 	gender = MALE
 	dialogue_id = "chemist_dialogue"
@@ -11,4 +11,4 @@
 	change_organ_visual("hair_head", desired_color = "#FFFFFF", desired_icon_state = "none")
 	update_all_blends()
 	equip_loadout(/loadout/chemist/)
-	
+

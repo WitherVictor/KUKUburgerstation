@@ -1,7 +1,7 @@
 var/mob/living/simple/xeno/queen/tracked_xeno_queen
 
 /mob/living/simple/xeno/queen
-	name = "xeno queen"
+	name = "异形女王"
 	boss_icon_state = "xeno_queen"
 	icon = 'icons/mob/living/simple/alien_queen.dmi'
 	icon_state = "living"
@@ -92,13 +92,13 @@ var/mob/living/simple/xeno/queen/tracked_xeno_queen
 		tracked_xeno_queen = null
 
 /mob/living/simple/xeno/queen/proc/inhale()
-	do_say("&#42;inhales&#42;",should_sanitize = FALSE)
+	do_say("&#42;吸气&#42;",should_sanitize = FALSE)
 	CALLBACK("queen_screech_\ref[src]",SECONDS_TO_DECISECONDS(4),src,src::screech())
 	return TRUE
 
 /mob/living/simple/xeno/queen/proc/screech()
 
-	do_say("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA")
+	do_say("啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊！")
 
 	var/turf/T = get_turf(src)
 

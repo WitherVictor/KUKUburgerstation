@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/doom
-	name = "That Shotgun"
-	desc = "Packs a punch (not a kick, that's another series)."
-	desc_extended = "A 12 gauge wooded shotgun for those who care more about the classic shotguns than what's currently out there."
+	name = "那把霰弹枪"
+	desc = "拳拳到肉（不是脚踢，那是另一个系列）。"
+	desc_extended = "采用木制枪身部件的12号霰弹枪，适合比起时下新款更钟爱经典霰弹枪的人。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/sol/classic.dmi'
 
 	company_type = "Solarian"

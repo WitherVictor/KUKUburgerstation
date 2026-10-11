@@ -5,7 +5,7 @@
 	loadout = /loadout/zombie/civilian/female
 
 /mob/living/advanced/npc/zombie/worker
-	name = "zombie worker"
+	name = "僵尸工人"
 	loadout = /loadout/zombie/worker
 
 	level = 10

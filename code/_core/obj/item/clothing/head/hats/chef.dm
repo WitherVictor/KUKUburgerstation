@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/chef
-	name = "chef hat"
+	name = "厨师帽"
 	icon = 'icons/obj/item/clothing/hats/chef.dmi'
-	desc = "If you can't handle the heat, stay out of the kitchen."
-	desc_extended = "A fancy chef hat. For chefing."
+	desc = "受不了热，就别进厨房。"
+	desc_extended = "一顶漂亮的厨师帽，做菜用的。"
 
 	armor = /armor/cloth
 

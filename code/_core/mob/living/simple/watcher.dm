@@ -1,5 +1,5 @@
 /mob/living/simple/watcher
-	name = "watcher"
+	name = "监视者"
 	icon = 'icons/mob/living/simple/lavaland/watcher.dmi'
 	icon_state = "watcher"
 	damage_type = /damagetype/unarmed/claw/
@@ -41,9 +41,9 @@
 	update_sprite()
 
 /mob/living/simple/watcher/clockwork
-	name = "clockwork watcher"
-	desc = "Eye see you."
-	desc_extended = "A robotic watcher that serves the clockwork army."
+	name = "发条监视者"
+	desc = "你逃不过我的眼睛。"
+	desc_extended = "为发条军团效力的机械监视者。"
 	icon = 'icons/mob/living/simple/clockwork_watcher.dmi'
 	icon_state = "warden"
 
@@ -76,9 +76,9 @@
 
 
 /mob/living/simple/watcher/clockwork_mobile
-	name = "clockwork floater"
-	desc = "Eye see you."
-	desc_extended = "A robotic prototype watcher that serves the clockwork army."
+	name = "发条浮游者"
+	desc = "你逃不过我的眼睛。"
+	desc_extended = "为发条军团效力的原型机械监视者。"
 	icon = 'icons/mob/living/simple/clockwork_floater.dmi'
 	icon_state = "floater"
 

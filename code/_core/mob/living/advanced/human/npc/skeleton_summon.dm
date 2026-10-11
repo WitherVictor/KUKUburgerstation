@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/skeleton_summon/
-	name = "summoned skeleton"
-	desc = "A skeleton summoned from a world of dark worshipping, here to aid you."
+	name = "召唤骷髅"
+	desc = "从一个崇拜黑暗的世界召来的骷髅，前来助你一臂之力。"
 	species = "skeleton"
 	sex = MALE
 	gender = MALE

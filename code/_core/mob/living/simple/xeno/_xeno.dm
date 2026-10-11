@@ -1,7 +1,7 @@
 /mob/living/simple/xeno
-	name = "xeno"
-	desc = "Xenos mad."
-	desc_extended = "Oh shit they're here too?!"
+	name = "异形"
+	desc = "异形怒了。"
+	desc_extended = "卧槽，它们怎么也在这儿？！"
 	icon = 'icons/mob/living/simple/alien_drone.dmi'
 	icon_state = "living"
 

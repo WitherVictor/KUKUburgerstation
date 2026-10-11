@@ -2,7 +2,7 @@
 	interior = TRUE
 
 /area/lavaland/interior/base
-	name = "\improper Lavaland Base"
+	name = "\improper 熔岩地带基地"
 	icon_state = "ship"
 
 	sound_environment = ENVIRONMENT_STONEROOM
@@ -27,145 +27,145 @@
 	trackable = TRUE
 
 /area/lavaland/interior/base/hall
-	name = "\improper Hallway"
+	name = "\improper 走廊"
 	icon_state = "hall"
 
 	sound_environment = ENVIRONMENT_HANGAR
 
 /area/lavaland/interior/base/hall/north
-	name = "\improper North Hallway"
+	name = "\improper 北走廊"
 	icon_state = "hall_n"
 
 /area/lavaland/interior/base/hall/east
-	name = "\improper East Hallway"
+	name = "\improper 东走廊"
 	icon_state = "hall_e"
 
 /area/lavaland/interior/base/hall/south
-	name = "\improper South Hallway"
+	name = "\improper 南走廊"
 	icon_state = "hall_s"
 
 /area/lavaland/interior/base/hall/west
-	name = "\improper West Hallway"
+	name = "\improper 西走廊"
 	icon_state = "hall_w"
 
 /area/lavaland/interior/base/hall/central
-	name = "\improper Central Primary Hallway"
+	name = "\improper 中央主走廊"
 	icon_state = "hall_c"
 
 /area/lavaland/interior/base/hall/dorms
-	name = "\improper Dorms Hallway"
+	name = "\improper 宿舍走廊"
 	icon_state = "dorms_hall"
 
 	sound_environment = ENVIRONMENT_ROOM
 
 
 /area/lavaland/interior/base/bathrooms
-	name = "\improper Bathrooms"
+	name = "\improper 卫生间"
 	icon_state = "bath"
 
 	sound_environment = ENVIRONMENT_ROOM
 
 /area/lavaland/interior/base/cafe
-	name = "\improper Cafe"
+	name = "\improper 咖啡厅"
 	icon_state = "cafe"
 	safe_storage = TRUE
 
 /area/lavaland/interior/base/cafe/kitchen
-	name = "\improper Kitchen"
+	name = "\improper 厨房"
 	icon_state = "kitchen"
 
 /area/lavaland/interior/base/cafe/bar
-	name = "\improper Bar"
+	name = "\improper 酒吧"
 	icon_state = "bar"
 
 /area/lavaland/interior/base/dressing
-	name = "\improper Dressing Room"
+	name = "\improper 更衣室"
 	icon_state = "dressing"
 
 	sound_environment = ENVIRONMENT_ROOM
 
 /area/lavaland/interior/base/dorm
-	name = "\improper Dorm"
+	name = "\improper 宿舍"
 	icon_state = "dorm"
 	sound_environment = ENVIRONMENT_ROOM
 
 /area/lavaland/interior/base/help_desk
-	name = "\improper Help Desk"
+	name = "\improper 咨询台"
 	icon_state = "help"
 
 /area/lavaland/interior/base/cloning
-	name = "\improper Cloning"
+	name = "\improper 克隆室"
 	icon_state = "clone"
 
 /area/lavaland/interior/base/science
-	name = "\improper Science"
+	name = "\improper 科研部"
 	icon_state = "science"
 
 /area/lavaland/interior/base/cryo
-	name = "\improper Cryogenic Storage"
+	name = "\improper 冷冻休眠区"
 	icon_state = "cryo"
 
 /area/lavaland/interior/base/arrivals
-	name = "\improper Arrivals Dock"
+	name = "\improper 抵达区码头"
 	icon_state = "ariv"
 
 /area/lavaland/interior/base/chapel
-	name = "\improper Chapel"
+	name = "\improper 教堂"
 	icon_state = "chapel"
 
 /area/lavaland/interior/base/library
-	name = "\improper Library"
+	name = "\improper 图书馆"
 	icon_state = "library"
 
 /area/lavaland/interior/base/engineering
-	name = "\improper Engineering"
+	name = "\improper 工程部"
 	icon_state = "eng"
 
 /area/lavaland/interior/base/engineering/ce
-	name = "\improper Chief Engineer's Office"
+	name = "\improper 总工程师办公室"
 	icon_state = "cmd"
 
 /area/lavaland/interior/base/medical
-	name = "\improper Medical"
+	name = "\improper 医疗部"
 	icon_state = "med"
 
 /area/lavaland/interior/base/medical/cmo
-	name = "\improper Chief Medical Officer's Office"
+	name = "\improper 医疗主管办公室"
 	icon_state = "cmd"
 
 /area/lavaland/interior/base/medical/chemistry
-	name = "\improper Chemistry"
+	name = "\improper 化学室"
 	icon_state = "chem"
 
 /area/lavaland/interior/base/briefing
-	name = "\improper Briefing"
+	name = "\improper 简报室"
 	icon_state = "brief"
 
 /area/lavaland/interior/base/armory
-	name = "\improper Armory"
+	name = "\improper 军械库"
 	icon_state = "armory"
 
 /area/lavaland/interior/base/armory/special
-	name = "\improper Armory - Special Operations"
+	name = "\improper 军械库－特种作战"
 	icon_state = "armory_special"
 
 /area/lavaland/interior/base/armory/shooting_range
-	name = "\improper Shooting Range"
+	name = "\improper 射击场"
 	icon_state = "shooting_range"
 
 /area/lavaland/interior/base/hanger
-	name = "\improper Hanger"
+	name = "\improper 机库"
 	icon_state = "hanger"
 
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lavaland/interior/base/cargo
-	name = "\improper Cargo"
+	name = "\improper 货运部"
 	icon_state = "cargo"
 	safe_storage = TRUE
 
 /area/lavaland/interior/base/maint
-	name = "\improper Maint"
+	name = "\improper 维护区"
 	icon_state = "maint"
 	ambient_sound = 'sound/ambient/vents_loop.ogg'
 
@@ -177,21 +177,21 @@
 	sound_environment = ENVIRONMENT_BATHROOM
 
 /area/lavaland/interior/base/maint/north
-	name = "\improper North Maintenance"
+	name = "\improper 北部维护区"
 	icon_state = "maint_n"
 
 /area/lavaland/interior/base/maint/east
-	name = "\improper East Maintenance"
+	name = "\improper 东部维护区"
 	icon_state = "maint_e"
 
 /area/lavaland/interior/base/maint/south
-	name = "\improper South Maintenance"
+	name = "\improper 南部维护区"
 	icon_state = "maint_s"
 
 /area/lavaland/interior/base/maint/west
-	name = "\improper West Maintenance"
+	name = "\improper 西部维护区"
 	icon_state = "maint_w"
 
 /area/lavaland/interior/base/maint/disposals
-	name = "\improper Disposals Maintenance"
+	name = "\improper 废物输送维护区"
 	icon_state = "disposals"

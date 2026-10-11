@@ -1,4 +1,4 @@
 /obj/item/modular_armor
-	name = "modular armor piece"
-	desc = "Customizable!"
-	desc_extended = "An armor piece in use in modular armor."
+	name = "模块化护甲组件"
+	desc = "可以自行定制！"
+	desc_extended = "模块化护甲使用的护甲组件。"

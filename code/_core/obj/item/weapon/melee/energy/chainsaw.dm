@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/energy/chainsaw/
-	name = "chainsaw"
-	desc = "When you solve your problems with a chainsaw, you never have the same problem twice!"
-	desc_extended =  "It's a chainsaw. Turn it on and watch as everything you hit with it becomes chunky soup."
+	name = "链锯"
+	desc = "用链锯解决问题，同一个问题绝不会来第二次！"
+	desc_extended =  "一把链锯。启动它，看着被你击中的一切变成大块浓汤。"
 	icon = 'icons/obj/item/weapons/melee/swords/chainsaw.dmi'
 	damage_type = /damagetype/melee/sword/chainsaw
 	damage_type_on = /damagetype/melee/sword/chainsaw/on
@@ -43,12 +43,12 @@
 	INTERACT_CHECK_NO_DELAY(src)
 
 	if(!is_inventory(src.loc))
-		activator.to_chat(span("warning","You need to be holding the chainsaw in order to start it!"))
+		activator.to_chat(span("warning","必须把链锯拿在手中才能启动！"))
 		return FALSE
 
 	var/obj/hud/inventory/I = src.loc
 	if(!I.click_flags)
-		activator.to_chat(span("warning","You need to be holding the chainsaw in order to start it!"))
+		activator.to_chat(span("warning","必须把链锯拿在手中才能启动！"))
 		return FALSE
 
 	return TRUE
@@ -81,7 +81,7 @@
 
 /obj/item/weapon/melee/energy/chainsaw/proc/try_start(var/mob/activator)
 	if(activator.is_busy())
-		activator.to_chat(span("warning","You're already busy with a task!"))
+		activator.to_chat(span("warning","你正在忙于其他操作！"))
 		return FALSE
 
 	PROGRESS_BAR(activator,src,20,src::pull_chain(),activator)

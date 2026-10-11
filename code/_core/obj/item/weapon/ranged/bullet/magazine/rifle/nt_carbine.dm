@@ -1,9 +1,9 @@
 //Removed because it's too similiar to the NT AR-13
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/nt_carbine
-	name = "\improper 5.56 U-NT Carabiner"
-	desc = "Good for shuttle hijackings."
-	desc_extended = "A small carbine rifle that was intended to phase out the much older AR-SS13. Turns out, people still like the AR-SS13 for what it does, so it exists alongside it."
+	name = "\improper 5.56 U-NT卡宾枪"
+	desc = "适合劫持穿梭机。"
+	desc_extended = "小型卡宾枪，原计划用来淘汰年代更久的AR-SS13。但大家仍然喜欢AR-SS13的表现，因此两者继续并存。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_2.dmi'
 	icon_state = "inventory"
 	value = 1000

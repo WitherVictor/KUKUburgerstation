@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/deus_vault
-	name = "crusader"
+	name = "十字军战士"
 	starting_factions = list(
 		FACTION_PLAYER_HOSTILE
 	)
@@ -30,4 +30,4 @@
 		B.update_icon()
 		pickup(B)
 
-	
+

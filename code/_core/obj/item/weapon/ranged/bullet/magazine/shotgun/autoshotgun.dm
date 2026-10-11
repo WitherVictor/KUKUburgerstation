@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/shotgun/bulldog
-	name = "\improper 20g Bulldog"
-	desc = "For when you want to clear a room."
-	desc_extended = "The 20 Gauge Bulldog is an insanely powerful semiautomatic bullpup shotgun, nicknamed \"Bulldog\" for its bullpup design as well as the fact that it kicks like one too."
+	name = "\improper 20号斗牛犬"
+	desc = "想清空房间时，就用它。"
+	desc_extended = "20号斗牛犬是威力惊人的半自动无托霰弹枪，因无托结构和如猛犬般强劲的后坐力而得名。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/syndicate/semi.dmi'
 	icon_state = "inventory"
 	value = 2900

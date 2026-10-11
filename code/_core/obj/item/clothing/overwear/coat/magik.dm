@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/magikrobe
-	name = "magik robe"
+	name = "魔法长袍"
 	icon = 'icons/obj/item/clothing/suit/magikrobe.dmi'
 
-	desc = "Magic Missile."
-	desc_extended = "Thunder Bolt."
+	desc = "魔法飞弹。"
+	desc_extended = "雷电术。"
 
 	defense_rating = list(
 		ARCANE = 50,

@@ -10,9 +10,9 @@
 	return ..()
 
 /obj/item/grenade/device/timed/explosive
-	name = "timed explosive grenade"
-	desc = "Kaboom!"
-	desc_extended = "A prebuilt timed explosive grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时爆破手榴弹"
+	desc = "轰！"
+	desc_extended = "预装好的定时爆破手榴弹。标签注明引信设为3秒。"
 	value = 50
 
 	marker_color = COLOR_GREEN
@@ -23,9 +23,9 @@
 	return ..()
 
 /obj/item/grenade/device/timed/smoke/
-	name = "timed smoke grenade"
-	desc = "Kaboomish!"
-	desc_extended = "A prebuilt timed smoke grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时烟雾手榴弹"
+	desc = "差不多也算轰吧！"
+	desc_extended = "预装好的定时烟雾手榴弹。标签注明引信设为3秒。"
 
 	marker_color = COLOR_BLUE
 
@@ -41,9 +41,9 @@
 
 
 /obj/item/grenade/device/timed/emp
-	name = "timed EMP grenade"
-	desc = "Kaboomish!"
-	desc_extended = "A prebuilt timed EMP grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时电磁脉冲手榴弹"
+	desc = "差不多也算轰吧！"
+	desc_extended = "预装好的定时电磁脉冲手榴弹。标签注明引信设为3秒。"
 	marker_color = COLOR_CYAN
 	value = 1
 
@@ -54,9 +54,9 @@
 
 
 /obj/item/grenade/device/timed/incendiary
-	name = "timed incendiary grenade"
-	desc = "Kaboomish!"
-	desc_extended = "A prebuilt timed incendiary grenade. The labeling indicates that the fuse is set to 3 seconds."
+	name = "定时燃烧手榴弹"
+	desc = "差不多也算轰吧！"
+	desc_extended = "预装好的定时燃烧手榴弹。标签注明引信设为3秒。"
 
 	paint_color = COLOR_RED
 	marker_color = COLOR_ORANGE

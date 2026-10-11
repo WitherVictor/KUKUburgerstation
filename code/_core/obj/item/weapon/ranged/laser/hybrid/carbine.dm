@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/hybrid/carbine
-	name = "hybrid laser carbine"
-	desc = "Freeze, Criminal Scum!"
-	desc_extended = "A hybrid laser carbine with two firemodes, low intensity (stun) and high intensity (kill). Commonly used by security forces all over the galaxy."
+	name = "混合模式激光卡宾枪"
+	desc = "站住，罪犯渣滓！"
+	desc_extended = "具备低强度（击晕）和高强度（致命）两种射击模式的激光卡宾枪，银河各地的安保部队都在使用。"
 	icon = 'icons/obj/item/weapons/ranged/laser/carbine_new.dmi'
 	value = 1900
 

@@ -1,8 +1,8 @@
 /obj/item/clothing/glasses/nightvision
-	name = "nightvision goggles"
+	name = "夜视护目镜"
 
-	desc = "Kept you waiting, huh?"
-	desc_extended = "A pair of tactical nightvision goggles. Keep away from light."
+	desc = "让你久等了，是吧？"
+	desc_extended = "一副战术夜视护目镜。请远离强光。"
 	icon = 'icons/obj/item/clothing/glasses/nightvision.dmi'
 
 	see_in_dark = VIEW_RANGE + ZOOM_RANGE
@@ -45,10 +45,10 @@
 /obj/item/clothing/glasses/nightvision/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(stored_cell)
-		. += div("notice","There is \a [stored_cell] installed.")
-		. += div("notice","The charge meter reads [CEILING((stored_cell.charge_current/stored_cell.charge_max)*100,1)]%.")
+		. += div("notice","已安装[stored_cell]。")
+		. += div("notice","电量显示为[CEILING((stored_cell.charge_current/stored_cell.charge_max)*100,1)]%。")
 	else
-		. += div("notice","There is no power cell installed.")
+		. += div("notice","尚未安装电池。")
 
 /obj/item/clothing/glasses/nightvision/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
 
@@ -58,10 +58,10 @@
 			INTERACT_CHECK
 			INTERACT_DELAY(5)
 			if(!stored_cell)
-				activator.to_chat(span("warning","There is no power cell to remove from \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里没有可取出的电池！"))
 				return TRUE
 			stored_cell.drop_item(get_turf(activator))
-			activator.to_chat(span("notice","You remove \the [stored_cell.name] from \the [src.name]."))
+			activator.to_chat(span("notice","你从[src.name]中取出了[stored_cell.name]。"))
 			stored_cell = null
 			return TRUE
 		if(istype(object,/obj/item/powercell/))
@@ -69,13 +69,13 @@
 			INTERACT_DELAY(5)
 			var/obj/item/PC = object
 			if(stored_cell)
-				activator.to_chat(span("warning","There is already \a [stored_cell.name] inside \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里已经装着[stored_cell.name]了！"))
 				return TRUE
 			if(PC.size > SIZE_0)
-				activator.to_chat(span("warning","\The [PC.name] is too large to be put into \the [src.name]!"))
+				activator.to_chat(span("warning","[PC.name]太大了，装不进[src.name]！"))
 				return TRUE
 			PC.drop_item(src)
-			activator.to_chat(span("notice","You insert \the [PC.name] into \the [src.name]."))
+			activator.to_chat(span("notice","你把[PC.name]装进了[src.name]。"))
 			stored_cell = PC
 			return TRUE
 
@@ -138,11 +138,11 @@
 	if(!active)
 		var/obj/item/powercell/PC = get_battery()
 		if(!PC)
-			activator?.to_chat(span("notice","\The [src.name] doesn't have a power cell installed!"))
+			activator?.to_chat(span("notice","[src.name]尚未安装电池！"))
 			return TRUE
 		PC.charge_current = max(0,PC.charge_current - 10) //Spamming removes power.
 		if(PC.charge_current <= 0)
-			activator?.to_chat(span("notice","\The [src.name] doesn't have enough power!"))
+			activator?.to_chat(span("notice","[src.name]电量不足！"))
 			return TRUE
 
 	active = !active
@@ -163,7 +163,7 @@
 	if(active && !drain_power(activator))
 		return FALSE
 
-	activator?.to_chat(span("notice","\The [src.name] flickers [active ? "on" : "off"]."))
+	activator?.to_chat(span("notice","[src.name]闪烁着[active ? "开启" : "关闭"]了。"))
 
 	return TRUE
 
@@ -200,8 +200,8 @@
 
 
 /obj/item/clothing/glasses/nightvision/syndicate
-	name = "syndicate nightvision goggles"
-	desc_extended = "A pair of tactical nightvision goggles. Keep away from light. Better than most nightvision goggles on the market."
+	name = "辛迪加夜视护目镜"
+	desc_extended = "一副战术夜视护目镜。请远离强光。性能优于市面上大多数夜视护目镜。"
 
 	icon = 'icons/obj/item/clothing/glasses/nightvision_syndicate.dmi'
 

@@ -20,9 +20,9 @@ var/global/list/genetic_upgrade_table = list(
 )
 
 /obj/item/genetic_ball
-	name = "genetic codeball"
-	desc = "What could possibly go wrong?"
-	desc_extended = "A spaceage artifact that modifies your genetic traits."
+	name = "基因编码球"
+	desc = "这能出什么岔子呢？"
+	desc_extended = "能改变基因特质的太空时代遗物。"
 
 	icon = 'icons/obj/item/genetic_ball.dmi'
 	icon_state = "ball"
@@ -72,6 +72,10 @@ var/global/list/rarity_to_number = list(
 
 	. = ..()
 
+/obj/item/genetic_ball/proc/get_genetic_rarity_name(var/desired_rarity)
+	var/list/rarity_names = list(RARITY_BROKEN="破损",RARITY_COMMON="普通",RARITY_UNCOMMON="少见",RARITY_RARE="稀有",RARITY_MYTHICAL="神话",RARITY_LEGENDARY="传奇")
+	return rarity_names[desired_rarity] ? rarity_names[desired_rarity] : desired_rarity
+
 /obj/item/genetic_ball/proc/do_upgrade(var/mob/living/caller)
 
 	if(action_type == GENETIC_INERT)
@@ -82,24 +86,24 @@ var/global/list/rarity_to_number = list(
 		return TRUE
 
 	if(rarity_to_number[caller.rarity] > rarity_to_number[src.rarity])
-		caller.to_chat(span("warning","Failed to use the [src.name]: Your genetic rarity is high than the rarity of the [src.name]."))
+		caller.to_chat(span("warning","无法使用[src.name]：你的基因稀有度高于这颗宝珠的稀有度。"))
 		return FALSE
 
-	caller.to_chat(span("notice","You try to apply \the [src.name] to yourself..."))
+	caller.to_chat(span("notice","你尝试对自己使用[src.name]……"))
 
 	switch(action_type)
 		if(GENETIC_UPGRADE)
 			if(caller.rarity == src.rarity)
-				caller.to_chat(span("warning","Failed to use the [src.name]: Your genetic rarity is already [src.rarity]!"))
+				caller.to_chat(span("warning","无法使用[src.name]：你的基因稀有度已经是[get_genetic_rarity_name(src.rarity)]了！"))
 				return FALSE
 			caller.rarity = src.rarity
-			caller.to_chat(span("notice","Your genetic rarity was upgraded to [caller.rarity]."))
+			caller.to_chat(span("notice","你的基因稀有度提升到了[get_genetic_rarity_name(caller.rarity)]。"))
 		if(GENETIC_ADD)
 			if(!caller.can_add_trait())
-				caller.to_chat(span("warning","Failed to use the [src.name]: You have too many traits! Upgrade your genetic rarity or remove more positive traits to add more."))
+				caller.to_chat(span("warning","无法使用[src.name]：你的特质太多了！提升基因稀有度或移除正面特质，才能添加更多特质。"))
 				return FALSE
 			if(!caller.add_random_trait())
-				caller.to_chat(span("warning","Failed to use the [src.name]: Code error. Report this bug on github."))
+				caller.to_chat(span("warning","无法使用[src.name]：发生代码错误，请在GitHub上报告此问题。"))
 				return FALSE
 		if(GENETIC_RANDOM)
 			caller.remove_all_traits()
@@ -119,10 +123,10 @@ var/global/list/rarity_to_number = list(
 				caller.add_trait(random_trait)
 		if(GENETIC_SUBTRACT)
 			if(!length(caller.traits))
-				caller.to_chat(span("warning","Failed to [src.name]: You don't have any traits to remove!"))
+				caller.to_chat(span("warning","无法使用[src.name]：你没有可移除的特质！"))
 				return FALSE
 			if(!caller.remove_random_trait())
-				caller.to_chat(span("warning","Failed to [src.name]: Code error. Report this bug on github."))
+				caller.to_chat(span("warning","无法使用[src.name]：发生代码错误，请在GitHub上报告此问题。"))
 				return FALSE
 
 	qdel(src)
@@ -135,8 +139,8 @@ var/global/list/rarity_to_number = list(
 	. = ..()
 
 	if(rarity == RARITY_BROKEN || action_type == GENETIC_INERT)
-		name = "genetic orb of scouring"
-		desc_extended = "[initial(desc_extended)] This one removes all genetic modifiers from your person. If you have no genetic modifiers, it downgrades your genetic rarity to common."
+		name = "基因净化宝珠"
+		desc_extended = "[initial(desc_extended)]这颗宝珠会移除你身上的所有基因特质。如果你没有基因特质，则会将你的基因稀有度降为普通。"
 		rarity = RARITY_BROKEN
 		action_type = GENETIC_INERT
 		return .
@@ -144,16 +148,19 @@ var/global/list/rarity_to_number = list(
 	if(action_type == GENETIC_UPGRADE && rarity == RARITY_COMMON)
 		rarity = RARITY_UNCOMMON
 
-	name = "[rarity] genetic orb of [action_type]"
+	var/list/action_names = list(GENETIC_INERT="净化",GENETIC_UPGRADE="晋升",GENETIC_ADD="增赋",GENETIC_SUBTRACT="剥离",GENETIC_RANDOM="重组")
+	var/action_name = action_names[action_type] ? action_names[action_type] : action_type
+	var/rarity_name = get_genetic_rarity_name(rarity)
+	name = "[rarity_name]基因[action_name]宝珠"
 	switch(action_type)
 		if(GENETIC_ADD)
-			desc_extended = "[initial(desc_extended)] This one adds a random trait to your genetic code, if possible. Must have a genetic rarity of [rarity] or lower to use, as well as space to add it."
+			desc_extended = "[initial(desc_extended)]这颗宝珠会在条件允许时为你添加一个随机特质。你的基因稀有度必须为[rarity_name]或更低，且仍有特质名额才能使用。"
 		if(GENETIC_RANDOM)
-			desc_extended = "[initial(desc_extended)] This one randomizes the traits of your genetic code, removing your existing ones and giving you new ones with the maximium amount based on your maximum allowed genetic traits. Must have a genetic rarity of [rarity] or lower to use."
+			desc_extended = "[initial(desc_extended)]这颗宝珠会移除现有特质，并按特质上限尝试添加随机新特质；实际数量可能低于上限。你的基因稀有度必须为[rarity_name]或更低才能使用。"
 		if(GENETIC_SUBTRACT)
-			desc_extended = "[initial(desc_extended)] This one removes a random trait from your genetic code. Must have a genetic rarity of [rarity] or lower to use."
+			desc_extended = "[initial(desc_extended)]这颗宝珠会随机移除你的一个基因特质。你的基因稀有度必须为[rarity_name]或更低才能使用。"
 		if(GENETIC_UPGRADE)
-			desc_extended = "[initial(desc_extended)] This one upgrades your genetic rarity to [rarity] to allow for more modifiers. Must have a genetic rarity lower than [rarity] to use. Note that after upgrading your genetic rarity, you can only use [rarity] genetic balls or higher on your person."
+			desc_extended = "[initial(desc_extended)]这颗宝珠会将你的基因稀有度提升到[rarity_name]，从而允许更多特质。你的基因稀有度必须低于[rarity_name]才能使用。提升后，其他基因增赋、剥离和重组宝珠的稀有度也必须至少达到[rarity_name]；净化宝珠不受此限制。"
 
 	value = 0
 	switch(rarity_table)

@@ -20,23 +20,23 @@
 /obj/shuttle_controller/proc/is_safe_to_land(var/mob/activator,var/obj/marker/shuttle_landing/desired_marker)
 
 	if(!SSgamemode?.active_gamemode?.allow_launch)
-		activator?.to_chat(span("warning","Error: Shuttles are not ready to launch yet."))
+		activator?.to_chat(span("warning","错误：穿梭机尚未准备好起飞。"))
 		return FALSE
 
 	if(src.state != SHUTTLE_STATE_LANDED)
-		activator?.to_chat(span("notice","The shuttle is already in transit!"))
+		activator?.to_chat(span("notice","穿梭机已经在航行中了！"))
 		return FALSE
 
 	if(!desired_marker)
-		activator?.to_chat(span("warning","Error: Invalid shuttle destination!"))
+		activator?.to_chat(span("warning","错误：无效的穿梭机目的地！"))
 		return FALSE
 
 	if(desired_marker.owning_shuttle && desired_marker.owning_shuttle != src)
-		activator?.to_chat(span("warning","Error: Shuttle destination is a special landing zone!"))
+		activator?.to_chat(span("warning","错误：该目的地是其他穿梭机的专用登陆区！"))
 		return FALSE
 
 	if(desired_marker.reserved_by_shuttle)
-		activator?.to_chat(span("warning","Error: Shuttle destination already is reserved or occupied!"))
+		activator?.to_chat(span("warning","错误：目的地已被预留或占用！"))
 		return FALSE
 
 	return TRUE

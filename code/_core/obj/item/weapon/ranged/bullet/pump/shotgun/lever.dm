@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/lever
-	name = "12g 1984 lever-action shotgun"
-	desc = "Git off my property!"
-	desc_extended = "A lever action shotgun. Its lightweight, long-barrel design makes it more accurate than most shotguns, but fires slower. The weapon of choice for Space Farmers."
+	name = "12号1984杠杆式霰弹枪"
+	desc = "滚出我家地盘！"
+	desc_extended = "杠杆式霰弹枪。轻量化长枪管设计使其比大多数霰弹枪更精准，但射速较慢。太空农民的首选武器。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/sol/cowboy.dmi'
 	icon_state = "inventory"
 	value = 900

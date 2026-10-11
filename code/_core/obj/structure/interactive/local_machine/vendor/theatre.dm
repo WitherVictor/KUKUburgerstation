@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/theatre/wardrobe
-	name = "costume vendor"
+	name = "演出服售货机"
 	icon_state = "theater"
 
 	stored_types = list(

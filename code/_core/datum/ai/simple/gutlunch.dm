@@ -31,7 +31,7 @@
 		var/mob/living/L = objective_attack
 		if(L.gib_on_butcher && L.dead && (L.override_butcher || length(L.butcher_contents)))
 			var/turf/T = get_turf(owner)
-			L.visible_message(span("danger","\The [owner.name] starts to devour \the [L.name]!"),span("danger","You start to butcher \the [L.name]!"))
+			L.visible_message(span("danger","[owner.name]开始吞食[L.name]！"),span("danger","[owner.name]开始吞食你的尸体！"))
 			play_sound('sound/effects/demon_consume.ogg',T)
 			PROGRESS_BAR(owner,L,max(10,L.health.health_max*0.05),L::on_butcher(),owner,L)
 			PROGRESS_BAR_CONDITIONS(owner,L,L::can_be_butchered(),owner)

@@ -1,13 +1,13 @@
 /obj/item/mech_part/legs
 
-	name = "legs"
-	desc = "Stomp."
-	desc_extended = "Some legs for your mech. You need these to move around."
+	name = "机甲腿部"
+	desc = "踏！"
+	desc_extended = "机甲使用的移动组件，装上才能四处行走。"
 
 	var/maximum_support = 100 //How much these legs can support. Does not count towards itself.
 
 /obj/item/mech_part/legs/loader
-	name = "loader legs"
+	name = "装载型机甲腿部"
 	icon_state = "loader_legs"
 
 	weight = 30
@@ -22,7 +22,7 @@
 	value = 30 * 20
 
 /obj/item/mech_part/legs/combat
-	name = "combat legs"
+	name = "战斗型机甲腿部"
 	icon_state = "combat_legs"
 
 	weight = 30
@@ -37,7 +37,7 @@
 	value = 30 * 20
 
 /obj/item/mech_part/legs/light
-	name = "light legs"
+	name = "轻型机甲腿部"
 	icon_state = "light_legs"
 
 	weight = 20
@@ -52,7 +52,7 @@
 	value = 20*20
 
 /obj/item/mech_part/legs/heavy
-	name = "heavy legs"
+	name = "重型机甲腿部"
 	icon_state = "heavy_legs"
 
 	weight = 50
@@ -67,8 +67,8 @@
 	value = 50*20
 
 /obj/item/mech_part/legs/tracks
-	name = "heavy legs"
-	desc = "Stomp?"
+	name = "机甲履带底盘"
+	desc = "踏？"
 	icon_state = "tracks"
 
 	weight = 60
@@ -78,7 +78,7 @@
 	value = 60 * 20
 
 /obj/item/mech_part/legs/spiderlegs
-	name = "light legs"
+	name = "蛛形机甲腿部"
 	icon_state = "spiderlegs"
 
 	weight = 20

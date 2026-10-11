@@ -1,7 +1,7 @@
 /obj/item/fulton_pack
-	name = "fulton pack"
-	desc = "Makes people fly."
-	desc_extended = "A pack containing a bluespace parachute that sends the attached object up to be sold for credits. Works on any object or living being not anchored to the floor."
+	name = "富尔顿回收包"
+	desc = "让人飞起来。"
+	desc_extended = "装有蓝空间回收伞的背包，可将连接的目标升空回收并出售为信用点。目标必须未固定在地面上且具有出售价值；活体目标还须满足倒地、非友方等回收条件。"
 	icon = 'icons/obj/item/fulton.dmi'
 	icon_state = "inventory"
 
@@ -33,37 +33,37 @@
 
 	if(turf_check)
 		if(!is_turf(activator.loc))
-			activator.to_chat(span("warning","We couldn't get your signal!"))
+			activator.to_chat(span("warning","无法接收到你的信号！"))
 			return FALSE
 		if(!is_turf(object.loc))
-			activator.to_chat(span("warning","We couldn't get the object's signal!"))
+			activator.to_chat(span("warning","无法接收到目标的信号！"))
 			return FALSE
 		if(object.anchored)
-			activator.to_chat(span("warning","\The [object.name] is anchored to the floor!"))
+			activator.to_chat(span("warning","[object.name]固定在地面上！"))
 			return FALSE
 
 	if(activator == object)
-		activator.to_chat(span("warning","You can't extract yourself!"))
+		activator.to_chat(span("warning","你不能回收自己！"))
 		return FALSE
 
 	if(is_living(object))
 		var/mob/living/L = object
 		if(L.minion_master)
-			activator.to_chat(span("warning","Minions cannot be fultoned!"))
+			activator.to_chat(span("warning","随从无法进行富尔顿回收！"))
 			return FALSE
 		if(is_turf(L.loc) && !L.horizontal)
-			activator.to_chat(span("warning","\The [L.name] must be laying on the ground to allow a successful extraction!"))
+			activator.to_chat(span("warning","[L.name]必须倒在地上才能成功回收！"))
 			return FALSE
 		if(L.dead)
-			activator.to_chat(span("warning","\The [L.name] is dead!"))
+			activator.to_chat(span("warning","[L.name]已经死了！"))
 			return FALSE
 		if(is_living(activator))
 			var/mob/living/L2 = activator
 			if(!allow_hostile_action(L2.loyalty_tag,L))
-				activator.to_chat(span("warning","Your loyalty tag prevents you from extracting \the [L.name]!"))
+				activator.to_chat(span("warning","你的阵营标记不允许你回收[L.name]！"))
 				return FALSE
 		if(L.boss)
-			activator.to_chat(span("warning","\The [L.name] is too large to be extracted!"))
+			activator.to_chat(span("warning","[L.name]太大了，无法回收！"))
 			return FALSE
 
 	if(istype(object,/obj/structure/interactive/crate/))
@@ -71,7 +71,7 @@
 		if(istype(object,/obj/structure/interactive/crate/secure))
 			var/obj/structure/interactive/crate/secure/S = object
 			if(S.locked)
-				activator.to_chat(span("warning","\The [S.name] needs to be unlocked in order to be fultoned!"))
+				activator.to_chat(span("warning","必须先解锁[S.name]才能进行富尔顿回收！"))
 				return FALSE
 		for(var/k in C.contents)
 			var/atom/movable/M = k
@@ -79,7 +79,7 @@
 				return FALSE
 
 	if(value_check && object.get_value() <= 0)
-		activator.to_chat(span("warning","\The [object.name] cannot be sold as it has no value!"))
+		activator.to_chat(span("warning","[object.name]没有出售价值，无法卖出！"))
 		return FALSE
 
 	return TRUE
@@ -92,8 +92,8 @@
 	FINALIZE(F)
 	F.add_movable(activator,M)
 
-	activator.visible_message(span("warning","\The [activator.name] attaches \the [src.name] to \the [M.name]!"))
-	activator.to_chat(span("notice","You have [amount-1] fulton packs left."))
+	activator.visible_message(span("warning","[activator.name]将[src.name]连接到了[M.name]上！"))
+	activator.to_chat(span("notice","你还剩[amount-1]个富尔顿回收包。"))
 
 	add_item_count(-1)
 
@@ -115,7 +115,7 @@
 	if(!can_attach_fulton(activator,object,TRUE,TRUE))
 		return TRUE
 
-	activator.visible_message(span("warning","\The [activator.name] begins to attach \the [src.name] to \the [object.name]!"),span("warning","You begin to attach \the [src.name] to \the [object.name]."))
+	activator.visible_message(span("warning","[activator.name]开始将[src.name]连接到[object.name]上！"),span("warning","你开始将[src.name]连接到[object.name]上。"))
 
 	PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(2),src::attach_fulton(),activator,object)
 	PROGRESS_BAR_CONDITIONS(activator,src,src::can_attach_fulton(),activator,object)

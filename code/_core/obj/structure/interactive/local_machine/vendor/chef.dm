@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/chef/dinnerware
-	name = "dinnerware vendor"
+	name = "餐具售货机"
 	icon_state = "dinnerware"
 
 	stored_types = list(
@@ -12,7 +12,7 @@
 	)
 
 /obj/structure/interactive/vending/chef/wardrobe
-	name = "chef wardrobe vendor"
+	name = "厨师服装售货机"
 	icon_state = "chefdrobe"
 
 	stored_types = list(
@@ -27,7 +27,7 @@
 	)
 
 /obj/structure/interactive/vending/chef/equipment
-	name = "chef equipment vendor"
+	name = "厨师装备售货机"
 	icon_state = "chef_equipment"
 
 	stored_types = list(

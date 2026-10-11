@@ -1,7 +1,7 @@
 /obj/item/ore_bag
-	name = "mining bag"
-	desc = "The second best way to transport ores on your person."
-	desc_extended = "A giant orange bag that is designed to hold all your ores. Can hold up to 100 ores."
+	name = "矿石袋"
+	desc = "随身携带矿石的次佳选择。"
+	desc_extended = "用来装矿石的大号橙色袋子，最多可装100单位矿石。"
 
 	icon = 'icons/obj/item/storage/bags.dmi'
 	icon_state = "mining"
@@ -24,7 +24,7 @@
 
 /obj/item/ore_bag/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","The counter shows [ore_count] objects inside.")
+	. += div("notice","计数器显示袋内有[ore_count]单位矿石。")
 
 /obj/item/ore_bag/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
 	RUN_PARENT_SAFE
@@ -90,11 +90,11 @@
 
 	if(did_transfer)
 		if(was_full || still_some_left)
-			activator.to_chat(span("notice","You pick up some of the ores on \the [T.name]."))
+			activator.to_chat(span("notice","你拾起了[T.name]上的部分矿石。"))
 		else
-			activator.to_chat(span("notice","You pick up all of the ores on \the [T.name]."))
+			activator.to_chat(span("notice","你拾起了[T.name]上的矿石。"))
 	else
-		activator.to_chat(span("warning","There was nothing to pick up on \the [T.name]!"))
+		activator.to_chat(span("warning","[T.name]上没有可拾取的矿石！"))
 
 	if(still_some_left)
 		PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(1),src::scoop_up_ore(),activator,T)
@@ -112,13 +112,13 @@
 		INTERACT_DELAY(5)
 		var/obj/structure/interactive/ore_box/OB = object
 		if(!length(src.contained_ore))
-			activator.to_chat(span("notice","There is no ore in \the [src.name] that can be put into \the [OB.name]."))
+			activator.to_chat(span("notice","[src.name]里没有可转入[OB.name]的矿石。"))
 			return TRUE
 		for(var/k in src.contained_ore)
 			OB.contained_ore[k] += src.contained_ore[k]
 		src.contained_ore.Cut()
 		ore_count = 0
-		activator.to_chat(span("notice","You transfer all the ore in \the [src.name] to \the [OB.name]."))
+		activator.to_chat(span("notice","你将[src.name]里的所有矿石转入了[OB.name]。"))
 		return TRUE
 
 	var/turf/T = object
@@ -135,9 +135,9 @@
 	INTERACT_DELAY(10)
 	if(activator.attack_flags & CONTROL_MOD_DISARM)
 		if(!length(contained_ore))
-			activator.to_chat(span("warning","There is no ore to dump!"))
+			activator.to_chat(span("warning","没有可倒出的矿石！"))
 			return TRUE
-		activator.to_chat(span("notice","You start dumping some ore..."))
+		activator.to_chat(span("notice","你开始倒出矿石……"))
 		PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(3),src::dump_some_ore(),activator,T)
 		PROGRESS_BAR_CONDITIONS(activator,src,src::can_scoop_up_ore(),activator,T) //Not a typo.
 	else
@@ -165,7 +165,7 @@
 		contained_ore -= ore_id
 
 	if(!length(contained_ore))
-		activator.to_chat(span("notice","You finish dumping all the ore."))
+		activator.to_chat(span("notice","你倒出了所有矿石。"))
 		return TRUE
 
 	PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(1),src::dump_some_ore(),activator,T)
@@ -174,9 +174,9 @@
 	return TRUE
 
 /obj/item/ore_bag/bluespace
-	name = "bluespace mining bag"
-	desc = "The best way to transport ores on your person."
-	desc_extended = "A bluespace-upgraded variant of the beloved giant orange bag that is designed to hold all your ores. Can hold an unlimited number of ores."
+	name = "蓝空间矿石袋"
+	desc = "随身携带矿石的最佳选择。"
+	desc_extended = "深受喜爱的大号橙色矿石袋的蓝空间升级版，可以容纳无限数量的矿石。"
 
 	icon = 'icons/obj/item/storage/bags.dmi'
 	icon_state = "mining_bluespace"

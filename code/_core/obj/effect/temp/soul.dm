@@ -1,5 +1,5 @@
 /obj/effect/temp/soul
-	name = "soul"
+	name = "灵魂"
 	mouse_opacity = 1
 	duration = SECONDS_TO_DECISECONDS(10)
 

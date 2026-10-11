@@ -1,7 +1,7 @@
 /mob/living/simple/clown
-	name = "clown minion"
-	desc = "Oh god oh fuck."
-	desc_extended = "A loyal servant of the honkmother, now in this realm."
+	name = "小丑仆从"
+	desc = "天哪，卧槽。"
+	desc_extended = "鸣笛之母的忠实仆从，如今已来到这个世界。"
 	icon = 'icons/mob/living/simple/clown_large.dmi'
 	icon_state = "clown"
 
@@ -35,7 +35,7 @@
 
 
 /mob/living/simple/clown/hulk
-	name = "clown hunk"
+	name = "小丑猛男"
 	icon_state = "hulk"
 
 	health_base = 1000
@@ -58,7 +58,7 @@
 	size = SIZE_LARGE
 
 /mob/living/simple/clown/hulk/armored
-	name = "armored clown hunk"
+	name = "披甲小丑猛男"
 	icon_state = "destroyer"
 
 	armor_base = list(
@@ -74,7 +74,7 @@
 	)
 
 /mob/living/simple/clown/tree
-	name = "clown tree"
+	name = "小丑树"
 	icon_state = "tree"
 
 	health_base = 200
@@ -97,7 +97,7 @@
 
 
 /mob/living/simple/clown/long
-	name = "long clown"
+	name = "长条小丑"
 	icon_state = "long"
 
 	health_base = 300
@@ -115,7 +115,7 @@
 	size = SIZE_LARGE
 
 /mob/living/simple/clown/pie
-	name = "pie clown"
+	name = "馅饼小丑"
 	icon_state = "pie"
 	health_base = 100
 
@@ -132,7 +132,7 @@
 	size = SIZE_LARGE
 
 /mob/living/simple/clown/lube
-	name = "lube slime clown"
+	name = "润滑史莱姆小丑"
 	icon_state = "lube"
 
 	health_base = 200
@@ -344,7 +344,7 @@
 */
 
 /mob/living/simple/clown/mutant
-	name = "mutant clown"
+	name = "变异小丑"
 
 	icon_state = "mutant"
 
@@ -367,7 +367,7 @@
 	pixel_x = -16
 
 /mob/living/simple/clown/blob
-	name = "blob clown"
+	name = "异形菌毯小丑"
 	icon_state = "blob"
 
 	health_base = 500

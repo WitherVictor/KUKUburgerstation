@@ -160,7 +160,7 @@
 
 
 /obj/projectile/magic/fireball
-	name = "fireball"
+	name = "火球"
 	icon_state = "fireball"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
@@ -186,7 +186,7 @@
 		FINALIZE(L)
 
 /obj/projectile/magic/chaos
-	name = "chaos ball"
+	name = "混沌球"
 	icon_state = "chaos"
 	var/angle_to_add = 0
 
@@ -217,7 +217,7 @@
 	transform = M
 
 /obj/projectile/magic/magic_missile
-	name = "magic missile"
+	name = "魔法飞弹"
 	icon_state = "missile"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
@@ -229,7 +229,7 @@
 	homing_mod = 0.5 //What percentage of velocity (as a value 0-1) should the projectile try to turn to.
 
 /obj/projectile/magic/blade
-	name = "magic blade"
+	name = "魔法刀刃"
 	icon_state = "blade"
 
 	penetrations_left = 1
@@ -239,13 +239,13 @@
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 /obj/projectile/magic/rift
-	name = "magic rift"
+	name = "魔法裂隙"
 	icon_state = "rift"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 /obj/projectile/magic/rift/revive
-	name = "revival rift"
+	name = "复苏裂隙"
 	hit_laying = TRUE
 
 /obj/projectile/magic/rift/revive/on_projectile_hit(var/atom/hit_atom,var/turf/old_loc,var/turf/new_loc)
@@ -258,7 +258,7 @@
 			L.resurrect()
 
 /obj/projectile/magic/rift/heal
-	name = "healing rift"
+	name = "治疗裂隙"
 	hit_laying = TRUE
 
 /obj/projectile/magic/rift/heal/on_projectile_hit(var/atom/hit_atom,var/turf/old_loc,var/turf/new_loc)
@@ -273,7 +273,7 @@
 			L.blood_volume = clamp(L.blood_volume+20,0,L.blood_volume_max)
 
 /obj/projectile/magic/tesla
-	name = "tesla ball"
+	name = "特斯拉电球"
 	icon_state = "tesla"
 
 	turret_projectile = /obj/projectile/magic/tesla_bolt // The projectile for this projectile to shoot when near valid targets.
@@ -287,7 +287,7 @@
 
 
 /obj/projectile/magic/tesla_bolt
-	name = "tesla bolt"
+	name = "特斯拉电弧"
 	icon_state = "tesla_01"
 
 /obj/projectile/magic/tesla_bolt/New(var/desired_loc,var/atom/desired_owner,var/atom/desired_weapon,var/desired_vel_x,var/desired_vel_y,var/desired_shoot_x = 0,var/desired_shoot_y = 0, var/turf/desired_turf, var/desired_damage_type, var/desired_target, var/desired_color, var/desired_blamed, var/desired_damage_multiplier=1,var/desired_iff_tag,var/desired_loyalty_tag,var/desired_inaccuracy_modifier=1)
@@ -295,7 +295,7 @@
 	return ..()
 
 /obj/projectile/magic/lightning
-	name = "lightning"
+	name = "闪电"
 	icon_state = "lightning_01"
 	velocity_degrade = 0.8
 
@@ -304,18 +304,18 @@
 	return ..()
 
 /obj/projectile/magic/frost
-	name = "frost"
+	name = "寒霜"
 	icon_state = "frost"
 	velocity_degrade = 0.75
 
 /obj/projectile/magic/lesser_fire
-	name = "lesser fire"
+	name = "微弱火焰"
 	icon_state = "fire_lesser"
 
 	velocity_degrade = 0.2
 
 /obj/projectile/magic/lightning_bolt
-	name = "holy lightning bolt"
+	name = "神圣闪电"
 	icon_state = "lightning"
 	var/has_cleaved = FALSE
 
@@ -336,7 +336,7 @@
 
 
 /obj/projectile/magic/crystal
-	name = "magic crystal"
+	name = "魔法水晶"
 	icon_state = "crystal"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
@@ -347,7 +347,7 @@
 	extra_lifetime = 1
 
 /obj/projectile/magic/crystal/fire
-	name = "magic fire crystal"
+	name = "魔法火焰水晶"
 	icon_state = "crystal_fire"
 
 	velocity_degrade = 0.95
@@ -356,7 +356,7 @@
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 /obj/projectile/magic/crystal/ice
-	name = "ice bolt"
+	name = "冰箭"
 	icon_state = "crystal_ice"
 
 	velocity_degrade = 0.95
@@ -365,11 +365,11 @@
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 /obj/projectile/magic/shadow
-	name = "shadow ball"
+	name = "暗影球"
 	icon_state = "shadow"
 
 /obj/projectile/bullet/summon
-	name = "summon"
+	name = "召唤法球"
 	icon = 'icons/obj/projectiles/magic.dmi'
 	icon_state = "summon_dark"
 	steps_allowed = 4
@@ -378,14 +378,14 @@
 	impact_effect_turf = null
 
 /obj/projectile/magic/blackflame
-	name = "blackflame"
+	name = "黑炎"
 	icon_state = "blackflame"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 
 /obj/projectile/magic/cultist
-	name = "cultist hand"
+	name = "邪教徒之手"
 	icon_state = "cultist"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
@@ -405,7 +405,7 @@
 
 
 /obj/projectile/magic/arcblade
-	name = "arcblade"
+	name = "弧光刃"
 	icon_state = "cool"
 
 	penetrations_left = 3
@@ -419,7 +419,7 @@
 	velocity_degrade = 0.95
 
 /obj/projectile/magic/fractal
-	name = "fractal"
+	name = "分形"
 	icon_state = "fractal"
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 	penetrations_left = 1
@@ -429,7 +429,7 @@
 	homing_angle_limit = 80
 
 /obj/projectile/magic/pillar
-	name = "pillar"
+	name = "石柱"
 	icon_state = "arbiterpillar"
 	penetrations_left = 6
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
@@ -453,12 +453,12 @@
 
 */
 /obj/projectile/magic/holy_cross
-	name = "holy cross"
+	name = "神圣十字"
 	icon_state = "cross"
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 /obj/projectile/magic/unholy_skull
-	name = "unholy skull"
+	name = "邪秽骷髅"
 	icon_state = "evil"
 
 	homing = TRUE
@@ -467,7 +467,7 @@
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
 /obj/projectile/magic/inferno
-	name = "inferno"
+	name = "烈焰"
 	icon_state = "inferno"
 
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
@@ -480,11 +480,11 @@
 
 
 /obj/projectile/magic/buff
-	name = "buff"
+	name = "增益法球"
 	icon_state = "cross"
 
 /obj/projectile/magic/buff/mending
-	name = "mending"
+	name = "愈合法球"
 
 /obj/projectile/magic/buff/mending/on_projectile_hit(var/atom/hit_atom,var/turf/old_loc,var/turf/new_loc)
 	. = ..()
@@ -494,7 +494,7 @@
 			L.add_status_effect(TEMP_REGEN,damage_multiplier,SECONDS_TO_DECISECONDS(damage_multiplier * 15))
 
 /obj/projectile/magic/buff/armor
-	name = "armor"
+	name = "护甲法球"
 
 /obj/projectile/magic/buff/armor/on_projectile_hit(var/atom/hit_atom,var/turf/old_loc,var/turf/new_loc)
 	. = ..()
@@ -505,7 +505,7 @@
 
 
 /obj/projectile/magic/leaper
-	name = "leaper blood orb"
+	name = "跃行者血球"
 	icon = 'icons/obj/projectiles/leaper.dmi'
 	icon_state = "dark_orb"
 

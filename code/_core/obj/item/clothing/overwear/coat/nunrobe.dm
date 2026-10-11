@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/nunrobe
-	name = "nun garb"
+	name = "修女服"
 	icon = 'icons/obj/item/clothing/suit/nunrobe.dmi'
 
-	desc = "Holy virtue."
-	desc_extended = "There are two types that will wear this, and they're completely different."
+	desc = "神圣的美德。"
+	desc_extended = "会穿这身衣服的有两种人，而且完全不是一回事。"
 
 	defense_rating = list(
 		ARCANE = 40,

@@ -22,7 +22,7 @@
 	var/client/owner = CLIENT(ckey)
 	var/full_path = "[get_folder()][get_file()]"
 	rustg_file_write(json_encode(loaded_data),full_path)
-	owner?.to_chat(span("notice","Your loadout data has been saved."))
+	owner?.to_chat(span("notice","你的装备方案数据已保存。"))
 	return TRUE
 
 /savedata/client/loadout/proc/load()
@@ -41,11 +41,11 @@
 	var/savedata/client/loadout/L = SSclient.ckey_to_loadout_data[P.ckey]
 
 	if(!length(L.loaded_data))
-		P.to_chat(span("warning","You have no loadouts to delete!"))
+		P.to_chat(span("warning","你没有可删除的装备方案！"))
 		return FALSE
 
 	if(length(SSclient.ckey_to_loadout_cooldown) && SSclient.ckey_to_loadout_cooldown[P.ckey] > world.time)
-		P.to_chat(span("warning","Please wait [CEILING(DECISECONDS_TO_SECONDS(SSclient.ckey_to_loadout_cooldown[P.ckey] - world.time),1)] more seconds before deleting another loadout!"))
+		P.to_chat(span("warning","请再等待[CEILING(DECISECONDS_TO_SECONDS(SSclient.ckey_to_loadout_cooldown[P.ckey] - world.time),1)]秒后再删除装备方案！"))
 		return FALSE
 
 	L.loaded_data -= name
@@ -59,7 +59,7 @@
 		return FALSE
 
 	if(length(SSclient.ckey_to_loadout_cooldown) && SSclient.ckey_to_loadout_cooldown[P.ckey] > world.time)
-		P.to_chat(span("warning","Please wait [CEILING(DECISECONDS_TO_SECONDS(SSclient.ckey_to_loadout_cooldown[P.ckey] - world.time),1)] more seconds before saving another loadout!"))
+		P.to_chat(span("warning","请再等待[CEILING(DECISECONDS_TO_SECONDS(SSclient.ckey_to_loadout_cooldown[P.ckey] - world.time),1)]秒后再保存装备方案！"))
 		return FALSE
 
 	var/list/objects_to_check = P.worn_objects.Copy()
@@ -72,7 +72,7 @@
 		var/obj/item/I = k
 		var/list/generated_list = I.save_item_data(P,loadout=TRUE)
 		if(!length(generated_list))
-			P.to_chat(span("warning","\The [I.name] could not be saved in the loadout system."))
+			P.to_chat(span("warning","[I.name]无法保存到装备方案中。"))
 			continue
 		if(is_inventory(I.loc))
 			var/obj/hud/inventory/I2 = I.loc
@@ -85,7 +85,9 @@
 	if(length(L.loaded_data) && L.loaded_data[name])
 		if(usr != P)
 			return FALSE
-		var/choice = input("There already exists a loadout named [name]. Do you wish to overwrite?","Overwrite Loadout Data") as null|anything in list("Yes","No","Cancel")
+		var/list/overwrite_choices = list("是"="Yes","否"="No","取消"="Cancel")
+		var/choice = input("已存在名为[name]的装备方案。要覆盖吗？","覆盖装备方案","取消") as null|anything in overwrite_choices
+		choice = overwrite_choices[choice]
 		if(choice != "Yes")
 			return FALSE
 
@@ -109,7 +111,7 @@
 		return FALSE
 
 	if(length(SSclient.ckey_to_loadout_cooldown) && SSclient.ckey_to_loadout_cooldown[P.ckey] > world.time)
-		P.to_chat(span("warning","Please wait [CEILING(DECISECONDS_TO_SECONDS(SSclient.ckey_to_loadout_cooldown[P.ckey] - world.time),1)] more seconds before purchasing another loadout!"))
+		P.to_chat(span("warning","请再等待[CEILING(DECISECONDS_TO_SECONDS(SSclient.ckey_to_loadout_cooldown[P.ckey] - world.time),1)]秒后再购买装备方案！"))
 		return FALSE
 
 	var/savedata/client/loadout/L = SSclient.ckey_to_loadout_data[P.ckey]
@@ -119,7 +121,7 @@
 		CRASH("Tried loading a player-made loadout ([name]) that didn't exist!")
 
 	if(found_data["cost"] > P.currency)
-		P.to_chat(span("warning","You don't have enough credits to purchase this loadout!"))
+		P.to_chat(span("warning","你的信用点不足，无法购买这套装备方案！"))
 		return FALSE
 
 	var/turf/T = get_turf(P)
@@ -133,10 +135,10 @@
 		if(success)
 			total_value += I.get_value()
 		else
-			P.to_chat(span("warning","\The [I.name] could not be equipped. You will not be charged for this item."))
+			P.to_chat(span("warning","[I.name]无法装备。你无需为这件物品付费。"))
 			qdel(I)
 
-	P.to_chat(span("notice","You were charged [-P.adjust_currency(-total_value)] credits for this loadout."))
+	P.to_chat(span("notice","本次装备方案扣除了[-P.adjust_currency(-total_value)]信用点。"))
 	SSclient.ckey_to_loadout_cooldown[P.ckey] = world.time + SECONDS_TO_DECISECONDS(10)
 
 	return TRUE

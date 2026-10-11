@@ -1,7 +1,7 @@
 /obj/item/shell
-	name = "sea shell"
-	desc = "Where do you see the sea shell on the sea shore?"
-	desc_extended = "A beautiful colored shell. Not much use, other than selling it."
+	name = "贝壳"
+	desc = "海边的贝壳，你看见了没？"
+	desc_extended = "色彩漂亮的贝壳，除了卖钱也没什么用。"
 
 	icon = 'icons/obj/item/shell.dmi'
 	icon_state = "shell1"

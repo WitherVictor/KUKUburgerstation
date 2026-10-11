@@ -1,8 +1,8 @@
 /obj/structure/interactive/vending/prize
-	name = "prize vendor"
+	name = "兑奖售货机"
 	icon_state = "prize"
-	desc = "It's not pointless, I swear."
-	desc_extended = "A special prize vendor that converts arcade prize tickets into items."
+	desc = "我发誓，这些真有用。"
+	desc_extended = "一台可用街机兑奖券兑换物品的特殊兑奖售货机。"
 
 	accepts_item = /obj/item/currency/prize_ticket
 

@@ -1,8 +1,8 @@
 /obj/item/clothing/belt/brass
-	name = "brass belt"
+	name = "黄铜腰带"
 	icon = 'icons/obj/item/clothing/belts/brass.dmi'
-	desc = "PRAISE RATVAR!"
-	desc_extended = "Stores a robust amount of items that can easily and quickly be accessed. This one is made of brass."
+	desc = "赞美拉特瓦尔！"
+	desc_extended = "能存放不少物品，取用方便快捷。这条由黄铜制成。"
 
 	is_container = TRUE
 

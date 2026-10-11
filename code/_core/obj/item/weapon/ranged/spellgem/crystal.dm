@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/crystal
-	name = "crystal spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a burst of arcane crystals at a rapid rate that penetrates several targets."
+	name = "晶体法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "高速连射奥术晶体，能够穿透多个目标。"
 	icon_state = "damage"
 
 	rarity = RARITY_MYTHICAL

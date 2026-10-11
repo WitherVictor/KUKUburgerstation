@@ -1,12 +1,12 @@
 /area/prefab
-	name = "prefab area"
+	name = "建筑区域"
 	area_identifier = "Mission"
 	trackable = TRUE
 
 	link_to_parent_apc = TRUE
 
 /area/prefab/clockwork_cult
-	name = "Clockwork Hideout"
+	name = "发条邪教藏身处"
 	icon_state = "yellow"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 	sunlight_freq = 4
@@ -18,7 +18,7 @@
 
 
 /area/prefab/blood_cult
-	name = "Cult Hideout"
+	name = "邪教藏身处"
 	icon_state = "red"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 	sunlight_freq = 4
@@ -29,7 +29,7 @@
 	interior = TRUE
 
 /area/prefab/xeno_hive
-	name = "Xenomorph Beta Hive"
+	name = "异形贝塔巢穴"
 	icon_state = "blue"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -38,7 +38,7 @@
 	interior = TRUE
 
 /area/prefab/syndimining
-	name = "Syndicate Mining Base"
+	name = "辛迪加采矿基地"
 	icon_state = "red"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -47,7 +47,7 @@
 	interior = TRUE
 
 /area/prefab/hierophant
-	name = "Hierophant's Arena"
+	name = "大祭司竞技场"
 	icon_state = "purple"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -56,7 +56,7 @@
 	interior = TRUE
 
 /area/prefab/goblin_king
-	name = "Goblin King's Arena"
+	name = "地精王竞技场"
 	icon_state = "purple"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -65,7 +65,7 @@
 	interior = TRUE
 
 /area/prefab/frog
-	name = "Leaper's Arena"
+	name = "跃行者竞技场"
 	icon_state = "purple"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -74,7 +74,7 @@
 	interior = TRUE
 
 /area/prefab/rng_shrine
-	name = "Shrine of RNG"
+	name = "随机之神神龛"
 	icon_state = "green"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -83,7 +83,7 @@
 	interior = TRUE
 
 /area/prefab/syndicate_ship
-	name = "Syndicate Ship"
+	name = "辛迪加飞船"
 	icon_state = "red"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -92,7 +92,7 @@
 	interior = TRUE
 
 /area/prefab/rev_base
-	name = "Rev Base"
+	name = "革命军基地"
 	icon_state = "red"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 
@@ -102,7 +102,7 @@
 
 
 /area/prefab/syndicate_base
-	name = "Secret Syndicate Base"
+	name = "秘密辛迪加基地"
 	icon_state = "red"
 	cheese_type = /reagent/nutrition/cheese/cheddar
 

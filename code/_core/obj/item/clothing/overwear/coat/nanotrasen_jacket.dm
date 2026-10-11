@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/nanotrasen_officer
-	name = "nanotrasen officer jacket"
-	desc = "A regal blue jacket with silver trim."
-	desc_extended = "A long jacket worn by Nanotrasen officers, slim enough for most armored vests to be worn over it."
+	name = "纳米传讯军官夹克"
+	desc = "一件高贵的蓝色夹克，带有银色镶边。"
+	desc_extended = "纳米传讯军官穿着的长夹克，款式修身，外面还能套上大多数防护背心。"
 	icon = 'icons/obj/item/clothing/suit/nanotrasen_officer_jacket.dmi'
 	rarity = RARITY_RARE
 

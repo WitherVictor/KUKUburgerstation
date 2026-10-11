@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/ce
-	name = "Chief Engineer"
-	desc = "Poly's caretaker."
+	name = "总工程师"
+	desc = "波莉的照料者。"
 	species = "human"
 	sex = MALE
 	gender = MALE
@@ -15,4 +15,4 @@
 	change_organ_visual("hair_face", desired_color = "#291F1D", desired_icon_state = "facial_muttonmus_s")
 	update_all_blends()
 	equip_loadout(/loadout/chief_engineer)
-	
+

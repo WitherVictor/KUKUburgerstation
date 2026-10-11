@@ -1,7 +1,7 @@
 /obj/structure/interactive/disposals/machine/chute
-	name = "disposals chute"
-	desc = "Express delivery!"
-	desc_extended = "Throw trash in here."
+	name = "废物投放口"
+	desc = "快递直达！"
+	desc_extended = "把垃圾扔进这里。"
 	icon_state = "disposal"
 
 	collision_flags = FLAG_COLLISION_WALKING

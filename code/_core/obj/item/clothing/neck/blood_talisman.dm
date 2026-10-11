@@ -1,8 +1,8 @@
 /obj/item/clothing/neck/blood_talisman
-	name = "blood talisman"
+	name = "鲜血护符"
 	icon = 'icons/obj/item/clothing/neck/blood_talisman.dmi'
-	desc = "Bloody."
-	desc_extended = "A magical talisman that significantly boosts dark defense to the torso, and by extension, dark damage."
+	desc = "血淋淋的。"
+	desc_extended = "大幅增强躯干黑暗防护的魔法护符。"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
 
 	item_slot = SLOT_NECK

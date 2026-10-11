@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/pulse
 	name = "\improper NT-PR"
-	desc = "For public relations: with Deathsquad."
-	desc_extended = "A pricy and powerful magazine-fed pulse rifle that fires massive amounts of matter-destroying energy. Not for the lighthearted."
+	desc = "公关专用：敢死队式公关。"
+	desc_extended = "昂贵而强力的弹匣供弹脉冲步枪，发射大量可摧毁物质的能量。胆小者慎用。"
 	icon = 'icons/obj/item/weapons/ranged/laser/pulse.dmi'
 	icon_state = "inventory"
 	value = 4000

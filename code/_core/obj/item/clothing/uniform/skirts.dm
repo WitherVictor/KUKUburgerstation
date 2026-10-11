@@ -1,6 +1,6 @@
 /obj/item/clothing/uniform/skirt
-	name = "skirt"
-	desc = "Makes you look like a fucking weeb."
+	name = "连衣裙"
+	desc = "让你看起来像个该死的死宅。"
 	icon = 'icons/obj/items/clothing/uniforms/poly_skirt.dmi'
 
 	polymorphic = TRUE

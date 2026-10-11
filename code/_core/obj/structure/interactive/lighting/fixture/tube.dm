@@ -1,7 +1,7 @@
 /obj/structure/interactive/lighting/fixture/tube
-	name = "tube light"
-	desc = "An electrical storm has been detected in proximity of the station. Please check all equipment for potential overloads."
-	desc_extended = "Used to light up the area."
+	name = "灯管灯具"
+	desc = "已在太空站附近检测到电磁风暴。请检查所有设备是否存在过载风险。"
+	desc_extended = "用于照亮周围区域。"
 
 	icon = 'icons/obj/structure/light_tube.dmi'
 
@@ -19,14 +19,14 @@
 	try_attach_to(turn(src.dir,180))
 
 /obj/structure/interactive/lighting/fixture/tube/color
-	name = "colored light"
+	name = "彩色灯管灯具"
 	color = "#FFFFFF"
 
 	desired_light_power = 1
 	desired_light_range = 3
 
 /obj/structure/interactive/lighting/fixture/tube/color/random
-	name = "colored light"
+	name = "彩色灯管灯具"
 	color = "#FFFFFF"
 
 	desired_light_power = 0.8

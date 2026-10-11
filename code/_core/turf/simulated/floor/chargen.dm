@@ -1,5 +1,5 @@
 /turf/simulated/floor/darkness
-	name = "darkness"
+	name = "黑暗"
 	icon = 'icons/turf/space/void.dmi'
 	icon_state = "void"
 
@@ -11,7 +11,7 @@
 
 
 /turf/simulated/floor/void
-	name = "void"
+	name = "虚空"
 	icon = 'icons/turf/space/void.dmi'
 	icon_state = "void"
 

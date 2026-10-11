@@ -16,7 +16,7 @@
 
 	var/turf/T = get_turf(src)
 
-	activator?.to_chat(span("notice","You [action_name] \the [src]."))
+	activator?.to_chat(span("notice",action_name == "work" ? "你扳动[src]的杠杆上膛。" : "你操作[src]完成上膛。"))
 
 	eject_chambered_bullet(activator,T,TRUE)
 
@@ -60,4 +60,4 @@
 	return FALSE
 
 /obj/item/weapon/ranged/bullet/pump/get_examine_list(var/mob/activator)
-	return ..() + div("notice","[get_ammo_count()] shell\s remaining in the tube.")
+	return ..() + div("notice","管式弹仓中还剩[get_ammo_count()]发弹药。")

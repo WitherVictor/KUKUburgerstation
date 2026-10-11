@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/hostage
 
-	desc = "A very important VIP, also known as a very important Very Important Person. You should escort them back to station."
+	desc = "一位非常重要的贵宾，也就是非常重要的‘非常重要的人物’。你应该护送他们返回空间站。"
 
 	dna = /dna/human
 

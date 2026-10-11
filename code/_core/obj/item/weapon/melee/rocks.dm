@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/rock
-	name = "a rock"
-	desc = "Wouldn't it be fucked up if there were two astronauts on the moon and one killed the other with a rock?."
-	desc_extended = "Only an idiot or someone desperate would use this as a weapon, and if you have time to read this, chances are you aren't that desperate."
+	name = "石头"
+	desc = "要是月球上有两个宇航员，其中一个用石头杀了另一个，那也太操蛋了吧？"
+	desc_extended = "只有傻子或走投无路的人才会拿它当武器。如果你还有空读这段话，多半还没到那份上。"
 
 	icon = 'icons/obj/items/weapons/melee/nature/rocks.dmi'
 	icon_state = "inventory01"

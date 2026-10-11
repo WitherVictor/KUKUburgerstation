@@ -1,7 +1,7 @@
 /obj/item/device/fuse
-	name = "fuse"
-	desc = "Like in the cartoons."
-	desc_extended = "A simple fuse. Can be used to build totally innocuous and non-explosive things. Non-electronic, and silent."
+	name = "引信"
+	desc = "就像卡通片里的那样。"
+	desc_extended = "简单的引信，可用于制作绝对无害、绝不会爆炸的东西。不含电子元件，而且悄无声息。"
 	icon_state = "timer"
 
 	var/time_set = 50
@@ -53,7 +53,7 @@
 			return FALSE
 
 /obj/item/device/fuse/hehe
-	name = "hehe fuse"
+	name = "嘿嘿引信"
 
 	value_burgerbux = 1
 
@@ -64,7 +64,7 @@
 
 
 /obj/item/device/fuse/holy
-	name = "holy fuse"
+	name = "神圣引信"
 
 	value_burgerbux = 1
 
@@ -85,11 +85,11 @@
 				if(istype(INV) && INV.owner == last_activator)
 					switch(time_set)
 						if(70)
-							L.do_say("One!")
+							L.do_say("一！")
 						if(60)
-							L.do_say("Two!")
+							L.do_say("二！")
 						if(50)
-							L.do_say("Five!")
+							L.do_say("五！")
 						if(40)
 							var/mob/living/found_ally
 							for(var/mob/living/L2 in oviewers(4,L))
@@ -99,9 +99,9 @@
 									found_ally = L2
 									break
 							if(found_ally)
-								found_ally.do_say("Three, sir!")
+								found_ally.do_say("是三，长官！")
 						if(30)
-							L.do_say("Three!")
+							L.do_say("三！")
 		if(time_set == 20)
 			var/turf/T = get_turf(src)
 			play_sound('sound/meme/hallelujah.ogg',T,range=VIEW_RANGE*2)

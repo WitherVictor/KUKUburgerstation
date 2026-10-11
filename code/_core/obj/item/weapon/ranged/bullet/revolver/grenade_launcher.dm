@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/grenade_launcher
-	name = "\improper 40mm Grenade Launcher"
-	desc = "Blooper"
-	desc_extended = "An old grenade launcher from a past era, uses 40mm grenades."
+	name = "\improper 40mm榴弹发射器"
+	desc = "噗通。"
+	desc_extended = "旧时代的老式榴弹发射器，使用40mm榴弹。"
 	icon = 'icons/obj/item/weapons/ranged/grenade_launcher.dmi'
 	icon_state = "inventory"
 	value = 2400
@@ -89,9 +89,9 @@
 	return TRUE
 
 /obj/item/weapon/ranged/bullet/revolver/grenade_launcher/multibarrel
-	name = "40mm revolving grenade launcher"
-	desc = "Thoomp! Thoomp! Thoomp!"
-	desc_extended = "An old grenade launcher from a past era, uses 40mm grenades."
+	name = "40mm转轮榴弹发射器"
+	desc = "砰！砰！砰！"
+	desc_extended = "旧时代的老式榴弹发射器，使用40mm榴弹。"
 	icon = 'icons/obj/item/weapons/ranged/grenade_launcher_multi.dmi'
 	icon_state = "inventory"
 	value = 2400
@@ -109,9 +109,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/ranged/bullet/revolver/grenade_launcher/nanotrasen
-	name = "\improper 40mm Grenade Thumper"
-	desc = "Thumper."
-	desc_extended = "A modern single capacity grenade launcher for a modern corporate army."
+	name = "\improper 40mm重锤榴弹发射器"
+	desc = "重锤出击。"
+	desc_extended = "为现代公司军队打造的现代单发榴弹发射器。"
 	icon = 'icons/obj/item/weapons/ranged/grenade_launcher_nt.dmi'
 	icon_state = "inventory"
 	value = 2400

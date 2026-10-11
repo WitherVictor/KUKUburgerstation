@@ -1,9 +1,9 @@
 
 
 /obj/structure/interactive/computer/console/shuttle_landing
-	name = "shuttle landing computer"
-	desc = "Block all incoming traffic, with the click of a button."
-	desc_extended = "A generic shuttle landing computer that controls whether or not shuttles can land via autopilot at this destination."
+	name = "穿梭机降落电脑"
+	desc = "按下按钮，就能阻挡所有来访飞船。"
+	desc_extended = "一台通用穿梭机降落电脑，用于控制穿梭机能否通过自动驾驶降落在此处。"
 
 	computer_type = "syndishuttle"
 	keyboard_type = "syndie_key"
@@ -29,22 +29,23 @@
 	INTERACT_CHECK
 
 	if(linked_marker.reserved_by_shuttle)
-		L.to_chat(span("notice","\The [src.name] reports that a shuttle is already inbound or has already landed in this area."))
+		L.to_chat(span("notice","[src.name]报告：已有穿梭机正在前往此处，或已在此区域降落。"))
 		return TRUE
 
 	if(!SSgamemode.active_gamemode?.allow_launch)
-		L.to_chat(span("warning","Error: Shuttles are not ready to launch yet."))
+		L.to_chat(span("warning","错误：穿梭机尚未准备好起飞。"))
 		return TRUE
 
+	var/list/state_labels = list(SHUTTLE_STATE_NONE = "无状态", SHUTTLE_STATE_LAUNCHING = "正在起飞", SHUTTLE_STATE_TRANSIT = "航行中", SHUTTLE_STATE_LANDING = "正在降落", SHUTTLE_STATE_LANDED = "已着陆", SHUTTLE_STATE_WAITING = "准备起飞")
 	while(TRUE)
-		var/list/choices = list("Cancel" = "Cancel")
+		var/list/choices = list("取消" = "Cancel")
 
 		if(linked_marker.owning_shuttle)
 			var/obj/shuttle_controller/SC = linked_marker.owning_shuttle
 			if(SC.loyalty_owner != L.loyalty_tag)
 				continue
 			var/area/A = get_area(SC)
-			var/shuttle_text = "[A.name]: [SC.state]"
+			var/shuttle_text = "[A.name]：[state_labels[SC.state] ? state_labels[SC.state] : SC.state]"
 			choices[shuttle_text] = SC
 		else
 			for(var/k in SSshuttle.all_shuttle_controlers)
@@ -52,30 +53,32 @@
 				if(SC.loyalty_owner != L.loyalty_tag)
 					continue
 				var/area/A = get_area(SC)
-				var/shuttle_text = "[A.name]: [SC.state]"
+				var/shuttle_text = "[A.name]：[state_labels[SC.state] ? state_labels[SC.state] : SC.state]"
 				choices[shuttle_text] = SC
 
-		var/desired_choice = input("Select a shuttle to call.","Shuttle calling","Cancel") as null|anything in choices
+		var/desired_choice = input("选择要呼叫的穿梭机。","呼叫穿梭机","取消") as null|anything in choices
 
 		INTERACT_CHECK
 
-		if(!desired_choice || desired_choice == "Cancel")
+		if(!desired_choice || choices[desired_choice] == "Cancel")
 			return TRUE
 
 		if(!SSgamemode.active_gamemode.allow_launch)
-			L.to_chat(span("warning","Error: Shuttles are not ready to launch yet."))
+			L.to_chat(span("warning","错误：穿梭机尚未准备好起飞。"))
 			return TRUE
 
 		var/obj/shuttle_controller/SC = choices[desired_choice]
 		if(SC.state != SHUTTLE_STATE_LANDED)
-			activator.to_chat(span("notice","That shuttle is currently [SC.state]."))
+			activator.to_chat(span("notice","该穿梭机当前状态：[state_labels[SC.state] ? state_labels[SC.state] : SC.state]。"))
 			continue
 
 		if(linked_marker.reserved_by_shuttle)
-			L.to_chat(span("notice","\The [src.name] reports that a shuttle is already inbound or has already landed in this area."))
+			L.to_chat(span("notice","[src.name]报告：已有穿梭机正在前往此处，或已在此区域降落。"))
 			return TRUE
 
-		desired_choice = input("Are you sure you wish to call this shuttle?","Call shuttle","Cancel") as null|anything in list("Yes","No","Cancel")
+		var/list/call_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
+		desired_choice = input("确定要呼叫这艘穿梭机吗？","呼叫穿梭机","取消") as null|anything in call_choices
+		desired_choice = call_choices[desired_choice]
 
 		INTERACT_CHECK
 

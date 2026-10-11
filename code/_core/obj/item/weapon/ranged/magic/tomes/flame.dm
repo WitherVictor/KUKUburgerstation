@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/flame
-	name = "tome of flames"
-	desc = "Sprays an enemy with flames."
-	desc_extended = "Costs mana to use."
+	name = "火焰法术典籍"
+	desc = "向敌人喷射火焰。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 5
 
 	bullet_count = 5

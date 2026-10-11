@@ -1,7 +1,7 @@
 /obj/item/magazine/pistol_40
-	name = "\improper .40 pistol magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .40手枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/40pistol.dmi'
 	icon_state = "40"
 	bullet_count_max = 9
@@ -31,7 +31,7 @@
 	value = 5
 
 /obj/item/magazine/pistol_40/tranq
-	name = "\improper .40 tranq pistol magazine"
+	name = "\improper .40麻醉弹手枪弹匣"
 	icon = 'icons/obj/item/magazine/40pistol_tranq.dmi'
 	ammo = /obj/item/bullet_cartridge/pistol_40/tranq
 	rarity = RARITY_UNCOMMON

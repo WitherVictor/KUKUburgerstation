@@ -77,11 +77,11 @@
 			if(battery)
 				battery.drop_item(get_turf(src))
 				battery.update_sprite()
-				activator.to_chat(span("notice","You pry out \the [battery.name]."))
+				activator.to_chat(span("notice","你撬出了[battery.name]。"))
 				battery = null
 				update_sprite()
 			else
-				activator.to_chat(span("warning","There is nothing to pry out of \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里没有可撬出的东西！"))
 			return TRUE
 
 		if(istype(I,/obj/item/powercell/))
@@ -89,19 +89,19 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(battery)
-				activator.to_chat(span("warning","There is already a battery installed in \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]已经装有电池！"))
 				return TRUE
 			var/obj/item/powercell/P = I
 			if(P.size > SIZE_2) //Only fits size 2.
-				activator.to_chat(span("warning","\The [P.name] is too large to be put into \the [src.name]!"))
+				activator.to_chat(span("warning","[P.name]太大，无法装入[src.name]！"))
 				return TRUE
 			if(battery)
-				activator.to_chat(span("notice","You swap out \the [battery.name] for \the [P.name] in \the [src.name]."))
+				activator.to_chat(span("notice","你将[src.name]里的[battery.name]换成了[P.name]。"))
 				battery.drop_item(get_turf(activator))
 				battery.update_sprite()
 				battery = null
 			else
-				activator.to_chat(span("notice","You insert \the [P.name] into \the [src.name]."))
+				activator.to_chat(span("notice","你将[P.name]装入了[src.name]。"))
 
 			battery = P
 			P.drop_item(src)
@@ -157,7 +157,7 @@
 	var/obj/item/powercell/PC = get_battery()
 
 	if(!istype(PC))
-		if(messages) activator.to_chat(span("warning","\The [src.name] doesn't have a battery installed!"))
+		if(messages) activator.to_chat(span("warning","[src.name]没有安装电池！"))
 		return FALSE
 
 	if(PC.charge_current - charge_cost < 0)
@@ -173,9 +173,9 @@
 
 	var/obj/item/powercell/PC = get_battery()
 	if(PC)
-		. += div("notice","[PC.charge_current] / [PC.charge_max] ([get_ammo_count()] shots) remaining.")
+		. += div("notice","剩余电量：[PC.charge_current] / [PC.charge_max]（可射击[get_ammo_count()]次）。")
 	else
-		. += div("warning","No powercell detected!")
+		. += div("warning","未检测到电池！")
 
 /obj/item/weapon/ranged/energy/proc/get_charge_icon_state()
 

@@ -1,7 +1,7 @@
 /turf/simulated/wall/boss
-	name = "ancient wall"
-	desc = "Ominous"
-	desc_extended = "A wall made of an unknown material, there are usually powerful enemies nearby."
+	name = "远古墙壁"
+	desc = "不祥。"
+	desc_extended = "一堵由未知材料制成的墙，附近通常有强大的敌人。"
 	icon = 'icons/turf/wall/boss.dmi'
 	icon_state = "wall"
 	corner_category = "boss"

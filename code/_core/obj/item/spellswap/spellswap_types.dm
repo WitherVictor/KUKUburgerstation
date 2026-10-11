@@ -1,6 +1,6 @@
 /obj/item/spellswap/magic_missile
-	name = "SpellSwapper(tm) - Magic Missile"
-	desc_extended = "Use this on a weapon to trade the bullets for Magic Missiles. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——魔法飞弹"
+	desc_extended = "对武器使用，可将发射的子弹替换为魔法飞弹。由炽铅恶魔王子倾情奉上。"
 	icon_state = "magic_missile"
 
 	desired_projectile = /obj/projectile/magic/magic_missile
@@ -12,8 +12,8 @@
 	value = 1000
 
 /obj/item/spellswap/chaos
-	name = "SpellSwapper(tm) - Chaos Orb"
-	desc_extended = "Use this on a weapon to trade the bullets for Chaos Orbs. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——混沌球"
+	desc_extended = "对武器使用，可将发射的子弹替换为混沌球。由炽铅恶魔王子倾情奉上。"
 	icon_state = "chaos"
 
 	desired_projectile = /obj/projectile/magic/chaos
@@ -26,8 +26,8 @@
 	value = 1000
 
 /obj/item/spellswap/fireball
-	name = "SpellSwapper(tm) - Fireball"
-	desc_extended = "Use this on a weapon to trade the bullets for Fireball. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——火球"
+	desc_extended = "对武器使用，可将发射的子弹替换为火球。由炽铅恶魔王子倾情奉上。"
 	icon_state = "fireball"
 
 	desired_projectile = /obj/projectile/magic/fireball
@@ -42,8 +42,8 @@
 	value = 1000
 
 /obj/item/spellswap/flame
-	name = "SpellSwapper(tm) - Flame"
-	desc_extended = "Use this on a weapon to trade the bullets for Flame Bolts. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——烈焰"
+	desc_extended = "对武器使用，可将发射的子弹替换为火焰弹。由炽铅恶魔王子倾情奉上。"
 	icon_state = "flame"
 
 	desired_projectile = /obj/projectile/magic/lesser_fire
@@ -57,8 +57,8 @@
 	value = 1000
 
 /obj/item/spellswap/frost
-	name = "SpellSwapper(tm) - Frost"
-	desc_extended = "Use this on a weapon to trade the bullets for Frost Bolts. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——寒霜"
+	desc_extended = "对武器使用，可将发射的子弹替换为寒霜弹。由炽铅恶魔王子倾情奉上。"
 	icon_state = "frost"
 
 	desired_projectile = /obj/projectile/magic/frost
@@ -72,8 +72,8 @@
 	value = 1000
 
 /obj/item/spellswap/arcblade
-	name = "SpellSwapper(tm) - ArcBlade"
-	desc_extended = "Use this on a weapon to trade the bullets for ArcBlades. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——弧光刃"
+	desc_extended = "对武器使用，可将发射的子弹替换为弧光刃。由炽铅恶魔王子倾情奉上。"
 	icon_state = "arcblade"
 
 	desired_projectile = /obj/projectile/magic/arcblade
@@ -88,8 +88,8 @@
 	value = 1000
 
 /obj/item/spellswap/tesla
-	name = "SpellSwapper(tm) - Tesla"
-	desc_extended = "Use this on a weapon to trade the bullets for Tesla Balls. Brought to you by The Demon Prince of Hot Lead."
+	name = "法术替换器™——特斯拉"
+	desc_extended = "对武器使用，可将发射的子弹替换为特斯拉电球。由炽铅恶魔王子倾情奉上。"
 	icon_state = "tesla"
 
 	desired_projectile = /obj/projectile/magic/tesla
@@ -103,8 +103,8 @@
 	value = 1000
 
 /obj/item/spellswap/negate
-	name= "SpellSwapper(tm) - NULL"
-	desc_extended = "Use this on a weapon to trade the bullets for....bullets?."
+	name= "法术替换器™——清除"
+	desc_extended = "对武器使用，可将发射的子弹替换为……子弹？"
 
 	desired_projectile = null
 	value = 1000

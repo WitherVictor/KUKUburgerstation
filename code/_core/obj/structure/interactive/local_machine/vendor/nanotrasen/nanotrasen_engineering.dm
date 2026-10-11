@@ -5,7 +5,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/engineering/guns
-	name = "engineering gun vendor"
+	name = "工程武器售货机"
 	icon_state = "engineering_guns"
 
 	icon_state_broken = null
@@ -46,7 +46,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/engineering/ammo
-	name = "engineering ammo vendor"
+	name = "工程弹药售货机"
 	icon_state = "engineering_ammo"
 
 	stored_types = list(
@@ -87,7 +87,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/engineering/clothing
-	name = "engineering clothing vendor"
+	name = "工程服装售货机"
 	icon_state = "engineering_clothing"
 
 	stored_types = list(
@@ -130,7 +130,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/engineering/equipment
-	name = "engineering equipment vendor"
+	name = "工程装备售货机"
 	icon_state = "engineering_equipment"
 
 	stored_types = list(
@@ -155,7 +155,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/engineering/rcd
-	name = "engineering RCD vendor"
+	name = "工程快速建造装置售货机"
 	icon_state = "engineering_rcd"
 
 	stored_types = list(

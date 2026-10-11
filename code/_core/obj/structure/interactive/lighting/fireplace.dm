@@ -1,6 +1,6 @@
 /obj/structure/interactive/lighting/fireplace
-	name = "fireplace"
-	desc = "a large fireplace"
+	name = "壁炉"
+	desc = "大型壁炉。"
 
 	opacity = 0
 

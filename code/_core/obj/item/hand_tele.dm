@@ -1,7 +1,7 @@
 /obj/item/hand_teleporter
-	name = "hand teleporter"
-	desc = "What could possibly go wrong?"
-	desc_extended = "A magical hand teleporter used by people trying to break the fucking game."
+	name = "手持传送器"
+	desc = "这能出什么岔子呢？"
+	desc_extended = "神奇的手持传送器，专供那些想把这破游戏玩坏的人使用。"
 
 	rarity = RARITY_MYTHICAL
 	value = 3000
@@ -67,11 +67,11 @@
 		INTERACT_DELAY(5)
 		var/obj/hud/inventory/I = object
 		if(I.add_held_object(battery))
-			caller.to_chat(span("notice","You remove \the [battery.name] from \the [src.name]."))
+			caller.to_chat(span("notice","你从[src.name]中取出了[battery.name]。"))
 			battery.update_sprite()
 			battery = null
 		else
-			caller.to_chat(span("warning","You can't seem to remove \the [battery.name] from \the [src.name]!"))
+			caller.to_chat(span("warning","你似乎无法从[src.name]中取出[battery.name]！"))
 		update_sprite()
 		return TRUE
 
@@ -81,14 +81,14 @@
 		INTERACT_DELAY(5)
 		var/obj/item/PC = object
 		if(PC.size > SIZE_3) //Only fits size 3.
-			caller.to_chat(span("warning","\The [PC.name] is too large to be put into \the [src.name]!"))
+			caller.to_chat(span("warning","[PC.name]太大了，无法装入[src.name]！"))
 			return TRUE
 		if(battery)
-			caller.to_chat(span("notice","You replace \the [battery.name] in \the [src.name] with \the [object.name] in your hand."))
+			caller.to_chat(span("notice","你用手中的[object.name]替换了[src.name]里的[battery.name]。"))
 			battery.update_sprite()
 			battery.drop_item(get_turf(caller))
 		else
-			caller.to_chat(span("notice","You add \the [PC.name] to \the [src.name]."))
+			caller.to_chat(span("notice","你将[PC.name]装入了[src.name]。"))
 		PC.drop_item(src)
 		battery = PC
 		update_sprite()
@@ -104,27 +104,27 @@
 	var/obj/item/powercell/PC = get_battery()
 
 	if(ispath(PC))
-		caller.to_chat(span("danger","Warning: This item is bugged. Tell burger how you obtained this item."))
+		caller.to_chat(span("danger","警告：此物品存在故障。请向Burger说明你是如何获得它的。"))
 		return FALSE
 
 	if(!PC || PC.charge_current < teleport_cost)
-		caller.to_chat(span("warning","\The [src.name] beeps, indicating a lack of charge!"))
+		caller.to_chat(span("warning","[src.name]发出哔声，提示电量不足！"))
 		return FALSE
 
 	var/turf/simulated/T = get_turf(object)
 
 	if(!istype(T))
-		caller.to_chat(span("danger","It's not safe to teleport here!"))
+		caller.to_chat(span("danger","传送到这里不安全！"))
 		return TRUE
 
 	if(!T.is_safe_teleport())
-		caller.to_chat(span("danger","It's not safe to teleport here!"))
+		caller.to_chat(span("danger","传送到这里不安全！"))
 		return FALSE
 
 	var/area/A = T.loc
 
 	if(A && A.flags_area & FLAGS_AREA_NO_TELEPORT)
-		caller.to_chat(span("danger","It's not safe to teleport here!"))
+		caller.to_chat(span("danger","传送到这里不安全！"))
 		return FALSE
 
 	caller.force_move(T)
@@ -135,4 +135,4 @@
 	return TRUE
 
 /obj/item/hand_teleporter/get_examine_list(var/mob/caller)
-	return ..() + div("notice","Teleports Remaining: [FLOOR(battery.charge_current/30000,1)]")
+	return ..() + div("notice","剩余传送次数：[FLOOR(battery.charge_current/30000,1)]")

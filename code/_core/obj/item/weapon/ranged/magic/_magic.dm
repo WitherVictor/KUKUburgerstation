@@ -31,9 +31,9 @@
 	. = ..()
 
 	if(stored_powergem)
-		. += div("notice","It has a [stored_powergem.name] installed in the gem slot.")
+		. += div("notice","宝石槽中装有[stored_powergem.name]。")
 	else
-		. += div("notice","It has an empty gem slot.")
+		. += div("notice","宝石槽为空。")
 
 
 /obj/item/weapon/ranged/magic/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
@@ -42,29 +42,30 @@
 		var/obj/item/I = object
 		if(I.flags_tool & FLAG_TOOL_CROWBAR)
 			if(stored_powergem)
-				activator.to_chat(span("notice","You remove \the [stored_powergem.name] from \the [src.name]."))
+				activator.to_chat(span("notice","你从[src.name]中取出了[stored_powergem.name]。"))
 				stored_powergem.drop_item(get_turf(activator))
 				if(is_advanced(activator))
 					var/mob/living/advanced/A = activator
 					A.put_in_hands(stored_powergem,params,silent=TRUE)
 				stored_powergem = null
 			else
-				activator.to_chat(span("warning","There is nothing to remove from \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里没有可取出的东西！"))
 			return TRUE
 		if(istype(object,/obj/item/powergem/))
 			INTERACT_CHECK
 			INTERACT_CHECK_OBJECT
 			if(stored_powergem)
-				activator.to_chat(span("warning","There is already a [stored_powergem.name] installed!"))
+				activator.to_chat(span("warning","已经装有[stored_powergem.name]！"))
 				return TRUE
-			var/desired_input = input("Are you sure you wish to insert \the [object.name] into \the [src.name]? This action cannot be undone.","Powergem insertion","Cancel") as null|anything in list("Yes","No","Cancel")
-			if(desired_input == "Yes")
+			var/list/powergem_choices = list("是"="Yes","否"="No","取消"="Cancel")
+			var/desired_input = input("确定要将[object.name]装入[src.name]吗？可用撬棍取出已安装的宝石。","安装能量宝石","取消") as null|anything in powergem_choices
+			if(powergem_choices[desired_input] == "Yes")
 				INTERACT_CHECK
 				INTERACT_CHECK_OBJECT
 				var/obj/item/powergem/P = object
 				P.drop_item(src)
 				stored_powergem = P
-				activator.to_chat(span("notice","You install \the [P.name] into \the [src.name]."))
+				activator.to_chat(span("notice","你将[P.name]装入了[src.name]。"))
 			return TRUE
 
 	return ..()

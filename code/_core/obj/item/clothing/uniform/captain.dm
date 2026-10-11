@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/captain
-	name = "\improper Captain's uniform"
-	desc = "STUBBED MY TOE, CALL THE SHUTTLE!"
-	desc_extended = "A suit worn by Captains of Nanotrasen stations. Does not resemble a giant comdom."
+	name = "\improper 站长制服"
+	desc = "我的脚趾撞到了，快叫穿梭机！"
+	desc_extended = "纳米传讯空间站站长穿着的制服。看起来并不像巨型避孕套。"
 	icon = 'icons/obj/item/clothing/uniforms/captain.dmi'
 
 
@@ -21,5 +21,5 @@
 	value = 600
 
 /obj/item/clothing/uniform/captain/formal
-	name = "formal Captain's uniform"
+	name = "站长礼服"
 	icon = 'icons/obj/item/clothing/uniforms/captain_formal.dmi'

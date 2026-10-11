@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/rogue_assistant
-	name = "rogue assistant"
-	desc = "Help, maint!"
+	name = "叛变助手"
+	desc = "救命，维护区！"
 	ai = /ai/advanced/syndicate
 
 	sex = MALE

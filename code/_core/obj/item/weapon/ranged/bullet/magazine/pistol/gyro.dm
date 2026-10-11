@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/gyrojet
-	name = "\improper 20mm GyroJet pistol"
-	desc = "Putting the \"launch\" in grenade launcher."
-	desc_extended = "A prototype syndicate pistol that uses minature explosive \"GyroJet\" rockets as projectiles."
+	name = "\improper 20mm旋转火箭手枪"
+	desc = "让榴弹发射器真正‘射’起来。"
+	desc_extended = "辛迪加原型手枪，发射带有爆炸装药的微型旋转火箭弹。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/gyrojet.dmi'
 	icon_state = "inventory"
 	value = 800

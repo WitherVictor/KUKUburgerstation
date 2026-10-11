@@ -3,7 +3,7 @@
 	set category = "Admin"
 
 	if(!text_to_say)
-		text_to_say = input("adminhelp") as message
+		text_to_say = input("请输入需要管理员协助处理的问题。","管理员求助") as message
 
 	text_to_say = police_text(src,text_to_say,check_characters=TRUE)
 
@@ -13,12 +13,14 @@
 	var/tickets_open = length(SSclient.ckey_to_tickets[ckey])
 
 	if(tickets_open)
-		var/desired_input = input("You already have [tickets_open] ticket(s) open. Do you wish to create a new ticket or respond to an existing ticket?","Multiple Tickets","Cancel") as null|anything in list("Create New Ticket","Respond to Existing Ticket","Cancel")
+		var/list/ticket_choices = list("新建工单"="Create New Ticket","回复已有工单"="Respond to Existing Ticket","取消"="Cancel")
+		var/desired_input = input("你已有[tickets_open]个工单。要新建工单，还是回复已有工单？","已有多个工单","取消") as null|anything in ticket_choices
+		desired_input = ticket_choices[desired_input]
 		if(desired_input == "Respond to Existing Ticket")
-			src.to_chat(span("ahelp","Click on an active ticket below to respond to it."))
+			src.to_chat(span("ahelp","点击下方仍在处理的工单以回复。"))
 			for(var/k in SSclient.ckey_to_tickets[ckey])
 				var/ticket/T = k
-				src.to_chat(span("ahelp","<a href='?src=\ref[T];password=[T.password]'>ticket (#[T.ticket_number])</a>"))
+				src.to_chat(span("ahelp","<a href='?src=\ref[T];password=[T.password]'>工单（#[T.ticket_number]）</a>"))
 			return TRUE
 		if(!desired_input || desired_input == "Cancel")
 			return TRUE

@@ -1,7 +1,7 @@
 /obj/item/clothing/belt/endless_holster
-	name = "endless revolver holster"
-	desc = "Aleph-2 shots, enough to kill anything."
-	desc_extended = "A fancy pair of holsters that holds as many revolvers as you can think of."
+	name = "无尽左轮枪套"
+	desc = "Aleph-2发子弹，足以干掉任何东西。"
+	desc_extended = "一对精美的枪套，能装下你想象得出的所有左轮手枪。"
 	icon = 'icons/obj/item/clothing/belts/white.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_COAT
 
@@ -19,7 +19,7 @@
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(2)
 		if (self.health.mana_current < 10)
-			caller.to_chat(span("danger","Your mind's too burnt out to think of a revolver!"))
+			caller.to_chat(span("danger","你已经心力耗尽，连一把左轮手枪都想象不出来了！"))
 			return FALSE
 		var/obj/hud/inventory/I = object
 		var/obj/item/weapon/ranged/temporary/revolver/G = pickweight(created_gun)

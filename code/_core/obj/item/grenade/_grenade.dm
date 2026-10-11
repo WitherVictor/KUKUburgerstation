@@ -1,7 +1,7 @@
 /obj/item/grenade/
-	name = "grenade"
-	desc = "Activate, then throw."
-	desc_extended = "With good grenades being expensive and hard to come by, civilians often use homemade grenades filled with various chemicals, with varying degrees of success."
+	name = "手榴弹"
+	desc = "先启动，再投掷。"
+	desc_extended = "好手榴弹既昂贵又难弄到，平民常用装满各种化学品的自制手榴弹，效果则参差不齐。"
 
 	can_rename = TRUE
 
@@ -201,10 +201,10 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(max_containers <= 0)
-				activator.to_chat(span("warning","There is nothing to unscrew on \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]上没有可拧开的螺丝！"))
 				return TRUE
 			open = !open
-			activator.to_chat(span("notice","You [open ? "unscrew" : "screw"] the screws on \the [src.name], [open ? "unsecuring" : "securing"] it."))
+			activator.to_chat(span("notice","你[open ? "拧松" : "拧紧"]了[src.name]上的螺丝，[open ? "打开" : "固定"]了外壳。"))
 			return TRUE
 		else if(I.reagents && I.allow_reagent_transfer_from)
 			INTERACT_CHECK
@@ -212,18 +212,18 @@
 			INTERACT_DELAY(5)
 			if(!open)
 				if(max_containers > 0)
-					activator.to_chat(span("warning","\The [src.name] needs to be unscrewed with a screwdriver before you add containers!"))
+					activator.to_chat(span("warning","需要先用螺丝刀拧开[src.name]，才能放入容器！"))
 				return TRUE
 			if(length(stored_containers) >= max_containers)
-				activator.to_chat(span("warning","You can't fit any more contains in \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里放不下更多容器了！"))
 				return TRUE
 			var/obj/item/container/simple/B = object
 			if(B.size > src.size)
-				activator.to_chat(span("warning","\The [B.name] is too large to be put into \the [src.name]!"))
+				activator.to_chat(span("warning","[B.name]太大，放不进[src.name]！"))
 				return TRUE
 			B.drop_item(src)
 			stored_containers += B
-			activator.visible_message(span("notice","\The [activator.name] fits \the [object.name] into \the [src.name]."),span("notice","You fit \the [object.name] inside \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]将[object.name]装进了[src.name]。"),span("notice","你将[object.name]装进了[src.name]。"))
 			update_sprite()
 			return TRUE
 		else if(istype(object,/obj/item/device/))
@@ -231,18 +231,18 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(!open)
-				activator.to_chat(span("warning","\The [src.name] needs to be unscrewed with a screwdriver before you add trigger devices!"))
+				activator.to_chat(span("warning","需要先用螺丝刀拧开[src.name]，才能装入触发装置！"))
 				return TRUE
 			if(stored_trigger)
-				activator.to_chat(span("warning","There is already a [stored_trigger.name] inside \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里已经装有[stored_trigger.name]了！"))
 				return TRUE
 			var/obj/item/device/T = object
 			if(T.size > src.size)
-				activator.to_chat(span("warning","\The [T.name] is too large to be put into \the [src.name]!"))
+				activator.to_chat(span("warning","[T.name]太大，放不进[src.name]！"))
 				return TRUE
 			T.drop_item(src)
 			stored_trigger = T
-			activator.visible_message(span("notice","\The [activator.name] fits \the [object.name] into \the [src.name]."),span("notice","You fit \the [object.name] inside \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]将[object.name]装进了[src.name]。"),span("notice","你将[object.name]装进了[src.name]。"))
 			update_sprite()
 			return TRUE
 	else if(is_inventory(object))
@@ -250,29 +250,29 @@
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(5)
 		if(!open)
-			activator.to_chat(span("warning","\The [src.name] needs to be unscrewed with a screwdriver before you remove its contents!"))
+			activator.to_chat(span("warning","需要先用螺丝刀拧开[src.name]，才能取出里面的东西！"))
 			return TRUE
 		var/obj/hud/inventory/I = object
 		if(length(stored_containers))
 			var/obj/item/container/simple/beaker/selected_beaker = stored_containers[length(stored_containers)]
 			if(I.add_object(selected_beaker))
-				activator.visible_message(span("notice","\The [activator.name] removes \the [selected_beaker.name] from \the [src.name]."),span("notice","You remove \the [selected_beaker.name] from \the [src.name]."))
+				activator.visible_message(span("notice","[activator.name]从[src.name]中取出了[selected_beaker.name]。"),span("notice","你从[src.name]中取出了[selected_beaker.name]。"))
 				stored_containers -= selected_beaker
 				update_sprite()
 			else
-				activator.to_chat(span("warning","You need an empty hand in ordet to remove \the [selected_beaker.name]!"))
+				activator.to_chat(span("warning","你需要腾出一只手，才能取出[selected_beaker.name]！"))
 		else if(stored_trigger)
 			if(stored_trigger.active)
-				activator.to_chat(span("danger","You must defuse \the [stored_trigger.name] first before removing \the [stored_trigger.name]!"))
+				activator.to_chat(span("danger","必须先解除[stored_trigger.name]的引爆状态，才能将其取出！"))
 				return TRUE
 			else if(I.add_object(stored_trigger))
-				activator.visible_message(span("notice","\The [activator.name] removes \the [stored_trigger.name] from \the [src.name]."),span("notice","You remove \the [stored_trigger.name] from \the [src.name]."))
+				activator.visible_message(span("notice","[activator.name]从[src.name]中取出了[stored_trigger.name]。"),span("notice","你从[src.name]中取出了[stored_trigger.name]。"))
 				stored_trigger = null
 				update_sprite()
 			else
-				activator.to_chat(span("warning","You need an empty hand in ordet to remove \the [stored_trigger.name]!"))
+				activator.to_chat(span("warning","你需要腾出一只手，才能取出[stored_trigger.name]！"))
 		else
-			activator.to_chat(span("warning","There is nothing to remove from \the [src.name]!"))
+			activator.to_chat(span("warning","[src.name]里没有可取出的东西！"))
 		return TRUE
 
 	return ..()

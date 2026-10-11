@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/polymorphic
-	name = "jacket"
-	desc = "A nice jacket."
-	desc_extended = "Can hold a single low-size item."
+	name = "夹克"
+	desc = "一件不错的夹克。"
+	desc_extended = "可以存放一件尺寸不超过2的物品。"
 	icon = 'icons/obj/item/clothing/suit/jacket.dmi'
 
 	no_initial_blend = TRUE

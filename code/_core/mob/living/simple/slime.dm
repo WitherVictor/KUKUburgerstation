@@ -1,7 +1,7 @@
 /mob/living/simple/slime/
-	name = "slime"
-	desc = "Oh no. They're here too."
-	desc_extended = "A strange gel-based canibalising lifeform that adapts their colors based on the surrounding environments. Diet typically includes fresh blood."
+	name = "史莱姆"
+	desc = "糟了，它们也在这里。"
+	desc_extended = "一种会同类相食的奇特胶状生命体，能根据周围环境改变颜色，通常以新鲜血液为食。"
 
 	icon = 'icons/mob/living/simple/slimes_new.dmi'
 	icon_state = "small_neutral"
@@ -236,7 +236,7 @@
 			S.slime_traits = src.slime_traits
 			S.stored_slimes = 1
 			if(src.color != initial(src.color))
-				S.name = "hybrid slime"
+				S.name = "混合史莱姆"
 			else
 				S.name = initial(src.name)
 			INITIALIZE(S)
@@ -346,7 +346,7 @@
 	src.color = new_color
 	src.slime_traits |= desired_slime.slime_traits
 
-	name = "hybrid slime"
+	name = "混合史莱姆"
 	setup_name()
 
 	src.update_sprite()
@@ -363,84 +363,84 @@
 	return TRUE
 
 /mob/living/simple/slime/forest
-	name = "forest slime"
+	name = "森林史莱姆"
 	color = "#69A333"
 	level = 4
 
 	slime_traits = SLIME_TRAIT_NONE
 
 /mob/living/simple/slime/water
-	name = "water slime"
+	name = "水生史莱姆"
 	color = "#52A7C6"
 	level = 6
 
 	slime_traits = SLIME_TRAIT_FAST | SLIME_TRAIT_WET
 
 /mob/living/simple/slime/snow
-	name = "snow slime"
+	name = "雪地史莱姆"
 	color = "#E8ECF4"
 	level = 8
 
 	slime_traits = SLIME_TRAIT_COLD
 
 /mob/living/simple/slime/sand
-	name = "sand slime"
+	name = "沙地史莱姆"
 	color = "#F4CD9F"
 	level = 8
 
 	slime_traits = SLIME_TRAIT_FAST
 
 /mob/living/simple/slime/jungle
-	name = "jungle slime"
+	name = "丛林史莱姆"
 	color = "#6D8756"
 	level = 8
 
 	slime_traits = SLIME_TRAIT_TOXIC | SLIME_TRAIT_GLOW | SLIME_TRAIT_THORNS
 
 /mob/living/simple/slime/cave
-	name = "cave slime"
+	name = "洞穴史莱姆"
 	color = "#936952"
 	level = 6
 
 	slime_traits = SLIME_TRAIT_STEALTH
 
 /mob/living/simple/slime/ice
-	name = "ice slime"
+	name = "寒冰史莱姆"
 	color = "#93DDE2"
 	level = 12
 
 	slime_traits = SLIME_TRAIT_COLD | SLIME_TRAIT_SLOW | SLIME_TRAIT_DEFENSIVE
 
 /mob/living/simple/slime/basalt
-	name = "basalt slime"
+	name = "玄武岩史莱姆"
 	color = "#382323"
 	level = 18
 
 	slime_traits = SLIME_TRAIT_SLOW | SLIME_TRAIT_DEFENSIVE
 
 /mob/living/simple/slime/magma
-	name = "magma slime"
+	name = "岩浆史莱姆"
 	color = "#E86518"
 	level = 20
 
 	slime_traits = SLIME_TRAIT_GLOW | SLIME_TRAIT_FIRE
 
 /mob/living/simple/slime/blood
-	name = "blood slime"
+	name = "鲜血史莱姆"
 	color = "#C2230C"
 	level = 18
 
 	slime_traits = SLIME_TRAIT_AGGRESSIVE
 
 /mob/living/simple/slime/oil
-	name = "oil slime"
+	name = "油脂史莱姆"
 	color = "#332633"
 	level = 16
 
 	slime_traits = SLIME_TRAIT_SLOW | SLIME_TRAIT_EXPLOSIVE
 
 /mob/living/simple/slime/bluespace
-	name = "bluespace slime"
+	name = "蓝空间史莱姆"
 	color = "#9FB6FF"
 	level = 30
 

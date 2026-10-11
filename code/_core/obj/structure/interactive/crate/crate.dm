@@ -2,9 +2,9 @@
 	open = TRUE
 
 /obj/structure/interactive/crate/closet
-	name = "closet"
-	desc = "Storage for safekeeping."
-	desc_extended = "A storage closet for storing items, and sometimes people."
+	name = "储物柜"
+	desc = "存起来，放安心。"
+	desc_extended = "用来存放物品的储物柜，有时也会装人。"
 	icon = 'icons/obj/structure/closet.dmi'
 	icon_state = "closet"
 
@@ -26,7 +26,7 @@
 	anchored = TRUE
 
 /obj/structure/interactive/crate/closet/freezer
-	name = "freezer closet"
+	name = "冷冻柜"
 	icon_state = "freezer"
 
 /obj/structure/interactive/crate/engineering
@@ -36,11 +36,11 @@
 	icon_state = "medical"
 
 /obj/structure/interactive/crate/coffin
-	name = "coffin"
+	name = "棺材"
 	icon_state = "coffin"
 
 /obj/structure/interactive/crate/necro
-	name = "necro chest"
+	name = "亡灵宝箱"
 	icon_state = "necro"
 
 	loot = /loot/lavaland/chest
@@ -52,7 +52,7 @@
 	desired_light_color = "#FF0000"
 
 /obj/structure/interactive/crate/closet/emergency
-	name = "emergency locker"
+	name = "应急物资柜"
 	icon_state = "emergency"
 
 /obj/structure/interactive/crate/closet/emergency/filled/Generate()
@@ -62,7 +62,7 @@
 	. = ..()
 
 /obj/structure/interactive/crate/closet/fire
-	name = "fire locker"
+	name = "消防柜"
 	icon_state = "fire"
 
 

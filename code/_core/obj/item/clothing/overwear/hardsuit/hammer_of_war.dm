@@ -1,6 +1,6 @@
 /obj/item/clothing/overwear/hardsuit/hammer_of_war
-	name = "\improper Champion's Hardsuit"
-	desc = "Book say no."
+	name = "\improper 勇士硬式宇航服"
+	desc = "书上说不行。"
 	desc_extended = ""
 	icon = 'icons/obj/item/clothing/suit/hammer_of_war.dmi'
 

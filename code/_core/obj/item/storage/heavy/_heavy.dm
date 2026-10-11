@@ -1,6 +1,6 @@
 /obj/item/storage/heavy
-	name = "heavy storage"
-	desc = "I don't think anyone can pick this up."
+	name = "重型储物容器"
+	desc = "恐怕没人能把它拿起来。"
 
 	size = 1000
 

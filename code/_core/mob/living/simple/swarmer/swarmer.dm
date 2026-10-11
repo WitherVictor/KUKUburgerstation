@@ -1,7 +1,7 @@
 //swarmerfile
 
 /mob/living/simple/swarmer
-	name = "base swarmer"
+	name = "蜂群机器人"
 
 	icon = 'icons/mob/living/simple/swarmer.dmi'
 	icon_state = "swarmer_unactivated"
@@ -39,7 +39,7 @@
 
 //builder
 /mob/living/simple/swarmer/builder
-	name = "constructor swarmer"
+	name = "建造型蜂群机器人"
 
 	icon = 'icons/mob/living/simple/swarmer.dmi'
 	icon_state = "swarmer"
@@ -82,14 +82,14 @@
 	return TRUE
 //melee
 /mob/living/simple/swarmer/melee
-	name = "melee swarmer"
+	name = "近战型蜂群机器人"
 
 	icon = 'icons/mob/living/simple/swarmer.dmi'
 	icon_state = "swarmer_melee"
 
 //ranged
 /mob/living/simple/swarmer/ranged
-	name = "ranged swarmer"
+	name = "远程型蜂群机器人"
 
 	icon = 'icons/mob/living/simple/swarmer.dmi'
 	icon_state = "swarmer_ranged"
@@ -99,7 +99,7 @@
 
 //swarmer structures. Yes I made them mobs and not strucutres, I think that's smarter.
 /mob/living/simple/swarmer/console
-	name = "swarmer console"
+	name = "蜂群控制台"
 
 	icon = 'icons/mob/living/simple/swarmer.dmi'
 	icon_state = "swarmer_console"
@@ -169,8 +169,8 @@
 	return TRUE
 
 /obj/structure/interactive/swarmer/
-	name = "swarmer structure!"
-	desc_extended = "I'm a placeholder!"
+	name = "蜂群构筑物！"
+	desc_extended = "我是占位物！"
 	icon = 'icons/mob/living/simple/swarmer.dmi'
 	icon_state = "swarmer_unactivated"
 	density = TRUE
@@ -184,16 +184,16 @@
     qdel(src)
 
 /obj/structure/interactive/swarmer/wall
-	name = "holographic barricade"
-	desc_extended = "A holographic barrier deployed by builder swarmers."
+	name = "全息路障"
+	desc_extended = "建造型蜂群机器人部署的全息屏障。"
 	icon_state = "barricade"
 	bullet_block_chance = 90
 	collision_flags = FLAG_COLLISION_BARICADE
 	health_base = 300
 
 /obj/structure/interactive/swarmer/trap
-	name = "holographic trap"
-	desc_extended = "A ball of pure energy. Dont touch it."
+	name = "全息陷阱"
+	desc_extended = "一团纯能量。别碰它。"
 	icon_state = "trap"
 	health_base = 50
 
@@ -201,7 +201,7 @@
 
 	. = ..()
 	if(is_living(O))
-		O.to_chat(span("danger","<h1>You're stunned by the trap!!</h1>"))
+		O.to_chat(span("danger","<h1>陷阱让你一阵剧痛！！</h1>"))
 		O.send_pain_response(50)
 		return TRUE
 	qdel(src)

@@ -1,7 +1,7 @@
 /obj/item/magazine/browning_127
-	name = "\improper 12.7x99mm browning magazine"
-	desc = "IT'S NOT A MAGAZINE. IT'S A BELT."
-	desc_extended = "Contains ammunition for a mounted weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 12.7x99mm勃朗宁弹链"
+	desc = "这是弹链，不是弹匣！"
+	desc_extended = "装有固定式武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/127_browning.dmi'
 	icon_state = "127browning"
 

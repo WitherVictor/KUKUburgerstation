@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/trench
-	name = "\improper trench coat"
-	desc = "Reeks of blood, of which it was borne."
-	desc_extended = "A long black coat. Fashionable, at least it was during the Victorian era."
+	name = "\improper 风衣"
+	desc = "诞生于鲜血，也满是血腥气息。"
+	desc_extended = "一件黑色长外套。很时髦，至少在维多利亚时代是这样。"
 	icon = 'icons/obj/item/clothing/suit/trench_coat.dmi'
 
 	is_container = TRUE

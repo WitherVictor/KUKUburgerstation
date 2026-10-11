@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/hardsuit/engineering
-	name = "engineering hardsuit"
-	desc = "The SM is at 9% health? Eh, it's probably gonna be fine"
-	desc_extended = "A hardsuit worn by engineers. Able to withstand incredible heat in order to work with engines."
+	name = "工程硬式宇航服"
+	desc = "超物质完整度只剩9%了？唔，应该没事吧。"
+	desc_extended = "工程师穿着的硬式宇航服，能承受极高温度，便于在引擎旁作业。"
 	icon = 'icons/obj/item/clothing/suit/engineering_rig.dmi'
 
 	value = 1500

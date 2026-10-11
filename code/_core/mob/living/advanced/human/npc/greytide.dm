@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/greytide
-	name = "feral greytider"
+	name = "野蛮灰潮客"
 	enable_AI = TRUE
 	ai = /ai/advanced/
 	class = /class/greytide
@@ -16,4 +16,4 @@
 
 	equip_loadout("shopkeeper_outfit")
 
-	
+

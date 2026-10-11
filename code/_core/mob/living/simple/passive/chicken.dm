@@ -1,7 +1,7 @@
 /mob/living/simple/passive/chicken
-	name = "white chicken"
-	desc = "Cluck cluck."
-	desc_extended = "A harmless critter."
+	name = "白鸡"
+	desc = "咯咯哒。"
+	desc_extended = "一只无害的小动物。"
 	icon = 'icons/mob/living/simple/chicken.dmi'
 	icon_state = "chicken_white"
 	damage_type = /damagetype/npc/chicken
@@ -29,15 +29,15 @@
 	update_sprite()
 
 /mob/living/simple/passive/chicken/brown
-	name = "brown chicken"
+	name = "棕鸡"
 	icon_state = "chicken_brown"
 
 /mob/living/simple/passive/chicken/black
-	name = "black chicken"
+	name = "黑鸡"
 	icon_state = "chicken_black"
 
 /mob/living/simple/passive/chicken/black/Initialize()
 	. = ..()
 	if(prob(1))
-		name = "black cock"
-		desc = "Comedy achieved."
+		name = "黑色大公鸡"
+		desc = "喜剧效果达成。"

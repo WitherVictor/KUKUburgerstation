@@ -4,9 +4,9 @@
 	anchored = 2
 
 /turf/simulated/openspace
-	name = "hole"
-	desc = "Down the rabbit hole you go!"
-	desc_extended = "A hole that leads to a lower level, be careful as they can hurt."
+	name = "孔洞"
+	desc = "掉进兔子洞啦！"
+	desc_extended = "通往下层的孔洞，小心摔伤。"
 	icon = 'icons/turf/floor/openspace.dmi'
 	icon_state = "openspace_background"
 

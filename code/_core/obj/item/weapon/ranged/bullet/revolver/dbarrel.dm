@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/dbarrel
-	name = "\improper 12g Boomstick"
-	desc = "The bartender's trusty double barrel shotgun."
-	desc_extended = "Double barreled shotguns are often sawed off in order to be used as a sidearm, at the cost of the user's wrist bones."
+	name = "\improper 12号轰天棍"
+	desc = "酒保信赖的双管霰弹枪。"
+	desc_extended = "双管霰弹枪常被锯短，当作随身副武器使用，代价则由使用者的腕骨承担。"
 	icon = 'icons/obj/item/weapons/ranged/dbarrel.dmi'
 	icon_state = "inventory"
 	value = 400

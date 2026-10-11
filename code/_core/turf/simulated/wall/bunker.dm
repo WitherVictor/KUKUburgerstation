@@ -1,7 +1,7 @@
 /turf/simulated/wall/bunker
-	name = "bunker wall"
-	desc = "Ha, try getting through that"
-	desc_extended = "A thick steel wall made to withstand heavy punishment, maybe just try the door."
+	name = "地堡墙壁"
+	desc = "哈，有本事就打穿它。"
+	desc_extended = "为承受猛烈攻击而造的厚重钢墙，还是试试走门吧。"
 	icon = 'icons/turf/wall/bunker.dmi'
 	icon_state = "wall"
 	corner_category = "metal"

@@ -1,5 +1,5 @@
 /obj/structure/interactive/coin_drop
-	name = "gold coin"
+	name = "金币"
 	icon = 'icons/obj/item/currency/gold.dmi'
 	icon_state = "1"
 	value = 0 //Value is based on current economy.
@@ -19,7 +19,7 @@
 
 /obj/structure/interactive/coin_drop/get_examine_list(var/mob/examiner)
 	. = ..()
-	if(amount > 1) . += div("weightsize","Quantity: [amount].")
+	if(amount > 1) . += div("weightsize","数量：[amount]。")
 
 /obj/structure/interactive/coin_drop/PreDestroy()
 	if(cached_coin || cached_sparkle)
@@ -61,7 +61,7 @@
 	var/turf/T = get_turf(src)
 
 	if(pickup_limit <= 0)
-		caller.to_chat(span("warning","You can't carry any more gold!"))
+		caller.to_chat(span("warning","你无法携带更多金币了！"))
 		return TRUE
 
 	var/pickup_amount = 0

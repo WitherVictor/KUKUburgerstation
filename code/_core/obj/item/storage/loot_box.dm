@@ -1,7 +1,7 @@
 /obj/item/storage/loot_box
-	name = "loot box"
-	desc = "Gacha time"
-	desc_extended = "A box filled with discarded items, why did you buy a box filled with literal trash again?."
+	name = "战利品箱"
+	desc = "抽奖时间到。"
+	desc_extended = "一个装满废弃物品的箱子。你怎么又买了一箱真正的垃圾？"
 	icon = 'icons/obj/item/storage/death_box.dmi'
 	icon_state = "loot"
 

@@ -1,5 +1,5 @@
 /obj/structure/interactive/blocking_crate
-	name = "sturdy crate"
+	name = "坚固货箱"
 	icon = 'icons/obj/structure/crate.dmi'
 	icon_state = "1"
 	bullet_block_chance = 100

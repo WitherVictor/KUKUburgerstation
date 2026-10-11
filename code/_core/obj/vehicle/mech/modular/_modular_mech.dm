@@ -1,5 +1,5 @@
 /mob/living/vehicle/mech/modular
-	name = "modular mech"
+	name = "模块化机甲"
 	icon = 'icons/mob/living/advanced/mecha/parts.dmi'
 	icon_state = "backbone"
 
@@ -56,18 +56,18 @@
 
 	. = ..()
 
-	if(mech_head) . += span("notice","It has \the [mech_head.name] equipped. ([mech_head.health.health_current]/[mech_head.health.health_max])")
-	if(mech_body) . += span("notice","It has \the [mech_body.name] equipped. ([mech_body.health.health_current]/[mech_body.health.health_max])")
-	if(mech_arms) . += span("notice","It has \the [mech_arms.name] equipped. ([mech_arms.health.health_current]/[mech_arms.health.health_max])")
-	if(mech_legs) . += span("notice","It has \the [mech_legs.name] equipped. ([mech_legs.health.health_current]/[mech_legs.health.health_max])")
+	if(mech_head) . += span("notice","装有[mech_head.name]。（[mech_head.health.health_current]/[mech_head.health.health_max]）")
+	if(mech_body) . += span("notice","装有[mech_body.name]。（[mech_body.health.health_current]/[mech_body.health.health_max]）")
+	if(mech_arms) . += span("notice","装有[mech_arms.name]。（[mech_arms.health.health_current]/[mech_arms.health.health_max]）")
+	if(mech_legs) . += span("notice","装有[mech_legs.name]。（[mech_legs.health.health_current]/[mech_legs.health.health_max]）")
 
-	if(right_hand) . += span("notice","It has \the [right_hand.name] equipped in the right hand.")
-	if(left_hand) . += span("notice","It has \the [left_hand.name] equipped in the left hand.")
+	if(right_hand) . += span("notice","右手装有[right_hand.name]。")
+	if(left_hand) . += span("notice","左手装有[left_hand.name]。")
 
-	if(right_shoulder) . += span("notice","It has \the [right_shoulder.name] equipped in the right shoulder.")
-	if(left_shoulder) . += span("notice","It has \the [left_shoulder.name] equipped in the left shoulder.")
+	if(right_shoulder) . += span("notice","右肩装有[right_shoulder.name]。")
+	if(left_shoulder) . += span("notice","左肩装有[left_shoulder.name]。")
 
-	if(battery) . += span("notice","It has \the [battery.name] inserted in the chassis. It has a charge rating of ([battery.charge_current]/[battery.charge_max]).")
+	if(battery) . += span("notice","底盘中插有[battery.name]，电量为（[battery.charge_current]/[battery.charge_max]）。")
 
 /mob/living/vehicle/mech/modular/attach_equipment(var/mob/caller,var/obj/item/I)
 	return FALSE
@@ -78,7 +78,7 @@
 /mob/living/vehicle/mech/modular/can_attach_weapon(var/mob/caller,var/obj/item/I)
 
 	if(!mech_arms)
-		caller?.to_chat(span("notice","You must add a set of arms to this assembly before attaching weapons!"))
+		caller?.to_chat(span("notice","必须先给这套组件安装手臂，才能安装武器！"))
 		return FALSE
 
 	return ..()
@@ -143,8 +143,8 @@
 				valid_weapons[battery.name] = "battery"
 
 			if(length(valid_weapons))
-				valid_weapons["Cancel"] = "Cancel"
-				var/desired_remove = input("What would you like to remove?","Weapon Removal","Cancel") as null|anything in valid_weapons
+				valid_weapons["取消"] = "Cancel"
+				var/desired_remove = input("你想拆下什么？","拆卸武器","取消") as null|anything in valid_weapons
 
 				desired_remove = valid_weapons[desired_remove]
 
@@ -152,7 +152,7 @@
 					return TRUE
 
 				if(!desired_remove || desired_remove == "Cancel")
-					caller.to_chat(span("notice","You decide not to remove anything."))
+					caller.to_chat(span("notice","你决定什么都不拆。"))
 				else
 					var/obj/item/I2 = vars[desired_remove]
 					I2.drop_item(get_turf(caller))
@@ -173,7 +173,7 @@
 					var/part_name = valid_parts[i]
 					var/obj/item/I2 = vars[part_name]
 					if(I2)
-						caller?.visible_message(span("notice","\The [caller.name] removes \the [I2.name] from \the [src.name]."),span("notice","You remove \the [I2.name] from \the [src.name]."))
+						caller?.visible_message(span("notice","[caller.name]从[src.name]上拆下了[I2.name]。"),span("notice","你从[src.name]上拆下了[I2.name]。"))
 						I2.drop_item(get_turf(src))
 						if(caller)
 							I2.drop_item(get_turf(caller))
@@ -185,7 +185,7 @@
 						break
 
 				if(!removed)
-					caller?.to_chat(span("notice","There is nothing to remove from \the [src.name]!"))
+					caller?.to_chat(span("notice","[src.name]上没有可拆卸的东西！"))
 
 			return TRUE
 
@@ -195,12 +195,12 @@
 			INTERACT_DELAY(5)
 			var/obj/item/powercell/PC = I
 			if(battery)
-				caller?.visible_message(span("notice","\The [caller.name] replaces \the [battery.name] in \the [src.name] with \the [PC.name]."),span("notice","You replace \the [battery.name] in \the [src.name] with \the [PC.name]."))
+				caller?.visible_message(span("notice","[caller.name]用[PC.name]替换了[src.name]内的[battery.name]。"),span("notice","你用[PC.name]替换了[src.name]内的[battery.name]。"))
 				battery.update_sprite()
 				battery.drop_item(get_turf(caller))
 				battery = null
 			else
-				caller?.visible_message(span("notice","\The [caller.name] adds \the [PC.name] to \the [src.name]."),span("notice","You add \the [PC.name] to \the [src.name]."))
+				caller?.visible_message(span("notice","[caller.name]将[PC.name]装入了[src.name]。"),span("notice","你将[PC.name]装入了[src.name]。"))
 			PC.drop_item(src)
 			battery = PC
 			return TRUE
@@ -213,40 +213,40 @@
 			if(istype(I,/obj/item/mech_part/arms))
 				if(!mech_arms)
 					if(!mech_body)
-						caller?.to_chat(span("notice","You must add a mech body to this assembly before attaching \the [I.name]!"))
+						caller?.to_chat(span("notice","必须先给这套组件安装机甲躯干，才能安装[I.name]！"))
 						return TRUE
 					mech_arms = I
 					. = TRUE
 				else
-					caller?.to_chat(span("notice","There are already mech arms attached to \the [I.name]!"))
+					caller?.to_chat(span("notice","[src.name]已经装有机甲手臂！"))
 			else if(istype(I,/obj/item/mech_part/legs))
 				if(!mech_legs)
 					mech_legs = I
 					. = TRUE
 				else
-					caller?.to_chat(span("notice","There are already mech legs attached to \the [I.name]!"))
+					caller?.to_chat(span("notice","[src.name]已经装有机甲腿部！"))
 			else if(istype(I,/obj/item/mech_part/body))
 				if(!mech_body)
 					if(!mech_legs)
-						caller?.to_chat(span("notice","You must add mech legs to this assembly before attaching \the [I.name]!"))
+						caller?.to_chat(span("notice","必须先给这套组件安装机甲腿部，才能安装[I.name]！"))
 						return TRUE
 					mech_body = I
 					. = TRUE
 				else
-					caller?.to_chat(span("notice","There is already a mech body attached to \the [I.name]!"))
+					caller?.to_chat(span("notice","[src.name]已经装有机甲躯干！"))
 			else if(istype(I,/obj/item/mech_part/head))
 				if(!mech_head)
 					if(!mech_body)
-						caller?.to_chat(span("notice","You must add a mech body to this assembly before attaching \the [I.name]!"))
+						caller?.to_chat(span("notice","必须先给这套组件安装机甲躯干，才能安装[I.name]！"))
 						return TRUE
 					mech_head = I
 					. = TRUE
 				else
-					caller?.to_chat(span("notice","There is already a mech head attached to \the [I.name]!"))
+					caller?.to_chat(span("notice","[src.name]已经装有机甲头部！"))
 			else if(istype(I,/obj/item/mech_part/equipment))
 				var/obj/item/mech_part/equipment/E = I
 				if(!mech_arms)
-					caller?.to_chat(span("notice","You must add mech arms to this assembly before attaching \the [E.name]!"))
+					caller?.to_chat(span("notice","必须先给这套组件安装机甲手臂，才能安装[E.name]！"))
 					return TRUE
 				if(!. && E.slot & MECH_SLOT_HAND)
 					if(!right_hand)
@@ -284,7 +284,7 @@
 			if(.)
 				I.drop_item(src)
 				I.update_sprite()
-				caller?.visible_message(span("notice","\The [caller.name] inserts \the [I.name] into \the [src.name]."),span("notice","You insert \the [I.name] into \the [src.name]."))
+				caller?.visible_message(span("notice","[caller.name]将[I.name]装入了[src.name]。"),span("notice","你将[I.name]装入了[src.name]。"))
 				update_sprite()
 			return TRUE
 

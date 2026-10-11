@@ -1,7 +1,7 @@
 /obj/structure/interactive/the_curse
-	name = "strange doll"
-	desc = "What the fuck?"
-	desc_extended = "A strange giant doll... creepy."
+	name = "诡异人偶"
+	desc = "这他妈是什么？"
+	desc_extended = "一个诡异的巨型人偶……令人毛骨悚然。"
 
 	icon = 'icons/mob/living/simple/the_curse.dmi'
 	icon_state = "creepy"

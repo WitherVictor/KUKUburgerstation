@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/summon/skeleton
-	name = "summoning tome of skeletons"
-	desc = "None."
-	desc_extended = "Summons a skeleton to fight for you for 5 minutes. Costs mana to use."
+	name = "骷髅召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一具骷髅为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 75
@@ -11,9 +11,9 @@
 	object_to_summon = /mob/living/advanced/npc/skeleton_summon/
 
 /obj/item/weapon/ranged/magic/tome/summon/bull
-	name = "summoning tome of bulls"
-	desc = "None."
-	desc_extended = "Summons a bull to fight for you for 5 minutes. Costs mana to use."
+	name = "公牛召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一头公牛为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 75
@@ -23,9 +23,9 @@
 	value = 1000
 
 /obj/item/weapon/ranged/magic/tome/summon/space_bear
-	name = "summoning tome of space bears"
-	desc = "None."
-	desc_extended = "Summons a powerful space bear to fight for you for 5 minutes. Costs mana to use."
+	name = "太空熊召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一头强大的太空熊为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 150
@@ -35,9 +35,9 @@
 	value = 3000
 
 /obj/item/weapon/ranged/magic/tome/summon/exploding_frog
-	name = "summoning tome of the exploding frog"
-	desc = "None."
-	desc_extended = "Summons a powerful exploding frog to fight for you for 5 minutes. Costs mana to use."
+	name = "爆炸蛙召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一只强大的爆炸蛙为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 50
@@ -47,9 +47,9 @@
 	value = 5000
 
 /obj/item/weapon/ranged/magic/tome/summon/crab
-	name = "summoning tome of crabs"
-	desc = "None."
-	desc_extended = "Summons a weak crab to fight for you for 5 minutes. Costs mana to use."
+	name = "螃蟹召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一只弱小的螃蟹为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 50
@@ -59,9 +59,9 @@
 	value = 750
 
 /obj/item/weapon/ranged/magic/tome/summon/goliath
-	name = "summoning tome of goliaths"
-	desc = "None."
-	desc_extended = "Summons a powerful goliath to fight for you for 5 minutes. Costs mana to use."
+	name = "歌利亚召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一只强大的歌利亚为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 100
@@ -71,9 +71,9 @@
 	value = 2000
 
 /obj/item/weapon/ranged/magic/tome/summon/twilight
-	name = "summoning tome of twilight spiders"
-	desc = "None."
-	desc_extended = "Summons a powerful twilight spider to fight for you for 5 minutes. Costs mana to use."
+	name = "暮光蜘蛛召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一只强大的暮光蜘蛛为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 75
@@ -83,9 +83,9 @@
 	value = 1500
 
 /obj/item/weapon/ranged/magic/tome/summon/watcher
-	name = "summoning tome of watchers"
-	desc = "None."
-	desc_extended = "Summons a powerful watcher to fight for you for 5 minutes. Costs mana to use."
+	name = "监视者召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一只强大的监视者为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 75
@@ -95,9 +95,9 @@
 	value = 2000
 
 /obj/item/weapon/ranged/magic/tome/summon/crystal_guardian
-	name = "summoning tome of the crystal guardians"
-	desc = "None."
-	desc_extended = "Summons a powerful Crystal Guardian to fight for you for 5 minutes. Costs mana to use."
+	name = "水晶守卫召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一个强大的水晶守卫为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/crystal_guardian.dmi'
 
 	cost_mana = 125
@@ -107,9 +107,9 @@
 	value = 3000
 
 /obj/item/weapon/ranged/magic/tome/summon/goblin_warrior
-	name = "summoning tome of the goblin warrior"
-	desc = "None."
-	desc_extended = "Summons a powerful goblin warrior to fight for you for 5 minutes. Costs mana to use."
+	name = "地精战士召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一个强大的地精战士为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 100
@@ -119,9 +119,9 @@
 	value = 3000
 
 /obj/item/weapon/ranged/magic/tome/summon/goblin_mage
-	name = "summoning tome of the goblin mage"
-	desc = "None."
-	desc_extended = "Summons a powerful goblin mage to fight for you for 5 minutes. Costs mana to use."
+	name = "地精法师召唤典籍"
+	desc = "无。"
+	desc_extended = "召唤一个强大的地精法师为你作战5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/skeleton_summon.dmi'
 
 	cost_mana = 100

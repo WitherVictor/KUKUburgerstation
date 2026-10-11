@@ -81,21 +81,21 @@
 /proc/load_deathbox(var/mob/living/advanced/player/P,var/atom/A)
 
 	if(!P || P.dead || P.qdeleting)
-		P?.to_chat(span("warning","You can't do this while dead!"))
+		P?.to_chat(span("warning","死亡时不能这样做！"))
 		return null
 
 	if(A && get_dist(A,P) > 3)
-		P.to_chat(span("warning","You're too far away!"))
+		P.to_chat(span("warning","你离得太远了！"))
 		return null
 
 	var/savedata/client/death_box/DB = SSclient.ckey_to_death_box_data[P.ckey_last]
 
 	if(!DB)
-		P.to_chat(span("danger","Deathbox Data error detected. Report this bug on discord."))
+		P.to_chat(span("danger","检测到死亡遗物箱数据错误。请在Discord上反馈此问题。"))
 		return null
 
 	if(!length(DB.loaded_data))
-		P.to_chat(span("warning","You don't have any deathboxes to purchase!"))
+		P.to_chat(span("warning","你没有可付费找回的死亡遗物箱！"))
 		return null
 
 	var/list/valid_choices = list()
@@ -104,41 +104,43 @@
 	var/instance = 1
 	for(var/k in DB.loaded_data)
 		var/list/DI = k //death_instance
-		var/final_string = "#[instance]: [DI["death_area"]], Round ID: [DI["round_id"]], [DI["value"]] credits"
+		var/final_string = "#[instance]：[DI["death_area"]]，回合编号：[DI["round_id"]]，[DI["value"]]信用点"
 		valid_choices[final_string] = DI
 		instance_list[final_string] = instance
 		instance++
 
-	valid_choices["Cancel"] = "Cancel"
+	valid_choices["取消"] = "Cancel"
 
-	var/selection = input("What deathbox do you wish for the Goblins to retrieve?","Goblin Retrival","Cancel") as null|anything in valid_choices
-	if(!selection || selection == "Cancel")
-		P.to_chat(span("notice","You decide not to purchase any deathboxes."))
+	var/selection = input("你想让地精找回哪个死亡遗物箱？","地精找回服务","取消") as null|anything in valid_choices
+	if(!selection || valid_choices[selection] == "Cancel")
+		P.to_chat(span("notice","你决定不付费找回死亡遗物箱。"))
 		return null
 
 	if(!P || P.dead || P.qdeleting)
-		P?.to_chat(span("warning","You can't do this while dead!"))
+		P?.to_chat(span("warning","死亡时不能这样做！"))
 		return null
 
 	if(A && get_dist(A,P) > 3)
-		P.to_chat(span("warning","You're too far away!"))
+		P.to_chat(span("warning","你离得太远了！"))
 		return null
 
-	var/confirmation = input("Are you sure you want to load [selection]? You will be charged [valid_choices[selection]["value"]] credits for this purchase.") as null|anything in list("Yes","No","Cancel")
+	var/list/confirmation_choices = list("是"="Yes","否"="No","取消"="Cancel")
+	var/confirmation = input("确定要找回[selection]吗？本次找回将花费[valid_choices[selection]["value"]]信用点。","找回死亡遗物箱","取消") as null|anything in confirmation_choices
+	confirmation = confirmation_choices[confirmation]
 	if(!confirmation || confirmation != "Yes")
-		P.to_chat(span("notice","You decide not to purchase any deathboxes."))
+		P.to_chat(span("notice","你决定不付费找回死亡遗物箱。"))
 		return null
 
 	if(!P || P.dead || P.qdeleting)
-		P?.to_chat(span("warning","You can't do this while dead!"))
+		P?.to_chat(span("warning","死亡时不能这样做！"))
 		return null
 
 	if(A && get_dist(A,P) > 3)
-		P.to_chat(span("warning","You're too far away!"))
+		P.to_chat(span("warning","你离得太远了！"))
 		return null
 
 	if(!P.adjust_currency(-text2num(valid_choices[selection]["value"])))
-		P.to_chat(span("danger","You don't have enough credits to make this purchase!"))
+		P.to_chat(span("danger","你的信用点不足，无法支付找回费用！"))
 		return null
 
 	var/turf/T = get_turf(P)
@@ -159,7 +161,7 @@
 
 	DB.save()
 
-	P.to_chat(span("notice","You purchase a deathbox."))
+	P.to_chat(span("notice","你付费找回了一个死亡遗物箱。"))
 
 	return created_box
 
@@ -186,7 +188,7 @@
 	if(length_of_data > 5)
 		loaded_data.Cut(1,length_of_data - (DEATH_BOX_LIMIT-1))
 	rustg_file_write(json_encode(loaded_data),full_path)
-	owner?.to_chat(span("notice","Your deathbox data has been saved."))
+	owner?.to_chat(span("notice","你的死亡遗物箱数据已保存。"))
 	return TRUE
 
 /savedata/client/death_box/proc/load()

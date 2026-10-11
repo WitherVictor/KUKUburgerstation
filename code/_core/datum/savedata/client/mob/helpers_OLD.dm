@@ -15,7 +15,7 @@
 		A.known_languages |= loaded_data["known_languages"]
 
 	if(loaded_data["last_saved_date"] && loaded_data["last_saved_date"] != get_date())
-		A.to_chat(span("notice","<h2>You are rewarded 2000 credits for logging in with this character today! Make sure to log in tomorrow to receive this reward again.</h2>"))
+		A.to_chat(span("notice","<h2>你今日使用此角色登录，获得2000信用点奖励！明天再来登录即可再次领取。</h2>"))
 		A.adjust_currency(2000)
 
 	//Organs
@@ -84,16 +84,16 @@
 		log_error("FATAL ERROR: Could not save a character because there was no owner attached! Usr: [usr].")
 		return FALSE
 	if(!owner.save_slot)
-		owner.to_chat(span("danger","<h2>Save failed. Please contact the server owner with error code: 2.</h2>"))
+		owner.to_chat(span("danger","<h2>保存失败。请向服主提供错误码：2。</h2>"))
 		return FALSE
 	if(!owner.mob)
-		owner.to_chat(span("danger","<h2>Save failed. Please contact the server owner with error code: 3.</h2>"))
+		owner.to_chat(span("danger","<h2>保存失败。请向服主提供错误码：3。</h2>"))
 		return FALSE
 	if(!is_advanced(owner.mob))
-		owner.to_chat(span("danger","<h2>Save failed. Please contact the server owner with error code: 4.</h2>"))
+		owner.to_chat(span("danger","<h2>保存失败。请向服主提供错误码：4。</h2>"))
 		return FALSE
 	if(!force && world_state != STATE_RUNNING)
-		owner.to_chat(span("danger","<h2>Save failed. Please contact the server owner with error code: 5.</h2>"))
+		owner.to_chat(span("danger","<h2>保存失败。请向服主提供错误码：5。</h2>"))
 		return FALSE
 
 	var/mob/living/advanced/player/A = owner.mob
@@ -135,8 +135,8 @@
 	loaded_data["attributes"] = final_attribute_list
 
 	if(write_json_data_to_id(owner.save_slot,loaded_data))
-		owner.to_chat(span("notice","Sucessfully saved character [A.name]."))
+		owner.to_chat(span("notice","角色[A.name]已成功保存。"))
 	else
-		owner.to_chat(span("danger","<h2>Save failed. Please contact the server owner with error code: 99.</h2>"))
+		owner.to_chat(span("danger","<h2>保存失败。请向服主提供错误码：99。</h2>"))
 
 	LOG_DEBUG("[owner] has finished saving their character [A.get_debug_name()].")

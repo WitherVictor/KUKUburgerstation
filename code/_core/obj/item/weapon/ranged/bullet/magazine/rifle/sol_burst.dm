@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/sol_burst
-	name = "\improper 5.56mm SOL-18 Service Rifle"
-	desc = "Space age technology calls for space age guns. This should easily rip someone a new hole."
-	desc_extended = "A 5.56mm space-age service rifle developed by the Solarian research team for space battles."
+	name = "\improper 5.56mm SOL-18制式步枪"
+	desc = "太空时代的科技，就该配太空时代的枪。给人再开个洞，想必轻而易举。"
+	desc_extended = "太阳系科研团队为太空战斗研发的5.56mm太空时代制式步枪。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/burst.dmi'
 	icon_state = "inventory"
 	value = 8000

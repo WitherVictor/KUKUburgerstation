@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/space_cop
-	name = "space cop"
-	desc = "Investigating galactic warcrimes since 2068."
+	name = "太空警察"
+	desc = "自2068年起调查银河战争罪行。"
 
 	dna = /dna/human
 

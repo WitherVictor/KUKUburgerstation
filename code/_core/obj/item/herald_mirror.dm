@@ -1,7 +1,7 @@
 /obj/item/herald_mirror
-	name = "the herald's mirror"
-	desc = "Gaze upon it, and you will be transported to a realm of safety. Use the mirror again to return back."
-	desc_extended = "A special mirror that will teleport the owner to a hidden realm."
+	name = "先驱之镜"
+	desc = "凝视镜面，便会被传送至安全的领域。再次使用镜子即可返回。"
+	desc_extended = "能将持有者传送至隐秘领域的特殊镜子。"
 
 	icon = 'icons/obj/item/herald_mirror.dmi'
 	icon_state = "inventory"
@@ -28,11 +28,11 @@
 	INTERACT_DELAY(10)
 
 	if(!is_advanced(activator))
-		activator.to_chat(span("warning","You don't know how to use this..."))
+		activator.to_chat(span("warning","你不知道该怎么使用它……"))
 		return TRUE
 
 	if(istype(activator,/mob/living/advanced/player/antagonist))
-		activator.to_chat(span("warning","It's probably not a good idea to use with your explosive implant..."))
+		activator.to_chat(span("warning","你体内装着爆炸植入体，使用它恐怕不是个好主意……"))
 		return TRUE
 
 	var/mob/living/advanced/A = activator
@@ -51,25 +51,25 @@
 		return FALSE
 
 	if(!linked_destination)
-		A.to_chat(span("warning","Something went wrong... tell Burger on discord."))
+		A.to_chat(span("warning","出了点问题……请在Discord上告诉Burger。"))
 		return FALSE
 
 	if(!SSgamemode?.active_gamemode?.allow_launch)
-		A.to_chat(span("warning","You can't use \the [src.name]... yet."))
+		A.to_chat(span("warning","你现在还不能使用[src.name]……"))
 		return FALSE
 
 	if(!A.can_move())
-		A.to_chat(span("warning","You can't use \the [src.name] in your current state!"))
+		A.to_chat(span("warning","你当前的状态无法使用[src.name]！"))
 		return FALSE
 
 	if(!is_inventory(loc))
-		A.to_chat(span("warning","You need to be holding \the [src.name] in order to teleport!"))
+		A.to_chat(span("warning","你必须手持[src.name]才能传送！"))
 		return FALSE
 
 	var/obj/hud/inventory/I = loc
 
 	if(!I.click_flags || I.owner != A)
-		A.to_chat(span("warning","You need to be holding \the [src.name] in order to teleport!"))
+		A.to_chat(span("warning","你必须手持[src.name]才能传送！"))
 		return FALSE
 
 	return TRUE
@@ -82,10 +82,10 @@
 	if(istype(A2,/area/herald))
 		var/turf/T = get_turf(linked_returning)
 		if(!T)
-			A.to_chat(span("notice","It seems you cannot go back to your previous location... perhaps the light can help you get back."))
+			A.to_chat(span("notice","你似乎无法返回先前的位置……也许那道光能帮你回去。"))
 			return TRUE
 		A.force_move(T)
-		A.visible_message(span("danger","\The [A.name] appears out of nowhere!"),span("notice","\The [src.name] whisks you away, back to where you were."))
+		A.visible_message(span("danger","[A.name]凭空出现了！"),span("notice","[src.name]将你带回了先前的位置。"))
 		return TRUE
 
 	if(linked_returning)
@@ -96,6 +96,6 @@
 	FINALIZE(linked_returning)
 
 	A.force_move(get_turf(linked_destination))
-	A.visible_message(span("danger","\The [A.name] disappears in a soft flash!"),span("notice","\The [src.name] whisks you away to safety."))
+	A.visible_message(span("danger","[A.name]消失在一阵柔和的闪光中！"),span("notice","[src.name]将你带到了安全之地。"))
 
 	return TRUE

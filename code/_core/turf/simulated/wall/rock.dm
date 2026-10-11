@@ -1,8 +1,8 @@
 /turf/simulated/wall/rock
-	name = "rock wall"
+	name = "岩壁"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of rock, might have something behind it, might not, occasionally has minerals."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的岩壁，后面可能藏着什么，也可能什么都没有，偶尔含有矿物。"
 
 	icon = 'icons/turf/wall/rock/preview.dmi'
 	icon_state = "rock"
@@ -33,8 +33,8 @@
 	real_icon = 'icons/turf/wall/rock/snow.dmi'
 	real_icon_state = "wall"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of rock, might have something behind it, might not, occasionally has minerals. This one has snow on it."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的岩壁，后面可能藏着什么，也可能什么都没有，偶尔含有矿物。这面岩壁覆盖着积雪。"
 
 	icon_state = "snow"
 
@@ -49,8 +49,8 @@
 	real_icon = 'icons/turf/wall/rock/basalt.dmi'
 	real_icon_state = "wall"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of basalt, occasionally has minerals."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的玄武岩壁，偶尔含有矿物。"
 
 	icon_state = "basalt"
 
@@ -68,8 +68,8 @@
 	real_icon = 'icons/turf/wall/rock/brown.dmi'
 	real_icon_state = "wall"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of rock, might have something behind it, might not, occasionally has minerals. This one is brown."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的岩壁，后面可能藏着什么，也可能什么都没有，偶尔含有矿物。这面岩壁是棕色的。"
 
 	icon_state = "brown"
 
@@ -84,8 +84,8 @@
 	real_icon = 'icons/turf/wall/rock/moss.dmi'
 	real_icon_state = "wall"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of rock, might have something behind it, might not, occasionally has minerals. this one has moss on it."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的岩壁，后面可能藏着什么，也可能什么都没有，偶尔含有矿物。这面岩壁长着苔藓。"
 
 	icon_state = "moss"
 
@@ -100,8 +100,8 @@
 	real_icon = 'icons/turf/wall/rock/desert.dmi'
 	real_icon_state = "wall"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of rock, might have something behind it, might not, occasionally has minerals. This one is sandy."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的岩壁，后面可能藏着什么，也可能什么都没有，偶尔含有矿物。这面岩壁呈沙质。"
 
 	icon_state = "desert"
 
@@ -116,8 +116,8 @@
 	real_icon = 'icons/turf/wall/rock/ice.dmi'
 	real_icon_state = "ice"
 
-	desc = "Rock hard"
-	desc_extended = "A natural wall made of rock, might have something behind it, might not, occasionally has minerals. This one is icey."
+	desc = "坚如磐石。"
+	desc_extended = "天然形成的岩壁，后面可能藏着什么，也可能什么都没有，偶尔含有矿物。这面岩壁覆着冰。"
 
 	icon_state = "ice"
 
@@ -131,10 +131,10 @@
 	layer = LAYER_WALL_LARGE + 0.16
 
 /turf/simulated/wall/rock/indestructable
-	name = "bedrock wall"
+	name = "基岩壁"
 
-	desc = "End of the line Bucko"
-	desc_extended = "An impassable barrier of stone, go around or turn around."
+	desc = "到此为止了，老兄。"
+	desc_extended = "一道无法穿越的石头屏障，绕路或者回头吧。"
 
 	real_icon = 'icons/turf/wall/rock/bedrock.dmi'
 	real_icon_state = "wall"

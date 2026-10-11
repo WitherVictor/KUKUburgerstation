@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/hardsuit/syndie
-	name = "mauler hardsuit mk1"
-	desc = "GET DAT FUKKEN DISK!"
-	desc_extended = "The first model of mauler hardsuit, and a common sight during the Nuclear Operatives era. Today it's mostly surplus worn by Syndicate grunts."
+	name = "撕裂者硬式宇航服mk1"
+	desc = "把那他妈的磁盘抢过来！"
+	desc_extended = "撕裂者硬式宇航服的首个型号，在核行动人员活跃的年代十分常见。如今多作为剩余军用品，由辛迪加大头兵穿着。"
 	icon = 'icons/obj/item/clothing/suit/syndie_basic.dmi'
 
 
@@ -16,9 +16,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/overwear/hardsuit/syndie/advanced
-	name = "mauler hardsuit mk2"
-	desc = "Perimeter Secured."
-	desc_extended = "The current model in service by medium to high level Syndicate operatives. People wearing this are not to be treated lightly."
+	name = "撕裂者硬式宇航服mk2"
+	desc = "周界已确保安全。"
+	desc_extended = "辛迪加中高级行动人员目前使用的现役型号。遇到穿着它的人，绝不能掉以轻心。"
 	icon = 'icons/obj/item/clothing/suit/syndie_advanced.dmi'
 
 
@@ -34,9 +34,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/overwear/hardsuit/syndie/elite
-	name = "mauler hardsuit mk3"
-	desc = "May I make a suggestion? Run."
-	desc_extended = "A prototype suit in use by the best of the best of Syndicate Operatives. Lightweight and agile but still heavily armored. Don't attempt to face someone wearing this alone."
+	name = "撕裂者硬式宇航服mk3"
+	desc = "听我一句劝：快跑。"
+	desc_extended = "辛迪加最顶尖行动人员使用的原型宇航服。轻便灵活，同时保持厚重装甲。别尝试独自对付穿着它的人。"
 	icon = 'icons/obj/item/clothing/suit/syndie_elite.dmi'
 
 
@@ -57,9 +57,9 @@
 
 
 /obj/item/clothing/overwear/hardsuit/syndie/ultra
-	name = "mauler hardsuit mk4 ULTRA"
-	desc = "May I make a suggestion? Run."
-	desc_extended = "A prototype suit in use by the best of the best of Syndicate Operatives. Lightweight and agile but still heavily armored. Don't attempt to face someone wearing this alone."
+	name = "撕裂者硬式宇航服mk4终极型"
+	desc = "听我一句劝：快跑。"
+	desc_extended = "辛迪加最顶尖行动人员使用的原型宇航服。轻便灵活，同时保持厚重装甲。别尝试独自对付穿着它的人。"
 	icon = 'icons/obj/item/clothing/suit/syndie_ultra.dmi'
 
 

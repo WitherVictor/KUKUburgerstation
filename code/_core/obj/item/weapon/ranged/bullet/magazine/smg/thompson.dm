@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/thompson
-	name = "\improper Solarian Typewriter"
-	desc = "The space gangster's choice."
-	desc_extended = "A rugged, battlescarred submachine gun from a bygone era. They don't make them like they used to."
+	name = "\improper 太阳系打字机"
+	desc = "太空黑帮的选择。"
+	desc_extended = "来自旧时代的冲锋枪，坚固耐用，满是战斗伤痕。再也造不出当年的味道了。"
 	icon = 'icons/obj/item/weapons/ranged/smg/sol/45.dmi'
 	icon_state = "inventory"
 	value = 4200

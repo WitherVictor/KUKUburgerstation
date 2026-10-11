@@ -1,7 +1,7 @@
 /mob/living/simple/passive/cow
-	name = "cow"
-	desc = "Gives out milk and homework."
-	desc_extended = "A harmless critter."
+	name = "奶牛"
+	desc = "提供牛奶，也布置家庭作业。"
+	desc_extended = "一只无害的动物。"
 
 	icon = 'icons/mob/living/simple/cow.dmi'
 	icon_state = "living"

@@ -1,8 +1,8 @@
 /obj/item/clothing/glasses/prescription
-	name = "prescription glasses"
+	name = "矫正眼镜"
 
-	desc = "For nerds."
-	desc_extended = "Some less-than-sturdy prescription glasses. Probably a bad idea to wear these during a laser fight."
+	desc = "书呆子专用。"
+	desc_extended = "一副不太结实的矫正眼镜。打激光枪战时戴着它恐怕不太明智。"
 	icon = 'icons/obj/item/clothing/glasses/prescription.dmi'
 
 	armor = /armor/glasses
@@ -12,13 +12,13 @@
 	item_slot_layer = 2
 
 /obj/item/clothing/glasses/prescription/blue
-	name = "blue prescription glasses"
-	desc = "For nerds."
-	desc_extended = "Some less-than-sturdy prescription glasses. These ones are blue"
+	name = "蓝色矫正眼镜"
+	desc = "书呆子专用。"
+	desc_extended = "一副不太结实的矫正眼镜。这副是蓝色的。"
 	icon = 'icons/obj/item/clothing/glasses/prescription2.dmi'
 
 /obj/item/clothing/glasses/prescription/circle
-	name = "large prescription glasses"
-	desc = "For meganerds."
-	desc_extended = "Some less-than-sturdy prescription glasses. These ones are big and blue"
+	name = "大号矫正眼镜"
+	desc = "超级书呆子专用。"
+	desc_extended = "一副不太结实的矫正眼镜。这副又大又蓝。"
 	icon = 'icons/obj/item/clothing/glasses/circle.dmi'

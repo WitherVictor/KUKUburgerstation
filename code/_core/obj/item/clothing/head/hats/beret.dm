@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/beret
-	name = "beret"
+	name = "贝雷帽"
 	icon = 'icons/obj/item/clothing/hats/beret.dmi'
-	desc = "HON HON HON"
-	desc_extended = "A fashionable beret."
+	desc = "嚯嚯嚯。"
+	desc_extended = "一顶时髦的贝雷帽。"
 
 	armor = /armor/cloth
 
@@ -14,8 +14,8 @@
 	dyeable = TRUE
 
 /obj/item/clothing/head/hat/beret/armored
-	name = "armored beret"
-	desc_extended = "A fashionable beret with extra padding and protection built into it."
+	name = "防护贝雷帽"
+	desc_extended = "一顶时髦的贝雷帽，内置额外衬垫和防护层。"
 
 	armor = /armor/leather/hard
 

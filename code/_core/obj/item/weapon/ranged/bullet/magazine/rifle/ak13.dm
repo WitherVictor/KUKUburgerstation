@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/ak13
 	name = "\improper 7.62x39mm AK-13"
-	desc = "Ancient, but still powerful. Maybe."
-	desc_extended = "The 7.62x39 is THE rifle for shady Eastern European uprisings. Reliable, inaccurate, and comes only in automatic to train those recruits to at least hit the target."
+	desc = "古老，却仍有威力。大概吧。"
+	desc_extended = "7.62x39步枪是东欧那些来路不明的起义的标配。可靠，精度差，而且只有全自动模式，好让新兵至少能扫中目标。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/762_russia.dmi'
 	icon_state = "inventory"
 	value = 500

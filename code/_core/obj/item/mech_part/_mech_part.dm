@@ -1,5 +1,5 @@
 /obj/item/mech_part
-	name = "mech part"
+	name = "机甲部件"
 	icon = 'icons/mob/living/advanced/mecha/parts.dmi'
 
 	pixel_x = -8

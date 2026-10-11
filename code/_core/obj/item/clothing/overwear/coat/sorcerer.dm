@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/sorcerer
-	name = "sorcerer's cloak"
+	name = "术士斗篷"
 	icon = 'icons/obj/item/clothing/suit/sorcerer_cloak.dmi'
 
-	desc = "A sorcerer's cloak. Frequently dyed to show one's proficiency in a specific magical art."
-	desc_extended = "Sorcerers commonly dye their garments based on the primary house of magic they were a part of during their schooling. The quality and upkeep of a sorcerer's robes are of high priority to a sorcerer. Those who neglect upkeep quickly find themselves with the ire of their peers."
+	desc = "术士的斗篷，通常通过染色来表明自己精通哪一门魔法。"
+	desc_extended = "术士通常会按求学时所属的主要魔法学派给衣服染色。他们极为重视长袍的品质与保养，疏于打理的人很快就会惹怒同行。"
 
 	protected_limbs = list(BODY_TORSO,BODY_GROIN,BODY_ARM_LEFT,BODY_ARM_RIGHT)
 

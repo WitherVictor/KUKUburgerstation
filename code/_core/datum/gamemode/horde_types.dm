@@ -1,6 +1,6 @@
 /gamemode/horde/rev
-	name = "Horde Mode (Revolutionaries)"
-	desc = "Fight off an endless wave of Russian Revolutionaries while attempting to complete objectives."
+	name = "围攻模式（革命军）"
+	desc = "在抵御无穷无尽的俄罗斯革命军攻势的同时，完成任务目标。"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/rev = 5,
 		/mob/living/simple/bear/armored/revolutionary = 1
@@ -8,8 +8,8 @@
 	hidden = FALSE
 
 /gamemode/horde/xeno
-	name = "Horde Mode (Xenos)"
-	desc = "Fight off an endless wave of Acid-Spitting and Leaping Xenos while attempting to complete objectives."
+	name = "围攻模式（异形）"
+	desc = "在抵御无穷无尽、会喷酸和跳扑的异形攻势的同时，完成任务目标。"
 	enemy_types_to_spawn = list(
 		/mob/living/simple/xeno/drone = 2,
 		/mob/living/simple/xeno/hunter = 4,
@@ -29,8 +29,8 @@
 
 
 /gamemode/horde/zombie
-	name = "Horde Mode (Zombies)"
-	desc = "Fight off an endless wave of non-infectious Zombies while attempting to complete objectives. Note that the rate of which zombies spawn is increased significantly every minute!"
+	name = "围攻模式（僵尸）"
+	desc = "在抵御无穷无尽、不具传染性的僵尸攻势的同时，完成任务目标。注意：僵尸的出现速度每分钟都会显著提高！"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/zombie/greytide = 50,
 		/mob/living/advanced/npc/zombie/botanist = 10,
@@ -49,8 +49,8 @@
 
 
 /gamemode/horde/syndicate
-	name = "Horde Mode (Syndicate)"
-	desc = "Fight off an endless wave of traitorous syndicate soliders while attempting to completele objectives. Some Syndicate soliders may have spells!"
+	name = "围攻模式（辛迪加）"
+	desc = "在抵御无穷无尽的辛迪加叛徒士兵攻势的同时，完成任务目标。有些辛迪加士兵会使用法术！"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/syndicate = 10,
 		/mob/living/advanced/npc/sorcerer = 4,
@@ -59,15 +59,15 @@
 	hidden = FALSE
 
 /gamemode/horde/beefmen
-	name = "Horde Mode (Beefmen)"
+	name = "围攻模式（血肉人）"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/beefman = 1
 	)
 	hidden = TRUE
 
 /gamemode/horde/death_squad
-	name = "Horde Mode (Death Squad)"
-	desc = "Fight off an endless wave of NanoTrasen deathsquad while attemtping to complete objectives in this extremely lethal training excercise!"
+	name = "围攻模式（敢死队）"
+	desc = "在这场极度致命的训练演习中，一边抵御无穷无尽的纳米传讯敢死队，一边完成任务目标！"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/deathsquad/light = 8,
 		/mob/living/advanced/npc/deathsquad/medium = 4,
@@ -80,8 +80,8 @@
 	enemies_to_spawn_per_minute = 0.05
 
 /gamemode/horde/ashwalkers
-	name = "Horde Mode (Ashwalkers)"
-	desc = "Fight off an endless wave of Hostile Ashwalkers while attempting to complete objectives."
+	name = "围攻模式（灰烬行者）"
+	desc = "在抵御无穷无尽的敌对灰烬行者攻势的同时，完成任务目标。"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/ashwalker/assassin = 1,
 		/mob/living/advanced/npc/ashwalker/hunter = 2,
@@ -90,8 +90,8 @@
 	hidden = TRUE
 
 /gamemode/horde/pirates
-	name = "Horde Mode (Pirates)"
-	desc = "Fight off an endless wave of Skeleton Pirates while attempting to complete objectives."
+	name = "围攻模式（海盗）"
+	desc = "在抵御无穷无尽的骷髅海盗攻势的同时，完成任务目标。"
 	enemy_types_to_spawn = list(
 		/mob/living/advanced/npc/pirate_crew/magic = 2,
 		/mob/living/advanced/npc/pirate_crew/melee = 3,
@@ -101,8 +101,8 @@
 	hidden = TRUE
 
 /gamemode/horde/cultists
-	name = "Horde Mode (Cultists)"
-	desc = "Fight off an endless wave of Cultists while attempting to complete objectives."
+	name = "围攻模式（邪教徒）"
+	desc = "在抵御无穷无尽的邪教徒攻势的同时，完成任务目标。"
 	enemy_types_to_spawn = list(
 		/mob/living/simple/cult/construct/artificer = 10,
 		/mob/living/simple/cult/construct/behemoth = 10,
@@ -128,8 +128,8 @@
 	enemies_to_spawn_per_player = 1.5
 */
 /gamemode/horde/boss_rush
-	name = "Horde Mode (Boss Rush)"
-	desc = "Oh god oh fuck."
+	name = "围攻模式（首领连战）"
+	desc = "天啊，卧槽。"
 	enemy_types_to_spawn = list(
 		/mob/living/simple/can_man = 1,
 		/mob/living/simple/ash_drake = 4,

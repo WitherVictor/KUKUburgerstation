@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/inferno
-	name = "inferno spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a wad of fire that creates a fire hazard on hit."
+	name = "烈焰法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射一团火焰，命中后在落点留下危险火场。"
 	icon_state = "damage"
 
 	rarity = RARITY_RARE

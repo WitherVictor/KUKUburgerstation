@@ -1,5 +1,5 @@
 /obj/structure/interactive/slime_wall
-	name = "slime wall"
+	name = "史莱姆墙"
 	icon = 'icons/obj/effects/slime_tile.dmi'
 	icon_state = "block"
 

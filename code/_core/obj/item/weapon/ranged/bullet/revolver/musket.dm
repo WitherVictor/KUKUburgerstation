@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/musket
-	name = "\improper .62 musket rifle"
-	desc = "Just like the founding fathers intended."
-	desc_extended = "A smoothbore muzzle-loading rifle that your great-great-great-great-great-great-great-great-great-grandfather used. Only an idiot or a badass would use one of these."
+	name = "\improper .62滑膛火枪"
+	desc = "一切都如开国先贤所愿。"
+	desc_extended = "你不知道多少代以前的老祖宗用过的前装滑膛火枪。只有傻瓜或狠人才会用这种枪。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/musket.dmi'
 	icon_state = "inventory"
 	value = 800

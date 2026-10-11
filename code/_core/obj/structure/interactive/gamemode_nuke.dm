@@ -1,7 +1,7 @@
 /obj/structure/interactive/nukies_nuke
-	name = "nuke"
-	desc = "Bomb has been planted."
-	desc_extended = "A powerful nuke. The Syndicate are supposed to move this to a special area while NanoTrasen are to prevent it from detonating. Arming the device will anchor the nuke in place and start a countdown."
+	name = "核弹"
+	desc = "炸弹已安放。"
+	desc_extended = "一枚威力强大的核弹。辛迪加需要将其运至指定区域，纳米传讯则要阻止其爆炸。核弹解锁后会固定在原地，启动引爆程序后开始倒计时。"
 
 	icon = 'icons/obj/structure/nuke.dmi'
 	icon_state = "base"
@@ -61,7 +61,7 @@
 	if(is_living(examiner))
 		var/mob/living/L = examiner
 		if(L.loyalty_tag == "Syndicate")
-			. += div("notice","\The [src.name] indicates it can only be anchored in <b>\the [nuke_area.name].</b>")
+			. += div("notice","[src.name]显示，它只能固定在<b>[nuke_area.name]</b>。")
 
 /obj/structure/interactive/nukies_nuke/clicked_on_by_object(var/mob/caller,var/atom/object,location,control,params)
 
@@ -71,12 +71,12 @@
 		var/mob/living/L = caller
 
 		if(L.loyalty_tag != "Syndicate")
-			L.to_chat(span("notice","You don't know how to use this!"))
+			L.to_chat(span("notice","你不知道该如何使用它！"))
 		else if(nuke_state == 0)
 			if(can_unlock(L))
 				unlock(L)
 		else
-			caller.to_chat(span("warning","\The [src.name] is already unlocked!"))
+			caller.to_chat(span("warning","[src.name]已经解锁！"))
 
 		return TRUE
 
@@ -85,12 +85,12 @@
 		INTERACT_DELAY(10)
 		if(nuke_state == 1) //Arm it!
 			if(can_arm(caller))
-				caller.visible_message(span("danger","\The [caller.name] starts arming \the [src.name]!"),span("warning","You begin to arm \the [src.name]!"))
+				caller.visible_message(span("danger","[caller.name]开始启动[src.name]的引爆程序！"),span("warning","你开始启动[src.name]的引爆程序！"))
 			PROGRESS_BAR(caller,src,SECONDS_TO_DECISECONDS(8),src::arm(),caller)
 			PROGRESS_BAR_CONDITIONS(caller,src,src::can_arm(),caller)
 		else if(nuke_state == 2) //Disarm it!
 			if(can_disarm(caller))
-				caller.visible_message(span("danger","\The [caller.name] starts disarming \the [src.name]!"),span("warning","You begin to disarm \the [src.name]!"))
+				caller.visible_message(span("danger","[caller.name]开始解除[src.name]的引爆程序！"),span("warning","你开始解除[src.name]的引爆程序！"))
 			PROGRESS_BAR(caller,src,SECONDS_TO_DECISECONDS(8),src::disarm(),caller)
 			PROGRESS_BAR_CONDITIONS(caller,src,src::can_disarm(),caller)
 
@@ -135,13 +135,13 @@
 	return TRUE
 
 /obj/structure/interactive/nukies_nuke/proc/unlock(var/mob/living/caller)
-	caller.visible_message(span("danger","\The [caller.name] unlocks \the [src.name]!"),span("warning","You unlock \the [src.name]."))
+	caller.visible_message(span("danger","[caller.name]解锁了[src.name]！"),span("warning","你解锁了[src.name]。"))
 	nuke_state = 1
 	anchored = TRUE
 	return TRUE
 
 /obj/structure/interactive/nukies_nuke/proc/arm(var/mob/living/caller)
-	caller.visible_message(span("danger","\The [caller.name] arms \the [src.name]!"),span("warning","You arm \the [src.name]."))
+	caller.visible_message(span("danger","[caller.name]启动了[src.name]的引爆程序！"),span("warning","你启动了[src.name]的引爆程序。"))
 	nuke_state = 2
 	next_explode = world.time + 1200 //Decieconds
 	if(istype(SSgamemode.active_gamemode,/gamemode/nuke_ops/))
@@ -150,12 +150,12 @@
 		var/area/A = get_area(src)
 		for(var/k in NO.active_players)
 			var/mob/living/L = k
-			L.to_chat(span("danger","\The [src.name] was planted in \the [A.name]!"))
+			L.to_chat(span("danger","[src.name]已在[A.name]安放！"))
 	START_THINKING(src)
 	return TRUE
 
 /obj/structure/interactive/nukies_nuke/proc/disarm(var/mob/caller)
-	caller.visible_message(span("danger","\The [caller.name] disarms \the [src.name]!"),span("warning","You disarm \the [src.name]."))
+	caller.visible_message(span("danger","[caller.name]解除了[src.name]的引爆程序！"),span("warning","你解除了[src.name]的引爆程序。"))
 	nuke_state = 3
 	if(istype(SSgamemode.active_gamemode,/gamemode/nuke_ops/))
 		var/gamemode/nuke_ops/NO = SSgamemode.active_gamemode
@@ -164,7 +164,7 @@
 	return TRUE
 
 /obj/structure/interactive/nukies_nuke/proc/nuke_explode()
-	visible_message(span("danger","\The [src.name] explodes!"))
+	visible_message(span("danger","[src.name]爆炸了！"))
 	nuke_state = 4
 	if(istype(SSgamemode.active_gamemode,/gamemode/nuke_ops/))
 		var/gamemode/nuke_ops/NO = SSgamemode.active_gamemode

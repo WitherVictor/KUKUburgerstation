@@ -1,6 +1,6 @@
 /obj/item/storage/glovebox/
-	name = "glovebox"
-	desc = "Contains a matching pair of gloves."
+	name = "手套盒"
+	desc = "装有一双配套的手套。"
 	icon = 'icons/obj/item/storage/boxes.dmi'
 	icon_state = "glovebox"
 
@@ -14,7 +14,7 @@
 	value = 0
 
 /obj/item/storage/glovebox/white
-	name = "white glovebox"
+	name = "白手套盒"
 	value = 1
 
 /obj/item/storage/glovebox/white/fill_inventory()
@@ -23,8 +23,8 @@
 	. = ..()
 
 /obj/item/storage/glovebox/yellow/
-	name = "insulated glovebox"
-	desc = "Contains 2 insulated yellow gloves."
+	name = "绝缘手套盒"
+	desc = "装有一双黄色绝缘手套。"
 	value = 1
 
 /obj/item/storage/glovebox/yellow/fill_inventory()
@@ -33,8 +33,8 @@
 	. = ..()
 
 /obj/item/storage/glovebox/padded/
-	name = "padded glovebox"
-	desc = "Contains 2 padded black gloves. Perfect for winter conditions."
+	name = "加厚手套盒"
+	desc = "装有一双黑色加厚手套，非常适合冬季使用。"
 	value = 1
 
 /obj/item/storage/glovebox/padded/fill_inventory()
@@ -44,8 +44,8 @@
 
 
 /obj/item/storage/glovebox/brown_padded/
-	name = "brown padded glovebox"
-	desc = "Contains 2 padded brown gloves. Perfect for work conditions."
+	name = "棕色加厚手套盒"
+	desc = "装有一双棕色加厚手套，非常适合工作时使用。"
 	value = 1
 
 /obj/item/storage/glovebox/brown_padded/fill_inventory()

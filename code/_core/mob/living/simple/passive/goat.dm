@@ -1,7 +1,7 @@
 /mob/living/simple/passive/goat
-	name = "goat"
-	desc = "Gives out milk and goat stuff."
-	desc_extended = "A harmless critter."
+	name = "山羊"
+	desc = "提供羊奶和山羊的其他产物。"
+	desc_extended = "一只无害的动物。"
 	icon = 'icons/mob/living/simple/goat.dmi'
 	icon_state = "living"
 	damage_type = /damagetype/npc/cow

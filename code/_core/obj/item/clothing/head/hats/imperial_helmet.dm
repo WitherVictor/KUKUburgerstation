@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/imperial_helmet
-	name = "imperial helmet"
+	name = "帝国头盔"
 	icon = 'icons/obj/item/clothing/hats/imperial_armor_helmet.dmi'
-	desc = "This is probably more of a hindrance than an actual benefit."
-	desc_extended = "Looks flimsy and mass produced."
+	desc = "这东西大概是碍事多过帮忙。"
+	desc_extended = "看起来很脆弱，是流水线量产的货色。"
 
 	defense_rating = list(
 		BLADE = -15,

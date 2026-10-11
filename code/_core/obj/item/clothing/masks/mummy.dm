@@ -1,7 +1,7 @@
 /obj/item/clothing/mask/mummy
-	name = "bandage mask"
-	desc = "Can't actually be used to stop bleeding."
-	desc_extended = "A mask made from wrapped cloth. The signature look of mysterious characters, mummies and deeply unfortunate people alike."
+	name = "绷带面罩"
+	desc = "实际上不能用来止血。"
+	desc_extended = "用布条缠成的面罩。神秘人物、木乃伊和倒了大霉的人都爱这身标志性打扮。"
 	icon = 'icons/obj/item/clothing/masks/mummy.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
 

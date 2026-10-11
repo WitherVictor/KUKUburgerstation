@@ -1,7 +1,7 @@
 /turf/simulated/liquid/lava/
-	name = "lava"
+	name = "熔岩"
 	icon = 'icons/turf/floor/lava2.dmi'
-	desc = "Melting hot lava, dont fall in!"
+	desc = "炽热的熔岩，别掉进去！"
 	icon_state = "lava"
 
 	footstep = /footstep/lava
@@ -53,7 +53,7 @@
 
 	if(L.add_status_effect(FIRE,100,0,stealthy=L.on_fire))
 		if(!was_on_fire && L.send_pain_response(20))
-			L.to_chat(span("danger","<h1>The lava is HOT!</h1>"))
+			L.to_chat(span("danger","<h1>熔岩太烫了！</h1>"))
 
 		CALLBACK("lava_\ref[L]",10,src,src::lava_idiot(),L,TRUE)
 

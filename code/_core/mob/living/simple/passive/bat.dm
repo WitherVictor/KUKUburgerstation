@@ -1,7 +1,7 @@
 /mob/living/simple/bat
-	name = "cave bat"
-	desc = "Spooky!"
-	desc_extended = "A very aggressive cave bat."
+	name = "洞穴蝙蝠"
+	desc = "阴森森的！"
+	desc_extended = "一只极具攻击性的洞穴蝙蝠。"
 	icon = 'icons/mob/living/simple/bat.dmi'
 	icon_state = "living"
 
@@ -29,4 +29,4 @@
 	icon_state = "dead"
 
 /mob/living/simple/bat/space
-	name = "space bat"
+	name = "太空蝙蝠"

@@ -1,5 +1,5 @@
 /obj/structure/table/simple
-	name = "simple table"
+	name = "简易桌"
 	icon = 'icons/obj/structure/table/simple.dmi'
 	icon_state = "table"
 
@@ -7,7 +7,7 @@
 
 
 obj/structure/table/simple/boss
-	name = "ancient table"
+	name = "古老桌子"
 	color = "#2D221A"
 
 	corner_category = "table_ancient"

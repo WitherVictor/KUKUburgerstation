@@ -1,5 +1,5 @@
 /obj/projectile/fire_breath
-	name = "fire breath"
+	name = "火焰吐息"
 	icon = null
 	icon_state = null
 

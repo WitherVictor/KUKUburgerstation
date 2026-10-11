@@ -1,8 +1,8 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/silenced
-	name = "8mm Stealth Pistol"
+	name = "8mm潜行手枪"
 	bullet_type = "8"
-	desc = "Does not come with traq rounds."
-	desc_extended = "The ultimate Syndicate Assassin pistol. While chambered in 8mm, it can still pack a decent punch to unarmored targets."
+	desc = "不附赠麻醉弹。"
+	desc_extended = "辛迪加刺客的终极手枪。虽使用8mm弹药，对无甲目标仍能造成可观的伤害。"
 	icon = 'icons/obj/items/weapons/ranged/pistol/8mm.dmi'
 	value = 90
 	shoot_delay = 4

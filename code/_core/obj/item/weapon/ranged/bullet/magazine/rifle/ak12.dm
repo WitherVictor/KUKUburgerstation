@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/ak12
 	name = "\improper 5.45x39mm AK-12"
-	desc = "A nuu cheeki breeki i v damkee!"
-	desc_extended = "AK-12 is a 5.45x39mm fully automatic rifle renowned for its precision and the ability to shoot at faster rates than the more widespread AK Type-13. Smaller caliber allows it to have less recoil, yet it doesn't make it any weaker - rifle is fine, as always. Currently in use by the Space Slav Federation special forces (they don't really like to change equipment if it works finely) and elite revolutionaries, seemingly receiving batches of this weapon by black markets and deals with the government. Cheap as hell, effective and easy to maintain - a dream weapon for anyone, but rare to come by."
+	desc = "来吧，奇基布里基，一步登王！"
+	desc_extended = "AK-12是5.45x39mm全自动步枪，以精度出色、射速高于更常见的AK Type-13而闻名。较小的口径降低了后坐力，却没有削弱威力——这枪一如既往地好用。太空斯拉夫联邦特种部队仍在使用它（装备好用，他们就不爱换），精锐革命军似乎也通过黑市和政府交易成批购入。便宜得要命、高效、易维护，是人人向往却难得一见的武器。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/545_rifle_2.dmi'
 	icon_state = "inventory"
 	value = 2000
@@ -78,8 +78,8 @@
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/ak12/syndicate
 	name = "\improper 5.45x39mm AK-12 SYN"
-	desc = "A nuu cheeki breeki i v damkee!"
-	desc_extended = "AK-12 is a 5.45x39mm fully automatic rifle renowned for its precision and the ability to shoot at faster rates than the more widespread AK-13. Smaller caliber allows it to have less recoil, yet it doesn't make it any weaker - rifle is fine, as always. Currently in use by the Space Slav Federation special forces (they don't really like to change equipment if it works finely) and elite revolutionaries, seemingly receiving batches of this weapon by black markets and deals with the government. Cheap as hell, effective and easy to maintain - a dream weapon for anyone, but rare to come by."
+	desc = "来吧，奇基布里基，一步登王！"
+	desc_extended = "AK-12是5.45x39mm全自动步枪，以精度出色、射速高于更常见的AK-13而闻名。较小的口径降低了后坐力，却没有削弱威力——这枪一如既往地好用。太空斯拉夫联邦特种部队仍在使用它（装备好用，他们就不爱换），精锐革命军似乎也通过黑市和政府交易成批购入。便宜得要命、高效、易维护，是人人向往却难得一见的武器。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/545.dmi'
 	icon_state = "inventory"
 	value = 2400

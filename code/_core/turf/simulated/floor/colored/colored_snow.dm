@@ -1,7 +1,7 @@
 #define MAX_DEPTH (VIEW_RANGE)
 
 /turf/simulated/floor/colored/snow
-	name = "snow"
+	name = "积雪"
 	color = "#FFFFFF"
 	layer = LAYER_FLOOR_WEATHER
 	corner_category = "snow"

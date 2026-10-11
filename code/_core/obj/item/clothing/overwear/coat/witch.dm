@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/witch
-	name = "witch's dress"
+	name = "女巫长裙"
 	icon = 'icons/obj/item/clothing/suit/witch.dmi'
 
-	desc = "EI NATH!!"
-	desc_extended = "Not necessairly required to use magic, but wearing this, or any other clothing with high Magic protection will make your spells stronger."
+	desc = "艾纳斯！！"
+	desc_extended = "施法并不一定要穿这件衣服，但它能提供魔法防护，并增强魔法与召唤技能。"
 
 	armor = /armor/dark/arcane/witch
 

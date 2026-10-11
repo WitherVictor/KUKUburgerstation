@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/cult
-	name = "cult robes"
-	desc = "We all have to start somewhere. Even if you're joining a blood cult."
-	desc_extended = "A set of robes often worn by the low-ranking acolytes of the cult of Nar-sie. Has no supernatural qualities, but it's padded."
+	name = "邪教长袍"
+	desc = "万事都有个起步的时候，加入血之邪教也不例外。"
+	desc_extended = "纳尔西邪教低阶侍僧常穿的长袍。没有超自然力量，但带有衬垫。"
 	icon = 'icons/obj/item/clothing/suit/cult.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 
@@ -19,9 +19,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/overwear/armor/cult/old
-	name = "ancient cult robes"
-	desc = "Listen to your eldritch, son."
-	desc_extended = "A set of dusty old robes, often worn by elder members of the cult. Dusty, but full of unholy magic."
+	name = "古老邪教长袍"
+	desc = "孩子，听听你家古老邪祟的话。"
+	desc_extended = "邪教资深成员常穿的积灰旧长袍。虽满是灰尘，却蕴含着邪秽魔法。"
 	icon = 'icons/obj/item/clothing/suit/cult_old.dmi'
 
 	armor = /armor/dark/cult_robes/ancient
@@ -37,9 +37,9 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/clothing/overwear/armor/cult/hard
-	name = "hardened cult robes"
-	desc = "Try to exorcise me now, dickhead!"
-	desc_extended = "A set of heavily padded robes. Has stronger protection than the other robes."
+	name = "加固邪教长袍"
+	desc = "现在再试着给我驱魔啊，蠢货！"
+	desc_extended = "衬垫厚实的长袍，防护比其他长袍更强。"
 	icon = 'icons/obj/item/clothing/suit/cult_hard.dmi'
 
 

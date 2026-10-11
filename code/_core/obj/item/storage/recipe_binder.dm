@@ -1,6 +1,6 @@
 /obj/item/storage/recipe_binder
-	name = "Recipe Binder"
-	desc = "Holds your trading cards; err, recipes."
+	name = "配方收集册"
+	desc = "存放你的集换卡牌；呃，是配方。"
 	icon = 'icons/obj/item/book.dmi'
 	icon_state = "book_template"
 

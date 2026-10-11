@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/shopkeeper
-	name = "Shopkeeper Eric"
-	desc = "Some may call this junk, me, I call them treasures."
+	name = "店主埃里克"
+	desc = "有人说这些是破烂，我却觉得它们都是宝贝。"
 	species = "human"
 	sex = MALE
 	gender = MALE

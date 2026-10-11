@@ -1,5 +1,5 @@
 /obj/item/magazine/pistol_8mm
-	name = "\improper 8mm pistol magazine"
+	name = "\improper 8mm手枪弹匣"
 	bullet_type = "8"
 	icon = 'icons/obj/items/magazine/8mmpistol.dmi'
 	icon_state = "8mm"

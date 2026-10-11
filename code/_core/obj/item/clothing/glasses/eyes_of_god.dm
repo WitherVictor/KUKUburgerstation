@@ -1,8 +1,8 @@
 /obj/item/clothing/glasses/eyes_of_god
-	name = "eyes of god"
+	name = "神之眼"
 
-	desc = "Wear them, if you dare."
-	desc_extended = "A pair of eyeballs that let you see how the gods see things. You may lose your sanity."
+	desc = "有胆量就戴上。"
+	desc_extended = "一对能让你以诸神的视角看世界的眼球。你可能因此失去理智。"
 	icon = 'icons/obj/item/clothing/glasses/eyes_of_god.dmi'
 
 	value = 5000

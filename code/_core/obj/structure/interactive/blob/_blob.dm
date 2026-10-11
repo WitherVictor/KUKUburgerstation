@@ -1,6 +1,6 @@
 /obj/structure/interactive/blob/
-	name = "blob piece"
-	desc = "Confirmed outbreak of level 5 biohazard aboard the station. All personnel must contain the outbreak."
+	name = "异形菌毯组织"
+	desc = "已确认站内发生五级生物危害事件。所有人员必须遏制其扩散。"
 
 	icon = 'icons/obj/structure/blob.dmi'
 	var/has_damaged_state = FALSE
@@ -128,7 +128,7 @@
 				B = new/obj/structure/interactive/blob/wall(T,linked_core) //Already a node nearby. Make one.
 				if(make_super)
 					B.super = TRUE
-					B.name = "super [initial(B.name)]"
+					B.name = "超级[initial(B.name)]"
 			else
 				B = new/obj/structure/interactive/blob/node(T,linked_core) //Make a node if there is none.
 			B.color = color

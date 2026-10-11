@@ -1,6 +1,6 @@
 /obj/item/storage/briefcase/syndicate
-	name = "black briefcase"
-	desc = "An evil black briefcase."
+	name = "黑色公文包"
+	desc = "邪恶的黑色公文包。"
 	icon_state = "briefcase_dark"
 
 	size = 12
@@ -10,8 +10,8 @@
 	dynamic_inventory_count = 4
 
 /obj/item/storage/briefcase/syndicate/sniper
-	name = "syndicate sniper pack"
-	desc = "For all your sniper needs."
+	name = "辛迪加狙击装备包"
+	desc = "满足你的狙击需求。"
 	container_max_size = 4
 	dynamic_inventory_count = 3
 
@@ -24,8 +24,8 @@
 	return ..()
 
 /obj/item/storage/briefcase/syndicate/smg
-	name = "syndicate smg pack"
-	desc = "For all your smg needs."
+	name = "辛迪加冲锋枪装备包"
+	desc = "满足你的冲锋枪需求。"
 	container_max_size = 3
 	dynamic_inventory_count = 4
 
@@ -38,8 +38,8 @@
 	return ..()
 
 /obj/item/storage/briefcase/syndicate/rifle
-	name = "syndicate assault rifle pack"
-	desc = "For all your rifle needs."
+	name = "辛迪加突击步枪装备包"
+	desc = "满足你的步枪需求。"
 	container_max_size = 3
 	dynamic_inventory_count = 4
 
@@ -52,8 +52,8 @@
 	return ..()
 
 /obj/item/storage/briefcase/syndicate/pistol
-	name = "syndicate pistol pack"
-	desc = "For all your pistol needs."
+	name = "辛迪加手枪装备包"
+	desc = "满足你的手枪需求。"
 	container_max_size = 2
 	dynamic_inventory_count = 6
 
@@ -68,8 +68,8 @@
 
 
 /obj/item/storage/briefcase/syndicate/autoshotgun
-	name = "syndicate autoshotgun pack"
-	desc = "For all your shotgun needs."
+	name = "辛迪加自动霰弹枪装备包"
+	desc = "满足你的霰弹枪需求。"
 	container_max_size = 3
 	dynamic_inventory_count = 3
 
@@ -83,8 +83,8 @@
 
 
 /obj/item/storage/briefcase/syndicate/revoler
-	name = "syndicate revolver pack"
-	desc = "For all your pistol needs."
+	name = "辛迪加左轮手枪装备包"
+	desc = "满足你的左轮手枪需求。"
 	container_max_size = 2
 	dynamic_inventory_count = 5
 

@@ -1,6 +1,6 @@
 /obj/item/weapon/melee/energy/shield/
-	name = "energy shield"
-	desc = "A shield made out of ENERGY. Please do not sue."
+	name = "能量盾"
+	desc = "由能量构成的盾牌。请别起诉。"
 	icon = 'icons/obj/item/weapons/melee/laser/shield_new.dmi'
 	icon_state = "inventory"
 

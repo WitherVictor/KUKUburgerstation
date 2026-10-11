@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/defender
-	name = "\improper .38 Special Pocket Defender"
-	desc = "This ain't no old lady's purse gun."
-	desc_extended = "A modern revolver using ancient revolver designs. Uses .38 special rounds."
+	name = "\improper .38特种口袋卫士"
+	desc = "可别把它当成老太太手包里的小手枪。"
+	desc_extended = "沿用古老设计的现代左轮手枪，使用.38特种弹。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/pocket.dmi'
 	icon_state = "inventory"
 	value = 400

@@ -1,7 +1,7 @@
 //Bloated zombies create spores on death. Move very slowly. Has a lot of HP.
 
 /mob/living/advanced/npc/zombie/bloated
-	name = "zombie bloater"
+	name = "肿胀僵尸"
 	loadout = /loadout/zombie/bloated
 
 	level = 15
@@ -25,7 +25,7 @@
 	. = ..()
 	if(.)
 		var/turf/T = get_turf(src)
-		src.visible_message(span("danger","\The [src.name] explodes into blob spores!"))
+		src.visible_message(span("danger","[src.name]炸裂开来，涌出异形菌毯孢子！"))
 		if(T)
 			var/list/valid_directions = DIRECTIONS_ALL
 			for(var/i=1,i<=rand(2,4),i++)

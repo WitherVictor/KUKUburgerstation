@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/buckshot
-	name = "buckshot spell gem"
-	desc = "The source of all... lead?"
-	desc_extended = "Shoots buckshot. Wait, is this just a magic shotgun?"
+	name = "鹿弹法术宝石"
+	desc = "一切……铅弹的源泉？"
+	desc_extended = "发射鹿弹。等等，这不就是魔法霰弹枪吗？"
 	icon_state = "damage"
 
 	rarity = RARITY_UNCOMMON

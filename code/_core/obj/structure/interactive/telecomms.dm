@@ -1,8 +1,8 @@
 
 
 /obj/structure/interactive/telecomms
-	name = "telecommunications system"
-	desc = "The complexity of a communications setup packed into one easy package!"
+	name = "电信系统"
+	desc = "把复杂的通信设备整合成一套简便的系统！"
 	icon = 'icons/obj/structure/telecomms.dmi'
 	icon_state = "comm_server"
 
@@ -92,7 +92,7 @@
 
 
 /obj/structure/interactive/telecomms/station
-	name = "station telecomms system"
+	name = "太空站电信系统"
 
 /obj/structure/interactive/telecomms/station/Initialize()
 	add_telecomm("Burgerstation")

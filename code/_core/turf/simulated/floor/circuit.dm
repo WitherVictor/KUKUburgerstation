@@ -1,5 +1,5 @@
 /turf/simulated/floor/circuit
-	name = "circuit floor"
+	name = "电路地板"
 
 	icon = 'icons/turf/floor/circuit.dmi'
 	icon_state = "engine"
@@ -14,19 +14,19 @@
 
 
 /turf/simulated/floor/circuit/blue
-	name = "blue circuit"
+	name = "蓝色电路地板"
 	icon_state = "bcircuit"
 
 	map_color = COLOR_BLUE
 
 /turf/simulated/floor/circuit/red
-	name = "red circuit"
+	name = "红色电路地板"
 	icon_state = "rcircuit"
 
 	map_color = COLOR_RED
 
 /turf/simulated/floor/circuit/green
-	name = "green circuit"
+	name = "绿色电路地板"
 	icon_state = "gcircuit"
 
 	map_color = COLOR_GREEN

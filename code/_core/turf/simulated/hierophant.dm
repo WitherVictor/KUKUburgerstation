@@ -1,5 +1,5 @@
 /turf/simulated/floor/hierophant/
-	name = "strange tile"
+	name = "奇异地砖"
 	icon = 'icons/turf/floor/hierophant.dmi'
 	icon_state = "floor"
 	corner_icons = TRUE

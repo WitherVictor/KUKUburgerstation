@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/full/spacesuit
-	name = "\improper Solarian spacesuit helmet"
+	name = "\improper 太阳系宇航服头盔"
 	icon = 'icons/obj/item/clothing/hats/space.dmi'
 
 	hidden_organs = list()

@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/crystal_guardian/
-	name = "crystal guardian"
-	desc = "A Crystal Guardian summoned from a leigon of knights that dedicate their lives towards protecting and advancing the knowlege of crystal magic."
+	name = "水晶守卫"
+	desc = "从一个骑士军团召来的水晶守卫。该军团的骑士毕生致力于守护和拓展水晶魔法知识。"
 	species = "human"
 	ai = /ai/advanced/
 

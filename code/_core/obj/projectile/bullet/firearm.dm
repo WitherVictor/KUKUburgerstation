@@ -2,11 +2,11 @@
 	icon = 'icons/obj/projectiles/bullet.dmi'
 
 /obj/projectile/bullet/firearm/revolver
-	name = "revolver bullet"
+	name = "左轮手枪弹"
 	icon_state = "bullet_small"
 
 /obj/projectile/bullet/firearm/sniper
-	name = "sniper bullet"
+	name = "狙击枪弹"
 	icon_state = "bullet_massive"
 
 /obj/projectile/bullet/firearm/sniper/explosive/on_projectile_hit(var/atom/hit_atom,var/turf/old_loc,var/turf/new_loc)
@@ -15,20 +15,20 @@
 		explode(old_loc,3,owner,weapon,iff_tag)
 
 /obj/projectile/bullet/firearm/rifle
-	name = "rifle bullet"
+	name = "步枪弹"
 	icon_state = "bullet_large"
 
 /obj/projectile/bullet/firearm/smg
-	name = "smg bullet"
+	name = "冲锋枪弹"
 	icon_state = "bullet_small"
 
 /obj/projectile/bullet/firearm/pistol
-	name = "pistol bullet"
+	name = "手枪弹"
 	icon_state = "bullet_small"
 
 
 /obj/projectile/bullet/firearm/pistol/smart
-	name = "smart pistol bullet"
+	name = "智能手枪弹"
 	icon_state = "bullet_small"
 	var/smart = FALSE
 	var/ignore_requirements = FALSE
@@ -83,7 +83,7 @@
 		smart = FALSE
 
 /obj/projectile/bullet/firearm/shotgun_pellet
-	name = "shotgun pellet"
+	name = "霰弹丸"
 	icon_state = "pellet"
 
 /obj/projectile/bullet/firearm/shotgun_pellet/New(var/loc,var/atom/desired_owner,var/atom/desired_weapon,var/desired_vel_x,var/desired_vel_y,var/desired_shoot_x = 0,var/desired_shoot_y = 0, var/turf/desired_turf, var/desired_damage_type, var/desired_target, var/desired_color, var/desired_blamed, var/desired_damage_multiplier=1)
@@ -91,7 +91,7 @@
 	return ..()
 
 /obj/projectile/bullet/firearm/shotgun_flechette
-	name = "shotgun flechette"
+	name = "霰弹枪箭形弹"
 	icon_state = "flechette"
 
 /obj/projectile/bullet/firearm/shotgun_flechette/New(var/loc,var/atom/desired_owner,var/atom/desired_weapon,var/desired_vel_x,var/desired_vel_y,var/desired_shoot_x = 0,var/desired_shoot_y = 0, var/turf/desired_turf, var/desired_damage_type, var/desired_target, var/desired_color, var/desired_blamed, var/desired_damage_multiplier=1)
@@ -100,11 +100,11 @@
 
 
 /obj/projectile/bullet/firearm/shotgun_slug
-	name = "shotgun slug"
+	name = "霰弹枪独头弹"
 	icon = 'icons/obj/projectiles/bullet.dmi'
 	icon_state = "bullet_large"
 
 /obj/projectile/bullet/firearm/pistol/stealth
-	name = "stealth pistol bullet"
+	name = "隐匿手枪弹"
 	icon_state = "stealth"
 	muzzleflash_effect = null

@@ -1,5 +1,5 @@
 /obj/item/clothing/back/storage/satchel/poly
-	name = "satchel"
+	name = "挎包"
 	icon = 'icons/obj/item/clothing/back/satchel/poly.dmi'
 	dyeable = TRUE
 	polymorphs = list(

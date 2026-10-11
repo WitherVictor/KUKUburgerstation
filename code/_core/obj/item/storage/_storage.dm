@@ -1,6 +1,6 @@
 /obj/item/storage/ //For boxes and such, not backpacks.
-	name = "storage"
-	desc = "What could it contain?"
+	name = "储物容器"
+	desc = "里面会装着什么呢？"
 
 	size = SIZE_3
 

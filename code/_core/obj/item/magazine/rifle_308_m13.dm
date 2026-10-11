@@ -1,7 +1,7 @@
 /obj/item/magazine/m13_762
-	name = "\improper 7.62mm en bloc clip"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 7.62mm漏夹"
+	desc = "这是弹夹，不是弹匣！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/308_clip.dmi'
 	icon_state = "bullet"
 	bullet_count_max = 8
@@ -33,7 +33,7 @@
 	if(istype(object,/obj/item/weapon/ranged/bullet/magazine/rifle/m13))
 		var/obj/item/weapon/ranged/bullet/magazine/rifle/m13/W = object
 		if(W.stored_magazine)
-			activator.to_chat(span("notice","\The [W.name] already has a clip inserted!"))
+			activator.to_chat(span("notice","[W.name]里已经装有弹夹了！"))
 			return TRUE
 		src.drop_item(W)
 		W.stored_magazine = src

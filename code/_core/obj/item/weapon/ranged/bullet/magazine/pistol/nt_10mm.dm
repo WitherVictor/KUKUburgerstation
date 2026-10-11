@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/high_power
-	name = "10mm NT Penumbra pistol"
-	desc = "For when 9mm isn't big enough."
-	desc_extended = "The 10mm NanoTrasen Penumbra Pistol is a more advanced pistol for a more advanced user. While the recoil and weight is a little hard to manage, an expert with this gun can do some serious damage."
+	name = "10mm NT半影手枪"
+	desc = "嫌9mm不够大时的选择。"
+	desc_extended = "10mm纳米传讯半影手枪面向经验更丰富的使用者，性能也更先进。后坐力和重量虽有些难以驾驭，落到高手手里却能造成可观的伤害。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/10mm_nt.dmi'
 	icon_state = "inventory"
 	value = 500
@@ -78,9 +78,9 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/high_power/mod
-	name = "10mm Umbra Pistol"
-	desc = "The ultimate pistol."
-	desc_extended = "An extremely powerful prototype of the 10mm NT Penumbra Pistol, before everything was simplified for factory production. Fires 3 round bursts at an absurd firerate. They don't make them like they used to."
+	name = "10mm本影手枪"
+	desc = "终极手枪。"
+	desc_extended = "10mm NT半影手枪的强力原型，来自为工厂量产简化设计之前的阶段。以离谱的射速进行三发点射。再也造不出当年的味道了。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/robo.dmi'
 
 	tier = 2

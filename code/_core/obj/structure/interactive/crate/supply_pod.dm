@@ -1,7 +1,7 @@
 /obj/structure/interactive/crate/closet/supply_pod
-	name = "supply pod"
-	desc = "Special delivery!"
-	desc_extended = "A supply pod sent from space. Could carry either troops or supplies."
+	name = "空投舱"
+	desc = "专程送达！"
+	desc_extended = "从太空投送的补给舱，既能运兵，也能运送物资。"
 	icon = 'icons/obj/structure/supply_pods.dmi'
 	icon_state = "supplypod"
 
@@ -68,11 +68,11 @@
 		add_overlay(I)
 
 /obj/structure/interactive/crate/closet/supply_pod/bluespace
-	name = "bluespace supply pod"
+	name = "蓝空间空投舱"
 	icon_state = "bluespacepod"
 
 /obj/structure/interactive/crate/closet/supply_pod/centcomm
-	name = "centcomm supply pod"
+	name = "中央指挥部空投舱"
 	icon_state = "centcommpod"
 
 /obj/structure/interactive/crate/closet/supply_pod/centcomm/meme
@@ -83,12 +83,12 @@
 	. = ..()
 
 /obj/structure/interactive/crate/closet/supply_pod/syndicate
-	name = "syndicate supply pod"
+	name = "辛迪加空投舱"
 	icon_state = "syndiepod"
 
 
 /obj/structure/interactive/crate/closet/supply_pod/syndicate/ultra
-	name = "ULTRA operative supply pod"
+	name = "究极特工空投舱"
 	auto_open = TRUE
 
 /obj/structure/interactive/crate/closet/supply_pod/syndicate/ultra/occupied/Generate()
@@ -97,12 +97,12 @@
 
 
 /obj/structure/interactive/crate/closet/supply_pod/stray
-	name = "stray supply pod"
+	name = "偏航空投舱"
 	icon_state = "squadpod"
 	auto_open = FALSE
 
 /obj/structure/interactive/crate/closet/supply_pod/yankee
-	name = "space yankee supply pod"
+	name = "太空扬基空投舱"
 	icon_state = "squadpod"
 
 /obj/structure/interactive/crate/closet/supply_pod/yankee/occupied/Generate()

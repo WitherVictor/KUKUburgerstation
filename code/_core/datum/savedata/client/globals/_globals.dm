@@ -30,7 +30,7 @@
 	var/full_path = "[get_folder()][get_file()]"
 	loaded_data["new_player"] = FALSE
 	rustg_file_write(json_encode(loaded_data),full_path)
-	owner.to_chat(span("notice","Your global stats and settings have been saved."))
+	owner.to_chat(span("notice","你的账号统计与设置已保存。"))
 	return TRUE
 
 /savedata/client/globals/proc/load()

@@ -1,5 +1,5 @@
 /mob/living/simple/bubblegum
-	name = "Bubblegum"
+	name = "泡泡糖"
 	boss_icon_state = "bubblegum"
 	icon = 'icons/mob/living/simple/lavaland/bubblegum.dmi'
 	icon_state = "living"
@@ -141,7 +141,7 @@
 		params[PARAM_ICON_X] = rand(0,32)
 		params[PARAM_ICON_Y] = rand(0,32)
 		var/atom/object_to_damage = Obstacle.get_object_to_damage(src,src,params,/damagetype/npc/bubblegum,TRUE,TRUE)
-		visible_message(span("danger","\The [src.name] rams into \the [Obstacle.name]!"))
+		visible_message(span("danger","[src.name]猛撞上了[Obstacle.name]！"))
 		DT.process_damage(src,Obstacle,src,object_to_damage,src,1)
 		charge_steps = 0
 

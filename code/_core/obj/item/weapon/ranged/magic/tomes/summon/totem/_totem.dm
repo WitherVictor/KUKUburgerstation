@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/summon/totem
-	name = "totemic tome"
-	desc = "None."
-	desc_extended = "Summons a totem that produces an effect for 5 minutes. Costs mana to use."
+	name = "图腾典籍"
+	desc = "无。"
+	desc_extended = "召唤一座持续产生效果的图腾，维持5分钟。使用时消耗法力。"
 	icon = 'icons/obj/item/weapons/ranged/magic/tomes/totem_summon.dmi'
 
 	shoot_sounds = list('sound/weapons/magic/summon.ogg')

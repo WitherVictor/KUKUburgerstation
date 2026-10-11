@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/detective
-	name = "detective's hat"
-	desc = "A hat for a detecting detective. Or a loser."
-	desc_extended = "A brown wide brim hat usually worn by a detective. Has light protection."
+	name = "侦探帽"
+	desc = "给查案的侦探戴的帽子，也可能给失败者戴。"
+	desc_extended = "侦探常戴的棕色宽檐帽，能提供少量防护。"
 	icon = 'icons/obj/item/clothing/hats/detective.dmi'
 
 	armor = /armor/leather

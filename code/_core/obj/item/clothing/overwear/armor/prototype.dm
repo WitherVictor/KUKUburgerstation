@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/prototype
-	name = "prototype carbon fibre armor"
-	desc = "It's a secret to everybody."
-	desc_extended = "A suit made from hardened carbon fibres, currently undergoing testing by the Nanotrasen Science Division."
+	name = "原型碳纤维护甲"
+	desc = "这对所有人都是个秘密。"
+	desc_extended = "用硬化碳纤维制成的护甲，目前正由纳米传讯科研部门进行试验。"
 	icon = 'icons/obj/item/clothing/suit/captain_suit.dmi'
 
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT

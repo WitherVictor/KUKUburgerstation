@@ -1,7 +1,7 @@
 /obj/item/clothing/back/storage/backpack/bluespace
-	name = "bluespace bag of holding"
-	desc = "Sticking your head in isn't recommended."
-	desc_extended = "A special backpack that creates its own pocket inside the bluespace dimension to store an absurd amount of items. It's extremely heavy, however, and only practical for hauling items over long distances."
+	name = "蓝空间次元背包"
+	desc = "不建议把头伸进去。"
+	desc_extended = "在蓝空间维度中开辟独立储物空间的特殊背包，能装下多得离谱的物品。但它极其沉重，只适合长途搬运物品。"
 	icon = 'icons/obj/item/clothing/back/backpack/bluespace.dmi'
 
 	dynamic_inventory_count = MAX_INVENTORY_X*5
@@ -25,9 +25,9 @@
 	value_burgerbux = 1
 
 /obj/item/clothing/back/storage/satchel/bluespace
-	name = "bluespace satchel of holding"
-	desc = "Let me just get my two handed sword from my inter-dimensional purse."
-	desc_extended = "A special satchel that creates its own pocket inside the bluespace dimension to store an absurd amount of items. While a smaller and lighter variant of the bluespace bag of holding, it's still very heavy, however, and only practical for hauling items over long distances."
+	name = "蓝空间次元挎包"
+	desc = "等我从跨维度小包里掏出双手剑。"
+	desc_extended = "在蓝空间维度中开辟独立储物空间的特殊挎包，能装下多得离谱的物品。它比蓝空间次元背包更小、更轻，但仍十分沉重，只适合长途搬运物品。"
 
 	icon = 'icons/obj/item/clothing/back/satchel/bluespace.dmi'
 
@@ -54,9 +54,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/back/storage/satchel/bluespace/prank
-	name = "satchel of hold"
-	desc = "What the fuck, this is just the worst."
-	desc_extended = "A prank version of the satchel of holding. It has been cursed to only hold one object."
+	name = "次元挎包·只装一个"
+	desc = "什么鬼，这也太烂了。"
+	desc_extended = "恶作剧版次元挎包，受诅咒影响，只能装一个物品。"
 
 	dynamic_inventory_count = 1
 	container_max_size = SIZE_9

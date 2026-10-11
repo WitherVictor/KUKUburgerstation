@@ -1,7 +1,7 @@
 /obj/item/device/keypad
-	name = "keypad"
-	desc = "One, One, One...uh....One!"
-	desc_extended = "An access keypad. Only works if you know the code."
+	name = "密码键盘"
+	desc = "一，一，一……呃……一！"
+	desc_extended = "门禁密码键盘。只有知道密码才能使用。"
 	icon_state = "keypad_red"
 	interactable = TRUE
 

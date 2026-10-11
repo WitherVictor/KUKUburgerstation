@@ -1,7 +1,7 @@
 /turf/simulated/wall/metal
-	name = "steel wall"
-	desc = "Try getting through that"
-	desc_extended = "It's a wall made of solid steel, pretty tough."
+	name = "钢墙"
+	desc = "有本事就打穿它。"
+	desc_extended = "一堵用实心钢材制成的墙，相当坚固。"
 	icon = 'icons/turf/wall/metal/nanotrasen.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -40,18 +40,18 @@
 	color = "#3D4A4A"
 
 /turf/simulated/wall/metal/reinforced
-	name = "plasteel reinforced steel wall"
-	desc = "Try getting through that"
-	desc_extended = "It's a wall made of steel reinforced with plasteel, really tough."
+	name = "塑钢加固钢墙"
+	desc = "有本事就打穿它。"
+	desc_extended = "一堵用塑钢加固的钢墙，非常坚固。"
 	icon_state = "wall_ref"
 	reinforced_material_id = /material/plasteel
 	reinforced_color = COLOR_PLASTEEL
 	health_base = 3000
 
 /turf/simulated/wall/metal/reinforced/hull
-	name = "adamantium-carbon reinforced plasteel wall"
-	desc = "Try getting through that"
-	desc_extended = "It's a wall made of plasteel reinforced with an adamantium-carbon alloy, extremely tough."
+	name = "精金碳加固塑钢墙"
+	desc = "有本事就打穿它。"
+	desc_extended = "一堵用精金碳复合材料加固的塑钢墙，极其坚固。"
 	reinforced_material_id = /material/adamantium_carbon
 	color = "#48482B"
 	reinforced_color = COLOR_ADAMANITUM_CARBON
@@ -80,7 +80,7 @@
 
 
 /turf/simulated/wall/metal/syndicate
-	name = "dark steel wall"
+	name = "深色钢墙"
 	icon = 'icons/turf/wall/metal/syndicate.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -92,7 +92,7 @@
 	health_base = 1000
 
 /turf/simulated/wall/metal/syndicate/reinforced
-	name = "plasteel reinforced dark steel wall"
+	name = "塑钢加固深色钢墙"
 	icon_state = "wall_ref"
 	reinforced_material_id = /material/plasteel
 	reinforced_color = "#FFFFFF"
@@ -102,7 +102,7 @@
 	plane = PLANE_SHUTTLE
 
 /turf/simulated/wall/metal/rev
-	name = "tinted steel wall"
+	name = "着色钢墙"
 	icon = 'icons/turf/wall/metal/rev.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -114,7 +114,7 @@
 	health_base = 1000
 
 /turf/simulated/wall/metal/rev/reinforced
-	name = "plasteel reinforced tinted steel wall"
+	name = "塑钢加固着色钢墙"
 	icon_state = "wall_ref"
 	reinforced_material_id = /material/plasteel
 	reinforced_color = "#FFFFFF"
@@ -122,9 +122,9 @@
 
 
 /turf/simulated/wall/metal/shuttle
-	name = "shuttle-grade steel wall"
-	desc = "Brace for landing"
-	desc_extended = "The wall of a shuttle."
+	name = "穿梭机级钢墙"
+	desc = "做好着陆准备。"
+	desc_extended = "穿梭机的墙壁。"
 	icon = 'icons/turf/wall/metal/shuttle_new.dmi'
 	icon_state = "wall"
 
@@ -141,7 +141,7 @@
 	reinforced_color = "#FFFFFF"
 
 /turf/simulated/wall/metal/circuit
-	name = "techno steel wall"
+	name = "科技钢墙"
 	icon = 'icons/turf/wall/metal/circuit.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -153,14 +153,14 @@
 	health_base = 1000
 
 /turf/simulated/wall/metal/circuit/reinforced
-	name = "reinforced techno steel wall"
+	name = "加固科技钢墙"
 	icon_state = "wall_ref"
 	reinforced_material_id = /material/plasteel
 	reinforced_color = "#FFFFFF"
 	destruction_turf = null
 
 /turf/simulated/wall/metal/solarian
-	name = "solarian steel wall"
+	name = "太阳系钢墙"
 	icon = 'icons/turf/wall/metal/solarian.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -172,17 +172,17 @@
 	health_base = 1000
 
 /turf/simulated/wall/metal/solarian/reinforced
-	name = "plasteel reinforced solarian steel wall"
+	name = "塑钢加固太阳系钢墙"
 	icon_state = "wall_ref"
 	reinforced_material_id = /material/plasteel
 	reinforced_color = "#FFFFFF"
 	health_base = 3000
 
 /turf/simulated/wall/metal/magic
-	name = "magic metal wall"
+	name = "魔法金属墙"
 	color = "#8034B2"
 	icon = 'icons/turf/wall/metal/magic.dmi'
 
 /turf/simulated/wall/metal/magic/bananium
-	name = "bananium wall"
+	name = "蕉金墙"
 	color = "#FFFF00"

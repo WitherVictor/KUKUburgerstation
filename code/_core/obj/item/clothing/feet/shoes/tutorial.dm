@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/tutorial
-	name = "right tutorial boot"
-	desc = "Cut content, perhaps?"
-	desc_extended = "You probably shouldn't have this."
+	name = "教程右靴"
+	desc = "也许是删减内容？"
+	desc_extended = "你大概不该拥有这东西。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -26,7 +26,7 @@
 
 
 /obj/item/clothing/feet/shoes/tutorial/left
-	name = "left tutorial boot"
+	name = "教程左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

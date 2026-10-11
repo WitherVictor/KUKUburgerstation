@@ -6,7 +6,7 @@
 	allow_reagent_transfer_from = TRUE
 
 /obj/item/container/simple/baking/flour
-	name = "sack of white flour"
+	name = "袋装白面粉"
 	icon_state = "flour"
 	value = 0
 
@@ -15,7 +15,7 @@
 	return ..()
 
 /obj/item/container/simple/baking/sugar
-	name = "sack of white sugar"
+	name = "袋装白砂糖"
 	icon_state = "sugar"
 	value = 0
 
@@ -24,7 +24,7 @@
 	return ..()
 
 /obj/item/container/simple/baking/milk
-	name = "carton of cow's milk"
+	name = "盒装牛奶"
 	icon_state = "milk"
 	value = 0
 
@@ -34,7 +34,7 @@
 
 
 /obj/item/container/simple/baking/cream
-	name = "carton of cream"
+	name = "盒装奶油"
 	icon_state = "cream"
 	value = 0
 
@@ -43,7 +43,7 @@
 	return ..()
 
 /obj/item/container/simple/baking/corn_flour
-	name = "container of corn flour"
+	name = "罐装玉米粉"
 	icon_state = "corn_flour"
 	reagents = /reagent_container/beaker/bottle/ //smaller
 	value = 0

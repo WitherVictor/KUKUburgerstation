@@ -1,7 +1,7 @@
 var/global/list/obj/structure/interactive/computer/console/remote_flight/all_remote_flight_consoles = list()
 
 /obj/structure/interactive/computer/console/remote_flight
-	name = "remote flight control console"
+	name = "远程飞行控制台"
 	computer_type = "syndishuttle"
 	keyboard_type = "syndie_key"
 
@@ -21,10 +21,12 @@ var/global/list/obj/structure/interactive/computer/console/remote_flight/all_rem
 	INTERACT_CHECK_OBJECT
 
 	if(!SSgamemode.active_gamemode.allow_launch)
-		caller.to_chat(span("warning","\The [desired_shuttle_controller.name] isn't ready to launch yet!"))
+		caller.to_chat(span("warning","[desired_shuttle_controller.name]尚未准备好起飞！"))
 		return FALSE
 
-	var/selection = input("Are you sure you wish to launch \the [desired_shuttle_controller.name]?","Shuttle Control","Cancel") as null|anything in list("Yes","No","Cancel")
+	var/list/launch_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
+	var/selection = input("确定要让[desired_shuttle_controller.name]起飞吗？","穿梭机控制","取消") as null|anything in launch_choices
+	selection = launch_choices[selection]
 
 	INTERACT_CHECK
 	INTERACT_CHECK_OBJECT
@@ -34,10 +36,10 @@ var/global/list/obj/structure/interactive/computer/console/remote_flight/all_rem
 		if(desired_shuttle_controller.state == SHUTTLE_STATE_LANDED)
 			desired_shuttle_controller.state = SHUTTLE_STATE_WAITING
 			desired_shuttle_controller.time = 0
-			caller.visible_message(span("notice","\The [caller.name] prepares \the [src.name] for launch."),span("notice","You prepare \the [src.name] for launch."))
+			caller.visible_message(span("notice","[caller.name]通过[src.name]安排穿梭机起飞。"),span("notice","你通过[src.name]安排穿梭机起飞。"))
 		else
-			caller.to_chat(span("warning","ERROR: \The [desired_shuttle_controller.name] is already in transit."))
+			caller.to_chat(span("warning","错误：[desired_shuttle_controller.name]已在航行中。"))
 	else
-		caller.to_chat(span("notice","You decide not to launch \the [desired_shuttle_controller.name]."))
+		caller.to_chat(span("notice","你决定不让[desired_shuttle_controller.name]起飞。"))
 
 	return TRUE

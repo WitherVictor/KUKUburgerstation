@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/ooc
-	name = "\improper 5.56mm IC-OOC rifle system"
-	desc = "For mass (controlled) destruction of objects."
-	desc_extended = "The InterChangable Object Obliterator Combat rifle system is a NanoTrasen made weapon based on the (stolen) prototype of an advanced Solarian tactical assault rifle (now known as the 5.56mm MOAR). Has a built in shotgun meant to fire fragmentation rounds, however I guess you could use regular shotgun rounds too."
+	name = "\improper 5.56mm IC-OOC步枪系统"
+	desc = "用于大规模（可控地）摧毁物体。"
+	desc_extended = "可互换物体歼灭战斗步枪系统，是纳米传讯根据一款先进太阳系战术突击步枪的原型（偷来的）制造的武器，那款步枪如今称为5.56mm MOAR。内置霰弹枪原本用于发射破片弹，不过想必普通霰弹也能用。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_7.dmi'
 	icon_state = "inventory"
 	value = 3000

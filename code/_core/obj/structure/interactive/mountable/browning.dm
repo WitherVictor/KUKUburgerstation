@@ -1,7 +1,7 @@
 /obj/structure/interactive/mountable/browning
-	name = "browning emplacement"
-	desc = "The Old Reliable."
-	desc_extended = "A heavy-duty machine gun. Definitely not what you want to have staring at you. Alt-click while on it to grab the firing handles."
+	name = "勃朗宁机枪阵地"
+	desc = "可靠的老伙计。"
+	desc_extended = "一挺重型机枪。你绝对不会希望它的枪口对着自己。站在其所在格时，按住Alt点击即可握住射击握把。"
 	icon = 'icons/obj/structure/mountable/browning.dmi'
 	icon_state = "unloaded"
 
@@ -73,9 +73,9 @@
 
 
 /obj/item/browning_handle
-	name = "browning handles"
-	desc = "Keep 'em steady."
-	desc_extended = "You'll need to wield them with both hands to fire the gun properly."
+	name = "勃朗宁握把"
+	desc = "握稳了。"
+	desc_extended = "你需要双手握持，才能正常开火。"
 	icon = 'icons/obj/item/browning_handle.dmi'
 
 	var/obj/structure/interactive/mountable/browning/linked_gun
@@ -107,7 +107,7 @@
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.to_chat(span("danger","Unlinked handle error detected. Report at #bug-reports on Discord on how you encountered this bug."))
+		activator.to_chat(span("danger","检测到握把未连接机枪的错误。请在Discord的#bug-reports频道反馈，并说明出现问题的过程。"))
 		drop_item(get_turf(src))
 		return TRUE
 
@@ -122,7 +122,7 @@
 		if(angle2dir_cardinal(get_angle(activator,object))==linked_gun.dir)
 			linked_gun.stored_weapon.shoot(activator,object,location,params,damage_multiplier=1)
 		else
-			activator.to_chat(span("warning","You can't turn the gun that far!"))
+			activator.to_chat(span("warning","机枪无法转向那么大的角度！"))
 
 	return ..()
 
@@ -177,14 +177,14 @@
 	INTERACT_CHECK_NO_DELAY(src)
 
 	if(!src.z)
-		activator.to_chat(span("warning","You can't pack up \the [src.name] here!"))
+		activator.to_chat(span("warning","你无法在这里收起[src.name]！"))
 		return FALSE
 
 	return TRUE
 
 /obj/structure/interactive/mountable/browning/proc/pack_up(var/mob/activator)
 
-	activator.visible_message(span("warning","\The [activator.name] packs up \the [src.name]."),span("notice","You pack up \the [src.name]."))
+	activator.visible_message(span("warning","[activator.name]收起了[src.name]。"),span("notice","你收起了[src.name]。"))
 
 	var/mob/living/advanced/A = activator
 	var/obj/item/right_item = A.inventories_by_id[BODY_HAND_RIGHT_HELD]?.get_top_object()
@@ -217,7 +217,7 @@
 	INTERACT_DELAY(10)
 
 	if(can_pack_up(activator))
-		activator.visible_message(span("warning","\The [activator.name] starts to pack up \the [src.name]..."),span("notice","You start to pack up \the [src.name]..."))
+		activator.visible_message(span("warning","[activator.name]开始收起[src.name]……"),span("notice","你开始收起[src.name]……"))
 		PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(5),src::pack_up(),activator)
 		PROGRESS_BAR_CONDITIONS(activator,src,src::can_pack_up(),activator)
 
@@ -227,9 +227,9 @@
 /obj/structure/interactive/mountable/browning/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(stored_magazine)
-		. += div("notice","It has a magazine latched on, with [stored_magazine.get_ammo_count()]/[stored_magazine.bullet_count_max] bullets left.")
+		. += div("notice","它已装上弹匣，剩余弹药：[stored_magazine.get_ammo_count()]/[stored_magazine.bullet_count_max]发。")
 	else
-		. += div("warning","It is missing a magazine.")
+		. += div("warning","它没有装弹匣。")
 
 //clickies by player on the gun
 /obj/structure/interactive/mountable/browning/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
@@ -242,16 +242,16 @@
 		var/obj/item/weapon/ranged/bullet/magazine/W = stored_weapon
 
 		if(!M.weapon_whitelist[W.type])
-			activator.to_chat(span("warning","This turret doesn't accept this type of magazine!"))
+			activator.to_chat(span("warning","这座机枪阵地不兼容这种弹匣！"))
 			return FALSE
 
 		if(stored_magazine)
-			activator.to_chat(span("notice","You swap out the magazine of \the [src.name]."))
+			activator.to_chat(span("notice","你更换了[src.name]的弹匣。"))
 			stored_magazine.update_icon()
 			stored_magazine.drop_item(get_turf(src))
 			stored_magazine = null
 		else
-			activator.to_chat(span("notice","You insert a new magazine into \the [src.name]."))
+			activator.to_chat(span("notice","你为[src.name]装上了新弹匣。"))
 
 		M.drop_item(src)
 		stored_magazine = M
@@ -274,7 +274,7 @@
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(5)
-		activator.visible_message(span("notice","\The [activator.name] grabs hold of the handles..."),span("notice","You grab the handles..."))
+		activator.visible_message(span("notice","[activator.name]握住了握把……"),span("notice","你握住了握把……"))
 		var/obj/hud/inventory/I = object
 		I.add_object(stored_handle)
 

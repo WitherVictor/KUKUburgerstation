@@ -35,9 +35,9 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(battery)
-				activator.to_chat(span("warning","You are unable to pry out \the [battery.name]."))
+				activator.to_chat(span("warning","你无法撬出[battery.name]。"))
 			else
-				activator.to_chat(span("warning","There is nothing to pry out of \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里没有可撬出的东西！"))
 			return TRUE
 
 	. = ..()
@@ -46,7 +46,7 @@
 
 	var/turf/T = get_turf(src)
 
-	activator?.to_chat(span("notice","You [action_name] \the [src]."))
+	activator?.to_chat(span("notice","你抽动[src]的充能机构。"))
 
 	if(istype(battery))
 		battery.charge_current = min(battery.charge_max,battery.charge_current+charge_per_pump)

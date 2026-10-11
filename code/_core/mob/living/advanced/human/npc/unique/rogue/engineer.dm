@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue/engineer
-	name = "Rogue Engineer"
-	desc = "The person likely responsible for your substandard supermatter setup."
+	name = "叛变工程师"
+	desc = "你那套不合格的超物质装置，很可能就是这人搞的。"
 
 	sex = FEMALE
 	gender = FEMALE

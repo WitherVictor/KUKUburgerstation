@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/needahand
-	name = "dismembered hand"
-	desc = "Fuck.. you... *deathgasp"
-	desc_extended = "The raw egotistical energy emanating from this seems to be the only thing keeping it from rotting."
+	name = "断手"
+	desc = "去……你的……（断气）"
+	desc_extended = "它散发出的纯粹自负之力，似乎是阻止它腐烂的唯一原因。"
 
 	//credits to nzzy on discord for the sprite, amazing work on it :thumbs_up:
 	icon = 'icons/obj/item/weapons/melee/clubs/needahand.dmi'

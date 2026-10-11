@@ -1,1 +1,1 @@
-There is a teleporter in science that can bring objects to it, as long as you have GPS coordinates.
+科研部有一台传送器，只要有GPS坐标，就能把目标物体传送过来。

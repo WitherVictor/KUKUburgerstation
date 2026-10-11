@@ -1,7 +1,7 @@
 /obj/item/fishing/tacklebox
-	name = "tackle box"
-	desc = "back at da secret fishing spot"
-	desc_extended = "A tackle box that can store a lot of fishing equipment, like lures and bait."
+	name = "渔具箱"
+	desc = "又回到了秘密钓点。"
+	desc_extended = "能装下许多渔具的箱子，比如浮漂和鱼饵。"
 	icon = 'icons/obj/item/fishing/tackle.dmi'
 	color = "#808080"
 

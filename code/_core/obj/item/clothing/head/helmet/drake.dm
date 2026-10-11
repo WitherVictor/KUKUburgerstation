@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/drake //This gets attached
-	name = "ash drake helmet"
+	name = "灰烬飞龙头盔"
 	icon = 'icons/obj/item/clothing/hats/drake_helmet.dmi'
 
 	hidden_organs = list(

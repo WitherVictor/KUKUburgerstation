@@ -1,6 +1,6 @@
 /obj/structure/interactive/barrier
-	name = "inflateable barrier"
-	desc_extended = "A full-tile barrier that blocks most projectiles from all sides. Very strong."
+	name = "充气屏障"
+	desc_extended = "占据整格的屏障，可以阻挡来自各个方向的大多数弹体。非常结实。"
 	icon = 'icons/obj/structure/barricade.dmi'
 	icon_state = "full_tile"
 

@@ -27,7 +27,7 @@
 /obj/structure/interactive/shop_holder/update_icon()
 	if(stored_item)
 		appearance = stored_item.appearance
-		name = "[name] - [item_cost] crystals"
+		name = "[name] - [item_cost]水晶"
 	..()
 
 /obj/structure/interactive/shop_holder/get_examine_text(var/mob/examiner)
@@ -36,9 +36,9 @@
 
 	if(stored_item.is_container)
 		var/list/contents = stored_item.inventory_to_list()
-		returning_text += div("notice","It contains: [english_list(contents)]")
+		returning_text += div("notice","内含：[english_list(contents)]")
 
-	returning_text += div("notice","This item is being sold for [item_cost] crystals.")
+	returning_text += div("notice","此商品售价为[item_cost]水晶。")
 
 	return returning_text
 
@@ -55,11 +55,11 @@
 		return FALSE
 
 	if(quantity <= 0)
-		A.to_chat(span("notice","This item is out of stock! Come back another time!"))
+		A.to_chat(span("notice","这件商品已售罄！请改天再来！"))
 		return TRUE
 
 	if(!is_currency(object))
-		A.to_chat(span("notice","You need at least [item_cost] crystal\s in order to buy \the [stored_item]."))
+		A.to_chat(span("notice","购买[stored_item]至少需要[item_cost]水晶。"))
 		return TRUE
 
 	var/obj/item/currency/C = object
@@ -69,11 +69,11 @@
 		var/click_flags = A.client.get_click_flags(params,TRUE)
 
 		if(click_flags & RIGHT_HAND && A.get_right_hand())
-			A.to_chat(span("notice","Your right hand needs to be unoccupied in order to buy this!"))
+			A.to_chat(span("notice","你需要空出右手才能购买！"))
 			return
 
 		if(click_flags & LEFT_HAND && A.get_left_hand())
-			A.to_chat(span("notice","Your left hand needs to be unoccupied in order to buy this!"))
+			A.to_chat(span("notice","你需要空出左手才能购买！"))
 			return
 
 		C.adjust_value(-item_cost)
@@ -83,9 +83,9 @@
 		new_item.on_spawn()
 		new_item.update_icon()
 		A.pickup(new_item,click_flags & LEFT_HAND)
-		A.to_chat(span("notice","You successfully purchase \the [new_item] for [item_cost] crystal\s."))
+		A.to_chat(span("notice","你花费[item_cost]水晶购买了[new_item]。"))
 
 	else
-		A.to_chat(span("notice","You don't have enough crystals to buy this!"))
+		A.to_chat(span("notice","你的水晶不足，无法购买！"))
 
 	return TRUE

@@ -1,5 +1,5 @@
 /area/centcomm
-	name = "Central Command"
+	name = "中央指挥部"
 	icon_state = "cmd"
 	flags_area = FLAG_AREA_NO_DAMAGE | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_ROUND_INFORMATION | FLAG_AREA_TUTORIAL | FLAG_AREA_NO_EVENTS | FLAG_AREA_NO_TELEPORT | FLAG_AREA_SAVEZONE
 
@@ -29,7 +29,7 @@
 	interior = TRUE
 
 /area/centcomm/clown_planet
-	name = "Clown Planet"
+	name = "小丑星球"
 	trackable = FALSE
 	default_state_power_lights = ON|AUTO
 	default_state_power_machines = ON|AUTO
@@ -37,7 +37,7 @@
 	requires_power = TRUE
 
 /area/centcomm/clown_planet/exterior
-	name = "Clown Planet Exterior"
+	name = "小丑星球室外"
 	sunlight_freq = 8
 	sunlight_color = "#FFECE4"
 	trackable = FALSE
@@ -48,7 +48,7 @@
 
 
 /area/centcomm/chargen
-	name = "Chargen Area"
+	name = "角色创建区"
 	area_identifier = "Character Generation"
 	flags_area = FLAG_AREA_NO_DAMAGE | FLAG_AREA_NO_CONSTRUCTION | FLAG_AREA_NO_ROUND_INFORMATION | FLAG_AREA_TUTORIAL | FLAG_AREA_NO_EVENTS | FLAG_AREA_SAVEZONE | FLAG_AREA_SINGLEPLAYER
 

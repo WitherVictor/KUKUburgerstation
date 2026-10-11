@@ -1,5 +1,5 @@
 /spellcraft/effect/teleport
-	name = "Teleport"
+	name = "传送"
 	id = "effect_teleport"
 	icon_state = "cult_teleport"
 
@@ -24,7 +24,7 @@
 	var/turf/selected_turf = locate(final_x,final_y,1)
 
 	if(!selected_turf || !selected_turf.is_safe_teleport())
-		A.to_chat(span("warning","The rune fizzes weakly as you touch it..."))
+		A.to_chat(span("warning","你触碰符文时，它发出微弱的嘶嘶声……"))
 		return FALSE
 
 	var/list/callback_list = list()
@@ -37,7 +37,7 @@
 /spellcraft/effect/teleport/clicked_on_by_object(var/mob/caller as mob,var/atom/object,location,control,params,var/obj/item/weapon/ranged/magic/rune/R)
 
 	if(caller.loc != R.loc)
-		caller.to_chat(span("notice","\The [R] doesn't seem to react."))
+		caller.to_chat(span("notice","[R]似乎没有反应。"))
 		return FALSE
 
 	on_cast(R.loc,caller,caller,R.stored_effect_color,R.stored_modifier,R.stored_buff)

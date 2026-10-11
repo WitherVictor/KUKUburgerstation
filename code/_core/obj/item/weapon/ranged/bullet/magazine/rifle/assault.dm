@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/assault
-	name = "\improper .308 Prototype MOAR"
-	desc = "Space age technology calls for space age guns. This should easily rip someone a new hole."
-	desc_extended = "A .308 chambered mother-of-all-battle-rifles (MOABR) developed by the Solarian research team for space battles."
+	name = "\improper .308 MOAR原型"
+	desc = "太空时代的科技，就该配太空时代的枪。给人再开个洞，想必轻而易举。"
+	desc_extended = "太阳系科研团队为太空战斗研发的.308口径‘战斗步枪之王’（MOABR）。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/308.dmi'
 	icon_state = "inventory"
 	value = 6000

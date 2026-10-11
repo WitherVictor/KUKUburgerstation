@@ -1,5 +1,5 @@
-It is generally cheaper to make (or find) your own medication than it is to buy it.
-If you are planning on fixing up yourself or fixing others, you should be bringing medication to fix every damage type.
-Health Analyzers are very useful for diagnosing general medical problems without having to look at someone.
-For most medications, injecting the dosage has a higher potency and a faster metabolism rate than medications taken orally.
-You can remove defibrillator paddles by clicking on them while the defibrillator unit is on your back, or by alt-clicking it while on the ground. 
+自行制作或找到药物，通常比直接购买更便宜。
+如果打算为自己或他人疗伤，最好带齐能应对各种伤害类型的药物。
+健康分析仪很适合诊断常见伤病，无需逐一查看目标的身体状况。
+对大多数药物而言，注射比口服药效更强、代谢更快。
+除颤器背在背上时，点击电极板即可取下；除颤器放在地上时，也可以按住Alt点击取下电极板。

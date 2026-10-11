@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/energy/energy_wrench
-	name = "energy wrench"
-	desc = "You done fucked up now, boy..."
-	desc_extended = "An energy wrench that can fit any bolt in the known universe. For your angry engineer needs."
+	name = "能量扳手"
+	desc = "小子，这回你可闯大祸了……"
+	desc_extended = "适配已知宇宙中任何螺栓的能量扳手，满足愤怒工程师的一切需求。"
 	icon = 'icons/obj/item/weapons/melee/laser/wrench.dmi'
 
 	damage_type = /damagetype/melee/sword/energy_wrench

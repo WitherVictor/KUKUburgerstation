@@ -2,7 +2,7 @@
 	icon = 'icons/obj/structure/vending_new.dmi'
 
 /obj/structure/interactive/vending/nanotrasen/science/clothing
-	name = "science clothing vendor"
+	name = "科研服装售货机"
 	icon_state = "science_clothing"
 
 	icon_state_broken = null
@@ -54,7 +54,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/science/guns
-	name = "science gun vendor"
+	name = "科研武器售货机"
 	icon_state = "science_guns"
 
 	icon_state_broken = null
@@ -95,7 +95,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/science/ammo
-	name = "science gun vendor"
+	name = "科研弹药售货机"
 	icon_state = "science_ammo"
 
 	icon_state_broken = null

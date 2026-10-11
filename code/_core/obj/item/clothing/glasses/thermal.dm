@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/thermal
-	name = "thermal goggles"
-	desc = "Wallhacks that fit on your face!"
-	desc_extended = "Some magical goggles that allow you to see mobs through walls."
+	name = "热成像护目镜"
+	desc = "戴在脸上的透视外挂！"
+	desc_extended = "一副神奇的护目镜，让你隔着墙壁看见生物。"
 	icon = 'icons/obj/item/clothing/glasses/thermal.dmi'
 
 
@@ -19,15 +19,15 @@
 
 
 /obj/item/clothing/glasses/thermal/thermoncle
-	name = "thermoncle"
-	desc = "Wallhacks that fit on your eye!"
-	desc_extended = "A magical thermoncle that allow you to see mobs through walls."
+	name = "单眼热成像镜"
+	desc = "戴在一只眼睛上的透视外挂！"
+	desc_extended = "一枚神奇的单眼热成像镜，让你隔着墙壁看见生物。"
 	icon = 'icons/obj/item/clothing/glasses/thermoncle.dmi'
 
 /obj/item/clothing/glasses/thermal/thermal_rev
-	name = "OUTAD thermonocular"
-	desc = "Bravo six, going wallhack."
-	desc_extended = "Slav-Safe's built-in thermal imagery/night vision monocle, fitted with an additional medical and security HUDs. Theoretically shouldn't be detachable in any way possible."
+	name = "OUTAD单眼热成像镜"
+	desc = "布拉沃六号，准备透视。"
+	desc_extended = "斯拉夫卫士有限公司的内置热成像夜视单眼镜，另配医疗和安保状态界面。理论上无论如何都不该拆得下来。"
 	icon = 'icons/obj/item/clothing/glasses/thermal_rev.dmi'
 
 	vision_mod = FLAG_VISION_SECURITY | FLAG_VISION_MEDICAL

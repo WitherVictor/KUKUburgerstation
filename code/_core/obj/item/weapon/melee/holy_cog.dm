@@ -1,8 +1,8 @@
 /obj/item/weapon/melee/holy_cog
-	name = "Holy Cog"
+	name = "神圣齿轮"
 
-	desc = "The Holy Cog of the Clockwork cult."
-	desc_extended = "A gaudy, heavy two handed mace with a cog mounted on top of it. Suprisingly good at throwing."
+	desc = "发条教团的神圣齿轮。"
+	desc_extended = "浮夸而沉重的双手钉头锤，顶端装着一枚齿轮。扔起来意外地好用。"
 	icon = 'icons/obj/item/weapons/melee/polearms/holy_cog.dmi'
 	damage_type = /damagetype/melee/club/holy_cog
 	can_wield = TRUE

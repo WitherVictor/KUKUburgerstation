@@ -1,5 +1,5 @@
 /turf/simulated/floor/chasm/
-	name = "chasm"
+	name = "裂谷"
 
 	icon = 'icons/turf/floor/holes.dmi'
 	icon_state = "floor"
@@ -47,4 +47,4 @@
 
 
 /turf/simulated/floor/chasm/end/
-	name = "end of the world"
+	name = "世界尽头"

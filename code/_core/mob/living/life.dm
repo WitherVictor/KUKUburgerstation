@@ -1,5 +1,5 @@
 /mob/living/proc/death_message()
-	src.visible_message("<b>\The [src.name]</b> seizes up and falls limp, their eyes dead and lifeless...")
+	src.visible_message("<b>[src.name]</b>浑身一僵，瘫倒在地，双眼失去了生气……")
 	return TRUE
 
 /mob/living/proc/death(var/silent=FALSE)
@@ -72,7 +72,7 @@
 		S.color = "#000000"
 		S.plane = PLANE_EFFECT
 		S.layer = LAYER_GHOST
-		S.name = "soul of [initial(name)]:"
+		S.name = "[initial(name)]的灵魂："
 		S.soul_size = src.soul_size
 		S.soul_path = src.type
 		S.boss = src.boss
@@ -86,9 +86,9 @@
 	handle_transform()
 
 	if(!silent && !qdeleting && client)
-		client.to_chat(span("danger","<h1>You died!</h1>"))
-		client.to_chat(span("danger","Your death is not the end. Someone may come along and revive you, or you can be cloned again by ghosting and loading your current character."))
-		client.to_chat(span("danger","Be warned, if you choose to be cloned or you suffer from brain death, your corpse won't be able to be revived!"))
+		client.to_chat(span("danger","<h1>你死了！</h1>"))
+		client.to_chat(span("danger","死亡并非终点。可能有人前来救活你；你也可以成为幽灵后重新加载当前角色，以克隆体的身份重生。"))
+		client.to_chat(span("danger","注意：选择克隆重生或发生脑死亡后，你原来的尸体将无法再被救活！"))
 
 	return TRUE
 
@@ -202,7 +202,7 @@
 							var/credits_to_give = min(CEILING(health.health_max*0.1,5),300)*income_multiplier
 							var/credits_given = P.adjust_currency(credits_to_give,silent=TRUE)
 							if(credits_given > 0)
-								P.to_chat(span("notice","You gained [credits_given] credits for killing [src.name]."),CHAT_TYPE_COMBAT)
+								P.to_chat(span("notice","你击杀了[src.name]，获得[credits_given]信用点。"),CHAT_TYPE_COMBAT)
 
 
 
@@ -382,27 +382,27 @@ mob/living/proc/on_life_slow()
 	switch(intoxication/threshold_multiplier)
 		if(0 to 200)
 			if(last_intoxication_message != 0)
-				to_chat(span("notice","You feel sober."))
+				to_chat(span("notice","你感觉清醒了。"))
 				intoxication_to_remove *= 0.5
 				last_intoxication_message = 0
 		if(200 to 400)
 			if(last_intoxication_message != 1)
-				to_chat(span("notice","You feel buzzed."))
+				to_chat(span("notice","你感觉有些微醺。"))
 				intoxication_to_remove *= 0.5
 				last_intoxication_message = 1
 		if(400 to 800)
 			if(last_intoxication_message != 2)
-				to_chat(span("warning","You feel drunk."))
+				to_chat(span("warning","你感觉喝醉了。"))
 				intoxication_to_remove *= 0.75
 				last_intoxication_message = 2
 		if(800 to 1600)
 			if(last_intoxication_message != 3)
-				to_chat(span("danger","You feel seriously inebriated."))
+				to_chat(span("danger","你感觉醉得厉害。"))
 				intoxication_to_remove *= 0.5
 				last_intoxication_message = 3
 		if(1600 to INFINITY)
 			if(last_intoxication_message != 4)
-				to_chat(span("danger","You feel utterly and completely fucking shitfaced."))
+				to_chat(span("danger","你他妈已经醉得不省人事了。"))
 				intoxication_to_remove *= 0.25
 				last_intoxication_message = 4
 			tox_regen_buffer -= 0.25*TICKS_TO_SECONDS(LIFE_TICK_SLOW)
@@ -590,7 +590,7 @@ mob/living/proc/on_life_slow()
 
 	CALLBACK_REMOVE("\ref[src]_make_unrevivable")
 
-	to_chat(span("danger","You have suffered brain death and can no longer be revived..."))
+	to_chat(span("danger","你已发生脑死亡，无法再被救活……"))
 
 	make_ghost()
 
@@ -600,7 +600,7 @@ mob/living/proc/on_life_slow()
 
 	CALLBACK_REMOVE("\ref[src]_make_unrevivable")
 
-	to_chat(span("danger","You have suffered brain death and can no longer be revived..."))
+	to_chat(span("danger","你已发生脑死亡，无法再被救活……"))
 
 	create_grave_and_respawn()
 

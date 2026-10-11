@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/chaos
-	name = "chaos spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots 9 chaotic moving orbs."
+	name = "混沌法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射9枚轨迹混乱的法球。"
 	icon_state = "damage"
 
 	rarity = RARITY_MYTHICAL

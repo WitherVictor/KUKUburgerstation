@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/ks23
-	name = "23x75mmR KS23 Shotgun"
-	desc = "Technically a Carbine!"
-	desc_extended = "A slavic shotgun with a rifled barrel and a 23mm bore."
+	name = "23x75mmR KS23霰弹枪"
+	desc = "严格来说是卡宾枪！"
+	desc_extended = "采用线膛枪管、口径23mm的斯拉夫霰弹枪。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/slavic/pump.dmi'
 	icon_state = "inventory"
 	value = 1800

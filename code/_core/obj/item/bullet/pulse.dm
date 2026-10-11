@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/pulse
-	name = "pulse cartridge"
-	desc = "The power to supply a house for a week in a nice, compact battery."
-	desc_extended = "For pulse weapons that require pulse cartridges."
+	name = "脉冲能量弹"
+	desc = "小巧精致的电池，储存的能量足以供一户人家使用一周。"
+	desc_extended = "供使用脉冲能量弹的脉冲武器装填。"
 	icon = 'icons/obj/item/bullet/pulse_cell.dmi'
 
 
@@ -22,7 +22,7 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/pulse/surplus
-	name = "\improper surplus pulse cartridge"
+	name = "\improper 库存旧式脉冲能量弹"
 	damage_type_bullet = /damagetype/ranged/laser/pulse/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN

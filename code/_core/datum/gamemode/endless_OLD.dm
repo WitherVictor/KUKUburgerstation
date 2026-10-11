@@ -1,6 +1,6 @@
 /gamemode/endless
-	name = "Endless"
-	desc = "No missions right now. Do anything you want."
+	name = "无尽模式"
+	desc = "目前没有任务。想做什么就做什么。"
 	hidden = FALSE
 
 	var/last_vote = 0
@@ -37,37 +37,37 @@
 		stage++
 		switch(stage)
 			if(1)
-				status_display_text = "GEAR"
+				status_display_text = "整备"
 				round_time_next = 6*60
 				announce(
-					"Central Command Mission Update",
-					"Prepare for Landfall",
-					"All landfall crew are ordered to gear up for planetside combat. Estimated time until shuttle functionality: 6 minutes.",
+					"中央指挥部任务通告",
+					"准备登陆",
+					"所有登陆人员立即整备，准备地面作战。穿梭机预计6分钟后启用。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_6_minutes_shuttle.ogg'
 				)
 			if(2)
-				status_display_text = "PREP"
+				status_display_text = "准备"
 				round_time_next = 1*60
 				announce(
-					"Central Command Mission Update",
-					"Drop Pod Boarding",
-					"All landfall crew are ordered to proceed to the hanger bay and prep for drop pod launch. Drop pods will be allowed to launch in 1 minute.",
+					"中央指挥部任务通告",
+					"登上空降舱",
+					"所有登陆人员立即前往机库，准备空降。空降舱将在1分钟后获准发射。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_1_minute_shuttle.ogg'
 				)
 			if(3)
-				status_display_text = "RDY"
+				status_display_text = "就绪"
 				round_time_next = 3*60
 				allow_launch = TRUE
 				SShorde.enable = TRUE
 				SSevents.enable = TRUE
 				announce(
-					"Central Command Mission Update",
-					"Mission is a Go",
-					"Shuttles are prepped and ready to depart into the Area of Operations. All crew are cleared to launch.",
+					"中央指挥部任务通告",
+					"任务开始",
+					"穿梭机整备完毕，可以前往作战区域。全体人员获准出发。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_0_minutes_shuttle.ogg'
 				)
 			if(4)
-				status_display_text = "BTTLE"
+				status_display_text = "战斗"
 				round_time_next = 40*60
 				/*
 				announce(
@@ -78,20 +78,20 @@
 				)
 				*/
 			if(5)
-				status_display_text = "EVAC"
+				status_display_text = "撤离"
 				round_time_next = 5*60
 				announce(
-					"Central Command Mission Update",
-					"Evacuation Orders",
-					"Incoming Ion Storm detected. All crew are recommended to evacuate the area. Failure to evacuate may result in-\n%@&^#*#^&STREAM INTERUPTED%&#(&#",
+					"中央指挥部任务通告",
+					"撤离命令",
+					"检测到离子风暴即将来袭。建议全体人员撤离该区域。未能撤离可能导致——\n%@&^#*#^&信号中断%&#(&#",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_evac_notice.ogg'
 				)
-				broadcast_to_clients(span("danger","PvP will be enabled in 5 minutes!"))
+				broadcast_to_clients(span("danger","玩家对战将在5分钟后启用！"))
 			if(6)
 				SShorde.enable = FALSE
 				SSevents.enable = FALSE
 				allow_launch = FALSE
-				status_display_text = "UNSAFE"
+				status_display_text = "危险"
 				var/number_of_players = 0
 				for(var/k in all_players)
 					var/mob/living/advanced/player/P = k
@@ -108,11 +108,11 @@
 					number_of_players++
 
 				if(number_of_players <= 1 && world.port != 0)
-					broadcast_to_clients(span("danger","Not enough players for PvP. Ending round..."))
+					broadcast_to_clients(span("danger","玩家对战人数不足。正在结束本轮……"))
 					round_time_next = 0
 					world.end(WORLD_END_NANOTRASEN_VICTORY)
 				else
-					broadcast_to_clients(span("danger","PvP has been enabled!"))
+					broadcast_to_clients(span("danger","玩家对战已启用！"))
 					set_friendly_fire(TRUE)
 					round_time_next = 10*60
 					pvp_start_time = world.time
@@ -136,7 +136,7 @@
 
 
 			if(7) //7 is the checking stage.
-				status_display_text = "UNSAFE"
+				status_display_text = "危险"
 				var/number_of_players = 0
 				var/mob/living/advanced/player/last_person
 				for(var/k in all_players)
@@ -152,10 +152,10 @@
 					last_person = P
 				if(number_of_players <= 1) //Last person standing.
 					if(number_of_players <= 0 || !last_person)
-						broadcast_to_clients(span("danger","PvP ended due to all players leaving the area. No winner awarded."))
+						broadcast_to_clients(span("danger","所有玩家均已离开该区域，玩家对战结束。本次没有获胜者。"))
 						world.end(WORLD_END_NANOTRASEN_VICTORY)
 					else
-						broadcast_to_clients(span("danger","PvP ended due to one person left standing. [last_person.real_name] was awarded 80,000 credits."))
+						broadcast_to_clients(span("danger","仅剩一人存活，玩家对战结束。[last_person.real_name]获得80,000信用点奖励。"))
 						world.end(WORLD_END_NANOTRASEN_VICTORY)
 						last_person.adjust_currency(80000)
 						var/turf/T = get_turf(last_person)
@@ -174,7 +174,7 @@
 
 		if(stage == 6 && pvp_start_time > 0 && world.time >= pvp_start_time + SECONDS_TO_DECISECONDS(600))
 			if(!boredom_warning)
-				broadcast_to_clients(span("danger","PvP has lasted more than 10 minutes; sending Syndicate deathsquads."))
+				broadcast_to_clients(span("danger","玩家对战已持续超过10分钟，正在派遣辛迪加敢死队。"))
 			else
 				for(var/k in all_players)
 					var/mob/living/advanced/player/P = k
@@ -198,4 +198,4 @@
 
 
 	if(status_display_text && status_display_time)
-		set_status_display("mission","[status_display_text ? status_display_text : "HI"]\n[status_display_time ? status_display_time : "THERE"]")
+		set_status_display("mission","[status_display_text ? status_display_text : "你好"]\n[status_display_time ? status_display_time : "欢迎"]")

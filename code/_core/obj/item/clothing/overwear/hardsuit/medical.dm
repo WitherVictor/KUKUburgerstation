@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/hardsuit/medical
-	name = "advanced medical voidsuit"
-	desc = "Out the fucking way!"
-	desc_extended = "A hardsuit worn by medics while retrieving corpses to avoid becoming a corpse themselves."
+	name = "先进医疗宇航服"
+	desc = "他妈的，闪开！"
+	desc_extended = "医护人员回收尸体时穿着的硬式宇航服，以免自己也变成尸体。"
 	icon = 'icons/obj/item/clothing/suit/hardsuit_medical.dmi'
 
 	armor = /armor/hardsuit/medical

@@ -1,6 +1,6 @@
 obj/structure/scenery/hellfire
-	name = "fire"
-	desc = "Thanks, science!"
+	name = "火焰"
+	desc = "感谢科学！"
 	icon = 'icons/obj/effects/fire.dmi'
 	icon_state = "3"
 

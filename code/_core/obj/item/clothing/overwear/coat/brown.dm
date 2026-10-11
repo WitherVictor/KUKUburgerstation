@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/brown
-	name = "brown coat"
+	name = "棕色外套"
 	icon = 'icons/obj/item/clothing/suit/detective_coat.dmi'
 
-	desc = "The detective's favorite."
-	desc_extended = "A dark brown leather coat. It is quite heavy, but contains many pockets."
+	desc = "侦探的最爱。"
+	desc_extended = "一件深棕色皮外套，颇为沉重，但口袋很多。"
 
 	is_container = TRUE
 	dynamic_inventory_count = 4

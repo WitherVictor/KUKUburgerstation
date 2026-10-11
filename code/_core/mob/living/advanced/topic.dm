@@ -16,7 +16,7 @@
 	return TRUE
 
 /mob/living/advanced/proc/uncuff(var/mob/activator)
-	activator.visible_message(span("warning","\The [activator.name] removes \the [src.name]'s handcuffs."),span("notice","You remove \the [src.name]'s handcuffs."))
+	activator.visible_message(span("warning","[activator.name]解开了[src.name]的手铐。"),span("notice","你解开了[src.name]的手铐。"))
 	set_handcuffs(FALSE)
 	return TRUE
 
@@ -25,15 +25,15 @@
 	INTERACT_CHECK_NO_DELAY(src)
 
 	if(src.qdeleting)
-		activator.to_chat(span("warning","That doesn't exist!"))
+		activator.to_chat(span("warning","目标已不存在！"))
 		return FALSE
 
 	if(!handcuffed)
-		activator.to_chat(span("warning","They're already free!"))
+		activator.to_chat(span("warning","目标已经没有手铐了！"))
 		return FALSE
 
 	if(activator == src)
-		activator.to_chat(span("warning","Try resisting to remove the handcuffs!"))
+		activator.to_chat(span("warning","试着挣扎来摆脱手铐！"))
 		return FALSE
 
 	return TRUE

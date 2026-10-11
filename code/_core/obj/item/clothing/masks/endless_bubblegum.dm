@@ -1,9 +1,9 @@
 /obj/item/clothing/mask/endless_bubblegum
-	name = "endless bubblegum"
+	name = "无尽泡泡糖"
 	icon = 'icons/obj/item/clothing/masks/bubblegum.dmi'
 	flags_clothing = 0x0
-	desc = "Everlasting, even."
-	desc_extended = "A mysterious piece of bubblegum flavored chewing gum that never seems to lose its chew, flavor, juice, or nutrients. Can be equipped to mask slot."
+	desc = "甚至可以说永不耗尽。"
+	desc_extended = "一块神秘的泡泡糖味口香糖，嚼劲、味道、汁液和营养似乎永不耗尽。可装备在面具槽中。"
 
 	armor = null
 

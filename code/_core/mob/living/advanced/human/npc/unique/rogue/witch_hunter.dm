@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue/witch_hunter
-	name = "Lost Witch Hunter"
-	desc = "What happens when a Witch Hunter becomes so obsessed with those who practice the dark arts to the point of them exploring it themselves."
+	name = "迷失的猎巫人"
+	desc = "猎巫人若过度痴迷于那些施展黑暗魔法的人，甚至开始亲自钻研黑暗魔法，就会变成这样。"
 
 	sex = FEMALE
 	gender = FEMALE

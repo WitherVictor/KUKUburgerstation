@@ -1,8 +1,8 @@
 /obj/item/clothing/head/helmet/full/space_military
-	name = "space military helmet"
+	name = "太空军用头盔"
 	icon = 'icons/obj/item/clothing/hats/space_military_new.dmi'
-	desc = "Military. In space!"
-	desc_extended = "A helmet made from hardened carbon fibres."
+	desc = "军用装备，进军太空！"
+	desc_extended = "用硬化碳纤维制成的头盔。"
 
 	armor = /armor/military/medium/hard
 

@@ -1,7 +1,7 @@
 /obj/structure/interactive/fountain
-	name = "fountain"
-	desc = "Stay awhile, and listen."
-	desc_extended = "A magical fountain that can restore the energies of any being that activates it."
+	name = "魔法喷泉"
+	desc = "稍作停留，听我一言。"
+	desc_extended = "能为使用者恢复生命值、法力或体力的魔法喷泉，用过一次后就会耗尽。"
 
 	icon = 'icons/obj/structure/fountain.dmi'
 	icon_state = "fountain"
@@ -33,7 +33,7 @@
 	. = ..()
 
 	if(!filled)
-		. += div("notice","It is empty.")
+		. += div("notice","已经空了。")
 
 
 /obj/structure/interactive/fountain/Finalize()
@@ -46,11 +46,11 @@
 
 	switch(fountain_type)
 		if(1)
-			desc_extended = "[desc_extended] This one restores your health."
+			desc_extended = "[desc_extended]这座恢复生命值。"
 		if(2)
-			desc_extended = "[desc_extended] This one restores your mana."
+			desc_extended = "[desc_extended]这座恢复法力。"
 		if(3)
-			desc_extended = "[desc_extended] This one restores your stamina."
+			desc_extended = "[desc_extended]这座恢复体力。"
 
 
 
@@ -91,7 +91,7 @@
 				L.mana_regen_buffer = max(L.mana_regen_buffer,600)
 			if(3)
 				L.stamina_regen_buffer = max(L.stamina_regen_buffer,600)
-		visible_message(span("notice","\The [activator.name] activates \the [src.name]'s energies, replenishing themself."),span("notice","You activate \the [src.name]'s energies, replenishing yourself."))
+		visible_message(span("notice","[activator.name]激发了[src.name]的能量，恢复了自身状态。"),span("notice","[activator.name]激发了[src.name]的能量，恢复了自身状态。"))
 		filled = FALSE
 		update_sprite()
 		return TRUE

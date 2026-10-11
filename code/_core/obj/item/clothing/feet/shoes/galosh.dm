@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/galosh
-	name = "right galosh"
-	desc = "For when you're tired of slipping."
-	desc_extended = "A bright yellow janitor's galosh. Prevents slipping on liquids."
+	name = "右脚胶靴"
+	desc = "适合受够了滑倒的你。"
+	desc_extended = "亮黄色的清洁工胶靴，采用适合湿滑地面的防滑设计。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -21,7 +21,7 @@
 
 
 /obj/item/clothing/feet/shoes/galosh/left
-	name = "left galosh"
+	name = "左脚胶靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

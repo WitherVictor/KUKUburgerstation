@@ -1,8 +1,8 @@
 /turf/simulated/wall/brick
-	name = "wall"
+	name = "砖墙"
 
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用砖砌成的墙。"
 
 	icon = 'icons/turf/wall/brick_new.dmi'
 	icon_state = "wall"
@@ -16,82 +16,82 @@
 
 /turf/simulated/wall/brick/red
 	color = "#C66B59"
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks. This one is made of red bricks."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用红砖砌成的墙。"
 
 /turf/simulated/wall/brick/red/rev //for the rev compound
 	color = "#C66B59"
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks. This one is made of red bricks."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用红砖砌成的墙。"
 	health_base = 5000
 
 /turf/simulated/wall/brick/red/dark
 	color = "#824439"
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks. This one is made of dark red bricks."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用深红色砖砌成的墙。"
 
 /turf/simulated/wall/brick/red/dark/rev //for the rev compound, has infinite HP
 	color = "#824439"
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks. This one is made of dark red bricks."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用深红色砖砌成的墙。"
 	health_base = 6000
 
 /turf/simulated/wall/brick/sand
-	name = "sandstone wall"
+	name = "砂岩墙"
 	color = "#FFC68C"
-	desc = "It gets everywhere"
-	desc_extended = "A wall made of sandstone bricks."
+	desc = "沙子无孔不入。"
+	desc_extended = "一堵用砂岩砖砌成的墙。"
 
 /turf/simulated/wall/brick/city
-	name = "city wall"
+	name = "城市墙壁"
 	color = "#F0E8D9"
-	desc = "It gets everywhere"
-	desc_extended = "A wall made of sandstone bricks."
+	desc = "沙子无孔不入。"
+	desc_extended = "一堵用砂岩砖砌成的墙。"
 
 /turf/simulated/wall/brick/sand/ish
 	color = "#9E866E"
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks. This one is a bit sandy"
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用砖砌成的墙，有点沙质。"
 
 /turf/simulated/wall/brick/marble
-	name = "marble wall"
+	name = "大理石墙"
 	color = "#E1DFD2"
-	desc = "Ohh, fancy"
-	desc_extended = "A wall made of marble bricks."
+	desc = "哦，真气派。"
+	desc_extended = "一堵用大理石砖砌成的墙。"
 
 /turf/simulated/wall/brick/chapel
-	name = "chapel wall"
+	name = "教堂墙壁"
 	color = COLOR_GREY_DARK
-	desc = "In the name of Burger"
-	desc_extended = "A wall made of bricks. This one is part of a chapel."
+	desc = "以汉堡之名。"
+	desc_extended = "一堵用砖砌成的教堂墙壁。"
 
 /turf/simulated/wall/brick/banana
-	name = "banana brick wall"
+	name = "香蕉砖墙"
 	color = "#FFFF00"
-	desc = "HOOOOONK"
-	desc_extended = "A wall made of banana bricks."
+	desc = "嘟————！"
+	desc_extended = "一堵用香蕉砖砌成的墙。"
 
 /turf/simulated/wall/brick/uranium
-	name = "uranium brick wall"
+	name = "铀砖墙"
 	color = COLOR_URANIUM
 	//material = /material/uranium
-	desc = "Radioactive"
-	desc_extended = "A wall made of uranium bricks."
+	desc = "有放射性。"
+	desc_extended = "一堵用铀砖砌成的墙。"
 
 
 /turf/simulated/wall/brick/grey
 	color = "#4B544B"
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks. These are grey."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用灰砖砌成的墙。"
 
 /turf/simulated/wall/brick/grey/dark
 	color = COLOR_GREY_DARK
-	desc = "Like a brick to the head"
-	desc_extended = "A wall made of bricks."
+	desc = "像迎头挨了一砖。"
+	desc_extended = "一堵用砖砌成的墙。"
 
 
 /turf/simulated/wall/brick/temple
-	name = "temple brick wall"
+	name = "神殿砖墙"
 	color = "#FFDB9E"
 
 	icon = 'icons/turf/wall/preview.dmi'

@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/syndicate
-	name = "syndicate vendor"
+	name = "辛迪加售货机"
 	accepts_item = /obj/item/currency/telecrystals
 	markup = 1
 	health = null
@@ -10,9 +10,9 @@
 	ignore_economy = TRUE
 
 /obj/structure/interactive/vending/syndicate/guns
-	name = "syndicate armaments vendor"
-	desc = "You better buy shit, and fast!"
-	desc_extended = "A timed syndicate vendor that is set to destroy all their internal contents when NanoTrasen personel land on the ship. You better grab a loadout, and fast!"
+	name = "辛迪加武器售货机"
+	desc = "要买东西就他妈的快点！"
+	desc_extended = "一台限时辛迪加售货机，设定为在纳米传讯人员登船时销毁内部所有物品。赶紧拿好装备，越快越好！"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "syndicate_guns"
 	stored_types = list(
@@ -49,9 +49,9 @@
 	)
 
 /obj/structure/interactive/vending/syndicate/ammo
-	name = "syndicate ammo vendor"
-	desc = "You better buy shit, and fast!"
-	desc_extended = "A timed syndicate vendor that is set to destroy all their internal contents when NanoTrasen personel land on the ship. You better grab a loadout, and fast!"
+	name = "辛迪加弹药售货机"
+	desc = "要买东西就他妈的快点！"
+	desc_extended = "一台限时辛迪加售货机，设定为在纳米传讯人员登船时销毁内部所有物品。赶紧拿好装备，越快越好！"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "syndicate_ammo"
 	stored_types = list(
@@ -91,7 +91,7 @@
 
 
 /obj/structure/interactive/vending/syndicate/medicine
-	name = "syndicate medicine vendor"
+	name = "辛迪加药品售货机"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "syndicate_medical"
 
@@ -129,7 +129,7 @@
 	)
 
 /obj/structure/interactive/vending/syndicate/wardrobe
-	name = "syndicate wardrobe vendor"
+	name = "辛迪加服装售货机"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "syndicate_wardrobe"
 	stored_types = list(
@@ -147,7 +147,7 @@
 	)
 
 /obj/structure/interactive/vending/syndicate/attachment
-	name = "syndicate attachment vendor"
+	name = "辛迪加配件售货机"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "syndicate_attachment"
 	stored_types = list(
@@ -172,7 +172,7 @@
 	)
 
 /obj/structure/interactive/vending/syndicate/prize
-	name = "hacked prize vendor"
+	name = "被破解的兑奖售货机"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "syndicate_prize"
 

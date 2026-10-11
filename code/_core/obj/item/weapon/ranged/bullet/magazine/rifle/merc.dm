@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/merc
-	name = "\improper 5.56mm MGS-5 Assault Rifle"
-	desc = "It can't be."
-	desc_extended = "A very tactical semi automatic assault rifle used primarily by serious mercenaries that rivals NanoTrasen's SA-AR."
+	name = "\improper 5.56mm MGS-5突击步枪"
+	desc = "不可能吧。"
+	desc_extended = "战术风格十足的突击步枪，具备全自动与半自动模式，主要由专业雇佣兵使用，可与纳米传讯的SA-AR抗衡。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/merc.dmi'
 	icon_state = "inventory"
 	value = 3500

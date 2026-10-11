@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/cult
-	name = "desecrated spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots an unholy hand that spread desecrated ground in a short distance."
+	name = "亵渎法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射一只邪秽之手，在短距离内蔓延亵渎之地。"
 	icon_state = "damage"
 	color = "#7F0000"
 

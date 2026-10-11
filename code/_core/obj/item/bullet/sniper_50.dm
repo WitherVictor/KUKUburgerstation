@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/sniper_50/
-	name = "\improper .50 sniper round"
-	desc = "For when you want to shoot something so hard it's family will feel it too."
-	desc_extended = "For sniper rifles that require .50 ammo."
+	name = "\improper .50狙击弹"
+	desc = "一枪狠到连对方的家人都能感受到。"
+	desc_extended = "供使用.50弹药的狙击步枪装填。"
 	icon = 'icons/obj/item/bullet/50.dmi'
 
 
@@ -24,15 +24,15 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/sniper_50/surplus
-	name = "\improper surplus .50 sniper round"
+	name = "\improper 库存旧式.50狙击弹"
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_50/surplus
 	jam_chance = 1
 	value = 0
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/sniper_50/du
-	name = "\improper DU .50 sniper round"
-	desc_extended = "For sniper rifles that require .50 ammo. This one has a depleted uranium tip."
+	name = "\improper .50贫铀狙击弹"
+	desc_extended = "供使用.50弹药的狙击步枪装填。这款采用贫铀弹头。"
 	rarity = RARITY_RARE
 	value_burgerbux = 1
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_50/du
@@ -40,7 +40,7 @@
 	penetrations = 3
 
 /obj/item/bullet_cartridge/sniper_50/explosive
-	name = "\improper .50 explosive sniper round"
+	name = "\improper .50爆炸狙击弹"
 	icon = 'icons/obj/item/bullet/50_explosive.dmi'
 	rarity = RARITY_RARE
 	projectile = /obj/projectile/bullet/firearm/sniper/explosive/
@@ -49,7 +49,7 @@
 	penetrations = 0
 
 /obj/item/bullet_cartridge/sniper_50/ion
-	name = "\improper .50 ion sniper round"
+	name = "\improper .50离子狙击弹"
 	icon = 'icons/obj/item/bullet/50_ion.dmi'
 	rarity = RARITY_RARE
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_50/ion
@@ -57,7 +57,7 @@
 	penetrations = 0
 
 /obj/item/bullet_cartridge/sniper_50/incendiary
-	name = "\improper .50 incendiary sniper round"
+	name = "\improper .50燃烧狙击弹"
 	icon = 'icons/obj/item/bullet/50_incendiary.dmi'
 	rarity = RARITY_RARE
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_50/incendiary
@@ -65,7 +65,7 @@
 	penetrations = 0
 
 /obj/item/bullet_cartridge/sniper_50/ap
-	name = "\improper .50 AP sniper round"
+	name = "\improper .50穿甲狙击弹"
 	icon = 'icons/obj/item/bullet/50_ap.dmi'
 	rarity = RARITY_UNCOMMON
 	damage_type_bullet = /damagetype/ranged/bullet/sniper_50/ap

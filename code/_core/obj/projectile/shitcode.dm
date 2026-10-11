@@ -1,6 +1,6 @@
 /* Real x-ray rifles would be exceptionally overpowered and super exploitable.
 /obj/projectile/bullet/laser/penetrating
-	name = "penetrating laser"
+	name = "穿透激光"
 	id = "laser_penetrating"
 	var/penetrations_current = 0
 	var/penetrations_max = 5

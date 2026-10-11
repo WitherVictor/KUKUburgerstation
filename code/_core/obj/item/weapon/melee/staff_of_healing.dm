@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/staff_of_healing
-	name = "staff of healing"
-	desc = "Who needs medicine when you have PASSIVE ARCANE?"
-	desc_extended = "A glowing magical staff that passively radiates health to all nearby living beings, except the caster, when activated. Also makes for a good blunt force weapon."
+	name = "治疗法杖"
+	desc = "有了被动奥术，还要什么药？"
+	desc_extended = "发光的魔法法杖，激活后会被动治疗附近的生物，施法者除外。也是不错的钝击武器。"
 
 
 	icon = 'icons/obj/item/weapons/melee/clubs/staff_of_healing.dmi'
@@ -27,9 +27,9 @@
 
 	if(!SSthinking.all_thinkers[src])
 		START_THINKING(src)
-		activator.to_chat(span("notice","You activate \the [src.name]'s passive healing effect."))
+		activator.to_chat(span("notice","你开启了[src.name]的被动治疗效果。"))
 	else
-		activator.to_chat(span("notice","You deactivate \the [src.name]'s passive healing effect."))
+		activator.to_chat(span("notice","你关闭了[src.name]的被动治疗效果。"))
 		STOP_THINKING(src)
 
 	return TRUE

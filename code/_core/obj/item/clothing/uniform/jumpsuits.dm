@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/jumpsuit
-	name = "jumpsuit"
-	desc = "A nice jumpsuit."
-	desc_extended = "When you really can't be bothered to get matching pants."
+	name = "连体服"
+	desc = "一件不错的连体服。"
+	desc_extended = "懒得找条相配的裤子时，就穿这个吧。"
 
 	icon = 'icons/obj/items/clothing/uniforms/poly_suit_new.dmi'
 
@@ -27,9 +27,9 @@
 	"secondary" = "#FFFFFF"
 	"tertiary" = "#FFFFFF"
 
-	"primary"_desc = "shirt"
-	"secondary"_desc = "pants"
-	"tertiary"_desc = "shoulders"
+	"primary"_desc = "上衣"
+	"secondary"_desc = "裤子"
+	"tertiary"_desc = "肩部"
 
 	value = 10
 
@@ -60,7 +60,7 @@
 	"tertiary" = COLOR_SCIENCE
 
 /obj/item/clothing/uniform/jumpsuit/dark
-	name = "reinforced jumpsuit"
+	name = "加固连体服"
 
 	"primary" = COLOR_BLACK
 	"secondary" = COLOR_BLACK

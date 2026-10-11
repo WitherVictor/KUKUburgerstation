@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/witch
-	name = "witch hat"
+	name = "女巫帽"
 	icon = 'icons/obj/item/clothing/hats/witch.dmi'
-	desc = "Roll for style."
-	desc_extended = "A typical hat worn often by cross dressing manchildren and those in the wizard federation."
+	desc = "来掷个时尚检定。"
+	desc_extended = "女装巨婴和巫师联邦成员常戴的典型帽子。"
 
 	armor = /armor/dark/arcane/witch
 

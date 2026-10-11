@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/space_soldier
-	name = "space soldier"
-	desc = "Spreading democracy since 1775."
+	name = "太空士兵"
+	desc = "自1775年起传播民主。"
 
 	dna = /dna/human
 
@@ -28,7 +28,7 @@
 	level = 70
 
 /mob/living/advanced/npc/space_soldier/special_operative
-	name = "space special operative"
+	name = "太空特战人员"
 
 	dialogue_id = null
 

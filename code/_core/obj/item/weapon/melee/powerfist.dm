@@ -1,8 +1,8 @@
 /obj/item/weapon/melee/powerfist
 
-	name = "powerfist"
-	desc = "What you've always wanted."
-	desc_extended = "A bulky glove attached to a massive hydraulic press. What could possibly go wrong?"
+	name = "动力拳套"
+	desc = "你梦寐以求的东西。"
+	desc_extended = "笨重的手套连着巨大的液压机。这能出什么问题呢？"
 
 	icon = 'icons/obj/item/weapons/unarmed/powerfist.dmi'
 

@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/energy/sentry_turret
-	name = "\improper sentry"
+	name = "\improper 哨戒炮"
 	icon = 'icons/obj/item/weapons/ranged/laser/captain.dmi'
 
 	projectile = /obj/projectile/bullet/firearm/rifle

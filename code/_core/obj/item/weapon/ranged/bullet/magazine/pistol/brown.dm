@@ -1,8 +1,8 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/brown
-	name = "\improper .40 Brown pistol"
+	name = "\improper .40布朗手枪"
 	icon = 'icons/obj/item/weapons/ranged/pistol/40_1.dmi'
-	desc = "What can the .40 Brown do for you?"
-	desc_extended = "A decently powerful and accurate .40 semi-automatic pistol meant for self defense. Commonly used by the Solarian Space Corps."
+	desc = ".40布朗能为你做些什么？"
+	desc_extended = "用于自卫的.40半自动手枪，威力和精度都相当不错。太阳系太空军团常用的武器。"
 	value = 650
 	shoot_sounds = list('sound/weapons/ranged/pistol/brown/shoot.ogg')
 	shoot_delay = 1.3
@@ -75,9 +75,9 @@
 	return max(0,0.01 - (0.04 * L.get_skill_power(SKILL_RANGED)))
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/brown/mod
-	name = ".40 Brown MOD"
+	name = ".40布朗改装型"
 	icon = 'icons/obj/item/weapons/ranged/pistol/40_2.dmi'
-	desc_extended = "A modified variant of the .40 Brown semi-automatic pistol. Features a faster firerate and reduced recoil."
+	desc_extended = ".40布朗半自动手枪的改装版本，射速更快，后坐力更低。"
 
 	shoot_delay = 1
 

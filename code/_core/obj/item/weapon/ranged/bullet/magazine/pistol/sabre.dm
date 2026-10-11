@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/high_calibre
-	name = "\improper 12.7mm Sabre pistol"
-	desc = "As sharp as a real saber sword, hurts just as much too."
-	desc_extended = "A very powerful automatic pistol commonly used by high ranking Syndicate Operatives as a decorative sidepiece."
+	name = "\improper 12.7mm军刀手枪"
+	desc = "像真正的军刀一样锋利，也一样疼。"
+	desc_extended = "威力很大的自动手枪，辛迪加高级特工常将其作为装饰性配枪。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/12mm.dmi'
 	icon_state = "inventory"
 	value = 1100
@@ -78,10 +78,10 @@
 	return max(0,0.02 - (0.04 * L.get_skill_power(SKILL_RANGED)))
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/high_calibre/mod
-	name = "\improper 12.7mm Sabre MOD"
+	name = "\improper 12.7mm军刀改装型"
 	icon = 'icons/obj/item/weapons/ranged/pistol/12mm_mod.dmi'
-	desc_extended = "A modded variant very powerful semiautomatic pistol commonly used by the most elite high ranking Syndicate Operatives. \
-	It is said that it is easier to become an elite syndicate operative than it is to actually obtain this weapon through combat."
+	desc_extended = "强力自动手枪的改装版本，常见于辛迪加最精锐的高级特工手中。\
+	据说，成为辛迪加精英特工，比从战斗中缴获这把武器还容易。"
 
 	shoot_delay = 2.1
 

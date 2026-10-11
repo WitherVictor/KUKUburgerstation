@@ -1,5 +1,5 @@
 /obj/structure/interactive/door/airlock/shuttle
-	name = "shuttle airlock"
+	name = "穿梭机气闸门"
 	filler = "fill"
 	safeties = FALSE
 

@@ -1,6 +1,6 @@
 /obj/effect/temp/portal
-	name = "portal"
-	desc = "Should be safe."
+	name = "传送门"
+	desc = "应该安全吧。"
 	icon = 'icons/obj/effects/portal.dmi'
 	icon_state = "portal"
 
@@ -97,9 +97,9 @@
 		var/mob/living/L = activator
 		if(L.loyalty_tag == loyalty_tag)
 			var/turf/destination_turf = get_turf(linked_portal)
-			L.visible_message(span("notice","\The [activator.name] steps into \the [src.name]."),span("notice","You step into \the [src.name]."))
+			L.visible_message(span("notice","[activator.name]走进了[src.name]。"),span("notice","你走进了[src.name]。"))
 			L.force_move(destination_turf)
-			L.visible_message(span("notice","\The [activator.name] walks out from out of \the [linked_portal.name]"),span("notice","You walk out of \the [linked_portal.name]"))
+			L.visible_message(span("notice","[activator.name]从[linked_portal.name]走了出来。"),span("notice","你从[linked_portal.name]走了出来。"))
 			play_sound('sound/effects/portal_exit.ogg',destination_turf)
 			play_sound('sound/effects/portal_exit.ogg',get_turf(src))
 			return TRUE

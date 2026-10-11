@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/sword/cult_dagger
-	name = "cultist dagger"
-	desc = "Now safe and reliable to use!"
-	desc_extended = "An ancient cultist dagger repurposed by the wizard federation to make use of Soul Trapping. Can also be seen in the hands of cultists sometimes with a sense of poetic irony."
+	name = "邪教徒匕首"
+	desc = "如今安全可靠，放心使用！"
+	desc_extended = "巫师联邦改造的古老邪教徒匕首，用于灵魂捕获。有时也能在邪教徒手中看到它，颇有几分讽刺意味。"
 	icon = 'icons/obj/item/weapons/melee/swords/cult_dagger.dmi'
 	icon_state = "inventory"
 	dan_mode = FALSE

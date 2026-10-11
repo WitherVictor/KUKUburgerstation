@@ -1,7 +1,7 @@
 /obj/item/clothing/belt/bandolier
-	name = "error bandolier"
-	desc = "For the aspiring sweeper."
-	desc_extended = "A not-so-fancy bandolier meant to hold a number of shotgun shells. ALT+Click to grab additional shells while already holding a shell."
+	name = "错误弹药带"
+	desc = "献给立志横扫战场的人。"
+	desc_extended = "朴素的弹药带，可存放多发霰弹枪弹药。手持弹药时，用ALT+单击可再取出一发同类弹药。"
 
 	icon = 'icons/obj/item/clothing/belts/bandolier_12.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_COAT_OVER
@@ -69,7 +69,7 @@
 
 		if(caller.attack_flags & CONTROL_MOD_DISARM)
 			if(!stored_shells[S.type])
-				caller.to_chat(span("warning","There are no shells of that type left in \the [src.name]!"))
+				caller.to_chat(span("warning","[src.name]里已经没有这种弹药了！"))
 				return TRUE
 			var/amount_added = S.add_item_count(1)
 			if(amount_added)
@@ -77,7 +77,7 @@
 				if(stored_shells[S.type] <= 0)
 					stored_shells -= S.type
 				shell_count -= amount_added
-				caller.to_chat(span("notice","You add a shell to your hand. There are [stored_shells[S.type]] shells of that type left."))
+				caller.to_chat(span("notice","你又取出一发弹药拿在手中，还剩[max(0,stored_shells[S.type])]发同类弹药。"))
 				update_sprite()
 		else
 			var/amount_added = -S.add_item_count(-min(S.amount,max(0,max_shells - shell_count)))
@@ -94,7 +94,7 @@
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(2)
-		caller.to_chat(span("warning","This type of shell doesn't fit!"))
+		caller.to_chat(span("warning","装不下这种弹药！"))
 		return TRUE
 
 	if(istype(object,/obj/hud/inventory))
@@ -103,7 +103,7 @@
 		INTERACT_DELAY(2)
 
 		if(!length(stored_shells))
-			caller.to_chat(span("warning","There are no shells left!"))
+			caller.to_chat(span("warning","已经没有弹药了！"))
 			return TRUE
 
 		var/obj/hud/inventory/I = object
@@ -119,7 +119,7 @@
 		if(stored_shells[S.type] <= 0)
 			stored_shells -= S.type
 		shell_count -= amount_to_grab
-		caller.to_chat(span("notice","You take [amount_to_grab] shell\s from \the [src.name]. There are [stored_shells[S.type]] shells of that type left."))
+		caller.to_chat(span("notice","你从[src.name]中取出[amount_to_grab]发弹药，还剩[max(0,stored_shells[S.type])]发同类弹药。"))
 		INITIALIZE(S)
 		FINALIZE(S)
 		I.add_object(S)
@@ -129,24 +129,24 @@
 	. = ..()
 
 /obj/item/clothing/belt/bandolier/shotgun_12
-	name = "12 gauge shotgun bandolier"
-	desc_extended = "A not-so-fancy bandolier meant to hold a number of 12 gauge shotgun shells. Click to grab a handful of shells, or ALT+Click to take one."
+	name = "12号霰弹枪弹药带"
+	desc_extended = "朴素的弹药带，可存放12号霰弹枪弹药。单击取出一把弹药，ALT+单击只取一发。"
 	icon = 'icons/obj/item/clothing/belts/bandolier_12.dmi'
 	max_shells = 100
 	shell_type = /obj/item/bullet_cartridge/shotgun_12
 	value = 1 //Dummy value.
 
 /obj/item/clothing/belt/bandolier/shotgun_20
-	name = "20 gauge shotgun bandolier"
-	desc_extended = "A dyed bandolier meant to hold a number of 20 gauge shotgun shells. Click to grab a handful of shells, or ALT+Click to take one."
+	name = "20号霰弹枪弹药带"
+	desc_extended = "染色弹药带，可存放20号霰弹枪弹药。单击取出一把弹药，ALT+单击只取一发。"
 	icon = 'icons/obj/item/clothing/belts/bandolier_20.dmi'
 	max_shells = 120
 	shell_type = /obj/item/bullet_cartridge/shotgun_20
 	value = 1 //Dummy value.
 
 /obj/item/clothing/belt/bandolier/shotgun_23
-	name = "23x75mmR shotgun bandolier"
-	desc_extended = "A surplus bandolier meant to hold a number of 23x75mmR shotgun shells. Click to grab a handful of shells, or ALT+Click to take one."
+	name = "23x75mmR霰弹枪弹药带"
+	desc_extended = "库存旧式弹药带，可存放23x75mmR霰弹枪弹药。单击取出一把弹药，ALT+单击只取一发。"
 	icon = 'icons/obj/item/clothing/belts/bandolier_23.dmi'
 	max_shells = 80
 	shell_type = /obj/item/bullet_cartridge/shotgun_23

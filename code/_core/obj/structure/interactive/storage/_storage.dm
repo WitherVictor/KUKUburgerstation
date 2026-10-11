@@ -1,6 +1,6 @@
 /obj/structure/interactive/storage
-	name = "lootable storage"
-	desc = "Like inventories, but better."
+	name = "可搜寻储物设施"
+	desc = "类似物品栏，但更好用。"
 	var/obj/item/structure_storage/storage
 
 	var/loot/stored_loot
@@ -73,9 +73,9 @@
 
 
 /obj/structure/interactive/storage/trash_pile
-	name = "trash pile"
-	desc = "Look inside, if you dare."
-	desc_extended = "A large pile of trash containing long discarded items. It could be dangerous to search one.."
+	name = "垃圾堆"
+	desc = "有胆量就翻翻看。"
+	desc_extended = "一大堆垃圾，里面夹杂着早已被丢弃的物品。翻找起来可能有危险……"
 	icon = 'icons/obj/structure/trash_piles.dmi'
 	icon_state = "trash"
 
@@ -124,15 +124,15 @@
 			L.force_move(T)
 			if(L.ai)
 				L.ai.set_active(TRUE)
-			src.visible_message(span("danger","\A [L.name] crawls out of \the [src.name]!"))
+			src.visible_message(span("danger","[L.name]从[src.name]里爬了出来！"))
 
 
 
 
 /obj/structure/interactive/storage/safe
-	name = "safe"
-	desc = "The contents are quite safe indeed."
-	desc_extended = "A secure safe designed to hold heavy objects."
+	name = "保险箱"
+	desc = "里面的东西确实相当保险。"
+	desc_extended = "一个坚固的保险箱，设计用于存放重物。"
 	icon = 'icons/obj/structure/safe.dmi'
 	icon_state = "safe"
 
@@ -167,9 +167,9 @@
 
 
 /obj/structure/interactive/storage/ammo_pile
-	name = "assorted ammo pile"
-	desc = "What an assorted and unsorted mess."
-	desc_extended = "Well, they gotta get their ammo from somewhere."
+	name = "混杂弹药堆"
+	desc = "种类繁多，却乱得毫无章法。"
+	desc_extended = "好吧，他们总得从某个地方弄到弹药。"
 	icon = 'icons/obj/item/bulletbox.dmi'
 	icon_state = "ammo"
 
@@ -180,9 +180,9 @@
 
 
 /obj/structure/interactive/storage/cash_register
-	name = "cash register"
-	desc = "It's not stealing if everyone is dead."
-	desc_extended = "A basic cash register used for processing transactions through an archaic method known as \"paying cash\"."
+	name = "收银机"
+	desc = "人都死了，就不算偷了。"
+	desc_extended = "一台普通收银机，用于通过一种名为“付现金”的古老方式处理交易。"
 	icon = 'icons/obj/structure/register.dmi'
 	icon_state = "register"
 

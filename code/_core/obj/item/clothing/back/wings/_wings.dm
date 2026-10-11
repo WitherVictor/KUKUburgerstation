@@ -1,6 +1,6 @@
 obj/item/clothing/back/wings
-	name = "wings"
-	desc_extended = "For all your snowflake needs."
+	name = "翅膀"
+	desc_extended = "满足你追求特立独行的各种需求。"
 
 	size = SIZE_8
 

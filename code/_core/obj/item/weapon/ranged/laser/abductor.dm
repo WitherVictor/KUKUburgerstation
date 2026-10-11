@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/abductor
-	name = "alien ray gun"
-	desc = "Pew pew."
-	desc_extended = "A highly advanced self-recharging laser ray gun that fires non-lethal lasers. Capable of destroying both your neurons and stamina."
+	name = "外星射线枪"
+	desc = "咻咻。"
+	desc_extended = "高度先进的自动充能射线枪，发射非致命激光，能摧残你的神经元，也能耗尽你的体力。"
 	icon = 'icons/obj/item/weapons/ranged/laser/abductor_new.dmi'
 
 	company_type = "Abductor"
@@ -54,9 +54,9 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(battery)
-				activator.to_chat(span("warning","You are unable to pry out \the [battery.name]."))
+				activator.to_chat(span("warning","你无法撬出[battery.name]。"))
 			else
-				activator.to_chat(span("warning","There is nothing to pry out of \the [src.name]!"))
+				activator.to_chat(span("warning","[src.name]里没有可撬出的东西！"))
 			return TRUE
 
 	. = ..()

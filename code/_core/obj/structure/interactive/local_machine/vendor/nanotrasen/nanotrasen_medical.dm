@@ -2,7 +2,7 @@
 	icon = 'icons/obj/structure/vending_new.dmi'
 
 /obj/structure/interactive/vending/nanotrasen/medical/clothing
-	name = "medical clothing vendor"
+	name = "医疗服装售货机"
 	icon_state = "medical_clothing"
 
 	stored_types = list(
@@ -54,7 +54,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/medical/equipment
-	name = "medical equipment vendor"
+	name = "医疗装备售货机"
 	icon_state = "medical_equipment"
 
 	stored_types = list(
@@ -89,7 +89,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/medical/kits
-	name = "medical first aid kits vendor"
+	name = "医疗急救包售货机"
 	icon_state = "medical_kits"
 
 	stored_types = list(

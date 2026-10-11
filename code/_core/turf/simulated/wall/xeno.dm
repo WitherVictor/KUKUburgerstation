@@ -1,7 +1,7 @@
 /turf/simulated/wall/xeno
-	name = "resin wall"
-	desc = "Ewww, sticky"
-	desc_extended = "A wall made of a strange resin, doesn't seem natural."
+	name = "树脂墙"
+	desc = "咦，黏糊糊的。"
+	desc_extended = "一堵由奇异树脂构成的墙，看起来不像天然形成的。"
 	icon = 'icons/turf/wall/xeno.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE

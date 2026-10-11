@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/material
-	name = "material goggles"
-	desc = "A looter's dream."
-	desc_extended = "Some almost magical goggles that allow you to see objects through walls."
+	name = "物资探测护目镜"
+	desc = "搜刮者的梦想。"
+	desc_extended = "一副近乎魔法的护目镜，让你隔着墙壁看见物品。"
 	icon = 'icons/obj/item/clothing/glasses/material.dmi'
 
 

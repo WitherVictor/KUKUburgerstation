@@ -1,5 +1,5 @@
 /mob/living/simple/leaper
-	name = "leaper"
+	name = "跃行者"
 	boss_icon_state = "leaper"
 	icon = 'icons/mob/living/simple/jungle/leaper.dmi'
 	icon_state = "living"

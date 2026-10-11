@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/shield
-	name = "basic wooden shield"
-	desc = "For the basic."
-	desc_extended = "Good for blocking melee attacks."
+	name = "基础木盾"
+	desc = "基础款，基础用。"
+	desc_extended = "适合格挡近战攻击。"
 	icon = 'icons/obj/item/shields/wooden.dmi'
 	damage_type = /damagetype/melee/club/shield
 
@@ -44,12 +44,14 @@
 
 /obj/item/weapon/melee/shield/get_examine_list(var/mob/examiner)
 	. = ..()
+	var/list/attack_display_names = list(ATTACK_TYPE_UNARMED="徒手",ATTACK_TYPE_MELEE="近战",ATTACK_TYPE_RANGED="远程",ATTACK_TYPE_MAGIC="魔法")
 	for(var/k in block_defense)
 		var/v = block_defense[k]
-		. += div("notice","[capitalize(k)] block: [v*100]%.")
+		var/attack_display = attack_display_names[k] ? attack_display_names[k] : k
+		. += div("notice","[attack_display]格挡：[v*100]%。")
 
 /obj/item/weapon/melee/shield/ballistic
-	name = "ballistic shield"
+	name = "防弹盾"
 	icon = 'icons/obj/item/shields/ballistic.dmi'
 
 	block_defense = list(
@@ -68,7 +70,7 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/melee/shield/glass
-	name = "magic glass shield"
+	name = "魔法玻璃盾"
 	icon = 'icons/obj/item/shields/glass.dmi'
 
 	block_defense = list(
@@ -85,7 +87,7 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/melee/shield/buckler
-	name = "hardened steel buckler"
+	name = "淬硬钢小圆盾"
 	icon = 'icons/obj/item/shields/buckler.dmi'
 
 	block_defense = list(
@@ -104,7 +106,7 @@
 	rarity = RARITY_COMMON
 
 /obj/item/weapon/melee/shield/great
-	name = "iron great shield"
+	name = "铁制大盾"
 	icon = 'icons/obj/item/shields/great.dmi'
 
 	block_defense = list(
@@ -125,7 +127,7 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/weapon/melee/shield/heartstone
-	name = "heartstone shield"
+	name = "心石盾"
 	icon = 'icons/obj/item/shields/heartstone.dmi'
 
 	block_defense = list(
@@ -147,7 +149,7 @@
 
 
 /obj/item/weapon/melee/shield/holy_forest
-	name = "holy forest shield"
+	name = "圣林盾"
 	icon = 'icons/obj/item/shields/holy_forest.dmi'
 
 	block_defense = list(
@@ -170,7 +172,7 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/melee/shield/leather
-	name = "leather-steel shield"
+	name = "皮革钢盾"
 	icon = 'icons/obj/item/shields/leather.dmi'
 
 	block_defense = list(
@@ -191,7 +193,7 @@
 	rarity = RARITY_COMMON
 
 /obj/item/weapon/melee/shield/mirror
-	name = "great mirror shield"
+	name = "巨型镜盾"
 	icon = 'icons/obj/item/shields/mirror.dmi'
 
 	block_defense = list(
@@ -212,7 +214,7 @@
 	rarity = RARITY_LEGENDARY
 
 /obj/item/weapon/melee/shield/redstar
-	name = "slavic redstar shield"
+	name = "斯拉夫红星盾"
 	icon = 'icons/obj/item/shields/redstar.dmi'
 
 	block_defense = list(
@@ -233,7 +235,7 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/melee/shield/spider
-	name = "red spider shield"
+	name = "红蜘蛛盾"
 	icon = 'icons/obj/item/shields/spider.dmi'
 
 	block_defense = list(
@@ -254,7 +256,7 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/melee/shield/sun
-	name = "sun shield"
+	name = "太阳盾"
 	icon = 'icons/obj/item/shields/sun.dmi'
 
 	block_defense = list(
@@ -275,7 +277,7 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/melee/shield/target
-	name = "iron target shield"
+	name = "铁制靶纹盾"
 	icon = 'icons/obj/item/shields/target.dmi'
 
 	block_defense = list(
@@ -296,7 +298,7 @@
 	rarity = RARITY_COMMON
 
 /obj/item/weapon/melee/shield/whitewood
-	name = "whitewood magic shield"
+	name = "白木魔法盾"
 	icon = 'icons/obj/item/shields/whitewood.dmi'
 
 	block_defense = list(

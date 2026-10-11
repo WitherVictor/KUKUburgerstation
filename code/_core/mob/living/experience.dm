@@ -136,9 +136,9 @@
 	if(!first && old_level != level)
 		var/decrease = old_level > level
 		if(decrease)
-			to_chat(span("warning","Your overall level decreased to [level]..."))
+			to_chat(span("warning","你的综合等级降至[level]级……"))
 		else
-			to_chat(span("notice","Your overall level increased to [level]!"))
+			to_chat(span("notice","你的综合等级升至[level]级！"))
 
 	return old_level != level
 
@@ -151,9 +151,9 @@
 	var/decrease = old_level > new_level
 
 	if(decrease)
-		to_chat(span("warning","Your [E.name] decreased from [old_level] to [new_level]..."))
+		to_chat(span("warning","你的[E.name]从[old_level]级降至[new_level]级……"))
 	else
-		to_chat(span("notice","Your [E.name] increased from [old_level] to [new_level]!"))
+		to_chat(span("notice","你的[E.name]从[old_level]级升至[new_level]级！"))
 
 	if(new_level > old_level) //Only care if it's an increase.
 		switch(E.id)

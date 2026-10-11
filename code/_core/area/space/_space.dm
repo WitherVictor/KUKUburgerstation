@@ -1,5 +1,5 @@
 /area/space
-	name = "space"
+	name = "太空"
 	icon_state = "spess"
 	ambient_temperature = 30 //Darkness of interstellar space is 3 kelvin. Setting to 30k because there are some small stars.
 
@@ -20,7 +20,7 @@
 	return TRUE
 
 /area/space/bluespace
-	name = "bluespace light"
+	name = "蓝空间光域"
 	icon_state=  "bluespess"
 
 	sunlight_color = null
@@ -29,7 +29,7 @@
 	cheese_type = /reagent/nutrition/cheese/bluespace
 
 /area/space/deep
-	name = "deep space"
+	name = "深空"
 	icon_state = "deepspess"
 
 	sunlight_color = null

@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/syndicate
-	name = "syndicate agent"
-	desc = "A member of the Syndicate crime organization."
+	name = "辛迪加特工"
+	desc = "辛迪加犯罪组织的成员。"
 	ai = /ai/advanced/syndicate
 
 	dialogue_id = /dialogue/npc/soldier
@@ -20,17 +20,17 @@
 
 
 /mob/living/advanced/npc/syndicate/soldier
-	name = "syndicate soldier"
+	name = "辛迪加士兵"
 	loadout = /loadout/syndicate/soldier
 	level = 30
 
 /mob/living/advanced/npc/syndicate/shotgunnner
-	name = "syndicate gunner"
+	name = "辛迪加枪手"
 	loadout = /loadout/syndicate/shotgunnner
 	level = 40
 
 /mob/living/advanced/npc/syndicate/hardsuit
-	name = "syndicate operative"
+	name = "辛迪加特工"
 	loadout = /loadout/syndicate/basic
 	level = 60
 
@@ -39,17 +39,17 @@
 	mana_base = 100
 
 /mob/living/advanced/npc/syndicate/hardsuit/advanced
-	name = "syndicate operative veteran"
+	name = "辛迪加资深特工"
 	loadout = /loadout/syndicate/advanced
 	level = 80
 
 /mob/living/advanced/npc/syndicate/hardsuit/elite
-	name = "syndicate operative elite"
+	name = "辛迪加精英特工"
 	loadout = /loadout/syndicate/elite
 	level = 100
 
 /mob/living/advanced/npc/syndicate/hardsuit/ultra
-	name = "syndicate operative ultra"
+	name = "辛迪加究极特工"
 	level = 120
 
 	loadout = /loadout/syndicate/ultra
@@ -59,7 +59,7 @@
 	. *= 0.5
 
 /mob/living/advanced/npc/syndicate/scientist
-	name = "syndicate scientist"
+	name = "辛迪加科学家"
 
 	loadout = /loadout/syndicate/scientist
 
@@ -67,7 +67,7 @@
 
 
 /mob/living/advanced/npc/syndicate/wizard
-	name = "syndicate spellcaster"
+	name = "辛迪加施法者"
 
 	loadout = /loadout/syndicate/wizard
 

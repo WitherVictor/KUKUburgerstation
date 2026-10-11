@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/fiendish
-	name = "\improper Fiendish Resilience"
-	desc = "Into the eternal darkness, into fire and into ice."
-	desc_extended = "A gun made out of bone of a lesser demon. Covered in vile flesh. Eats .45 ammo. Spews .45 casings."
+	name = "\improper 恶魔韧性"
+	desc = "走入永恒黑暗，走入火焰与寒冰。"
+	desc_extended = "以低阶恶魔骨骼制成的枪，包裹着污秽血肉。吞下.45弹药，吐出.45弹壳。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/fiendish.dmi'
 	icon_state = "inventory"
 	value = 3000
@@ -94,5 +94,5 @@
 	INTERACT_DELAY(1)
 
 	rotate_cylinder(-1)
-	activator?.to_chat(span("notice","You rotate a bone chamber backwards."))
+	activator?.to_chat(span("notice","你反向转动了骨制弹巢。"))
 	return TRUE

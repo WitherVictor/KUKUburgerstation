@@ -1,8 +1,8 @@
 /obj/item/clothing/mask/clown
-	name = "clown mask"
+	name = "小丑面具"
 	icon = 'icons/obj/item/clothing/masks/clown.dmi'
-	desc = "Where the clown gets their power."
-	desc_extended = "A flawless clown mask and wig."
+	desc = "小丑的力量之源。"
+	desc_extended = "完美无瑕的小丑面具和假发。"
 
 	armor = /armor/cloth/clown
 
@@ -17,7 +17,7 @@
 
 
 /obj/item/clothing/mask/clown/zombie
-	name = "zombie clown mask"
+	name = "僵尸小丑面具"
 	icon = 'icons/obj/item/clothing/masks/clown_zombie.dmi'
 
 	rarity = RARITY_RARE

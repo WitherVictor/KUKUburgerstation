@@ -3,9 +3,9 @@
 
 /obj/item/weapon/melee/sword/sabre
 
-	name = "sabre"
-	desc = "A curved sword. Curved. Sword."
-	desc_extended = "A cavalry sabre that was often used as a weapon by non-commissioned officers of the Sol Army before being replaced by energy swords, nowadays it's used as a dress decoration more than anything."
+	name = "军刀"
+	desc = "一把弯刀。弯的。刀。"
+	desc_extended = "骑兵军刀，太阳系政府军的军士曾常用作武器，后来被能量剑取代。如今更多是礼服上的装饰。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/sabre.dmi'
 
@@ -24,9 +24,9 @@
 
 
 /obj/item/weapon/melee/sword/claymore
-	name = "steel claymore sword"
-	desc = "Looking at this really makes you want to go on a crusade."
-	desc_extended = "A very basic claymore sword known for its use by knights in Medieval Europe. It is one of the most common weapons in The Realm, as it is a un-cursed version of the unholy cult blade."
+	name = "钢制双手大剑"
+	desc = "看着它，你真想来一场十字军远征。"
+	desc_extended = "基础款双手大剑，因中世纪欧洲骑士使用而闻名。它是邪秽教团之刃的无诅咒版本，也是纳尔西之域最常见的武器之一。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/claymore.dmi'
 
@@ -42,10 +42,10 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/melee/sword/claymore/cult
-	name = "cultist sword"
+	name = "邪教徒之剑"
 	icon = 'icons/obj/item/weapons/melee/swords/cult.dmi'
-	desc = "Looking at this really makes you want to go on an EVIL crusade."
-	desc_extended = "A very basic claymore sword known for its use by knights in Medieval Europe, now cursed with Nar'sie's magic."
+	desc = "看着它，你真想来一场邪恶的十字军远征。"
+	desc_extended = "基础款双手大剑，因中世纪欧洲骑士使用而闻名，如今受到了纳尔西魔法的诅咒。"
 
 	damage_type = /damagetype/melee/sword/claymore/cult
 
@@ -57,9 +57,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/melee/spear
-	name = "steel shortspear"
-	desc = "Unga bunga."
-	desc_extended = "Commonly used by the local Ashwalkers for hunting and settlement defense. Can be thrown for heavy damage."
+	name = "钢制短矛"
+	desc = "乌嘎邦嘎。"
+	desc_extended = "当地灰烬行者常用于狩猎和保卫聚落的短矛。投掷可造成大量伤害。"
 	icon = 'icons/obj/item/weapons/melee/swords/spear.dmi'
 	damage_type = /damagetype/melee/spear/basic/
 	damage_type_thrown = /damagetype/melee/spear/basic/thrown
@@ -75,9 +75,9 @@
 	rarity = RARITY_COMMON
 
 /obj/item/weapon/melee/spear/clockwork
-	name = "clockwork spear"
-	desc = "FOR RATVAR."
-	desc_extended = "A very sharp brass alloy spear. Doesn't do that much damage when thrown."
+	name = "发条长矛"
+	desc = "为了拉特瓦尔！"
+	desc_extended = "极其锋利的黄铜合金长矛，不过投掷伤害没那么高。"
 	icon = 'icons/obj/item/weapons/melee/swords/ratvar.dmi'
 	damage_type = /damagetype/melee/spear/ratvar/
 
@@ -92,9 +92,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/melee/spear/bone
-	name = "goliath bone spear"
-	desc = "Pointy end towards invaders."
-	desc_extended = "A sharp spear made out of goliath hides, sinew, and bones."
+	name = "歌利亚骨矛"
+	desc = "尖头对准入侵者。"
+	desc_extended = "用歌利亚的皮革、筋腱和骨头制成的锋利长矛。"
 	icon = 'icons/obj/item/weapons/melee/polearms/bone_spear.dmi'
 	damage_type = /damagetype/melee/spear/basic
 
@@ -113,10 +113,10 @@
 	can_wield = TRUE
 
 /obj/item/weapon/melee/sword/zweihander
-	name = "zweihander"
+	name = "双手巨剑"
 
-	desc = "THE LEGEND."
-	desc_extended = "A steel sword that makes up for it's simplicity by being heavy and huge, the Zweihander is a fearsome sight only used by PMCs with no self-regard whatsoever."
+	desc = "传奇之剑。"
+	desc_extended = "这把钢剑以巨大的体积和重量弥补了朴素设计的不足。双手巨剑的模样令人胆寒，只有完全不顾自身安危的私人军事承包人员才会使用。"
 	icon = 'icons/obj/item/weapons/melee/swords/zweihander.dmi'
 	damage_type = /damagetype/melee/sword/zweihander
 
@@ -136,9 +136,9 @@
 	return ..()
 
 /obj/item/weapon/melee/sword/curvedsword
-	name = "steel curved sword"
-	desc = "A curved blade. Poor at trusting, excells at slashing quickly."
-	desc_extended = "A standard curved sword. Capable of fast swings, and when maintained it can be exceptionally sharp."
+	name = "钢制弯刀"
+	desc = "弯曲的刀刃，不擅长突刺，却擅长快速劈砍。"
+	desc_extended = "标准弯刀，可以快速挥动，保养得当时能保持极其锋利。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/curvedsword.dmi'
 
@@ -154,9 +154,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/melee/sword/skana
-	name = "skana"
-	desc = "A lightweight metal katana that's been space-ified."
-	desc_extended = "A straight katana-like sword, with a curved starting near the end. Incredibly sharp."
+	name = "斯卡纳剑"
+	desc = "经过太空化改造的轻型金属武士刀。"
+	desc_extended = "类似武士刀的直剑，靠近剑尖处开始弯曲，极其锋利。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/skana.dmi'
 
@@ -172,9 +172,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/melee/sword/gladius
-	name = "gladius"
-	desc = "A steel bladed gladius."
-	desc_extended = "A light gladius with a bronze hilt and steel blade."
+	name = "罗马短剑"
+	desc = "钢刃罗马短剑。"
+	desc_extended = "轻型罗马短剑，配有青铜剑柄与钢制剑刃。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/gladius.dmi'
 
@@ -190,9 +190,9 @@
 	rarity = RARITY_COMMON
 
 /obj/item/weapon/melee/sword/allium
-	name = "allium"
-	desc = "An allium made of copper."
-	desc_extended = "A light copper allium, better for thrusting than a gladius."
+	name = "阿利乌姆短剑"
+	desc = "铜制阿利乌姆短剑。"
+	desc_extended = "轻型铜制阿利乌姆短剑，比罗马短剑更适合突刺。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/allium.dmi'
 

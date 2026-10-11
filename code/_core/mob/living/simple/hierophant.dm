@@ -1,5 +1,5 @@
 /mob/living/simple/hierophant
-	name = "hierophant"
+	name = "大祭司"
 	boss_icon_state = "hierophant"
 	icon = 'icons/mob/living/simple/hierophant.dmi'
 	icon_state = "living"
@@ -120,7 +120,7 @@
 
 
 /mob/living/simple/hierophant/pre_death()
-	do_say("<font color='#DD1C1F' size='4'>I WILL RETURN.</font>",FALSE)
+	do_say("<font color='#DD1C1F' size='4'>我必将归来。</font>",FALSE)
 	return ..()
 
 /mob/living/simple/hierophant/post_death()

@@ -1,5 +1,5 @@
 /turf/simulated/floor/diona
-	name = "biomass floor"
+	name = "生物质地板"
 	icon = 'icons/turf/floor/diona.dmi'
 	icon_state = "1"
 

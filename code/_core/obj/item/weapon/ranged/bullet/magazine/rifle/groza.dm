@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/groza
-	name = "\improper 9x39mm BOX-14 bullpup rifle"
-	desc = "Compact, surplus strength for a compact, surplus military."
-	desc_extended = "A fast firing automatic bullpup assault rifle acts as a cheaper alternative to the AKSU Type-13, with some parts of the frame being made out of wood for reduced part cost. Ironically, 75% of its parts originate from the AKSU Type-13."
+	name = "\improper 9x39mm BOX-14无托步枪"
+	desc = "给小规模旧式军队准备的紧凑旧式火力。"
+	desc_extended = "射速很快的自动无托突击步枪，是AKSU Type-13的廉价替代品，部分枪身使用木材以降低成本。讽刺的是，它75%的零件都来自AKSU Type-13。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/939_bullpup.dmi'
 	icon_state = "inventory"
 	value = 1700

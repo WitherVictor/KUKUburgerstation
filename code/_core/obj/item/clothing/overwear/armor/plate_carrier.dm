@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/plate_carrier
-	name = "plate carrier"
-	desc = "Standard armor for the soldiering kind."
-	desc_extended = "A plate carrier system that provides little protection alone but can be reinforced with plates. Requires an armor plate to useable. Alt-click to remove plates."
+	name = "插板背心"
+	desc = "当兵打仗的标准护甲。"
+	desc_extended = "单独使用时防护有限，装入装甲板后才能充分发挥作用。按住Alt点击可拆卸装甲板。"
 	icon = 'icons/obj/item/clothing/suit/plate_carrier.dmi'
 
 	protected_limbs = list(BODY_TORSO)
@@ -45,7 +45,7 @@
 		if(length(installed_plate_carriers) >= 2)
 			if(ismob(caller))
 				var/mob/M = caller
-				M.to_chat(span("notice","You can't fit any more plate carriers inside \the [src.name]!"))
+				M.to_chat(span("notice","[src.name]里装不下更多装甲板了！"))
 			return TRUE
 		var/obj/item/armor_plate/P = object
 		P.drop_item(src)
@@ -63,9 +63,9 @@
 		INTERACT_CHECK
 		INTERACT_DELAY(1)
 		var/mob/living/advanced/A = caller
-		var/obj/item/armor_plate/P = input(A,"What armor plates do you wish to remove?","Plate Carrier Removal") as null|anything in installed_plate_carriers
+		var/obj/item/armor_plate/P = input(A,"你想拆下哪块装甲板？","拆卸装甲板") as null|anything in installed_plate_carriers
 		if(P && (P in installed_plate_carriers))
-			A.visible_message(span("notice","\The [caller.name] removes \the [P.name] from \the [src.name]."),span("notice","You remove \the [P.name] from \the [src.name]."))
+			A.visible_message(span("notice","[caller.name]从[src.name]中拆下了[P.name]。"),span("notice","你从[src.name]中拆下了[P.name]。"))
 			P.drop_item(get_turf(src))
 			installed_plate_carriers -= P
 			A.put_in_hands(P) //This calls update_move_delay_multiplier
@@ -78,9 +78,9 @@
 	color = COLOR_BLACK
 
 /obj/item/clothing/overwear/armor/plate_carrier/pocket
-	name = "tactical plate carrier"
-	desc = "Can carry forks, spoons, and knives too."
-	desc_extended = "A plate carrier system. Requires an armor plate to useable. Can carry multiple items. Alt-click to remove plates."
+	name = "战术插板背心"
+	desc = "叉子、勺子和刀子也能装。"
+	desc_extended = "带有储物袋的插板背心，需要装入装甲板才能充分发挥防护作用。可以携带多件物品。按住Alt点击可拆卸装甲板。"
 	icon = 'icons/obj/item/clothing/suit/plate_carrier_pouched.dmi'
 
 	dyeable = TRUE

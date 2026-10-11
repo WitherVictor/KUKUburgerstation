@@ -23,7 +23,7 @@
 	return ..()
 
 /obj/item/weapon/ranged/temporary/get_examine_list(var/mob/caller)
-	return ..() + div("notice","[get_ammo_count()] uses left.")
+	return ..() + div("notice","剩余使用次数：[get_ammo_count()]。")
 
 /obj/item/weapon/ranged/temporary/handle_ammo(var/mob/caller,var/bullet_position=1)
 	var/charge_to_remove = cost_charge
@@ -35,9 +35,9 @@
 	return round(total_charge / cost_charge)
 	
 /obj/item/weapon/ranged/temporary/revolver
-	name = "Imaginary Revolver"
-	desc = "Six shots."
-	desc_extended = "Reloading like this is a revolution!"
+	name = "幻想左轮手枪"
+	desc = "六发子弹。"
+	desc_extended = "这样的装填方式简直是一场革命！"
 	icon = 'icons/obj/item/weapons/ranged/revolver/45.dmi'
 	icon_state = "inventory"
 	rarity = RARITY_COMMON

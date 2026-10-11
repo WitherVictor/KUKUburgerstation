@@ -1,5 +1,5 @@
 /area/lz_001/snow
-	name = "\improper White Forest"
+	name = "\improper 白色森林"
 	icon_state = "snow"
 	weather = WEATHER_SNOW
 	ambient_temperature = T0C - 20
@@ -21,10 +21,10 @@
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_001/snow/interior/lodge
-	name = "\improper White Forest Lodge"
+	name = "\improper 白色森林旅舍"
 	icon_state = "bar"
 
 
 /area/lz_001/snow/interior/shack
-	name = "\improper Abandoned White Forest Mining Shack"
+	name = "\improper 白色森林废弃矿工小屋"
 	icon_state = "mining"

@@ -1,7 +1,7 @@
 //Coins
 /obj/item/currency/gold_coin
-	name = "gold coin"
-	desc_extended = "Shiny gold coin, a currency often used by goblins. Its value is determined by the gold market."
+	name = "金币"
+	desc_extended = "闪亮的金币，地精常用的货币。价值由黄金市场决定。"
 	icon = 'icons/obj/item/currency/gold.dmi'
 	icon_state = "1"
 	value = 0 //Value is based on current economy, see get_base_value()
@@ -20,9 +20,9 @@
 /obj/item/currency/gold_coin/update_sprite()
 	. = ..()
 	if(amount == 1)
-		name = "1 gold coin"
+		name = "1枚金币"
 	else
-		name = "[amount] gold coins"
+		name = "[amount]枚金币"
 
 /obj/item/currency/gold_coin/update_icon()
 	. = ..()
@@ -132,9 +132,9 @@
 
 //Bars
 /obj/item/currency/gold_bar
-	name = "gold bar"
-	desc = "We're rich!"
-	desc_extended = "A bar of solid gold, likely valuable."
+	name = "金条"
+	desc = "发财啦！"
+	desc_extended = "一根纯金金条，应该很值钱。"
 	icon = 'icons/obj/item/currency/gold_bar.dmi'
 	icon_state = "1"
 
@@ -153,9 +153,9 @@
 /obj/item/currency/gold_bar/update_sprite()
 	. = ..()
 	if(amount == 1)
-		name = "1 gold bar"
+		name = "1根金条"
 	else
-		name = "[amount] gold bars"
+		name = "[amount]根金条"
 
 /obj/item/currency/gold_bar/update_overlays()
 	. = ..()

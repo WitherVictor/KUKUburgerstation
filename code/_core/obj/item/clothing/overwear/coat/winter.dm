@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/winter
-	name = "winter coat"
-	desc = "Ice climber."
-	desc_extended = "Protects against the cold, but leaves you vurnerable to heat."
+	name = "冬季外套"
+	desc = "冰山攀登者。"
+	desc_extended = "能抵御寒冷，但会让你更怕热。"
 	icon = 'icons/obj/item/clothing/suit/winter_coat.dmi'
 
 	armor = /armor/cloth/winter
@@ -21,9 +21,9 @@
 	value = 20
 
 /obj/item/clothing/overwear/coat/winter/bomber
-	name = "bomber jacket"
-	desc = "Does not actually protect against bombs."
-	desc_extended = "Does not actually protect against bombs."
+	name = "轰炸机飞行夹克"
+	desc = "其实不能防炸弹。"
+	desc_extended = "其实不能防炸弹。"
 	icon = 'icons/obj/item/clothing/suit/bomberjacket.dmi'
 	additional_clothing = null // no hood
 

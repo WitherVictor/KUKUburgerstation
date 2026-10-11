@@ -13,10 +13,10 @@
 	var/catchsound = "sound/ui/message_ping.ogg"
 
 /obj/item/fishing/lure/t1
-	name = "basic fishing lure"
+	name = "基础浮漂"
 	icon_state = "generic"
-	desc = "Lure in some fish."
-	desc_extended = "A basic fishing bob. It does the job."
+	desc = "引几条鱼来。"
+	desc_extended = "基础钓鱼浮漂，能用就行。"
 	bob_icon_state = "generic"
 
 	chance_bonus = 0
@@ -28,10 +28,10 @@
 	rarity = RARITY_COMMON
 
 /obj/item/fishing/lure/t1_easy
-	name = "easy-going fishing lure"
+	name = "休闲浮漂"
 	icon_state = "easy"
-	desc = "I just wanna fish for god's sake!"
-	desc_extended = "A comfy store-brand fishing bob designed for novice fishers. A little more pricy, but it should be good for those who are slow to fish, such as kids or the Head of Security."
+	desc = "天啊，我就想钓个鱼！"
+	desc_extended = "适合新手的舒适商店自有品牌浮漂。虽然稍贵，但适合反应慢的钓鱼人，比如小孩或安保主管。"
 	bob_icon_state = "easy"
 
 	chance_bonus = -2
@@ -43,10 +43,10 @@
 	rarity = RARITY_COMMON
 
 /obj/item/fishing/lure/t2
-	name = "commercial fishing lure"
+	name = "商业级浮漂"
 	icon_state = "commercial"
-	desc = "Commercialized fishing."
-	desc_extended = "A premium fishing bob for the premium fisherman. Very pricy but can attract all sorts of rare fish with a better grip."
+	desc = "商业化钓鱼。"
+	desc_extended = "为高端钓鱼人准备的高档浮漂。非常昂贵，能更容易吸引鱼上钩，并留出更宽裕的收线时间。"
 	bob_icon_state = "commercial"
 
 	chance_bonus = 3
@@ -58,10 +58,10 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/fishing/lure/t3
-	name = "McRobust's fishing lure"
+	name = "麦硬汉浮漂"
 	icon_state = "robust"
-	desc = "Warning: Robust."
-	desc_extended = "A very robust and very rare fishing lure for the most robust of fishermen. Can catch a lot of rare fish at an increased rate."
+	desc = "警告：硬得很。"
+	desc_extended = "极其结实、极其稀有的浮漂，专供最强悍的钓鱼人。可提高上钩频率和稀有鱼获的得分。"
 	bob_icon_state = "robust"
 
 	chance_bonus = 5
@@ -73,10 +73,10 @@
 	rarity = RARITY_RARE
 
 /obj/item/fishing/lure/t3_clown
-	name = "funny fishing bob"
+	name = "搞笑浮漂"
 	icon_state = "clown"
-	desc = "Funny how?"
-	desc_extended = "A rather peculiar clownish fishing bob. Can catch a lot of rare fish, but at what cost?"
+	desc = "哪里好笑？"
+	desc_extended = "古怪的小丑风格浮漂，可提高稀有鱼获的得分，但收线时间更短。代价就是这个？"
 	bob_icon_state = "clown"
 	catchsound = "sound/items/bikehorn.ogg"
 

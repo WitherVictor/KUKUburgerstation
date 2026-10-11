@@ -1,6 +1,6 @@
 /obj/structure/interactive/localmachine/snowflake/hint
-	name = "hint"
-	desc = "Treating you like a child since 1958."
+	name = "提示"
+	desc = "自1958年起，就一直把你当小孩照顾。"
 	invisibility = 101
 
 	icon = 'icons/hud/hints.dmi'

@@ -96,7 +96,7 @@
 
 /obj/item/crafting/ingredient/thread/durathread/space
 	name = "太空防护耐久布卷"
-	desc = "因用于制作死亡小队的枕头而闻名。"
+	desc = "因用于制作敢死队的枕头而闻名。"
 	desc_extended = "由专门培育的变异棉花制成，原本打算直接取代合成布。由于生产与维护成本高得离谱，它并未像合成布那样普及，但作为优良防护材料占据了一席之地。这卷布经过太空环境及紫外线防护处理，可用于制作舱外活动装备。"
 	value = 750
 	icon_state = "durathread_space"

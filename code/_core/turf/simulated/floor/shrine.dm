@@ -1,5 +1,5 @@
 /turf/simulated/floor/shrine
-	name = "ancient shrine floor"
+	name = "远古神龛地板"
 	icon = 'icons/turf/floor/shrine.dmi'
 	icon_state = "0"
 

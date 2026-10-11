@@ -1,7 +1,7 @@
 /mob/living/simple/passive/frog
-	name = "frog"
-	desc = "*Frog Sounds*"
-	desc_extended = "A docile frog."
+	name = "青蛙"
+	desc = "*蛙鸣声*"
+	desc_extended = "一只温顺的青蛙。"
 	icon = 'icons/mob/living/simple/frog.dmi'
 	icon_state = "living"
 	damage_type = /damagetype/unarmed/bite/

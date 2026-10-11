@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/cargo_tech
-	name = "cyborg cargo technician"
-	desc = "DO YOU REQUIRE HELP?"
-	desc_extended = "A NanoTrasen model Cyborg unit programmed to assist those in asking stupid questions."
+	name = "半机械人货运技师"
+	desc = "你需要帮助吗？"
+	desc_extended = "纳米传讯生产的半机械人，按程序帮助那些提出蠢问题的人。"
 	ai = /ai/advanced/guarding
 
 	move_mod = 1

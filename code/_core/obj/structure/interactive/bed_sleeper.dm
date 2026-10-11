@@ -1,5 +1,5 @@
 /obj/structure/interactive/bed/sleeper
-	name = "sleeper"
+	name = "休眠舱"
 	icon_state = "sleeper"
 	icon = 'icons/obj/structure/sleeper.dmi'
 	icon_state = "sleeper"

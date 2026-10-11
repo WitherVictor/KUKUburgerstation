@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/lizard_shaman
-	name = "lizard shaman helmet"
+	name = "蜥蜴人萨满头盔"
 	icon = 'icons/obj/item/clothing/hats/lizard_shaman.dmi'
 
 	hidden_organs = list(

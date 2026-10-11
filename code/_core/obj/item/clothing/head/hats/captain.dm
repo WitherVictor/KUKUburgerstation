@@ -1,5 +1,5 @@
 /obj/item/clothing/head/hat/captain
-	name = "\improper Captain's hat"
+	name = "\improper 站长帽"
 	icon = 'icons/obj/item/clothing/hats/captain.dmi'
 
 	armor = /armor/leather/hard

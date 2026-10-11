@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/hydroponics/nutri
-	name = "nutriment vendor"
+	name = "园艺营养品售货机"
 	icon_state = "nutri"
 	stored_types = list(
 		/obj/item/container/simple/beaker/bucket/water,
@@ -11,7 +11,7 @@
 	)
 
 /obj/structure/interactive/vending/hydroponics/seeds
-	name = "seeds vendor"
+	name = "种子售货机"
 	icon_state = "seeds"
 
 /obj/structure/interactive/vending/hydroponics/seeds

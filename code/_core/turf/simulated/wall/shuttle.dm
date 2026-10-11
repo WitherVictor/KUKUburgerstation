@@ -1,7 +1,7 @@
 /turf/simulated/wall/shuttle
-	name = "shuttle wall"
-	desc = "Brace for landing"
-	desc_extended = "The wall of a shuttle."
+	name = "穿梭机墙壁"
+	desc = "做好着陆准备。"
+	desc_extended = "穿梭机的墙壁。"
 	icon = 'icons/turf/wall/metal/shuttle.dmi'
 	icon_state = "wall"
 	corner_category = "shuttle"

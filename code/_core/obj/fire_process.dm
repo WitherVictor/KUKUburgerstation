@@ -24,7 +24,7 @@
 
 /obj/fire_process
 
-	name = "ground fire"
+	name = "地面火焰"
 
 	icon = 'icons/obj/effects/fire_turf.dmi'
 	icon_state = "fire_3"

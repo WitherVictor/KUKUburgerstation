@@ -1,7 +1,7 @@
 /mob/living/simple/bot
-	name = "bot"
-	desc = "It's a bot."
-	desc_extended = "This is a bot."
+	name = "机器人"
+	desc = "是个机器人。"
+	desc_extended = "这是一台机器人。"
 
 	size = SIZE_ANIMAL
 

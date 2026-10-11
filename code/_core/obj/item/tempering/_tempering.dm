@@ -1,5 +1,5 @@
 /obj/item/tempering
-	name = "tempering object"
+	name = "强化用品"
 	icon = 'icons/obj/item/tempering.dmi'
 	icon_state = "error"
 
@@ -24,13 +24,13 @@
 
 /obj/item/tempering/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Use ALT+Click to bypass confirmation prompts and to use on objects that hold inventory.")
+	. += span("notice","使用ALT+单击可跳过确认提示，并可对带有储物空间的物品使用。")
 	if(uses_left == -1)
-		. += span("notice","There are <b>unlimited</b> uses left.")
+		. += span("notice","使用次数<b>无限</b>。")
 	else if(uses_left <= 0)
-		. += span("warning","There are no uses left.")
+		. += span("warning","使用次数已耗尽。")
 	else
-		. += span("notice","There are <b>[uses_left]</b> uses left.")
+		. += span("notice","还可使用<b>[uses_left]</b>次。")
 
 /obj/item/tempering/click_on_object(var/mob/activator,var/atom/object,location,control,params)
 
@@ -43,8 +43,9 @@
 			return TRUE
 		else if(!is_inventory(object))
 			if(can_temper(activator,object))
-				var/choice = input("Are you sure you want to temper \the [object.name]?","ALT+Click to skip this next time") as null|anything in list("Yes","No","Cancel")
-				if(choice == "Yes")
+				var/list/choices = list("是"="Yes","否"="No","取消"="Cancel")
+				var/choice = input("确定要强化[object.name]吗？","下次使用ALT+单击可跳过确认") as null|anything in choices
+				if(choice && choices[choice] == "Yes")
 					INTERACT_CHECK
 					INTERACT_CHECK_OBJECT
 					on_temper(activator,object)
@@ -56,12 +57,12 @@
 
 	//Check if there are uses.
 	if(uses_left != -1 && uses_left <= 0)
-		activator.to_chat(span("warning","The [src.name] has no uses left!"))
+		activator.to_chat(span("warning","[src.name]的使用次数已耗尽！"))
 		return FALSE
 
 	//Check if the object can save.
 	if(!I.can_save)
-		activator.to_chat(span("warning","You can't temper \the [I.name] with \the [src.name]! Try tempering the main part of this clothing set."))
+		activator.to_chat(span("warning","无法用[src.name]强化[I.name]！请尝试强化这套服装的主体部分。"))
 		return FALSE
 
 	//Check the type.
@@ -76,7 +77,7 @@
 		is_valid_object = TRUE
 
 	if(!is_valid_object)
-		activator.to_chat(span("warning","You can't temper \the [I.name] with \the [src.name]!"))
+		activator.to_chat(span("warning","无法用[src.name]强化[I.name]！"))
 		return FALSE
 
 	return TRUE
@@ -84,8 +85,8 @@
 /obj/item/tempering/proc/on_temper(var/mob/activator,var/obj/item/I)
 
 	activator.visible_message(
-		span("notice","\The [activator.name] improves \the [I.name] with \the [src.name]."),
-		span("notice","You improve \the [I.name] with \the [src.name].")
+		span("notice","[activator.name]用[src.name]强化了[I.name]。"),
+		span("notice","你用[src.name]强化了[I.name]。")
 	)
 
 	if(is_clothing(I))

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/tesla
-	name = "tesla blast spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a blast of tesla bolts in random directions."
+	name = "特斯拉爆发法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "向随机方向爆发出一阵特斯拉电弧。"
 	icon_state = "damage"
 
 	rarity = RARITY_UNCOMMON

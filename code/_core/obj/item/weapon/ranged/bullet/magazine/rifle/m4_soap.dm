@@ -1,8 +1,8 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/m4_soap
 
 	name = "\improper 5.56mm M5 SOAPMOD"
-	desc = "Made in the Space Colonies!"
-	desc_extended = "A tactically modified version of the M5A2 assault rifle, with built-in attachments for squeaky-clean operations."
+	desc = "太空殖民地制造！"
+	desc_extended = "M5A2突击步枪的战术改装版，内置配件，确保行动‘干干净净’。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/merc_nt.dmi'
 	icon_state = "inventory"
 	value = 1800

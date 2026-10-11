@@ -1,5 +1,5 @@
 /obj/projectile/spray
-	name = "spray"
+	name = "喷雾"
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 	icon = 'icons/obj/projectiles/spray.dmi'
 	icon_state = "placeholder"
@@ -46,7 +46,7 @@
 
 
 /obj/projectile/extinguisher_spray
-	name = "spray"
+	name = "喷雾"
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 	icon = 'icons/obj/projectiles/spray.dmi'
 	icon_state = "spray"

@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/black_boots
-	name = "right black boot"
-	desc = "For when you want to turn up the heat a little."
-	desc_extended = "A black combat boot. Shields your feet from shrapnel."
+	name = "黑色右靴"
+	desc = "适合你想让场面稍微热闹一点的时候。"
+	desc_extended = "一只黑色战斗靴，保护双脚免受弹片伤害。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -21,7 +21,7 @@
 
 
 /obj/item/clothing/feet/shoes/black_boots/left
-	name = "left black boot"
+	name = "黑色左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

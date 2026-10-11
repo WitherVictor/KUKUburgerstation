@@ -1,7 +1,7 @@
 /obj/structure/interactive/crate/chest
-	name = "treasure chest"
-	desc = "THERE BE TREASURE!"
-	desc_extended = "An old-fashioned, but tough wooden chest. Fitted with an equally old-fashioned keylock."
+	name = "宝箱"
+	desc = "这里有宝藏！"
+	desc_extended = "老式但坚固的木箱，装着同样老式的钥匙锁。"
 	icon_state = "chest"
 
 	var/locked = TRUE
@@ -29,9 +29,9 @@
 /obj/structure/interactive/crate/chest/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(locked == TRUE)
-		. += span("notice","It's locked, but you could try your hand at picking the lock...")
+		. += span("notice","锁着，不过你可以试着撬开……")
 	else
-		. += span("notice","It's unlocked!")
+		. += span("notice","已经解锁了！")
 
 /obj/structure/interactive/crate/chest/on_chunk_clean()
 	if(locked || current_user)
@@ -65,7 +65,7 @@
 		L.difficulty = round(L.difficulty+1,1)
 
 	HOOK_ADD("post_move","\ref[src]_post_move",A,src,src::boot_lockpicker())
-	visible_message(span("notice","\The [A.name] starts picking \the [src.name]'s lock..."))
+	visible_message(span("notice","[A.name]开始撬[src.name]的锁……"))
 	return TRUE
 
 /obj/structure/interactive/crate/chest/proc/boot_lockpicker()
@@ -78,7 +78,7 @@
 
 	HOOK_REMOVE("post_move","\ref[src]_post_move",current_user)
 
-	visible_message(span("notice","\The [current_user.name] stops picking \the [src.name]'s lock."))
+	visible_message(span("notice","[current_user.name]停止撬[src.name]的锁。"))
 
 	current_user = null
 
@@ -96,7 +96,7 @@
 			if(current_user.dead || current_user.qdeleting || current_user.horizontal || !current_user.ckey)
 				boot_lockpicker()
 			else
-				activator.to_chat(span("notice","\The [current_user.name] is currently lockpicking this!"))
+				activator.to_chat(span("notice","[current_user.name]正在撬这个锁！"))
 				return TRUE
 		//Begin lockpicking
 		create_lockpicker(activator)

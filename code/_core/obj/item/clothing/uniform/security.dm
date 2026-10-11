@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/security
-	name = "outdated security uniform"
-	desc = "I swear his head was already caved in when i found him!"
-	desc_extended = "The old shitcurity uniform."
+	name = "旧式安保制服"
+	desc = "我发誓，发现他的时候，他的脑袋就已经被打扁了！"
+	desc_extended = "烂安保以前穿的制服。"
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 	icon = 'icons/obj/item/clothing/uniforms/security.dmi'
 
@@ -21,9 +21,9 @@
 
 
 /obj/item/clothing/uniform/ABOMB
-	name = "\improper A.B.O.M.B. uniform"
-	desc = "LOOK OUT JC!"
-	desc_extended = "It's said a team of scientists were close to figuring out what the acronym means, but were interrupted when A BOMB was found in their building."
+	name = "\improper A.B.O.M.B.制服"
+	desc = "JC，小心！"
+	desc_extended = "据说，一组科学家差点解开这个缩写的含义，却因为楼里发现了一枚炸弹（A BOMB）而中断了研究。"
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 	icon = 'icons/obj/item/clothing/uniforms/abomb_suit.dmi'
 

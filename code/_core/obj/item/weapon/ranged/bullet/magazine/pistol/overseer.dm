@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/overseer
-	name = "\improper 12.7mm High-Power Auto pistol"
-	desc = "The \"Auto\" is for semiauto. An automatic 12.7mm pistol would be silly!"
-	desc_extended = "A very powerful semiautomatic pistol designed for high ranking NanoTrasen commanders."
+	name = "\improper 12.7mm强威自动手枪"
+	desc = "这里的‘自动’指半自动。全自动12.7mm手枪也太离谱了！"
+	desc_extended = "为纳米传讯高级指挥官设计的强力半自动手枪。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/12mm_nt.dmi'
 	icon_state = "inventory"
 	value = 700
@@ -78,9 +78,9 @@
 	return max(0,0.01 - (0.01 * L.get_skill_power(SKILL_RANGED)))
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/overseer/mod
-	name = "\improper 12.7mm High-Power Auto MOD"
-	desc = "The \"Auto\" is for semiauto."
-	desc_extended = "A prototype of the High-Power Auto commonly seen in the hands of NanoTrasen commanders. This variant is made with higher quality parts and is commonly used by mercenaries."
+	name = "\improper 12.7mm强威自动手枪改装型"
+	desc = "这把的‘自动’，可是全自动。"
+	desc_extended = "纳米传讯指挥官常用的强威自动手枪之原型版本，采用品质更高的零件，常见于雇佣兵手中。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/12mm_nt_proto.dmi'
 	icon_state = "inventory"
 	value = 2000

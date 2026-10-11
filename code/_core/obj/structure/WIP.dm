@@ -1,7 +1,7 @@
 /obj/structure/wip
-	name = "work in progress"
-	desc = "This area is a work in progress."
-	desc_extended = "Hello, if you're seeing this, it means that this area is still a work in progress and doesn't really have much to do. Please turn back unless you wish to experience nothing."
+	name = "施工中"
+	desc = "这个区域仍在施工。"
+	desc_extended = "你好，看到这个标志就说明此处仍在施工，暂时没什么可玩的。除非你想体验一片空白，否则请回头。"
 
 	icon = 'icons/debug/work_in_progress.dmi'
 	icon_state = "WIP"
@@ -13,8 +13,8 @@
 
 
 /obj/structure/wip/main
-	name = "oh god oh fuck"
-	desc = "muh immersion"
+	name = "天啊，卧槽"
+	desc = "我的沉浸感啊"
 	icon = 'icons/meme.dmi'
 	icon_state = "unga"
 
@@ -23,9 +23,9 @@
 
 
 /obj/structure/wip/meme
-	name = "WOW"
-	desc = "IT'S FUCKING NOTHING."
-	desc_extended = "Imagine adding an area, only to add literally nothing else to it."
+	name = "哇哦"
+	desc = "他妈的什么都没有。"
+	desc_extended = "想象一下：建了一个区域，然后里面什么都没放。"
 	icon = 'icons/meme2.dmi'
 	icon_state = "nothing"
 	pixel_x = 16-55

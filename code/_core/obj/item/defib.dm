@@ -1,8 +1,8 @@
 /obj/item/defib
-	name = "defibrillator"
+	name = "除颤器"
 	icon = 'icons/obj/item/defib.dmi'
-	desc = "A spaceman's last hope."
-	desc_extended = "A heavy-duty auto-charging defibrillator designed to restart a patient's heart."
+	desc = "太空人的最后希望。"
+	desc_extended = "可自动充能的重型除颤器，用于让患者的心脏重新跳动。"
 
 	var/obj/item/defib_paddle/paddle_left
 	var/obj/item/defib_paddle/paddle_right
@@ -22,14 +22,14 @@
 /obj/item/defib/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(item_slot == SLOT_TORSO_BACK) //shitcode is my passion
-		. += span("notice","Put it on your back to be able to take out the paddles, or ALT+Click it if it's on the ground.<br>Requires both empty hands to pick up and use.")
+		. += span("notice","装备在背部后可取出电极板；放在地上时，按住Alt点击也可取出。<br>取用并操作两块电极板需要双手空闲。")
 	else
-		. += span("notice","Put it on your belt slot to be able to take out the paddles, or ALT+Click it if it's on the ground.<br>Requires both empty hands to pick up and use.")
+		. += span("notice","装备在腰带槽后可取出电极板；放在地上时，按住Alt点击也可取出。<br>取用并操作两块电极板需要双手空闲。")
 
 /obj/item/defib/belt
-	name = "compact defibrillator"
+	name = "便携式除颤器"
 	icon = 'icons/obj/item/clothing/belts/compact_defib.dmi'
-	desc_extended = "An auto-charging defibrillator designed to restart a patient's heart. Now in a smaller size!"
+	desc_extended = "可自动充能的除颤器，用于让患者的心脏重新跳动。现在体积更小了！"
 
 	size = SIZE_2
 	item_slot = SLOT_GROIN_BELT
@@ -66,7 +66,7 @@
 
 	var/turf/T = get_turf(target)
 
-	activator.visible_message(span("danger","\The [activator.name] charges up \the [src.name]..."),span("warning","You charge up \the [src.name]..."))
+	activator.visible_message(span("danger","[activator.name]正在给[src.name]充能……"),span("warning","你正在给[src.name]充能……"))
 
 	play_sound('sound/items/defib/defib_charge.ogg',T,range_max=VIEW_RANGE)
 	create_alert(VIEW_RANGE,T,activator,ALERT_LEVEL_NOISE)
@@ -90,7 +90,7 @@
 
 	var/turf/T = get_turf(target)
 
-	activator.visible_message(span("notice","\The [activator.name] shocks \the [target.name] with \the [src.name]!"),span("notice","You shock \the [target.name] with \the [src.name]!"))
+	activator.visible_message(span("notice","[activator.name]用[src.name]电击了[target.name]！"),span("notice","你用[src.name]电击了[target.name]！"))
 
 	play_sound('sound/items/defib/defib_zap.ogg',T,range_max=VIEW_RANGE)
 	create_alert(VIEW_RANGE,T,activator,ALERT_LEVEL_NOISE)
@@ -101,7 +101,7 @@
 		target.add_status_effect(ADRENALINE,100,100)
 
 	if(target.check_death() || (target.dead && !target.is_player_controlled()) || target.suicide)
-		target.visible_message(span("warning","Nothing happens..."))
+		target.visible_message(span("warning","什么也没发生……"))
 		play_sound('sound/items/defib/defib_failed.ogg',T,range_max=VIEW_RANGE)
 		create_alert(VIEW_RANGE,T,activator,ALERT_LEVEL_NOISE)
 		return FALSE
@@ -111,7 +111,7 @@
 
 	if(target_dead) //Was dead
 		target.revive()
-		activator.visible_message(span("danger","\The [target.name] jolts to life!"))
+		activator.visible_message(span("danger","[target.name]猛地抽动，恢复了生机！"))
 		/* TODO, CHECK THE JOB INSTEAD.
 		if(money && is_player(activator) && is_player(target))
 			var/mob/living/advanced/player/PC = activator
@@ -171,9 +171,9 @@
 		paddle_right.drop_item(src)
 
 /obj/item/defib_paddle
-	name = "defibrillator paddle"
-	desc = "Clear!"
-	desc_extended = "A singular defibrillator paddle. Apply both to a recently deceased patient and pray."
+	name = "除颤电极板"
+	desc = "都闪开！"
+	desc_extended = "一块除颤电极板。将两块都贴在刚去世的患者身上，然后祈祷吧。"
 	icon = 'icons/obj/item/defib_paddle.dmi'
 	var/obj/item/defib/linked_defib
 	var/placed_target_ref //While refs can be replaced by other objects, placing the last paddle with check if it's a valid ref.
@@ -206,7 +206,7 @@
 		INTERACT_CHECK
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(10)
-		activator.to_chat(span("danger","Paddle error detected. Tell burger how you encountered this bug."))
+		activator.to_chat(span("danger","除颤电极板发生错误。请向Burger说明你是如何遇到这个问题的。"))
 		return TRUE
 
 	if(object == linked_defib)
@@ -220,10 +220,10 @@
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(1)
 		if(placed_target_ref == "\ref[object]")
-			activator.visible_message(span("notice","\The [activator.name] removes \a [src.name] from [object.name]'s chest..."),span("warning","You remove \the [src.name] from \the [object.name]'s chest..."))
+			activator.visible_message(span("notice","[activator.name]从[object.name]胸前移开了[src.name]……"),span("warning","你从[object.name]胸前移开了[src.name]……"))
 			placed_target_ref = null
 		else
-			activator.visible_message(span("danger","\The [activator.name] places \a [src.name] on [object.name]'s chest..."),span("warning","You place \the [src.name] on \the [object.name]'s chest..."))
+			activator.visible_message(span("danger","[activator.name]把[src.name]贴在[object.name]胸前……"),span("warning","你把[src.name]贴在[object.name]胸前……"))
 			placed_target_ref = "\ref[object]"
 			linked_defib.on_paddle(activator)
 		return TRUE

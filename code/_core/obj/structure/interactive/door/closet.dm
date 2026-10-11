@@ -1,5 +1,5 @@
 obj/structure/interactive/door/closet
-	name = "wall closet door"
+	name = "壁橱门"
 	icon_state = "closet"
 	color = COLOR_WOOD
 	dir_offset = -5

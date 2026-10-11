@@ -1,7 +1,7 @@
 /obj/item/mech_delivery
-	name = "mech chassis delivery utility"
-	desc = "Also works as a beacon."
-	desc_extended = "A tablet to manage your collection of mechs and summon them anywhere. NOTICE: NT is not responsible for any injuries caused by state-of-the-art precision launched mech storage pods."
+	name = "机甲底盘配送终端"
+	desc = "还能当信标用。"
+	desc_extended = "用于管理你的机甲收藏并随地召唤机甲的平板终端。注意：对于先进精确投送式机甲储存舱造成的任何人身伤害，纳米传讯概不负责。"
 	icon = 'icons/obj/item/supply_remote_mech.dmi'
 	icon_state = "inventory"
 	value = 1000
@@ -20,10 +20,12 @@
 	var/mob/living/advanced/player/P = caller
 
 	if(!P.allow_save)
-		P.to_chat(span("warning","You don't seem to know how this works..."))
+		P.to_chat(span("warning","你似乎不知道这东西该怎么用……"))
 		return FALSE
 
-	var/menu_choice = input("What would you like to do?","Mech Delivery Unit","Cancel") as null|anything in list("Create New Mech (1000 credits)","Loading Existing Mech (500 credits)","Cancel")
+	var/list/menu_labels = list("创建新机甲（1000信用点）"="Create New Mech (1000 credits)","调取已有机甲（500信用点）"="Loading Existing Mech (500 credits)","取消"="Cancel")
+	var/menu_choice = input("你想进行哪项操作？","机甲配送终端","取消") as null|anything in menu_labels
+	menu_choice = menu_labels[menu_choice]
 
 	INTERACT_CHECK_OTHER(src) //Hacky
 
@@ -34,17 +36,19 @@
 			var/savedata/client/mob/M = MOBDATA(P.ckey)
 			var/existing_mechs = M.loaded_data["stored_mechs"]
 			if(length(existing_mechs) >= 5)
-				caller.to_chat(span("warning","Error: You reached your limit of 5 mechs! Load an existing one instead!"))
+				caller.to_chat(span("warning","错误：你已达到5台机甲的持有上限！请调取已有机甲！"))
 				return TRUE
-			var/confirmation = input("Are you sure you wish to create a new mech chasis? This will cost 1000 credits and take up 1 out of [5-length(existing_mechs)] remaining mech slots.","Mech Creation","Cancel") as null|anything in list("Yes","No","Cancel")
+			var/list/confirmation_labels = list("是"="Yes","否"="No","取消"="Cancel")
+			var/confirmation = input("确定要创建新的机甲底盘吗？这将花费1000信用点，并占用剩余[5-length(existing_mechs)]个机甲名额中的1个。","创建机甲","取消") as null|anything in confirmation_labels
+			confirmation = confirmation_labels[confirmation]
 			if(confirmation != "Yes")
 				return TRUE
 
 			if(P.currency < 1000)
-				P.to_chat(span("warning","You don't have enough credits to purchase a mech!"))
+				P.to_chat(span("warning","你的信用点不足，无法购买机甲！"))
 				return TRUE
 
-			P.to_chat(span("notice","A mech is being deployed to your location! Clear the area!"))
+			P.to_chat(span("notice","一台机甲正被投送到你所在的位置！请清空周围区域！"))
 
 			var/turf/caller_turf = get_turf(src)
 
@@ -71,7 +75,7 @@
 			var/existing_mechs = M.loaded_data["stored_mechs"]
 
 			if(length(existing_mechs) <= 0)
-				P.to_chat(span("notice","You don't have a mech to load! Create a new one through the main menu!"))
+				P.to_chat(span("notice","你没有可调取的机甲！请返回主菜单创建一台！"))
 				return TRUE
 
 			var/list/mech_choices = list()
@@ -83,10 +87,10 @@
 				mech_choices["[i]: [mech_name]"] = md5_id
 				i++
 
-			mech_choices["Cancel"] = "Cancel"
+			mech_choices["取消"] = "Cancel"
 
-			var/mech_choice = input("What mech would you like to load?","Mech Selection","Cancel") as null|anything in mech_choices
-			if(!mech_choice || mech_choice == "Cancel")
+			var/mech_choice = input("你想调取哪台机甲？","选择机甲","取消") as null|anything in mech_choices
+			if(!mech_choice || mech_choices[mech_choice] == "Cancel")
 				return TRUE
 
 			var/md5_id = mech_choices[mech_choice]
@@ -94,7 +98,7 @@
 			if(stored_mechs_by_ckey[P.ckey] && length(stored_mechs_by_ckey[P.ckey]))
 				for(var/mob/living/vehicle/mech/modular/V in stored_mechs_by_ckey[P.ckey])
 					if(V.mech_id == md5_id)
-						P.to_chat(span("warning","ERROR: That mech has already been delivered!"))
+						P.to_chat(span("warning","错误：那台机甲已经配送过了！"))
 						return TRUE
 
 			var/turf/caller_turf = get_turf(src)

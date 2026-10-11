@@ -1,7 +1,7 @@
 /turf/simulated/wall/plastic
-	name = "plastic wall"
-	desc = "Flexible"
-	desc_extended = " A wall made of plastic."
+	name = "塑料墙"
+	desc = "柔韧。"
+	desc_extended = "一堵塑料制成的墙。"
 	icon = 'icons/turf/wall/plastic.dmi'
 	icon_state = "wall"
 	corner_icons = TRUE
@@ -12,15 +12,15 @@
 	health_base = 500
 
 /turf/simulated/wall/plastic/office
-	name = "office wall"
-	desc = "Flexible"
-	desc_extended = " A wall made of plastic. This one seems boring."
+	name = "办公室墙壁"
+	desc = "柔韧。"
+	desc_extended = "一堵塑料制成的墙，看起来很单调。"
 	color = "#DED4C8"
 
 /turf/simulated/wall/plastic/wizard
-	name = "wizard wall"
-	desc = "Flexible"
-	desc_extended = " A wall made of plastic. This one seems magical."
+	name = "巫师墙壁"
+	desc = "柔韧。"
+	desc_extended = "一堵塑料制成的墙，似乎带有魔力。"
 	color = "#8034B2"
 
 

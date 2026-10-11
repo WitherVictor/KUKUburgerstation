@@ -1,7 +1,7 @@
 /obj/item/dice
-	name = "dice"
-	desc = "For people who like to game."
-	desc_extended = "A perfectly crafted, absolutely even dice that cannot be influenced by external factors."
+	name = "骰子"
+	desc = "献给喜欢玩游戏的人。"
+	desc_extended = "制作完美、绝对均匀的骰子，不受外部因素影响。"
 	icon = 'icons/obj/item/dice.dmi'
 	icon_state = null
 
@@ -28,9 +28,9 @@
 
 	if(!silent)
 		if(activator)
-			activator.visible_message(span("notice","\The [activator.name] rolls \the [src.name]. It lands on [chosen_number]."))
+			activator.visible_message(span("notice","[activator.name]掷出[src.name]，点数是[chosen_number]。"))
 		else
-			src.visible_message(span("notice","\The [src.name] rolls. It lands on [chosen_number]."))
+			src.visible_message(span("notice","[src.name]滚动着停下，点数是[chosen_number]。"))
 
 	return TRUE
 
@@ -55,7 +55,7 @@
 
 
 /obj/item/dice/d6
-	name = "d6"
+	name = "六面骰（d6）"
 	icon_state = "d6"
 	max_states = 6
 
@@ -67,14 +67,14 @@
 	value = 20
 
 /obj/item/dice/d20
-	name = "d20"
+	name = "二十面骰（d20）"
 	icon_state = "d20"
 	max_states = 20
 
 	value = 40
 
 /obj/item/dice/d20/cursed
-	name = "d20 of chance"
+	name = "命运二十面骰（d20）"
 	icon_state = "d20_cursed"
 	max_states = 20
 	var/used = 0
@@ -122,52 +122,52 @@
 
 	if(luck_to_add)
 		if(luck_to_add < 0)
-			L.to_chat(span("warning","Uh oh."))
+			L.to_chat(span("warning","糟糕。"))
 		else
-			L.to_chat(span("notice","Yipee!"))
+			L.to_chat(span("notice","太棒了！"))
 		L.add_attribute_xp(ATTRIBUTE_LUCK,luck_to_add)
 	else
-		L.to_chat(span("notice","Huh."))
+		L.to_chat(span("notice","嗯？"))
 
-	visible_message(span(luck_to_add >= 0 ? "notice" : "warning","\The [src.name] glows faintly..."))
+	visible_message(span(luck_to_add >= 0 ? "notice" : "warning","[src.name]泛起微光……"))
 
 /obj/item/dice/d2
-	name = "d2"
+	name = "二面骰（d2）"
 	icon_state = "d2"
 	max_states = 2
 
 	value = 40
 
 /obj/item/dice/d4
-	name = "d4"
+	name = "四面骰（d4）"
 	icon_state = "d4"
 	max_states = 4
 
 	value = 40
 
 /obj/item/dice/d8
-	name = "d8"
+	name = "八面骰（d8）"
 	icon_state = "d8"
 	max_states = 8
 
 	value = 40
 
 /obj/item/dice/d10
-	name = "d10"
+	name = "十面骰（d10）"
 	icon_state = "d10"
 	max_states = 10
 
 	value = 40
 
 /obj/item/dice/d00
-	name = "d00"
+	name = "十位骰（d00）"
 	icon_state = "d00"
 	max_states = 10
 
 	value = 40
 
 /obj/item/dice/d12
-	name = "d12"
+	name = "十二面骰（d12）"
 	icon_state = "d12"
 	max_states = 12
 

@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/candle
-	name = "candle"
+	name = "蜡烛"
 	icon = 'icons/obj/structure/light.dmi'
 	icon_state = "candle"
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/metronome
-	name = "Soupy's All Purpose spell gem"
-	desc = "The source of all... everything, I guess"
-	desc_extended = "Soupy the Bozomancer spent a decade crafting the perfect spell, enabling all spells at any time from a single gem. Upon perfecting his masterpiece, he resigned his position as leader of the Syndicate to run Donk Co."
+	name = "苏皮的万能法术宝石"
+	desc = "一切……大概是一切东西的源泉。"
+	desc_extended = "滑稽法师苏皮花了十年打造完美法术，让一颗宝石就能随时施放所有法术。完成这件杰作后，他辞去辛迪加领袖之职，转而经营咚克公司。"
 	icon_state = "damage"
 
 	shoot_delay = 1.5

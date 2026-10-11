@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/skeleton_miner
-	name = "skeleton miner minion"
-	desc = "Worked to the bone."
-	desc_extended = "A reanimated magical skeleton forced to work the phoron mines of the Syndicate for all eternity."
+	name = "骷髅矿工仆从"
+	desc = "累得只剩骨头了。"
+	desc_extended = "一具被魔法复生的骷髅，被迫永远在辛迪加的佛隆矿场劳作。"
 
 	species = "skeleton"
 	sex = MALE

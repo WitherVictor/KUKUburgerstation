@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/burst
 	name = "\improper 5.56mm L-HON"
-	desc = "Made in Space France!"
-	desc_extended = "A 3-round burst assault rifle designed to quickly put down targets at medium to long ranges. Used commonly by NanoTrasen forces who can't decide between a submachine gun or an assault rifle."
+	desc = "太空法国制造！"
+	desc_extended = "采用三发点射的突击步枪，用于快速击倒中远距离目标。拿不定主意该用冲锋枪还是突击步枪的纳米传讯士兵，常常选择它。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_3.dmi'
 	icon_state = "inventory"
 	value = 1800
@@ -90,7 +90,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/burst/mod
 	name = "\improper 5.56mm L-HON-0"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_3_new.dmi'
-	desc_extended = "A very early prototype of NanoTrasen's L-HON when it was actually Solarian's L-HON. This prototype is made with higher quality materials which allows for a significantly high rate of fire. Usually coveted by collectors and mercenaries alike."
+	desc_extended = "纳米传讯L-HON的极早期原型，当时它其实还属于太阳系。这款原型采用更高品质的材料，射速显著更高，收藏家和雇佣兵都对它趋之若鹜。"
 
 	company_type = "Solarian"
 

@@ -1,9 +1,9 @@
 /obj/item/clothing/pants/skirt
-	name = "skirt"
+	name = "短裙"
 	icon = 'icons/obj/item/clothing/pants/skirt.dmi'
 
-	desc = "For letting people know that you're a woman and/or a programmer."
-	desc_extended = "The peak of fashion."
+	desc = "让别人知道你是女性，或者程序员，或者两者都是。"
+	desc_extended = "时尚的巅峰。"
 
 	armor = /armor/cloth/summer
 
@@ -29,18 +29,18 @@
 	)
 
 /obj/item/clothing/pants/skirt/striped
-	name = "striped skirt"
-	desc = "*me waves"
-	desc_extended = "A skirt most commonly seen on female mimes. Careful to not get put in an invisible box."
+	name = "条纹短裙"
+	desc = "*挥手*"
+	desc_extended = "女默剧演员最常穿的短裙。小心别被关进隐形箱子里。"
 	polymorphs = list(
 		"skirt" = COLOR_WHITE,
 		"stripes" = COLOR_BLACK
 	)
 
 /obj/item/clothing/pants/skirt/grey
-	name = "assistant skirt"
-	desc = "Whoops, I accidentally jabbed you with a spear, tee-hee!"
-	desc_extended = "When you want to be a shitter, but also look cute when you're doing it."
+	name = "助理短裙"
+	desc = "哎呀，不小心拿长矛戳到你了，嘻嘻！"
+	desc_extended = "想当捣蛋鬼，又想捣蛋时显得可爱？穿这个吧。"
 	polymorphs = list(
 		"skirt" = COLOR_GREY
 	)

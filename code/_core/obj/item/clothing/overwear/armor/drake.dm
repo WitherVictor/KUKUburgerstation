@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/drake_armor
-	name = "ash drake armor"
-	desc = "More like Drakeskin Armor, eh?"
-	desc_extended = "Armor made from the hardened scales of an Elder Ash Drake."
+	name = "灰烬飞龙护甲"
+	desc = "叫飞龙皮甲更合适吧？"
+	desc_extended = "用远古灰烬飞龙的坚硬鳞片制成的护甲。"
 	icon = 'icons/obj/item/clothing/suit/drake_armor.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 

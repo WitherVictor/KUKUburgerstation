@@ -1,7 +1,7 @@
 /mob/living/simple/crab
-	name = "crab"
-	desc = "Look, sir! Free crabs!"
-	desc_extended = "A harmless critter. Or so it may seem."
+	name = "螃蟹"
+	desc = "长官，快看！免费的螃蟹！"
+	desc_extended = "一只无害的小动物。至少看起来如此。"
 	icon = 'icons/mob/living/simple/crab.dmi'
 	icon_state = "crab"
 	damage_type = /damagetype/npc/crab
@@ -46,9 +46,9 @@
 	can_attack_while_moving = FALSE
 
 /mob/living/simple/crab/king
-	name = "king crab"
-	desc = "A crab this size must be the work of some maniac."
-	desc_extended = "A ferocious king crab with massive sharp claws and a thick magic and bullet deflecting outer shell. You'll likely have to get up close and personal in order to crack this crab."
+	name = "蟹王"
+	desc = "这么大的螃蟹，肯定是某个疯子的杰作。"
+	desc_extended = "一只凶猛的蟹王，长着巨大而锋利的蟹钳，厚重的外壳能抵挡魔法和子弹。想敲开这只蟹，恐怕得贴身搏斗。"
 	boss_icon_state = "crab_king"
 	icon = 'icons/mob/living/simple/crab_king.dmi'
 	icon_state = "king"

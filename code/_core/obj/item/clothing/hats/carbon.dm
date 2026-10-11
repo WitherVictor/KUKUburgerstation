@@ -1,8 +1,8 @@
 /obj/item/clothing/head/helmet/carbon
-	name = "space military helmet"
+	name = "太空军用头盔"
 	icon = 'icons/obj/item/clothing/hats/carbon.dmi'
-	desc = "Military. In space!"
-	desc_extended = "A helmet made from hardened carbon fibres."
+	desc = "军用品。太空里的！"
+	desc_extended = "用硬化碳纤维制成的头盔。"
 
 	defense_rating = list(
 		BLADE = 25,
@@ -56,7 +56,7 @@
 	)
 
 /obj/item/clothing/head/helmet/carbon/dummy
-	name = "old space swat helmet"
+	name = "旧式太空特警头盔"
 	polymorphs = list(
 		"visor" = COLOR_BROWN,
 		"helmet" = COLOR_RED

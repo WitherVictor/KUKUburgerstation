@@ -1,10 +1,10 @@
 /obj/item/clothing/mask/daddy
-	name = "true mask"
+	name = "真父面具"
 	icon = 'icons/obj/item/clothing/masks/daddy.dmi'
 
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
-	desc = "Well, what is it?"
-	desc_extended = "A giant mask depicting some sort of father figure. Speeds you up when worn."
+	desc = "怎么，还想怎样？"
+	desc_extended = "刻画着某种父亲形象的巨大面具。戴上后能让你移动得更快。"
 
 	armor = /armor/brass/belt
 

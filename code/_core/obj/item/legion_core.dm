@@ -1,7 +1,7 @@
 /obj/item/legion_core
-	name = "legion core"
-	desc = "Portable healing power."
-	desc_extended = "A special regenerative yet decaying core that can be used to near-instantly restore the health of the target by a significant amount. One time use, and decays 10 minutes after being created."
+	name = "军团核心"
+	desc = "随身携带的治愈之力。"
+	desc_extended = "蕴含再生之力却会逐渐衰败的特殊核心，可在瞬间大幅治疗目标的有机组织。只能使用一次，生成10分钟后失效。"
 
 	icon = 'icons/obj/item/legion_core.dmi'
 	icon_state = "active"
@@ -51,20 +51,20 @@
 	. = ..()
 
 	if(stabilized == TRUE)
-		. += div("warning","It has been stabilized, preserving its healing abilities indefinitely.")
+		. += div("warning","它已被稳定化，可以永久保留治疗能力。")
 
 	if(expiry_time == -1)
-		. += div("warning","It has expired.")
+		. += div("warning","它已经失效了。")
 
 
 /obj/item/legion_core/update_icon()
 
 	if(expiry_time == -1)
 		icon_state = "inactive"
-		name = "dull legion core"
+		name = "黯淡的军团核心"
 	else
 		icon_state = "active"
-		name = "active legion core"
+		name = "活性军团核心"
 
 	return ..()
 
@@ -81,21 +81,21 @@
 		INTERACT_DELAY(10)
 
 		if(expiry_time == -1 && !stabilized)
-			activator.to_chat(span("warning","\The [src.name] has expired!"))
+			activator.to_chat(span("warning","[src.name]已经失效了！"))
 			return TRUE
 
 		var/mob/living/L = object
 		if(L.dead || !L.health)
-			activator.to_chat(span("warning","\The [src.name] only works on living beings!"))
+			activator.to_chat(span("warning","[src.name]只能对活着的生物使用！"))
 			return TRUE
 
 		if(activator == L)
-			activator.visible_message(span("notice","\The [activator.name] uses \the [src.name] to heal their wounds."),span("notice","You use \the [src.name] to heal your wounds."))
+			activator.visible_message(span("notice","[activator.name]用[src.name]治疗了自己的伤势。"),span("notice","你用[src.name]治疗了自己的伤势。"))
 		else
-			activator.visible_message(span("notice","\The [activator.name] uses \the [src.name] to heal the wounds of \the [L.name]."),span("notice","You use \the [src.name] to heal the wounds of \the [L.name]."))
+			activator.visible_message(span("notice","[activator.name]用[src.name]治疗了[L.name]的伤势。"),span("notice","你用[src.name]治疗了[L.name]的伤势。"))
 
 		L.health.adjust_loss_smart(brute=-100,burn=-100,tox=-100,oxy=-100,fatigue=-100,pain=-100,rad=-100,sanity=-100,mental=-100,organic=TRUE,robotic=FALSE)
-		L.to_chat(span("notice","You feel rejuvenated!"))
+		L.to_chat(span("notice","你感到焕然一新！"))
 		qdel(src)
 
 		return TRUE
@@ -103,9 +103,9 @@
 	. = ..()
 
 /obj/item/legion_core_stabilizer
-	name = "legion core stabilizer"
-	desc = "The wonders of corrupt medicine is now."
-	desc_extended = "A potent chemical compount capable of preserving legion cores indefinitely."
+	name = "军团核心稳定剂"
+	desc = "腐化医学的奇迹就在眼前。"
+	desc_extended = "强效化合物，可让军团核心永久保留治疗能力。"
 	value = 200
 	icon = 'icons/obj/item/legion_core.dmi'
 	icon_state = "stabilizer"
@@ -121,7 +121,7 @@
 		var/obj/item/legion_core/core = object
 		core.stabilized = TRUE
 		core.update_icon()
-		core.name = "stable legion core"
-		core.desc_extended = "A special regenerative yet decaying core that can be used to near-instantly restore the health of the target by a significant amount. One time use, and decays 10 minutes after being created. It has been preserved, keeping its healing abilities indefinitely."
-		activator.to_chat(span("notice","You inject [core.name] with the [object.name], preserving its healing abilities indefinitely."))
+		core.name = "稳定的军团核心"
+		core.desc_extended = "蕴含再生之力的特殊核心，可在瞬间大幅治疗目标的有机组织。只能使用一次；经过稳定化处理后，可永久保留治疗能力。"
+		activator.to_chat(span("notice","你向[core.name]注入了[src.name]，使其永久保留治疗能力。"))
 		qdel(src)

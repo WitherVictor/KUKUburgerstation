@@ -1,9 +1,9 @@
 /obj/item/attachment/stock/
-	name = "stock attachment"
+	name = "枪托配件"
 
 /obj/item/attachment/stock/sniper_127 //Actually not a stock but whatever. Players won't know this.
-	name = "12.7mm barrel"
-	desc = "Extendong."
+	name = "12.7mm枪管"
+	desc = "加长，够长。"
 	desc_extended = ""
 	icon_state = "barrel_sniper2"
 
@@ -27,8 +27,8 @@
 	removable = FALSE
 */
 /obj/item/attachment/stock/sniper_50 //Actually not a stock but whatever. Players won't know this.
-	name = "50cal barrel"
-	desc = "Extendong."
+	name = ".50口径枪管"
+	desc = "加长，够长。"
 	desc_extended = ""
 	icon_state = "barrel_sniper_50"
 
@@ -39,8 +39,8 @@
 	removable = FALSE
 
 /obj/item/attachment/barrel/sniper_20
-	name = "20mm barrel"
-	desc = "Extendong."
+	name = "20mm枪管"
+	desc = "加长，够长。"
 	desc_extended = ""
 	icon_state = "barrel_sniper_20"
 
@@ -52,8 +52,8 @@
 
 
 /obj/item/attachment/stock/musket
-	name = "musket barrel"
-	desc = "Extendong."
+	name = "滑膛火枪枪管"
+	desc = "加长，够长。"
 	desc_extended = ""
 	icon_state = "barrel_musket"
 

@@ -1,7 +1,7 @@
 /obj/item/magazine/syringe_gun
-	name = "\improper syringe gun magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 注射枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/syringegun.dmi'
 	icon_state = "syringe"
 	bullet_count_max = 8
@@ -46,8 +46,8 @@
 			highest_value = volume
 
 	if(highest_R)
-		name = "[initial(name)] ([highest_R.name])"
+		name = "[initial(name)]（[highest_R.name]）"
 	else
-		name = "[initial(name)] (blank)"
+		name = "[initial(name)]（未装药）"
 
 

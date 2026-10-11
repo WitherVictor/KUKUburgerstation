@@ -1,5 +1,5 @@
 /obj/structure/interactive/door/airlock/solarian
-	name = "solarian airlock"
+	name = "太阳系气闸门"
 
 	color = "#78A08B"
 	fill_color = "#618E93"

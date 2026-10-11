@@ -110,14 +110,15 @@
 		if("burst")
 			automatic = TRUE
 			current_maxmium_bursts = max_bursts
-	activator?.to_chat(span("notice","You switch to [selected_firemode] mode."))
+	var/static/list/firemode_display = list("automatic"="全自动","semi-automatic"="半自动","burst"="点射")
+	activator?.to_chat(span("notice","你切换到[firemode_display[selected_firemode]]模式。"))
 	return TRUE
 
 /obj/item/weapon/ranged/get_examine_list(var/mob/examiner)
 	. = ..()
 
 	if(length(firemodes) > 1)
-		. += div("notice","You can change between [length(firemodes)] firemodes by alt-clicking while holding this weapon. ")
+		. += div("notice","持握此武器时，使用ALT+单击可在[length(firemodes)]种射击模式之间切换。")
 
 
 /obj/item/weapon/ranged/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
@@ -195,21 +196,21 @@
 
 				if(istype(firing_pin))
 					firing_pin.drop_item(get_turf(src))
-					activator.visible_message(span("notice","\The [activator.name] removes a firing pin from \the [src.name]."),span("notice","You remove \the [firing_pin.name] from \the [src.name]."))
+					activator.visible_message(span("notice","[activator.name]从[src.name]上拆下了击针。"),span("notice","你从[src.name]上拆下了[firing_pin.name]。"))
 					firing_pin = null
 				else
-					activator.to_chat(span("warning","There is no firing pin inside \the [src.name]!"))
+					activator.to_chat(span("warning","[src.name]里没有击针！"))
 				return TRUE
 			if(istype(I,/obj/item/firing_pin/))
 				INTERACT_CHECK
 				INTERACT_CHECK_OBJECT
 				INTERACT_DELAY(5)
 				if(istype(firing_pin))
-					activator.to_chat(span("warning","There is already a [firing_pin.name] installed in \the [src.name]! Remove it with a screwdriver first!"))
+					activator.to_chat(span("warning","[src.name]已经装有[firing_pin.name]！请先用螺丝刀拆下！"))
 				else
 					I.drop_item(src)
 					firing_pin = I
-					activator.visible_message(span("notice","\The [activator.name] installs a firing pin into \the [src.name]."),span("notice","You carefully slide in and install \the [I.name] into \the [src.name]."))
+					activator.visible_message(span("notice","[activator.name]给[src.name]装上了击针。"),span("notice","你小心地将[I.name]滑入[src.name]并装好。"))
 				return TRUE
 
 	. = ..()
@@ -255,7 +256,7 @@
 /obj/item/weapon/ranged/proc/can_gun_shoot(var/mob/activator,var/atom/object,location,params,var/check_time=TRUE,var/messages=TRUE)
 
 	if(quality <= 0)
-		activator.to_chat(span("warning","\The [src.name] is completely broken!"))
+		activator.to_chat(span("warning","[src.name]已经彻底损坏了！"))
 		return FALSE
 
 	if(use_iff_tag)
@@ -264,7 +265,7 @@
 			firing_pin = null
 
 		if(!firing_pin)
-			activator.to_chat(span("warning","This gun doesn't have a firing pin installed!"))
+			activator.to_chat(span("warning","这把枪没有安装击针！"))
 			return FALSE
 
 		if(!firing_pin.can_shoot(activator,src))
@@ -313,7 +314,7 @@
 		return .
 
 	if(wield_only && !wielded)
-		activator.to_chat(span("warning","You can only fire this when wielded! (CTRL+CLICK)"))
+		activator.to_chat(span("warning","必须双手持握才能开火！（CTRL+单击）"))
 		return .
 
 	INTERACT_CHECK_NO_DELAY(src)

@@ -1,4 +1,4 @@
 /obj/structure/interactive/power
-	name = "powered structure"
-	desc = "POOOOWWWEEERRRRRRRRRRR"
-	desc_extended = "Some kind of powered structure."
+	name = "用电构筑物"
+	desc = "电——力——！"
+	desc_extended = "某种需要电力的构筑物。"

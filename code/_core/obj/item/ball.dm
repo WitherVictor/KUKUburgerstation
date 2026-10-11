@@ -1,5 +1,5 @@
 /obj/item/ball
-	name = "ball"
+	name = "球"
 
 	icon = 'icons/obj/item/ball.dmi'
 
@@ -93,15 +93,15 @@
 
 
 /obj/item/ball/soccer
-	name = "soccer ball"
-	desc = "Also known as a football."
-	desc_extended = "You kick this. I guess you can throw this too."
+	name = "足球"
+	desc = "就是用脚踢的那种球。"
+	desc_extended = "用来踢的。不过大概也可以扔。"
 	icon_state = "soccer"
 	value = 10
 
 /obj/item/ball/soccer/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Hold ALT to move over the ball without kicking it.<br>Hold SPACE to triple your kicking power.<br>Hold SHIFT while running into the ball to double your kicking power.")
+	. += span("notice","按住Alt经过足球时不会踢到它。<br>按住空格键可让踢球力度变为3倍。<br>按住Shift跑向足球可加大踢球力度。")
 
 /obj/item/ball/soccer/Cross(atom/movable/O,atom/oldloc)
 	return TRUE

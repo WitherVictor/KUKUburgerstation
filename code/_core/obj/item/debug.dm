@@ -1,7 +1,7 @@
 /obj/item/runtime
-	name = "flaw in the world"
-	desc = "oh god oh fuck"
-	desc_extended = "What the fuck is this? How did you get it? ANSWER ME."
+	name = "世界的破绽"
+	desc = "天啊，卧槽。"
+	desc_extended = "这他妈是什么？你怎么拿到的？回答我。"
 	value = -1
 
 /obj/item/runtime/click_self(var/mob/caller)

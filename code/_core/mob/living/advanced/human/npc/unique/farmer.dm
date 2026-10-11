@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/farmer
-	name = "Crundus Bundus"
-	desc = "Remember the!"
+	name = "克伦德斯·邦德斯"
+	desc = "记住那个！"
 	species = "human"
 	sex = MALE
 	gender = MALE

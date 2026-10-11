@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/brown
-	name = "right leather shoe"
-	desc = "Protects your feet from cigarettes."
-	desc_extended = "An expensive brown shoe, fit for a detective."
+	name = "右脚皮鞋"
+	desc = "保护双脚免遭烟头烫伤。"
+	desc_extended = "昂贵的棕色皮鞋，很适合侦探。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -16,7 +16,7 @@
 	value = 15
 
 /obj/item/clothing/feet/shoes/brown/left
-	name = "left leather shoe"
+	name = "左脚皮鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

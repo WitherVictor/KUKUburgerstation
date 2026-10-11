@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/bizon
-	name = "\improper 9x19mm Bison PDW"
-	desc = "Kicks like a Bison too."
-	desc_extended = "A 9x19 chambered Slavic submachine gun with an incredibly high ammo capacity. Excellent for tight-quarters holdouts."
+	name = "\improper 9x19mm野牛个人防卫武器"
+	desc = "后坐力也像野牛一样猛。"
+	desc_extended = "使用9x19弹药的斯拉夫冲锋枪，弹药容量极高，非常适合在狭窄空间中固守。"
 	icon = 'icons/obj/item/weapons/ranged/smg/slavic/9mm.dmi'
 	icon_state = "inventory"
 	value = 2000

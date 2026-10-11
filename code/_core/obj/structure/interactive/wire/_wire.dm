@@ -1,5 +1,5 @@
 /obj/structure/interactive/wire/
-	name = "power cable"
+	name = "电力线缆"
 	icon = 'icons/obj/structure/wire.dmi'
 	icon_state = "map"
 	var/power_network/power_network
@@ -35,14 +35,14 @@
 
 /obj/structure/interactive/wire/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","It is connected to [length(connections)] other wire(s).")
+	. += div("notice","连接着[length(connections)]根其他线缆。")
 	if(connected_machine)
-		. += div("notice","It is connected to \the [connected_machine].")
+		. += div("notice","连接着[connected_machine]。")
 
 /obj/structure/interactive/wire/proc/find_wire_connection(var/mob/activator)
 
 	if(connected_machine)
-		activator?.to_chat(span("warning","\The [src.name] is already connected to \a [connected_machine.name]! Remove it first before adding a new connection."))
+		activator?.to_chat(span("warning","[src.name]已经连接到[connected_machine.name]！建立新连接前请先断开原连接。"))
 		return FALSE
 
 	var/obj/structure/interactive/found_machine
@@ -53,13 +53,13 @@
 		break
 
 	if(!found_machine)
-		activator?.to_chat(span("warning","There is nothing to connect \the [src.name] to!"))
+		activator?.to_chat(span("warning","这里没有可供[src.name]连接的设备！"))
 		return FALSE
 
 	connected_machine = found_machine
 	connected_machine.connected_wire = src
 
-	activator?.to_chat(span("notice","You connect \the [src.name] to \the [connected_machine.name]."))
+	activator?.to_chat(span("notice","你将[src.name]连接到了[connected_machine.name]。"))
 
 	if(power_network) power_network.add_wire(src) //This acts as an update.
 
@@ -68,7 +68,7 @@
 	return TRUE
 
 /obj/structure/interactive/wire/proc/do_snap()
-	src.visible_message(span("danger","\The [src.name] snaps!"))
+	src.visible_message(span("danger","[src.name]断裂了！"))
 	qdel(src)
 
 /obj/structure/interactive/wire/PreDestroy()
@@ -101,11 +101,11 @@
 			INTERACT_CHECK
 			INTERACT_DELAY(10)
 			if(power_network)
-				activator.to_chat(span("notice","Network ID: \ref[power_network]."))
-				activator.to_chat(span("notice","Supply: [power_network.power_supply]w."))
-				activator.to_chat(span("notice","Draw: [power_network.power_draw]w."))
+				activator.to_chat(span("notice","电网编号：\ref[power_network]。"))
+				activator.to_chat(span("notice","供电功率：[power_network.power_supply]瓦。"))
+				activator.to_chat(span("notice","用电功率：[power_network.power_draw]瓦。"))
 			else
-				activator.to_chat(span("warning","No power network detected!"))
+				activator.to_chat(span("warning","未检测到电网！"))
 			return TRUE
 
 	. = ..()

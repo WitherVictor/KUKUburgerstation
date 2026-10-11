@@ -1,7 +1,7 @@
 /obj/item/bikehorn
-	name = "bike horn"
-	desc = "PRAISE BE TO THE HONKMOTHER!"
-	desc_extended = "You guessed it - Makes the signature HONK sound when used in your hand."
+	name = "自行车喇叭"
+	desc = "赞美鸣笛之母！"
+	desc_extended = "你猜对了——手持使用时会发出标志性的“叭”声。"
 	icon = 'icons/obj/item/fluff/bikehorn.dmi'
 	damage_type = /damagetype/item/light
 
@@ -27,7 +27,7 @@
 
 
 /obj/item/bikehorn/magic
-	name = "magic bikehorn"
+	name = "魔法自行车喇叭"
 	value = 500
 	rarity = RARITY_RARE
 	value_burgerbux = 5

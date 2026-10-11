@@ -7,33 +7,33 @@
 	value = -1
 
 /obj/item/clothing/head/helmet/full/knight/red
-	name = "red knight helmet"
+	name = "红色骑士头盔"
 	icon = 'icons/obj/item/clothing/hats/knight_red.dmi'
-	desc = "Deus Vult."
-	desc_extended = "A knight's helmet. Made out of the finest metal."
+	desc = "神意如此。"
+	desc_extended = "用上等金属制成的骑士头盔。"
 
 	value = 160
 
 /obj/item/clothing/head/helmet/full/knight/blue
-	name = "blue knight helmet"
+	name = "蓝色骑士头盔"
 	icon = 'icons/obj/item/clothing/hats/knight_blue.dmi'
 
 	value = 160
 
 /obj/item/clothing/head/helmet/full/knight/green
-	name = "green knight helmet"
+	name = "绿色骑士头盔"
 	icon = 'icons/obj/item/clothing/hats/knight_green.dmi'
 
 	value = 160
 
 /obj/item/clothing/head/helmet/full/knight/yellow
-	name = "yellow knight helmet"
+	name = "黄色骑士头盔"
 	icon = 'icons/obj/item/clothing/hats/knight_yellow.dmi'
 
 	value = 160
 
 /obj/item/clothing/head/helmet/full/knight/templar
-	name = "templar knight helmet"
+	name = "圣殿骑士头盔"
 	icon = 'icons/obj/item/clothing/hats/knight_templar.dmi'
 
 	armor = /armor/steel/holy
@@ -41,7 +41,7 @@
 	value = 110
 
 /obj/item/clothing/head/helmet/full/knight/battlemage
-	name = "battlemage helmet"
+	name = "战斗法师头盔"
 	icon = 'icons/obj/item/clothing/hats/knight_battlemage.dmi'
 
 	armor = /armor/steel/arcane
@@ -53,7 +53,7 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/head/helmet/full/knight/clockwork
-	name = "clockwork helmet"
+	name = "发条头盔"
 	icon = 'icons/obj/item/clothing/hats/clockwork.dmi'
 
 	armor = /armor/brass
@@ -65,9 +65,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/head/helmet/full/knight/runic
-	name = "runic full helmet"
-	desc = "Watch out!!! Someone is rushing you."
-	desc_extended = "A full face helmet made out of runite."
+	name = "符文全盔"
+	desc = "小心！！！有人朝你冲过来了。"
+	desc_extended = "用符文金属制成的全覆面头盔。"
 	icon = 'icons/obj/item/clothing/hats/runic.dmi'
 
 	armor = /armor/steel/runic

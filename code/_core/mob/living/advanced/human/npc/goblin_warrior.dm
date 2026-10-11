@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/goblin
-	name = "goblin"
-	desc = "Raiding settlements since 4506 BC."
+	name = "地精"
+	desc = "自公元前4506年起劫掠聚落。"
 
 	ai = /ai/advanced
 	dna = /dna/goblin
@@ -23,7 +23,7 @@
 	drops_gold = RAND_PRECISE(0.5,1.25) * level * (1/CREDITS_PER_GOLD)
 
 /mob/living/advanced/npc/goblin/warrior
-	name = "goblin warrior"
+	name = "地精战士"
 	loadout = /loadout/goblin/warrior
 	health_base = 300
 	stamina_base = 200
@@ -32,7 +32,7 @@
 	level = 16
 
 /mob/living/advanced/npc/goblin/mage
-	name = "goblin mage"
+	name = "地精法师"
 	loadout = /loadout/goblin/mage
 	health_base = 200
 	stamina_base = 100
@@ -41,12 +41,12 @@
 	level = 17
 
 /mob/living/advanced/npc/goblin/mage/wizard_federation
-	name = "raging goblin wizard apprentice"
+	name = "狂怒地精巫师学徒"
 	iff_tag = "Wizard Federation"
 	loyalty_tag = "Wizard Federation"
 
 /mob/living/advanced/npc/goblin/archer
-	name = "goblin archer"
+	name = "地精弓箭手"
 	loadout = /loadout/goblin/archer
 	health_base = 200
 	stamina_base = 300

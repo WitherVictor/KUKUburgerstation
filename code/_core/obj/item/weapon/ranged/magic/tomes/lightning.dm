@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/lightning
-	name = "tome of the holy lightning bolt"
-	desc = "Be like Zeus!"
-	desc_extended = "Fires slow moving lightning bolts at foes."
+	name = "神圣闪电法术典籍"
+	desc = "像宙斯一样！"
+	desc_extended = "向敌人发射缓慢移动的闪电。"
 	cost_mana = 16
 	shoot_delay = 8
 

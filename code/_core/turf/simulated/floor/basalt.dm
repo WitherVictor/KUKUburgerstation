@@ -1,5 +1,5 @@
 /turf/simulated/floor/basalt/
-	name = "basalt"
+	name = "玄武岩"
 
 	icon = 'icons/turf/floor/basalt.dmi'
 	icon_state = "basalt0"

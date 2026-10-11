@@ -1,11 +1,11 @@
 /turf/simulated/wall/proc/do_climb(var/mob/living/advanced/L,var/turf/actual_turf,var/turf/above_turf,var/turf/landing_turf)
 	L.force_move(landing_turf)
 	L.visible_message(
-		span("notice","\The [L.name] climbs up from \the [above_turf.name]."),
-		span("notice","You climb up \the [src.name], out of \the [above_turf.name].")
+		span("notice","[L.name]从[above_turf.name]爬了上来。"),
+		span("notice","你爬上[src.name]，从[above_turf.name]出来了。")
 	)
 	actual_turf.visible_message(
-		span("notice","\The [L.name] climbs up \the [src.name].")
+		span("notice","[L.name]爬上了[src.name]。")
 	)
 	return TRUE
 
@@ -15,27 +15,27 @@
 	if(!actual_turf) //Huh.
 		return FALSE
 	if(!above_turf)
-		L.to_chat(span("warning","There is nothing to climb to!"))
+		L.to_chat(span("warning","没有可以攀爬到的地方！"))
 		return FALSE
 	if(!landing_turf)
-		L.to_chat(span("warning","There is nothing to climb to!"))
+		L.to_chat(span("warning","没有可以攀爬到的地方！"))
 		return FALSE
 
 	if(L.loc != actual_turf)
 		return FALSE
 
 	if(actual_turf.density_up) //Our turf.
-		L.to_chat(span("warning","You can't climb above, \the [actual_turf.name] is in the way!"))
+		L.to_chat(span("warning","你爬不上去，[actual_turf.name]挡住了去路！"))
 		return FALSE
 	var/area/A = actual_turf.loc
 	if(!A.allow_climbing)
-		L.to_chat(span("warning","There is nothing to climb to!"))
+		L.to_chat(span("warning","没有可以攀爬到的地方！"))
 		return FALSE
 	if(above_turf.density_down)
-		L.to_chat(span("warning","You can't climb above, \the [above_turf.name] above is in the way!"))
+		L.to_chat(span("warning","你爬不上去，上方的[above_turf.name]挡住了去路！"))
 		return FALSE
 	if(landing_turf.density)
-		L.to_chat(span("warning","You can't climb above, \the [landing_turf.name] above is in the way!"))
+		L.to_chat(span("warning","你爬不上去，上方的[landing_turf.name]挡住了去路！"))
 		return FALSE
 
 	return TRUE

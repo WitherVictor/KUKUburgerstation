@@ -24,65 +24,65 @@
 
 
 /obj/item/contract/boss/ash_drake
-	name = "contract: Kill Ash Drake"
+	name = "契约：击杀灰烬飞龙"
 	type_to_check = /mob/living/simple/ash_drake
-	objective_text = "Ash Drakes killed"
+	objective_text = "已击杀灰烬飞龙"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/bubblegum
-	name = "contract: Kill Bubblegum"
+	name = "契约：击杀泡泡糖"
 	type_to_check = /mob/living/simple/bubblegum
-	objective_text = "Bubblegums killed"
+	objective_text = "已击杀泡泡糖"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/can_man
-	name = "contract: Kill Can Man"
+	name = "契约：击杀罐头人"
 	type_to_check = /mob/living/simple/can_man
-	objective_text = "Can Men killed"
+	objective_text = "已击杀罐头人"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/colossus
-	name = "contract: Kill Colossus"
+	name = "契约：击杀巨像"
 	type_to_check = /mob/living/simple/colossus
-	objective_text = "Colossus killed"
+	objective_text = "已击杀巨像"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/herald
-	name = "contract: Kill the Herald"
+	name = "契约：击杀先驱"
 	type_to_check = /mob/living/simple/herald
-	objective_text = "Heralds killed"
+	objective_text = "已击杀先驱"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/hierophant
-	name = "contract: Kill the Hierophant"
+	name = "契约：击杀大祭司"
 	type_to_check = /mob/living/simple/hierophant
-	objective_text = "Hierophants killed"
+	objective_text = "已击杀大祭司"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/leaper
-	name = "contract: Kill the Leaper"
+	name = "契约：击杀跃行者"
 	type_to_check = /mob/living/simple/leaper
-	objective_text = "Leapers killed"
+	objective_text = "已击杀跃行者"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0
 
 /obj/item/contract/boss/queen
-	name = "contract: Kill the Xeno Queen"
+	name = "契约：击杀异形女王"
 	type_to_check = /mob/living/simple/xeno/queen
-	objective_text = "Xeno Queens killed"
+	objective_text = "已击杀异形女王"
 	value_max = 1
 	burgerbux_reward = 5
 	value = 0

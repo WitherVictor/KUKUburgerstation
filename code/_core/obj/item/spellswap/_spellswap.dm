@@ -1,6 +1,6 @@
 /obj/item/spellswap
 
-	name = "spellswap error"
+	name = "法术替换器错误"
 	icon = 'icons/obj/item/spellswap.dmi'
 	icon_state = null
 
@@ -23,10 +23,12 @@
 
 		var/obj/item/weapon/I = object
 
-		var/desired_choice = input("Are you sure you wish to spellswap \the [I.name] with \the [src.name]? This cannot be undone.","Spellswap","Cancel") as null|anything in list("Yes","No","Cancel")
+		var/list/spellswap_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
+		var/desired_choice = input("确定使用[src.name]替换[I.name]的发射效果吗？此操作无法撤销。","法术替换","取消") as null|anything in spellswap_choices
+		desired_choice = spellswap_choices[desired_choice]
 
 		if(desired_choice != "Yes")
-			activator.to_chat(span("notice","You decide not to spellswap \the [I.name]."))
+			activator.to_chat(span("notice","你决定不替换[I.name]的发射效果。"))
 			return TRUE
 		if(desired_projectile==null)
 			if(I.stored_spellswap)
@@ -35,9 +37,9 @@
 				src.drop_item(I)
 				I.damage_type = initial(I.damage_type)
 			else
-				activator.to_chat(span("notice", "There's no spell to remove!"))
+				activator.to_chat(span("notice", "没有可移除的法术！"))
 				return TRUE
-			activator.to_chat(span("notice","You spellswap \the [I.name] with \the [src.name]."))
+			activator.to_chat(span("notice","你使用[src.name]替换了[I.name]的发射效果。"))
 
 			var/turf/T = get_turf(activator)
 			play_sound(desired_sound,T)
@@ -50,7 +52,7 @@
 		src.drop_item(I)
 		I.stored_spellswap = src
 
-		activator.to_chat(span("notice","You spellswap \the [I.name] with \the [src.name]."))
+		activator.to_chat(span("notice","你使用[src.name]替换了[I.name]的发射效果。"))
 
 		var/turf/T = get_turf(activator)
 		play_sound(desired_sound,T)

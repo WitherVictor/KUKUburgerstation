@@ -3,9 +3,9 @@
 
 /obj/item/weapon/melee/axe/fireaxe
 
-	name = "fire axe"
-	desc = "Hey Paul!" //im not sorry
-	desc_extended = "I think their undisputed masterpiece is 'Hip to be Square', a song so catchy, most people probably don't listen to the lyrics. But they should, because it's not just about the pleasures of conformity, and the importance of trends, it's also a personal statement about the band itself."
+	name = "消防斧"
+	desc = "嘿，保罗！" //im not sorry
+	desc_extended = "我认为他们无可争议的杰作是《循规蹈矩也很酷》。这首歌太上口，大多数人可能根本没认真听歌词。但他们应该听听，因为它不只在讲随大流的乐趣和潮流的重要性，也是在表达乐队自身的态度。"
 
 	icon = 'icons/obj/item/weapons/melee/axes/fireaxe.dmi'
 

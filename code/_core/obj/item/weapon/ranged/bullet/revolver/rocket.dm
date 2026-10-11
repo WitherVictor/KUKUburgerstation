@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/rocket
-	name = "70mm Recoilless NT-AAWS"
-	desc = "I'm a Rocket Man."
-	desc_extended = "NT's answer to the Syndicate Mechs and Borgs: NT Anti Armor Weapon System. Single-shot portable anti-tank weapon, though if you're brave enough you can try to use it more than once."
+	name = "70mm无后坐力NT-AAWS"
+	desc = "我是火箭人。"
+	desc_extended = "纳米传讯用来对付辛迪加机甲和半机械人的答案：NT反装甲武器系统。单发便携式反坦克武器，不过胆子够大的话，也可以试着多用几次。"
 	icon = 'icons/obj/item/weapons/ranged/misc/rocket.dmi'
 	icon_state = "inventory"
 	value = 6000

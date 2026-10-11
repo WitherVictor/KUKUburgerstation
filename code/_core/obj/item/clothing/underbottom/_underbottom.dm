@@ -1,5 +1,5 @@
 /obj/item/clothing/underbottom
-	name = "underbottom"
+	name = "内裤"
 	worn_layer = LAYER_MOB_CLOTHING_UNDERWEAR
 	item_slot = SLOT_GROIN
 

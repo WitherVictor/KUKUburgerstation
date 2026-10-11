@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/arcblades
-	name = "arcblades spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots four spinning arc blades that pierces enemies and bounces off walls."
+	name = "弧光刃法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射四枚旋转的弧光刃，能够穿透敌人并从墙面反弹。"
 	icon_state = "damage"
 
 	rarity = RARITY_UNCOMMON

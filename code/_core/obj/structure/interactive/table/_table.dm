@@ -1,7 +1,7 @@
 /obj/structure/table
-	name = "plastic table"
-	desc = "A table for placing objects down or taking them."
-	desc_extended = "To place items on a table, press Q + Left/Right click depending on if the item is in your left or right hand. Climbing over tables is automatic; Walk into a table for long enough to climb over it."
+	name = "塑料桌"
+	desc = "可供摆放和拿取物品的桌子。"
+	desc_extended = "物品在左手时，按住Q并用鼠标左键点击桌子即可放下；在右手时则用右键。持续朝桌子移动，会自动爬上桌子。"
 	icon = 'icons/obj/structure/table/normal_new.dmi'
 	icon_state = "table"
 
@@ -106,9 +106,9 @@
 	. = ..()
 
 obj/structure/table/rack
-	name = "plastic rack"
-	desc = "A rack. Not the middle ages kind."
-	desc_extended = "To place items on a rack, press Q + Left/Right click depending on if the item is in your left or right hand."
+	name = "塑料置物架"
+	desc = "置物架，可不是中世纪的拉伸刑架。"
+	desc_extended = "物品在左手时，按住Q并用鼠标左键点击置物架即可放下；在右手时则用右键。"
 	icon = 'icons/obj/structure/rack.dmi'
 	icon_state = "rack"
 
@@ -128,7 +128,7 @@ obj/structure/table/rack/steel
 	color = COLOR_STEEL
 
 obj/structure/table/fancy
-	name = "fancy table"
+	name = "精致餐桌"
 	icon = 'icons/obj/structure/table/fancy.dmi'
 	pixel_y = -1
 	corner_category = "table_fancy"
@@ -136,20 +136,20 @@ obj/structure/table/fancy
 	pixel_y = 4
 
 obj/structure/table/glass
-	name = "glass table"
+	name = "玻璃桌"
 	icon = 'icons/obj/structure/table/glass.dmi'
 	corner_category = "table_glass"
 
 obj/structure/table/steel
-	name = "steel table"
+	name = "钢桌"
 	color = COLOR_STEEL_LIGHT
 
 obj/structure/table/steel/dark
-	name = "dark steel table"
+	name = "深色钢桌"
 	color = COLOR_STEEL_DARK
 
 obj/structure/table/wood
-	name = "wood table"
+	name = "木桌"
 	color = "#A05120"
 
 	corner_category = "table_wood"
@@ -161,8 +161,8 @@ obj/structure/table/wood/magic
 	color = "#B5004E"
 
 obj/structure/table/reinforced
-	name = "reinforced table"
-	desc = "Extra sturdy."
+	name = "强化桌"
+	desc = "格外结实。"
 	icon = 'icons/obj/structure/table/reinforced.dmi'
 	icon_state = "table"
 
@@ -177,9 +177,9 @@ obj/structure/table/reinforced/steel/dark
 	color = COLOR_STEEL_DARK
 
 obj/structure/table/reinforced/steel/dark/doom
-	name = "table of doom"
-	desc = "Probably shouldn't climb this."
-	desc_extended = "A strange looking dark table with some weird circuitry attached."
+	name = "毁灭之桌"
+	desc = "最好别爬上去。"
+	desc_extended = "造型奇怪的深色桌子，上面装着古怪的电路。"
 
 obj/structure/table/reinforced/yellow
 	color = "#FFFF00"
@@ -187,8 +187,8 @@ obj/structure/table/reinforced/yellow
 
 
 obj/structure/table/brass
-	name = "clockwork table"
-	desc = "Extra sturdy."
+	name = "发条桌"
+	desc = "格外结实。"
 	icon = 'icons/obj/structure/clockwork/table.dmi'
 	icon_state = "table"
 
@@ -196,7 +196,7 @@ obj/structure/table/brass
 
 obj/structure/table/cult
 
-	name = "cult table"
+	name = "邪教桌"
 	color = "#261E1C"
 
 

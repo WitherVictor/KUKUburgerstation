@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/tactical
-	name = ".45 silent syndicate submachine gun"
-	desc = "get that fukken disk...quietly."
-	desc_extended = "A silent version of the C-20r used by Syndicate Stealth Ops."
+	name = ".45辛迪加消音冲锋枪"
+	desc = "把那张该死的磁盘抢过来……悄悄地。"
+	desc_extended = "辛迪加潜行特工使用的C-20r消音版本。"
 	icon = 'icons/obj/items/weapons/ranged/smg/45.dmi'
 	icon_state = "inventory"
 	shoot_delay = 3

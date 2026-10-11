@@ -60,23 +60,29 @@
 
 	if(speed_bonus != 0)
 		if(speed_bonus > 0)
-			. += div("notice","<b>Speed Bonus:</b> [speed_bonus*100]%.")
+			. += div("notice","<b>速度加成：</b>[speed_bonus*100]%。")
 		else
-			. += div("notice","<b>Speed Penalty:</b> [speed_bonus*100]%.")
+			. += div("notice","<b>速度降低：</b>[-speed_bonus*100]%。")
 
 	var/armor/A = ARMOR(src.armor)
 	if(A)
 		var/list/defense_rating_to_print = A.defense_rating
 		if(defense_rating_to_print && length(defense_rating_to_print) && protected_limbs && length(protected_limbs))
 			var/list/armor_list = list()
+			var/list/damage_display_names = list(BLADE = "切割",BLUNT = "钝击",PIERCE = "穿刺",LASER = "激光",ARCANE = "奥术",HEAT = "高温",COLD = "寒冷",SHOCK = "电击",ACID = "酸蚀",BOMB = "爆炸",BIO = "生物武器",RAD = "辐射",HOLY = "神圣",DARK = "黑暗",FATIGUE = "疲劳",PAIN = "疼痛",ION = "离子",SANITY = "理智",MENTAL = "精神",ALL = "全部",BRUTE = "物理",BURN = "灼烧",TOX = "毒素",OXY = "缺氧")
 			for(var/damagetype in defense_rating_to_print)
 				var/damage_rating = defense_rating_to_print[damagetype]
+				var/damage_display_name = damage_display_names[damagetype] ? damage_display_names[damagetype] : damagetype
 				if(IS_INFINITY(damage_rating))
-					armor_list += "[capitalize(damagetype)]: IMMUNITY"
+					armor_list += "[damage_display_name]：免疫"
 				else if(damage_rating)
 					if(damage_rating > 0)
 						damage_rating = FLOOR(damage_rating*get_quality_mod(),1)
-					armor_list += "[capitalize(damagetype)]: [damage_rating]"
-			. += div("notice","<b>Armor:</b> [capitalize(english_list(armor_list))].")
-			. += div("notice","<b>Protected Zones:</b> [capitalize(english_list(protected_limbs))].")
+					armor_list += "[damage_display_name]：[damage_rating]"
+			var/list/limb_display_names = list(BODY_HEAD = "头部",BODY_FACE = "面部",BODY_NECK = "颈部",BODY_TORSO = "躯干",BODY_GROIN = "腹股沟",BODY_ARM_LEFT = "左臂",BODY_ARM_RIGHT = "右臂",BODY_HAND_LEFT = "左手",BODY_HAND_RIGHT = "右手",BODY_LEG_LEFT = "左腿",BODY_LEG_RIGHT = "右腿",BODY_FOOT_LEFT = "左脚",BODY_FOOT_RIGHT = "右脚",BODY_EYES = "眼睛",BODY_EYE_LEFT = "左眼",BODY_EYE_RIGHT = "右眼",BODY_EARS = "耳朵",BODY_EAR_LEFT = "左耳",BODY_EAR_RIGHT = "右耳",BODY_TAIL = "尾巴",BODY_WINGS = "翅膀",BODY_ANTENNAE = "触角")
+			var/list/protected_limb_labels = list()
+			for(var/limb_id in protected_limbs)
+				protected_limb_labels += limb_display_names[limb_id] ? limb_display_names[limb_id] : limb_id
+			. += div("notice","<b>护甲：</b>[jointext(armor_list,"、")]。")
+			. += div("notice","<b>防护部位：</b>[jointext(protected_limb_labels,"、")]。")
 

@@ -1,7 +1,7 @@
 obj/structure/interactive/bed
-	name = "bed"
-	desc = "a mirmir."
-	desc_extended = "A comfy bed to rest in."
+	name = "床"
+	desc = "睡觉觉。"
+	desc_extended = "可以躺下休息的舒适床铺。"
 	icon = 'icons/obj/structure/bed.dmi'
 	icon_state = "bed"
 	var/secondary_color = "#FF0000"
@@ -96,7 +96,7 @@ obj/structure/interactive/bed/sheet/Generate()
 
 
 /obj/structure/interactive/bed/double
-	name = "double bed"
+	name = "双人床"
 	icon_state = "bed_double"
 
 

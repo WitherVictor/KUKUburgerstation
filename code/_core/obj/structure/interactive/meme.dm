@@ -1,7 +1,7 @@
 /obj/structure/interactive/dont_look
-	name = "made you look"
-	desc = "HA, GOTTEEM!"
-	desc_extended = "A special structure that does something bad when you look-- You looked, too late."
+	name = "骗你看了"
+	desc = "哈，上当了！"
+	desc_extended = "一种特殊构筑物，看它就会发生坏事——你已经看了，太迟了。"
 	icon = 'icons/obj/item/meme.dmi'
 	icon_state = "lol"
 
@@ -43,7 +43,7 @@
 	for(var/mob/living/L in viewers(VIEW_RANGE,get_turf(src)))
 		if(L.dead)
 			continue
-		L.visible_message("<b>\The [L.name]</b> looked!")
+		L.visible_message("<b>[L.name]</b>看了！")
 		L.do_emote("scream")
 		found_viewers += 1
 

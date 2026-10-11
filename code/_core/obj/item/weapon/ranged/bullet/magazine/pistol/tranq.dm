@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/tranq
-	name = "\improper 11.43mm Tranq pistol"
-	desc = "For pacifists who want something to do."
-	desc_extended = "A versatile silenced tranquilver pistol that fires specialised subsonic 11.43mm chemical rounds. The weapon must be cycled manually after firing. The laser pointer attached makes it extremely precise."
+	name = "\improper 11.43mm麻醉手枪"
+	desc = "给想找点事做的和平主义者。"
+	desc_extended = "多用途消音麻醉手枪，发射特制亚音速11.43mm化学弹药。每次开火后都必须手动上膛。附带的激光指示器让它极为精准。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/tranq.dmi'
 	icon_state = "inventory"
 	value = 1900

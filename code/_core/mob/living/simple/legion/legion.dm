@@ -1,5 +1,5 @@
 /mob/living/simple/legionare
-	name = "legion"
+	name = "军团"
 
 	icon = 'icons/mob/living/simple/lavaland/legioner.dmi'
 	icon_state = "legion"
@@ -115,7 +115,7 @@
 	return ..()
 
 /mob/living/simple/legionare/snow
-	name = "snow legion"
+	name = "雪地军团"
 	icon = 'icons/mob/living/simple/snowlegion.dmi'
 	icon_state = "living"
 

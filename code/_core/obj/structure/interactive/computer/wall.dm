@@ -1,7 +1,7 @@
 obj/structure/interactive/computer/wall
-	name = "wall computer"
-	desc = "Compute walls!"
-	desc_extended = "It has no program and refuses to work."
+	name = "壁挂电脑"
+	desc = "计算墙壁！"
+	desc_extended = "没有程序，就是不肯工作。"
 
 	icon_state = "computer_wall"
 	var/computer_type = "generic"
@@ -32,9 +32,9 @@ obj/structure/interactive/computer/wall/update_overlays()
 		add_overlay(I3)
 
 obj/structure/interactive/computer/wall/dorms
-	name = "dorms computer"
-	desc = "Registration of dorms."
-	desc_extended = "A computer intended to register dorms."
+	name = "宿舍登记电脑"
+	desc = "登记宿舍。"
+	desc_extended = "一台用于登记宿舍的电脑。"
 
 	desired_light_range = 1
 	desired_light_power = 1
@@ -43,7 +43,7 @@ obj/structure/interactive/computer/wall/dorms
 
 
 /obj/structure/interactive/computer/wall/remote_flight
-	name = "remote flight computer"
+	name = "远程飞行电脑"
 	var/obj/shuttle_controller/desired_shuttle_controller
 
 /obj/structure/interactive/computer/wall/remote_flight/Finalize()
@@ -57,27 +57,29 @@ obj/structure/interactive/computer/wall/dorms
 	INTERACT_DELAY(5)
 
 	if(desired_shuttle_controller.time_restricted && !SSgamemode.active_gamemode.allow_launch)
-		activator.to_chat(span("warning","\The [desired_shuttle_controller.name] isn't ready to launch yet!"))
+		activator.to_chat(span("warning","[desired_shuttle_controller.name]尚未准备好起飞！"))
 		return FALSE
 
-	var/selection = input("Are you sure you wish to launch \the [desired_shuttle_controller.name]?","Shuttle Control","Cancel") as null|anything in list("Yes","No","Cancel")
+	var/list/launch_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
+	var/selection = input("确定要让[desired_shuttle_controller.name]起飞吗？","穿梭机控制","取消") as null|anything in launch_choices
+	selection = launch_choices[selection]
 
 	if(selection == "Yes")
 		if(desired_shuttle_controller.state == SHUTTLE_STATE_LANDED)
 			desired_shuttle_controller.state = SHUTTLE_STATE_WAITING
 			desired_shuttle_controller.time = 0
-			activator.visible_message(span("notice","\The [activator.name] prepares \the [src.name] for launch."),span("notice","You prepare \the [src.name] for launch."))
+			activator.visible_message(span("notice","[activator.name]通过[src.name]安排穿梭机起飞。"),span("notice","你通过[src.name]安排穿梭机起飞。"))
 		else
-			src.do_say("Warning: Shuttle already in transit.") //TODO: Make this more verbose.
+			src.do_say("警告：穿梭机已在航行中。") //TODO: Make this more verbose.
 	else
-		activator.to_chat(span("notice","You decide not to launch \the [desired_shuttle_controller.name]."))
+		activator.to_chat(span("notice","你决定不让[desired_shuttle_controller.name]起飞。"))
 
 	return TRUE
 
 /obj/structure/interactive/computer/wall/flight
-	name = "flight control console"
-	desc = "Beep boop."
-	desc_extended = "Operates things, depending on what the console is. This one controls a shuttle."
+	name = "飞行控制台"
+	desc = "哔哔啵啵。"
+	desc_extended = "用于操控设备。这台控制台用于控制穿梭机。"
 
 /obj/structure/interactive/computer/wall/flight/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
 
@@ -88,23 +90,25 @@ obj/structure/interactive/computer/wall/dorms
 	var/obj/shuttle_controller/SC = locate() in get_area(src)
 
 	if(!SC)
-		activator.to_chat(span("warning","ERROR: No shuttle controller found!"))
+		activator.to_chat(span("warning","错误：未找到穿梭机控制器！"))
 		return FALSE
 
 	if(SC.time_restricted && !SSgamemode.active_gamemode.allow_launch)
-		activator.to_chat(span("warning","The shuttle isn't ready to launch yet!"))
+		activator.to_chat(span("warning","穿梭机尚未准备好起飞！"))
 		return FALSE
 
-	var/selection = input("Are you sure you wish to launch this shuttle?","Shuttle Control","Cancel") in list("Yes","No","Cancel")
+	var/list/launch_choices = list("是" = "Yes","否" = "No","取消" = "Cancel")
+	var/selection = input("确定要让这艘穿梭机起飞吗？","穿梭机控制","取消") in launch_choices
+	selection = launch_choices[selection]
 
 	if(selection == "Yes")
 		if(SC.state == SHUTTLE_STATE_LANDED)
 			SC.state = SHUTTLE_STATE_WAITING
 			SC.time = 0
-			activator.visible_message(span("notice","\The [activator.name] prepares \the [src.name] for launch."),span("notice","You prepare \the [src.name] for launch."))
+			activator.visible_message(span("notice","[activator.name]通过[src.name]安排穿梭机起飞。"),span("notice","你通过[src.name]安排穿梭机起飞。"))
 		else
-			src.do_say("Warning: Shuttle already in transit.") //TODO: Make this more verbose.
+			src.do_say("警告：穿梭机已在航行中。") //TODO: Make this more verbose.
 	else
-		activator.to_chat(span("notice","You decide not to launch \the [SC.name]."))
+		activator.to_chat(span("notice","你决定不让[SC.name]起飞。"))
 
 	return TRUE

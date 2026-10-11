@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/colored
-	name = "right shoe"
-	desc = "Good for running!"
-	desc_extended = "A basic running shoe. Doesn't protect much, but it makes you go faster. Can also be colored with dye."
+	name = "右脚跑鞋"
+	desc = "跑步好帮手！"
+	desc_extended = "一只基本款跑鞋，防护不强，但能让你跑得更快。也可以用染料染色。"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
 
@@ -33,7 +33,7 @@
 	drop_sound = 'sound/items/drop/shoes.ogg'
 
 /obj/item/clothing/feet/shoes/colored/left
-	name = "left shoe"
+	name = "左脚跑鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -51,7 +51,7 @@
 
 
 /obj/item/clothing/feet/shoes/colored/black/left
-	name = "left shoe"
+	name = "左脚跑鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -67,7 +67,7 @@
 	)
 
 /obj/item/clothing/feet/shoes/colored/blacker/left
-	name = "left shoe"
+	name = "左脚跑鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -84,7 +84,7 @@
 	)
 
 /obj/item/clothing/feet/shoes/colored/brown/left
-	name = "left shoe"
+	name = "左脚跑鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -100,7 +100,7 @@
 	)
 
 /obj/item/clothing/feet/shoes/colored/merc/left
-	name = "left shoe"
+	name = "左脚跑鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

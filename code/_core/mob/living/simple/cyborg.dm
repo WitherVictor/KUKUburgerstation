@@ -1,5 +1,5 @@
 /mob/living/simple/silicon/
-	name = "robot"
+	name = "机器人"
 	icon = 'icons/mob/living/simple/robots.dmi'
 	icon_state = "robot_old"
 
@@ -64,7 +64,7 @@
 		add_overlay(I)
 
 /mob/living/simple/silicon/syndieborg
-	name = "\improper Syndicate Battleborg"
+	name = "辛迪加战斗型半机械人"
 	icon_state = "syndicate"
 
 	ai = /ai/syndicate_cyborg

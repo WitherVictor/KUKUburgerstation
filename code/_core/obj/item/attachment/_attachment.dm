@@ -1,7 +1,7 @@
 /obj/item/attachment/
-	name = "weapon attachment"
-	desc = "Modular!"
-	desc_extended = "Attach this to your weapon for EXTRA POWER."
+	name = "武器配件"
+	desc = "模块化！"
+	desc_extended = "装到武器上，获得额外威力！"
 	icon = 'icons/obj/item/attachments.dmi'
 
 	var/list/attachment_stats = list()
@@ -43,6 +43,8 @@
 
 	. = ..()
 
+	var/list/stat_display_names = list("damage_multiplier"="伤害倍率","projectile_speed"="弹体速度","bullet_spread"="弹丸散布","heat_spread"="后坐散布","shoot_delay"="射击间隔","bullet_color"="弹体颜色","skill_spread"="技能散布","movement_spread"="移动散布","inaccuracy_modifier"="不精确度系数","zoom_mul"="瞄准倍率","heat_per_shot"="每次射击后坐量","static_spread"="基础散布","condition_use_mod"="耐久消耗系数","mana_cost_multiplier"="法力消耗倍率","bullet_count"="弹体数量","max_bursts"="连发次数","bursts_to_use"="连发次数","burst_delay"="连发间隔","projectile"="弹体","ranged_damage_type"="远程伤害类型","penetrations"="额外穿透次数","prone_mul"="卧姿系数","prone_mod"="卧姿系数")
 	for(var/k in attachment_stats)
 		var/v = attachment_stats[k]
-		. += span("notice","[k]: [v]")
+		var/stat_display = stat_display_names[k] ? stat_display_names[k] : k
+		. += span("notice","[stat_display]：[v]")

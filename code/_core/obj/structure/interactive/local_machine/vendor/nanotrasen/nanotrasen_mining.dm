@@ -2,7 +2,7 @@
 	icon = 'icons/obj/structure/vending_new.dmi'
 
 /obj/structure/interactive/vending/nanotrasen/mining/clothing
-	name = "mining clothing vendor"
+	name = "矿业服装售货机"
 	icon_state = "mining_clothing"
 
 	icon_state_broken = null
@@ -50,7 +50,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/mining/guns
-	name = "mining gun vendor"
+	name = "矿业武器售货机"
 	icon_state = "mining_guns"
 
 	icon_state_broken = null
@@ -96,7 +96,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/mining/ammo
-	name = "mining gun vendor"
+	name = "矿业弹药售货机"
 	icon_state = "mining_ammo"
 
 	icon_state_broken = null
@@ -133,7 +133,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/mining/equipment
-	name = "mining equipment vendor"
+	name = "矿业装备售货机"
 	icon_state = "mining_equipment"
 
 	icon_state_broken = null

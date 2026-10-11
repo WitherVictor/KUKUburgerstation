@@ -1,5 +1,5 @@
 /obj/item/clothing/shirt
-	name = "shirt"
+	name = "上衣"
 	worn_layer = LAYER_MOB_CLOTHING_UNIFORM
 	item_slot = SLOT_TORSO
 

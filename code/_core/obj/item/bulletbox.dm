@@ -1,7 +1,7 @@
 /obj/item/bulletbox
-	name = "ammo box"
-	desc = "Here, take some ammo!"
-	desc_extended = "A non-descript green box that contains a large quantity of a single ammo type."
+	name = "弹药箱"
+	desc = "来，拿些弹药！"
+	desc_extended = "不起眼的绿色箱子，能装下大量同一种类的弹药。"
 	icon = 'icons/obj/item/bulletbox.dmi'
 	icon_state = "ammo"
 
@@ -27,7 +27,7 @@
 /obj/item/bulletbox/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(small == FALSE)
-		. += span("notice","Use to open and deploy, ALT+Click to pack up.")
+		. += span("notice","使用可打开并展开，按住Alt点击可收起。")
 
 /obj/item/bulletbox/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
 	RUN_PARENT_SAFE
@@ -61,7 +61,7 @@
 /obj/item/bulletbox/get_examine_list(var/mob/activator)
 	. = ..()
 	if(stored_bullet)
-		. += div("notice","It stores [initial(stored_bullet.name)] ([bullet_count]/[bullet_max] capacity).")
+		. += div("notice","存放弹药：[initial(stored_bullet.name)]（容量：[bullet_count]/[bullet_max]）。")
 
 /obj/item/bulletbox/click_self(var/mob/activator,location,control,params)
 
@@ -83,17 +83,17 @@
 		if(!stored_bullet)
 			if(ignore_custom_sprites)
 				if(B.type != initial(stored_bullet))
-					activator.to_chat(span("warning","It would be a bad idea to mix bullets up..."))
+					activator.to_chat(span("warning","混装不同弹药可不是个好主意……"))
 					return TRUE
 			else if(stored_bullet)
 				if(B.type != stored_bullet)
-					activator.to_chat(span("warning","It would be a bad idea to mix bullets up..."))
+					activator.to_chat(span("warning","混装不同弹药可不是个好主意……"))
 					return TRUE
 			var/bullets_to_add = min(B.amount,bullet_max)
 			set_stored_bullet(B.type)
 			bullets_to_add = abs(B.add_item_count(-bullets_to_add))
 			bullet_count += bullets_to_add
-			activator.to_chat(span("notice","You add [bullets_to_add] bullet\s to \the [src.name]."))
+			activator.to_chat(span("notice","你向[src.name]中装入了[bullets_to_add]发弹药。"))
 			update_sprite()
 			return TRUE
 		if(B.type == stored_bullet)
@@ -102,17 +102,17 @@
 				return TRUE
 			bullets_to_add = abs(B.add_item_count(-bullets_to_add))
 			bullet_count += bullets_to_add
-			activator.to_chat(span("notice","You add [bullets_to_add] bullet\s to \the [src.name]."))
+			activator.to_chat(span("notice","你向[src.name]中装入了[bullets_to_add]发弹药。"))
 			update_sprite()
 			return TRUE
-		activator.to_chat(span("warning","It would be a bad idea to mix bullets up..."))
+		activator.to_chat(span("warning","混装不同弹药可不是个好主意……"))
 		return TRUE
 
 	if(!small && anchored && activator.attack_flags & CONTROL_MOD_DISARM && src.set_anchored(FALSE))
 		INTERACT_CHECK
 		INTERACT_DELAY(5)
 		update_sprite()
-		activator.to_chat(span("notice","You pack up \the [src.name]."))
+		activator.to_chat(span("notice","你收起了[src.name]。"))
 		return TRUE
 
 	if(!stored_bullet)
@@ -131,7 +131,7 @@
 		FINALIZE(BC)
 		I.add_object(BC)
 		bullet_count -= bullets_to_take
-		activator.to_chat(span("notice","You take [bullets_to_take] bullets from \the [src.name]."))
+		activator.to_chat(span("notice","你从[src.name]中取出了[bullets_to_take]发弹药。"))
 		update_sprite()
 		return TRUE
 
@@ -147,7 +147,7 @@
 		M.stored_bullets[stored_bullet] += bullets_to_take
 		src.bullet_count -= bullets_to_take
 		M.update_sprite()
-		activator.to_chat(span("notice","You fill up \the [M.name] with [bullets_to_take] bullets from \the [src.name]."))
+		activator.to_chat(span("notice","你从[src.name]中取出[bullets_to_take]发弹药，装入了[M.name]。"))
 		update_sprite()
 		return TRUE
 
@@ -256,9 +256,9 @@
 
 
 /obj/item/bulletbox/small
-	name = "small ammo box"
-	desc = "Here, take some ammo!"
-	desc_extended = "A small cardboard box specialized for storing a couple handfuls of a single ammo type. Smaller capacity, but doesn't need to be deployed."
+	name = "小型弹药箱"
+	desc = "来，拿些弹药！"
+	desc_extended = "用来存放少量同类弹药的小纸盒。容量较小，但不必展开就能使用。"
 	size = SIZE_2
 	small = TRUE
 	ignore_custom_sprites = TRUE

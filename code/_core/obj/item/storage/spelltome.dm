@@ -1,6 +1,6 @@
 /obj/item/storage/spelltome/
-	name = "spelltome"
-	desc_extended = "A spelltome that lets you create custom spells. Can hold more spell pages than what is required for easy storage. Point at a turf to cast."
+	name = "法术典籍"
+	desc_extended = "一本可以组合自定义法术的典籍。为了方便收纳，能容纳的法术书页多于施法所需数量。指向地面即可施法。"
 
 
 	icon = 'icons/obj/items/weapons/ranged/magic/spellcraft/books.dmi'
@@ -25,9 +25,9 @@
 
 	var/obj/item/weapon/ranged/magic/rune/S = make_spell(caller,inventory_to_list(),T)
 	if(S)
-		caller.to_chat(span("notice","You cast a rune on \the [T]."))
+		caller.to_chat(span("notice","你在[T]上施放了符文。"))
 	else
-		caller.to_chat(span("warning","You fail to cast anything!"))
+		caller.to_chat(span("warning","你没能施放出任何法术！"))
 
 	return TRUE
 

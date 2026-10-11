@@ -12,7 +12,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/general
-	name = "nanotrasen general equipment vendor"
+	name = "纳米传讯通用装备售货机"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "general_equipment"
 
@@ -42,7 +42,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/attachments
-	name = "nanotrasen attachments vendor"
+	name = "纳米传讯配件售货机"
 	icon = 'icons/obj/structure/vending_new.dmi'
 	icon_state = "general_attachments"
 

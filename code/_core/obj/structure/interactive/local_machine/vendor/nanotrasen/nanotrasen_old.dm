@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/nanotrasen/wardrobe/ops
-	name = "nt ops wardrobe vendor"
+	name = "纳米传讯行动部服装售货机"
 	icon_state = "secdrobe_ops"
 
 	icon_state_broken = null
@@ -35,7 +35,7 @@
 
 //Security
 /obj/structure/interactive/vending/nanotrasen/gundrobe/ops
-	name = "NT ops gun vendor"
+	name = "纳米传讯行动部武器售货机"
 	icon_state = "gundrobe_ops"
 
 	icon_state_broken = null
@@ -83,7 +83,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/gundrobe/dip
-	name = "drip gun vendor"
+	name = "潮流武器售货机"
 	icon_state = "dipdrobe"
 
 	icon_state_broken = null
@@ -111,7 +111,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/ammo
-	name = "ammo vendor"
+	name = "弹药售货机"
 	icon_state = "ammodrobe"
 
 	icon_state_broken = null
@@ -159,7 +159,7 @@
 	icon_state_panel = null
 
 /obj/structure/interactive/vending/nanotrasen/attachment
-	name = "attachment vendor"
+	name = "配件售货机"
 	icon_state = "attachment"
 
 	icon_state_broken = null
@@ -189,7 +189,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/loadout
-	name = "loadout vendor"
+	name = "装备方案售货机"
 	icon_state = "gear"
 
 	icon_state_broken = null

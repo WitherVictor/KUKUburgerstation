@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/flame
-	name = "flame stream spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a stream of igniting flames."
+	name = "火焰流法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "喷出一道能够点燃目标的火焰流。"
 	icon_state = "damage"
 
 	rarity = RARITY_RARE

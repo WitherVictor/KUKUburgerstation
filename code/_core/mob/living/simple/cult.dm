@@ -28,7 +28,7 @@
 	icon_state = "construct_dead"
 
 /mob/living/simple/cult/construct/behemoth
-	name = "blood cult behemoth"
+	name = "血之邪教巨兽"
 	icon = 'icons/mob/living/simple/cult.dmi'
 	icon_state = "behemoth"
 
@@ -47,7 +47,7 @@
 
 
 /mob/living/simple/cult/construct/artificer
-	name = "blood cult artificer"
+	name = "血之邪教工匠"
 	icon = 'icons/mob/living/simple/cult.dmi'
 	icon_state = "artificer"
 
@@ -66,7 +66,7 @@
 
 
 /mob/living/simple/cult/construct/harvester
-	name = "blood cult harvester"
+	name = "血之邪教收割者"
 	icon = 'icons/mob/living/simple/cult.dmi'
 	icon_state = "harvester"
 
@@ -85,7 +85,7 @@
 
 
 /mob/living/simple/cult/construct/chosen
-	name = "blood cult chosen"
+	name = "血之邪教天选者"
 	icon = 'icons/mob/living/simple/cult.dmi'
 	icon_state = "chosen"
 
@@ -105,7 +105,7 @@
 
 
 /mob/living/simple/cult/construct/floating
-	name = "blood cult construct"
+	name = "血之邪教构装体"
 	icon = 'icons/mob/living/simple/cult.dmi'
 	icon_state = "floating"
 
@@ -124,7 +124,7 @@
 
 
 /mob/living/simple/cult/construct/proteon
-	name = "blood cult proteon"
+	name = "血之邪教原生体"
 	icon = 'icons/mob/living/simple/cult.dmi'
 	icon_state = "proteon"
 

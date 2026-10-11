@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/alchemist_coat
-	name = "alchemist coat"
+	name = "炼金术士外套"
 	icon = 'icons/obj/item/clothing/suit/alchemist_coat.dmi'
 
-	desc = "Cool coat, dude. Must have cost an arm and a leg."
-	desc_extended = "Chemistry is just alchemy, but without magic and fancy words."
+	desc = "哥们，外套真酷，肯定贵得要命。"
+	desc_extended = "化学就是去掉魔法和花哨术语的炼金术。"
 
 	defense_rating = list(
 		ARCANE = 50,

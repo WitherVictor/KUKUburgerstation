@@ -1,8 +1,8 @@
 /obj/item/clothing/head/helmet/full/blob_spore
-	name = "blob spore"
+	name = "异形菌毯孢子"
 	icon = 'icons/obj/item/clothing/hats/blob.dmi'
-	desc = "OH GOD ITS EATING MY BRAINS."
-	desc_extended = "A very dangerous blob spore that appears attached to a head. Should probably remove this before your brains get eaten."
+	desc = "天啊，它在吃我的脑子！"
+	desc_extended = "一颗极其危险的异形菌毯孢子，似乎附着在头上。最好在脑子被吃掉之前把它弄下来。"
 
 	worn_layer = LAYER_MOB_BLOB
 
@@ -33,7 +33,7 @@
 	return TRUE
 
 /obj/item/clothing/head/helmet/full/blob_spore/proc/remove_blob(var/mob/activator,var/messsage=TRUE)
-	if(messsage && activator) activator.visible_message(span("notice","\The [activator.name] successfully removes \the [src.name]!"),span("notice","You sucessfully remove \the [src.name]!"))
+	if(messsage && activator) activator.visible_message(span("notice","[activator.name]成功取下了[src.name]！"),span("notice","你成功取下了[src.name]！"))
 	var/turf/T = get_turf(activator ? activator : src)
 	if(T)
 		var/mob/living/simple/blob_spore/BS = new(T)
@@ -116,7 +116,7 @@
 	damage_ramp = initial(damage_ramp)
 
 	if(new_location && is_advanced(new_location.owner))
-		new_location.owner.visible_message(span("warning","\The [src.name] consumes \the [new_location.owner.name]'s [new_location.loc.name]!"),span("danger","\The [src.name] tries to consume your [new_location.loc.name]! GET IT OFF!"))
+		new_location.owner.visible_message(span("warning","[src.name]正在吞噬[new_location.owner.name]的[new_location.loc.name]！"),span("danger","[src.name]试图吞噬你的[new_location.loc.name]！快把它弄下来！"))
 		START_THINKING(src)
 	else
 		STOP_THINKING(src)

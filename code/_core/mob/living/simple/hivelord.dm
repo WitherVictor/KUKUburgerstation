@@ -1,7 +1,7 @@
 /mob/living/simple/hivelord
-	name = "hivelord"
-	desc = "From the depths."
-	desc_extended = "A manifestation of dark energy."
+	name = "巢主"
+	desc = "来自深渊。"
+	desc_extended = "黑暗能量的化身。"
 	icon = 'icons/mob/living/simple/hivelord.dmi'
 	icon_state = "living"
 

@@ -1,6 +1,6 @@
 /obj/structure/interactive/blob/wall
-	name = "blob wall"
-	desc_extended = "A segment of the ever-expanding blob. May create blob spores."
+	name = "异形菌毯墙"
+	desc_extended = "不断扩张的异形菌毯的一部分。可能生成异形菌毯孢子。"
 	icon_state = "wall"
 	health_states = 4
 

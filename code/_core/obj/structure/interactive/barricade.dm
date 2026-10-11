@@ -1,6 +1,6 @@
 /obj/structure/interactive/barricade
-	name = "metal barricade"
-	desc_extended = "Has a 90% chance to block most types of projectiles when a bullet passes it from the outside."
+	name = "金属路障"
+	desc_extended = "大多数类型的弹体从外侧穿过时，有90%的概率被挡住。"
 	icon = 'icons/obj/structure/barricade.dmi'
 	icon_state = "metal"
 
@@ -51,7 +51,7 @@
 	var/mob/living/L = activator
 
 	if(L.horizontal)
-		activator.to_chat(span("warning","You need to be standing in order to climb over \the [src.name]!"))
+		activator.to_chat(span("warning","你需要站起来才能翻过[src.name]！"))
 		return FALSE
 
 	return TRUE
@@ -78,7 +78,7 @@
 		INTERACT_DELAY(5)
 		PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(2),src::climb_over(),activator)
 		PROGRESS_BAR_CONDITIONS(activator,src,src::can_climb_over(),activator)
-		activator.visible_message(span("warning","\The [activator.name] begins climbing over \the [src.name]."),span("notice","You begin climbing over \the [src.name]."))
+		activator.visible_message(span("warning","[activator.name]开始翻越[src.name]。"),span("notice","你开始翻越[src.name]。"))
 		return TRUE
 
 	return ..()

@@ -1,8 +1,8 @@
 /obj/item/clothing/glasses/sun
-	name = "sunglasses"
+	name = "墨镜"
 
-	desc = "Deal with it."
-	desc_extended = "A simple pair of sleek sunglasses designed to reflect sunlight, and lasers. The inverse of prescription glasses."
+	desc = "不服也得忍着。"
+	desc_extended = "一副简洁时髦的墨镜，可以反射阳光和激光。防护效果与矫正眼镜相反。"
 	icon = 'icons/obj/item/clothing/glasses/sunglasses.dmi'
 
 	armor = /armor/glasses/sunglasses
@@ -33,11 +33,11 @@
 
 
 /obj/item/clothing/glasses/sun/big
-	name = "big shades"
+	name = "大号墨镜"
 	icon = 'icons/obj/item/clothing/glasses/sunglasses_big.dmi'
 
 /obj/item/clothing/glasses/sun/gar
-	name = "gar shades"
+	name = "热血墨镜"
 	icon = 'icons/obj/item/clothing/glasses/gar.dmi'
 
 	damage_type = /damagetype/melee/sword/grazer
@@ -49,7 +49,7 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/glasses/sun/gar/giga
-	name = "gigagar shades"
+	name = "超热血墨镜"
 	icon = 'icons/obj/item/clothing/glasses/gigagar.dmi'
 	damage_type = /damagetype/melee/sword/katana
 
@@ -58,10 +58,10 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/clothing/glasses/sun/dicklickem
-	name = "dickhead shades"
+	name = "混蛋墨镜"
 
-	desc = "ITS TIME TO CHEW ASS AND KICK BUBBLEGUM."
-	desc_extended = "These glasses are more like heavily tinted glass with the amount of bodily fluids caked on. Fortunately, this also makes them incredibly durable."
+	desc = "是时候嚼屁股、踢泡泡糖了。"
+	desc_extended = "镜片糊满了干结的体液，看着更像深色玻璃。幸好这也让它变得异常耐用。"
 
 	icon = 'icons/obj/item/clothing/glasses/dicklickem.dmi'
 
@@ -71,9 +71,9 @@
 
 
 /obj/item/clothing/glasses/sun/augmented
-	name = "augmented shades"
-	desc = "Your vision is augmented."
-	desc_extended = "Powerful augmented shades meant for security personel. These come with a built in security HUD as well as thermal imaging. For the badass."
+	name = "强化墨镜"
+	desc = "你的视觉得到了强化。"
+	desc_extended = "为安保人员设计的强力强化墨镜，内置安保与医疗状态界面及热成像功能。硬汉专用。"
 	icon = 'icons/obj/item/clothing/glasses/abomb_shades.dmi'
 
 	sight_mod = SEE_MOBS
@@ -87,10 +87,10 @@
 
 
 /obj/item/clothing/glasses/sun/security
-	name = "security sunglasses"
+	name = "安保墨镜"
 
-	desc = "This is just like a videogame!"
-	desc_extended = "A security heads up display sunglass kit that analyzes the IFF implant of nearby living beings and displays them on the screen."
+	desc = "简直就像电子游戏一样！"
+	desc_extended = "带有安保状态界面的墨镜，分析附近生物的敌我识别植入体，并在屏幕上显示结果。"
 	icon = 'icons/obj/item/clothing/glasses/security_hud.dmi'
 
 	vision_mod = FLAG_VISION_SECURITY
@@ -100,9 +100,9 @@
 	value = 160
 
 /obj/item/clothing/glasses/sun/security/red
-	name = "combat sensors suite sunglasses"
+	name = "战斗传感套件墨镜"
 
-	desc_extended = "A syndicate heads up display sunglass kit that analyzes the IFF implant of nearby living beings and displays them on the screen. This model is more advanced, and is usually found on high ranking syndicate operatives. Comes with built-in thermals as well."
+	desc_extended = "带有辛迪加状态界面的墨镜，分析附近生物的敌我识别植入体，并在屏幕上显示结果。这款更加先进，通常由辛迪加高级特工佩戴，还内置热成像功能。"
 	value = 1000
 
 	armor = /armor/mechanical
@@ -111,9 +111,9 @@
 	vision_mod = FLAG_VISION_SECURITY | FLAG_VISION_MEDICAL
 
 /obj/item/clothing/glasses/sun/security/revolutionary
-	name = "ballistic goggles"
+	name = "防弹护目镜"
 
-	desc_extended = "An old yet well-maintained pair of ballistic goggles with a built-in heads up display kit that analyzes the IFF implant of nearby living beings and displays them on the screen. This model is more advanced, and is usually found on high ranking revolutionary soldiers. Comes with built-in thermals as well."
+	desc_extended = "一副老旧但保养良好的防弹护目镜，内置状态界面，可分析附近生物的敌我识别植入体并显示结果。这款更加先进，通常由革命军高级士兵佩戴，还内置热成像功能。"
 	icon = 'icons/obj/item/clothing/glasses/rev_goggles.dmi'
 	value = 1000
 

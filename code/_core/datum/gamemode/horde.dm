@@ -1,6 +1,6 @@
 /gamemode/horde/
 	name = "Horde Mode (ERROR)"
-	desc = "Fight off a near endless wave of enemies while attempting to complete objectives scattered across the map."
+	desc = "在抵御近乎无穷的敌人攻势的同时，完成分散在地图各处的任务目标。"
 
 	var/list/horde_targets = list()
 
@@ -47,7 +47,7 @@
 	state = GAMEMODE_WAITING
 	round_time = 0
 	round_time_next = HORDE_DELAY_WAIT //Skip to gearing. Nothing to wait for.
-	announce(name,"Starting new round...",desc)
+	announce(name,"新一轮即将开始……",desc)
 
 	if(spawn_on_markers)
 		for(var/k in horde_spawnpoints)
@@ -130,7 +130,7 @@
 
 /gamemode/horde/proc/on_waiting()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","PREP\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","准备\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
 		return TRUE
 	state = GAMEMODE_GEARING
@@ -139,9 +139,9 @@
 	SSshuttle.next_pod_launch = world.time + SECONDS_TO_DECISECONDS(60*10 + 10)
 	add_objectives()
 	announce(
-		"Central Command Update",
-		"Prepare for Landfall",
-		"All landfall crew are ordered to gear up for planetside combat. Estimated time until shuttle and drop pod functionality: 8 minutes.",
+		"中央指挥部通告",
+		"准备登陆",
+		"所有登陆人员立即整备，准备地面作战。穿梭机和空降舱预计8分钟后启用。",
 		ANNOUNCEMENT_STATION,
 		'sound/voice/announcement/landfall_crew_8_minutes.ogg'
 	)
@@ -149,16 +149,16 @@
 
 /gamemode/horde/proc/on_gearing()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","GEAR\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","整备\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
 		return TRUE
 	state = GAMEMODE_BOARDING
 	round_time = 0
 	round_time_next = HORDE_DELAY_BOARDING
 	announce(
-		"Central Command Update",
-		"Shuttle Boarding",
-		"All landfall crew are ordered to proceed to the hanger bay and prep for shuttle launch. Shuttles will be allowed to launch in 2 minutes.",
+		"中央指挥部通告",
+		"登上穿梭机",
+		"所有登陆人员立即前往机库，准备搭乘穿梭机。穿梭机将在2分钟后获准起飞。",
 		ANNOUNCEMENT_STATION,
 		'sound/voice/announcement/landfall_crew_2_minutes.ogg'
 	)
@@ -166,20 +166,20 @@
 
 /gamemode/horde/proc/on_boarding()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","BRDN\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","登机\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
 		return TRUE
 	state = GAMEMODE_LAUNCHING
 	round_time = 0
 	round_time_next = HORDE_DELAY_LAUNCHING
-	announce("Central Command Mission Update","Mission is a Go","Shuttles are prepped and ready to depart into the Area of Operations. All crew are cleared to launch.",ANNOUNCEMENT_STATION,'sound/voice/announcement/landfall_crew_0_minutes.ogg')
+	announce("中央指挥部任务通告","任务开始","穿梭机整备完毕，可以前往作战区域。全体人员获准出发。",ANNOUNCEMENT_STATION,'sound/voice/announcement/landfall_crew_0_minutes.ogg')
 	allow_launch = TRUE
 	SSshuttle.next_pod_launch = world.time + SECONDS_TO_DECISECONDS(10)
 	return TRUE
 
 /gamemode/horde/proc/on_launching()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","LNCH\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","出发\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
 		return TRUE
 	state = GAMEMODE_FIGHTING

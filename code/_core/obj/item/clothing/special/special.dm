@@ -1,3 +1,3 @@
 /obj/item/clothing/special/
-	name = "artifact"
+	name = "遗物"
 	item_slot = SLOT_SPECIAL

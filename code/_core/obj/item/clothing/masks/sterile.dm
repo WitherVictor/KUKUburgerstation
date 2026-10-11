@@ -1,9 +1,9 @@
 /obj/item/clothing/mask/sterile
-	name = "sterile medical mask"
+	name = "无菌医用口罩"
 	icon = 'icons/obj/item/clothing/masks/sterile.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
-	desc = "There is no reason for panic."
-	desc_extended = "A face mask designed to prevent the spread of airborne viruses."
+	desc = "没必要恐慌。"
+	desc_extended = "用于防止病毒经空气传播的口罩。"
 
 	armor = /armor/cloth/bio
 

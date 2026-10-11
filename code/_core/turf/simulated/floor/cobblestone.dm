@@ -1,5 +1,5 @@
 /turf/simulated/floor/cobblestone
-	name = "cobblestone"
+	name = "鹅卵石路面"
 	icon = 'icons/turf/floor/path.dmi'
 	icon_state = "cobble_center"
 	color = "#888888"
@@ -23,7 +23,7 @@
 
 
 /turf/simulated/floor/brick
-	name = "brick floor"
+	name = "砖地板"
 	icon = 'icons/turf/floor/brick_new.dmi'
 	icon_state = "0,0"
 	color = "#FFFFFF"
@@ -60,7 +60,7 @@
 	color = "#CCBAAD"
 
 /turf/simulated/floor/temple
-	name = "temple floor"
+	name = "神殿地板"
 	icon = 'icons/turf/floor/temple.dmi'
 	icon_state = "floor"
 	color = "#D3B27C"

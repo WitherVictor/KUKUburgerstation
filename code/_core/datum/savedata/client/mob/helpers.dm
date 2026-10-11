@@ -76,20 +76,20 @@ var/global/allow_loading = TRUE
 	var/client/owner = CLIENT(ckey)
 
 	if(!allow_loading)
-		owner?.mob?.to_chat(span("danger","Loading is currently disabled due to cleaning feature. Please wait."))
+		owner?.mob?.to_chat(span("danger","正在清理，暂时无法载入。请稍候。"))
 		return FALSE
 
 	if(world_state < STATE_RUNNING)
-		owner?.mob?.to_chat(span("warning","The round is currently loading! Wait a bit!"))
+		owner?.mob?.to_chat(span("warning","本轮正在加载！请稍候！"))
 		return FALSE
 
 	if(world_state > STATE_RUNNING)
-		owner?.mob?.to_chat(span("warning","The round is currently ending! Wait until next round!"))
+		owner?.mob?.to_chat(span("warning","本轮正在结束！请等到下一轮！"))
 		return FALSE
 
 	var/max_characters = CONFIG("MAXIMUM_PLAYER_SAVES",10)
 	if(text2num(character_id) > max_characters)
-		owner?.mob?.to_chat(span("warning","You exceed the maximum allocated characters! ([text2num(character_id)-1]/[max_characters])"))
+		owner?.mob?.to_chat(span("warning","你的角色数量已超过允许上限！（[text2num(character_id)-1]/[max_characters]）"))
 		return FALSE
 
 	reset_data()
@@ -101,27 +101,27 @@ var/global/allow_loading = TRUE
 /savedata/client/mob/proc/save_character(var/mob/living/advanced/player/A,var/save_inventory = TRUE,var/died=FALSE)
 
 	if(!A)
-		usr?.to_chat(span("danger","<h2>Save failed. Tried to save NULL. Please contact the server owner with error code: 1000.</h2>"))
+		usr?.to_chat(span("danger","<h2>保存失败：角色不存在。请向服主提供错误码：1000。</h2>"))
 		CRASH("SAVE ERROR: Tried to save a character without an actual character!")
 
 	if(A.qdeleting)
-		usr?.to_chat(span("danger","<h2>Save failed. Tried to save [A.get_debug_name()]. Please contact the server owner with error code: 1001.</h2>"))
+		usr?.to_chat(span("danger","<h2>保存失败：[A.get_debug_name()]正在删除。请向服主提供错误码：1001。</h2>"))
 		CRASH("SAVE ERROR: Tried saving a character that was qdeleting!")
 
 	if(A.loc == null)
-		usr?.to_chat(span("danger","<h2>Save failed. Tried to save [A.get_debug_name()]. Please contact the server owner with error code: 1002.</h2>"))
+		usr?.to_chat(span("danger","<h2>保存失败：[A.get_debug_name()]没有有效位置。请向服主提供错误码：1002。</h2>"))
 		CRASH("SAVE ERROR: Tried saving a character that had a null loc!")
 
 	if(!istype(A))
-		usr?.to_chat(span("danger","<h2>Save failed. Tried to save [A.get_debug_name()]. Please contact the server owner with error code: 1003.</h2>"))
+		usr?.to_chat(span("danger","<h2>保存失败：[A.get_debug_name()]不是玩家角色。请向服主提供错误码：1003。</h2>"))
 		CRASH("SAVE ERROR: Tried to save [A.get_debug_name()], a non-player!")
 
 	if(!A.allow_save)
-		usr?.to_chat(span("danger","You cannot save this character!"))
+		usr?.to_chat(span("danger","你无法保存这个角色！"))
 		return FALSE
 
 	if(!A.finalized || !A.initialized)
-		usr?.to_chat(span("warning","Your character was not saved as it is still initializing. This is to prevent save corruption. If you believe you received this message in error, contact Burger on discord."))
+		usr?.to_chat(span("warning","你的角色仍在初始化，暂未保存，以免损坏存档。如果你认为此提示有误，请在Discord上联系Burger。"))
 		return FALSE
 
 	A.is_saving = TRUE
@@ -129,28 +129,28 @@ var/global/allow_loading = TRUE
 
 	. = TRUE
 	if(!length(loaded_data))
-		A.to_chat(span("danger","FATAL ERROR: COULD NOT SAVE! Your character had no data! Contact burger on how this happened with error code: 2001."))
+		A.to_chat(span("danger","严重错误：保存失败！角色数据为空！请联系Burger并说明情况，错误码：2001。"))
 		log_error("Tried saving [A.get_debug_name()] with no loaded data!")
 		. = FALSE
 	else if(!length(loaded_data["organs"]))
-		A.to_chat(span("danger","FATAL ERROR: COULD NOT SAVE! Your character had no organ data! Contact burger on how this happened with error code: 2002."))
+		A.to_chat(span("danger","严重错误：保存失败！角色器官数据为空！请联系Burger并说明情况，错误码：2002。"))
 		log_error("Tried saving [A.get_debug_name()] with no organ data!")
 		. = FALSE
 	else if(!length(loaded_data["skills"]))
-		A.to_chat(span("danger","FATAL ERROR: COULD NOT SAVE! Your character had no skill data! Contact burger on how this happened with error code: 2003."))
+		A.to_chat(span("danger","严重错误：保存失败！角色技能数据为空！请联系Burger并说明情况，错误码：2003。"))
 		log_error("Tried saving [A.get_debug_name()] with no skill data!")
 		. =  FALSE
 	else if(!length(loaded_data["attributes"]))
-		A.to_chat(span("danger","FATAL ERROR: COULD NOT SAVE! Your character had no attribute data! Contact burger on how this happened with error code: 2004."))
+		A.to_chat(span("danger","严重错误：保存失败！角色属性数据为空！请联系Burger并说明情况，错误码：2004。"))
 		log_error("Tried saving [A.get_debug_name()] with no attribute data!")
 		. = FALSE
 	else if(write_json_data_to_id(loaded_data["id"],loaded_data))
 		if(died)
-			A.to_chat(span("notice","Your mind and body was backed up in the NanoTrasen cloning network..."))
+			A.to_chat(span("notice","你的意识与身体已备份至纳米传讯克隆网络……"))
 		else
-			A.to_chat(span("notice","Sucessfully saved character [A.name]."))
+			A.to_chat(span("notice","角色[A.name]已成功保存。"))
 	else
-		A.to_chat(span("danger","<h2>Save failed. Please contact the server owner with error code: 2005.</h2>"))
+		A.to_chat(span("danger","<h2>保存失败。请向服主提供错误码：2005。</h2>"))
 		log_error("Failed to save [A.get_debug_name()] with write_json_data_to_id!")
 		. = FALSE
 

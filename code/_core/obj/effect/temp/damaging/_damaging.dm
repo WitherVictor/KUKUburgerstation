@@ -1,6 +1,6 @@
 obj/effect/temp/hazard
-	name = "hazard"
-	desc = "Avoid this."
+	name = "危险区域"
+	desc = "躲开这里。"
 	duration = SECONDS_TO_DECISECONDS(3)
 
 	var/atom/owner
@@ -90,7 +90,7 @@ obj/effect/temp/hazard/New(var/desired_location,var/desired_time,var/desired_own
 
 
 obj/effect/temp/hazard/falling_fireball
-	name = "falling fireball"
+	name = "坠落火球"
 	icon = 'icons/obj/projectiles/magic.dmi'
 	icon_state = "firebolt"
 	duration = SECONDS_TO_DECISECONDS(2.1)
@@ -111,7 +111,7 @@ obj/effect/temp/hazard/falling_fireball/New(var/desired_location,var/desired_tim
 	return ..()
 
 obj/effect/temp/hazard/tentacle/
-	name = "goliath tentacle"
+	name = "歌利亚触手"
 	icon = 'icons/mob/living/simple/lavaland/goliath.dmi'
 	icon_state = "tentacle"
 	duration = 13
@@ -133,7 +133,7 @@ obj/effect/temp/hazard/tentacle/attack(var/atom/attacker,var/atom/victim,var/lis
 	return ..()
 
 obj/effect/temp/hazard/bubblefist/
-	name = "bubblegum grab"
+	name = "泡泡糖抓握"
 	icon = 'icons/mob/living/simple/lavaland/bubblegum_hands.dmi'
 	icon_state = "rightpawgrab"
 	var/overlay_state = "rightthumbgrab"
@@ -171,7 +171,7 @@ obj/effect/temp/hazard/bubblefist/attack(var/atom/attacker,var/atom/victim,var/l
 
 
 /obj/effect/temp/hazard/lava/
-	name = "lava"
+	name = "熔岩"
 	icon = 'icons/obj/effects/lava.dmi'
 	icon_state = "lavastaff_warn"
 	duration = SECONDS_TO_DECISECONDS(30)
@@ -194,7 +194,7 @@ obj/effect/temp/hazard/bubblefist/attack(var/atom/attacker,var/atom/victim,var/l
 
 
 /obj/effect/temp/hazard/curse
-	name = "lava"
+	name = "邪教诅咒"
 	icon = 'icons/obj/structure/cult/effects.dmi'
 	icon_state = "floorglow_strong"
 	duration = SECONDS_TO_DECISECONDS(10)
@@ -223,7 +223,7 @@ obj/effect/temp/hazard/bubblefist/attack(var/atom/attacker,var/atom/victim,var/l
 	.[PARAM_ICON_Y] = rand(0,14)
 
 /obj/effect/temp/hazard/flamethrowerfire
-	name = "fire"
+	name = "火焰"
 	icon = 'icons/obj/effects/flamer_fire_effect.dmi' //FIRE
 	icon_state = "red_1" //brain out, soup in
 	duration = SECONDS_TO_DECISECONDS(30)

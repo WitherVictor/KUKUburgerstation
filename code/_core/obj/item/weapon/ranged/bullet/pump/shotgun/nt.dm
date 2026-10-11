@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/nt
-	name = "12g M2 MasterStroke"
-	desc = "Reliable, cheap, and strong."
-	desc_extended = "A very robust yet affordable short-stroke pump action shotgun made by NanoTrasen for NanoTrasen."
+	name = "12号M2妙手"
+	desc = "可靠、便宜、强劲。"
+	desc_extended = "纳米传讯为自家人员打造的短行程泵动式霰弹枪，坚固耐用而且价格实惠。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/nanotrasen/pump.dmi'
 	icon_state = "inventory"
 	value = 800

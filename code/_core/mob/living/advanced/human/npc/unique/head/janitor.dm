@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/head/janitor
-	name = "Chief Sanitation Expert"
-	desc = "All access, please."
+	name = "首席环境卫生专家"
+	desc = "麻烦给我全权限。"
 	species = "human"
 	dialogue_id = /dialogue/npc/hop/
 	sex = MALE

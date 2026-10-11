@@ -1,7 +1,7 @@
 /obj/item/magazine/sniper_20mm
-	name = "\improper 20x117mm sniper magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 20x117mm狙击枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/20mm_sniper.dmi'
 	icon_state = "20"
 	bullet_count_max = 4

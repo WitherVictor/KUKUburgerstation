@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/shotgun_23/
-	name = "\improper 23x75mmR buckshot shell"
-	desc = "Now with 50% more pellet per pellet"
-	desc_extended = "A buckshot shell designed specifically for the KS23"
+	name = "\improper 23x75mmR鹿弹"
+	desc = "现在每颗弹丸的弹丸含量增加50%！"
+	desc_extended = "为KS23专门设计的鹿弹。"
 	icon = 'icons/obj/item/bullet/shotgun_23.dmi'
 	icon_state = "23buck"
 
@@ -35,9 +35,9 @@
 	return TRUE
 
 /obj/item/bullet_cartridge/shotgun_23/slug
-	name = "\improper 23x75mmR slug"
-	desc = "This thing's huge!"
-	desc_extended = "A shotgun slug designed specifically for the KS23"
+	name = "\improper 23x75mmR独头弹"
+	desc = "这玩意儿真大！"
+	desc_extended = "为KS23专门设计的霰弹枪独头弹。"
 	rarity = RARITY_UNCOMMON
 	icon_state = "23slug"
 
@@ -53,9 +53,9 @@
 	value = 4
 
 /obj/item/bullet_cartridge/shotgun_23/fire
-	name = "\improper 23x75mmR incendiary shell"
-	desc = "I AM BURNING! I AM BURNING! I AM BURNING!"
-	desc_extended = "An incendiary shell designed specifically for the KS23"
+	name = "\improper 23x75mmR燃烧弹"
+	desc = "我着火了！我着火了！我着火了！"
+	desc_extended = "为KS23专门设计的燃烧弹。"
 	rarity = RARITY_RARE
 	icon_state = "23fire"
 
@@ -66,9 +66,9 @@
 	damage_type_bullet = /damagetype/ranged/bullet/shotgun_23/fire
 
 /obj/item/bullet_cartridge/shotgun_23/rubber
-	name = "\improper 23x75mmR rubber slug shell"
-	desc = "Welcome to the land called 'Police Brutality'"
-	desc_extended = "A rubber slug shell designed specifically for the KS23"
+	name = "\improper 23x75mmR橡胶独头弹"
+	desc = "欢迎来到名为“警察暴力”的国度。"
+	desc_extended = "为KS23专门设计的橡胶独头弹。"
 	rarity = RARITY_UNCOMMON
 	icon_state = "23rubber"
 

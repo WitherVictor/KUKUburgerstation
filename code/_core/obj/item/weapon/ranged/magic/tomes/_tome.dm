@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/
-	name = "spell tome"
-	desc = "What secrets does this tome hold?"
-	desc_extended = "A weapon that uses mana to cast spells."
+	name = "法术典籍"
+	desc = "这部典籍藏着什么秘密？"
+	desc_extended = "消耗法力施放法术的武器。"
 
 	has_quick_function = TRUE
 

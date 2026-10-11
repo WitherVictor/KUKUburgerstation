@@ -1,5 +1,5 @@
 /obj/structure/interactive/supplies
-	name = "supply crate"
+	name = "补给箱"
 	icon = 'icons/obj/structure/loot.dmi'
 	icon_state = "closed"
 	bound_width = TILE_SIZE*3

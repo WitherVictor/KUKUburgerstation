@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/plascrusader
-	name = "plascrusader armor"
-	desc = "GOLD GOLD GOLD!"
-	desc_extended = "A heavy chestplate made from gold metals and looks awesome."
+	name = "金甲十字军护甲"
+	desc = "金子，金子，金子！"
+	desc_extended = "一件金属打造的沉重金色胸甲，看起来帅极了。"
 	icon = 'icons/obj/item/clothing/suit/plascrusader.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 	rarity = RARITY_UNCOMMON

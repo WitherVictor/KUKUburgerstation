@@ -1,7 +1,7 @@
 /obj/structure/interactive/portal
-	name = "strange portal"
+	name = "奇异传送门"
 	id = null
-	desc = "What is inside?"
+	desc = "里面会有什么？"
 	icon = 'icons/obj/effects/effects.dmi'
 	icon_state = "anom"
 

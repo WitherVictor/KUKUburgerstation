@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/m4
 	name = "\improper 5.56mm M5A2"
-	desc = "Made in the Space Colonies!"
-	desc_extended = "A typical run of the mill assault rifle designed to quickly put down targets at medium to long ranges."
+	desc = "太空殖民地制造！"
+	desc_extended = "平凡常见的突击步枪，用于快速击倒中远距离目标。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/merc.dmi'
 	icon_state = "inventory"
 	value = 1800

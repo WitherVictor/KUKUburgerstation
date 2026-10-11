@@ -1,7 +1,7 @@
 obj/structure/interactive/misc/yashik
-	name = "Wooden box"
-	desc = "Green wooden box."
-	desc_extended = "A well-preserved, wooden box with metal rods and plates. There's no way to open this one."
+	name = "木箱"
+	desc = "一只绿色的木箱。"
+	desc_extended = "一只保存完好的木箱，配有金属杆和金属板。这个箱子无法打开。"
 	icon_state = "crate"
 	icon = 'icons/obj/structure/misc_new.dmi'
 

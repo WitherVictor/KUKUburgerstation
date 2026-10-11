@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/lmg
-	name = "\improper .223 Defender LMG"
-	desc = "Atatatatatatata."
-	desc_extended = "The .223 Defender Light Machine Gun is a not very light machine gun meant to fire a lot of rounds in quick succession for relatively extended periods of time. Was designed by syndicate weapon scientists to take 5.56mm rounds that are commonly dropped by the enemy."
+	name = "\improper .223卫士轻机枪"
+	desc = "哒哒哒哒哒哒。"
+	desc_extended = ".223卫士轻机枪其实并不轻，能在较长时间内连续高速倾泻大量弹药。辛迪加武器科研人员将其设计为可使用敌人常掉落的5.56mm弹药。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/223_lmg.dmi'
 	icon_state = "inventory"
 	value = 4500

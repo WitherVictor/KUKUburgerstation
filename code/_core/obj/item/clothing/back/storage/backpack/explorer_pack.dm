@@ -1,7 +1,7 @@
 obj/item/clothing/back/storage/backpack/explorer
-	name = "explorer's pack"
-	desc = "Lightweight and reliable!"
-	desc_extended = "A small gear harness designed to carry a small amount of large items. Perfect for looters of the battlefield."
+	name = "探险者背具"
+	desc = "轻便可靠！"
+	desc_extended = "小型装备背具，可携带少量大件物品，是战场拾荒者的理想装备。"
 
 	icon = 'icons/obj/item/clothing/back/backpack/explorer_pack.dmi'
 
@@ -15,9 +15,9 @@ obj/item/clothing/back/storage/backpack/explorer
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/back/storage/backpack/explorer/medical
-	name = "medical explorer's pack"
+	name = "医疗探险者背具"
 	icon = 'icons/obj/item/clothing/back/backpack/explorer_pack_medical.dmi'
 
 /obj/item/clothing/back/storage/backpack/explorer/black
-	name = "black explorer's pack"
+	name = "黑色探险者背具"
 	icon = 'icons/obj/item/clothing/back/backpack/explorer_pack_sniper.dmi'

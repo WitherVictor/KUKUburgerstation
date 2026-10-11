@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/
-	name = "shoes"
-	desc = "Look at my kicks, bro! Sick kicks!"
-	desc_extended = "Protects your feet from the harsh enviroment in the world."
+	name = "鞋子"
+	desc = "兄弟，看看我的鞋！帅爆了！"
+	desc_extended = "保护双脚免受恶劣环境的伤害。"
 
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
 

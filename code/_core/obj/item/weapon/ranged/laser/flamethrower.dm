@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/flamethrower //I sure hope this doesn't break anything. If it does, well... uhhhhhhhhh
-	name = "flamethrower"
-	desc = "W + M1"
-	desc_extended = "Bioweapons are fun, but they leave one hell of a mess. Why not make the cleanup fun too?"
+	name = "火焰喷射器"
+	desc = "W前进 + 鼠标左键"
+	desc_extended = "生物武器很有趣，可留下的烂摊子够呛。何不让清理工作也有趣一点？"
 	icon = 'icons/obj/item/weapons/ranged/flamethrower.dmi'
 
 	company_type = "Solarian"
@@ -38,9 +38,9 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(battery)
-				caller.to_chat(span("warning","You are unable to pry out \the [battery.name]."))
+				caller.to_chat(span("warning","你无法撬出[battery.name]。"))
 			else
-				caller.to_chat(span("warning","There is nothing to pry out of \the [src.name]!"))
+				caller.to_chat(span("warning","[src.name]里没有可撬出的东西！"))
 			return TRUE
 
 	. = ..()

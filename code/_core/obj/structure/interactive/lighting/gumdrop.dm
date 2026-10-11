@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/gumdrop
-	name = "gumdrop"
+	name = "软糖球"
 	icon = 'icons/obj/structure/flora/gumdrops.dmi'
 	icon_state = "gumdrop"
 	layer = LAYER_FLOOR_SCENERY

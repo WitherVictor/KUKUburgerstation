@@ -1,7 +1,7 @@
 /obj/item/flare
-	name = "flare"
-	desc = "Light your way."
-	desc_extended = "A high power portable flare stick meant to light dark areas. Lasts about 5 minutes. Instructions: Remove cap, strike rough black part of cap against the red igniter pad, throw flare."
+	name = "照明棒"
+	desc = "照亮前路。"
+	desc_extended = "用于照亮黑暗区域的高亮便携照明棒，可持续燃烧约5分钟。使用说明：取下盖子，用盖子上粗糙的黑色部分擦划红色点火片，然后扔出照明棒。"
 	icon = 'icons/obj/item/flare.dmi'
 	icon_state = "flare"
 
@@ -49,7 +49,7 @@
 			if(L.attack_flags & CONTROL_MOD_DISARM)
 				stored_cap.drop_item(src)
 				stored_cap = object
-				activator.to_chat(span("notice","You put \the [object.name] back on \the [src.name]."))
+				activator.to_chat(span("notice","你将[object.name]重新盖到[src.name]上。"))
 				play_sound('sound/items/flare_cap.ogg',get_turf(src))
 				return TRUE
 		ignite(activator)
@@ -60,7 +60,7 @@
 		INTERACT_DELAY(10)
 		var/mob/living/advanced/A = activator
 		A.put_in_hands(stored_cap,params)
-		activator.to_chat(span("notice","You remove \the [stored_cap.name] from \the [src.name]."))
+		activator.to_chat(span("notice","你从[src.name]上取下了[stored_cap.name]。"))
 		play_sound('sound/items/flare_cap.ogg',get_turf(src))
 		stored_cap = null
 		update_sprite()
@@ -79,20 +79,20 @@
 /obj/item/flare/proc/ignite(var/mob/activator)
 
 	if(!has_fuel)
-		activator.to_chat(span("warning","\The [src.name] is spent!"))
+		activator.to_chat(span("warning","[src.name]已经燃尽了！"))
 		return FALSE
 
 	if(ignited)
 		if(activator)
 			if(prob(1))
-				activator.to_chat(span("warning","\The [src.name] is already lit af!"))
+				activator.to_chat(span("warning","[src.name]都他妈已经点着了！"))
 			else
-				activator.to_chat(span("warning","\The [src.name] is already lit!"))
+				activator.to_chat(span("warning","[src.name]已经点着了！"))
 		return FALSE
 
 	ignited = TRUE
 
-	activator?.visible_message(span("notice","\The [activator.name] ignites \the [src.name]."),span("notice","You ignite \the [src.name]."))
+	activator?.visible_message(span("notice","[activator.name]点燃了[src.name]。"),span("notice","你点燃了[src.name]。"))
 
 	var/flare_time = rand(280,320)
 	CALLBACK("\ref[src]_flare_time",SECONDS_TO_DECISECONDS(flare_time),src,src::expire())
@@ -168,9 +168,9 @@
 	FINALIZE(stored_cap)
 
 /obj/item/flare_cap
-	name = "flare cap"
-	desc = "Do not swallow."
-	desc_extended = "A discarded flare cap with a rough striker on the top of it."
+	name = "照明棒盖"
+	desc = "请勿吞食。"
+	desc_extended = "取下的照明棒盖，顶部带有粗糙的擦划面。"
 	icon = 'icons/obj/item/flare.dmi'
 	icon_state = "cap"
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/marksman
-	name = "\improper .308 Mauler MR"
-	desc = "Vanilla, but still powerful."
-	desc_extended = "The .308 Mauler Marksman Rifle is the ultimate DMR for Syndicate Marksmen. Easy to use, accurate, and comes in automatic as well as semi-automatic."
+	name = "\improper .308撕裂者精确射手步枪"
+	desc = "朴实无华，威力依旧。"
+	desc_extended = ".308撕裂者是辛迪加射手的终极精确射手步枪。易用、精准，采用半自动射击。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/308.dmi'
 	icon_state = "inventory"
 	value = 1900
@@ -88,7 +88,7 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/marksman/mod
-	name = "\improper .308 Mauler MR MOD"
+	name = "\improper .308撕裂者精确射手步枪改装型"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/308_mod.dmi'
 
 	heat_max = 0.4

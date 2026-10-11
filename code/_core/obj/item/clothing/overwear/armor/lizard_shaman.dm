@@ -1,5 +1,5 @@
 /obj/item/clothing/overwear/armor/lizard_shaman
-	name = "lizard shaman armor"
+	name = "蜥蜴人萨满护甲"
 	icon = 'icons/obj/item/clothing/suit/lizard_shaman.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 

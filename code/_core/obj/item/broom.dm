@@ -1,8 +1,8 @@
 /obj/item/broom
-	name = "broom"
+	name = "扫帚"
 	icon = 'icons/obj/item/broom.dmi'
-	desc = "Make large sweeping statements with this broom."
-	desc_extended = "Sweeps all items around the user into a nice tidy tile. Good for garbage collection. Also good for beating people over the head with."
+	desc = "拿起这把扫帚，横扫一切。"
+	desc_extended = "点击目标位置，将周围可移动的物品向那里扫拢。适合清理垃圾，也适合敲人脑袋。"
 
 	damage_type = /damagetype/melee/club/broom
 
@@ -38,7 +38,7 @@
 	return ..()
 
 /obj/item/broom/magic
-	name = "magic broom"
+	name = "魔法扫帚"
 	broom_range = 4
 	value = 800
 	rarity = RARITY_RARE

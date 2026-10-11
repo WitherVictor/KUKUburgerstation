@@ -1,5 +1,5 @@
 /obj/structure/interactive/field_generator
-	name = "field generator"
+	name = "力场发生器"
 	icon = 'icons/obj/structure/field_gen.dmi'
 	icon_state = "field_gen"
 
@@ -49,19 +49,19 @@
 		return FALSE
 
 	if(desired_active && !anchored)
-		if(activator) activator.to_chat(span("warning","\The [src.name] must be secured firmly to the ground before it can turn on."))
+		if(activator) activator.to_chat(span("warning","必须先将[src.name]牢牢固定在地面上才能启动。"))
 		return FALSE
 
 	active = desired_active
 
 	if(activator)
 		activator.visible_message(
-			span("notice","\The [activator.name] turns [active ? "on" : "off"] \the [src.name]."),
-			span("notice","You turn [active ? "on" : "off"] \the [src.name].")
+			span("notice","[activator.name][active ? "启动" : "关闭"]了[src.name]。"),
+			span("notice","你[active ? "启动" : "关闭"]了[src.name]。")
 		)
 	else
 		src.visible_message(
-			span("notice","\The [src.name] turns [active ? "on" : "off"].")
+			span("notice","[src.name][active ? "启动" : "关闭"]了。")
 		)
 
 	if(active) //Turning it on. Check the links.

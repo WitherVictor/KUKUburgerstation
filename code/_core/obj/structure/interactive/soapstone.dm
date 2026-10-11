@@ -1,7 +1,7 @@
 obj/structure/interactive/soapstone_message
-	name = "soapstone message"
-	desc = "shortcut ahead"
-	desc_extended = "A message left by a traveler."
+	name = "皂石留言"
+	desc = "前方有捷径。"
+	desc_extended = "一位旅人留下的话。"
 	icon = 'icons/obj/structure/soapstone.dmi'
 	icon_state = "message"
 	anchored = TRUE
@@ -28,10 +28,10 @@ obj/structure/interactive/soapstone_message/update_icon()
 	. = ..()
 
 	if(icon_state == "death")
-		name = "cursed message"
+		name = "诅咒留言"
 		alpha = 255
-		desc = "From byond the grave."
-		desc_extended = "Here lies the recorded last words of a fallen soul, slain by one of their own.<br>It whispers: \"[soapstone_text]...\""
+		desc = "来自坟墓彼端的BYOND之声。"
+		desc_extended = "这里记录着一位被自己人杀害的亡魂的遗言。<br>它低语道：‘[soapstone_text]……’"
 		color = "#FFFFFF"
 	else
-		desc_extended = "It reads: \"[soapstone_text]\"<br>Signed by [owner]."
+		desc_extended = "上面写着：‘[soapstone_text]’<br>署名：[owner]。"

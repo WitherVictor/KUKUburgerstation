@@ -1,5 +1,5 @@
 /area/mission/prefab/syndicate_megafortress
-	name = "syndicate megafortress"
+	name = "辛迪加巨型堡垒"
 	icon_state = "red"
 	requires_power = TRUE
 	link_to_parent_apc = FALSE

@@ -146,7 +146,7 @@
 		I = right_item
 
 	if(!istype(I,/obj/item/bullet_cartridge/arrow))
-		if(I && activator) activator.to_chat(span("warning","You can't fire \the [I.name] with \the [src.name]!"))
+		if(I && activator) activator.to_chat(span("warning","无法用[src.name]发射[I.name]！"))
 		return null
 
 	var/obj/item/bullet_cartridge/arrow/BC = I
@@ -164,9 +164,9 @@
 	return (stage_per_decisecond/stage_max)*10
 
 /obj/item/weapon/ranged/bow/wood
-	name = "wood bow"
-	desc = "For ranged ungas."
-	desc_extended = "A classic wooden bow. Overall, it's reliable and has no gimmick."
+	name = "木弓"
+	desc = "远程原始人专用。"
+	desc_extended = "经典的木弓。可靠实用，没有花哨功能。"
 	icon = 'icons/obj/item/weapons/ranged/bow/wood.dmi'
 
 	stage_per_decisecond = 4
@@ -184,9 +184,9 @@
 	return 0.005
 
 /obj/item/weapon/ranged/bow/steel
-	name = "steel bow"
-	desc = "For ranged ungas who like steel."
-	desc_extended = "An upgraded bow that is harder to pull back, but is more accurate and fires more of a punch."
+	name = "钢弓"
+	desc = "喜欢钢铁的远程原始人专用。"
+	desc_extended = "改良型弓，拉开更费力，但精度更高，威力也更强。"
 	icon = 'icons/obj/item/weapons/ranged/bow/steel.dmi'
 
 	stage_per_decisecond = 3
@@ -201,9 +201,9 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/weapon/ranged/bow/hardlight
-	name = "hardlight bow"
-	desc = "How can light be hard? :flushed:"
-	desc_extended = "A space-age bow that somehow uses the power of light to conjure arrows if none are provided. Fires really fast, regardless."
+	name = "硬光弓"
+	desc = "光怎么还能变硬？（脸红）"
+	desc_extended = "太空时代的弓，没装箭时也能凭借光的力量变出箭矢。不管怎样，射得确实快。"
 	icon = 'icons/obj/item/weapons/ranged/bow/hardlight.dmi'
 
 	var/obj/item/bullet_cartridge/arrow/stored_arrow = /obj/item/bullet_cartridge/arrow/hardlight
@@ -240,7 +240,7 @@
 	if(!.) return stored_arrow
 
 /obj/item/weapon/ranged/bow/hardlight/syndicate
-	name = "syndicate laser bow"
+	name = "辛迪加激光弓"
 	icon = 'icons/obj/item/weapons/ranged/bow/laser_bow.dmi'
 	icon_state_count = 3
 	stored_arrow = /obj/item/bullet_cartridge/arrow/hardlight/syndicate
@@ -250,9 +250,9 @@
 	rarity = RARITY_RARE
 
 /obj/item/weapon/ranged/bow/ashen
-	name = "ashen bow"
-	desc = "So sacred, not even ashwalkers use it."
-	desc_extended = "A special masterfully crafted ashen bow that somehow invokes the strength of ancient megafauna when drawing arrows."
+	name = "灰烬弓"
+	desc = "神圣到连灰烬行者都不用它。"
+	desc_extended = "精工打造的特殊灰烬弓，拉弓时似乎能唤起远古巨型生物的力量。"
 	icon = 'icons/obj/item/weapons/ranged/bow/ashen.dmi'
 
 	draw_sound = 'sound/weapons/ranged/bow/draw_ashen.ogg'

@@ -1,5 +1,5 @@
 /obj/structure/interactive/disposals/pipe
-	name = "disposals pipe"
+	name = "废物输送管"
 	icon_state = "pipe"
 	layer = LAYER_FLOOR_PIPE
 	under_tile = TRUE
@@ -47,7 +47,7 @@
 	return ..()
 
 /obj/structure/interactive/disposals/pipe/ending
-	name = "connector disposals pipe"
+	name = "废物管道连接管"
 	icon_state = "pipe-t"
 
 /obj/structure/interactive/disposals/pipe/ending/get_connections()
@@ -56,7 +56,7 @@
 	.["0"] = TRUE
 
 /obj/structure/interactive/disposals/pipe/junction
-	name = "junction disposals pipe"
+	name = "废物管道三通"
 	icon_state = "pipe-j1"
 
 /obj/structure/interactive/disposals/pipe/junction/get_connections()
@@ -75,7 +75,7 @@
 	.["[turn(dir,90)]"] = FALSE
 
 /obj/structure/interactive/disposals/pipe/junction/sorting
-	name = "junction sorting disposals pipe"
+	name = "废物管道分拣三通"
 	icon_state = "pipe-j1s"
 	var/sorting_tag
 
@@ -87,7 +87,7 @@
 
 
 /obj/structure/interactive/disposals/pipe/junction/sorting/flipped
-	name = "junction sorting disposals pipe"
+	name = "废物管道分拣三通"
 	icon_state = "pipe-j2s"
 
 /obj/structure/interactive/disposals/pipe/junction/sorting/flipped/get_connections()
@@ -97,7 +97,7 @@
 	.["[turn(dir,90)]"] = sorting_tag
 
 /obj/structure/interactive/disposals/pipe/x
-	name = "4-way junction disposals pipe"
+	name = "废物管道四通"
 	icon_state = "pipe-4way"
 
 /obj/structure/interactive/disposals/pipe/x/get_connections()

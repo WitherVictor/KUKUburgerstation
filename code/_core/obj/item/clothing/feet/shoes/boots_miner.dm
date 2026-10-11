@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/miner
-	name = "right mining boot"
-	desc = "For when the heat is actually turned up."
-	desc_extended = "A tough brown boot. Shields your feet from the ashes."
+	name = "采矿右靴"
+	desc = "适合真正热起来的时候。"
+	desc_extended = "坚韧的棕色靴子，保护双脚免受灰烬侵害。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -17,7 +17,7 @@
 	value = 80
 
 /obj/item/clothing/feet/shoes/miner/left
-	name = "left mining boot"
+	name = "采矿左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

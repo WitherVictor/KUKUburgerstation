@@ -15,7 +15,7 @@ var/global/world_state = STATE_STARTING
 
 	sleep_offline = TRUE
 
-	name = "Burgerstation 13"
+	name = "汉堡站13"
 	hub = "Exadv1.spacestation13"
 	hub_password = "kMZy3U5jJHSiBQjr"
 
@@ -93,11 +93,11 @@ var/global/world_state = STATE_STARTING
 
 /world/proc/update_server_status()
 
-	var/server_name = CONFIG("SERVER_NAME","Unofficial Burgerstation 13 Server")
+	var/server_name = CONFIG("SERVER_NAME","汉堡站13非官方服务器")
 	var/server_link = CONFIG("SERVER_DISCORD","")
-	var/github_name = "SS13 <b>FROM SCRATCH</b>"
+	var/github_name = "SS13 <b>从零打造</b>"
 	var/duration = get_clock_time(FLOOR(true_time()/10,1),FORMAT_HOUR | FORMAT_MINUTE)
-	var/description = "Gamemode: <b>[SSgamemode.active_gamemode ? SSgamemode.active_gamemode.name : "Lobby" ]</b><br>Map: <b>[SSdmm_suite.map_name ? SSdmm_suite.map_name : "Planet ([world.maxx]x[world.maxy])"]</b><br>Duration: <b>[duration]</b>"
+	var/description = "游戏模式：<b>[SSgamemode.active_gamemode ? SSgamemode.active_gamemode.name : "大厅" ]</b><br>地图：<b>[SSdmm_suite.map_name ? SSdmm_suite.map_name : "星球（[world.maxx]x[world.maxy]）"]</b><br>时长：<b>[duration]</b>"
 
 	//Format it.
 	status = "<b><a href='[server_link]'>[server_name]</a>\]</b> ([github_name])<br>[description]"
@@ -105,7 +105,7 @@ var/global/world_state = STATE_STARTING
 	var/player_limit_config = CONFIG("PLAYER_LIMIT",0)
 	var/connected_players = length(SSclient.all_clients)
 	if(player_limit_config > 0 && connected_players + 10 >= player_limit_config)
-		status = "[status]<br>[connected_players]/[player_limit_config] players."
+		status = "[status]<br>玩家：[connected_players]/[player_limit_config]。"
 
 	return TRUE
 
@@ -126,7 +126,7 @@ var/global/world_state = STATE_STARTING
 	world_state = STATE_SHUTDOWN
 	for(var/k in SSclient.all_clients)
 		var/client/C = SSclient.all_clients[k]
-		C << "Shutting down world..."
+		C << "正在关闭服务器……"
 	sleep(30)
 	shutdown()
 	return TRUE
@@ -137,7 +137,7 @@ var/global/world_state = STATE_STARTING
 	world_state = STATE_SHUTDOWN
 	for(var/k in SSclient.all_clients)
 		var/client/C = SSclient.all_clients[k]
-		C << "Rebooting world. Stick around to automatically rejoin."
+		C << "正在重启服务器。请保持连接，稍后将自动重连。"
 	sleep(30)
 	Reboot(0)
 	return TRUE
@@ -183,9 +183,9 @@ var/global/world_state = STATE_STARTING
 			continue
 		var/savedata/client/mob/M = SSclient.ckey_to_mobdata[P.ckey_last]
 		if(M.save_character(P))
-			P.to_chat(span("notice","Your character was automatically saved."))
+			P.to_chat(span("notice","你的角色已自动保存。"))
 		else
-			P.to_chat(span("danger","Save error! Your character could not be saved!"))
+			P.to_chat(span("danger","保存出错！无法保存你的角色！"))
 		CHECK_TICK_HARD
 
 /world/proc/end(var/reason = FALSE, var/shutdown = FALSE)
@@ -194,7 +194,7 @@ var/global/world_state = STATE_STARTING
 		log_error("Can't end now!")
 		return FALSE
 
-	var/nice_reason = "Unknown reason."
+	var/nice_reason = "未知原因"
 
 	world_state = STATE_ROUND_END
 
@@ -218,27 +218,27 @@ var/global/world_state = STATE_STARTING
 
 	switch(reason)
 		if(WORLD_END_SHUTDOWN)
-			nice_reason = "Adminbus."
+			nice_reason = "管理员整活"
 
 		if(WORLD_END_SYNDICATE_VICTORY)
-			nice_reason = "Syndicate Victory"
-			announce("Central Command Mission Update","Fission Mailed","Mission failed, we'll get them next time.")
+			nice_reason = "辛迪加胜利"
+			announce("中央指挥部任务更新","裂变已寄","任务失败，下次再收拾他们。")
 
 		if(WORLD_END_BORING_VICTORY)
-			nice_reason = "Neutral Victory"
-			announce("Central Command Mission Update","Mission... failure?","You completed no objectives, don't expect to get paid any extra for your \"work\".")
+			nice_reason = "中立胜利"
+			announce("中央指挥部任务更新","任务……失败？","你们一个目标都没完成，别指望为你们的\"工作\"拿到额外报酬。")
 
 		if(WORLD_END_MINOR_NANOTRASEN_VICTORY)
-			nice_reason = "Minor Nanotrasen Victory"
+			nice_reason = "纳米传讯小胜"
 			SSpayday.stored_payday += 2500
 			SSpayday.trigger_payday()
-			announce("Central Command Mission Update","Minor Mission Success","You completed some of the objectives without fucking up too hard, so here is a small bonus.")
+			announce("中央指挥部任务更新","任务部分成功","你们完成了部分目标，也没搞出太大的烂摊子，所以给你们一点奖金。")
 
 		if(WORLD_END_NANOTRASEN_VICTORY)
-			nice_reason = "Nanotrasen Victory"
+			nice_reason = "纳米传讯胜利"
 			SSpayday.stored_payday += 5000
 			SSpayday.trigger_payday()
-			announce("Central Command Mission Update","Mission Success","You completed all the objectives without fucking up too hard, so here is a bonus.")
+			announce("中央指挥部任务更新","任务成功","你们完成了所有目标，也没搞出太大的烂摊子，所以给你们一笔奖金。")
 
 		else
 			nice_reason = reason
@@ -257,10 +257,10 @@ var/global/world_state = STATE_STARTING
 		CHECK_TICK_HARD
 
 	if(shutdown)
-		broadcast_to_clients(span("notice","Shutting down world in [REBOOT_TIME] seconds due to [nice_reason]. Characters will be saved when the server shuts down."))
+		broadcast_to_clients(span("notice","因[nice_reason]，服务器将在[REBOOT_TIME]秒后关闭。角色将在服务器关闭时保存。"))
 		CALLBACK("shutdown_world",SECONDS_TO_DECISECONDS(REBOOT_TIME),src,src::shutdown_server())
 	else
-		broadcast_to_clients(span("notice","Rebooting world in [REBOOT_TIME] seconds due to [nice_reason]. Characters will be saved when the server reboots."))
+		broadcast_to_clients(span("notice","因[nice_reason]，服务器将在[REBOOT_TIME]秒后重启。角色将在服务器重启时保存。"))
 		CALLBACK("reboot_world",SECONDS_TO_DECISECONDS(REBOOT_TIME),src,src::reboot_server())
 
 	SSdiscord.send_message("Round ended with [length(SSclient.all_clients)] players due to [nice_reason].")

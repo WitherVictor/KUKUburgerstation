@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/standard
 	name = "\improper 5.56 AR-SS13"
-	desc = "For the basic soldier."
-	desc_extended = "A cheap yet still reliable assault rifle primarily used and mass produced by NanoTrasen PMCs."
+	desc = "普通士兵的选择。"
+	desc_extended = "便宜而可靠的突击步枪，主要由纳米传讯私人军事承包部队量产并使用。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_1.dmi'
 	icon_state = "inventory"
 	value = 1100

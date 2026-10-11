@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/sniper
-	name = "\improper Multifocal Laser Sniper"
-	desc = "Shine bright."
-	desc_extended = "Pinnacle of Syndicate engineering, this laser sniper is outfitted with the best lens you can get in the entire sector, resulting in a laser bolt capable of catastrophic damage. Not exactly power friendly."
+	name = "\improper 多焦点激光狙击枪"
+	desc = "光芒耀眼。"
+	desc_extended = "辛迪加工程技术的巅峰之作，配备整个星区最好的透镜，发射的激光能造成毁灭性伤害。不过不怎么省电。"
 	icon = 'icons/obj/item/weapons/ranged/laser/sniper.dmi'
 	value = 6000
 

@@ -14,7 +14,7 @@
 
 /obj/item/weapon/melee/energy/get_examine_details_list(var/mob/examiner)
 	. = ..()
-	if(enabled) . += span("notice","It is active.")
+	if(enabled) . += span("notice","当前已激活。")
 
 /obj/item/weapon/melee/energy/click_self(var/mob/activator,location,control,params)
 	INTERACT_CHECK
@@ -66,27 +66,33 @@
 			INTERACT_CHECK
 			INTERACT_CHECK_OBJECT
 
-			var/choice = input("What do you want to change the color of \the [src.name]?","Color Selection") as null|anything in polymorphs
+			var/list/part_display_names = list("base"="基底","blade"="刀刃","core"="核心","shield"="盾面")
+			var/list/color_choices = list()
+			for(var/part in polymorphs)
+				var/part_display = part_display_names[part] ? part_display_names[part] : part
+				color_choices[part_display] = part
+			var/choice = input("要更改[src.name]哪个部位的颜色？","选择颜色") as null|anything in color_choices
 			if(!choice)
-				activator.to_chat(span("notice","You decide not to change \the [src.name]'s color."))
+				activator.to_chat(span("notice","你决定不更改[src.name]的颜色。"))
 				return TRUE
+			choice = color_choices[choice]
 
 			INTERACT_CHECK
 			INTERACT_CHECK_OBJECT
 
-			var/choice_color = input("What would you like the new color to be?","Color Selection",color) as color|null
+			var/choice_color = input("要改成什么颜色？","选择颜色",color) as color|null
 
 			INTERACT_CHECK
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 
 			if(!choice_color)
-				activator.to_chat(span("notice","You decide not to change \the [src.name]'s color."))
+				activator.to_chat(span("notice","你决定不更改[src.name]的颜色。"))
 				return TRUE
 
 			color = choice_color
 			polymorphs[choice] = polymorphs[choice]
-			activator.to_chat(span("notice","You change \the [src.name]'s color."))
+			activator.to_chat(span("notice","你更改了[src.name]的颜色。"))
 			update_sprite()
 
 			return TRUE

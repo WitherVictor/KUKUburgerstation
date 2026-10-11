@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/full/hardsuit/mining
-	name = "mining hardsuit helmet"
-	desc = "MIIIIINIIIIING DIAAAAMOOOOOONDS!"
-	desc_extended = "A hardsuit worn by miners to protect against a variety of hazards, such as rock falls, black lungs, and cave monsters."
+	name = "采矿硬式宇航服头盔"
+	desc = "挖——钻——石——！"
+	desc_extended = "矿工使用的硬式宇航服头盔，用于抵御落石、煤尘和洞穴怪物等危险。"
 	icon = 'icons/obj/item/clothing/hats/hardsuit_mining.dmi'
 
 	armor = /armor/hardsuit/mining

@@ -1,7 +1,7 @@
 /obj/structure/interactive/crate/bodybag
-	name = "body bag"
-	desc = "You were loud and ugly and now your dead!"
-	desc_extended = "A plastic bag to transport corpses."
+	name = "裹尸袋"
+	desc = "你以前又吵又丑，现在还死了！"
+	desc_extended = "用于运送尸体的塑料袋。"
 	icon = 'icons/obj/structure/crates.dmi'
 	icon_state = "bodybag"
 
@@ -18,14 +18,14 @@
 
 /obj/structure/interactive/crate/bodybag/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","ALT+Click this with an empty hand to pack up and retrieve.")
+	. += span("notice","空手按住ALT点击，可将空袋收起取回。")
 
 /obj/structure/interactive/crate/bodybag/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
 
 
 	if(activator.attack_flags & CONTROL_MOD_DISARM)
 		if(can_pack_up(activator))
-			activator.visible_message(span("warning","\The [activator.name] starts to pack up \the [src.name]..."),span("notice","You start to pack up \the [src.name]..."))
+			activator.visible_message(span("warning","[activator.name]开始收起[src.name]……"),span("notice","你开始收起[src.name]……"))
 			PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(5),src::pack_up(),activator)
 			PROGRESS_BAR_CONDITIONS(activator,src,src::can_pack_up(),activator)
 		return TRUE
@@ -37,18 +37,18 @@
     INTERACT_CHECK_NO_DELAY(src)
 
     if(length(src.contents))
-        activator.to_chat(span("warning","You can't pack up \the [src.name] while its full!"))
+        activator.to_chat(span("warning","[src.name]里还装着东西，无法收起！"))
         return FALSE
 
     if(qdeleting || !src.z)
-        activator.to_chat(span("warning","You can't pack up \the [src.name] here!"))
+        activator.to_chat(span("warning","无法在这里收起[src.name]！"))
         return FALSE
 
     return TRUE
 
 /obj/structure/interactive/crate/bodybag/proc/pack_up(var/mob/activator)
 
-	activator.visible_message(span("warning","\The [activator.name] packs up \the [src.name]."),span("notice","You pack up \the [src.name]."))
+	activator.visible_message(span("warning","[activator.name]收起了[src.name]。"),span("notice","你收起了[src.name]。"))
 
 	var/obj/item/deployable/bodybag/S = new(get_turf(src))
 	INITIALIZE(S)
@@ -60,9 +60,9 @@
 
 
 /obj/item/deployable/bodybag
-    name = "bodybag"
-    desc = "Why would you carry these, not like you can bag yourself. Unless...."
-    desc_extended = "A plastic bag meant to transport corpses. Use to deploy."
+    name = "裹尸袋"
+    desc = "带这个干吗？你又没法把自己装进去。除非……"
+    desc_extended = "用于运送尸体的塑料袋，使用后展开。"
     structure_to_deploy = /obj/structure/interactive/crate/bodybag
     icon = 'icons/obj/item/deployable/bodybag.dmi'
     value = 100

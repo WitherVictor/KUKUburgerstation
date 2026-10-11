@@ -45,7 +45,7 @@ SUBSYSTEM_DEF(reward)
 /subsystem/reward/proc/check_code(var/client/C,var/desired_code)
 
 	if(!reward_code_to_reward[desired_code])
-		C.to_chat(span("warning","Invalid reward code! Reward codes can be obtained and entered here upon completing special surveys or events."))
+		C.to_chat(span("warning","无效的奖励兑换码！完成指定问卷或活动后可获得兑换码，并在此输入。"))
 		return FALSE
 
 	var/reward/R = reward_code_to_reward[desired_code]

@@ -1,9 +1,9 @@
 
 
 /obj/item/currency/credits
-	name = "credits"
-	desc = "Looks familiar."
-	desc_extended = "A plastic microchip containing a super-unique 1024 Exabyte long hash representing ownership of local space on the bluespace net. Has real-world value, apparently."
+	name = "信用点"
+	desc = "看着眼熟。"
+	desc_extended = "塑料微芯片中存着一段超级独特、长达1024 EB的哈希值，代表蓝空间网络中一块空间的所有权。显然，它在现实世界也有价值。"
 	icon = 'icons/obj/item/credit.dmi'
 	icon_state = "null"
 
@@ -46,6 +46,6 @@
 /obj/item/currency/credits/update_sprite()
 	. = ..()
 	if(amount == 1)
-		name = "1 credit"
+		name = "1信用点"
 	else
-		name = "[amount] credits"
+		name = "[amount]信用点"

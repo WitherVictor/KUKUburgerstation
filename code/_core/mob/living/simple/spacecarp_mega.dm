@@ -1,5 +1,5 @@
 /mob/living/simple/megacarp
-	name = "space megacarp"
+	name = "太空巨鲤"
 	icon = 'icons/mob/living/simple/megacarp.dmi'
 	icon_state = "living"
 

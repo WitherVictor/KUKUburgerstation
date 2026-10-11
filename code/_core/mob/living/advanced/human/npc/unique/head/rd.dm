@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/head/rd
-	name = "Research Director"
-	desc = "Doesn't have to worry about plasmafloods here."
+	name = "科研主管"
+	desc = "在这里不用担心等离子气体泄漏。"
 	species = "human"
 	dialogue_id = /dialogue/npc/hop/
 	sex = MALE

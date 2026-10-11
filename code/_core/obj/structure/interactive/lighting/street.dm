@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/streetlamp
-	name = "street lamp"
+	name = "路灯"
 
 	icon = 'icons/obj/structure/light_large.dmi'
 	icon_state = "streetlamp"
@@ -26,7 +26,7 @@
 	icon_state = "streetlamp_snow"
 
 /obj/structure/interactive/lighting/streetlamp/jungle
-	name = "floor torch"
+	name = "落地火把"
 	icon_state = "torch"
 
 /obj/structure/interactive/lighting/streetlamp/jungle/dark

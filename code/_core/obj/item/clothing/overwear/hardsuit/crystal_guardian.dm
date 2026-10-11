@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/hardsuit/crystal_guardian
-	name = "crystal guardian's armor"
-	desc = "A hardsuit forged with crystals and enchanted alloy that's used by the mystical Crystal Guardians."
-	desc_extended = "Little is known about the origin of Crystal Guardians, their attunement towards crystal based magic is unparalelled and in turn is utilized in all of their equipment."
+	name = "水晶守卫护甲"
+	desc = "神秘水晶守卫使用的硬式宇航服，由水晶与附魔合金铸造而成。"
+	desc_extended = "水晶守卫的起源鲜为人知。他们对水晶魔法的亲和力无与伦比，并将其运用于所有装备。"
 	icon = 'icons/obj/item/clothing/suit/crystal_guardian.dmi'
 
 	armor = /armor/steel/arcane

@@ -1,6 +1,6 @@
 /obj/structure/interactive/door/airlock
-	name = "airlock"
-	desc = "a powered airlock"
+	name = "气闸门"
+	desc = "电动气闸门。"
 	icon = 'icons/obj/structure/airlock/new_airlock.dmi'
 	icon_state = "closed"
 
@@ -264,7 +264,7 @@ obj/structure/interactive/door/airlock/close(var/mob/activator,var/lock = FALSE,
 			icon_state = "open"
 			light_state = "open_light"
 			light_color = null
-			desc = "The door is open."
+			desc = "门已打开。"
 			update_collisions(FLAG_COLLISION_NONE,FLAG_COLLISION_BULLET_NONE)
 			set_opacity(0)
 
@@ -272,7 +272,7 @@ obj/structure/interactive/door/airlock/close(var/mob/activator,var/lock = FALSE,
 			icon_state = "closed"
 			light_state = "closed_light"
 			light_color = null
-			desc = "The door is closed."
+			desc = "门已关闭。"
 			switch(filler)
 				if("glass")
 					update_collisions(FLAG_COLLISION_WALL,FLAG_COLLISION_BULLET_SOLID)
@@ -296,7 +296,7 @@ obj/structure/interactive/door/airlock/close(var/mob/activator,var/lock = FALSE,
 			icon_state = "broken"
 			light_state = "broken_light"
 			light_color = "#FF0000"
-			desc = "The door is broken."
+			desc = "门已损坏。"
 			update_collisions(FLAG_COLLISION_NONE,FLAG_COLLISION_BULLET_NONE)
 			set_opacity(0)
 

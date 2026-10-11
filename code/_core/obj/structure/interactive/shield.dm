@@ -1,7 +1,7 @@
 /obj/structure/interactive/shield
-	name = "shield"
-	desc = "Science!"
-	desc = "A special shield wall that miraculously blocks people and air from escaping the shuttle, but allows for marked ships and shuttles to pass."
+	name = "护盾墙"
+	desc = "科学！"
+	desc = "一道神奇的特殊护盾墙，能阻止人员和空气从穿梭机中逸出，却允许带有标记的飞船和穿梭机通过。"
 	icon = 'icons/obj/structure/shield_gen.dmi'
 	icon_state = "shieldwall"
 

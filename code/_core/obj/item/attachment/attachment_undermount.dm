@@ -1,10 +1,10 @@
 /obj/item/attachment/undermount
-	name = "undermount attachment"
+	name = "下挂配件"
 
 /obj/item/attachment/undermount/vertical_grip
-	name = "vertical grip"
-	desc = "Firmly grasp it."
-	desc_extended = "A simple underbarrel vertical grip designed to reduce recoil and recoil spread, movement spread, and increase accuracy. Difficult to use while prone."
+	name = "垂直握把"
+	desc = "牢牢握住。"
+	desc_extended = "简单的枪管下挂垂直握把，减少移动散布与后坐散布，但会增加技能不足造成的散布。"
 	icon_state = "vertical_grip"
 
 	attachment_stats = list(
@@ -17,9 +17,9 @@
 	value = 150
 
 /obj/item/attachment/undermount/angled_grip
-	name = "angled grip"
-	desc = "Firmly grasp it."
-	desc_extended = "A special angled grip designed to make it easier to handle the weapon at the cost of higher recoil and higher movement spread."
+	name = "斜角握把"
+	desc = "牢牢握住。"
+	desc_extended = "特殊斜角握把，减轻技能不足造成的散布与后坐散布，代价是移动散布增加。"
 	icon_state = "angled_grip"
 
 	attachment_stats = list(
@@ -31,10 +31,10 @@
 	value = 150
 
 /obj/item/attachment/undermount/burst_adapter
-	name = "burst fire improver"
+	name = "点射增强器"
 	icon_state = "burst_adapter"
-	desc = "PewPewPew"
-	desc_extended = "A complex underbarrel mechanism that increases the amount of bursts a burst fire weapon does. Also decreases accuracy loss due to recoil and makes the weapon easier to handle at the cost of higher movement spread."
+	desc = "咻咻咻。"
+	desc_extended = "复杂的枪管下挂机构，增加点射武器的连发次数，同时减少后坐和技能不足造成的散布，代价是移动散布增加。"
 
 	attachment_stats = list(
 		bursts_to_use = 3,
@@ -47,9 +47,9 @@
 	value = 400
 
 /obj/item/attachment/undermount/bipod
-	name = "bipod"
-	desc = "Firmly mount it."
-	desc_extended = "A simple bipod mount that nearly eliminates recoil and accuracy penalties when used while laying down or on a barricade. The bulkiness of the weapon causes inaccuracy while not prone and further increases movement accuracy penalties."
+	name = "两脚架"
+	desc = "稳稳架住。"
+	desc_extended = "简单的两脚架，改善卧姿或依托掩体射击时的稳定性。武器会变得笨重，未卧倒时的基础散布及移动时的精度惩罚增加。"
 	icon_state = "bipod"
 
 	attachment_stats = list(
@@ -63,7 +63,7 @@
 
 
 /obj/item/attachment/undermount/gun
-	name = "gun"
+	name = "下挂枪械"
 	var/obj/item/weapon/ranged/stored_gun
 
 /obj/item/attachment/undermount/gun/PreDestroy()
@@ -95,9 +95,9 @@
 
 
 /obj/item/attachment/undermount/gun/grenade_launcher
-	name = "40mm undermounted grenade launcher"
-	desc = "Thump!"
-	desc_extended = "A compact undermounted grenade launcher capable of shooting 40mm grenades at medium ranges. The added weight to the front makes the weapon bulkier to shoot when moving."
+	name = "40mm下挂榴弹发射器"
+	desc = "咚！"
+	desc_extended = "紧凑的下挂榴弹发射器，可向中距离目标发射40mm榴弹。枪口前端增加的重量会妨碍移动射击。"
 	icon_state = "grenade_launcher"
 
 	stored_gun = /obj/item/weapon/ranged/bullet/revolver/grenade_launcher/undermount
@@ -112,8 +112,8 @@
 
 
 /obj/item/attachment/undermount/gun/built_in_shotgun
-	name = "12g singlebarrel shotgun attachment"
-	desc = "Thump!"
+	name = "12号单管霰弹枪配件"
+	desc = "咚！"
 	desc_extended = ""
 	icon_state = "s_shotgun"
 

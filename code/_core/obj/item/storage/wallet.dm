@@ -1,7 +1,7 @@
 /obj/item/storage/wallet
-	name = "wallet"
-	desc = "How do I attach this to my chest?"
-	desc_extended = "A plain old faux leather wallet. For storing small objects."
+	name = "钱包"
+	desc = "这玩意儿怎么挂到胸前？"
+	desc_extended = "一个普普通通的仿皮钱包，用于存放小物件。"
 
 	icon = 'icons/obj/item/storage/wallet.dmi'
 	icon_state = "wallet"

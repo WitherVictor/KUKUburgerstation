@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/missile
-	name = "tome of the magic missile"
-	desc = "ARCANE MISSILE! ARCANE MISSILE! CLOTHING DOESN'T COUNT!"
-	desc_extended = "Fires a magical missile."
+	name = "魔法飞弹法术典籍"
+	desc = "奥术飞弹！奥术飞弹！打中衣服不算！"
+	desc_extended = "发射一枚魔法飞弹。"
 	cost_mana = 15
 	shoot_delay = 8
 

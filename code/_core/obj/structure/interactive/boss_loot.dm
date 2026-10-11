@@ -1,7 +1,7 @@
 /obj/structure/interactive/boss_loot
-	name = "wishgranter"
-	desc = "Do you dare touch it?"
-	desc_extended = "A corrupt pillar of radioactive energy that seems to grant the user a predetermined wish... if you are worthy."
+	name = "许愿机"
+	desc = "你敢碰它吗？"
+	desc_extended = "一根充满腐化放射能量的立柱，似乎会实现使用者预定的愿望……前提是你有这个资格。"
 
 	icon = 'icons/obj/structure/wishgranter.dmi'
 	icon_state = "wishgranter_on"
@@ -22,15 +22,15 @@
 	enable_chunk_handling = TRUE
 
 	var/static/list/wishgranter_speak_lines = list(
-		"Come... I know what you want.",
-		"Come to me. You seek riches. Power.",
-		"Are you worthy? Come...",
-		"I see you. Come to the light...",
-		"It is your fate to see me. Do you not believe in fate?",
-		"You get what you deserve!",
-		"Money? Fame? Power? It can be yours...",
-		"Just reach out and grab it...",
-		"Simply sign the dotted line... Just kidding!",
+		"来吧……我知道你想要什么。",
+		"到我这里来。你渴望财富，渴望力量。",
+		"你有这个资格吗？来吧……",
+		"我看见你了。走向光明……",
+		"遇见我是你的命运。你不相信命运吗？",
+		"你会得到应得的一切！",
+		"金钱？名望？力量？都可以属于你……",
+		"只要伸手抓住它……",
+		"只需在虚线上签字……开玩笑的！",
 
 	)
 
@@ -47,12 +47,12 @@
 	if(is_inventory(object) && is_player(activator))
 		var/mob/living/advanced/player/P = activator
 		var/rarity = P.get_rarity()
-		activator.to_chat(span("warning","You carefully reach in to gently touch \the [src.name]..."))
+		activator.to_chat(span("warning","你小心地伸出手，轻轻触碰[src.name]……"))
 		if(icon_state == "wishranter_off")
-			activator.to_chat(span("warning","The power of \the [src.name] seems to have faded..."))
+			activator.to_chat(span("warning","[src.name]的力量似乎已经消散……"))
 			return TRUE
 		if(!(activator in allowed_users))
-			activator.to_chat(span("warning","\The [src.name] seems to find you unworthy of its reward..."))
+			activator.to_chat(span("warning","[src.name]似乎认为你没有资格领取奖励……"))
 			return TRUE
 		var/turf/T = get_turf(activator)
 		var/list/atom/created_loot = SPAWN_LOOT(loot_to_give,T,rarity)
@@ -65,7 +65,7 @@
 				I.quality = 100 + min(round(5 + ((rand(1,1000)*0.0025)**4),5),40)
 				I.quality_max = I.quality
 
-		activator.to_chat(span("warning","\The [src.name] grants you a [created_loot[1].name]!"))
+		activator.to_chat(span("warning","[src.name]赐予了你[created_loot[1].name]！"))
 		play_sound('sound/effects/wishgranter.ogg', T, range_max = VIEW_RANGE)
 		var/obj/hud/inventory/I = object
 		if(is_item(created_loot[1]))

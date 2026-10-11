@@ -1,8 +1,8 @@
 
 /obj/structure/interactive/bed/sleeper/medical
-	name = "medical sleeper"
-	desc = "Medical care in the future!"
-	desc_extended = "A special medical sleeper that automatically treats all manner of wounds when an occupant is inside and the door is closed. The door must be closed manually."
+	name = "医疗休眠舱"
+	desc = "未来的医疗技术！"
+	desc_extended = "特殊的医疗休眠舱，舱内有人且舱门关闭时，会自动治疗物理损伤、灼伤和毒素损伤并缓解疼痛。舱门需要手动关闭。高级型号还能处理辐射、精神状态和血量异常。"
 	base_color = "#FFFFFF"
 	secondary_color = "#0094FF"
 	tertiary_color = "#0094FF"
@@ -10,14 +10,14 @@
 	var/heal_multiplier = 1
 
 /obj/structure/interactive/bed/sleeper/medical/weak
-	name = "consumer grade medical sleeper"
+	name = "家用级医疗休眠舱"
 	base_color = "#A59FBC"
 	secondary_color = "#009469"
 	tertiary_color = "#D8D8EC"
 	heal_multiplier = 0.25
 
 /obj/structure/interactive/bed/sleeper/medical/solarian
-	name = "solarian medical sleeper"
+	name = "太阳系医疗休眠舱"
 	base_color = "#A5D5D1"
 	secondary_color = "#4D9BBC"
 	tertiary_color = "#D8C2E1"
@@ -71,7 +71,7 @@
 	return TRUE
 
 /obj/structure/interactive/bed/sleeper/medical/syndicate
-	name = "syndicate advanced medical sleeper"
+	name = "辛迪加高级医疗休眠舱"
 	base_color = "#303030"
 	secondary_color = "#7F0000"
 	tertiary_color = "#7F0000"

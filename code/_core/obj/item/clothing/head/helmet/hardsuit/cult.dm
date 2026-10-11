@@ -1,6 +1,6 @@
 /obj/item/clothing/head/helmet/full/hardsuit/cult
 
-	name = "hardened cult hood"
+	name = "加固邪教兜帽"
 	icon = 'icons/obj/item/clothing/hats/cult_hard.dmi'
 
 

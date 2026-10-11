@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/freezegun
-	name = "freeze ray"
-	desc = "Get iced, dummy."
-	desc_extended = "A gun that shoots beams that freeze the opponent."
+	name = "冷冻射线枪"
+	desc = "冻成冰吧，笨蛋。"
+	desc_extended = "发射光束，将对手冻住的枪。"
 	icon = 'icons/obj/item/weapons/ranged/laser/freezegun.dmi'
 	value = 4000
 

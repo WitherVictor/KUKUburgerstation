@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/rev
-	name = "revolutionary soldier"
-	desc = "FOR THE REVOLUTION!"
-	desc_extended = "An ex-nanotrasen revolutionary soldier fighting for their right to \[EXPUNGED\]. Surprisingly, they're not syndicate backed."
+	name = "革命军士兵"
+	desc = "为了革命！"
+	desc_extended = "曾效力于纳米传讯的革命军士兵，为争取自己的［已删除］权利而战。令人意外的是，他们并未得到辛迪加支持。"
 	ai = /ai/advanced/slavic
 
 	combat_dialogue = /combat_dialogue/revolutionary
@@ -35,7 +35,7 @@
 
 
 /mob/living/advanced/npc/rev/elite
-	name = "elite revolutionary soldier"
+	name = "革命军精英士兵"
 
 	possible_outfits = list(
 		/loadout/slavic/infantry/advanced = 80,
@@ -51,7 +51,7 @@
 	level = 30
 
 /mob/living/advanced/npc/rev/commander
-	name = "elite revolutionary commander"
+	name = "革命军精英指挥官"
 
 	possible_outfits = list(
 		/loadout/slavic/commander = 1

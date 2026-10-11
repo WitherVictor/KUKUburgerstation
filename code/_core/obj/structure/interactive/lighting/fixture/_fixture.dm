@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/fixture
-	name = "LIGHT ERROR"
+	name = "灯具错误"
 	icon_state = "preview"
 
 	plane = PLANE_LIGHT_FIXTURE

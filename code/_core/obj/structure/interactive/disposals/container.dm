@@ -1,8 +1,8 @@
 #define BOTH_ANGLES(x) list(x.dir,turn(x.dir,180)
 
 /obj/disposals_container
-	name = "disposals container"
-	desc = "If you are seeing this, then something went wrong."
+	name = "废物输送容器"
+	desc = "如果你看到了这个，说明出了问题。"
 	var/obj/structure/interactive/disposals/last_pipe
 	var/sorting_tag
 	var/sorting_tag_partial

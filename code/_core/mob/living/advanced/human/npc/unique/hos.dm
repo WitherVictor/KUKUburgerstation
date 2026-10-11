@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/hos
-	name = "Head of Security"
-	desc = "Shitsec Prime."
+	name = "安保主管"
+	desc = "狗安之王。"
 	species = "human"
 	dialogue_id = /dialogue/npc/hos/
 	sex = FEMALE

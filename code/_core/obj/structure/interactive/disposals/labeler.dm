@@ -1,5 +1,5 @@
 /obj/structure/interactive/disposals/pipe/labeler
-	name = "labeler pipe"
+	name = "废物管道标记管"
 	icon_state = "pipe-l"
 	layer = LAYER_FLOOR_PIPE
 
@@ -13,7 +13,7 @@
 /obj/structure/interactive/disposals/pipe/labeler/update_sprite()
 
 	if(sorting_tag_label)
-		name = "[initial(name)] ([sorting_tag_label])"
+		name = "[initial(name)]（[sorting_tag_label]）"
 	else
 		name = initial(name)
 
@@ -35,4 +35,4 @@
 	. = ..()
 
 /obj/structure/interactive/disposals/pipe/labeler/partial
-	name = "partial labeler pipe"
+	name = "废物管道分段标记管"

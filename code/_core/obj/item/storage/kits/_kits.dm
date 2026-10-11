@@ -1,7 +1,7 @@
 /obj/item/storage/kit/
-	name = "first aid kit"
-	desc = "Carries medicine."
-	desc_extended = "A basic first aid kit."
+	name = "急救包"
+	desc = "用来装药品。"
+	desc_extended = "基础急救包。"
 	icon = 'icons/obj/item/storage/kits.dmi'
 	icon_state = "firstaid"
 
@@ -35,8 +35,8 @@
 
 
 /obj/item/storage/kit/brute
-	name = "brute first aid kit"
-	desc_extended = "A first aid kit that focuses on healing brute injury."
+	name = "外伤急救包"
+	desc_extended = "主要用于处理物理伤害的急救包。"
 	icon_state = "brute"
 
 /obj/item/storage/kit/brute/filled/fill_inventory()
@@ -52,8 +52,8 @@
 	. = ..()
 
 /obj/item/storage/kit/burn
-	name = "burn first aid kit"
-	desc_extended = "A first aid kit that focuses on healing burn injuries."
+	name = "烧伤急救包"
+	desc_extended = "主要用于处理烧伤的急救包。"
 	icon_state = "burn"
 
 /obj/item/storage/kit/burn/filled/fill_inventory()
@@ -69,8 +69,8 @@
 	. = ..()
 
 /obj/item/storage/kit/toxin
-	name = "toxin first aid kit"
-	desc_extended = "A first aid kit that focuses on healing toxin based injuries."
+	name = "解毒急救包"
+	desc_extended = "主要用于处理毒素伤害的急救包。"
 	icon_state = "toxin"
 
 /obj/item/storage/kit/toxin/filled/fill_inventory()
@@ -87,8 +87,8 @@
 
 
 /obj/item/storage/kit/oxy
-	name = "oxy first aid kit"
-	desc_extended = "A first aid kit that focuses on healing suffocation and blood loss based injuries."
+	name = "缺氧急救包"
+	desc_extended = "主要用于处理窒息和失血的急救包。"
 	icon_state = "oxy"
 
 /obj/item/storage/kit/oxy/filled/fill_inventory()
@@ -102,9 +102,9 @@
 	. = ..()
 
 /obj/item/storage/kit/syndicate
-	name = "deluxe first aid kit"
-	desc = "I hope you've got insurance."
-	desc_extended = "A combat medical kit for combat operatives. Contains hard to obtain medication that is generally superior than basic medication, as well as an autosyringe and a special first aid analyzer."
+	name = "豪华急救包"
+	desc = "希望你买了保险。"
+	desc_extended = "供战斗特工使用的医疗包。内含难以获得、效果通常优于基础药物的药品，以及自动注射器和专用急救分析仪。"
 	icon_state = "tactical"
 
 /obj/item/storage/kit/syndicate/filled/fill_inventory()
@@ -120,9 +120,9 @@
 	. = ..()
 
 /obj/item/storage/kit/ai3
-	name = "AI-3"
-	desc = "Ya like cheese?"
-	desc_extended = "A basic Slavic-made AI-3 infantry first aid kit."
+	name = "AI-3急救包"
+	desc = "喜欢奶酪吗？"
+	desc_extended = "斯拉夫制造的基础型AI-3步兵急救包。"
 	icon_state = "ai3"
 
 	is_container = TRUE
@@ -147,9 +147,9 @@
 
 
 /obj/item/storage/kit/advanced
-	name = "advanced first aid kit"
-	desc = "I hope you've got insurance."
-	desc_extended = "A first aid kit for healing when under pressure."
+	name = "高级急救包"
+	desc = "希望你买了保险。"
+	desc_extended = "用于危急情况下的救治。"
 	icon_state = "purple"
 
 /obj/item/storage/kit/advanced/filled/fill_inventory()
@@ -165,9 +165,9 @@
 
 
 /obj/item/storage/kit/rad
-	name = "radiation first aid kit"
-	desc = "For those overly radical moments."
-	desc_extended = "A first aid kit that focuses on healing radiation related injuries."
+	name = "抗辐射急救包"
+	desc = "应对那些“辐”力全开的时刻。"
+	desc_extended = "主要用于处理辐射伤害的急救包。"
 	icon_state = "rad"
 
 /obj/item/storage/kit/rad/filled/fill_inventory()

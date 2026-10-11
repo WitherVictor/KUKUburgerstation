@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/tactical
 	name = "\improper 9x19mm MTAC"
-	desc = "Precision in the palms of your hands."
-	desc_extended = "A decently accurate full auto SMG designed to take down targets at medium ranges while still being able to fight in close range."
+	desc = "精准，尽在掌握。"
+	desc_extended = "精度不错的全自动冲锋枪，用于击倒中距离目标，同时保留近距离作战能力。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/9mm.dmi'
 	icon_state = "inventory"
 	value = 1400
@@ -121,9 +121,9 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/smg/tactical/corporate
-	name = "\improper 9x19mm MTAC Corporate Edition"
-	desc = "Precision in the palms of your hands."
-	desc_extended = "A decently accurate full auto SMG designed to take down targets at medium ranges while still being able to fight in close range. This one is designated as the corporate edition and has a slightly hire firerate."
+	name = "\improper 9x19mm MTAC公司版"
+	desc = "精准，尽在掌握。"
+	desc_extended = "精度不错的全自动冲锋枪，用于击倒中距离目标，同时保留近距离作战能力。这是公司版，射速略高。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/9mm.dmi'
 	icon_state = "inventory"
 	value = 2000

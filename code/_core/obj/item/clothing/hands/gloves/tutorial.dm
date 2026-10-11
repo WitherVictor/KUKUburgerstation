@@ -1,11 +1,11 @@
 /obj/item/clothing/hands/gloves/tutorial
-	name = "right antimagic armwrap"
+	name = "反魔法右臂缠带"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
 
-	desc = "Data-mine the code with these."
-	desc_extended = "You probably shouldn't have this."
+	desc = "戴着它挖掘代码里的隐藏内容。"
+	desc_extended = "你大概不该拥有这东西。"
 
 	icon = 'icons/obj/item/clothing/gloves/tutorial_gloves.dmi'
 
@@ -19,9 +19,9 @@
 	value = 120
 
 /obj/item/clothing/hands/gloves/tutorial/left
-	name = "left antimagic armwrap"
-	desc = "Data-mine the code with these."
-	desc_extended = "You probably shouldn't have this."
+	name = "反魔法左臂缠带"
+	desc = "戴着它挖掘代码里的隐藏内容。"
+	desc_extended = "你大概不该拥有这东西。"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

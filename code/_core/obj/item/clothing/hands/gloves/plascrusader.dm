@@ -1,9 +1,9 @@
 /obj/item/clothing/hands/gloves/colored/plascrusader
-	name = "right plascrusader gauntlet"
+	name = "金甲十字军右护手"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
-	desc = "Bling bling."
-	desc_extended = "A gold colored gauntlet made from fine metals for protection from blades."
+	desc = "金光闪闪。"
+	desc_extended = "用优质金属制成的金色护手，用来抵挡刀刃。"
 	icon = 'icons/obj/item/clothing/gloves/plascrusadergloves.dmi'
 
 	item_slot = SLOT_HAND_RIGHT
@@ -23,7 +23,7 @@
 	value = 20
 
 /obj/item/clothing/hands/gloves/colored/plascrusader/left
-	name = "left plascrusader gauntlet"
+	name = "金甲十字军左护手"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

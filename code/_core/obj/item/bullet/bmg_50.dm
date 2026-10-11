@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/bmg_50/
-	name = "\improper .50 BMG round"
-	desc = "A cheap, mass-produced bullet imitating a .50 cal round."
-	desc_extended = "For machineguns that require .50 ammo."
+	name = "\improper .50 BMG弹"
+	desc = "廉价量产的仿制.50口径子弹。"
+	desc_extended = "供使用.50弹药的机枪装填。"
 	icon = 'icons/obj/item/bullet/50.dmi'
 
 
@@ -24,7 +24,7 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/bmg_50/surplus
-	name = "\improper surplus .50 BMG round"
+	name = "\improper 库存旧式.50 BMG弹"
 	damage_type_bullet = /damagetype/ranged/bullet/bmg_50/surplus
 	jam_chance = 1
 	rarity = RARITY_BROKEN

@@ -23,18 +23,18 @@
 		if("feed_other")
 			var/obj/item/container/food/F = callback_list["object"]
 			var/mob/living/advanced/A = callback_list["target"]
-			src.to_chat(span("notice","You forcefeed \the [F] to \the [A]."))
-			A.to_chat(span("warning","\The [src] forcefeeds you \the [F]!"))
+			src.to_chat(span("notice","你把[F]强喂给了[A]。"))
+			A.to_chat(span("warning","[src]把[F]强喂给你！"))
 			F.consume(A)
 			return TRUE
 		if("inject")
 			var/obj/item/organ/O = callback_list["target"]
 			var/obj/item/container/syringe/S = callback_list["object"]
 			var/is_injecting = callback_list["injecting"]
-			var/verb_to_use = is_injecting ? "inject" : "draw blood from"
+			var/verb_to_use = is_injecting ? "注射" : "抽血"
 			var/mob/living/L = O.loc
 			if(!L || !istype(L) || !L.reagents)
-				src.to_chat(span("notice","There is nothing to inject!"))
+				src.to_chat(span("notice","没有可供注射或抽血的目标！"))
 				return TRUE
 
 			if(is_injecting)
@@ -42,7 +42,7 @@
 			else
 				L.reagents.transfer_reagents_to(S.reagents,S.draw_amount)
 
-			src.to_chat(span("notice","You [verb_to_use] \the [L.name] with your [S.name]."))
+			src.to_chat(span("notice","你使用[S.name]为[L.name][verb_to_use]。"))
 
 			S.update_icon()
 
@@ -64,22 +64,22 @@
 
 	switch(id)
 		if("enter_vehicle")
-			to_chat(span("notice","You must remain still in order to enter the vehicle!"))
+			to_chat(span("notice","进入载具时必须保持不动！"))
 			return TRUE
 		if("loot_object")
-			to_chat(span("notice","You must remain still in order to find an object!"))
+			to_chat(span("notice","搜寻物品时必须保持不动！"))
 			return TRUE
 		if("teleport")
-			to_chat(span("notice","You need to be standing still in order to teleport!"))
+			to_chat(span("notice","传送时必须保持不动！"))
 			return TRUE
 		if("feed_self") //TODO: Debate whether or not you should be standing still in order to eat food.
-			to_chat(span("notice","You need to be standing still in order to eat!"))
+			to_chat(span("notice","进食时必须保持不动！"))
 			return TRUE
 		if("feed_other")
-			to_chat(span("notice","You and your target needs to be standing still in order to feed them!"))
+			to_chat(span("notice","喂食时，你和目标都必须保持不动！"))
 			return TRUE
 		if("mine_ore")
-			to_chat(span("notice","You must remain still in order to mine!"))
+			to_chat(span("notice","采矿时必须保持不动！"))
 			return TRUE
 
 	..()

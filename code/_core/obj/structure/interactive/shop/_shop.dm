@@ -54,12 +54,12 @@
 		if(stored_item.value_burgerbux)
 			stored_item_burgerbux_cost = stored_item.value_burgerbux
 			stored_item_cost = 0
-			name = "[stored_item.name] - [stored_item_burgerbux_cost] burgerbux"
+			name = "[stored_item.name] - [stored_item_burgerbux_cost]汉堡币"
 		else
 			stored_item_cost = max(1,CEILING(stored_item.get_value()*markup,1))
 			if(stored_item_cost == 1)
 				log_error("Warning: Item of [stored_item] has a low value! Suspected no cost item.")
-			name = "[stored_item.name] - [stored_item_cost] credits"
+			name = "[stored_item.name] - [stored_item_cost]信用点"
 
 /obj/structure/interactive/shop/Finalize()
 	. = ..()
@@ -118,12 +118,12 @@
 
 	if(stored_item.is_container)
 		var/list/contents = stored_item.inventory_to_list()
-		. += div("notice","It contains: [english_list(contents)]")
+		. += div("notice","内含：[english_list(contents)]")
 
 	if(stored_item_burgerbux_cost)
-		. += div("notice","This item is being sold for [stored_item_burgerbux_cost] burgerbux.")
+		. += div("notice","此商品售价为[stored_item_burgerbux_cost]汉堡币。")
 	else
-		. += div("notice","This item is being sold for [stored_item_cost] credits.")
+		. += div("notice","此商品售价为[stored_item_cost]信用点。")
 
 
 /obj/structure/interactive/shop/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
@@ -139,13 +139,13 @@
 	var/obj/hud/inventory/I = object
 
 	if(!is_inventory(object))
-		P.to_chat(span("notice","Your hand needs to be empty in order to buy this!"))
+		P.to_chat(span("notice","你需要空出一只手才能购买！"))
 		return TRUE
 
 	if(stored_item_burgerbux_cost)
 		var/savedata/client/globals/GD = GLOBALDATA(activator.client.ckey)
 		if(!GD)
-			activator.to_chat(span("danger","Globaldata error detected. Report this to burger on discord with error code: Burgerbux."))
+			activator.to_chat(span("danger","检测到账号数据错误。请在Discord上向Burger反馈，错误码：Burgerbux。"))
 			return TRUE
 		var/currency = GD.loaded_data["burgerbux"]
 		if(currency >= stored_item_burgerbux_cost && P.spend_burgerbux(stored_item_burgerbux_cost))
@@ -155,10 +155,10 @@
 			FINALIZE(new_item)
 			new_item.update_sprite()
 			I.add_object(new_item)
-			P.to_chat(span("notice","You have successfully purchased \the [new_item] for [stored_item_burgerbux_cost] burgerbux."))
+			P.to_chat(span("notice","你花费[stored_item_burgerbux_cost]汉堡币购买了[new_item]。"))
 			return TRUE
 
-		P.to_chat(span("notice","You don't have enough burgerbux ([stored_item_burgerbux_cost] burgerbux) to buy this!"))
+		P.to_chat(span("notice","你的汉堡币不足，购买需要[stored_item_burgerbux_cost]汉堡币！"))
 
 
 	else
@@ -168,13 +168,13 @@
 			GENERATE(new_item)
 			FINALIZE(new_item)
 			new_item.update_sprite()
-			P.to_chat(span("notice","You have successfully purchased \the [new_item] for [stored_item_cost] credits."))
+			P.to_chat(span("notice","你花费[stored_item_cost]信用点购买了[new_item]。"))
 			if(P.movement_flags & MOVEMENT_RUNNING && new_item.quick_equip(P))
 				return TRUE
 			P.put_in_hands(new_item,params)
 			return TRUE
 
-		P.to_chat(span("notice","You don't have enough credits ([stored_item_cost] credits) to buy this!"))
+		P.to_chat(span("notice","你的信用点不足，购买需要[stored_item_cost]信用点！"))
 
 
 

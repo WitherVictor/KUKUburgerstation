@@ -1,6 +1,6 @@
 /obj/item/storage/briefcase/
-	name = "brown briefcase"
-	desc = "An typical brown briefcase."
+	name = "棕色公文包"
+	desc = "普通的棕色公文包。"
 	icon_state = "briefcase"
 
 	size = 12
@@ -10,8 +10,8 @@
 	dynamic_inventory_count = 4
 
 /obj/item/storage/briefcase/deagle
-	name = "golden eagle collector's kit"
-	desc = "A gold plated .50 eagle handcannon. AMURICA."
+	name = "金鹰典藏套装"
+	desc = "镀金的.50口径鹰式手炮。美利坚！"
 	icon_state = "briefcase_deagle"
 
 	container_max_size = 2

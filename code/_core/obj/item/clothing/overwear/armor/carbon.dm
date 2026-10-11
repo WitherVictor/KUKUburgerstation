@@ -1,8 +1,8 @@
 
 /obj/item/clothing/overwear/armor/carbon
-	name = "carbon armor"
-	desc = "Military. In space!"
-	desc_extended = "Armor made from hardened carbon fibres."
+	name = "碳纤维护甲"
+	desc = "军用装备，进军太空！"
+	desc_extended = "用硬化碳纤维制成的护甲。"
 	icon = 'icons/obj/item/clothing/suit/carbon.dmi'
 
 

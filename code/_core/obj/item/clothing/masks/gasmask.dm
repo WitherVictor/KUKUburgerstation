@@ -1,9 +1,9 @@
 /obj/item/clothing/mask/gas
-	name = "classic gas mask"
+	name = "经典防毒面具"
 	icon = 'icons/obj/item/clothing/masks/gasmask.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
-	desc = "Oxygen not included."
-	desc_extended = "A modern gas mask. Filters out most forms of gas."
+	desc = "不含氧气。"
+	desc_extended = "现代防毒面具，可过滤大多数气体。"
 
 	armor = /armor/military/light/hard/bio
 
@@ -14,18 +14,18 @@
 	value = 1
 
 /obj/item/clothing/mask/gas/mining
-	name = "advanced gas mask"
+	name = "先进防毒面具"
 	icon = 'icons/obj/item/clothing/masks/mining.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
-	desc = "Oxygen not included."
-	desc_extended = "An advanced gas mask. Filters out most forms of gas."
+	desc = "不含氧气。"
+	desc_extended = "先进防毒面具，可过滤大多数气体。"
 
 	armor = /armor/military/light/hard/bio/mining
 
 /obj/item/clothing/mask/gas/syndicate
-	name = "ancient syndicate gas mask"
-	desc = "Fearsome."
-	desc_extended = "An old syndicate gas mask previously used by syndicate operatives."
+	name = "古老辛迪加防毒面具"
+	desc = "令人畏惧。"
+	desc_extended = "辛迪加特工曾经使用的老式辛迪加防毒面具。"
 	icon = 'icons/obj/item/clothing/masks/gasmask_syndicate.dmi'
 
 	armor = /armor/military/light/hard/tactical
@@ -33,39 +33,39 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/mask/gas/mercenary
-	name = "mercenary gas mask"
-	desc = "Profitable."
-	desc_extended = "An old mercenary gas mask previously used by exclusion zone bounty hunters."
+	name = "佣兵防毒面具"
+	desc = "有利可图。"
+	desc_extended = "禁区赏金猎人曾经使用的老式佣兵防毒面具。"
 	icon = 'icons/obj/item/clothing/masks/gasmask_merc.dmi'
 
 	armor = /armor/military/light/hard/tactical
 
 /obj/item/clothing/mask/gas/glass
-	name = "open gas mask"
-	desc = "Viewable."
-	desc_extended = "An old glass gas mask previously used by irradiated subway scavengers."
+	name = "玻璃面罩防毒面具"
+	desc = "看得清脸。"
+	desc_extended = "受辐射地铁中的拾荒者曾经使用的老式玻璃面罩防毒面具。"
 	icon = 'icons/obj/item/clothing/masks/gasmask_glass.dmi'
 
 /obj/item/clothing/mask/gas/tactical
-	name = "tactical gas mask"
-	desc = "Tactical."
-	desc_extended = "An old tactical gas mask previously used by special ops."
+	name = "战术防毒面具"
+	desc = "战术范儿。"
+	desc_extended = "特种作战人员曾经使用的老式战术防毒面具。"
 	icon = 'icons/obj/item/clothing/masks/gasmask_tactical.dmi'
 
 	armor = /armor/military/light/hard/tactical
 
 /obj/item/clothing/mask/gas/space_cop
-	name = "space cop's mask"
+	name = "太空警察面具"
 	icon = 'icons/obj/item/clothing/masks/space_cop.dmi'
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
-	desc = "Baton not included."
-	desc_extended = "A space-age gas mask. Filters out most forms of gas."
+	desc = "不含警棍。"
+	desc_extended = "太空时代的防毒面具，可过滤大多数气体。"
 
 	armor = /armor/military/light/hard/tactical
 
 
 /obj/item/clothing/mask/gas/poly
-	name = "gas mask"
+	name = "防毒面具"
 	icon = 'icons/obj/item/clothing/masks/gasmask_poly.dmi'
 	polymorphs = list(
 		"base" = COLOR_WHITE,

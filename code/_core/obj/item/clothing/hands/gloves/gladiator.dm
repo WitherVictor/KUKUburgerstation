@@ -1,9 +1,9 @@
 /obj/item/clothing/hands/gloves/colored/gladiator
-	name = "right gladiator gauntlet"
+	name = "角斗士右护手"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
-	desc = "Fight people with these."
-	desc_extended = "A long glove made of leather, to protect against shankings."
+	desc = "戴着它跟人搏斗。"
+	desc_extended = "用皮革制成的长手套，用来抵挡捅刺。"
 	icon = 'icons/obj/item/clothing/gloves/gladiator.dmi'
 	color = "#FFFFFF"
 
@@ -16,7 +16,7 @@
 	value = 20
 
 /obj/item/clothing/hands/gloves/colored/gladiator/left
-	name = "left gladiator gauntlet"
+	name = "角斗士左护手"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -30,9 +30,9 @@
 
 
 /obj/item/clothing/hands/gloves/colored/gladiator/gold/left
-	name = "left gladiator gauntlet"
-	desc = "Fight people with these."
-	desc_extended = "A long glove made of leather, to protect against shankings."
+	name = "角斗士左护手"
+	desc = "戴着它跟人搏斗。"
+	desc_extended = "用皮革制成的长手套，用来抵挡捅刺。"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

@@ -1,6 +1,6 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/lmg_nt_light
 	name = "\improper 5.56mm NT-LMG-L"
-	desc = "A lighter light machine gun."
+	desc = "更轻的轻机枪。"
 	desc_extended = ""
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_6.dmi'
 	icon_state = "inventory"

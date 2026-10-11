@@ -13,7 +13,7 @@ obj/structure/scenery/bush/Finalize()
 		T.map_color = blend_colors((T.map_color ? T.map_color : "#FFFFFF"),"#597F0C",0.25)
 
 obj/structure/scenery/bush/grass
-	name = "grassy bush"
+	name = "草丛"
 	icon = 'icons/obj/structure/flora/ausflora.dmi'
 	icon_state = "grassybush_1"
 
@@ -22,7 +22,7 @@ obj/structure/scenery/bush/grass/New()
 	icon_state = "grassybush_[rand(1,4)]"
 
 obj/structure/scenery/flowers
-	name = "flowers"
+	name = "花丛"
 	icon = 'icons/obj/structure/flora/ausflora.dmi'
 	icon_state = "ywflowers_1"
 	plane = PLANE_GRASS
@@ -45,7 +45,7 @@ obj/structure/scenery/flowers/Finalize()
 		T.map_color = blend_colors((T.map_color ? T.map_color : "#FFFFFF"),"#597F0C",0.1)
 
 obj/structure/scenery/grass
-	name = "grass type"
+	name = "草类"
 	plane = PLANE_GRASS
 	layer = LAYER_FLOOR_SCENERY
 
@@ -58,7 +58,7 @@ obj/structure/scenery/grass/Finalize()
 
 
 /obj/structure/scenery/grass/normal/
-	name = "uncut grass"
+	name = "未修剪的草丛"
 	icon = 'icons/obj/structure/flora/ausflora.dmi'
 	icon_state = "sparsegrass_1"
 	layer = LAYER_FLOOR_SCENERY
@@ -73,7 +73,7 @@ obj/structure/scenery/grass/normal/New()
 
 
 obj/structure/scenery/grass/lavender
-	name = "lavender grass"
+	name = "薰衣草丛"
 	icon = 'icons/obj/structure/flora/ausflora.dmi'
 	icon_state = "lavendergrass_1"
 	layer = LAYER_FLOOR_SCENERY
@@ -84,7 +84,7 @@ obj/structure/scenery/grass/lavender/New()
 
 
 obj/structure/scenery/rocks
-	name = "rocks"
+	name = "岩石"
 	icon = 'icons/obj/structure/flora/rocks_new.dmi'
 	icon_state = "rock_1"
 	plane = PLANE_GRASS
@@ -95,7 +95,7 @@ obj/structure/scenery/rocks/New()
 	icon_state = "rock_[rand(1,10)]"
 
 /obj/structure/interactive/basalt
-	name = "basalt rocks"
+	name = "玄武岩"
 	icon = 'icons/obj/structure/flora/lavaland.dmi'
 	icon_state = "basalt_1"
 
@@ -113,7 +113,7 @@ obj/structure/interactive/basalt/New()
 
 
 obj/structure/scenery/lolipop_tree
-	name = "giant lolipop"
+	name = "巨型棒棒糖"
 	icon = 'icons/obj/structure/flora/lolipop_tree.dmi'
 	icon_state = "stick"
 
@@ -155,13 +155,13 @@ obj/structure/scenery/lolipop_tree/update_overlays()
 
 
 obj/structure/scenery/peppermint
-	name = "red peppermint"
+	name = "红色薄荷糖"
 	icon = 'icons/obj/structure/flora/peppermint.dmi'
 	icon_state = "peppermint_red"
 	layer = LAYER_FLOOR_SCENERY
 
 
 obj/structure/scenery/peppermint/green
-	name = "green peppermint"
+	name = "绿色薄荷糖"
 	icon_state = "peppermint_green"
 

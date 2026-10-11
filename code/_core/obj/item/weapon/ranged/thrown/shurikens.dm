@@ -1,8 +1,8 @@
 /obj/item/weapon/ranged/thrown/kitchen_shuriken
-	name = "kitchen shuriken"
+	name = "厨房手里剑"
 	icon = 'icons/obj/item/weapons/ranged/thrown/kitchen_shuriken.dmi'
-	desc = "Just like my japanese animes?"
-	desc_extended = "You cant just tape four knives together and call them a shuriken."
+	desc = "就像我看的日本动画里那样？"
+	desc_extended = "你不能把四把刀粘在一起就管它叫手里剑。"
 
 	ranged_damage_type = /damagetype/ranged/thrown/kitchen_shuriken
 	amount = 1
@@ -11,10 +11,10 @@
 	value = 20
 
 /obj/item/weapon/ranged/thrown/shuriken
-	name = "shuriken"
+	name = "手里剑"
 	icon = 'icons/obj/item/weapons/ranged/thrown/shuriken.dmi'
-	desc = "Just like my japanese animes!"
-	desc_extended = "A deadly bladed star for throwing at people. Does well against flesh, but not so much armor."
+	desc = "就像我看的日本动画里那样！"
+	desc_extended = "向人投掷的致命刃星，对血肉效果不错，对护甲就不怎么样了。"
 
 	ranged_damage_type = /damagetype/ranged/thrown/shuriken
 	amount = 1

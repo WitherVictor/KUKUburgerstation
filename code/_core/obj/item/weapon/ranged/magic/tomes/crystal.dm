@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/crystal
-	name = "tome of the plasma crystal"
-	desc = "Shoot plasma crystals at a rapid rate."
-	desc_extended = "Costs mana to use."
+	name = "等离子晶体法术典籍"
+	desc = "高速发射等离子晶体。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 4
 	shoot_delay = 7
 	burst_delay = 2
@@ -23,9 +23,9 @@
 
 
 /obj/item/weapon/ranged/magic/tome/crystal/true
-	name = "true tome of the plasma crystal"
-	desc = "Shoot plasma crystals at a rapid rate."
-	desc_extended = "Costs mana to use."
+	name = "真等离子晶体法术典籍"
+	desc = "高速发射等离子晶体。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 5
 
 	shoot_delay = 6

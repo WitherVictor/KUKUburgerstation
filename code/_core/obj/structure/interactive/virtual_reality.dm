@@ -13,8 +13,8 @@
 	add_overlay(I)
 
 /obj/structure/interactive/virtual_reality/join_game
-	name = "ready up"
-	maptext = "<center>Ready Up!</center>"
+	name = "准备就绪"
+	maptext = "<center>准备！</center>"
 
 /obj/structure/interactive/virtual_reality/join_game/clicked_on_by_object(var/mob/caller,var/atom/object,location,control,params)
 
@@ -22,9 +22,9 @@
 		var/mob/living/advanced/player/virtual/V = caller
 		if(V in SSvirtual_reality.current_virtual_reality.teams["Ready"])
 			SSvirtual_reality.current_virtual_reality.move_to_team(V,"Lobby")
-			V.to_chat(span("notice","You are now unready. Interact with this hologram again to become ready."))
+			V.to_chat(span("notice","你已取消准备。再次与此全息影像交互即可准备就绪。"))
 		else
 			SSvirtual_reality.current_virtual_reality.move_to_team(V,"Ready")
-			V.to_chat(span("notice","You are now ready. Interact with this hologram again to become unready."))
+			V.to_chat(span("notice","你已准备就绪。再次与此全息影像交互即可取消准备。"))
 
 	. = ..()

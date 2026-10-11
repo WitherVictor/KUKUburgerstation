@@ -1,5 +1,5 @@
 /obj/projectile/magic/gabber_ring
-	name = "gabber ring"
+	name = "合成天使光环"
 	icon_state = "ring"
 
 	//penetrations_left = 5

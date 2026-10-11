@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/buff_armor
-	name = "self-reinforcing spell gem"
-	desc = "The source of all magic."
-	desc_extended = "A magical gem filled with pure arcane energy that gives the user the ability to cast spells. Can be augmented onto wands. This one temporarily boosts your armor."
+	name = "自身护甲强化法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "充满纯粹奥术能量的魔法宝石，赋予使用者施放法术的能力，可镶入魔杖。这颗能暂时强化你的护甲。"
 	icon_state = "protection"
 	color = "#a7007d"
 
@@ -27,7 +27,7 @@
 			MUL(damage_multiplier_to_use,attachment_stats["damage_multiplier"])
 		var/mob/living/livingcaller = caller
 		if(livingcaller.status_effects[TEMP_ARMOR])
-			livingcaller.visible_message(span("warning","\The [livingcaller.name] looks dissapointedly at \the [src]."),span("warning","The Spell Fizzles!"))
+			livingcaller.visible_message(span("warning","[livingcaller.name]失望地看着[src]。"),span("warning","法术消散了！"))
 		else
 			livingcaller.add_status_effect(TEMP_ARMOR,damage_multiplier_to_use * 10,SECONDS_TO_DECISECONDS(damage_multiplier_to_use * 30))
 		return TRUE

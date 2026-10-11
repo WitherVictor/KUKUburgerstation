@@ -1,5 +1,5 @@
 /obj/item/clothing/feet/shoes/winter
-	name = "right winter boot"
+	name = "冬季右靴"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
@@ -21,7 +21,7 @@
 
 
 /obj/item/clothing/feet/shoes/winter/left
-	name = "left winter boot"
+	name = "冬季左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

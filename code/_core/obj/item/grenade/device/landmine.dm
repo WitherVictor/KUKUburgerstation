@@ -1,5 +1,5 @@
 /obj/item/grenade/device/landmine
-	name = "landmine"
+	name = "地雷"
 	icon_state = "landmine"
 
 /obj/item/grenade/device/landmine/proximity/Generate()
@@ -10,9 +10,9 @@
 	return ..()
 
 /obj/item/grenade/device/landmine/proximity/explosive/
-	name = "proximity explosive landmine"
-	desc = "Kaboom!"
-	desc_extended = "A prebuilt proximity explosive landmine. The labeling indicates that the proximity delay is set to 5 seconds."
+	name = "感应爆破地雷"
+	desc = "轰！"
+	desc_extended = "预装好的感应爆破地雷。标签注明感应装置的启动延迟设为5秒。"
 	value = 50
 
 /obj/item/grenade/device/landmine/proximity/explosive/Generate()

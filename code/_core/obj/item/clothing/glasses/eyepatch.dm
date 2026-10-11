@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/eyepatch
-	name = "eyepatch"
-	desc = "Arrrrrrrrrrrrrr."
-	desc_extended = "A hard leather eyepatch meant to cover one eye."
+	name = "单眼眼罩"
+	desc = "啊嗷嗷嗷嗷。"
+	desc_extended = "遮住一只眼睛的硬皮眼罩。"
 	icon = 'icons/obj/item/clothing/glasses/eyepatch.dmi'
 
 	armor = /armor/cloth/arcane/reduced

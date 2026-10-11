@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/fireball
-	name = "firebolt spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a single high-damage bolt of fire that can ignite."
+	name = "火焰箭法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射一枚能够点燃目标的高伤害火焰箭。"
 	icon_state = "damage"
 
 	rarity = RARITY_UNCOMMON

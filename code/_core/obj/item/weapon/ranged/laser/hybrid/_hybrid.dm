@@ -34,7 +34,7 @@
 	INTERACT_DELAY(1)
 
 	mode = !mode
-	activator.to_chat(span("notice","You switch \the [src] to [mode ? "kill" : "stun"]."))
+	activator.to_chat(span("notice","你将[src]切换为[mode ? "致命" : "击晕"]模式。"))
 
 	if(mode)
 		projectile = projectile_kill

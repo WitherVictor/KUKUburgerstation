@@ -1,7 +1,7 @@
 //Failed code here.
 
 /obj/projectile/beam/
-	name = "beam"
+	name = "光束"
 	icon = 'icons/obj/projectiles/beam.dmi'
 	icon_state = "laser"
 
@@ -29,4 +29,3 @@
 	else //Not a hit.
 		T.icon_state = icon_state
 
-	

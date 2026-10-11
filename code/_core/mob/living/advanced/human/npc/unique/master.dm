@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/master
-	name = "Master-General of the Ordnance"
-	desc = "The master of everything."
+	name = "军械总监"
+	desc = "样样精通的大师。"
 
 	sex = MALE
 	gender = MALE

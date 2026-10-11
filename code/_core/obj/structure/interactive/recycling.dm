@@ -1,7 +1,7 @@
 /obj/structure/interactive/recycler
-	name = "recycler"
-	desc = "Oh god oh fuck."
-	desc_extended = "Breaks down components into its most basic parts."
+	name = "回收机"
+	desc = "老天，操。"
+	desc_extended = "销毁送入的物品，将其中可回收的材料压成垃圾块。"
 	icon = 'icons/obj/structure/recycling.dmi'
 	icon_state = "base"
 

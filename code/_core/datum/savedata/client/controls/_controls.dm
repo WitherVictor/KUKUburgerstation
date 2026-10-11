@@ -24,4 +24,4 @@
 	var/client/owner = CLIENT(ckey)
 	var/full_path = "[get_folder()][get_file()]"
 	rustg_file_write(json_encode(owner.macros.macros),full_path)
-	owner.to_chat(span("notice","Your control scheme has been saved."))
+	owner.to_chat(span("notice","你的按键设置已保存。"))

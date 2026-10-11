@@ -1,5 +1,5 @@
 /obj/item/clothing/belt
-	name = "belt"
+	name = "腰带"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
 	item_slot = SLOT_GROIN_BELT
 

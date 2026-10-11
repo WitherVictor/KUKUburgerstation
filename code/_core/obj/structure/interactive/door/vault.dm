@@ -1,7 +1,7 @@
 /obj/structure/interactive/door/vault
-	name = "secure vault door"
-	desc = "If only I had a drill."
-	desc_extended = "A absolute behemoth of a steel door installed with every single anti-bypass feature known to man. There is no way to get through this without the right access."
+	name = "安全金库门"
+	desc = "要是有一把钻头就好了。"
+	desc_extended = "一扇极其厚重的钢门，配备了人类已知的所有防绕过措施。没有相应权限就别想通过。"
 	icon = 'icons/obj/structure/airlock/vault_door.dmi'
 	icon_state = "vault"
 	color = "#FFFFFF"
@@ -10,7 +10,7 @@
 
 /obj/structure/interactive/door/vault/syndicate
 	icon = 'icons/obj/structure/airlock/vault_door_dark.dmi'
-	desc_extended = "A absolute behemoth of a steel door installed with every single anti-bypass feature known to man. There is no way to get through this without the right code."
+	desc_extended = "一扇极其厚重的钢门，配备了人类已知的所有防绕过措施。没有正确密码就别想通过。"
 	var/obj/item/device/keypad/stored_keypad
 
 /obj/structure/interactive/door/vault/syndicate/PreDestroy()

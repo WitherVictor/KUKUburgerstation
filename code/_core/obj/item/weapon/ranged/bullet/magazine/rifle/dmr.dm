@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/dmr
-	name = "\improper 7.62mm SOL-5 DMR"
-	desc = "For your designated marksman."
-	desc_extended = "The 7.62mm SOL-5 DMR is the ultimate marksman rifle for Solarian infantry units. The bullpup design allows the most barrel length length out of any other rifles of its caliber."
+	name = "\improper 7.62mm SOL-5精确射手步枪"
+	desc = "为你的精确射手准备。"
+	desc_extended = "7.62mm SOL-5是太阳系步兵部队的终极精确射手步枪。无托设计使其在同口径步枪中拥有格外长的枪管。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/dmr.dmi'
 	icon_state = "inventory"
 	value = 4000

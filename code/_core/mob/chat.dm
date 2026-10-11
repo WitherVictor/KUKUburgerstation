@@ -4,7 +4,7 @@
 		C.spam_protection_chat += 1
 
 	if(C.spam_protection_chat > 2)
-		C.to_chat(span("warning","You can't talk this fast!"))
+		C.to_chat(span("warning","你说话太快了！"))
 		return FALSE
 
 	if(text_to_check)
@@ -25,9 +25,9 @@ var/regex/vowels = new("\[aeiou\]", "ig")
 		var/final_text = ""
 		for(var/word in exploded_words)
 			if(prob(intoxication/150))
-				word = "*HICCUP* [word]"
+				word = "*嗝* [word]"
 			else if(prob(intoxication/200))
-				word = "*BURP*"
+				word = "*打了个饱嗝*"
 			else if(length(word) > 3 && prob(intoxication/10))
 				var/list/exploded_letters = splittext(word,"")
 				var/min = 2
@@ -39,7 +39,7 @@ var/regex/vowels = new("\[aeiou\]", "ig")
 				vowels.Replace(word,"")
 
 			if(prob(intoxication/20))
-				word = "[word] uhhh..."
+				word = "[word] 呃……"
 
 			final_text += "[word] "
 
@@ -115,7 +115,7 @@ var/regex/vowels = new("\[aeiou\]", "ig")
 				language_to_use = available_languages[first_character]
 				text_to_say = copytext(text_to_say,2,0)
 			else
-				to_chat(span("warning","You don't know that language!"))
+				to_chat(span("warning","你不会这种语言！"))
 				return FALSE
 		else if(client && old_first == ".")
 			if(client.macros.radio_keys[first_character])
@@ -130,7 +130,7 @@ var/regex/vowels = new("\[aeiou\]", "ig")
 				frequency_to_use = client.macros.radio_keys[first_character]
 				text_to_say = copytext(text_to_say,2,0)
 			else
-				to_chat(span("warning","You don't have that radio key!"))
+				to_chat(span("warning","你没有这个无线电频道的快捷键！"))
 				return FALSE
 
 	else if(first_character == ";") //Common radio.
@@ -145,7 +145,7 @@ var/regex/vowels = new("\[aeiou\]", "ig")
 					language_to_use = available_languages[first_character]
 					text_to_say = copytext(text_to_say,2,0)
 				else
-					to_chat(span("warning","You don't know that language!"))
+					to_chat(span("warning","你不会这种语言！"))
 					return FALSE
 
 	if(has_suffix(text_to_say,"!"))
@@ -175,18 +175,18 @@ var/regex/vowels = new("\[aeiou\]", "ig")
 		return FALSE
 
 	if(!(emote_text in known_emotes))
-		if(messages) to_chat(span("warning","Invalid emote: \"[emote_text]\"!"))
+		if(messages) to_chat(span("warning","无效的表情动作：\"[emote_text]\"！"))
 		return FALSE
 
 	if(!SSemote.all_emotes[emote_text])
-		if(messages) to_chat(span("warning","Unknown emote: \"[emote_text]\"."))
+		if(messages) to_chat(span("warning","未知的表情动作：\"[emote_text]\"。"))
 		return FALSE
 
 	next_emote = world.time + 5
 
 	var/emote/E = SSemote.all_emotes[emote_text]
 	if(!E.can_emote(src,target))
-		if(messages) to_chat(span("warning","You can't do this emote!"))
+		if(messages) to_chat(span("warning","你无法做出这个表情动作！"))
 		return FALSE
 
 	E.on_emote(src,target)

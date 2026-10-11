@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/fractal
-	name = "fractal spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots four spiraling firebrands that homes in on a nearby enemy target."
+	name = "分形法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射四团盘旋的火焰，追踪附近的敌人。"
 	icon_state = "damage"
 
 	rarity = RARITY_MYTHICAL

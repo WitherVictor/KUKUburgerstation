@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/ashwalker
-	name = "ashwalker villager"
-	desc = "Walker of the ash."
-	desc_extended = "A more primitive cousin to the lizardmen that NanoTrasen hires, these bipedal Ashwalkers tend to hunt in lava-infested regions for meat and leather. They're hostile to anything that isn't their own kin."
+	name = "灰烬行者村民"
+	desc = "行走于灰烬之中。"
+	desc_extended = "这些双足灰烬行者是纳米传讯雇用的蜥蜴人较为原始的近亲，常在熔岩遍布的地区狩猎，获取肉和皮革。它们敌视同族以外的一切生物。"
 
 	dna = /dna/lizard
 	ai = /ai/advanced/ashwalker
@@ -24,7 +24,7 @@
 
 //Hunter
 /mob/living/advanced/npc/ashwalker/hunter
-	name = "ashwalker hunter"
+	name = "灰烬行者猎人"
 	loadout = /loadout/ashwalker/hunter
 	level = 20
 
@@ -34,7 +34,7 @@
 
 //Shaman
 /mob/living/advanced/npc/ashwalker/shaman
-	name = "ashwalker shaman"
+	name = "灰烬行者萨满"
 	loadout = /loadout/ashwalker/shaman
 	level = 60
 
@@ -44,7 +44,7 @@
 
 //Warrior
 /mob/living/advanced/npc/ashwalker/warrior
-	name = "ashwalker warrior"
+	name = "灰烬行者战士"
 	loadout = /loadout/ashwalker/warrior
 	level = 40
 

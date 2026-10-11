@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/full/space
-	name = "old spacesuit helmet"
-	desc = "Helmets... in space!"
-	desc_extended = "A very sturdy old space helmet. Built in is a system that regulates heating and cooling of the body."
+	name = "旧式宇航服头盔"
+	desc = "头盔……进军太空！"
+	desc_extended = "一顶十分结实的旧式宇航头盔，内置调节身体温度的系统。"
 	icon = 'icons/obj/item/clothing/hats/space_old.dmi'
 
 

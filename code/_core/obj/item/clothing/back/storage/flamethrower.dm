@@ -1,8 +1,8 @@
 obj/item/clothing/back/flamethrower
-	name = "flamethrower canister"
+	name = "火焰喷射器燃料罐"
 	icon = 'icons/obj/item/clothing/back/flamethrower.dmi'
-	desc = "The final solution to cleaning up a biohazardous facility."
-	desc_extended = "A bulky back-mounted canister with a flamethrower attached. The attached flamethrower spews flames that ignite anything they hit and the ground they pass."
+	desc = "清理生物危害设施的终极方案。"
+	desc_extended = "配有火焰喷射器的笨重背负式燃料罐。喷射出的火焰会点燃命中的物体，以及沿途的地面。"
 
 	size = MAX_INVENTORY_X*3*SIZE_3
 

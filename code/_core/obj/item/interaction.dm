@@ -21,12 +21,12 @@
 					continue
 				result = TRUE
 			if(result)
-				activator.to_chat(span("notice","You shove everything you can into \the [src.name]."))
+				activator.to_chat(span("notice","你把能装的东西都塞进了[src.name]。"))
 			else
 				if(!found_object)
-					activator.to_chat(span("notice","There is nothing on \the [found_turf.name] to add to \the [src.name]."))
+					activator.to_chat(span("notice","[found_turf.name]上没有东西可装进[src.name]。"))
 				else
-					activator.to_chat(span("notice","You can't seem to fit anything on the [found_turf.name] to \the [src.name]."))
+					activator.to_chat(span("notice","[found_turf.name]上的东西似乎都装不进[src.name]。"))
 			return TRUE
 
 	. = ..()
@@ -77,7 +77,7 @@
 /obj/item/proc/can_interact_with_inventory(var/mob/living/advanced/activator)
 
 	if(inventory_user && inventory_user != activator)
-		activator.to_chat(span("warning","\The [inventory_user.name] is using \the [src.name]!"))
+		activator.to_chat(span("warning","[inventory_user.name]正在使用[src.name]！"))
 		return FALSE
 
 	return TRUE
@@ -94,7 +94,9 @@
 			var/atom/movable/M = k
 			if(!src.add_object_to_src_inventory(null,M,enable_messages=FALSE,bypass=FALSE,silent=TRUE))
 				qdel(M)
-		A.to_chat(span("notice","You [loot_open_verb] \the [src.name]."))
+		var/list/open_verb_display = list("unbuckle"="解开","unwrap"="拆开")
+		var/display_open_verb = open_verb_display[loot_open_verb]
+		A.to_chat(span("notice","你[display_open_verb ? display_open_verb : "打开"]了[src.name]。"))
 		loot_to_generate = null
 
 	if(inventory_user)
@@ -174,7 +176,7 @@
 			INTERACT_DELAY(10)
 			PROGRESS_BAR(activator,src,SECONDS_TO_DECISECONDS(3),src::dump_contents(),activator,T)
 			PROGRESS_BAR_CONDITIONS(activator,src,src::can_dump_contents(),activator,T)
-			activator.visible_message(span("notice","\The [activator.name] starts to empty the contents of \the [src.name]..."),span("notice","You start to empty the contents of \the [src.name] onto \the [object.name]..."))
+			activator.visible_message(span("notice","[activator.name]开始倒出[src.name]里的东西……"),span("notice","你开始将[src.name]里的东西倒在[object.name]上……"))
 		else
 			INTERACT_DELAY(1)
 			src.drop_item(T)
@@ -227,7 +229,7 @@
 			if(!dump_single_content(activator,I2,target_turf))
 				break
 
-	activator.visible_message(span("notice","\The [activator.name] dumps out the contents of \the [src.name] onto \the [target_turf.name]."),span("notice","You dump out the contents of \the [src.name] onto \the [target_turf.name]."))
+	activator.visible_message(span("notice","[activator.name]将[src.name]里的东西倒在了[target_turf.name]上。"),span("notice","你将[src.name]里的东西倒在了[target_turf.name]上。"))
 
 	return TRUE
 

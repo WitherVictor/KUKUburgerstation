@@ -1,5 +1,5 @@
 /mob/living/simple/silicon/drone
-	name = "bodyguard drone"
+	name = "护卫无人机"
 	icon_state = "drone0"
 
 	health = /health/mob/living/simple/drone/

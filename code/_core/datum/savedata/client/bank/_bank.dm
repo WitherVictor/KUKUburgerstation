@@ -20,7 +20,7 @@
 	var/client/owner = CLIENT(ckey)
 	var/full_path = "[get_folder()][get_file()]"
 	rustg_file_write(json_encode(loaded_data),full_path)
-	owner?.to_chat(span("notice","Your bank data has been saved."))
+	owner?.to_chat(span("notice","你的银行数据已保存。"))
 	return TRUE
 
 /savedata/client/bank/proc/load()

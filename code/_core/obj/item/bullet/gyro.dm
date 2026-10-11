@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/gyrojet/
-	name = "\improper 20mm gyrorocket"
-	desc = "Rocket Punch!"
-	desc_extended = "For pistols and rifles that require gyrojet rounds. Even well made rounds are known for their high misfire chance."
+	name = "\improper 20mm旋转火箭弹"
+	desc = "火箭飞拳！"
+	desc_extended = "供使用旋转火箭弹的手枪和步枪装填。即使制作精良，这种弹药也以哑火率高著称。"
 	icon = 'icons/obj/item/bullet/gyrojet.dmi'
 
 	amount_max = 4
@@ -22,7 +22,7 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/gyrojet/surplus
-	name = "\improper surplus 20mm gyrorocket"
+	name = "\improper 库存旧式20mm旋转火箭弹"
 	misfire_chance = 20
 	rarity = RARITY_BROKEN
 

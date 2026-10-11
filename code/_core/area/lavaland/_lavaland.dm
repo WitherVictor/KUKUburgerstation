@@ -1,5 +1,5 @@
 /area/lavaland
-	name = "Lavaland"
+	name = "熔岩地带"
 
 	trackable = TRUE
 

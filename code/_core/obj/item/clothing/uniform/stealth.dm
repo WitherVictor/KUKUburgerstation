@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/stealth
-	name = "combat uniform"
-	desc = "Tacticool!"
-	desc = "A skintight uniform for combat purposes."
+	name = "作战服"
+	desc = "战术酷炫！"
+	desc = "用于作战的紧身制服。"
 	icon = 'icons/obj/item/clothing/uniforms/stealth.dmi'
 
 	item_slot = SLOT_TORSO | SLOT_GROIN
@@ -30,8 +30,8 @@
 
 
 /obj/item/clothing/uniform/stealth/dyeable/virtual
-	name = "virtual combat uniform"
-	desc_extended = "A bulky nanomesh combat suit that increases the agility of the wearer significantly. Unfortunately it is a little on the large side, and cannot be worn with armor."
+	name = "虚拟作战服"
+	desc_extended = "一套厚实的纳米网作战服，能显著提高穿戴者的敏捷。可惜体积偏大，无法与护甲同时穿戴。"
 	icon = 'icons/obj/item/clothing/uniforms/virtual_suit.dmi'
 
 	defense_rating = list(

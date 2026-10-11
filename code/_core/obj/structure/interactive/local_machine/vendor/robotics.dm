@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/robotics
-	name = "robotics vendor"
+	name = "机器人售货机"
 
 /*
 /obj/structure/interactive/vending/robotics/mech_gun_fabricator

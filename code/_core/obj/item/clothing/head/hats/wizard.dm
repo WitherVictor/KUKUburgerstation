@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/wizard
-	name = "wizard hat"
+	name = "巫师帽"
 	icon = 'icons/obj/item/clothing/hats/wizard.dmi'
-	desc = "Roll for style."
-	desc_extended = "A typical hat worn often by manchildren and those in the wizard federation."
+	desc = "来掷个时尚检定。"
+	desc_extended = "巨婴和巫师联邦成员常戴的典型帽子。"
 
 	armor = /armor/cloth/arcane
 
@@ -25,8 +25,8 @@
 	color = "#FF0000"
 
 /obj/item/clothing/head/hat/wizard/real
-	name = "authentic wizard hat"
-	desc = "The real deal."
+	name = "正统巫师帽"
+	desc = "货真价实。"
 
 	armor = /armor/cloth/arcane/bonus
 

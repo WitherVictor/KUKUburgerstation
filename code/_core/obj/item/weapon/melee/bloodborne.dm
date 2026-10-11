@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/sword/csaw
-	name = "\improper cleaver saw"
-	desc = "A poorly made cleaving saw."
-	desc_extended = "A jagged saw that barely holds together. Certainly more dangerous to the user than their enemies."
+	name = "\improper 劈砍锯刀"
+	desc = "做工粗劣的劈砍锯刀。"
+	desc_extended = "摇摇欲散的锯齿刀，显然对使用者的危险比对敌人的更大。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/cleaver_saw.dmi'
 
@@ -15,9 +15,9 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/weapon/melee/sword/cblade
-	name = "\improper cleaver blade"
-	desc = "A crude blade. Nothing more."
-	desc_extended = "An old blade that struggles to remain attached to its wooden handle. Anyone with pride wouldn't be caught dead using this."
+	name = "\improper 劈砍刀"
+	desc = "一把粗制刀，仅此而已。"
+	desc_extended = "老旧刀刃勉强连在木柄上。有点自尊的人，死也不愿被看见拿着它。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/cleaver_blade.dmi'
 
@@ -31,9 +31,9 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/weapon/melee/sword/uncoiled
-	name = "\improper uncoiled sword"
-	desc = "A bland, sturdy sword."
-	desc_extended = "An average appearance for an average blade."
+	name = "\improper 展卷剑"
+	desc = "朴素而结实的剑。"
+	desc_extended = "平平无奇的外表，平平无奇的剑刃。"
 
 	icon = 'icons/obj/item/weapons/melee/swords/uncoiled.dmi'
 

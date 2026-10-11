@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/beaver
-	name = "beaver hat"
+	name = "河狸皮帽"
 	icon = 'icons/obj/item/clothing/hats/beaver.dmi'
-	desc = "Poor people wear these."
-	desc_extended = "It's a hat made out of an innocent beaver. It was a vain sacrifice on it's part, since it's ugly as shit."
+	desc = "穷人戴的帽子。"
+	desc_extended = "用一只无辜河狸制成的帽子。它算是白白牺牲了，因为这帽子丑得要命。"
 
 	armor = /armor/cloth
 

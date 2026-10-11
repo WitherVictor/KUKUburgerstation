@@ -1,10 +1,10 @@
 /area/lz_420
-	name = "LZ 420"
+	name = "420号登陆区"
 	trackable = TRUE
 	area_identifier = "Mission"
 
 /area/lz_420/exterior/
-	name = "LZ-420 Exterior"
+	name = "420号登陆区室外"
 	icon_state = "jungle"
 	weather = WEATHER_RAIN
 	ambient_temperature = T0C + 40
@@ -38,7 +38,7 @@
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_420/interior/cave
-	name = "\improper Central Caves"
+	name = "\improper 中央洞穴"
 	icon_state = "cave"
 	tracks = TRACKS_CAVE
 	random_sounds = list(
@@ -50,7 +50,7 @@
 	sound_environment = ENVIRONMENT_QUARRY
 
 /area/lz_420/interior/cave/north
-	name = "North Caves"
+	name = "北部洞穴"
 	icon_state = "blue"
 
 	sunlight_freq = 8
@@ -66,94 +66,94 @@
 	cheese_type = /reagent/nutrition/cheese/guava
 
 /area/lz_420/interior/cave/south
-	name = "South Caves"
+	name = "南部洞穴"
 	icon_state = "red"
 
 /area/lz_420/interior/cave/east
-	name = "East Caves"
+	name = "东部洞穴"
 	icon_state = "green"
 
 /area/lz_420/interior/cave/west
-	name = "West Caves"
+	name = "西部洞穴"
 	icon_state = "yellow"
 
 /area/lz_420/interior/nexus
-	name = "\improper Nexus"
+	name = "\improper 枢纽"
 	icon_state = "pink"
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_420/interior/nexus/entrance
-	name = "\improper Nexus East Entrance"
+	name = "\improper 枢纽东入口"
 	icon_state = "hanger"
 
 /area/lz_420/interior/nexus/central
-	name = "\improper Central Nexus Hallway"
+	name = "\improper 枢纽中央走廊"
 	icon_state = "hall_c"
 
 	sound_environment = ENVIRONMENT_CONCERT_HALL
 
 /area/lz_420/interior/nexus/west
-	name = "\improper West Nexus Hallway"
+	name = "\improper 枢纽西走廊"
 	icon_state = "hall_w"
 
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_420/interior/nexus/east
-	name = "\improper East Nexus Hallway"
+	name = "\improper 枢纽东走廊"
 	icon_state = "hall_e"
 
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_420/interior/nexus/south
-	name = "\improper South Nexus Hallway"
+	name = "\improper 枢纽南走廊"
 	icon_state = "hall_s"
 
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_420/interior/nexus/north
-	name = "\improper North Nexus Hallway"
+	name = "\improper 枢纽北走廊"
 	icon_state = "hall_n"
 
 	sound_environment = ENVIRONMENT_STONEROOM
 
 /area/lz_420/interior/nexus/maint
-	name = "\improper Nexus Maintenance"
+	name = "\improper 枢纽维护区"
 	icon_state = "maint"
 
 	sound_environment = ENVIRONMENT_BATHROOM
 
 /area/lz_420/interior/nexus/chapel
-	name = "\improper Nexus Chapel"
+	name = "\improper 枢纽教堂"
 	icon_state = "chapel"
 
 /area/lz_420/interior/nexus/armory
-	name = "\improper Nexus Armory"
+	name = "\improper 枢纽军械库"
 	icon_state = "armory"
 
 /area/lz_420/interior/nexus/cargo
-	name = "\improper Nexus Cargo"
+	name = "\improper 枢纽货运部"
 	icon_state = "cargo"
 
 /area/lz_420/interior/nexus/kitchen
-	name = "\improper Nexus Kitchen"
+	name = "\improper 枢纽厨房"
 	icon_state = "kitchen"
 
 /area/lz_420/interior/nexus/science
-	name = "\improper Nexus Science"
+	name = "\improper 枢纽科研部"
 	icon_state = "science"
 
 /area/lz_420/interior/nexus/garden
-	name = "\improper Nexus Garden"
+	name = "\improper 枢纽花园"
 	icon_state = "grass"
 
 /area/lz_420/interior/nexus/medical
-	name = "\improper Nexus Medical"
+	name = "\improper 枢纽医疗部"
 	icon_state = "med"
 
 /area/lz_420/interior/nexus/engineering
-	name = "\improper Nexus Engineering"
+	name = "\improper 枢纽工程部"
 	icon_state = "eng"
 
 /area/lz_420/interior/nexus/wip
-	name = "\improper Nexus Abandoned Area"
+	name = "\improper 枢纽废弃区域"
 	icon_state = "wip"

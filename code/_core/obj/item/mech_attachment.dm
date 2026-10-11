@@ -1,7 +1,7 @@
 /obj/item/mech_attachment
-	name = "vehicle attachment device"
-	desc = "What makes it stick."
-	desc_extended = "A special attachment brace that connects a compatible device or weapon to a mech. Just attach an object to it, then attach this device to the mech."
+	name = "机甲设备安装支架"
+	desc = "靠它固定。"
+	desc_extended = "用于将兼容设备或武器安装到机甲上的专用支架。先将物品装到支架上，再把支架装到机甲上。"
 	var/obj/item/attached_item
 
 	value = 300
@@ -51,19 +51,19 @@
 
 /obj/item/mech_attachment/proc/attach(var/mob/caller,var/obj/item/I)
 	if(attached_item)
-		caller?.to_chat(span("warning","There is already a [attached_item.name] attached to \the [src.name]!"))
+		caller?.to_chat(span("warning","[src.name]上已经装着[attached_item.name]了！"))
 		return FALSE
 	I.drop_item(src)
 	attached_item = I
-	caller?.to_chat(span("notice","You attach \the [I.name] to \the [src.name]."))
+	caller?.to_chat(span("notice","你将[I.name]装到了[src.name]上。"))
 	update_sprite()
 	return TRUE
 
 /obj/item/mech_attachment/proc/unattach(var/mob/caller)
 	if(!attached_item)
-		caller?.to_chat(span("warning","There is nothing to detach from \the [src.name]!"))
+		caller?.to_chat(span("warning","[src.name]上没有可拆下的物品！"))
 		return FALSE
-	caller?.to_chat(span("notice","You detach \the [attached_item.name] to \the [src.name]."))
+	caller?.to_chat(span("notice","你从[src.name]上拆下了[attached_item.name]。"))
 	attached_item.force_move(get_turf(src))
 	attached_item = null
 	update_sprite()

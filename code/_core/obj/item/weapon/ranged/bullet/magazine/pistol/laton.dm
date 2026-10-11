@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/laton
-	name = "9mm Laton pistol"
-	desc = "9mm is all you need."
-	desc_extended = "NT's standard pistol, chambered in a 9mm cartridge. It's very easy to use and recommended for beginners."
+	name = "9mm拉顿手枪"
+	desc = "9mm就够了。"
+	desc_extended = "纳米传讯的制式9mm手枪，非常容易上手，适合新手使用。"
 	value = 200
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_laton.dmi'
 	shoot_delay = 1.8
@@ -72,9 +72,9 @@
 	return max(0,0.005 - (0.02 * L.get_skill_power(SKILL_RANGED)) )
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/laton/prototype
-	name = "10mm Laton-H Prototype"
-	desc = "An extra milimetre to seal the deal."
-	desc_extended = "A prototype of NT's standard pistol, modified to fire 10mm all while retaining a matching appearance and ease of use. Claims to be superior to the Pneumbra model."
+	name = "10mm拉顿-H原型手枪"
+	desc = "多一毫米，一锤定音。"
+	desc_extended = "纳米传讯制式手枪的原型，改为发射10mm弹药，同时保留相同的外观和易用性。号称优于半影型号。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_laton_mining.dmi' //Actually 10mm
 
 	bullet_length_min = 25
@@ -94,8 +94,8 @@
 	shoot_sounds = list('sound/weapons/ranged/pistol/sol/shoot.ogg')
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/laton/mod
-	name = "9mm Laton MOD"
-	desc_extended = "NT's standard pistol, chambered in a 9mm cartridge. This one has been fitted with improved parts and a sleek, tactical paintjob, but remains just as easy to use."
+	name = "9mm拉顿改装型"
+	desc_extended = "纳米传讯的制式9mm手枪。这把换上了改良零件和利落的战术涂装，依旧非常容易上手。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_laton_dark.dmi'
 	shoot_delay = 1.25
 	weight = 4
@@ -106,9 +106,9 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/laton/kitchen
-	name = "9mm Laton Kitchen Gun"
-	desc = "And it sparkles like new!"
-	desc_extended = "Say goodbye to daily stains and dirty surfaces with new Laton Kitchen Gun! A modified 9mm Laton utilizing special jaintorial silver technology to clean stains and spills as you shoot, as long as you use standard 9mm ammo. Shoots 3 round bursts."
+	name = "9mm拉顿厨房枪"
+	desc = "闪亮如新！"
+	desc_extended = "全新拉顿厨房枪，让日常污渍和脏污表面从此消失！这把改装9mm拉顿采用保洁专用白银技术，使用标准9mm弹药即可边射击边清除污渍和泼洒物。采用三发点射。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_laton_kitchen.dmi'
 	shoot_delay = 5
 	burst_delay = 25
@@ -118,11 +118,11 @@
 	value = 800
 
 	var/static/list/kitchen_gun_slogans = list(
-		"And it sparkles like new!",
-		"GOODBYE DIRT!",
-		"I LOVE YOU, KITCHEN GUN!",
-		"HAHAHAHAHA!",
-		"There! All clean again!"
+		"闪亮如新！",
+		"污垢再见！",
+		"我爱你，厨房枪！",
+		"哈哈哈哈哈！",
+		"瞧！又干干净净了！"
 	)
 
 
@@ -137,7 +137,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/laton/kitchen/play_shoot_sounds(var/mob/activator,var/list/shoot_sounds_to_use = list(),var/shoot_alert_to_use = ALERT_LEVEL_NONE)
 	. = ..()
 	if(.)
-		activator.do_say("BANG!")
+		activator.do_say("砰！")
 		CALLBACK("kitchen_gun_slogan_\ref[activator]",SECONDS_TO_DECISECONDS(2),src,src::say_slogan(),activator)
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/laton/kitchen/proc/say_slogan(var/mob/activator)

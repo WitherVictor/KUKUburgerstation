@@ -1,6 +1,6 @@
 /obj/effect/temp/gabber_death_trap
 
-	name = "death trap"
+	name = "死亡陷阱"
 	icon = 'icons/obj/effects/gabber_death_trap.dmi'
 	icon_state = "active"
 	duration = SECONDS_TO_DECISECONDS(30)

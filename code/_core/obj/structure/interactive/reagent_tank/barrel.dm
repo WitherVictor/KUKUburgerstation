@@ -1,13 +1,13 @@
 /obj/structure/interactive/reagent_tank/barrel
-	name = "barrel"
-	desc = "Rolling, rolling, rolling."
+	name = "桶"
+	desc = "滚啊，滚啊，滚啊。"
 	icon = 'icons/obj/structure/barrel.dmi'
 
 	reagents = /reagent_container/big_tank
 
 
 /obj/structure/interactive/reagent_tank/barrel/oil
-	name = "oil drum"
+	name = "油桶"
 	icon_state = "fuel"
 
 /obj/structure/interactive/reagent_tank/barrel/oil/Generate()
@@ -15,7 +15,7 @@
 	return ..()
 
 /obj/structure/interactive/reagent_tank/barrel/water
-	name = "water barrel"
+	name = "水桶"
 	icon_state = "water"
 
 /obj/structure/interactive/reagent_tank/barrel/water/Generate()

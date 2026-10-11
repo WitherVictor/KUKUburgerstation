@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/chaplain/wardrobe
-	name = "chaplain wardrobe vendor"
+	name = "牧师服装售货机"
 	icon_state = "chapdrobe"
 
 	stored_types = list(
@@ -29,7 +29,7 @@
 	)
 
 /obj/structure/interactive/vending/chaplain/equipment
-	name = "chaplain equipment vendor"
+	name = "牧师装备售货机"
 	icon_state = "chapment"
 
 	stored_types = list(

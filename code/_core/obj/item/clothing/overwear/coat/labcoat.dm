@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/labcoat
-	name = "labcoat"
-	desc = "SCIENCE RULES!"
-	desc_extended = "Extra pockets not included."
+	name = "实验服"
+	desc = "科学万岁！"
+	desc_extended = "不附送额外口袋。"
 	icon = 'icons/obj/item/clothing/suit/labcoat.dmi'
 
 	protected_limbs = list(BODY_TORSO,BODY_GROIN,BODY_ARM_LEFT,BODY_ARM_RIGHT)

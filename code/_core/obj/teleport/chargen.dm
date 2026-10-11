@@ -16,17 +16,19 @@
 		if(A.tutorial)
 			spawn
 				if(get_dir(T,src) & dir)
-					var/response = input(A,"A strange feeling overwhelms you... \
-						Is it insecurity? Is it self-loathing? \
-						Perhaps you should consider if what you saw in the mirror is what you want to look like. \
-						You seem to have a feeling you won't be able to change it for a very long time.",
-						"Is this what you want to look like?"
-					) as null|anything in list("Fuck, go back!","I'm perfect.","Cancel")
+					var/list/appearance_choices = list("妈的，回去！" = "Fuck, go back!", "我很完美。" = "I'm perfect.", "取消" = "Cancel")
+					var/response = input(A,"一种奇怪的感觉涌上心头……\
+						是不安？还是自我厌恶？\
+						也许你该想想，镜子里的样子是不是你真正想要的。\
+						你隐约觉得，很长一段时间内都没法再改变它。",
+						"这就是你想要的样子吗？"
+					) as null|anything in appearance_choices
+					response = appearance_choices[response]
 
 					if(response != "I'm perfect.")
-						A.to_chat(span("thought","Maybe I should go back and change a few things..."))
+						A.to_chat(span("thought","也许我该回去改几个地方……"))
 					else
-						A.to_chat(span("thought","Today I am beautiful and nothing will change that."))
+						A.to_chat(span("thought","今天的我很美，这一点不会改变。"))
 						A.tutorial = FALSE
 			return FALSE
 

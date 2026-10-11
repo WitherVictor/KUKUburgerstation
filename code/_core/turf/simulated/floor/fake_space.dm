@@ -1,5 +1,5 @@
 /turf/simulated/floor/fake_space
-	name = "spess"
+	name = "太空"
 	icon = 'icons/turf/space/space.dmi'
 	icon_state = "1"
 	opacity = 0

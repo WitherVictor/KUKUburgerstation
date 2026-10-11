@@ -1,5 +1,5 @@
 /obj/item/color/crayon/
-	name = "crayon"
+	name = "蜡笔"
 	icon = 'icons/obj/items/color/crayons.dmi'
 	icon_state = "crayon"
 	uses = 20
@@ -13,28 +13,28 @@
 	color = selected_color
 
 /obj/item/color/crayon/blue
-	name = "blue crayon"
+	name = "蓝色蜡笔"
 	selected_color = "#0000FF"
 
 /obj/item/color/crayon/red
-	name = "red crayon"
+	name = "红色蜡笔"
 	selected_color = "#FF0000"
 
 /obj/item/color/crayon/orange
-	name = "orange crayon"
+	name = "橙色蜡笔"
 	selected_color = "#FF8800"
 
 /obj/item/color/crayon/brown
-	name = "brown crayon"
+	name = "棕色蜡笔"
 	selected_color = "#7F4A00"
 
 /obj/item/color/crayon/dev
-	name = "dev crayon"
+	name = "开发者蜡笔"
 	uses = 99999
 
 /obj/item/color/crayon/green
-	name = "green crayon"
+	name = "绿色蜡笔"
 	selected_color = "#00FF00"
 
 /obj/item/color/crayon/dev/get_selected_color(var/mob/caller)
-	return input(caller,"What would you like the color to be?","Choose a color","#FFFFFF") as color|null
+	return input(caller,"你想使用什么颜色？","选择颜色","#FFFFFF") as color|null

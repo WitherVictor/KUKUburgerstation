@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/tungsten
-	name = "tungsten bolt"
-	desc = "I hope using this isn't a war crime..."
-	desc_extended = "A small tungsten rod designed to be shot at heavily armored targets."
+	name = "钨杆弹"
+	desc = "希望用这东西不算战争罪……"
+	desc_extended = "用于射击重甲目标的小型钨杆。"
 	rarity = RARITY_COMMON
 	icon = 'icons/obj/item/bullet/tungsten.dmi'
 	amount_max = 5
@@ -21,7 +21,7 @@
 	value = 1 //Dummy value.
 
 /obj/item/bullet_cartridge/tungsten/surplus
-	name = "\improper surplus tungsten bolt"
+	name = "\improper 库存旧式钨杆弹"
 	damage_type_bullet = /damagetype/ranged/bullet/tungsten/surplus
 	misfire_chance = 1
 	rarity = RARITY_BROKEN

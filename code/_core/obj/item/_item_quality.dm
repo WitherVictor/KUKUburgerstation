@@ -32,7 +32,7 @@
 	quality = clamp(FLOOR(quality_to_set, 0.01), 0, quality_max)
 
 	if(original_quality > 0 && quality <= 0)
-		visible_message(span("danger","\The [src.name] breaks!"))
+		visible_message(span("danger","[src.name]坏掉了！"))
 
 	var/desired_damage_num = get_damage_icon_number()
 	if(original_damage_num != desired_damage_num)

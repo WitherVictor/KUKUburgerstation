@@ -1,9 +1,9 @@
 //Put this in one file cause there is too many
 
 obj/structure/interactive/misc/computer1
-	name = "Computer"
-	desc = "Just a old PC."
-	desc_extended = "A small personal computer. Still working, i think."
+	name = "电脑"
+	desc = "一台旧电脑。"
+	desc_extended = "一台小型个人电脑。应该还能用。"
 	icon_state = "pc1"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -16,9 +16,9 @@ obj/structure/interactive/misc/computer1
 	pixel_y = 12
 
 obj/structure/interactive/misc/computer2
-	name = "Computer"
-	desc = "Just a old PC."
-	desc_extended = "A small personal computer. Still working, i think."
+	name = "电脑"
+	desc = "一台旧电脑。"
+	desc_extended = "一台小型个人电脑。应该还能用。"
 	icon_state = "pc2"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -31,9 +31,9 @@ obj/structure/interactive/misc/computer2
 	pixel_y = 12
 
 obj/structure/interactive/misc/computer3
-	name = "Computer"
-	desc = "Just a old PC."
-	desc_extended = "A small personal computer. It missed energy source."
+	name = "电脑"
+	desc = "一台旧电脑。"
+	desc_extended = "一台小型个人电脑。缺少电源。"
 	icon_state = "pc3"
 	icon = 'icons/obj/structure/misc_new.dmi'
 
@@ -46,9 +46,9 @@ obj/structure/interactive/misc/computer3
 	pixel_y = 12
 
 obj/structure/interactive/misc/computer4
-	name = "Computer"
-	desc = "Just a old PC."
-	desc_extended = "A small personal computer. It totally broken."
+	name = "电脑"
+	desc = "一台旧电脑。"
+	desc_extended = "一台小型个人电脑。已经彻底坏了。"
 	icon_state = "pc4"
 	icon = 'icons/obj/structure/misc_new.dmi'
 

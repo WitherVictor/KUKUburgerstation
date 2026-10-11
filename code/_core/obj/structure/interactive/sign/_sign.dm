@@ -1,6 +1,6 @@
 /obj/structure/sign/
-	name = "sign"
-	desc = "This sign can't stop me because i can't read!"
+	name = "告示牌"
+	desc = "这牌子拦不住我，因为我不识字！"
 	mouse_over_pointer = MOUSE_ACTIVE_POINTER
 	icon = 'icons/obj/sign/signs.dmi'
 	icon_state = ""
@@ -16,39 +16,39 @@
 	return ..()
 
 /obj/structure/sign/secure
-	name = "secure area"
+	name = "管制区域"
 	icon_state = "secure"
-	desc_extended = "A sign designating."
+	desc_extended = "一块标示管制区域的告示牌。"
 
 /obj/structure/sign/space
-	name = "space warning"
+	name = "太空警告"
 	icon_state = "space"
-	desc_extended = "A sign designating the area ahead as space."
+	desc_extended = "一块警告前方是太空的告示牌。"
 
 /obj/structure/sign/closed
-	name = "shop closed"
+	name = "商店关闭"
 	icon_state = "closed"
-	desc_extended = "A sign indicating that the shop is currently closed. Maybe this will change in the future."
+	desc_extended = "一块说明商店目前关闭的告示牌。也许将来会重新营业。"
 
 /obj/structure/sign/fire
-	name = "fire warning"
+	name = "火灾警告"
 	icon_state = "fire"
-	desc_extended = "A sign designating the area ahead as a fire hazard."
+	desc_extended = "一块警告前方有火灾危险的告示牌。"
 
 /obj/structure/sign/no_smoking
-	name = "no smoking"
+	name = "禁止吸烟"
 	icon_state = "no_smoking"
-	desc_extended = "A sign designating a smoke-free zone."
+	desc_extended = "一块标示禁烟区的告示牌。"
 
 /obj/structure/sign/shock
-	name = "electrical hazard"
+	name = "触电危险"
 	icon_state = "shock"
-	desc_extended = "A sign designating an electrical hazard ahead."
+	desc_extended = "一块警告前方有触电危险的告示牌。"
 
 /obj/structure/sign/pods
-	name = "escape pods"
+	name = "逃生舱"
 	icon_state = "pods"
-	desc_extended = "A sign indicating that there are escape pods in this direction."
+	desc_extended = "一块指示逃生舱方向的告示牌。"
 
 
 
@@ -57,7 +57,7 @@
 #define SIGN_Y_OFFSET 8
 
 /obj/structure/sign/department
-	name = "department sign"
+	name = "部门指示牌"
 
 //Part 1
 /obj/structure/sign/department/a/med
@@ -102,12 +102,12 @@
 
 /obj/structure/sign/restroom/male
 	icon_state = "male"
-	desc_extended = "A sign designating the area as a male only bathroom."
+	desc_extended = "一块标示男卫生间的告示牌。"
 
 /obj/structure/sign/restroom/female
 	icon_state = "female"
-	desc_extended = "A sign designating the area as a female only bathroom."
+	desc_extended = "一块标示女卫生间的告示牌。"
 
 /obj/structure/sign/restroom/unisex
 	icon_state = "unisex"
-	desc_extended = "A sign designating the area as an unisex bathroom."
+	desc_extended = "一块标示男女通用卫生间的告示牌。"

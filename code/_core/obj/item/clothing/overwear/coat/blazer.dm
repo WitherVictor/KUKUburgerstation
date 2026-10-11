@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/blazer_blue
-	name = "blue blazer"
+	name = "蓝色休闲西装"
 	icon = 'icons/obj/item/clothing/suit/blazer_blue.dmi'
 
-	desc = "I NEED just one pocket actually."
-	desc_extended = "A snazzy blue blazer with a pocket inside. Of course, it won't do much against the horrors of the void."
+	desc = "其实我只需要一个口袋。"
+	desc_extended = "一件漂亮的蓝色休闲西装，内侧有个口袋。当然，面对虚空中的恐怖，它帮不上什么忙。"
 
 	is_container = TRUE
 	dynamic_inventory_count = 1

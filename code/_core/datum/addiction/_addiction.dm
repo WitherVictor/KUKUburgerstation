@@ -18,7 +18,7 @@
 	return TRUE
 
 /addiction/proc/on_add_initial(var/mob/living/advanced/A,var/obj/item/organ/internal/brain/B,var/addiction_value=0,var/withdrawal_value=0)
-	A.to_chat(span("danger","You've become addicted to [reagent_name]."))
+	A.to_chat(span("danger","你已对[reagent_name]上瘾。"))
 	return TRUE
 
 /addiction/proc/on_life(var/mob/living/advanced/A,var/obj/item/organ/internal/brain/B,var/addiction_value=0,var/withdrawal_value=0)
@@ -35,5 +35,5 @@
 	return TRUE
 
 /addiction/proc/on_remove(var/mob/living/advanced/A,var/obj/item/organ/internal/brain/B)
-	A.to_chat(span("notice","You are no longer addicted to [reagent_name]."))
+	A.to_chat(span("notice","你已摆脱对[reagent_name]的依赖。"))
 	return TRUE

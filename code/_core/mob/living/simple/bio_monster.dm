@@ -1,7 +1,7 @@
 /mob/living/simple/bio_monster
-	name = "bio monster"
-	desc = "Experiments gone wrong."
-	desc_extended = "A clusterfuck of flesh created from some man-made experiment gone wrong. Or perhaps right."
+	name = "生化怪物"
+	desc = "实验失败的产物。"
+	desc_extended = "某场失败的人造实验搞出的一团血肉烂摊子。也许这才算成功。"
 	icon = 'icons/mob/living/simple/bio_monster.dmi'
 	icon_state = "living"
 

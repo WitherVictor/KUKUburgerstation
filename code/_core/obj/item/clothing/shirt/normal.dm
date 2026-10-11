@@ -1,7 +1,7 @@
 /obj/item/clothing/shirt/normal
-	name = "shirt"
-	desc = "A T-Shirt."
-	desc_extended = "Probably the most generic article of clothing in the universe."
+	name = "T恤"
+	desc = "一件T恤。"
+	desc_extended = "大概是宇宙中最普通的衣服了。"
 	icon = 'icons/obj/item/clothing/shirts/normal.dmi'
 
 	item_slot = SLOT_TORSO
@@ -23,9 +23,9 @@
 	)
 
 /obj/item/clothing/shirt/normal/striped
-	name = "striped shirt"
-	desc = "Stripey!"
-	desc_extended = "The shirt of choice for Ska Dancers, Mimes, and protags of Quirky RPGs."
+	name = "条纹上衣"
+	desc = "满是条纹！"
+	desc_extended = "斯卡舞者、默剧演员和古怪角色扮演游戏主角的首选上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_WHITE,
 		"stripes" = COLOR_BLACK
@@ -38,9 +38,9 @@
 	)
 
 /obj/item/clothing/shirt/normal/uniform
-	name = "uniformed shirt"
-	desc = "It's hip to be square"
-	desc_extended = "The shirt of choice for people who hate Casual Fridays."
+	name = "制服上衣"
+	desc = "循规蹈矩也很酷。"
+	desc_extended = "讨厌周五便装日的人最喜欢的上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_WHITE,
 		"shoulders" = COLOR_BLACK
@@ -60,9 +60,9 @@
 	)
 
 /obj/item/clothing/shirt/normal/uniform/science
-	name = "science uniformed shirt"
-	desc = "Nerd."
-	desc_extended = "The shirt of choice for people who hate Casual Fridays."
+	name = "科研制服上衣"
+	desc = "书呆子。"
+	desc_extended = "讨厌周五便装日的人最喜欢的上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_WHITE,
 		"shoulders" = COLOR_SCIENCE
@@ -132,48 +132,48 @@
 	)
 
 /obj/item/clothing/shirt/normal/ancient_security
-	name = "ancient security shirt"
-	desc = "Redshirts!"
-	desc_extended = "An old outdated variant of the security shirt."
+	name = "古早安保上衣"
+	desc = "红衫炮灰！"
+	desc_extended = "一款早已过时的安保上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_CRIMSON,
 	)
 
 /obj/item/clothing/shirt/normal/medical
-	name = "medical shirt"
-	desc = "Smells clean."
-	desc_extended = "A pair of fastidiously sterilized scrubs. Looks like extra care was taken to scrub all the blood out."
+	name = "医疗上衣"
+	desc = "闻起来很干净。"
+	desc_extended = "经过细致消毒的医护服，看起来有人格外费心地洗净了所有血迹。"
 	polymorphs = list(
 		"shirt" = COLOR_MEDICAL_LIGHT
 	)
 
 
 /obj/item/clothing/shirt/normal/grey
-	name = "assistant shirt"
-	desc = "The shitter's choice"
-	desc_extended = "The signature shirt of the gray tide."
+	name = "助理上衣"
+	desc = "捣蛋鬼的首选。"
+	desc_extended = "灰潮标志性的上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_GREY
 	)
 
 /obj/item/clothing/shirt/normal/military_green
-	name = "military shirt"
-	desc = "No stains here."
-	desc_extended = "The signature shirt of the revolutionary."
+	name = "军用上衣"
+	desc = "这里没有污渍。"
+	desc_extended = "革命军标志性的上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_GREY
 	)
 
 /obj/item/clothing/shirt/normal/janitor
-	name = "janitor shirt"
-	desc = "Offensively janitor."
-	desc_extended = "A shirt that is purple as heck."
+	name = "清洁工上衣"
+	desc = "浓浓的清洁工气息扑面而来。"
+	desc_extended = "一件紫得不能再紫的上衣。"
 	polymorphs = list(
 		"shirt" = COLOR_JANITOR,
 	)
 
 /obj/item/clothing/shirt/normal/reinforced
-	name = "reinforced shirt"
+	name = "加固上衣"
 	icon = 'icons/obj/item/clothing/shirts/reinforced.dmi'
 
 	armor = /armor/cloth/hard
@@ -181,14 +181,14 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/shirt/normal/reinforced/ntops
-	name = "NT ops reinforced shirt"
+	name = "NT行动人员加固上衣"
 	polymorphs = list(
 		"shirt" = COLOR_WHITE,
 		"shoulders" = COLOR_BLACK
 	)
 
 /obj/item/clothing/shirt/normal/reinforced/merc
-	name = "mercenary reinforced shirt"
+	name = "佣兵加固上衣"
 	polymorphs = list(
 		"shirt_tee" = COLOR_OLIVE_DRAB
 	)
@@ -210,7 +210,7 @@
 
 
 /obj/item/clothing/shirt/normal/reinforced/abductor
-	name = "abductor reinforced shirt"
+	name = "绑架者加固上衣"
 	polymorphs = list(
 		"shirt_tee" = "#62869E"
 	)

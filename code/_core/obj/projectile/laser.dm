@@ -1,5 +1,5 @@
 /obj/projectile/bullet/laser/
-	name = "laser"
+	name = "激光"
 	icon = 'icons/obj/projectiles/laser.dmi'
 	icon_state = "normal"
 
@@ -38,7 +38,7 @@
 
 
 /obj/projectile/bullet/laser/emitter
-	name = "emitter laser"
+	name = "发射器激光"
 
 
 /obj/projectile/bullet/laser/kinetic
@@ -80,7 +80,7 @@
 
 //it's not laser but it burns
 /obj/projectile/bullet/flamer
-	name = "flames"
+	name = "火焰"
 	icon = 'icons/obj/projectiles/spray.dmi'
 	icon_state = "flamer"
 

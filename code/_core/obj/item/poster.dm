@@ -1,5 +1,5 @@
 /obj/item/poster/
-	name = "poster"
+	name = "海报"
 	var/collectable_poster/stored_poster
 
 	value = 2000
@@ -27,7 +27,7 @@
 /obj/item/poster/update_sprite()
 	. = ..()
 	var/collectable_poster/P = SSposter.all_posters[stored_poster]
-	name = "Collectable Poster: [P.name]"
+	name = "收藏海报：[P.name]"
 	desc = P.desc
 	desc_extended = P.desc_extended
 

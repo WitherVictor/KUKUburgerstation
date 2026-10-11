@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/moar
 	name = "\improper 5.56mm MOAR"
-	desc = "Space age technology calls for space age guns. This should easily rip someone a new hole."
-	desc_extended = "A 5.56mm chambered mother-of-all-rifles (MOAR) developed by the Solarian research team for space battles."
+	desc = "太空时代的科技，就该配太空时代的枪。给人再开个洞，想必轻而易举。"
+	desc_extended = "太阳系科研团队为太空战斗研发的5.56mm口径‘步枪之王’（MOAR）。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/308.dmi'
 	icon_state = "inventory"
 	value = 12000

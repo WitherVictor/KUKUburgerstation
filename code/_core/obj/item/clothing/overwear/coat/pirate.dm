@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/pirate
-	name = "pirate's coat"
+	name = "海盗外套"
 	icon = 'icons/obj/item/clothing/suit/pirate.dmi'
 
-	desc = "Arrrrrrrrrrrrrr!"
-	desc_extended = "A thick leather pirate coat often worn by pirate captains."
+	desc = "啊呀呀呀呀！"
+	desc_extended = "海盗船长常穿的厚实皮外套。"
 
 	is_container = TRUE
 	dynamic_inventory_count = 2

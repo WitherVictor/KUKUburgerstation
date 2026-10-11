@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/staff/lavaland
-	name = "staff of lava"
-	desc = "You can also use it to reheat soup in a pinch."
-	desc_extended = "A special staff that shoots special lava projectiles that temporarily create pits of lava. Allies and the caster are immune to it."
+	name = "熔岩法杖"
+	desc = "急用时，也可以拿它热汤。"
+	desc_extended = "发射特殊熔岩弹体的法杖，可临时制造熔岩坑。施法者与友军不会受到它的伤害。"
 
 	icon = 'icons/obj/item/weapons/ranged/magic/lavaland.dmi'
 

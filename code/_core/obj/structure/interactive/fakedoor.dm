@@ -1,7 +1,7 @@
 /obj/structure/scenery/fake_door
-	name = "airlock"
-	desc = "AI DOOR"
-	desc_extended = "It opens and closes. Usually."
+	name = "气闸门"
+	desc = "AI，开门。"
+	desc_extended = "能开也能关。通常如此。"
 	icon = 'icons/obj/structure/airlock/fake.dmi'
 
 	collision_flags = FLAG_COLLISION_WALL
@@ -21,7 +21,7 @@
 	opacity = 0
 
 /obj/structure/scenery/fake_door/blast_door
-	name = "blast door"
+	name = "防爆门"
 	icon_state = "blast_closed"
 
 /obj/structure/scenery/fake_door/fire_door
@@ -66,7 +66,7 @@
 	icon_state = "external_opened"
 
 /obj/structure/scenery/fake_door/nocolide/blast_door
-	name = "blast door"
+	name = "防爆门"
 	icon_state = "blast_opened"
 
 /obj/structure/scenery/fake_door/nocolide/maint_door

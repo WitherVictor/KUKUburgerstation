@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/mace/
-	name = "mace"
-	desc = "A light mace"
-	desc_extended = "A mace, light enough to swing quickly, but heavy enough to do enough damage to platemail."
+	name = "钉头锤"
+	desc = "轻型钉头锤。"
+	desc_extended = "轻巧到可以快速挥动，又足够沉重，能够对板甲造成可观伤害。"
 
 	icon = 'icons/obj/item/weapons/melee/clubs/mace.dmi'
 

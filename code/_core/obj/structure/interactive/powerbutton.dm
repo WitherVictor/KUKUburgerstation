@@ -1,7 +1,7 @@
 /obj/structure/interactive/powerbutton
-	name = "big red power button"
-	desc = "Wonder what it does? Oh it says right here."
-	desc_extended = "A big red button that toggles power for the FOB. Controls lights, and most importantly, the FOB's gateway."
+	name = "红色大电源按钮"
+	desc = "想知道它有什么用？哦，这里写着呢。"
+	desc_extended = "开关前沿作战基地（FOB）供电的红色大按钮。控制照明，更重要的是，还控制基地的传送门。"
 
 	icon = 'icons/obj/item/button.dmi'
 	icon_state = "button"
@@ -42,7 +42,7 @@
 	var/mob/living/advanced/A  = caller
 
 	if(active && A.loyalty_tag == "NanoTrasen")
-		A.to_chat(span("notice","The power for the FOB has already been enabled!"))
+		A.to_chat(span("notice","前沿作战基地已经通电了！"))
 		return TRUE
 
 	flick("button_anim",src)

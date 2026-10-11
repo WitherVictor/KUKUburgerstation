@@ -1,9 +1,9 @@
 /obj/item/clothing/neck/mantle
-	name = "torn mantle"
+	name = "破旧披肩"
 	icon = 'icons/obj/item/clothing/suit/mantle.dmi'
 
-	desc = "Lizards like wearing this for some reason."
-	desc_extended = "A very poorly maintained mantle made from various animal hides and hairs."
+	desc = "不知为何，蜥蜴人喜欢穿这个。"
+	desc_extended = "用各种动物皮毛制成的披肩，保养得很差。"
 
 	worn_layer = LAYER_MOB_CLOTHING_NECK_OVER
 
@@ -32,12 +32,12 @@
 	color = "#603A20"
 
 /obj/item/clothing/neck/mantle/daddy
-	name = "dad's bib"
+	name = "老爹的围嘴"
 
 	icon = 'icons/obj/item/clothing/suit/knight_daddy_bib.dmi'
 
-	desc = "For eating ass."
-	desc_extended = "A near pristine bib."
+	desc = "舔屁股专用。"
+	desc_extended = "一条几乎崭新的围嘴。"
 
 	value = 50
 

@@ -1,6 +1,6 @@
 /mob/living/simple/legionare_head
-	name = "legion head"
-	desc = "So no head?"
+	name = "军团之首"
+	desc = "所以，没头了？"
 
 	ai = /ai/legion_head
 	damage_type = /damagetype/npc/legion_assault
@@ -35,7 +35,7 @@
 	var/can_convert = TRUE
 
 /mob/living/simple/legionare_head/snow
-	name = "snowlegion head"
+	name = "雪地军团之首"
 	ai = /ai/snow_legion_head
 	damage_type = /damagetype/npc/snowlegion_asault
 	icon = 'icons/mob/living/simple/snowlegion.dmi'

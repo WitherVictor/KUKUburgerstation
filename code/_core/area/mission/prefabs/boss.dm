@@ -3,7 +3,7 @@
 	flags_area = FLAG_AREA_NO_HORDE | FLAG_AREA_IMPORTANT
 
 /area/mission/prefab/boss/colossus
-	name = "snow containment biome"
+	name = "雪地生态收容区"
 	requires_power = FALSE //TODO: Add power to this prefab.
 	interior = TRUE
 	default_state_power_lights = ON|AUTO
@@ -11,21 +11,21 @@
 	default_state_power_doors = ON|AUTO
 
 /area/mission/prefab/boss/leaper
-	name = "leaper's hideout"
+	name = "跃行者藏身处"
 	interior = TRUE
 
 
 /area/mission/prefab/boss/herald
-	name = "herald's arena"
+	name = "先驱竞技场"
 	interior = TRUE
 
 /area/mission/prefab/boss/gabber
-	name = "Zechariah's Lair"
+	name = "撒迦利亚巢穴"
 	interior = TRUE
 
 
 /area/mission/prefab/boss/slime_king
-	name = "Slime King's throne"
+	name = "史莱姆王座"
 	interior = FALSE
 
 	sunlight_freq = 16
@@ -33,7 +33,7 @@
 
 
 /area/mission/prefab/boss/canman
-	name = "\improper Syndicate Experimentation Building"
+	name = "\improper 辛迪加实验大楼"
 	interior = TRUE
 	requires_power = TRUE //TODO: Add power to this prefab.
 	default_state_power_lights = ON|AUTO

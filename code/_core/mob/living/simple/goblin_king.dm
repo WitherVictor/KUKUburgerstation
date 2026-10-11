@@ -1,5 +1,5 @@
 /mob/living/simple/goblin_king
-	name = "goblin king"
+	name = "地精王"
 	boss_icon_state = "goblin_king"
 	icon = 'icons/mob/living/simple/goblin_king.dmi'
 	icon_state = "living"
@@ -70,7 +70,7 @@
 /mob/living/simple/goblin_king/proc/summon_goblins(var/angered = FALSE)
 	var/spawn_amount = (((angered ? 2 : 1)*length(players_fighting_boss))+2)
 	spawn_amount = min(spawn_amount, 10)
-	do_say("Come to us our brethren, we are being slain!")
+	do_say("同胞们，快来救我们，我们要被杀了！")
 	var/turf/T = get_turf(src)
 	for(var/i=1,i<=spawn_amount,i++)
 		var/choose_goblin = pick(/mob/living/advanced/npc/goblin, /mob/living/advanced/npc/goblin/warrior, /mob/living/advanced/npc/goblin/mage)
@@ -83,7 +83,7 @@
 
 /mob/living/simple/goblin_king/proc/summon_totems(var/angered = FALSE)
 	var/spawn_amount = angered ? 3 : 1
-	do_say("We refuse to die, the totems will aid us!")
+	do_say("我们绝不受死，图腾会助我们一臂之力！")
 	var/turf/T = get_turf(src)
 	for(var/i=1,i<=spawn_amount,i++)
 		var/totem_to_spawn = pick(
@@ -103,7 +103,7 @@
 		FINALIZE(summoned_totem)
 
 /mob/living/simple/goblin_king/proc/screech(var/angered = FALSE)
-	do_say("Suffer our wraith invaders, suffer!")
+	do_say("入侵者，承受我们的怒火吧，受苦吧！")
 	play_sound('sound/voice/xeno/queen_screech.ogg',get_turf(src), range_min = VIEW_RANGE, range_max = VIEW_RANGE*3)
 	var/stun_time = angered ? 40 : 20
 	for(var/mob/living/L in view(VIEW_RANGE,src))

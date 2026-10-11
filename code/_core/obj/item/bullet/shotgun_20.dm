@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/shotgun_20/
-	name = "\improper 20 gauge buckshot shell"
-	desc = "Shoots a lot of small bullets at once."
-	desc_extended = "This shell is not very accurate and has many projectiles."
+	name = "\improper 20号鹿弹"
+	desc = "一次射出许多小弹丸。"
+	desc_extended = "精度较低，一发内含多颗弹丸。"
 	icon = 'icons/obj/item/bullet/shotgun_20.dmi'
 	icon_state = "buckshot"
 
@@ -36,10 +36,10 @@
 	return TRUE
 
 /obj/item/bullet_cartridge/shotgun_20/slug
-	name = "\improper 20 gauge slug"
+	name = "\improper 20号独头弹"
 	rarity = RARITY_UNCOMMON
-	desc = "Shoots one really big bullet."
-	desc_extended = "This shell doesn't spread alot, and only has one projectile."
+	desc = "射出一颗大弹丸。"
+	desc_extended = "散布较小，每发只有一颗弹丸。"
 	icon_state = "slug"
 
 	projectile_count = 1
@@ -54,23 +54,23 @@
 	value = 1.8
 
 /obj/item/bullet_cartridge/shotgun_20/slug/surplus
-	name = "\improper surplus 20 gauge slug"
+	name = "\improper 库存旧式20号独头弹"
 	damage_type_bullet = /damagetype/ranged/bullet/shotgun_12/slug/surplus
 	jam_chance = 1
 	value = 0
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/shotgun_20/surplus
-	name = "\improper surplus 20 gauge slug"
+	name = "\improper 库存旧式20号鹿弹"
 	damage_type_bullet = /damagetype/ranged/bullet/shotgun_20/surplus
 	jam_chance = 1
 	value = 0
 	rarity = RARITY_BROKEN
 
 /obj/item/bullet_cartridge/shotgun_20/cursed
-	name = "\improper 20 gauge curse shell"
-	desc = "Shoots a lot of small magic circles at once."
-	desc_extended = "This shell is covered in mysterious runes, and smells like the ocean???"
+	name = "\improper 20号诅咒弹"
+	desc = "一次射出许多小魔法阵。"
+	desc_extended = "弹壳上布满神秘符文，闻起来还有海水的味道？？？"
 	icon_state = "buckshot"
 
 	projectile_count = 7

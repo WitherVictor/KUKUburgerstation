@@ -1,7 +1,7 @@
 /obj/effect/ritual_smoke
-	name = "ritual smoke"
-	desc = "LET ME IN, LET ME IIIIIIIN."
-	desc_extended = "A completely and utterly arbitrary anomaly of nature that prevents living beings from passing it."
+	name = "仪式烟雾"
+	desc = "让我进去，让我进——去——！"
+	desc_extended = "一种毫无道理、凭空出现的自然异常，会阻止生物通过。"
 	icon = 'icons/obj/structure/shrine_smoke.dmi'
 	icon_state = "smoke"
 	plane = PLANE_EFFECT

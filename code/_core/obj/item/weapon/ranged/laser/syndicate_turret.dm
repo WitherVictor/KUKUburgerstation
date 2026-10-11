@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/energy/syndicate_turret
-	name = "\improper Syndicate Turret"
+	name = "\improper 辛迪加炮塔"
 	icon = 'icons/obj/item/weapons/ranged/laser/captain.dmi'
 
 	projectile = /obj/projectile/bullet/firearm/rifle

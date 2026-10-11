@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/carbine
-	name = "\improper .223 Space Raider Carbine"
-	desc = "A favorite by pirates."
-	desc_extended = "A standard issue bullpup carbine used mostly by Syndicate raiding parties."
+	name = "\improper .223太空掠袭者卡宾枪"
+	desc = "海盗的心头好。"
+	desc_extended = "主要供辛迪加突袭小队使用的制式无托卡宾枪。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/223.dmi'
 	icon_state = "inventory"
 	value = 900
@@ -115,7 +115,7 @@
 	return 'sound/weapons/ranged/generic/smg_rack.ogg'
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/carbine/mod
-	name = "\improper .223 SYN-Carbine MOD"
+	name = "\improper .223 SYN卡宾枪改装型"
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/223_mod.dmi'
 
 	heat_max = 0.12
@@ -137,8 +137,8 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/carbine/prototype
-	name = "\improper .223 Space Raider Carbine PROTO"
-	desc_extended = "A mass-produced prototype carbine usually only seen in the hands of collectors. Can still be used as a decent weapon."
+	name = "\improper .223太空掠袭者卡宾枪原型"
+	desc_extended = "量产原型卡宾枪，通常只在收藏家手中才能见到。作为武器，仍算相当好用。"
 
 	icon = 'icons/obj/item/weapons/ranged/rifle/syndicate/223_rifle.dmi'
 

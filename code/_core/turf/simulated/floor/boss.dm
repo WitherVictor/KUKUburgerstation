@@ -6,7 +6,7 @@
 
 
 /turf/simulated/floor/boss/
-	name = "ancient floor"
+	name = "远古地板"
 
 	icon = 'icons/turf/special/boss.dmi'
 	icon_state = "boss"

@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/contract
-	name = "contract"
+	name = "合约售货机"
 	markup = 2
 	stored_types = list()
 

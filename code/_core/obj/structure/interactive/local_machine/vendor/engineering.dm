@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/engineering
-	name = "engineering vendor"
+	name = "工程售货机"
 	icon_state = "engivend"
 	stored_types = list(
 		/obj/item/crafting_bench/workbench,
@@ -14,7 +14,7 @@
 	)
 
 /obj/structure/interactive/vending/engineering/equipment
-	name = "engineering equipment vendor"
+	name = "工程装备售货机"
 	icon_state = "engineering"
 	stored_types = list(
 		/obj/item/weapon/melee/toolbox/blue,
@@ -59,7 +59,7 @@
 	)
 
 /obj/structure/interactive/vending/engineering/wardrobe
-	name = "engineering clothing vendor"
+	name = "工程服装售货机"
 	icon_state = "engidrobe"
 	stored_types = list(
 		/obj/item/clothing/feet/socks/knee,

@@ -1,5 +1,5 @@
 /obj/projectile/slime_ball
-	name = "slime ball"
+	name = "史莱姆球"
 	icon = 'icons/obj/projectiles/magic.dmi'
 	icon_state = "slime_ball"
 

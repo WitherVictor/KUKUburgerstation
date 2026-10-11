@@ -1,6 +1,6 @@
 /obj/structure/interactive/door/alarm
-	name = "alarmlock"
-	desc = "Protects you from stupidity."
+	name = "警报闸门"
+	desc = "保护你免遭愚蠢行为之害。"
 	collision_flags = FLAG_COLLISION_WALL
 	collision_bullet_flags = FLAG_COLLISION_BULLET_INORGANIC
 

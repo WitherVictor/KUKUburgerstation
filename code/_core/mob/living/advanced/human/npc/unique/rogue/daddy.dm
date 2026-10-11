@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue/daddy
-	name = "THE LEGEND"
-	desc = "They say that the legend never dies. That's usually because they have a ton of defense."
+	name = "传奇"
+	desc = "都说传奇永不死。通常只是因为防御实在太高。"
 	ai = /ai/advanced/daddy
 
 	sex = MALE

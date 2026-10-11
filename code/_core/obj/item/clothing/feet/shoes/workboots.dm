@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/workboot
-	name = "right steel-toe workboot"
-	desc = "Heavy load coming through!"
-	desc_extended = "A heavy-duty boot for a heavy-duty work enviroment. Protects your feet against falling tools."
+	name = "钢头劳保右靴"
+	desc = "重物经过，注意避让！"
+	desc_extended = "适合繁重作业环境的结实靴子，保护双脚免遭掉落工具砸伤。"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
@@ -17,7 +17,7 @@
 
 
 /obj/item/clothing/feet/shoes/workboot/left
-	name = "left steel-toe workboot"
+	name = "钢头劳保左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

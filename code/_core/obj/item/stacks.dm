@@ -95,9 +95,9 @@
 				INTERACT_DELAY(1)
 				var/stacks_transfered = src.transfer_amount_to(I)
 				if(stacks_transfered)
-					activator.to_chat(span("notice","You transfer [stacks_transfered] stacks to \the [I.name]."))
+					activator.to_chat(span("notice","你向[I.name]转移了[stacks_transfered]份。"))
 				else
-					activator.to_chat(span("warning","You can't transfer any more stacks to \the [I.name], it's full!"))
+					activator.to_chat(span("warning","[I.name]已达到堆叠上限，无法继续转入！"))
 				return TRUE
 		else
 			//Transfering what we clicked on to src.
@@ -126,9 +126,9 @@
 						stacks_transfered += O.transfer_amount_to(src)
 
 				if(stacks_transfered)
-					activator.to_chat(span("notice","You transfer [stacks_transfered] stacks to \the [src.name]."))
+					activator.to_chat(span("notice","你向[src.name]转移了[stacks_transfered]份。"))
 				else
-					activator.to_chat(span("warning","You can't transfer any more stacks to \the [src.name], it's full!"))
+					activator.to_chat(span("warning","[src.name]已达到堆叠上限，无法继续转入！"))
 				return TRUE
 
 	return ..()
@@ -144,10 +144,10 @@
 	if(is_living(activator))
 		var/mob/living/L = activator
 		if(amount > 1 && CONTROL_MOD_DISARM && amount_max > 1)
-			var/choice = input("How much do you want to put in your other hand?","Amount to split",0) as num
+			var/choice = input("你想分出多少放到另一只手中？","拆分数量",0) as num
 			var/splitamount = FLOOR(choice,1)
 			if(!choice || splitamount <= 0 || splitamount >= amount)
-				L.to_chat(span("notice","You decide not to split the stack."))
+				L.to_chat(span("notice","你决定不拆分这叠物品。"))
 			else if (amount > 1) //just in case.
 				var/obj/hud/inventory/I = object
 				var/old_item_name = src.name
@@ -158,5 +158,5 @@
 				new_stack.force_move(get_turf(src))
 				src.transfer_amount_to(new_stack,splitamount)
 				I.add_object(new_stack)
-				activator.to_chat(span("notice","You split \the stack of [old_item_name]. The new stack now has [new_stack.amount]."))
+				activator.to_chat(span("notice","你拆分了这叠[old_item_name]。新的一叠共有[new_stack.amount]份。"))
 	return TRUE

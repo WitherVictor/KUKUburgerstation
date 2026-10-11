@@ -1,6 +1,6 @@
 /obj/structure/interactive/ore_box
-	name = "ore box"
-	desc = "A crate for moving and storing ores"
+	name = "矿石箱"
+	desc = "用于搬运和储存矿石的箱子。"
 	icon = 'icons/obj/structure/ore_box.dmi'
 	icon_state = "ore_box"
 
@@ -104,6 +104,6 @@
 		var/material/M = MATERIAL(k)
 		total_value += amount*1*M.value_per_unit
 		total_objects += amount
-	. += div("notice","The counter shows [total_objects] objects inside.")
-	. += div("notice","The estimated value of contained contents is [total_value] credits.")
+	. += div("notice","计数器显示箱内有[total_objects]单位矿石。")
+	. += div("notice","箱内矿石的估计总价值为[total_value]信用点。")
 

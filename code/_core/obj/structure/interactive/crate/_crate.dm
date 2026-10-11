@@ -1,7 +1,7 @@
 /obj/structure/interactive/crate
-	name = "crate"
-	desc = "Freight for moving."
-	desc_extended = "A storage container for storing goodies. Also acts as decent cover in a gunfight."
+	name = "货箱"
+	desc = "搬运货物用。"
+	desc_extended = "用来存放好东西的储物箱，枪战时也能充当不错的掩体。"
 	icon = 'icons/obj/structure/crates.dmi'
 	icon_state = "crate"
 
@@ -67,7 +67,7 @@
 /obj/structure/interactive/crate/on_damage_received(var/atom/atom_damaged,var/atom/attacker,var/atom/weapon,var/damagetype/DT,var/list/damage_table,var/damage_amount,var/critical_hit_multiplier,var/stealthy=FALSE)
 
 	if(!open && damage_amount > 20 & luck(src,20 + damage_amount,FALSE))
-		visible_message(span("warning","\The [src.name] shoots open!"))
+		visible_message(span("warning","[src.name]猛地弹开了！"))
 		open(null)
 
 	return ..()
@@ -141,7 +141,7 @@
 	if(is_player(M))
 		var/mob/living/advanced/player/playerCorpse = M
 		if(playerCorpse.dead)
-			visible_message(span("warning", "\The [playerCorpse.name] hilariously looses balance and falls out of the crate!"))
+			visible_message(span("warning", "[playerCorpse.name]滑稽地失去平衡，从货箱里摔了出来！"))
 			return FALSE
 	return TRUE
 
@@ -161,7 +161,7 @@
 		return FALSE
 
 	if(!src.z)
-		if(loc) activator?.to_chat(span("warning","\The [loc.name] is preventing \the [src.name] from being closed!"))
+		if(loc) activator?.to_chat(span("warning","[loc.name]挡住了[src.name]，无法关闭！"))
 		return FALSE
 
 	var/atom/blocking
@@ -172,7 +172,7 @@
 			break
 
 	if(blocking)
-		activator.to_chat(span("warning","\The [blocking.name] is preventing \the [src.name] from being closed!"))
+		activator.to_chat(span("warning","[blocking.name]挡住了[src.name]，无法关闭！"))
 		return FALSE
 
 	var/total_size = 0
@@ -201,7 +201,7 @@
 /obj/structure/interactive/crate/proc/open(var/mob/activator)
 
 	if(!src.z)
-		if(loc) activator?.to_chat(span("warning","\The [loc.name] is preventing \the [src.name] from being opened!"))
+		if(loc) activator?.to_chat(span("warning","[loc.name]挡住了[src.name]，无法打开！"))
 		return FALSE
 
 	if(loot)

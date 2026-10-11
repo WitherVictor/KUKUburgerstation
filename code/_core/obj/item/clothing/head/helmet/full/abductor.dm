@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/full/abductor
-	name = "abductor hazardous environment helmet"
-	desc = "For fish, and aliens!"
-	desc_extended = "A basic fishbowl glass helmet meant to protect against unknown environments."
+	name = "绑架者危险环境头盔"
+	desc = "鱼儿和外星人都能戴！"
+	desc_extended = "一顶鱼缸形的基础玻璃头盔，用来抵御未知环境中的危险。"
 	icon = 'icons/obj/item/clothing/hats/abductor.dmi'
 
 	hidden_organs = list()

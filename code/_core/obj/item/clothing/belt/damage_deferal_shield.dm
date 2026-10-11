@@ -1,9 +1,9 @@
 /obj/item/clothing/belt/damage_deferal_shield
-	name = "alien-portable shield"
-	desc = "For the aspiring supersoldier."
-	desc_extended = "An alien-tech belt-worn damage mitigation system with a mini-fusion reactor that redirects most lethal kinetic energy away from the user. \
-	Requires an absurd amount of power to operate, thus it only activates after detecting the first hit and shuts off after taking more than 200 damage, after 8 seconds, or until the user manually shuts it off. \
-	Has a cooldown of 10 seconds before it can be used again."
+	name = "外星便携护盾"
+	desc = "献给立志成为超级士兵的人。"
+	desc_extended = "采用外星技术的腰带式减伤系统，内置微型聚变反应堆，将大部分致命动能从使用者身上偏转开。 \
+	运行时需要消耗惊人的能量，因此检测到首次命中后才会自动启动；承受200点伤害、经过8秒或使用者手动关闭时停机。 \
+	再次使用前需要冷却10秒。"
 
 	icon = 'icons/obj/item/clothing/belts/damage_deferal.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_COAT_OVER
@@ -69,13 +69,13 @@
 /obj/item/clothing/belt/damage_deferal_shield/click_self(var/mob/activator,location,control,params)
 
 	if(CALLBACK_EXISTS("\ref[src]_disable_shield"))
-		activator.to_chat(span("notice","You toggle \the [src.name] off and manually cycle the shield."))
+		activator.to_chat(span("notice","你关闭了[src.name]，手动让护盾进入冷却。"))
 		CALLBACK_REMOVE("\ref[src]_disable_shield")
 		disable_shield()
 	else if(CALLBACK_EXISTS("\ref[src]_cooldown_end"))
-		activator.to_chat(span("warning","The interface flickers an error as it is still cooling down!"))
+		activator.to_chat(span("warning","界面闪烁着错误提示：护盾仍在冷却！"))
 	else
-		activator.to_chat(span("notice","You toggle \the [src.name] on and activate the shield."))
+		activator.to_chat(span("notice","你开启了[src.name]，激活护盾。"))
 		CALLBACK("\ref[src]_disable_shield",active_time,src,src::disable_shield()) //Activate the shield!
 
 	update_sprite()

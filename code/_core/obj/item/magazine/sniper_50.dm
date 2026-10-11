@@ -1,7 +1,7 @@
 /obj/item/magazine/sniper_50
-	name = "\improper .50 sniper magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .50狙击枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/50_sniper.dmi'
 	icon_state = "50"
 	bullet_count_max = 8
@@ -28,31 +28,31 @@
 	value = 20
 
 /obj/item/magazine/sniper_50/explosive
-	name = "\improper .50 sniper magazine - explosive"
+	name = "\improper .50狙击枪弹匣（爆炸弹）"
 	icon_state = "50EXP"
 	ammo = /obj/item/bullet_cartridge/sniper_50/explosive
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/sniper_50/ion
-	name = "\improper .50 sniper magazine - ion"
+	name = "\improper .50狙击枪弹匣（离子弹）"
 	icon_state = "50ION"
 	ammo = /obj/item/bullet_cartridge/sniper_50/ion
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/sniper_50/incendiary
-	name = "\improper .50 sniper magazine - incendiary"
+	name = "\improper .50狙击枪弹匣（燃烧弹）"
 	icon_state = "50INC"
 	ammo = /obj/item/bullet_cartridge/sniper_50/incendiary
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/sniper_50/ap
-	name = "\improper .50 sniper magazine - armor piercing"
+	name = "\improper .50狙击枪弹匣（穿甲弹）"
 	icon_state = "50AP"
 	ammo = /obj/item/bullet_cartridge/sniper_50/ap
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/sniper_50/du
-	name = "\improper .50 sniper magazine - depleted uranium"
+	name = "\improper .50狙击枪弹匣（贫铀弹）"
 	icon_state = "50_DU"
 	rarity = RARITY_RARE
 	ammo = /obj/item/bullet_cartridge/sniper_50/du

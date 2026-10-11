@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/wizard_ambassador
-	name = "Bandalf the Right"
-	desc = "Somehow, he's always right. Must be magic."
+	name = "永远正确的班达尔夫"
+	desc = "不知为何，他永远是对的。一定是魔法。"
 	species = "human"
 	dialogue_id = /dialogue/npc/wizard_ambassador/
 	sex = MALE

@@ -1,7 +1,7 @@
 /obj/structure/interactive/vending/old_ammo
-	name = "ancient ammo vendor"
-	desc = "What a weird selection of ammo..."
-	desc_extended = "An old, surprisingly intact ammo vendor."
+	name = "古旧弹药售货机"
+	desc = "这弹药种类可真够奇怪的……"
+	desc_extended = "一台古旧的弹药售货机，保存得出奇完好。"
 	icon_state = "liberationstation"
 
 	stored_types = list()

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/handheld
 	name = "\improper 9mm SMP"
-	desc = "Spray n' Pray"
-	desc_extended = "Extremely inaccurate, but brute forces that problem with it's high firerate. Dual wield for best results."
+	desc = "扫射，然后祈祷。"
+	desc_extended = "精度极差，但用高射速强行弥补。双持效果最佳。"
 	icon = 'icons/obj/item/weapons/ranged/smg/syndicate/9mm.dmi'
 	icon_state = "inventory"
 

@@ -1,5 +1,5 @@
 /obj/item/clothing/mask/ninja
-	name = "ninja mask"
+	name = "忍者面具"
 	icon = 'obj/items/clothing/masks/ninja.dmi'
 	rarity = RARITY_MYTHICAL
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD

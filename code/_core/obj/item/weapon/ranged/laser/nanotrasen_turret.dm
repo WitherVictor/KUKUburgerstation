@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/energy/nanotrasen_turret
-	name = "\improper NanoTrasen Turret"
+	name = "\improper 纳米传讯炮塔"
 	icon = 'icons/obj/item/weapons/ranged/laser/captain.dmi'
 
 	projectile = /obj/projectile/bullet/laser

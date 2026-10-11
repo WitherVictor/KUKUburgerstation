@@ -1,7 +1,7 @@
 /obj/structure/interactive/solar_panel
-	name = "solar panel"
-	desc = "Green energy from a blue square. You can't make this up."
-	desc_extended = "A solar panel is an collection of photo-voltaic cells for use in converting natural sunlight into usable energy."
+	name = "太阳能板"
+	desc = "蓝色方块产出的绿色能源。这可不是瞎编的。"
+	desc_extended = "一组光伏电池，将自然阳光转化为可用的电能。"
 	icon = 'icons/obj/structure/solar.dmi'
 	icon_state = "solar"
 

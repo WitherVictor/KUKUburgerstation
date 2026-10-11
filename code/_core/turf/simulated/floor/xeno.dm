@@ -1,10 +1,10 @@
 /turf/simulated/floor/xeno/
-	name = "resin floor"
+	name = "树脂地板"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "xeno"
-	desc = "Floor for xenos"
-	desc_extended = "No, you can't smoke the resin floors."
+	desc = "异形用的地板。"
+	desc_extended = "不，你不能把树脂地板当烟抽。"
 
 	real_icon = 'icons/turf/floor/resin_1.dmi'
 	real_icon_state = "floor"

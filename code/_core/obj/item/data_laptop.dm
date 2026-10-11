@@ -5,9 +5,9 @@
 
 
 /obj/item/data_laptop
-	name = "classified data laptop"
-	desc = "Top secret!"
-	desc_extended = "A laptop containing classified locational data on secret storage areas. Once opened, coordinates will be shown to the user and then be wiped of all data!"
+	name = "机密数据笔记本电脑"
+	desc = "绝密！"
+	desc_extended = "存有秘密仓库位置机密数据的笔记本电脑。打开后会显示坐标和密码，随后清空全部数据！"
 
 	icon = 'icons/obj/item/data_laptop.dmi'
 	icon_state = "closed"
@@ -50,14 +50,14 @@
 	INTERACT_DELAY(10)
 
 	if(used)
-		activator.to_chat(span("warning","Nothing happens..."))
+		activator.to_chat(span("warning","什么也没发生……"))
 		update_sprite()
 		return TRUE
 
 	var/obj/structure/interactive/door/vault/syndicate/D
 	while(TRUE)
 		if(!length(SSobj.all_vault_doors))
-			activator.to_chat(span("notice","\The [src.name] doesn't seem to want to turn on... maybe use it in another shift?"))
+			activator.to_chat(span("notice","[src.name]似乎不肯开机……也许换个班次再用？"))
 			return TRUE
 		D = pick(SSobj.all_vault_doors)
 		SSobj.all_vault_doors -= D
@@ -71,6 +71,6 @@
 
 	value = get_base_value()
 
-	activator.to_chat(span("notice","\The [src.name] flashes the coordinates \"<b>[D.x],[D.y],[D.z]</b>\" and \"<b>[D.stored_keypad.code]</b>\" before flickering to dark..."))
+	activator.to_chat(span("notice","[src.name]闪现出坐标\"<b>[D.x],[D.y],[D.z]</b>\"和密码\"<b>[D.stored_keypad.code]</b>\"，随后闪烁着黑了屏……"))
 
 	return TRUE

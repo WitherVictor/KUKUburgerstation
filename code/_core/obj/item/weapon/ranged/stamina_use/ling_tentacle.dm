@@ -1,8 +1,8 @@
 /obj/item/weapon/ranged/stamina_use/tentacle
-	name = "tentacle"
+	name = "触手"
 
-	desc = "HELP MAINT."
-	desc_extended = "A grody tentacle. <br>Use in hand to change whether you appear next to your enemies, or if they're thrown to you."
+	desc = "救命，维护区！"
+	desc_extended = "恶心的触手。<br>在手中使用可切换模式：把自己拉到敌人身边，或把敌人拉到自己身边。"
 	icon = 'icons/obj/item/weapons/ranged/ling_tentacle.dmi'
 
 	cost_stamina = 10
@@ -42,7 +42,7 @@
 	toggle = !toggle
 	update_icon()
 	if(toggle)
-		activator.to_chat(span("notice","You will now drag your enemies."))
+		activator.to_chat(span("notice","现在会把敌人拉到你身边。"))
 	else
-		activator.to_chat(span("notice","You will now drag yourself to your enemies."))
+		activator.to_chat(span("notice","现在会把你拉到敌人身边。"))
 	return TRUE

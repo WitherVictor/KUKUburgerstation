@@ -18,7 +18,7 @@
 	name = "FLOOR ERROR"
 
 /turf/unsimulated/abyss
-	name = "abyss"
+	name = "深渊"
 	icon = 'icons/turf/space/abyss.dmi'
 	icon_state = "abyss"
 	opacity = 1
@@ -30,7 +30,7 @@
 	desired_light_color = "#FFFFFF"
 
 /turf/unsimulated/void
-	name = "abyss"
+	name = "深渊"
 	icon = 'icons/turf/space/void.dmi'
 	icon_state = "void"
 	opacity = 1

@@ -1,7 +1,7 @@
 /mob/living/simple/exploding_frog
-	name = "frog?"
-	desc = "*Frog explosion Sounds*"
-	desc_extended = "A less than docile frog."
+	name = "青蛙？"
+	desc = "*青蛙爆炸声*"
+	desc_extended = "一只不怎么温顺的青蛙。"
 	icon = 'icons/mob/living/simple/frog.dmi'
 	icon_state = "living"
 	damage_type = /damagetype/unarmed/bite/

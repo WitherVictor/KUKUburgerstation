@@ -1,7 +1,7 @@
 /obj/item/clothing/pants/goblin_loin
-	name = "Goblin King's loin"
-	desc = "You monster, stealing from the little green men."
-	desc_extended = "The loin is imbued with the life essence of the late Goblin King. Greatly desired by mages."
+	name = "地精王兜裆布"
+	desc = "居然偷小绿人的东西，你这个怪物。"
+	desc_extended = "这条兜裆布蕴含着已故地精王的生命精华，深受法师觊觎。"
 	icon = 'icons/obj/item/clothing/pants/goblin_loin.dmi'
 
 	armor = /armor/cloth

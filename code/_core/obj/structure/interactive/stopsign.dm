@@ -1,6 +1,6 @@
 obj/structure/interactive/stopsign
-	name = "stop sign"
-	desc = "Stop."
+	name = "停车标志"
+	desc = "停。"
 	icon = 'icons/obj/structure/stop.dmi'
 	icon_state = "sign"
 

@@ -1,5 +1,5 @@
 /turf/simulated/floor/space
-	name = "space"
+	name = "太空"
 	icon = 'icons/turf/space/space.dmi'
 	icon_state = "preview"
 	opacity = 0

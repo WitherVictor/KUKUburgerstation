@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/energy/handsword
-	name = "energy handsword"
-	desc = "A strangely made handsword."
-	desc_extended = "A strangely made handsword meant to be wielded in hand-to-hand combat. Uses a hybrid of the user's melee and unarmed skill."
+	name = "能量拳剑"
+	desc = "做工奇特的拳剑。"
+	desc_extended = "构造奇特、用于贴身格斗的拳剑，同时运用使用者的近战和徒手技能。"
 	icon = 'icons/obj/item/weapons/melee/laser/handsword.dmi'
 	damage_type = /damagetype/unarmed/fists
 	damage_type_on = /damagetype/melee/sword/handsword

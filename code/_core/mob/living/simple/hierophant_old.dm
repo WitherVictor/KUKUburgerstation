@@ -1,5 +1,5 @@
 /mob/living/simple/hierophant
-	name = "hierophant"
+	name = "大祭司"
 	id = "heirophant"
 	icon = 'icons/mob/living/simple/lavaland/hierophant.dmi'
 	icon_state = "living"

@@ -1,5 +1,5 @@
 /gamemode/horde/defense
-	name = "Horde Defense"
+	name = "围攻防守"
 	var/current_wave = 1
 
 
@@ -11,9 +11,9 @@
 
 /gamemode/horde/defense/on_waiting()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","PREP\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","准备\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
-		set_message("Round starts in: [get_clock_time(time_to_display)]",TRUE)
+		set_message("本轮开始倒计时：[get_clock_time(time_to_display)]",TRUE)
 		return TRUE
 	state = GAMEMODE_GEARING
 	round_time = 0
@@ -21,9 +21,9 @@
 	SSshuttle.next_pod_launch = world.time + SECONDS_TO_DECISECONDS(60*10 + 10)
 	add_objectives()
 	announce(
-		"Central Command Update",
-		"Prepare for Landfall",
-		"All landfall crew are ordered to gear up for defense of high value object. Estimated time until portal functionality: 5 minutes.",
+		"中央指挥部通告",
+		"准备登陆",
+		"所有登陆人员立即整备，准备保护高价值目标。传送门预计5分钟后启用。",
 		ANNOUNCEMENT_STATION,
 		//'sound/voice/announcement/landfall_crew_8_minutes.ogg'
 	)
@@ -31,17 +31,17 @@
 
 /gamemode/horde/defense/on_gearing()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","GEAR\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","整备\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
-		set_message("Loadout Period: [get_clock_time(time_to_display)]",TRUE)
+		set_message("整备阶段：[get_clock_time(time_to_display)]",TRUE)
 		return TRUE
 	state = GAMEMODE_BOARDING
 	round_time = 0
 	round_time_next = HORDE_DELAY_BOARDING
 	announce(
-		"Central Command Update",
-		"Portal Transit",
-		"All landfall crew are ordered to proceed to the hanger bay and prep for portal transit. The gateway will be allowed to open in 2 minutes.",
+		"中央指挥部通告",
+		"传送门通行",
+		"所有登陆人员立即前往机库，准备通过传送门。传送门将在2分钟后获准开启。",
 		ANNOUNCEMENT_STATION,
 		//'sound/voice/announcement/landfall_crew_2_minutes.ogg'
 	)
@@ -49,17 +49,17 @@
 
 /gamemode/horde/defense/on_boarding()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","GATE\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","传送\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
-		set_message("Gating Period: [get_clock_time(time_to_display)]",TRUE)
+		set_message("传送阶段：[get_clock_time(time_to_display)]",TRUE)
 		return TRUE
 	state = GAMEMODE_LAUNCHING
 	round_time = 0
 	round_time_next = HORDE_DELAY_LAUNCHING
 	announce(
-		"Central Command Mission Update",
-		"Mission is a Go",
-		"The gateway is functional and ready to portal into the area of operations. All crew are cleared to enter. Hostile entities will appear in 5 minutes.",
+		"中央指挥部任务通告",
+		"任务开始",
+		"传送门已启用，可以前往作战区域。全体人员获准进入。敌对实体将在5分钟后出现。",
 		ANNOUNCEMENT_STATION,
 		'sound/voice/announcement/landfall_crew_0_minutes.ogg'
 	)
@@ -69,9 +69,9 @@
 
 /gamemode/horde/defense/on_launching()
 	var/time_to_display = round_time_next - round_time
-	set_status_display("mission","LNCH\n[get_clock_time(time_to_display)]")
+	set_status_display("mission","出发\n[get_clock_time(time_to_display)]")
 	if(time_to_display >= 0)
-		set_message("Launch Period: [get_clock_time(time_to_display)]",TRUE)
+		set_message("出发阶段：[get_clock_time(time_to_display)]",TRUE)
 		return TRUE
 	state = GAMEMODE_FIGHTING
 	round_time = 0

@@ -1,5 +1,5 @@
 /mob/living/simple/goliath
-	name = "goliath"
+	name = "歌利亚"
 	icon = 'icons/mob/living/simple/lavaland/goliath.dmi'
 	icon_state = "goliath"
 	damage_type = /damagetype/unarmed/claw/

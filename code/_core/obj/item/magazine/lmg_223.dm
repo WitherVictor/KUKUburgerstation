@@ -1,7 +1,7 @@
 /obj/item/magazine/lmg_223
-	name = "\improper .223 lmg magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .223轻机枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/223_lmg.dmi'
 	icon_state = "223"
 	bullet_count_max = 90

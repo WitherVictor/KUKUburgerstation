@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/vintorez
-	name = "\improper 9x39mm VSS Vintorez"
-	desc = "The last thing you never see."
-	desc_extended = "A special military sniper rifle purpose-built for silent, flashless sniping during special operations where early detection of the shooter may be critical."
+	name = "\improper 9x39mm VSS绞丝机"
+	desc = "最后一眼，你永远看不到。"
+	desc_extended = "特制军用狙击步枪，用于特种行动中的无声、无枪口焰狙击；在这种任务里，射手过早暴露可能决定成败。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/rev/939_sniper.dmi'
 	icon_state = "inventory"
 	value = 1200

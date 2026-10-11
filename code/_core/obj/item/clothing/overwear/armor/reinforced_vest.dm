@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/reinforced
-	name = "reinforced armored vest"
-	desc = "An armor vest."
-	desc_extended = "A light variant of the explorer's suit, issued to veteran Nanotrasen 'security consultants'."
+	name = "加固防护背心"
+	desc = "一件防护背心。"
+	desc_extended = "探索者护甲的轻型版本，配发给经验丰富的纳米传讯“安保顾问”。"
 	icon = 'icons/obj/item/clothing/suit/reinforced_vest.dmi'
 
 	rarity = RARITY_RARE

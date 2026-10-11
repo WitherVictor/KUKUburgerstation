@@ -1,7 +1,7 @@
 /obj/item/storage/pouch //For boxes and such, not backpacks.
-	name = "small pouch"
-	desc = "Simple pounches"
-	desc_extended = "Storage pouches attachable to the groin or chest."
+	name = "小型收纳包"
+	desc = "简单的收纳包。"
+	desc_extended = "可挂在腰胯或胸前的收纳包。"
 	icon = 'icons/obj/item/storage/pouches_new.dmi'
 
 	size = SIZE_2
@@ -41,8 +41,8 @@
 
 
 /obj/item/storage/pouch/single
-	name = "single large pouch"
-	desc_extended = "Storage pouches attachable to the groin or chest. This one can carry one Size 4 item, such as bulky guns."
+	name = "单格大型收纳包"
+	desc_extended = "可挂在腰胯或胸前的收纳包，能装下1件尺寸为4的物品，例如大型枪械。"
 	icon_state = "single"
 
 	container_max_size = SIZE_4
@@ -60,8 +60,8 @@
 	color = COLOR_BROWN
 
 /obj/item/storage/pouch/double
-	name = "double medium pouches"
-	desc_extended = "Storage pouches attachable to the groin or chest. This one can carry two Size 3 items, such as rifles or medkits."
+	name = "双格中型收纳包"
+	desc_extended = "可挂在腰胯或胸前的收纳包，能装下2件尺寸为3的物品，例如步枪或急救包。"
 	icon_state = "double"
 
 	container_max_size = SIZE_3
@@ -79,8 +79,8 @@
 	color = COLOR_BROWN
 
 /obj/item/storage/pouch/triple
-	name = "triple small pouches"
-	desc_extended = "Storage pouches attachable to the groin or chest. This one can carry three Size 2 items, such as a sidearm or extra ammo."
+	name = "三格小型收纳包"
+	desc_extended = "可挂在腰胯或胸前的收纳包，能装下3件尺寸为2的物品，例如随身枪械或备用弹药。"
 	icon_state = "triple"
 	size = SIZE_6
 

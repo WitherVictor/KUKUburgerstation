@@ -1,7 +1,7 @@
 /mob/living/vehicle/mech
-	name = "mech"
-	desc = "Weaponized Anime."
-	desc_extended = "A humanoid armoured weapons platform that can be modified with an array of different parts and weapon modules to navigate and perform in any environment. Manufactures its own ammo using internal battery power, making it highly self-sufficient and expensive."
+	name = "机甲"
+	desc = "动漫化作兵器。"
+	desc_extended = "人形装甲武器平台，可通过各种部件与武器模块改装，在各类环境中移动并执行任务。利用内置电池的能量自行制造弹药，自给能力强，价格也很高。"
 	icon = 'icons/obj/vehicles/mechs.dmi'
 
 	collision_flags = FLAG_COLLISION_WALKING

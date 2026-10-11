@@ -1,5 +1,5 @@
 /mob/living/simple/silicon/ai
-	name = "The AI"
+	name = "人工智能"
 	icon = 'icons/mob/living/simple/ai.dmi'
 	icon_state = "idle"
 

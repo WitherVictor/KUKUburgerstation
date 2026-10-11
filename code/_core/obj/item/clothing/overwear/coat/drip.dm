@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/drip
-	name = "drip"
+	name = "潮流外套"
 	icon = 'icons/obj/item/clothing/suit/drip.dmi'
 
-	desc = "By any means necessary."
-	desc_extended = "Probably the most expensive clothing you can find. Does it do anything? Probably not."
+	desc = "不惜一切代价。"
+	desc_extended = "大概是你能找到的最昂贵的衣服。有什么用吗？大概没有。"
 
 	is_container = TRUE
 	dynamic_inventory_count = 2

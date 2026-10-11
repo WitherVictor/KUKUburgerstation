@@ -1,5 +1,5 @@
 /mob/living/simple/slime_king //Not a subtype of slime because it behaves way differently
-	name = "slime king"
+	name = "史莱姆王"
 	icon = 'icons/mob/living/simple/slime_king_new.dmi'
 	icon_state = "living"
 

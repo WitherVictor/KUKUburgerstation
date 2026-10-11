@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/duck
-	name = "right duck"
-	desc = "Ducks were harmed in the making of these slippers."
-	desc_extended = "Squeaky footsteps included for all your ducking needs. Quack!"
+	name = "鸭子右拖鞋"
+	desc = "制作这些拖鞋时伤害了鸭子。"
+	desc_extended = "自带嘎嘎作响的脚步声，满足你的一切鸭子需求。嘎！"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -24,7 +24,7 @@
 	return original_footsteps
 
 /obj/item/clothing/feet/shoes/duck/left
-	name = "left duck"
+	name = "鸭子左拖鞋"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

@@ -6,7 +6,7 @@
 		return FALSE
 
 	if(!text_to_say)
-		text_to_say = input("What would you like to say?","Say") as text|null
+		text_to_say = input("你想说些什么？","说话") as text|null
 
 	if(!text_to_say)
 		return FALSE
@@ -29,7 +29,7 @@
 		return FALSE
 
 	if(!emote_text)
-		emote_text = input("What would you like to emote?","Me") as message
+		emote_text = input("你想做出什么动作？","自定义动作") as message
 
 	if(!emote_text)
 		return FALSE
@@ -73,4 +73,4 @@
 /mob/verb/view_emotes()
 	set name = "View Emotes"
 	set category = "Communication"
-	src.to_chat("<b>Known emotes:</b> [english_list(known_emotes)].")
+	src.to_chat("<b>可用的表情动作指令：</b>[english_list(known_emotes)]。")

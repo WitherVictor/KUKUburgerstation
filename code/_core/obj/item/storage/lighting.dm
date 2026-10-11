@@ -1,5 +1,5 @@
 /obj/item/storage/lighting/
-	name = "lighting box"
+	name = "灯具盒"
 
 	is_container = TRUE
 	container_max_size = SIZE_1
@@ -12,7 +12,7 @@
 	value = 0
 
 /obj/item/storage/lighting/tube
-	name = "lighting tube box"
+	name = "灯管盒"
 	value = 1
 
 /obj/item/storage/lighting/tube/fill_inventory()
@@ -21,7 +21,7 @@
 	. = ..()
 
 /obj/item/storage/lighting/bulb
-	name = "lighting bulb box"
+	name = "灯泡盒"
 	value = 1
 
 /obj/item/storage/lighting/bulb/fill_inventory()

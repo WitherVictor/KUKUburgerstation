@@ -1,9 +1,9 @@
 /obj/item/clothing/head/hat/witchhunter
-	name = "witchhunter hat"
+	name = "猎巫人帽"
 	icon = 'icons/obj/item/clothing/hats/witchunter.dmi'
 
-	desc = "Avoid all eye contact."
-	desc_extended = "The finishing touch to any witch hunter's outfit, this topper helps to give the wearer a fashion advantage over any witch soon to be on the pyre."
+	desc = "避免一切眼神接触。"
+	desc_extended = "猎巫人装束的点睛之笔，让佩戴者在时尚上压过那些即将被送上火刑柱的女巫。"
 
 	armor = /armor/leather/antimage
 

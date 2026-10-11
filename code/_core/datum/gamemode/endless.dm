@@ -1,6 +1,6 @@
 /gamemode/endless
-	name = "Endless"
-	desc = "No missions right now. Do anything you want."
+	name = "无尽模式"
+	desc = "目前没有任务。想做什么就做什么。"
 	hidden = FALSE
 
 	var/last_vote = 0
@@ -79,41 +79,41 @@
 		stage++
 		switch(stage)
 			if(1)
-				status_display_text = "GEAR"
+				status_display_text = "整备"
 				round_time_next = 6*60
 				announce(
-					"Central Command Mission Update",
-					"Prepare for Landfall",
-					"All landfall crew are ordered to gear up for planetside combat. Estimated time until shuttle functionality: 6 minutes.",
+					"中央指挥部任务通告",
+					"准备登陆",
+					"所有登陆人员立即整备，准备地面作战。穿梭机预计6分钟后启用。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_6_minutes_shuttle.ogg'
 				)
 			if(2)
-				status_display_text = "PREP"
+				status_display_text = "准备"
 				round_time_next = 1*60
 				announce(
-					"Central Command Mission Update",
-					"Drop Pod Boarding",
-					"All landfall crew are ordered to proceed to the hanger bay and prep for drop pod launch. Shuttles will be allowed to launch in 1 minute.",
+					"中央指挥部任务通告",
+					"空降准备",
+					"所有登陆人员立即前往机库，准备空降。穿梭机将在1分钟后获准起飞。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_1_minute_shuttle.ogg'
 				)
 			if(3)
-				status_display_text = "RDY"
+				status_display_text = "就绪"
 				round_time_next = 10
 				allow_launch = TRUE
 				SShorde.enable = TRUE
 				SSevents.enable = TRUE
 				announce(
-					"Central Command Mission Update",
-					"Mission is a Go",
-					"Shuttles are prepped and ready to depart into the Area of Operations. All crew are cleared to launch.",
+					"中央指挥部任务通告",
+					"任务开始",
+					"穿梭机整备完毕，可以前往作战区域。全体人员获准出发。",
 					sound_to_play = 'sound/voice/announcement/landfall_crew_0_minutes_shuttle.ogg'
 				)
 			if(4)
-				status_display_text = "BTTLE"
+				status_display_text = "战斗"
 				round_time_next = 60*60
 				add_objectives()
 			if(5)
-				status_display_text = "VOTE"
+				status_display_text = "投票"
 				round_time_next = -1
 				SSvote.create_vote(/vote/continue_round)
 
@@ -125,4 +125,4 @@
 
 
 	if(status_display_text && status_display_time)
-		set_status_display("mission","[status_display_text ? status_display_text : "HI"]\n[status_display_time ? status_display_time : "THERE"]")
+		set_status_display("mission","[status_display_text ? status_display_text : "你好"]\n[status_display_time ? status_display_time : "欢迎"]")

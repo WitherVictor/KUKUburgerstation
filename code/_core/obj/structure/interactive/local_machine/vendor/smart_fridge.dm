@@ -1,11 +1,11 @@
 /obj/structure/interactive/vending/smart_fridge
-	name = "smart fridge"
+	name = "智能冰箱"
 	icon_state = "smartfridge"
 	plane = PLANE_MOVABLE
 	pixel_y = 4
 
 /obj/structure/interactive/vending/smart_fridge/kitchen
-	name = "kitchen smart fridge"
+	name = "厨房智能冰箱"
 	stored_types = list(
 		/obj/item/container/simple/beaker/vial/enzymes,
 		/obj/item/container/simple/baking/flour,
@@ -25,7 +25,7 @@
 	accepts_item = /obj/item/currency/dosh
 
 /obj/structure/interactive/vending/smart_fridge/bar
-	name = "bar smart fridge"
+	name = "酒吧智能冰箱"
 	icon_state = "boozeomat"
 	stored_types = list(
 		/obj/item/container/simple/beaker/glass,

@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/coat/ghillie
-	name = "SKAT-9M patterned ghillie suit"
-	desc = "Sneeki breeki like."
-	desc_extended = "Professionally-made piece of colored clothes that's meant to be worn over SKAT-9. Provides almost no protection on its own, but allows you to blend in with the surroundings."
+	name = "SKAT-9M式吉利服"
+	desc = "悄悄地潜行。"
+	desc_extended = "专业制作的彩色伪装服，用于套在SKAT-9外面。本身几乎不提供防护，但能让你融入周围环境。"
 	icon = 'icons/obj/item/clothing/suit/maskcoat_grass.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_COAT
 
@@ -16,22 +16,22 @@
 	rarity = RARITY_RARE
 
 /obj/item/clothing/overwear/coat/ghillie/forest
-	name = "SKAT-9M patterned ghillie suit (forest)"
-	desc = "Sneeki breeki like."
-	desc_extended = "Professionally-made piece of colored clothes that's meant to be worn over SKAT-9. Provides almost no protection on its own, but allows you to blend in with the surroundings. This one is grass-colored."
+	name = "SKAT-9M式吉利服（林地）"
+	desc = "悄悄地潜行。"
+	desc_extended = "专业制作的彩色伪装服，用于套在SKAT-9外面。本身几乎不提供防护，但能让你融入周围环境。这件采用草绿色。"
 	icon = 'icons/obj/item/clothing/suit/maskcoat_grass.dmi'
 	additional_clothing = list(/obj/item/clothing/head/helmet/full/ghillie/forest)
 
 /obj/item/clothing/overwear/coat/ghillie/snow
-	name = "SKAT-9M patterned ghillie suit (winter)"
-	desc = "Sneeki breeki like."
-	desc_extended = "Professionally-made piece of colored clothes that's meant to be worn over SKAT-9. Provides almost no protection on its own, but allows you to blend in with the surroundings. This one is snow-colored."
+	name = "SKAT-9M式吉利服（冬季）"
+	desc = "悄悄地潜行。"
+	desc_extended = "专业制作的彩色伪装服，用于套在SKAT-9外面。本身几乎不提供防护，但能让你融入周围环境。这件采用雪白色。"
 	icon = 'icons/obj/item/clothing/suit/maskcoat_snow.dmi'
 	additional_clothing = list(/obj/item/clothing/head/helmet/full/ghillie/snow)
 
 /obj/item/clothing/overwear/coat/ghillie/lava
-	name = "SKAT-9M patterned ghillie suit (basalt)"
-	desc = "Sneeki breeki like."
-	desc_extended = "Professionally-made piece of colored clothes that's meant to be worn over SKAT-9. Provides almost no protection on its own, but allows you to blend in with the surroundings. This one is basalt-colored."
+	name = "SKAT-9M式吉利服（玄武岩）"
+	desc = "悄悄地潜行。"
+	desc_extended = "专业制作的彩色伪装服，用于套在SKAT-9外面。本身几乎不提供防护，但能让你融入周围环境。这件采用玄武岩色。"
 	icon = 'icons/obj/item/clothing/suit/maskcoat_lava.dmi'
 	additional_clothing = list(/obj/item/clothing/head/helmet/full/ghillie/lava)

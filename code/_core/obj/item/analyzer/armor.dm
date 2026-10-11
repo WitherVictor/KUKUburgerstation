@@ -39,7 +39,7 @@
 		activator.to_chat(span("notice","护甲分析仪只能扫描类人生物的装备总防护！"))
 		return TRUE
 
-	var/list/armor_labels = list(BLADE = "切割", BLUNT = "钝击", PIERCE = "穿刺", LASER = "激光", ARCANE = "奥术", HEAT = "高温", COLD = "低温", SHOCK = "电击", ACID = "酸蚀", BOMB = "爆炸", BIO = "生化", RAD = "辐射", HOLY = "神圣", DARK = "黑暗", FATIGUE = "疲劳", PAIN = "疼痛", ION = "离子", SANITY = "理智", MENTAL = "精神", ALL = "全部", BRUTE = "物理", BURN = "灼烧", TOX = "毒素", OXY = "缺氧", "deflection" = "偏转")
+	var/list/armor_labels = list(BLADE = "切割", BLUNT = "钝击", PIERCE = "穿刺", LASER = "激光", ARCANE = "奥术", HEAT = "高温", COLD = "寒冷", SHOCK = "电击", ACID = "酸蚀", BOMB = "爆炸", BIO = "生物武器", RAD = "辐射", HOLY = "神圣", DARK = "黑暗", FATIGUE = "疲劳", PAIN = "疼痛", ION = "离子", SANITY = "理智", MENTAL = "精神", ALL = "全部", BRUTE = "物理", BURN = "灼烧", TOX = "毒素", OXY = "缺氧", "deflection" = "偏转")
 	for(var/k in armor_list)
 		if(k == "items")
 			continue

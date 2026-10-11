@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/heal
-	name = "tome of healing"
-	desc = "Wounds-B-Gone"
-	desc_extended = "Costs mana to use. Those in a 3x3 area are affected by the heal, including the caster."
+	name = "治疗法术典籍"
+	desc = "伤口消消乐。"
+	desc_extended = "使用时消耗法力。治疗影响3x3区域内的目标，包括施法者。"
 	cost_mana = 50
 
 	icon = 'icons/obj/items/weapons/ranged/magic/tomes/healing.dmi'

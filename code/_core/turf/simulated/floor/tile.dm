@@ -1,5 +1,5 @@
 /turf/simulated/floor/tile
-	name = "tile floor"
+	name = "地砖"
 
 	icon = 'icons/turf/floor/tile.dmi'
 	icon_state = "multi"
@@ -7,8 +7,8 @@
 	footstep = /footstep/tile
 
 	layer = LAYER_FLOOR_TILE
-	desc = "A tiled floor"
-	desc_extended = "Nobody has anything particular to say about this specific floor pattern yet"
+	desc = "铺着地砖的地板。"
+	desc_extended = "目前还没人对这种特定的地砖图案有什么特别的评价。"
 
 	exposed = FALSE
 
@@ -24,11 +24,11 @@
 	color = COLOR_GREY_DARK
 
 /turf/simulated/floor/tile/chapel/decor
-	name = "chapel floor"
+	name = "教堂地板"
 	icon = 'icons/turf/floor/chapel.dmi'
 	icon_state = "floor"
-	desc = "A holy floor"
-	desc_extended = "Doesn't actually increase the strength of religious magic while standing on it."
+	desc = "神圣的地板。"
+	desc_extended = "站在上面并不会真的增强宗教魔法的威力。"
 	color = "#FFFFFF"
 
 /turf/simulated/floor/tile/grey
@@ -102,8 +102,8 @@
 
 /turf/simulated/floor/tile/medical
 	color = COLOR_MEDICAL
-	desc = "A medical floor"
-	desc_extended = "Not actually any more sterile than a normal tile floor"
+	desc = "医疗区地板。"
+	desc_extended = "其实并不比普通地砖更无菌。"
 
 /turf/simulated/floor/tile/coldroom
 	color = "#DBF9F9"
@@ -113,16 +113,16 @@
 
 /turf/simulated/floor/tile/bananium
 	color = "#FFFF00"
-	desc = "A funny floor"
-	desc_extended = "The floor pattern isn't particularly funny, but makes you laugh anyways"
+	desc = "滑稽的地板。"
+	desc_extended = "地砖图案并不特别好笑，但还是会让你笑出来。"
 
 /turf/simulated/floor/tile/cargo
 	color = COLOR_CARGO
 
 /turf/simulated/floor/tile/command
 	color = COLOR_COMMAND
-	desc = "A commanding floor"
-	desc_extended = "A floor that makes you want to point and tell your crewmates to make it so."
+	desc = "威风的地板。"
+	desc_extended = "让你忍不住伸手一指，命令船员照办的地板。"
 
 
 

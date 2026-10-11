@@ -1,9 +1,9 @@
 /obj/item/clothing/shirt/suit
-	name = "suit"
+	name = "西装"
 	icon = 'icons/obj/item/clothing/suit/suit_red.dmi'
 
-	desc = "Objection!"
-	desc_extended = "hello yes this is a description"
+	desc = "异议！"
+	desc_extended = "你好，没错，这就是一段物品说明。"
 
 
 	armor = /armor/cloth
@@ -15,38 +15,38 @@
 
 // maybe eventually perhaps i'll make this stuff colorable. that eventually is definitely not now.
 /obj/item/clothing/shirt/suit/red
-	name = "red suit"
+	name = "红色西装"
 	icon = 'icons/obj/item/clothing/suit/suit_red.dmi'
 
-	desc = "A red suit."
-	desc_extended = "It's like a suit, but red."
+	desc = "一件红色西装。"
+	desc_extended = "就是西装，只不过是红色的。"
 
 
 /obj/item/clothing/shirt/suit/green
-	name = "green suit"
+	name = "绿色西装"
 	icon = 'icons/obj/item/clothing/suit/suit_green.dmi'
 
-	desc = "A green suit."
-	desc_extended = "It's like a suit, but green."
+	desc = "一件绿色西装。"
+	desc_extended = "就是西装，只不过是绿色的。"
 
 
 /obj/item/clothing/shirt/suit/brown
-	name = "brown suit"
+	name = "棕色西装"
 	icon = 'icons/obj/item/clothing/suit/suit_brown.dmi'
 
-	desc = "A red suit."
-	desc_extended = "It's like a suit, but brown."
+	desc = "一件棕色西装。"
+	desc_extended = "就是西装，只不过是棕色的。"
 
 /obj/item/clothing/shirt/suit/black
-	name = "black suit"
+	name = "黑色西装"
 	icon = 'icons/obj/item/clothing/suit/suit_black.dmi'
 
-	desc = "A black suit."
-	desc_extended = "It's a suit. What more is there to say?"
+	desc = "一件黑色西装。"
+	desc_extended = "这是一件西装，还能说什么呢？"
 
 /obj/item/clothing/shirt/suit/pinstripe
-	name = "pinstripe suit"
+	name = "细条纹西装"
 	icon = 'icons/obj/item/clothing/suit/pinstripe.dmi'
 
-	desc = "What in the goddamn?!"
-	desc_extended = "Lets keep this in the grove, hey? Smooth moves, like smooth little babies."
+	desc = "这他妈是什么情况？！"
+	desc_extended = "咱们保持这股范儿，好吗？动作顺滑，就像滑溜溜的小娃娃。"

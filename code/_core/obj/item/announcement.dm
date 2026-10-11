@@ -1,9 +1,9 @@
 var/global/next_announcement = 0
 
 /obj/item/announcement/
-	name = "broadcast announcement device"
-	desc = "One day while..."
-	desc_extended = "A one time use announcement system."
+	name = "公告广播装置"
+	desc = "有一天，当……"
+	desc_extended = "一次性公告系统。"
 	icon = 'icons/obj/item/pda.dmi'
 	icon_state = "captain"
 
@@ -37,10 +37,10 @@ var/global/next_announcement = 0
 		return FALSE
 
 	if(next_announcement > world.time)
-		activator.to_chat(span("warning","Please wait [DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))] seconds before sending an announcement!"))
+		activator.to_chat(span("warning","请再等[DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))]秒后发送公告！"))
 		return FALSE
 
-	var/message = input("What should the message be?", "Message", stored_message) as message | null
+	var/message = input("你想发送什么内容？", "公告内容", stored_message) as message | null
 
 	if(src.qdeleting)
 		return FALSE
@@ -50,30 +50,30 @@ var/global/next_announcement = 0
 	stored_message = message
 
 	if(!message)
-		activator.to_chat(span("notice","You decide not to use the device."))
+		activator.to_chat(span("notice","你决定不使用这个装置。"))
 		return FALSE
 
 	message = police_text(activator.client,message,check_characters=TRUE)
 
 	if(!message)
-		activator.to_chat(span("notice","You decide not to use the device."))
+		activator.to_chat(span("notice","你决定不使用这个装置。"))
 		return FALSE
 
 	if(get_turf(activator) != get_turf(src))
-		activator.to_chat(span("warning","You're too far away!"))
+		activator.to_chat(span("warning","你离得太远了！"))
 		return FALSE
 
 	if(!sender)
-		sender = "Central Command Portable Announcement System."
+		sender = "中央指挥部便携公告系统"
 
 	if(!title)
-		title = "Message from [activator.name]"
+		title = "来自[activator.name]的消息"
 
 	if(print_owner)
 		message = "[message]<br> -[activator.name]"
 
 	if(next_announcement > world.time)
-		activator.to_chat(span("warning","Please wait [DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))] seconds before sending an announcement!"))
+		activator.to_chat(span("warning","请再等[DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))]秒后发送公告！"))
 		return FALSE
 
 	announce(sender,title,message,sound_to_play=sound_to_play)
@@ -87,65 +87,65 @@ var/global/next_announcement = 0
 	return TRUE
 
 /obj/item/announcement/syndicate
-	desc_extended = "A one time use announcement system that sends a taunt to the crew. This one is for syndicate. Automatically signs your name in the message."
+	desc_extended = "向船员发送挑衅的一次性公告系统。这款供辛迪加使用，会自动在消息中签上你的名字。"
 	icon_state = "syndicate"
-	title = "Declaration of War"
-	sender = "The Syndicate"
+	title = "宣战公告"
+	sender = "辛迪加"
 	value = 500
 	sound_to_play = 'sound/alert/warning.ogg'
 
 /obj/item/announcement/syndicate/can_use(var/mob/activator)
 
 	if(!is_living(activator))
-		activator.to_chat(span("warning","You don't seem to know how to use this..."))
+		activator.to_chat(span("warning","你似乎不知道该怎么用这东西……"))
 		return FALSE
 
 	var/mob/living/L = activator
 	if(L.loyalty_tag != "Syndicate")
-		L.to_chat(span("warning","You don't seem to know how to use this..."))
+		L.to_chat(span("warning","你似乎不知道该怎么用这东西……"))
 		return FALSE
 
 	return TRUE
 
 
 /obj/item/announcement/wizard
-	desc_extended = "A one time use announcement system that sends a taunt to the crew. This one is for wizard. Automatically signs your name in the message."
+	desc_extended = "向船员发送挑衅的一次性公告系统。这款供巫师使用，会自动在消息中签上你的名字。"
 	icon_state = "syndicate"
-	title = "Declaration of Wizarding"
-	sender = "The Wizard Federation"
+	title = "巫师宣言"
+	sender = "巫师联邦"
 	value = 500
 	sound_to_play = 'sound/alert/warning.ogg'
 
 /obj/item/announcement/wizard/can_use(var/mob/activator)
 
 	if(!is_living(activator))
-		activator.to_chat(span("warning","You don't seem to know how to use this..."))
+		activator.to_chat(span("warning","你似乎不知道该怎么用这东西……"))
 		return FALSE
 
 	var/mob/living/L = activator
 	if(L.loyalty_tag != "Wizard Federation")
-		L.to_chat(span("warning","You don't seem to know how to use this..."))
+		L.to_chat(span("warning","你似乎不知道该怎么用这东西……"))
 		return FALSE
 
 	return TRUE
 
 /obj/item/announcement/rev
-	desc_extended = "A one time use announcement system that sends a taunt to the crew. This one is for revolutionaries. Automatically signs your name in the message."
+	desc_extended = "向船员发送挑衅的一次性公告系统。这款供革命军使用，会自动在消息中签上你的名字。"
 	icon_state = "rev"
-	title = "Declaration of Mutiny"
-	sender = "The Revolutionaries"
+	title = "兵变宣言"
+	sender = "革命军"
 	value = 500
 	var/sounds_to_play = list('sound/alert/rev_pda_1.ogg','sound/alert/rev_pda_2.ogg','sound/alert/rev_pda_3.ogg','sound/alert/rev_pda_4.ogg')
 
 /obj/item/announcement/rev/can_use(var/mob/activator)
 
 	if(!is_living(activator))
-		activator.to_chat(span("warning","You don't seem to know how to use this..."))
+		activator.to_chat(span("warning","你似乎不知道该怎么用这东西……"))
 		return FALSE
 
 	var/mob/living/L = activator
 	if(L.loyalty_tag != "Revolutionary")
-		L.to_chat(span("warning","You don't seem to know how to use this..."))
+		L.to_chat(span("warning","你似乎不知道该怎么用这东西……"))
 		return FALSE
 
 	return TRUE
@@ -163,10 +163,10 @@ var/global/next_announcement = 0
 		return FALSE
 
 	if(next_announcement > world.time)
-		activator.to_chat(span("warning","Please wait [DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))] seconds before sending an announcement!"))
+		activator.to_chat(span("warning","请再等[DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))]秒后发送公告！"))
 		return FALSE
 
-	var/message = input("What should the message be?", "Message", stored_message) as message | null
+	var/message = input("你想发送什么内容？", "公告内容", stored_message) as message | null
 
 	if(src.qdeleting)
 		return FALSE
@@ -176,30 +176,30 @@ var/global/next_announcement = 0
 	stored_message = message
 
 	if(!message)
-		activator.to_chat(span("notice","You decide not to use the device."))
+		activator.to_chat(span("notice","你决定不使用这个装置。"))
 		return FALSE
 
 	message = police_text(activator.client,message,check_characters=TRUE)
 
 	if(!message)
-		activator.to_chat(span("notice","You decide not to use the device."))
+		activator.to_chat(span("notice","你决定不使用这个装置。"))
 		return FALSE
 
 	if(get_turf(activator) != get_turf(src))
-		activator.to_chat(span("warning","You're too far away!"))
+		activator.to_chat(span("warning","你离得太远了！"))
 		return FALSE
 
 	if(!sender)
-		sender = "Central Command Portable Announcement System."
+		sender = "中央指挥部便携公告系统"
 
 	if(!title)
-		title = "Message from [activator.name]"
+		title = "来自[activator.name]的消息"
 
 	if(print_owner)
 		message = "[message]<br> -[activator.name]"
 
 	if(next_announcement > world.time)
-		activator.to_chat(span("warning","Please wait [DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))] seconds before sending an announcement!"))
+		activator.to_chat(span("warning","请再等[DECISECONDS_TO_SECONDS(CEILING(next_announcement - world.time,10))]秒后发送公告！"))
 		return FALSE
 
 	announce(sender,title,message,sound_to_play=pick(sounds_to_play))

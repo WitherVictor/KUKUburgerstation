@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/mummy
-	name = "mummy wrappings"
-	desc = "Not just for the dead, it seems."
-	desc_extended = "A strange set of enchanted wrappings, previously used for burial rights by a previous colony."
+	name = "木乃伊附魔裹布"
+	desc = "看来不只是死人才能用。"
+	desc_extended = "一套奇怪的附魔裹布，曾被先前的殖民地用于葬礼仪式。"
 	icon = 'icons/obj/item/clothing/suit/mummy.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 

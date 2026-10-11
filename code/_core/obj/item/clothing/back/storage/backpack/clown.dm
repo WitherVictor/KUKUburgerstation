@@ -1,7 +1,7 @@
 obj/item/clothing/back/storage/backpack/clown
-	name = "clown's backpack"
-	desc = "Lightweight and reliable!"
-	desc_extended = "A small gear harness designed to carry a small amount of large items. Perfect for looters of the battlefield."
+	name = "小丑双肩包"
+	desc = "轻便可靠！"
+	desc_extended = "小型装备背具，可携带少量大件物品，是战场拾荒者的理想装备。"
 
 	icon = 'icons/obj/item/clothing/back/backpack/clown.dmi'
 
@@ -13,9 +13,9 @@ obj/item/clothing/back/storage/backpack/clown
 	value = 160
 
 obj/item/clothing/back/storage/backpack/clown/bag_of_bombs
-	name = "clown's bag of bombs"
-	desc = "Uh oh."
-	desc_extended = "A suspicious backpack containing a near-endless supply of bombs which can be obtained when worn. A near-smudged out warning notes that the bombs come pre-lit."
+	name = "小丑炸弹背包"
+	desc = "糟糕。"
+	desc_extended = "一个可疑的背包，装着近乎无穷无尽的炸弹，穿戴后即可取出。几乎被擦掉的警告写着：炸弹取出时已经点燃。"
 
 	rarity = RARITY_MYTHICAL
 
@@ -39,7 +39,7 @@ obj/item/clothing/back/storage/backpack/clown/bag_of_bombs/click_self(var/mob/ac
 			INTERACT_CHECK
 			INTERACT_DELAY(5)
 			if(next_bomb >= world.time)
-				activator.to_chat(span("notice","\The [src.name] is recharging, please wait!"))
+				activator.to_chat(span("notice","[src.name]正在补充，请稍候！"))
 				return TRUE
 			next_bomb = world.time + SECONDS_TO_DECISECONDS(4)
 			var/obj/item/slime_bomb/SB = new(T)
@@ -49,7 +49,7 @@ obj/item/clothing/back/storage/backpack/clown/bag_of_bombs/click_self(var/mob/ac
 			GENERATE(SB)
 			FINALIZE(SB)
 			SB.light()
-			L.visible_message(span("warning","\The [L.name] pulls a lit [SB.name] out of \the [src.name]!"),span("warning","You pull a lit [SB.name] out of \the [src.name]!"))
+			L.visible_message(span("warning","[L.name]从[src.name]里掏出了已经点燃的[SB.name]！"),span("warning","你从[src.name]里掏出了已经点燃的[SB.name]！"))
 			L.put_in_hands(SB,params)
 			return TRUE
 

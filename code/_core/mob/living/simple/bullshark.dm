@@ -1,5 +1,5 @@
 /mob/living/simple/bullshark
-	name = "bullshark"
+	name = "牛鲨"
 	icon = 'icons/mob/living/simple/bullshark.dmi'
 	icon_state = "living"
 

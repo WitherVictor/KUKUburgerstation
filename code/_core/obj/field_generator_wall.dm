@@ -1,5 +1,5 @@
 /obj/field_generator_wall
-	name = "field generator wall"
+	name = "力场屏障"
 	mouse_opacity = 0
 	opacity = 0
 	density = TRUE

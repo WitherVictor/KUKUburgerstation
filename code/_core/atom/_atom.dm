@@ -1,6 +1,6 @@
 /atom/
 	name = "atom"
-	desc = "What the fuck is this?"
+	desc = "这他妈是什么？"
 	var/label
 
 	appearance_flags = LONG_GLIDE | PIXEL_SCALE | TILE_BOUND

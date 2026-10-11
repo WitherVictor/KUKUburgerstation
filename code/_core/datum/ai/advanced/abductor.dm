@@ -9,8 +9,8 @@
 	if(is_living(objective_attack) && !CALLBACK_EXISTS("\ref[src]_fuckoff") && objective_attack && objective_attack.has_status_effects(STAMCRIT,PAINCRIT))
 		var/obj/hud/inventory/I = A.inventories_by_id[BODY_HAND_LEFT]
 		if(istype(I) && istype(I.get_top_object(),/obj/item/clothing/hands/gloves/recall))
-			A.do_say("Ayy lmao")
-			A.visible_message(span("warning","\The [A.name] quickly presses a series of buttons on their left arm..."))
+			A.do_say("哎哟，笑死了")
+			A.visible_message(span("warning","[A.name]飞快地按下左臂上的一串按钮……"))
 			CALLBACK("\ref[src]_fuckoff",SECONDS_TO_DECISECONDS(rand(1,2)),src,src::fuckoff())
 
 /ai/advanced/abductor/on_damage_received(var/atom/atom_damaged,var/atom/attacker,var/atom/weapon,var/damagetype/DT,var/list/damage_table,var/damage_amount,var/critical_hit_multiplier,var/stealthy=FALSE)
@@ -22,7 +22,7 @@
 	if(!CALLBACK_EXISTS("\ref[src]_fuckoff") && A.health && !A.dead && !qdeleting && !stealthy && A.health.health_current/A.health.health_max <= 0.5 && !A.has_status_effects(ZOMBIE,STUN,SLEEP,PARALYZE))
 		var/obj/hud/inventory/I = A.inventories_by_id[BODY_HAND_LEFT]
 		if(istype(I) && istype(I.get_top_object(),/obj/item/clothing/hands/gloves/recall))
-			A.visible_message(span("warning","\The [A.name] quickly presses a series of buttons on their left arm..."))
+			A.visible_message(span("warning","[A.name]飞快地按下左臂上的一串按钮……"))
 			CALLBACK("\ref[src]_fuckoff",SECONDS_TO_DECISECONDS(rand(1,2)),src,src::fuckoff())
 
 
@@ -33,6 +33,6 @@
 	var/turf/T = get_turf(A)
 	play_sound('sound/effects/space_phase.ogg',T)
 	new /obj/effect/temp/phase/out(T)
-	A.visible_message(span("danger","\The [A.name] teleports to safety!"))
+	A.visible_message(span("danger","[A.name]传送到了安全处！"))
 	qdel(A)
 	return TRUE

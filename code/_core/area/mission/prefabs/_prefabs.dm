@@ -7,7 +7,7 @@
 	allow_area_expansion = FALSE
 
 /area/mission/prefab/vault
-	name = "\improper Vault"
+	name = "\improper 金库"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE

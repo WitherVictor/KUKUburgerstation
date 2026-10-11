@@ -120,9 +120,9 @@
 	FINALIZE(linked_stand)
 
 /stand/proc/display_stand(var/mob/activator)
-	activator.to_chat("Stand Name: <b>[name]</b>")
-	activator.to_chat("Stand User: [stand_user.name]")
-	activator.to_chat("Stand Cry: <b>\"[stand_cry]\"</b>")
+	activator.to_chat("替身名称：<b>[name]</b>")
+	activator.to_chat("替身使者：[stand_user.name]")
+	activator.to_chat("替身战吼：<b>\"[stand_cry]\"</b>")
 	return TRUE
 
 /mob/living/proc/remove_stand()
@@ -135,7 +135,7 @@
 		return FALSE
 
 	if(stand)
-		to_chat(span("warning","You already have a stand!"))
+		to_chat(span("warning","你已经拥有替身了！"))
 		return FALSE
 
 	stand = new(src)

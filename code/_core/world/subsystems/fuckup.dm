@@ -24,7 +24,7 @@ SUBSYSTEM_DEF(fuckup)
 		if(P.loyalty_tag != "NanoTrasen") //Antag?
 			continue
 		if(P.client)
-			P.client.to_chat(span("danger","As part of a savefile cleaning initiative, you were forced to save your character. All progress has been saved."))
+			P.client.to_chat(span("danger","为进行存档清理，系统已强制保存你的角色。所有进度均已保存。"))
 		P.force_logout()
 		CHECK_TICK_HARD
 

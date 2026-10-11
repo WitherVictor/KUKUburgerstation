@@ -1,7 +1,7 @@
 /obj/structure/interactive/power/apc
-	name = "area power converter"
-	desc = "Power to the people!"
-	desc_extended = "Recieves power and wirelessly powers machinery in the room. Commonly abbreviated to APC."
+	name = "区域电力转换器"
+	desc = "把电力交给人民！"
+	desc_extended = "接收电力，并无线供应房间内的机器。通常简称APC。"
 	icon = 'icons/obj/structure/power.dmi'
 	icon_state = "apc"
 
@@ -25,8 +25,8 @@
 		var/area/A = k
 		total_power_draw += A.power_draw
 
-	. += div("notice","Area Power Draw: [total_power_draw]w.")
-	. += div("notice","\The [cell.name] has [cell.charge_current] out of [cell.charge_max] charge remaining.")
+	. += div("notice","区域用电功率：[total_power_draw]瓦。")
+	. += div("notice","[cell.name]剩余电量：[cell.charge_current]/[cell.charge_max]。")
 
 /obj/structure/interactive/power/apc/PreDestroy()
 

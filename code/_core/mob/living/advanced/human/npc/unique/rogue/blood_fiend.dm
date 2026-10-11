@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue/blood_fiend
-	name = "Blood Fiend"
-	desc = "A blood-obsessed warrior using magicical artifacts to further their agenda of eliminating anything evil in the world."
+	name = "血魔"
+	desc = "痴迷鲜血的战士，借助魔法遗物实现铲除世间一切邪恶的目标。"
 
 	sex = FEMALE
 	gender = FEMALE

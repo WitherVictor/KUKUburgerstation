@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/frost
-	name = "frost spray spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a short stream of slowing frost."
+	name = "寒霜喷射法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "短暂喷射一道使目标减速的寒霜。"
 	icon_state = "damage"
 
 	rarity = RARITY_RARE

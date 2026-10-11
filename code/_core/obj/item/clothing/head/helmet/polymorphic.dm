@@ -1,8 +1,8 @@
 /obj/item/clothing/head/helmet/polymorphic
-	name = "protective helmet"
+	name = "防护头盔"
 	icon = 'icons/obj/item/clothing/hats/security_new.dmi'
-	desc = "RUSH B"
-	desc_extended = "Standard-issue of the Nanotrasen security force. Protects your head from bullets."
+	desc = "冲B点！"
+	desc_extended = "纳米传讯安保部队的标准配发头盔，保护头部免受子弹伤害。"
 
 	armor = /armor/military/light/hard
 
@@ -71,7 +71,7 @@
 	)
 
 /obj/item/clothing/head/helmet/polymorphic/reinforced
-	name = "reinforced protective helmet"
+	name = "加固防护头盔"
 	armor = /armor/military/medium/hard
 
 /obj/item/clothing/head/helmet/polymorphic/reinforced/black
@@ -82,7 +82,7 @@
 	)
 
 /obj/item/clothing/head/helmet/polymorphic/reinforced/ntops
-	name = "NT ops reinforced protective helmet"
+	name = "NT行动人员加固防护头盔"
 	polymorphs = list(
 		"base" = COLOR_WHITE,
 		"ears" = COLOR_BLACK,

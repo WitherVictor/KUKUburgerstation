@@ -93,7 +93,7 @@ mob/living/advanced/get_movement_delay()
 				else
 					O.health.adjust_loss_smart(brute=1,organic=FALSE,robotic=TRUE)
 		if(prob(5) && sent_pain && sent_pain.send_pain_response(20))
-			src.to_chat(span("warning","Your broken [sent_pain.name] struggles to keep you upright!"))
+			src.to_chat(span("warning","你受损的[sent_pain.name]难以支撑身体站立！"))
 
 	if(is_turf(old_loc))
 		var/turf/T = old_loc

@@ -1,7 +1,7 @@
 /obj/structure/totem
-	name = "totem"
-	desc = "None."
-	desc_extended = "A totem that will produce a buff for the caster and their allies."
+	name = "图腾"
+	desc = "无。"
+	desc_extended = "为施法者及其友军提供增益的图腾。"
 	icon = 'icons/obj/structure/totem.dmi'
 
 	health_base = 200
@@ -53,9 +53,9 @@
 *******************/
 
 /obj/structure/totem/health_heal
-	name = "totem of health regeneration"
-	desc = "Patch them up, they said. Don't make me cry, they said."
-	desc_extended = "A totem that will restore the caster's and their allies' health."
+	name = "生命再生图腾"
+	desc = "他们说，快治好他们。他们说，别让我哭。"
+	desc_extended = "恢复施法者及其友军生命值的图腾。"
 	icon_state = "health"
 
 /obj/structure/totem/health_heal/totemic_effect() //copy paste from staff of healing's think, with slight modifications
@@ -78,9 +78,9 @@
 		CREATE(/obj/effect/temp/healing,L.loc)
 
 /obj/structure/totem/health_deal
-	name = "totem of health degeneration"
-	desc = "Pain and Suffering, two of my favorite toys!"
-	desc_extended = "A totem that will damage the caster's enemies' health."
+	name = "生命侵蚀图腾"
+	desc = "痛楚与苦难，我最爱的两件玩具！"
+	desc_extended = "损耗施法者敌人生命值的图腾。"
 	icon_state = "healthloss"
 
 /obj/structure/totem/health_deal/totemic_effect() //copy paste from staff of healing's think, with slight modifications
@@ -98,9 +98,9 @@
 		CREATE(/obj/effect/temp/electricity,L.loc)
 
 /obj/structure/totem/stamina_heal
-	name = "totem of stamina regeneration"
-	desc = "Someone hasn't been working out, they'd rather drug up..."
-	desc_extended = "A totem that will restore the caster's and their allies' stamina."
+	name = "体力再生图腾"
+	desc = "有人不肯锻炼，宁愿靠药物撑着……"
+	desc_extended = "恢复施法者及其友军体力的图腾。"
 	icon_state = "stamina"
 
 /obj/structure/totem/stamina_heal/totemic_effect() //will need testing and help to balance this
@@ -118,9 +118,9 @@
 		CREATE(/obj/effect/temp/healing,L.loc)
 
 /obj/structure/totem/stamina_deal
-	name = "totem of stamina degeneration"
-	desc = "It is a fast acting paralyzing agent that will render them useless!"
-	desc_extended = "A totem that will damage the caster's enemies' stamina."
+	name = "体力消耗图腾"
+	desc = "速效麻痹剂，让他们彻底没了用武之地！"
+	desc_extended = "损耗施法者敌人体力的图腾。"
 	icon_state = "staminaloss"
 
 /obj/structure/totem/stamina_deal/totemic_effect() //will need testing and help to balance this
@@ -136,9 +136,9 @@
 		CREATE(/obj/effect/temp/electricity,L.loc)
 
 /obj/structure/totem/mana_heal
-	name = "totem of mana regeneration"
-	desc = "Don't ask how many years it took for me to reach this state of wizardry."
-	desc_extended = "A totem that will restore the caster's and their allies' mana."
+	name = "法力再生图腾"
+	desc = "别问我练到这等魔法境界花了多少年。"
+	desc_extended = "恢复施法者及其友军法力的图腾。"
 	icon_state = "mana"
 
 /obj/structure/totem/mana_heal/totemic_effect() //will need testing and help to balance this
@@ -156,9 +156,9 @@
 		CREATE(/obj/effect/temp/healing,L.loc)
 
 /obj/structure/totem/mana_deal
-	name = "totem of mana degeneration"
-	desc = "I'm melting, I'm melting!"
-	desc_extended = "A totem that will damage the caster's enemies' mana."
+	name = "法力消耗图腾"
+	desc = "我要融化了，我要融化了！"
+	desc_extended = "损耗施法者敌人法力的图腾。"
 	icon_state = "manaloss"
 
 /obj/structure/totem/mana_deal/totemic_effect() //will need testing and help to balance this
@@ -174,10 +174,10 @@
 		CREATE(/obj/effect/temp/electricity,L.loc)
 
 /obj/structure/totem/sacred_flame
-	name = "totem of sacred flame"
-	desc = "Can you hear the voice of god through this bush flame?"
-	desc = "Someone thought to take a book and stick it inside the totem."
-	desc_extended = "A totem that will set ablaze the caster's enemies."
+	name = "圣焰图腾"
+	desc = "你能从这燃烧的灌木中听见神谕吗？"
+	desc = "有人想出了把一本书塞进图腾的点子。"
+	desc_extended = "点燃施法者敌人的图腾。"
 	icon_state = "sacred_flame"
 
 /obj/structure/totem/sacred_flame/totemic_effect() //will need testing and help to balance this
@@ -194,9 +194,9 @@
 		CREATE(/obj/effect/temp/electricity,L.loc)
 
 /obj/structure/totem/repelling
-	name = "totem of repelling"
-	desc = "They thought it meant aggro, what suckers."
-	desc_extended = "A totem that will repel the caster's enemies."
+	name = "排斥图腾"
+	desc = "他们以为这是拉仇恨用的，真是傻瓜。"
+	desc_extended = "推开施法者敌人的图腾，对首领无效。"
 	icon_state = "magnet"
 
 /obj/structure/totem/repelling/totemic_effect() //will need testing and help to balance this
@@ -218,9 +218,9 @@
 		CREATE(/obj/effect/temp/electricity,L.loc)
 
 /obj/structure/totem/attracting
-	name = "totem of attracting"
-	desc = "They thought it meant aggro, what suckers."
-	desc_extended = "A totem that will attract the caster's enemies."
+	name = "吸引图腾"
+	desc = "他们以为这是拉仇恨用的，真是傻瓜。"
+	desc_extended = "拉近施法者敌人的图腾，对首领无效。"
 	icon_state = "magnet"
 
 /obj/structure/totem/attracting/totemic_effect() //will need testing and help to balance this
@@ -242,9 +242,9 @@
 		CREATE(/obj/effect/temp/electricity,L.loc)
 
 /obj/structure/totem/projectile
-	name = "totem of projectile"
-	desc = "None."
-	desc_extended = "A totem that will fire projectiles at the caster's enemies."
+	name = "弹体图腾"
+	desc = "无。"
+	desc_extended = "向施法者的敌人发射弹体的图腾。"
 	var/chosenProjectile
 	var/chosenDamageType
 
@@ -282,57 +282,57 @@
 		)
 
 /obj/structure/totem/projectile/frost_spray
-	name = "totem of frost spray"
-	desc = "The weather outside is frightful, but the fire is so delightful."
-	desc_extended = "A totem that will fire frost spray at the caster's enemies."
+	name = "寒霜喷射图腾"
+	desc = "外面天寒地冻，炉火却暖意融融。"
+	desc_extended = "向施法者的敌人喷射寒霜的图腾。"
 	icon_state = "frost"
 	chosenProjectile = /obj/projectile/magic/frost
 	chosenDamageType = /damagetype/ranged/magic/frost
 
 /obj/structure/totem/projectile/flame_spray
-	name = "totem of flame spray"
-	desc = "The weather outside is frightful, but the fire is so delightful."
-	desc_extended = "A totem that will fire flame spray at the caster's enemies."
+	name = "火焰喷射图腾"
+	desc = "外面天寒地冻，炉火却暖意融融。"
+	desc_extended = "向施法者的敌人喷射火焰的图腾。"
 	icon_state = "flame"
 	chosenProjectile = /obj/projectile/magic/lesser_fire
 	chosenDamageType = /damagetype/ranged/magic/flame
 
 /obj/structure/totem/projectile/shock_spray
-	name = "totem of shock spray"
-	desc = "Listen to be baby, you've got to understand, lightning striking again!"
-	desc_extended = "A totem that will fire shock spray at the caster's enemies."
+	name = "电击喷射图腾"
+	desc = "听我说，宝贝，你得明白，闪电又劈下来了！"
+	desc_extended = "向施法者的敌人释放电击的图腾。"
 	icon_state = "shock"
 	chosenProjectile = /obj/projectile/magic/lightning
 	chosenDamageType = /damagetype/ranged/magic/shock
 
 /obj/structure/totem/projectile/ice_crystal
-	name = "totem of ice crystal"
-	desc = "The weather outside is frightful, but the fire is so delightful."
-	desc_extended = "A totem that will fire an ice crystal at the caster's enemies."
+	name = "冰晶图腾"
+	desc = "外面天寒地冻，炉火却暖意融融。"
+	desc_extended = "向施法者的敌人发射冰晶的图腾。"
 	icon_state = "frost"
 	chosenProjectile = /obj/projectile/magic/crystal/ice
 	chosenDamageType = /damagetype/ranged/magic/ice
 
 /obj/structure/totem/projectile/fireball
-	name = "totem of fireball"
-	desc = "The weather outside is frightful, but the fire is so delightful."
-	desc_extended = "A totem that will fire a fireball at the caster's enemies."
+	name = "火球图腾"
+	desc = "外面天寒地冻，炉火却暖意融融。"
+	desc_extended = "向施法者的敌人发射火球的图腾。"
 	icon_state = "flame"
 	chosenProjectile = /obj/projectile/magic/fireball
 	chosenDamageType = /damagetype/ranged/magic/fireball
 
 /obj/structure/totem/projectile/lightning_bolt
-	name = "totem of lightning bolt"
-	desc = "Listen to be baby, you've got to understand, lightning striking again!"
-	desc_extended = "A totem that will fire a lightning bolt at the caster's enemies."
+	name = "闪电图腾"
+	desc = "听我说，宝贝，你得明白，闪电又劈下来了！"
+	desc_extended = "向施法者的敌人发射闪电的图腾。"
 	icon_state = "shock"
 	chosenProjectile = /obj/projectile/magic/lightning_bolt
 	chosenDamageType = /damagetype/ranged/magic/lightning
 
 /obj/structure/totem/blood_heal
-	name = "totem of blood regeneration"
-	desc = "It is water bending, but for blood."
-	desc_extended = "A totem that will restore the caster's and allies blood."
+	name = "血液再生图腾"
+	desc = "就像御水术，只不过操纵的是血。"
+	desc_extended = "补充施法者及其友军血量的图腾。"
 	icon_state = "blood"
 
 /obj/structure/totem/blood_heal/totemic_effect() //will need testing and help to balance this
@@ -350,9 +350,9 @@
 		CREATE(/obj/effect/temp/healing,L.loc)
 
 /obj/structure/totem/blood_deal
-	name = "totem of blood degeneration"
-	desc = "It is water bending, but for blood."
-	desc_extended = "A totem that will bleed the caster's enemies."
+	name = "血液流失图腾"
+	desc = "就像御水术，只不过操纵的是血。"
+	desc_extended = "使施法者敌人失血的图腾。"
 	icon_state = "bloodloss"
 
 /obj/structure/totem/blood_deal/totemic_effect() //will need testing and help to balance this

@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/fishing
-	name = "fishing equipment vendor"
+	name = "钓具售货机"
 	icon_state = "fishing"
 
 	icon_state_broken = null

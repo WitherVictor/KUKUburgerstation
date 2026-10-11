@@ -13,7 +13,7 @@
 	if(ispath(structure_to_make,/obj/structure/interactive/construction/))
 		var/obj/structure/interactive/construction/C = locate() in contents
 		if(C)
-			activator.to_chat(span("warning","You can't build this here, \the [C.name] is in the way!"))
+			activator.to_chat(span("warning","你不能在这里建造，[C.name]挡住了位置！"))
 			return FALSE
 		return TRUE
 

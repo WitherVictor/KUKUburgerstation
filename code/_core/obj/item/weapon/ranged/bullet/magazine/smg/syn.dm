@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/syn_smg
 	name = ".40 SYN-SMG"
-	desc = "This looks ugly."
-	desc_extended = "An early prototype of the 9x22mm NanoTech SMG. This one uses .40 ammo."
+	desc = "看着真丑。"
+	desc_extended = "纳米科技冲锋枪的早期原型。这把使用.40弹药。"
 	icon = 'icons/obj/item/weapons/ranged/smg/40_advanced.dmi'
 	icon_state = "inventory"
 	value = 1500

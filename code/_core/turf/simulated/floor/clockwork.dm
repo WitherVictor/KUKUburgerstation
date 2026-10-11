@@ -1,5 +1,5 @@
 /turf/simulated/floor/clockwork/
-	name = "clockwork floor"
+	name = "发条地板"
 	icon = 'icons/turf/floor/clockwork.dmi'
 	icon_state = "floor1"
 
@@ -30,12 +30,12 @@
 		icon_state = "floor4"
 
 /turf/simulated/floor/clockwork/vent
-	name = "clockwork vent"
+	name = "发条通风口"
 	icon = 'icons/turf/floor/clockwork.dmi'
 	icon_state = "vent_on"
 
 /turf/simulated/floor/clockwork/reebe
-	name = "clockwork plating"
+	name = "发条底板"
 	icon = 'icons/turf/floor/clockwork.dmi'
 	icon_state = "reebe"
 	destruction_turf = null

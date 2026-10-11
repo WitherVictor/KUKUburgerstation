@@ -2,8 +2,8 @@
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/starter
 	name = "\improper .45 FNG"
-	desc = "Who the hell came up with this?"
-	desc_extended = "An extremely lightweight, cheap and near recoiless combat rifle designed for new trainees to get some hands-on experience with larger firearms. It's a god damn rifle with a submachinegun round."
+	desc = "这他妈是谁想出来的？"
+	desc_extended = "极轻、便宜、几乎没有后坐力的战斗步枪，供新学员练习操作大型枪械。说白了，就是一把用冲锋枪弹药的步枪。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/46_1.dmi'
 	icon_state = "inventory"
 	value = 400

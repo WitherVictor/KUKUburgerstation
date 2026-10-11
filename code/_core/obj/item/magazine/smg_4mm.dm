@@ -1,7 +1,7 @@
 /obj/item/magazine/smg_pdw
-	name = "\improper 4.6x30mm WT-550 magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 4.6x30mm WT-550弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/4mm_smg.dmi'
 	icon_state = "mag"
 	bullet_count_max = 20
@@ -30,25 +30,25 @@
 
 
 /obj/item/magazine/smg_pdw/toxin
-	name = "\improper 4.6x30mm WT-550 magazine - toxin"
+	name = "\improper 4.6x30mm WT-550弹匣（毒素弹）"
 	icon_state = "TOX"
 	ammo = /obj/item/bullet_cartridge/pistol_4mm/toxin
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/smg_pdw/ion
-	name = "\improper 4.6x30mm WT-550 magazine - ion"
+	name = "\improper 4.6x30mm WT-550弹匣（离子弹）"
 	icon_state = "ION"
 	ammo = /obj/item/bullet_cartridge/pistol_4mm/ion
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/smg_pdw/incendiary
-	name = "\improper 4.6x30mm WT-550 magazine - incendiary"
+	name = "\improper 4.6x30mm WT-550弹匣（燃烧弹）"
 	icon_state = "INC"
 	ammo = /obj/item/bullet_cartridge/pistol_4mm/incendiary
 	rarity = RARITY_UNCOMMON
 
 /obj/item/magazine/smg_pdw/ap
-	name = "\improper 4.6x30mm WT-550 magazine - armor piercing"
+	name = "\improper 4.6x30mm WT-550弹匣（穿甲弹）"
 	icon_state = "AP"
 	ammo = /obj/item/bullet_cartridge/pistol_4mm/ap
 	rarity = RARITY_UNCOMMON

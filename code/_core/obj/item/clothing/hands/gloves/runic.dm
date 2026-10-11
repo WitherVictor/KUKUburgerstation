@@ -1,8 +1,8 @@
 /obj/item/clothing/hands/gloves/runic
-	name = "right runic glove"
+	name = "符文右手套"
 	icon = 'icons/obj/item/clothing/gloves/runic.dmi'
-	desc = "Doubling money"
-	desc_extended = "A very nice glove. Don't lose the other one!"
+	desc = "金币翻倍啦！"
+	desc_extended = "一只很不错的手套。别把另一只弄丢了！"
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
 
@@ -19,7 +19,7 @@
 	rarity = RARITY_MYTHICAL
 
 /obj/item/clothing/hands/gloves/runic/left
-	name = "left runic glove"
+	name = "符文左手套"
 
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"

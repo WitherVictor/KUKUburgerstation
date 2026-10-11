@@ -1,5 +1,5 @@
 /mob/living/simple/spider
-	name = "cave spider"
+	name = "洞穴蜘蛛"
 	icon = 'icons/mob/living/simple/spiders.dmi'
 	icon_state = "guard"
 
@@ -42,7 +42,7 @@
 	update_sprite()
 
 /mob/living/simple/spider/glow
-	name = "glowspider"
+	name = "荧光蜘蛛"
 	icon_state = "nurse"
 
 	level = 12
@@ -52,7 +52,7 @@
 	set_light(4,0.25,"#00FF00")
 
 /mob/living/simple/spider/twilight
-	name = "twilight spider"
+	name = "暮光蜘蛛"
 	icon_state = "hunter"
 
 	level = 14

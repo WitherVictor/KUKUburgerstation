@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/goblin_merchant
-	name = "goblin merchant"
-	desc = "Profitting from raiding settlements since 4506 BC."
+	name = "地精商人"
+	desc = "自公元前4506年起靠劫掠聚落牟利。"
 
 	species = "goblin"
 

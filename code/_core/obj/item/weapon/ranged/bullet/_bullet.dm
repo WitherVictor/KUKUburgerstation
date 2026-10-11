@@ -104,7 +104,7 @@ obj/item/weapon/ranged/bullet/handle_empty(var/mob/activator)
 				var/obj/item/weapon/ranged/bullet/magazine/M = src
 				play_sound(M.get_cock_sound("forward"),T,range_max=VIEW_RANGE*0.5,pitch=sound_pitch)
 		else
-			activator?.to_chat(span("warning","You can't load \the [B.name] into \the [src.name]!"))
+			activator?.to_chat(span("warning","无法将[B.name]装入[src.name]！"))
 
 	return .
 
@@ -152,7 +152,7 @@ obj/item/weapon/ranged/bullet/handle_empty(var/mob/activator)
 	. = ..()
 
 	if(chambered_bullet)
-		. += div("notice","There is a bullet loaded in the chamber.")
+		. += div("notice","膛内已经装有一发弹药。")
 
 /obj/item/weapon/ranged/bullet/get_ranged_damage_type()
 	return chambered_bullet ? chambered_bullet.damage_type : null
@@ -174,10 +174,10 @@ obj/item/weapon/ranged/bullet/handle_empty(var/mob/activator)
 		jam_chance *= 0.1 + 0.9*(heat_max ? heat_current/heat_max : 0)
 
 	if(jammed)
-		if(B.jam_chance < 100) activator.to_chat(span("notice","You unjam \the [src.name]!"))
+		if(B.jam_chance < 100) activator.to_chat(span("notice","你排除了[src.name]的卡壳！"))
 		jammed = FALSE
 	else if(jam_chance && luck(list(B,src,activator),jam_chance,FALSE))
-		if(B.jam_chance < 100) activator.to_chat(span("danger","\The [src.name] jams!"))
+		if(B.jam_chance < 100) activator.to_chat(span("danger","[src.name]卡壳了！"))
 		jammed = TRUE
 		return FALSE
 
@@ -286,11 +286,11 @@ obj/item/weapon/ranged/bullet/handle_empty(var/mob/activator)
 /obj/item/weapon/ranged/bullet/proc/can_load_chamber(var/mob/activator,var/obj/item/bullet_cartridge/B) //B can be a type or a path.
 
 	if(chambered_bullet)
-		activator?.to_chat(span("warning","There is already a chambered bullet inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[src.name]膛内已经有弹药了！"))
 		return FALSE
 
 	if(!can_fit_bullet(B))
-		activator?.to_chat(span("warning","\The [initial(B.name)] can't fit inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[initial(B.name)]无法装入[src.name]！"))
 		return FALSE
 
 	return TRUE
@@ -324,15 +324,15 @@ obj/item/weapon/ranged/bullet/handle_empty(var/mob/activator)
 		return FALSE
 
 	if(!can_fit_bullet(B))
-		activator?.to_chat(span("warning","\The [initial(B.name)] cannot fit inside \the [src.name]!"))
+		activator?.to_chat(span("warning","[initial(B.name)]无法装入[src.name]！"))
 		return FALSE
 
 	if(!open)
-		activator?.to_chat(span("warning","You must open \the [src.name] first before loading it!"))
+		activator?.to_chat(span("warning","必须先打开[src.name]才能装填！"))
 		return FALSE
 
 	if(get_real_length(stored_bullets) >= length(stored_bullets))
-		activator?.to_chat(span("warning","You can't fit any more bullets into \the [src.name]!"))
+		activator?.to_chat(span("warning","[src.name]已经装不下更多弹药了！"))
 		return FALSE
 
 	return TRUE

@@ -1,5 +1,5 @@
 /turf/simulated/floor/plating
-	name = "steel floor plating"
+	name = "钢制底板"
 
 	icon = 'icons/turf/floor/plating.dmi'
 	icon_state = "empty"
@@ -12,15 +12,15 @@
 	layer = LAYER_FLOOR_PLATING
 
 	exposed = TRUE
-	desc = "The plating underneath the floor"
-	desc_extended = "A floor found underneath an actual floor."
+	desc = "地板下方的底板。"
+	desc_extended = "真正的地板下面还有一层底板。"
 
 	health_base = 1000
 
 	wet_floor_icon_state = "tile"
 
 /turf/simulated/floor/plating/reinforced
-	name = "reinforced plating"
+	name = "加固底板"
 	icon_state = "filled3"
 	exposed = FALSE
 
@@ -32,12 +32,12 @@
 	color = COLOR_STEEL_DARK
 
 /turf/simulated/floor/plating/snow
-	name = "snowed plating"
+	name = "积雪底板"
 	icon = 'icons/turf/floor/plating.dmi'
 	icon_state = "empty"
 
 /turf/simulated/floor/plating/shuttle
-	name = "reinforced plating"
+	name = "加固底板"
 	icon = 'icons/turf/floor/spaceship.dmi'
 	icon_state = "plating"
 	plane = PLANE_SHUTTLE
@@ -47,7 +47,7 @@
 
 
 /turf/simulated/floor/plating/syndicate
-	name = "dark steel floor plating"
+	name = "深色钢制底板"
 	color = COLOR_STEEL_DARK
 
 /turf/simulated/floor/plating/syndicate/can_move_to(check_contents)
@@ -56,18 +56,18 @@
 	. = ..()
 
 /turf/simulated/floor/plating/solarian
-	name = "solarian steel floor plating"
+	name = "太阳系钢制底板"
 	color = "#66706C"
 
 
 
 /turf/simulated/floor/plating/rev
-	name = "tinted steel floor plating"
+	name = "着色钢制底板"
 	color = "#626A3B"
 
 
 /turf/simulated/floor/landing
-	name = "aluminium landing platform"
+	name = "铝制着陆平台"
 
 	icon = 'icons/turf/floor/landing.dmi'
 	icon_state = "1"
@@ -79,8 +79,8 @@
 
 	layer = LAYER_FLOOR_PLATING
 
-	desc = "The plating underneath the floor"
-	desc_extended = "A floor found underneath an actual floor."
+	desc = "地板下方的底板。"
+	desc_extended = "真正的地板下面还有一层底板。"
 
 	color = COLOR_GREY
 

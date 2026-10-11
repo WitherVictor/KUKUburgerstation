@@ -1,7 +1,7 @@
 /obj/item/storage/cigarettes
-	name = "cigarette carton"
-	desc = "Stores cigarettes."
-	desc_extended = "A blank box of cigarettes."
+	name = "香烟盒"
+	desc = "用来装香烟。"
+	desc_extended = "没有品牌标识的香烟盒。"
 	icon = 'icons/obj/item/storage/cigarette_packages.dmi'
 	icon_state = "blank"
 
@@ -65,54 +65,54 @@
 		for(var/i=1,i<=dynamic_inventory_count,i++)
 			new cigarette_type(src)
 
-	desc_extended = "A box of [dynamic_inventory_count] [name]. Space FDA Approved and regulated. The lettering on the bottom indicates that the distributor and manufacturer are not legally held responsible for any injuries and/or deaths when using this product."
+	desc_extended = "一盒[name]，内含[dynamic_inventory_count]支。经太空食品药品监督管理局批准并监管。盒底小字声明：经销商和制造商对使用本产品造成的任何伤亡概不承担法律责任。"
 
 	. = ..()
 
 /obj/item/storage/cigarettes/red
-	name = "\improper NanoTrasen Red Label cigarettes"
+	name = "\improper 纳米传讯红标香烟"
 	cigarette_type = /obj/item/container/cigarette/red
 	icon_state = "red"
 	value = 10
 
 /obj/item/storage/cigarettes/gold
-	name = "\improper NanoTrasen Gold Label cigarettes"
+	name = "\improper 纳米传讯金标香烟"
 	cigarette_type = /obj/item/container/cigarette/gold
 	icon_state = "gold"
 	value = 10
 
 /obj/item/storage/cigarettes/blue
-	name = "\improper Water Smooth cigarettes"
+	name = "\improper 柔水香烟"
 	cigarette_type = /obj/item/container/cigarette/blue
 	icon_state = "blue"
 	value = 10
 
 /obj/item/storage/cigarettes/green
-	name = "\improper Freshmith cigarettes"
+	name = "\improper 清新匠香烟"
 	cigarette_type = /obj/item/container/cigarette/green
 	icon_state = "green"
 	value = 10
 
 /obj/item/storage/cigarettes/purple
-	name = "\improper Hip Hipster cigarettes"
+	name = "\improper 潮流达人香烟"
 	cigarette_type = /obj/item/container/cigarette/purple
 	icon_state = "purple"
 	value = 10
 
 /obj/item/storage/cigarettes/orange
-	name = "\improper Western Classic cigarettes"
+	name = "\improper 西部经典香烟"
 	cigarette_type = /obj/item/container/cigarette/orange
 	icon_state = "orange"
 	value = 10
 
 /obj/item/storage/cigarettes/syndicate
-	name = "\improper Syndicate Smokes cigarettes"
+	name = "\improper 辛迪加烟云香烟"
 	cigarette_type = /obj/item/container/cigarette/syndicate
 	icon_state = "syndicate"
 	value = 10
 
 /obj/item/storage/cigarettes/slavic
-	name = "\improper Slavic Blue cigarettes"
+	name = "\improper 斯拉夫蓝标香烟"
 	cigarette_type = /obj/item/container/cigarette/slavic
 	icon_state = "slavic"
 	value = 10

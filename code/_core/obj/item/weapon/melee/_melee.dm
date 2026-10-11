@@ -1,6 +1,6 @@
 obj/item/weapon/melee
-	name = "Melee Weapon"
-	desc = "A melee weapon"
+	name = "近战武器"
+	desc = "一件近战武器。"
 
 	drop_sound = 'sound/items/drop/sword.ogg'
 

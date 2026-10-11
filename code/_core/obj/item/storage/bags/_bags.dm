@@ -1,12 +1,12 @@
 /obj/item/storage/bags //These are things that always has a container whitelist.
-	name = "specific item type bags"
+	name = "专用收纳袋"
 	icon = 'icons/obj/item/storage/bags.dmi'
 	icon_state = "mining"
 
 /obj/item/storage/bags/botany
-	name = "botany bag"
-	desc = "Green bag for a green thumb."
-	desc_extended = "A giant green bag that is designed to hold all your plants and seeds. Holds up to 60 plants and seeds."
+	name = "植物收纳袋"
+	desc = "园艺高手的绿色袋子。"
+	desc_extended = "专为存放植物和种子设计的大号绿色袋子，最多可容纳60件植物与种子。"
 	icon_state = "botany"
 
 	dynamic_inventory_count = 6
@@ -20,9 +20,9 @@
 	value = 30
 
 /obj/item/storage/bags/botany/processor
-	name = "botany seed processing bag"
-	desc = "Process your seed."
-	desc_extended = "A special bag that converts all plant matter into seeds when inserted into the bag."
+	name = "种子加工袋"
+	desc = "加工出你的种子。"
+	desc_extended = "一种特殊袋子，可以将放入的植物加工成种子。"
 	icon_state = "botany_processor"
 
 	value = 100
@@ -73,14 +73,14 @@
 			I.add_object(S,FALSE,TRUE,silent=TRUE) //We add the object to this item's inventory.
 			process_count++
 
-	activator.to_chat(span("notice","You process [process_count] plants to seeds."))
+	activator.to_chat(span("notice","你将[process_count]件植物加工成了种子。"))
 
 	return TRUE
 
 /obj/item/storage/bags/blacksmithing
-	name = "blacksmithing bag"
-	desc = "Just kidding... Unless?"
-	desc_extended = "A giant black bag that is designed to hold all your ingots. Holds up to 100 ingots per slot."
+	name = "锻造材料袋"
+	desc = "开个玩笑……除非你当真？"
+	desc_extended = "专为存放材料锭设计的大号黑色袋子，每格可容纳最多100个材料锭。"
 	icon_state = "blacksmithing"
 
 	value = 400
@@ -98,8 +98,8 @@
 
 
 /obj/item/storage/bags/chemistry
-	name = "chemistry bag"
-	desc_extended = "A giant white and orange bag that is designed to hold all your medicine. Holds up to 40 objects."
+	name = "化学用品袋"
+	desc_extended = "专为存放药品设计的大号白橙色袋子，可容纳烧杯、药片和注射器。"
 	icon_state = "chemistry"
 
 	dynamic_inventory_count = 6

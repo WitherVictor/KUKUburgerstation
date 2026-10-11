@@ -1,7 +1,7 @@
 /obj/item/lighter
-	name = "lighter"
-	desc = "Lights things."
-	desc_extended = "A basic lighter."
+	name = "打火机"
+	desc = "用来点火。"
+	desc_extended = "普通的打火机。"
 	icon = 'icons/obj/item/lighter/basic.dmi'
 	icon_state = "inventory"
 	var/lit = FALSE
@@ -43,7 +43,7 @@
 	update_atom_light()
 
 	if(activator)
-		activator.to_chat(span("notice","You [lit ? "open" : "close"] \the [src.name]."))
+		activator.to_chat(span("notice","你[lit ? "打开" : "合上"]了[src.name]。"))
 
 	return TRUE
 

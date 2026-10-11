@@ -1,7 +1,7 @@
 obj/structure/interactive/computer/arcade
-	name = "arcade"
-	desc = "Spend your hard earned money on games."
-	desc_extended = "A modular arcade machine."
+	name = "街机"
+	desc = "把辛苦挣来的钱花在游戏上。"
+	desc_extended = "一台模块化街机。"
 	icon_state = "arcade"
 
 	collision_flags = FLAG_COLLISION_WALL
@@ -18,7 +18,7 @@ obj/structure/interactive/computer/arcade
 	desired_light_color = "#00FF00"
 
 obj/structure/interactive/computer/arcade/bubbletwist
-	name = "arcade - bubble twist"
+	name = "街机——泡泡旋转"
 
 obj/structure/interactive/computer/arcade/bubbletwist/clicked_on_by_object(var/mob/activator,var/atom/object,location,control,params)
 

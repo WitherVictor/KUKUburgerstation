@@ -1,7 +1,7 @@
 /obj/structure/interactive/vending/
-	name = "vending machine"
-	desc = "Vends things!"
-	desc_extended = "A self-serve vending machine. Sells items that are always in stock."
+	name = "自动售货机"
+	desc = "出售各种物品！"
+	desc_extended = "一台自助售货机，出售库存充足的商品。"
 	icon = 'icons/obj/structure/vending.dmi'
 	icon_state = "generic"
 
@@ -133,12 +133,12 @@
 				success = TRUE
 				break
 		if(!success)
-			P.to_chat(span("warning","You don't have enough [initial(accepts_item.name)]s to purchase this!"))
+			P.to_chat(span("warning","你的[initial(accepts_item.name)]不足，无法购买！"))
 			return FALSE
 		return TRUE
 
 	if(!is_free && !P.spend_currency(amount))
-		P.to_chat(span("notice","You don't have enough credits to purchase this item!"))
+		P.to_chat(span("notice","你的信用点不足，无法购买这件商品！"))
 		return FALSE
 
 	return TRUE
@@ -165,7 +165,7 @@
 	new_item.amount = associated_item.amount
 	FINALIZE(new_item)
 
-	activator.to_chat(span("notice","You vend \the [new_item.name]."))
+	activator.to_chat(span("notice","你从售货机中取出了[new_item.name]。"))
 
 	return new_item
 
@@ -328,4 +328,4 @@
 
 /obj/structure/interactive/vending/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","To buy from a vendor, simply left or right click any of the available items in the vendor menu.<br>Credits will be automatically deducted from your account, but special currencies such as dosh or gold coins must be held in one of your hands to use.")
+	. += span("notice","用鼠标左键或右键点击售货机菜单中的商品即可购买。<br>信用点会自动从账号中扣除；太阳系纸钞或金币等特殊货币则必须拿在手中才能使用。")

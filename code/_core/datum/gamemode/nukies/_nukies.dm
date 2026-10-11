@@ -1,5 +1,5 @@
 /gamemode/nuke_ops
-	name = "Nuke Ops"
+	name = "核弹行动"
 
 	// Config
 	var/loadout/base_loadout = /loadout/virtual_reality //For joining players.

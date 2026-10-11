@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/reagent_sprayer
-	name = "reagent sprayer"
-	desc = "Finally."
-	desc_extended = "Shoots reagents."
+	name = "试剂喷射器"
+	desc = "终于有了。"
+	desc_extended = "喷射试剂。"
 
 	var/reagent_per_shot = 5
 
@@ -44,7 +44,7 @@
 		reagents.transfer_reagents_to(P.reagents,reagent_per_shot, activator = activator,check_recipes=FALSE) //Recipes aren't checked here because there is no need and it will cause race conditions otherwise.
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle
-	name = "spray bottle"
+	name = "喷雾瓶"
 	reagents = /reagent_container/beaker/large
 	reagent_per_shot = 5
 	icon = 'icons/obj/item/container/spray_bottle.dmi'
@@ -55,21 +55,21 @@
 	value = 50
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle/water
-	name = "spray bottle (water)"
+	name = "喷雾瓶（水）"
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle/water/Generate()
 	reagents.add_reagent(/reagent/nutrition/water,reagents.volume_max)
 	return ..()
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle/lube
-	name = "spray bottle (lube)"
+	name = "喷雾瓶（润滑剂）"
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle/lube/Generate()
 	reagents.add_reagent(/reagent/lube,reagents.volume_max)
 	return ..()
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle/space_cleaner
-	name = "spray bottle (space cleaner)"
+	name = "喷雾瓶（太空清洁剂）"
 
 /obj/item/weapon/ranged/reagent_sprayer/spray_bottle/space_cleaner/Generate()
 	reagents.add_reagent(/reagent/space_cleaner,reagents.volume_max)
@@ -77,9 +77,9 @@
 
 
 /obj/item/weapon/ranged/reagent_sprayer/fire_extinguisher
-	name = "fire extinguisher"
-	desc = "For use in emergencies only."
-	desc_extended = "A lackluster red extinguisher (allegedly) containing enough water to put out small fires."
+	name = "灭火器"
+	desc = "仅限紧急情况使用。"
+	desc_extended = "平平无奇的红色灭火器，（据称）装有足以扑灭小火的水。"
 	icon = 'icons/obj/item/extinguisher.dmi'
 
 	projectile = /obj/projectile/extinguisher_spray
@@ -111,7 +111,7 @@
 		INTERACT_DELAY(10)
 		var/obj/structure/interactive/fire_closet/FC = object
 		if(FC.stored_extinguisher)
-			activator.to_chat(span("warning","There is already a [FC.stored_extinguisher.name] in \the [FC.name]!"))
+			activator.to_chat(span("warning","[FC.name]里已经装有[FC.stored_extinguisher.name]！"))
 			return TRUE
 		src.drop_item(FC)
 		FC.stored_extinguisher = src
@@ -131,7 +131,7 @@
 
 
 /obj/item/weapon/ranged/reagent_sprayer/mega_sprayer
-	name = "mega sprayer"
+	name = "巨型喷射器"
 	reagents = /reagent_container/beaker/bucket
 	reagent_per_shot = 20
 	icon = 'icons/obj/item/weapons/ranged/chem_sprayer.dmi'

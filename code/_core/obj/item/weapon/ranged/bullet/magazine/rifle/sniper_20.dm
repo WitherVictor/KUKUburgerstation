@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/sniper_20
-	name = "\improper 20x117mm Anti-Material Rifle"
-	desc = "Meant to fight agains tanks, but uh... you don't see any tanks around, do you?"
-	desc_extended = "A fully fledged anti-material rifle designed to absolutely obliterate anything in its path. Use for taking down tanks, mechs, and ships with one or two hits."
+	name = "\improper 20x117mm反器材步枪"
+	desc = "本来是用来打坦克的，可是，呃……你在附近看见坦克了吗？"
+	desc_extended = "货真价实的反器材步枪，设计目标是彻底摧毁挡路的一切。用于一两发击毁坦克、机甲和舰船。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/sol/sniper_20.dmi'
 	icon_state = "inventory"
 	value = 12000

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/bullpup
 	name = ".45 C-20r"
-	desc = "GET DAT FUKKEN DISK"
-	desc_extended = "Commonly used by Syndicate Operatives for its reliability and light weight, the 45 C-20r was the primary firearm of the Syndicate Nuclear Operatives, before NT figured out having self destruct nukes on their station wasn't a great idea."
+	desc = "把那张该死的磁盘抢过来！"
+	desc_extended = ".45 C-20r可靠而轻巧，辛迪加特工经常使用。在纳米传讯意识到在空间站里放自毁核弹并非好主意之前，它曾是辛迪加核特工的主力枪械。"
 	icon = 'icons/obj/item/weapons/ranged/smg/syndicate/45.dmi'
 	icon_state = "inventory"
 	value = 1200
@@ -85,7 +85,7 @@
 
 /obj/item/weapon/ranged/bullet/magazine/smg/bullpup/mod
 
-	name = ".45 C-20r MOD"
+	name = ".45 C-20r改装型"
 
 	icon = 'icons/obj/item/weapons/ranged/smg/syndicate/45_mod.dmi'
 

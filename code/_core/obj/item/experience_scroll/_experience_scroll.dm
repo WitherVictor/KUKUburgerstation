@@ -1,8 +1,8 @@
 /obj/item/experience_scroll
 
-	name = "scroll of experience"
-	desc = "Knowledge in the palms of your hands."
-	desc_extended = "A special scroll that increases the reader's experience by a certain amount. One time use."
+	name = "经验卷轴"
+	desc = "知识尽在掌中。"
+	desc_extended = "阅读后可获得一定经验的特殊卷轴，只能使用一次。"
 
 	icon = 'icons/obj/item/experience_scroll.dmi'
 	icon_state = "scroll"
@@ -46,17 +46,17 @@
 	INTERACT_DELAY(10)
 
 	if(!is_advanced(activator) || !activator.is_player_controlled())
-		activator.to_chat(span("warning","You don't know how to read this..."))
+		activator.to_chat(span("warning","你看不懂这份卷轴……"))
 		return TRUE
 
 	var/mob/living/advanced/A = activator
 
 	if(!A.allow_experience_gains)
-		activator.to_chat(span("warning","You don't know how to read this..."))
+		activator.to_chat(span("warning","你看不懂这份卷轴……"))
 		return TRUE
 
 	if(gain_knowledge(activator))
-		activator.visible_message(span("notice","\The [activator.name] reads \the [src.name], taking in the knowledge..."),span("notice","You read \the [src.name], taking in the knowledge..."))
+		activator.visible_message(span("notice","[activator.name]阅读[src.name]，汲取其中的知识……"),span("notice","你阅读[src.name]，汲取其中的知识……"))
 		add_item_count(-1)
 
 	return TRUE

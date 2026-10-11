@@ -1,8 +1,8 @@
 /obj/item/clothing/neck/tie
-	name = "tie"
+	name = "领带"
 	icon = 'icons/obj/item/clothing/neck/tie.dmi'
-	desc = "Clip-ons are for pussies."
-	desc_extended = "A sleek tie."
+	desc = "懦夫才用夹扣式领带。"
+	desc_extended = "一条时髦的领带。"
 	worn_layer = LAYER_MOB_CLOTHING_NECK_UNDER
 
 	item_slot = SLOT_NECK

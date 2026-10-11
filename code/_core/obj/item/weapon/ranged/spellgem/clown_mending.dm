@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/clown_mending
-	name = "self-unmending spell gem"
-	desc = "The source of all magic."
-	desc_extended = "A magical gem filled with pure arcane energy that gives the user the ability to cast spells. Can be augmented onto wands. This one gives a light regeneration? effect. Honk!"
+	name = "自身反愈合法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "充满纯粹奥术能量的魔法宝石，赋予使用者施放法术的能力，可镶入魔杖。这颗提供轻微的再生……效果？嘟嘟！"
 	icon_state = "damage"
 	color = "#ff0080"
 	color_3 = "#fffb00"
@@ -28,9 +28,9 @@
 			MUL(damage_multiplier_to_use,attachment_stats["damage_multiplier"])
 		var/mob/living/livingcaller = caller
 		if(livingcaller.status_effects[TEMP_REGEN])
-			livingcaller.visible_message(span("warning","\The [livingcaller.name] looks dissapointedly at \the [src]."),span("warning","The Spell Fizzles!"))
+			livingcaller.visible_message(span("warning","[livingcaller.name]失望地看着[src]。"),span("warning","法术消散了！"))
 		else
-			livingcaller.visible_message(span("warning","\The [livingcaller.name]'s wounds begin to close? You think?"),span("warning","You feel your wounds closing? You think?"))
+			livingcaller.visible_message(span("warning","[livingcaller.name]的伤口开始愈合了？大概吧？"),span("warning","你感觉伤口正在愈合？大概吧？"))
 			livingcaller.add_status_effect(TEMP_REGEN,-damage_multiplier_to_use,SECONDS_TO_DECISECONDS(damage_multiplier_to_use * 5))
 	else
 		CRASH("Nonliving atom [caller] is somehow using a [object], which shouldn't be possible!")

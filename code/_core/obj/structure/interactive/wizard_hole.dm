@@ -1,7 +1,7 @@
 /obj/structure/interactive/wizard_hole
-	name = "wizard's wormhole"
-	desc = "Enter the wizard's wormhole, if you dare."
-	desc_extended = "A magical localized wormhole that should lead somewhere. Only Wizard Federation members know how to do this."
+	name = "巫师虫洞"
+	desc = "有胆量就进入巫师虫洞吧。"
+	desc_extended = "一个神奇的局部虫洞，应该通往某个地方。只有巫师联邦成员知道如何使用它。"
 	icon = 'icons/obj/effects/portal.dmi'
 	icon_state = "bhole3"
 

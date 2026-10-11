@@ -1,7 +1,7 @@
 /turf/simulated/wall/clockwork
-	name = "clockwork wall"
-	desc = "Tick Tock motherfucker"
-	desc_extended = "A wall made of brass, a faint ticking can be heard inside."
+	name = "发条墙"
+	desc = "滴答滴答，混蛋。"
+	desc_extended = "一堵黄铜墙，里面传来微弱的滴答声。"
 	icon = 'icons/turf/wall/clockwork.dmi'
 	icon_state = "wall"
 	corner_category = "clockwork"
@@ -14,16 +14,16 @@
 	map_color = "#704326"
 
 /turf/simulated/wall/clockwork/indestructable
-	name = "indestructable clockwork wall"
-	desc = "Tick Tock motherfucker"
-	desc_extended = "A wall made of brass, a faint ticking can be heard inside. This one is empowered by the energies of Ratvar and is therefore indestructible"
+	name = "不可摧毁的发条墙"
+	desc = "滴答滴答，混蛋。"
+	desc_extended = "一堵黄铜墙，里面传来微弱的滴答声。它获得了拉特瓦尔的力量，因此不可摧毁。"
 	destruction_turf = null
 	color = "#C0C0C0"
 
 /turf/simulated/wall/clockwork/tough
-	name = "heated clockwork wall"
-	desc = "That's hot"
-	desc_extended = "A wall made of brass, a faint ticking can be heard inside. This one seems to be heated and is more durable."
+	name = "炽热发条墙"
+	desc = "真烫。"
+	desc_extended = "一堵黄铜墙，里面传来微弱的滴答声。它似乎经过加热，更加坚固。"
 	color = "#FFC9C9"
 
 

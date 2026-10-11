@@ -1,5 +1,5 @@
 /obj/item/clothing/hands/gloves/
-	name = "gloves"
+	name = "手套"
 
 	item_slot = SLOT_HAND
 	item_slot_mod = SLOT_MOD_RIGHT

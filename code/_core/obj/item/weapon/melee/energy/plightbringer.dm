@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/energy/plightbringer
-	name = "\improper Plightbringer's Sword"
-	desc = "A large black steel straightsword with a decorated hilt."
-	desc_extended = "A large decorated black steel straightsword. While black steel holds sorceries and magical infusions better than most metals, it is difficult to retain its sharpness. Because of this, Battlemages are the most common to use weapons made with the metal."
+	name = "\improper 苦难使者之剑"
+	desc = "带有装饰剑柄的大型黑钢直剑。"
+	desc_extended = "装饰华丽的大型黑钢直剑。黑钢比多数金属更能承载法术与魔力灌注，却难以保持锋利。因此，这种金属武器最常见的使用者是战斗法师。"
 	icon = 'icons/obj/item/weapons/melee/swords/plightbringer.dmi'
 
 	value = 2500

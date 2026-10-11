@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/headband
-	name = "headband"
+	name = "头带"
 	icon = 'icons/obj/item/clothing/hats/headband.dmi'
-	desc = "Be an action hero!"
-	desc_extended = "A generic colorable headband."
+	desc = "当个动作英雄！"
+	desc_extended = "一条可以染色的普通头带。"
 
 	item_slot = SLOT_FACE
 

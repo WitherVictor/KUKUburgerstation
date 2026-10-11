@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/socks/
-	name = "sock"
-	desc = "Don't wear socks with sandals or I'll fucking end you."
-	desc_extended = "A sock. This can go on either foot."
+	name = "袜子"
+	desc = "别他妈穿着袜子配凉鞋，不然我弄死你。"
+	desc_extended = "一只袜子，左右脚都能穿。"
 	icon_state = "inventory"
 	icon_state_worn = "worn"
 	flags_clothing = FLAG_CLOTHING_NOBEAST_FEET
@@ -32,14 +32,14 @@
 
 
 /obj/item/clothing/feet/socks/ankle
-	name = "ankle high socks"
+	name = "短袜"
 	icon = 'icons/obj/item/clothing/socks/normal.dmi'
 	polymorphs = null
 
 	value = 3
 
 /obj/item/clothing/feet/socks/knee
-	name = "knee high socks"
+	name = "及膝袜"
 	icon = 'icons/obj/item/clothing/socks/knee.dmi'
 	polymorphs = list(
 		"sock" = COLOR_WHITE
@@ -62,7 +62,7 @@
 	value = 3
 
 /obj/item/clothing/feet/socks/thigh/
-	name = "thigh high sock"
+	name = "过膝长袜"
 	icon = 'icons/obj/item/clothing/socks/programmer.dmi'
 
 	value = 10
@@ -78,7 +78,7 @@
 	)
 
 /obj/item/clothing/feet/socks/thigh/striped/pink
-	name = "programmer sock"
+	name = "程序员长袜"
 
 	polymorphs = list(
 		"sock" = COLOR_WHITE,
@@ -86,7 +86,7 @@
 	)
 
 /obj/item/clothing/feet/socks/thigh/striped/bee
-	name = "bee stockings"
+	name = "蜜蜂条纹长袜"
 
 	polymorphs = list(
 		"sock" = COLOR_BLACK,

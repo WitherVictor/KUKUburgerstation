@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/deagle
-	name = "\improper .50 Silver Eagle pistol"
-	desc = "Shiny! Deadly!"
-	desc_extended = "A proudly Solarian made and designed<sup>\[citation needed\]</sup> 50 caliber pistol for the most elite of commanders. This one is silver plated."
+	name = "\improper .50银鹰手枪"
+	desc = "闪亮！致命！"
+	desc_extended = "号称由太阳系自主设计制造<sup>\[需要引证\]</sup>、专供顶尖指挥官使用的.50口径手枪。这把采用镀银外饰。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/50.dmi'
 	value = 1000
 	tier = 2
@@ -73,9 +73,9 @@
 	return max(0,0.02 - (0.03 * L.get_skill_power(SKILL_RANGED)) )
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/deagle/gold
-	name = ".50 Gold Eagle"
-	desc = "Shiny! Deadly! GOLD!"
-	desc_extended = "A proudly Solarian made and designed<sup>\[citation needed\]</sup> 50 caliber pistol for the most elite of commanders. This one is gold plated, and provides no tactical advantage whatsoever."
+	name = ".50金鹰"
+	desc = "闪亮！致命！黄金！"
+	desc_extended = "号称由太阳系自主设计制造<sup>\[需要引证\]</sup>、专供顶尖指挥官使用的.50口径手枪。这把采用镀金外饰，没有任何战术优势。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/50_gold.dmi'
 	value = 5000
 	tier = 4
@@ -90,9 +90,9 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/deagle/mod
-	name = ".50 Black Eagle MOD"
-	desc = "Badass!"
-	desc_extended = "A proudly Solarian made and designed<sup>\[citation needed\]</sup> 50 caliber pistol for the most elite of commanders. This one is painted black and upgraded with higher quality parts."
+	name = ".50黑鹰改装型"
+	desc = "够狠！"
+	desc_extended = "号称由太阳系自主设计制造<sup>\[需要引证\]</sup>、专供顶尖指挥官使用的.50口径手枪。这把漆成黑色，并换装了品质更高的零件。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/50_black.dmi'
 	value = 2000
 	tier = 3

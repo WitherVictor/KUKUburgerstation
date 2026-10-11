@@ -1,6 +1,6 @@
 /mob/living/simple/goliath/baby
-	name = "baby goliath"
-	desc = "More of a boomer than a millenial."
+	name = "歌利亚幼体"
+	desc = "与其说是千禧一代，不如说是‘爆炸婴儿’一代。"
 	icon = 'icons/mob/living/simple/lavaland/goliath_baby.dmi'
 	icon_state = "baby"
 	damage_type = /damagetype/unarmed/claw/

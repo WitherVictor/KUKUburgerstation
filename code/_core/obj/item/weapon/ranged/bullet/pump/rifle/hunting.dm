@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/rifle/hunting
-	name = "\improper 7.62mm Hunting Rifle"
-	desc = "COMRADE."
-	desc_extended = "Originally Russian, now exploited and used by the syndicate for use in space hunting and space liberation."
+	name = "\improper 7.62mm猎枪"
+	desc = "同志！"
+	desc_extended = "源自俄罗斯，如今被辛迪加拿来用于太空狩猎和太空解放事业。"
 	icon = 'icons/obj/items/weapons/ranged/rifle/hunting.dmi'
 	icon_state = "inventory"
 	value = 40

@@ -13,90 +13,90 @@
 	)
 
 /area/ghost/hall
-	name = "\improper Classified Research Center - Hallway"
+	name = "机密研究中心－走廊"
 	icon_state = "hall"
 	sound_environment = ENVIRONMENT_ALLEY
 
 /area/ghost/hall/north
-	name = "\improper Classified Research Center - North Hallway"
+	name = "机密研究中心－北部走廊"
 	icon_state = "hall_n"
 
 /area/ghost/hall/east
-	name = "\improper Classified Research Center - East Hallway"
+	name = "机密研究中心－东部走廊"
 	icon_state = "hall_e"
 
 /area/ghost/hall/south
-	name = "\improper Classified Research Center - South Hallway"
+	name = "机密研究中心－南部走廊"
 	icon_state = "hall_s"
 
 /area/ghost/hall/west
-	name = "\improper Classified Research Center - West Hallway"
+	name = "机密研究中心－西部走廊"
 	icon_state = "hall_w"
 
 /area/ghost/hall/entrance
-	name = "\improper Classified Research Center - Entrance Hallway"
+	name = "机密研究中心－入口走廊"
 	icon_state = "hall_c"
 
 /area/ghost/maint
-	name = "\improper Classified Research Center - Maint"
+	name = "机密研究中心－维护区"
 	icon_state = "maint"
 	sound_environment = ENVIRONMENT_BATHROOM
 
 /area/ghost/maint/north
-	name = "\improper Classified Research Center - North Maintenance"
+	name = "机密研究中心－北部维护区"
 	icon_state = "maint_n"
 
 /area/ghost/maint/east
-	name = "\improper Classified Research Center - East Maintenance"
+	name = "机密研究中心－东部维护区"
 	icon_state = "maint_e"
 
 /area/ghost/maint/south
-	name = "\improper Classified Research Center - South Maintenance"
+	name = "机密研究中心－南部维护区"
 	icon_state = "maint_s"
 
 /area/ghost/maint/west
-	name = "\improper Classified Research Center - West Maintenance"
+	name = "机密研究中心－西部维护区"
 	icon_state = "maint_w"
 
 /area/ghost/maint/central
-	name = "\improper Classified Research Center - Central Maintenance"
+	name = "机密研究中心－中央维护区"
 	icon_state = "disposals"
 
 /area/ghost/medical
-	name = "\improper Classified Research Center - Medical"
+	name = "机密研究中心－医疗部"
 	icon_state = "med"
 
 
 /area/ghost/bathrooms
-	name = "\improper Classified Research Center - Bathrooms"
+	name = "机密研究中心－卫生间"
 	icon_state = "bath"
 
 	sound_environment = ENVIRONMENT_ROOM
 
 /area/ghost/bathrooms/male
-	name = "\improper Classified Research Center - Male Restroom"
+	name = "机密研究中心－男厕"
 	color = "blue"
 
 /area/ghost/bathrooms/female
-	name = "\improper Classified Research Center - Female Restroom"
+	name = "机密研究中心－女厕"
 	color = "red"
 
 /area/ghost/cafe
-	name = "\improper Classified Research Center - Cafe"
+	name = "机密研究中心－咖啡馆"
 	icon_state = "cafe"
 
 
 /area/ghost/science
-	name = "\improper Classified Research Center - Science"
+	name = "机密研究中心－科研部"
 	icon_state = "science"
 
 /area/ghost/command
-	name = "\improper Classified Research Center - Command"
+	name = "机密研究中心－指挥部"
 	icon_state = "brief"
 
 
 /area/ghost/engineering
-	name = "\improper Classified Research Center - Engineering"
+	name = "机密研究中心－工程部"
 	icon_state = "eng"
 
 	sound_environment = ENVIRONMENT_STONEROOM

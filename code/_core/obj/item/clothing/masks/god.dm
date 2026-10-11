@@ -1,10 +1,10 @@
 /obj/item/clothing/mask/godlike
-	name = "god mask"
+	name = "神明面具"
 	icon = 'icons/obj/item/clothing/masks/god.dmi'
 
 	flags_clothing = FLAG_CLOTHING_NOBEAST_HEAD
-	desc = "How can you kill a god?"
-	desc_extended = "Wearing this mask will make them hard to kill... if you only target their head."
+	desc = "你怎么可能杀死神？"
+	desc_extended = "戴上这副面具后，佩戴者会很难被杀死……前提是你只攻击其头部。"
 
 	armor = /armor/reward
 

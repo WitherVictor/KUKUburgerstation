@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/gauss //you know what we need? more gauss
-	name = "\improper 2.54x12mm Gauss Blunderbuss"
-	desc = "A dangerous mutation made by anarchists and bandits used to stop Duty's march." //I had to, ok?
-	desc_extended = "This weapon is the product of bad luck and resourcefulness. By using salvaged parts from broken Gauss rifles, this Blunderbuss can shoot as hard as one with half the size and one-eighth of the ammo capacity."
+	name = "\improper 2.54x12mm高斯喇叭枪"
+	desc = "无政府主义者和匪徒造出的危险变种，用来阻挡责任团的推进。" //I had to, ok?
+	desc_extended = "这把武器是倒霉运气和临场巧思的产物。用损坏高斯步枪的回收零件拼成的喇叭枪，体积只有原枪一半，容量只有八分之一，却能打出同样的威力。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/gauss_blunder.dmi'
 	icon_state = "inventory"
 	value = 600

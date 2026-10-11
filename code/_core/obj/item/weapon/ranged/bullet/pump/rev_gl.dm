@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/gm94
 	name = "\improper GM-94"
-	desc = "VOT POSHLA GRANATA"
-	desc_extended = "An old semi-automatic grenade launcher from a past era, uses 40mm grenades."
+	desc = "榴弹来了！"
+	desc_extended = "旧时代的老式半自动榴弹发射器，使用40mm榴弹。"
 	icon = 'icons/obj/item/weapons/ranged/misc/gm94.dmi'
 	icon_state = "inventory"
 	value = 4300

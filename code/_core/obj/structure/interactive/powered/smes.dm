@@ -1,5 +1,5 @@
 /obj/structure/interactive/powered/smes
-	name = "super-magnetic power conductor"
+	name = "超磁导能器"
 
 	icon = 'icons/obj/structure/power.dmi'
 	icon_state = "smes"
@@ -22,7 +22,7 @@
 
 	for(var/i=1,i<=length(stored_cells),i++)
 		var/obj/item/powercell/PC = stored_cells[i]
-		. += div("notice","\The [PC.name](#[i]) has [PC.charge_current] out of [PC.charge_max] charge remaining.")
+		. += div("notice","[PC.name]（编号[i]）剩余电量：[PC.charge_current]/[PC.charge_max]。")
 
 /obj/structure/interactive/powered/smes/get_power_supply()
 	return max(0,connected_wire.power_network.power_draw - (connected_wire.power_network.power_supply-power_supply))

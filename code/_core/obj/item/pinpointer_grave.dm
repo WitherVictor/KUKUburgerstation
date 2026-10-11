@@ -1,6 +1,6 @@
 /obj/item/pinpointer/grave
-	name = "grave pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks gravestones which you died at."
+	name = "墓碑定位器"
+	desc_extended = "用来追踪和定位目标。此型号可追踪存有你死亡遗物的墓碑。"
 	icon_state = "orange"
 
 	value = 100
@@ -35,17 +35,17 @@
 			if(!length(found_storage.inventories))
 				continue
 			total_items += length(found_storage.inventories)
-		var/name_mod = "gravestone containing [total_items] items ([dir2text(get_dir_advanced(activator,G))], [get_dist_advanced(src,G)]m)"
+		var/name_mod = "存有[total_items]件物品的墓碑（[get_direction_name(get_dir_advanced(activator,G))]，[get_dist_advanced(src,G)]米）"
 		possible_graves[name_mod] = G
 
 	if(!length(possible_graves))
-		activator.to_chat(span("warning","Can't find anything to track!"))
+		activator.to_chat(span("warning","找不到可追踪的目标！"))
 		return TRUE
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("What do you want to track?","Objective Pinpointer Tracking","Cancel") as null|anything in possible_graves
+	var/choice = input("你想追踪哪座墓碑？","墓碑定位器追踪","取消") as null|anything in possible_graves
 
 	INTERACT_CHECK_OTHER(src) //Hacky.
 

@@ -1,7 +1,7 @@
 /obj/item/magazine/rifle_46
-	name = "\improper 4.6x30mm rifle magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 4.6x30mm步枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/4mm_rifle.dmi'
 	icon_state = "4"
 	bullet_count_max = 40

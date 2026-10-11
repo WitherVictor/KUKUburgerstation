@@ -4,7 +4,7 @@
 
 
 /area/mission/prefab/fob/bawse_loot
-	name = "Bawse Loot"
+	name = "鲍斯战利品"
 	icon_state = "yellow"
 	requires_power = TRUE
 	interior = TRUE
@@ -14,7 +14,7 @@
 
 
 /area/mission/prefab/fob/contractor
-	name = "Mr. Scratch's building"
+	name = "抓痕先生的屋子"
 	icon_state = "yellow"
 	requires_power = TRUE
 	interior = TRUE

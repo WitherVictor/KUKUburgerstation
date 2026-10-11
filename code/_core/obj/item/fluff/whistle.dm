@@ -1,7 +1,7 @@
 /obj/item/whistle
-	name = "whistle"
-	desc = "Be an annoying rules lawyer with this device."
-	desc_extended = "Makes an annoying whistle sound when used."
+	name = "哨子"
+	desc = "用它当个讨人嫌的规则较真狂。"
+	desc_extended = "使用时会发出烦人的哨声。"
 	icon = 'icons/obj/item/whistle.dmi'
 	damage_type = /damagetype/item/light
 

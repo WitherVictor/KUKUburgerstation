@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/smart
-	name = "\improper 4.6x30mm Smart SMG"
-	desc = "Now that's smarts!"
-	desc_extended = "A NanoTrasen protoype SMG that uses expensive smart-microchip heat-seeking guided bullets to assist in idiots hitting targets. Has a tendency to actually still miss."
+	name = "\improper 4.6x30mm智能冲锋枪"
+	desc = "这才叫聪明！"
+	desc_extended = "纳米传讯原型冲锋枪，使用昂贵的智能芯片热追踪制导弹药，帮助笨蛋命中目标。不过它还是经常打偏。"
 	icon = 'icons/obj/item/weapons/ranged/smg/sol/smart.dmi'
 	icon_state = "inventory"
 	value = 3000

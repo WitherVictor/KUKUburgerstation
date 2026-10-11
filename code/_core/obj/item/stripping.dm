@@ -11,8 +11,8 @@
 
 	if(activator && src.loc && is_advanced(src.loc.loc))
 		activator.visible_message(
-			span("notice","\The [activator.name] strips \the [src.name] off of [src.loc.loc]."),
-			span("notice","You strip \the [src.name].")
+			span("notice","[activator.name]从[src.loc.loc]身上取下了[src.name]。"),
+			span("notice","你取下了[src.name]。")
 		)
 
 	drop_item(get_turf(src))
@@ -29,16 +29,16 @@
 	INTERACT_CHECK_NO_DELAY(src)
 
 	if(!istype(loc,/obj/hud/inventory/organs/))
-		if(messages) activator.to_chat(span("warning","That's not there anymore!"))
+		if(messages) activator.to_chat(span("warning","物品已经不在那里了！"))
 		return FALSE
 
 	var/obj/hud/inventory/I = loc
 	if(I.ultra_persistant)
-		if(messages) activator.to_chat(span("warning","You can't remove this!"))
+		if(messages) activator.to_chat(span("warning","你无法取下它！"))
 		return FALSE
 
 	if(!is_living(I.owner))
-		if(messages) activator.to_chat(span("warning","That's not there anymore!"))
+		if(messages) activator.to_chat(span("warning","目标已经不在那里了！"))
 		return FALSE
 
 	if(!is_living(activator))
@@ -50,7 +50,7 @@
 	INTERACT_CHECK_OTHER(L)
 
 	if(src.anchored)
-		if(messages) activator.to_chat(span("warning","\The [I.name] is on \the [L.name] too securely!"))
+		if(messages) activator.to_chat(span("warning","[I.name]牢牢固定在[L.name]身上！"))
 		return FALSE
 
 	if(L.ckey_owner == CL.ckey_owner) //Same ckey.
@@ -59,14 +59,14 @@
 	else
 		if(CL.loyalty_tag == "NanoTrasen")
 			if(!allow_hostile_action(CL.loyalty_tag,L) && (!L.dead || is_player(L)))
-				if(messages) activator.to_chat(span("warning","You can't strip allies!"))
+				if(messages) activator.to_chat(span("warning","你不能取走友军的装备！"))
 				return FALSE
 		else
 			if(!L.dead) //Others can only strip when dead.
-				if(messages) activator.to_chat(span("warning","You can't strip people who aren't dead!"))
+				if(messages) activator.to_chat(span("warning","你只能取走死者的装备！"))
 				return FALSE
 			if(L.loyalty_tag == "NanoTrasen")
-				if(messages) activator.to_chat(span("warning","You refuse to subject yourself to poor-quality NanoTrasen goods!"))
+				if(messages) activator.to_chat(span("warning","你拒绝使用纳米传讯的劣质货！"))
 				return FALSE
 
 	if(L.horizontal) //Can strip someone if they're horizontal.
@@ -80,6 +80,6 @@
 	if(!I.worn && L.dir & get_dir(CL,I)) //Allow removing of non-worn items from behind (pickpocketing).
 		return TRUE
 
-	if(messages) activator.to_chat(span("warning","\The [L.name] is not in a position to be stripped!"))
+	if(messages) activator.to_chat(span("warning","[L.name]目前的状态不允许你取走装备！"))
 
 	return FALSE

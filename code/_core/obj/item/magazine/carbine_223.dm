@@ -1,7 +1,7 @@
 /obj/item/magazine/carbine_223
-	name = "\improper .223 carbine magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .223卡宾枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/223_carbine.dmi'
 	icon_state = "556"
 	bullet_count_max = 42
@@ -32,6 +32,6 @@
 
 
 /obj/item/magazine/carbine_223/ap
-	name = "\improper .223 carbine AP magazine"
+	name = "\improper .223卡宾枪穿甲弹匣"
 	ammo = /obj/item/bullet_cartridge/rifle_223/ap
 	rarity = RARITY_UNCOMMON

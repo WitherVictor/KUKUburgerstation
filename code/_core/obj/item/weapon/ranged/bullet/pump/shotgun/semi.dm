@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/semi
-	name = "12g SEM"
-	desc = "When you're too lazy to pump."
-	desc_extended = "A lightweight 12 gauge auto-cycling semi-automatic shotgun designed to clear rooms very fast without the effort of pumping; except when you load a new round in for the first time."
+	name = "12号SEM"
+	desc = "懒得手动上膛时的选择。"
+	desc_extended = "轻型12号半自动霰弹枪，能自动完成装填循环，无需反复抽动护木就能迅速清理房间；不过首次装弹后仍需手动上膛。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/nanotrasen/semi.dmi'
 	icon_state = "inventory"
 

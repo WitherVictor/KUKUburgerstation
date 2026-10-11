@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/sniper_127
-	name = "\improper 12.7x90mm Bolt-Action Sniper Rifle"
-	desc = "Pick up a real gun."
-	desc_extended = "An absolute unit of a sniper rifle. The bullet is so large, it absolutely needs to be bolt action."
+	name = "\improper 12.7x90mm栓动狙击步枪"
+	desc = "拿把真正的枪吧。"
+	desc_extended = "狙击步枪中的庞然大物。弹药大到非得采用栓动结构不可。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/127_1.dmi'
 	icon_state = "inventory"
 	value = 5000

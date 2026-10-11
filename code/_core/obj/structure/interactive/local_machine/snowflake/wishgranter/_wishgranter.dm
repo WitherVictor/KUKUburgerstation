@@ -1,7 +1,7 @@
 
 
 /obj/structure/interactive/localmachine/snowflake/wishgranter/
-	name = "wishgranter"
+	name = "许愿机"
 	id = "null"
 
 	collision_flags = FLAG_COLLISION_NONE
@@ -33,7 +33,7 @@
 		return FALSE
 
 	if(!id)
-		P.to_chat(span("notice","This wishgranter doesn't seem to work..."))
+		P.to_chat(span("notice","这台许愿机似乎无法工作……"))
 		return FALSE
 
 	var/savedata/client/mob/U = P.mobdata
@@ -42,7 +42,7 @@
 		INTERACT_CHECK
 		U.loaded_data["known_wishgranters"] += id
 		set_icon_state_mob(P,"wishgranter_on")
-		P.to_chat(span("notice","You have learned the location of this wishgranter. You may teleport between here and any other wishgranters you know."))
+		P.to_chat(span("notice","你记下了这台许愿机的位置。你可以在这里与其他已知的许愿机之间传送。"))
 
 	return TRUE
 
@@ -68,7 +68,7 @@
 	callback_list["start_turf"] = get_turf(P)
 	callback_list["end_turf"] = desired_turf
 	if(add_progress_bar(P,"teleport",SECONDS_TO_DECISECONDS(3),callback_list))
-		P.to_chat(span("notice","You begin walking into the light..."))
+		P.to_chat(span("notice","你开始走进光芒……"))
 		P.show_hud(FALSE,FLAGS_HUD_TELEPORT,FLAGS_HUD_NONE,speed=1)
 
 	return TRUE

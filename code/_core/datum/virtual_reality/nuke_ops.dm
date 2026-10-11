@@ -1,6 +1,6 @@
 /virtual_reality/team/nuke_ops
-	name = "Nuke Ops"
-	desc = "NanoTrasen defends Syndicate from planting a bomb."
+	name = "核弹行动"
+	desc = "纳米传讯阻止辛迪加安放炸弹。"
 
 	teams = list(
 		"Syndicate" = list(),
@@ -304,26 +304,26 @@
 
 	switch(state)
 		if(0)
-			set_message("Setting up game...")
+			set_message("正在设置对局……")
 		if(1)
 			if(time_left >= 0)
-				set_message("Game starts in [get_clock_time(time_left)] ([length(teams["Ready"])] players ready).")
+				set_message("对局将在[get_clock_time(time_left)]后开始（[length(teams["Ready"])]名玩家已准备）。")
 			else
-				set_message("Waiting for players ([length(teams["Ready"])]/1 ready)...")
+				set_message("正在等待玩家（[length(teams["Ready"])]/1已准备）……")
 		if(2)
-			set_message("Starting game...")
+			set_message("正在开始对局……")
 		if(3)
-			set_message("Round starts in [get_clock_time(time_left)].")
+			set_message("本回合将在[get_clock_time(time_left)]后开始。")
 		if(4)
-			set_message("Buy period: [get_clock_time(time_left)].")
+			set_message("采购阶段：[get_clock_time(time_left)]。")
 		if(5)
-			set_message("NanoTrasen: [score["NanoTrasen"]] | [get_clock_time(time_left)] | Syndicate: [score["Syndicate"]].")
+			set_message("纳米传讯：[score["NanoTrasen"]] | [get_clock_time(time_left)] | 辛迪加：[score["Syndicate"]]。")
 		if(6)
-			set_message("NanoTrasen wins!")
+			set_message("纳米传讯获胜！")
 		if(7)
-			set_message("Syndicate wins!")
+			set_message("辛迪加获胜！")
 		if(8)
-			set_message("OVERTIME")
+			set_message("加时赛")
 
 
 	if(state == 1)
@@ -359,7 +359,7 @@
 	if(state == 5 && !can_play_round())
 		for(var/k in active_players)
 			var/mob/M = k
-			M.to_chat(span("danger","Not enough players on one team, returning to lobby."))
+			M.to_chat(span("danger","有一队人数不足，正在返回大厅。"))
 			on_player_join(M)
 		score = list(
 				"NanoTrasen" = 0,

@@ -1,7 +1,7 @@
 /obj/item/storage/kit/small
-	name = "personal first aid kit"
-	desc = "Carries medicine."
-	desc_extended = "A basic first aid kit, now portable."
+	name = "个人急救包"
+	desc = "用来装药品。"
+	desc_extended = "便携式基础急救包。"
 	icon = 'icons/obj/item/storage/kits.dmi'
 	icon_state = "firstaid-mini"
 
@@ -23,8 +23,8 @@
 
 
 /obj/item/storage/kit/small/brute
-	name = "personal brute first aid kit"
-	desc_extended = "A first aid kit that focuses on healing brute injury."
+	name = "个人外伤急救包"
+	desc_extended = "主要用于处理物理伤害的急救包。"
 	icon_state = "brute-mini"
 
 /obj/item/storage/kit/small/brute/filled/fill_inventory()
@@ -35,8 +35,8 @@
 	. = ..()
 
 /obj/item/storage/kit/small/burn
-	name = "personal burn first aid kit"
-	desc_extended = "A first aid kit that focuses on healing burn injury."
+	name = "个人烧伤急救包"
+	desc_extended = "主要用于处理烧伤的急救包。"
 	icon_state = "burn-mini"
 
 /obj/item/storage/kit/small/burn/filled/fill_inventory()
@@ -47,8 +47,8 @@
 	. = ..()
 
 /obj/item/storage/kit/small/toxin
-	name = "personal toxin first aid kit"
-	desc_extended = "A first aid kit that focuses on healing toxin injury."
+	name = "个人解毒急救包"
+	desc_extended = "主要用于处理毒素伤害的急救包。"
 	icon_state = "toxin-mini"
 
 /obj/item/storage/kit/small/toxin/filled/fill_inventory()
@@ -59,8 +59,8 @@
 	. = ..()
 
 /obj/item/storage/kit/small/rad
-	name = "personal radiation first aid kit"
-	desc_extended = "A first aid kit that focuses on healing radiation injury."
+	name = "个人抗辐射急救包"
+	desc_extended = "主要用于处理辐射伤害的急救包。"
 	icon_state = "rad-mini"
 
 /obj/item/storage/kit/small/rad/filled/fill_inventory()
@@ -72,8 +72,8 @@
 
 
 /obj/item/storage/kit/small/advanced
-	name = "personal advanced first aid kit"
-	desc_extended = "A first aid kit that focuses on healing advanced general injury."
+	name = "个人高级急救包"
+	desc_extended = "用于处理严重的综合伤势。"
 	icon_state = "purple-mini"
 
 /obj/item/storage/kit/small/advanced/filled/fill_inventory()
@@ -85,8 +85,8 @@
 
 
 /obj/item/storage/kit/small/oxy
-	name = "personal oxy first aid kit"
-	desc_extended = "A first aid kit that focuses on healing suffocation related injury."
+	name = "个人缺氧急救包"
+	desc_extended = "主要用于处理窒息相关伤害的急救包。"
 	icon_state = "oxy-mini"
 
 /obj/item/storage/kit/small/oxy/filled/fill_inventory()
@@ -97,8 +97,8 @@
 	. = ..()
 
 /obj/item/storage/kit/small/syndicate
-	name = "combat hypospray kit"
-	desc_extended = "A first aid kit that contains a combat hypospray and some hypospray vials of basic healing chemicals."
+	name = "战斗高压注射器套装"
+	desc_extended = "内含战斗高压注射器，以及装有基础治疗药剂的配套药瓶。"
 	icon_state = "tactical-mini"
 
 	size = SIZE_2

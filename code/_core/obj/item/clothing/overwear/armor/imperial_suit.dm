@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/armor/imperial_suit
-	name = "imperial suit"
+	name = "帝国护甲"
 	icon = 'icons/obj/item/clothing/suit/imperial_armor_suit.dmi'
-	desc = "For when you really want to feel useless.."
-	desc_extended = "Looks flimsy and mass produced."
+	desc = "专治觉得自己还不够没用的人……"
+	desc_extended = "看起来很脆弱，是流水线量产的货色。"
 
 	defense_rating = list(
 		BLADE = -15,

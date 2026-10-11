@@ -25,7 +25,7 @@
 		total_bleed_damage *= 3
 		src.on_savage_hit(atom_damaged,attacker,weapon,DT,damage_table,damage_amount,critical_hit_multiplier,stealthy)
 		if(!src.dead)
-			src.visible_message(span("warning","\The [src.name] takes a savage hit!"),span("danger","You take a savage hit!"))
+			src.visible_message(span("warning","[src.name]遭受了猛烈一击！"),span("danger","你遭受了猛烈一击！"))
 
 	if(DT && DT.draw_blood && blood_type && total_bleed_damage > 0 && blood_volume > 0)
 		var/turf/T = get_turf(src)
@@ -68,7 +68,7 @@
 				if(atom_to_butcher == O)
 					atom_to_butcher = src
 		if(atom_to_butcher && blade_damage > 0 && src.can_be_butchered(L,weapon,atom_to_butcher))
-			L.visible_message(span("danger","\The [L.name] starts to butcher \the [src.name]!"),span("danger","You start to butcher \the [atom_to_butcher.name]!"))
+			L.visible_message(span("danger","[L.name]开始肢解[src.name]！"),span("danger","你开始肢解[atom_to_butcher.name]！"))
 			PROGRESS_BAR(L,src,max(10,src.health.health_max*0.05),src::on_butcher(),L,atom_to_butcher)
 			PROGRESS_BAR_CONDITIONS(L,src,src::can_be_butchered(),L,weapon,atom_to_butcher)
 
@@ -86,7 +86,7 @@
 			INTERACT_CHECK_NO_DELAY(butchering_item)
 
 	if(!src.dead)
-		activator?.to_chat(span("danger","OH FUCK THEY'RE STILL ALIVE!"))
+		activator?.to_chat(span("danger","操，还活着呢！"))
 		return FALSE
 
 	return TRUE
@@ -133,7 +133,7 @@
 	override_butcher = FALSE
 	butcher_contents = null
 
-	activator?.visible_message(span("danger","\The [activator.name] butchers \the [atom_to_butcher.name]!"),span("danger","You butcher \the [atom_to_butcher.name]."))
+	activator?.visible_message(span("danger","[activator.name]肢解了[atom_to_butcher.name]！"),span("danger","你肢解了[atom_to_butcher.name]。"))
 	if(gib_on_butcher)
 		atom_to_butcher.gib(hard=TRUE)
 	else

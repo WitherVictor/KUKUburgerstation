@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/holy_warrior //TODO:FIX THIS
-	name = "tome of the holy warrior"
-	desc = "For those too lazy for combat."
-	desc_extended = "Costs mana to use."
+	name = "神圣战士法术典籍"
+	desc = "给懒得亲自战斗的人。"
+	desc_extended = "使用时消耗法力。"
 	cost_mana = 100
 
 	icon = 'icons/obj/items/weapons/ranged/magic/tomes/holy_summon.dmi'

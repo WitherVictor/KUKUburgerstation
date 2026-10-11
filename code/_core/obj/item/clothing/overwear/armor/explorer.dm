@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/armor/explorer_suit
-	name = "explorer's suit"
-	desc = "CARGO WE NEED DIAMONDS"
-	desc_extended = "A protective suit of armor worn by miners to protect from the megafauna. Also comes with a hood that can be brought up by shift-clicking the suit."
+	name = "探索者护甲"
+	desc = "货运部，我们需要钻石！"
+	desc_extended = "矿工穿着的防护甲，用来抵御巨型生物。附带兜帽，穿戴后空手点击护甲即可将其戴上或放下。"
 	icon = 'icons/obj/item/clothing/suit/explorer_suit.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_HARDSUIT
 

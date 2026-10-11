@@ -1,7 +1,7 @@
 /obj/item/clothing/back/wings/fairy
-	name = "fairy wings"
-	desc = "Warning: Does not grant actual flight."
-	desc_extended = "A pair of incredibly light and fragile fairy wings. Wearing these make you feel like you should help people."
+	name = "精灵翅膀"
+	desc = "警告：并不能让你真的飞起来。"
+	desc_extended = "一对极其轻盈而脆弱的精灵翅膀。戴上后，你会觉得自己应该去帮助别人。"
 	icon = 'icons/obj/item/clothing/back/wings/fairy_wings.dmi'
 
 	armor = /armor/fairy

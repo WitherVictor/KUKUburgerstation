@@ -1,5 +1,5 @@
 /obj/item/grenade/device/
-	name = "device grenade"
+	name = "装置式手榴弹"
 	icon = 'icons/obj/item/grenade_new.dmi'
 	icon_state = "grenade"
 

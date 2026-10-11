@@ -1,7 +1,7 @@
 /turf/simulated/floor/grass/
-	name = "dense grass"
-	desc = "Some grass on the ground"
-	desc_extended = "Damn daniel back at it agian with the green grass"
+	name = "茂密草丛"
+	desc = "地上的一片草。"
+	desc_extended = "哇，丹尼尔，又带着那片绿草回来了！"
 	layer = LAYER_FLOOR_GRASS_DENSE
 
 	corner_icons = TRUE
@@ -26,11 +26,11 @@
 	health_base = 300
 
 /turf/simulated/floor/grass/jungle
-	name = "dense jungle grass"
+	name = "茂密丛林草丛"
 	color = "#969696"
 	destruction_turf = /turf/simulated/floor/colored/grass/jungle
-	desc = "Some junglely grass"
-	desc_extended = "unlike what some people believe, jungle grass isn't just grass that likes to listen to jungle music"
+	desc = "一片丛林中的草。"
+	desc_extended = "与某些人的想法不同，丛林草可不是喜欢听丛林音乐的草。"
 	map_color = "#69702A"
 
 /*

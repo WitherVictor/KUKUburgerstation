@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/opticor
-	name = "\improper Opticor"
-	desc = "Tenno, Do you think me a weeb?"
-	desc_extended = "Fires an incredibly large amount of energy causing massive damage to whatever it hits."
+	name = "\improper 光能轰击炮"
+	desc = "天诺，你觉得我是个死宅吗？"
+	desc_extended = "释放极其庞大的能量，对命中的一切造成巨量伤害。"
 	icon = 'icons/obj/item/weapons/ranged/laser/opticor.dmi'
 	value = 8000
 
@@ -116,9 +116,9 @@
 			INTERACT_CHECK_OBJECT
 			INTERACT_DELAY(5)
 			if(battery)
-				caller.to_chat(span("warning","You cant actually seem to find a slot to pry out any battery!"))
+				caller.to_chat(span("warning","你根本找不到可以撬出电池的插槽！"))
 			else
-				caller.to_chat(span("warning","There is nothing to pry out of \the [src.name]!"))
+				caller.to_chat(span("warning","[src.name]里没有可撬出的东西！"))
 			return TRUE
 
 	. = ..()

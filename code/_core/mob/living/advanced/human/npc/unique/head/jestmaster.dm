@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/jestmaster
-	name = "The Clown"
-	desc = "My bottle of lube oughta put a stop to that!"
+	name = "小丑"
+	desc = "我这瓶润滑剂准能让他们停下来！"
 	species = "human"
 	dialogue_id = /dialogue/npc/jestmaster/
 	sex = MALE

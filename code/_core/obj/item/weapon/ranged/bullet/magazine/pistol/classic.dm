@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/classic
-	name = "\improper 9x19mm T-Defender pistol"
-	desc = "They don't make them like they used to."
-	desc_extended = "A rare functioning replica of pistol carried into battle by the very first NanoTrasen miners when they were allowed to carry their own guns. A lot has changed, since then."
+	name = "\improper 9x19mm T-卫士手枪"
+	desc = "再也造不出当年的味道了。"
+	desc_extended = "早期纳米传讯矿工获准携带自备枪械上阵时，曾使用这种手枪。这是罕见的可用复刻品。自那以后，很多事情都变了。"
 	value = 400
 	icon = 'icons/obj/item/weapons/ranged/pistol/9mm_classic.dmi'
 	shoot_delay = 1.2

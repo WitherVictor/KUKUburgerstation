@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/engineering
-	name = "right engineering boot"
-	desc = "Magboots not included."
-	desc_extended = "Part of the engineering rigsuit. Don't lose them!"
+	name = "工程宇航服右靴"
+	desc = "不含磁靴。"
+	desc_extended = "工程硬式宇航服的配套靴子。别弄丢了！"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -26,7 +26,7 @@
 	can_save = FALSE
 
 /obj/item/clothing/feet/shoes/engineering/left
-	name = "left engineering boot"
+	name = "工程宇航服左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

@@ -1,5 +1,5 @@
 /turf/simulated/floor/strange
-	name = "strange floor"
+	name = "奇异地板"
 	icon = 'icons/turf/floor/strange.dmi'
 	desc = "???"
 	desc_extended = "???"

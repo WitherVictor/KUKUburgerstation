@@ -73,7 +73,7 @@
 				if(!next_turf.Enter(melee_checker,last_turf))
 					if(ismob(attacker))
 						var/mob/M = attacker
-						M.to_chat(span("warning","\The [next_turf.name] is in the way!"))
+						M.to_chat(span("warning","[next_turf.name]挡住了去路！"))
 					return FALSE
 
 				for(var/k in next_turf.contents)
@@ -83,7 +83,7 @@
 					if(!M.Cross(melee_checker))
 						if(ismob(attacker))
 							var/mob/M2 = attacker
-							M2.to_chat(span("warning","\The [M.name] is in the way!"))
+							M2.to_chat(span("warning","[M.name]挡住了去路！"))
 						return FALSE
 
 

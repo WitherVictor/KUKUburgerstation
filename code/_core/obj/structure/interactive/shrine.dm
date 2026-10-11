@@ -1,7 +1,7 @@
 /obj/structure/interactive/ritual
-	name = "ritual shrine"
-	desc = "Pray at the shrine, if you dare."
-	desc_extended = "An occult ritual shrine constructed to honor the gods of battle. Activating it will trap the user in an arena and force them and anyone around them to fight for their life."
+	name = "仪式神龛"
+	desc = "有胆量就来祈祷吧。"
+	desc_extended = "一座为敬奉战斗诸神而建造的神秘仪式神龛。激活后会将使用者和附近的人困在竞技场中，迫使他们为生存而战。"
 	icon = 'icons/obj/structure/shrine.dmi'
 	icon_state = "icon"
 
@@ -135,7 +135,7 @@
 			log_error("Could not start [src.get_debug_name()], no valid turfs!")
 			return FALSE
 
-	activator?.visible_message(span("danger","\The [activator.name] activates \the [src.name]!"),span("danger","You activate \the [src.name]!"))
+	activator?.visible_message(span("danger","[activator.name]激活了[src.name]！"),span("danger","你激活了[src.name]！"))
 	play_sound('sound/effects/ritual_start.ogg',get_turf(src))
 
 	enemy_type_to_spawn = pickweight(possible_ritual_spawns)

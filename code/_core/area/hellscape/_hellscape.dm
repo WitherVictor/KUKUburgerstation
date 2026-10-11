@@ -1,5 +1,5 @@
 /area/hellscape/
-	name = "Hellscape"
+	name = "地狱荒原"
 
 	trackable = TRUE
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/ice_spear
-	name = "ice spear spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a fast moving ice crystal that pierces."
+	name = "冰矛法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射快速移动、能够穿透目标的冰晶。"
 	icon_state = "damage"
 
 	company_type = "Ashwalkers"
@@ -25,9 +25,9 @@
 	value = 800
 
 /obj/item/weapon/ranged/spellgem/fire_spear
-	name = "fire spear spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots a fast moving accurate fire crystal that pierces."
+	name = "火矛法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射快速而精准、能够穿透目标的火焰晶体。"
 	icon_state = "damage"
 
 	company_type = "Ashwalkers"

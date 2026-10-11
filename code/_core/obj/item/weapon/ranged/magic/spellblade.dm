@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/magic/spellblade/
-	name = "spellblade"
+	name = "法术之刃"
 	var/active = FALSE
 	var/damagetype/damage_type_on
 
@@ -38,9 +38,9 @@
 	active = !active
 
 	if(active)
-		activator.to_chat(span("notice","You activate \the [src.name]."))
+		activator.to_chat(span("notice","你激活了[src.name]。"))
 	else
-		activator.to_chat(span("notice","You deactivate \the [src.name]."))
+		activator.to_chat(span("notice","你关闭了[src.name]。"))
 
 	update_sprite()
 
@@ -69,9 +69,9 @@
 
 
 /obj/item/weapon/ranged/magic/spellblade/runesword
-	name = "rune sword"
-	desc = "This sword was made for those who are too lazy to walk up to people to stab them."
-	desc_extended = "A force-blade that was forged by Dwarven runesmiths, in a time long forgotten. It is capable of firing a potent long-range beam."
+	name = "符文剑"
+	desc = "这把剑专为懒得走到别人面前再捅的人打造。"
+	desc_extended = "久远年代里由矮人符文工匠锻造的力场剑，能发射强力远程光束。"
 	icon = 'icons/obj/item/weapons/ranged/magic/runesword.dmi'
 	icon_state = "inventory"
 

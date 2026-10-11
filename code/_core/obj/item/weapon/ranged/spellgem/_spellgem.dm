@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem
-	name = "spell gem"
-	desc = "The source of all magic."
-	desc_extended = "A magical gem filled with pure arcane energy that gives the user the ability to cast spells."
+	name = "法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "充满纯粹奥术能量的魔法宝石，赋予使用者施放法术的能力。"
 	icon = 'icons/obj/item/spellgem.dmi'
 	icon_state = null
 
@@ -28,7 +28,7 @@
 
 /obj/item/weapon/ranged/spellgem/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","This spellgem has a base mana cost of [base_mana_cost*(max_bursts ? max_bursts : 1)]. Can be augmented into wands to alter the spellgem's stats.")
+	. += div("notice","此法术宝石的基础法力消耗为[base_mana_cost*(max_bursts ? max_bursts : 1)]。镶入魔杖后，可通过魔杖调整宝石的属性。")
 
 /obj/item/weapon/ranged/spellgem/proc/calculate_mana_cost() //Don't actually use this. Use src.base_mana_cost instead.
 	. = (get_damage_per_hit(0) + get_damage_per_hit(50) + get_damage_per_hit(100)) / 3
@@ -119,7 +119,7 @@
 		final_mana_cost = max(final_mana_cost,base_mana_cost*0.25)
 
 		if(final_mana_cost > activator.health.mana_current)
-			activator.to_chat(span("warning","You try to push with all your mana, but the spell fizzles!"))
+			activator.to_chat(span("warning","你竭力调动所有法力，法术却仍然消散了！"))
 			return FALSE //Fail
 
 		activator.health.adjust_mana(-final_mana_cost)

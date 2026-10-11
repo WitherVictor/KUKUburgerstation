@@ -46,12 +46,12 @@
 		if(!L.dead && src.interaction_flags & FLAG_INTERACTION_LIVING)
 			. = TRUE
 		if(L.horizontal && src.interaction_flags & FLAG_INTERACTION_NO_HORIZONTAL)
-			if(enable_message) activator.to_chat(span("warning","You need to be standing in order to interact with \the [src.name]!"))
+			if(enable_message) activator.to_chat(span("warning","你需要站起来才能与[src.name]互动！"))
 			return FALSE
 	else if(src.interaction_flags & FLAG_INTERACTION_DEAD)
 		. = TRUE
 	else
-		if(enable_message) activator.to_chat(span("warning","The dead cannot interact with \the [src.name]!"))
+		if(enable_message) activator.to_chat(span("warning","死者无法与[src.name]互动！"))
 		return FALSE
 
 	if(turf_checks && !(src.interaction_flags & FLAG_INTERACTION_NO_TURF_CHECKING) && src.plane < PLANE_HUD && src.z && !activator.loc?.z)

@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/soda
-	name = "soda vendor"
+	name = "汽水售货机"
 	icon_state = "soda"
 
 /obj/structure/interactive/vending/soda/New(var/desired_loc)

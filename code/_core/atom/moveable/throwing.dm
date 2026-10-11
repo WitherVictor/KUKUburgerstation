@@ -6,7 +6,7 @@
 	if(!throwable || anchored)
 		if(ismob(thrower))
 			var/mob/M = thrower
-			M.to_chat(span("warning","You cannot throw \the [src.name]!"))
+			M.to_chat(span("warning","你不能投掷[src.name]！"))
 		return FALSE
 	if(istype(src.loc,/obj/projectile/thrown/))
 		return FALSE

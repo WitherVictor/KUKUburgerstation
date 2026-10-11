@@ -1,7 +1,7 @@
 /obj/item/clothing/undertop
-	name = "undertop"
-	desc = "Shirt that goes under your shirt."
-	desc_extended = "You can also not wear another shirt over this, but you'll look like an idiot, or an Australian."
+	name = "内搭上衣"
+	desc = "穿在上衣里面的衣服。"
+	desc_extended = "外面也可以不再穿上衣，只是那样看起来像个傻子，或者澳大利亚人。"
 	worn_layer = LAYER_MOB_CLOTHING_UNDERSHIRT
 	item_slot = SLOT_TORSO
 

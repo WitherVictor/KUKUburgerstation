@@ -1,7 +1,7 @@
 /obj/structure/interactive/disposals/machine/inlet
-	name = "disposals inlet"
-	desc = "Express delivery!"
-	desc_extended = "Throw various things in here, including yourself."
+	name = "废物管道入口"
+	desc = "快递直达！"
+	desc_extended = "可以把各种东西扔进这里，包括你自己。"
 	icon_state = "intake"
 
 	collision_flags = FLAG_COLLISION_WALKING

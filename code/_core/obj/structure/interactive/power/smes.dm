@@ -1,7 +1,7 @@
 /obj/structure/interactive/power/smes
-	name = "superconducting magnetic energy storage"
-	desc = "POOOOWWWEEERRRRRRRRRRR"
-	desc_extended = "Handles massive power intakes, regulates power output and stores any excess. Commonly abbreviated to SMES."
+	name = "超导磁储能装置"
+	desc = "电——力——！"
+	desc_extended = "接收大量电力，调节输出功率并储存多余电能。通常简称SMES。"
 	icon = 'icons/obj/structure/power.dmi'
 	icon_state = "smes_map"
 
@@ -56,12 +56,12 @@
 /obj/structure/interactive/power/smes/get_examine_list(var/mob/activator)
 	. = ..()
 
-	. += div("notice","Power Input: [terminal.power_draw]w.")
-	. += div("notice","Power Output: [power_supply]w.")
+	. += div("notice","输入功率：[terminal.power_draw]瓦。")
+	. += div("notice","输出功率：[power_supply]瓦。")
 
 	for(var/i=1,i<=length(stored_cells),i++)
 		var/obj/item/powercell/PC = stored_cells[i]
-		. += div("notice","\The [PC.name](#[i]) has [PC.charge_current]/[PC.charge_max]([CEILING(100*(PC.charge_current/PC.charge_max),1)]%) charge remaining.")
+		. += div("notice","[PC.name]（编号[i]）剩余电量：[PC.charge_current]/[PC.charge_max]（[CEILING(100*(PC.charge_current/PC.charge_max),1)]%）。")
 
 
 
@@ -104,9 +104,9 @@
 	cell_type = /obj/item/powercell/industrial
 
 /obj/structure/interactive/power/apc_connection_terminal
-	name = "SMES connection terminal"
-	desc = "POOOOWWWEEERRRRRRRRRRR"
-	desc_extended = "Hooks up to a SMES, acting as an input point."
+	name = "SMES连接端子"
+	desc = "电——力——！"
+	desc_extended = "连接到SMES，作为电力输入端。"
 	icon = 'icons/obj/structure/power.dmi'
 	icon_state = "terminal"
 	var/obj/structure/interactive/power/smes/connected_smes

@@ -1,11 +1,11 @@
 /obj/item/mech_part/head
-	name = "mech head"
-	desc = "Don't lose it."
-	desc_extended = "A head for your mech."
+	name = "机甲头部"
+	desc = "别把脑袋丢了。"
+	desc_extended = "机甲使用的头部组件。"
 
 
 /obj/item/mech_part/head/combat
-	name = "combat head"
+	name = "战斗型机甲头部"
 	icon_state = "combat_head"
 
 	weight = 10
@@ -13,7 +13,7 @@
 	value = 10*20
 
 /obj/item/mech_part/head/heavy
-	name = "heavy head"
+	name = "重型机甲头部"
 	icon_state = "heavy_head"
 
 	weight = 8
@@ -21,7 +21,7 @@
 	value = 8*20
 
 /obj/item/mech_part/head/light
-	name = "light head"
+	name = "轻型机甲头部"
 	icon_state = "light_head"
 
 	weight = 2

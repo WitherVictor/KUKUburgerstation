@@ -1,7 +1,7 @@
 obj/structure/interactive/fence
-	name = "fence"
-	desc = "Keep out."
-	desc_extended = "A flimsy chainlink fence. Keeps moving things in or out as long as it stands, but bullets will pass through."
+	name = "围栏"
+	desc = "禁止入内。"
+	desc_extended = "脆弱的链式铁丝围栏。完好时能拦住移动的物体，但子弹仍可穿过。"
 	icon = 'icons/obj/structure/fence.dmi'
 	icon_state = "straight"
 

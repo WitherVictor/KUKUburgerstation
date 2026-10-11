@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/big_game
-	name = "\improper .300 Big Frame Revolver"
-	desc = "Can't spell overkill without .300."
-	desc_extended = "A BFR (Big Frame Revolver) that has to be reloaded manually, but packs a big punch. Commonly used by Megafauna hunters."
+	name = "\improper .300大框架左轮手枪"
+	desc = "没有.300，哪能叫火力过剩。"
+	desc_extended = "BFR（大框架左轮手枪）需要手动装填，但威力十足。巨型生物猎人常用的武器。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/300.dmi'
 	icon_state = "inventory"
 	value = 1200

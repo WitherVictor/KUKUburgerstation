@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/wand
-	name = "wand"
-	desc = "Wingardium Leviosa!"
-	desc_extended = "A magic imbued wand that can fit any type of spell gem to amplify and improve its powers."
+	name = "魔杖"
+	desc = "羽加迪姆勒维奥萨！"
+	desc_extended = "充满魔力的魔杖，可镶嵌任意种类的法术宝石，强化并改善其力量。"
 	icon_state = "inventory"
 
 	company_type = "Wizard Federation"
@@ -172,20 +172,20 @@
 
 /obj/item/weapon/ranged/wand/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","Has <b>1</b> slot(s) for spell gems.")
-	. += div("notice","Has <b>[sockets]</b> slot(s) for support gems.")
-	. += div("notice","This wand type increases the damage of spell gems by [(wand_damage_multiplier-1)*100]%.")
+	. += div("notice","拥有<b>1</b>个法术宝石槽。")
+	. += div("notice","拥有<b>[sockets]</b>个辅助宝石槽。")
+	. += div("notice","此类魔杖使法术宝石的伤害提高[(wand_damage_multiplier-1)*100]%。")
 	if(socketed_spellgem)
-		. += div("notice","Currently socketed with <b>[socketed_spellgem.name]</b>.")
+		. += div("notice","当前镶嵌的法术宝石：<b>[socketed_spellgem.name]</b>。")
 	if(length(socketed_supportgems))
 		var/list/support_gem_names = list()
 		for(var/k in socketed_supportgems)
 			var/obj/item/I = k
 			support_gem_names += I.name
 		if(socketed_spellgem)
-			. += div("notice","Additionally socketed with <b>[english_list(support_gem_names)]</b>.")
+			. += div("notice","另有辅助宝石：<b>[jointext(support_gem_names,"、")]</b>。")
 		else
-			. += div("notice","Socketed with <b>[english_list(support_gem_names)]</b>.")
+			. += div("notice","当前镶嵌的辅助宝石：<b>[jointext(support_gem_names,"、")]</b>。")
 
 
 /obj/item/weapon/ranged/wand/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
@@ -214,32 +214,32 @@
 
 		var/obj/hud/inventory/I = object
 
-		var/list/objects_to_remove = socketed_supportgems + socketed_spellgem + "Cancel" //+no bitches
+		var/list/objects_to_remove = socketed_supportgems + socketed_spellgem + "取消" //+no bitches
 
 		INTERACT_CHECK
 		INTERACT_DELAY(5)
 
-		var/desired_removal = input("What gem would you like to remove?","Gem Removal","Cancel") as null|anything in objects_to_remove
-		if(desired_removal == "Cancel" || !desired_removal)
-			activator.to_chat(span("notice","You decide not to remove anything."))
+		var/desired_removal = input("要取出哪颗宝石？","取出宝石","取消") as null|anything in objects_to_remove
+		if(desired_removal == "取消" || !desired_removal)
+			activator.to_chat(span("notice","你决定不取出任何宝石。"))
 			return TRUE
 		var/obj/item/G = desired_removal
 		if(G.loc != src)
-			activator.to_chat(span("warning","That's not there anymore!"))
+			activator.to_chat(span("warning","那颗宝石已经不在这里了！"))
 			return TRUE
 		if(G == socketed_spellgem)
 			var/obj/item/weapon/ranged/spellgem/old_spellgem = G
 			socketed_spellgem = null
 			G.drop_item(get_turf(activator))
 			I.add_object(G)
-			activator.to_chat(span("notice","You remove \the [G.name] from \the [src.name]."))
+			activator.to_chat(span("notice","你从[src.name]中取出了[G.name]。"))
 			update_sprite()
 			old_spellgem.update_attachment_stats()
 			return TRUE
 		socketed_supportgems -= G
 		G.drop_item(get_turf(activator))
 		I.add_object(G)
-		activator.to_chat(span("notice","You remove \the [G.name] from \the [src.name]."))
+		activator.to_chat(span("notice","你从[src.name]中取出了[G.name]。"))
 		update_sprite()
 		socketed_spellgem?.update_attachment_stats()
 		return TRUE
@@ -255,9 +255,9 @@
 			socketed_spellgem.update_attachment_stats()
 		if(I)
 			I.add_object(socketed_spellgem)
-			activator.to_chat(span("notice","You replace \the [socketed_spellgem.name] with \the [SG.name]."))
+			activator.to_chat(span("notice","你将[socketed_spellgem.name]换成了[SG.name]。"))
 		else
-			activator.to_chat(span("notice","You insert \the [SG.name] into \the [src.name]."))
+			activator.to_chat(span("notice","你将[SG.name]镶入了[src.name]。"))
 		socketed_spellgem = SG
 		SG.drop_item(src)
 		update_sprite()
@@ -269,11 +269,11 @@
 		INTERACT_DELAY(5)
 		var/obj/item/supportgem/G = object
 		if(length(socketed_supportgems) >= sockets)
-			activator.to_chat(span("warning","There aren't enough sockets to support \the [G.name]!"))
+			activator.to_chat(span("warning","没有足够的宝石槽来镶嵌[G.name]！"))
 			return TRUE
 		socketed_supportgems += G
 		G.drop_item(src)
-		activator.to_chat(span("notice","You insert \the [G.name] into \the [src.name]."))
+		activator.to_chat(span("notice","你将[G.name]镶入了[src.name]。"))
 		update_sprite()
 		socketed_spellgem?.update_attachment_stats()
 		return TRUE
@@ -283,7 +283,7 @@
 	. = ..()
 
 /obj/item/weapon/ranged/wand/branch
-	name = "branch wand"
+	name = "树枝魔杖"
 	icon = 'icons/obj/item/weapons/ranged/magic/wand/branch.dmi'
 
 	wand_damage_multiplier = 1
@@ -293,7 +293,7 @@
 	value = 100
 
 /obj/item/weapon/ranged/wand/crafted
-	name = "crafted wand"
+	name = "手工魔杖"
 	icon = 'icons/obj/item/weapons/ranged/magic/wand/crafted.dmi'
 
 	wand_damage_multiplier = 1.1
@@ -303,7 +303,7 @@
 	value = 100
 
 /obj/item/weapon/ranged/wand/quartz
-	name = "quartz wand"
+	name = "石英魔杖"
 	icon = 'icons/obj/item/weapons/ranged/magic/wand/quartz.dmi'
 
 	wand_damage_multiplier = 1.2
@@ -313,7 +313,7 @@
 	value = 100
 
 /obj/item/weapon/ranged/wand/twisted
-	name = "twisted wand"
+	name = "扭曲魔杖"
 	icon = 'icons/obj/item/weapons/ranged/magic/wand/twisted.dmi'
 
 	wand_damage_multiplier = 1.3
@@ -324,7 +324,7 @@
 	value = 100
 
 /obj/item/weapon/ranged/wand/profane
-	name = "profane wand"
+	name = "亵渎魔杖"
 	icon = 'icons/obj/item/weapons/ranged/magic/wand/profane.dmi'
 
 	wand_damage_multiplier = 1.4
@@ -334,7 +334,7 @@
 	value = 100
 
 /obj/item/weapon/ranged/wand/sage
-	name = "sage wand"
+	name = "贤者魔杖"
 	icon = 'icons/obj/item/weapons/ranged/magic/wand/sage.dmi'
 
 	wand_damage_multiplier = 1.5

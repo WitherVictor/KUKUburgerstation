@@ -1,7 +1,7 @@
 /obj/item/id
-	name = "identification card"
-	desc = "Papers, please."
-	desc_extended = "A plastic identification card used for unlocking access to various machines, as well as showing identification."
+	name = "身份识别卡"
+	desc = "请出示证件。"
+	desc_extended = "塑料身份识别卡，用于取得各种机器的使用权限，也可出示以证明身份。"
 	icon = 'icons/obj/item/id_card.dmi'
 	icon_state = "colonist"
 	value = 10

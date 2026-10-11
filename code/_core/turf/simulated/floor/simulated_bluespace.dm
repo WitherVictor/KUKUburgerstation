@@ -1,5 +1,5 @@
 /turf/simulated/bluespace
-	name = "bluespace"
+	name = "蓝空间"
 	icon_state = "bluespace"
 
 	density_north = TRUE
@@ -21,6 +21,6 @@
 	. = ..()
 
 	if(. && !istype(Obj,/mob/abstract/))
-		Obj.visible_message(span("danger","\The [Obj.name] flashes violently!"))
+		Obj.visible_message(span("danger","[Obj.name]猛烈闪烁！"))
 		Obj.force_move(pick(rift_markers))
 

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/pump/kinetic_accelerator
-	name = "kinetic accelerator"
-	desc = "Pump action!"
-	desc_extended = "An advanced mining tool that uses magnetic kinetic force to pulverize rocks and other foes. Not very effective against smaller objects."
+	name = "动能加速器"
+	desc = "泵动充能！"
+	desc_extended = "先进采矿工具，利用磁力驱动的动能粉碎岩石和其他敌人。对较小物体的效果不太好。"
 	icon = 'icons/obj/item/weapons/ranged/laser/kinetic_accelerator.dmi'
 
 	company_type = "NanoTrasen"

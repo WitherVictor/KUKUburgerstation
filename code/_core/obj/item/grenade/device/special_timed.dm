@@ -11,8 +11,8 @@
 
 
 /obj/item/grenade/device/special/timed/blackhole
-	name = "blackhole grenade"
-	desc_extended = "A special prebuilt grenade storing a volatile black hole that sucks up small objects to be sold to another dimension. The labeling indicates that the fuse is set to 3 seconds."
+	name = "黑洞手榴弹"
+	desc_extended = "预装好的特殊手榴弹，封存着不稳定的黑洞，会吸走地面物品并卖往另一个维度。标签注明引信设为3秒。"
 	paint_color = COLOR_PURPLE
 	marker_color = COLOR_BLACK
 	value = 400
@@ -32,7 +32,7 @@
 	var/turf/T = get_turf(src)
 
 	if(!is_advanced(activator))
-		visible_message(span("warning","\The [src.name] fails to deploy!"))
+		visible_message(span("warning","[src.name]部署失败！"))
 		return TRUE
 
 	var/mob/living/advanced/A = activator
@@ -80,14 +80,14 @@
 			var/mob/living/advanced/player/P = activator
 			var/value_of_contents = src.get_value() * 0.25
 			value_of_contents = CEILING(value_of_contents,1)
-			P.to_chat(span("notice","You've earned [value_of_contents] credits for that [src.name]."))
+			P.to_chat(span("notice","你通过[src.name]获得了[value_of_contents]信用点。"))
 			P.adjust_currency(value_of_contents)
 		qdel(src)
 
 
 /obj/item/grenade/device/special/timed/decoy
-	name = "decoy grenade"
-	desc_extended = "A special prebuilt grenade storing a hardlight hologram dummy. The labeling indicates that the fuse is set to 3 seconds."
+	name = "诱饵手榴弹"
+	desc_extended = "预装好的特殊手榴弹，内置硬光全息假人。标签注明引信设为3秒。"
 	paint_color = COLOR_GREEN
 	marker_color = COLOR_GREEN_LIGHT
 	value = 400
@@ -99,7 +99,7 @@
 	var/turf/T = get_turf(src)
 
 	if(!is_advanced(activator))
-		visible_message(span("warning","\The [src.name] fails to deploy!"))
+		visible_message(span("warning","[src.name]部署失败！"))
 		return TRUE
 
 	var/mob/living/advanced/A = activator
@@ -115,8 +115,8 @@
 
 
 /obj/item/grenade/device/special/timed/barrier
-	name = "barrier grenade"
-	desc_extended = "A special prebuilt grenade storing a robust inflatable barrier. Note that the grenade cannot be used in certain areas. The labeling indicates that the fuse is set to 3 seconds."
+	name = "屏障手榴弹"
+	desc_extended = "预装好的特殊手榴弹，内置结实的充气屏障。某些区域禁止使用。标签注明引信设为3秒。"
 	paint_color = COLOR_GREY_DARK
 	marker_color = COLOR_RED
 	value = 200
@@ -129,7 +129,7 @@
 	var/area/A = T.loc
 
 	if(A.flags_area & FLAG_AREA_NO_CONSTRUCTION)
-		visible_message(span("warning","\The [src.name] fails to deploy!"))
+		visible_message(span("warning","[src.name]部署失败！"))
 		return FALSE
 
 	if(T.has_dense_atom)
@@ -144,7 +144,7 @@
 			good_turfs += DT
 
 		if(!good_turfs)
-			visible_message(span("warning","\The [src.name] fails to deploy!"))
+			visible_message(span("warning","[src.name]部署失败！"))
 			return .
 
 		for(var/k in T.contents)
@@ -152,7 +152,7 @@
 			if(!M.density)
 				continue
 			if(M.anchored)
-				visible_message(span("warning","\The [src.name] fails to deploy!"))
+				visible_message(span("warning","[src.name]部署失败！"))
 				return .
 			M.Move(pick(good_turfs))
 
@@ -172,8 +172,8 @@
 
 
 /obj/item/grenade/device/special/timed/shell
-	name = "shell grenade"
-	desc_extended = "A special prebuilt grenade storing a special metalic foam that sprays on a donut shape around the grenade. Note that the grenade cannot be used in certain areas. The labeling indicates that the fuse is set to 3 seconds."
+	name = "围壳手榴弹"
+	desc_extended = "预装好的特殊手榴弹，向周围喷出金属泡沫形成围壳，空位允许时也会覆盖中心。标签注明引信设为3秒。"
 	paint_color = COLOR_GREY_LIGHT
 	marker_color = COLOR_GOLD
 	value = 300
@@ -246,4 +246,4 @@
 	if(success)
 		play_sound('sound/effects/inflate.ogg',T)
 	else
-		visible_message(span("warning","\The [src.name] fails to deploy!"))
+		visible_message(span("warning","[src.name]部署失败！"))

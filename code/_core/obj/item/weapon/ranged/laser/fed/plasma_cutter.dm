@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/fed/plasma_cutter
-	name = "plasma cutter"
-	desc = "Fed action!"
-	desc_extended = "An advanced mining tool that uses phorogenic plasma bursts to penetrate up to 4 meters of rocks and other foes. Not very effective against smaller objects."
+	name = "等离子切割器"
+	desc = "喂料充能！"
+	desc_extended = "先进采矿工具，利用佛隆产生的等离子体脉冲，最多可穿透4米岩石或其他敌人。对较小物体的效果不太好。"
 	icon = 'icons/obj/item/weapons/ranged/laser/plasma_cutter.dmi'
 
 	company_type = "NanoTrasen"

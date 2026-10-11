@@ -1,8 +1,8 @@
 /obj/item/clothing/head/light/hardhat
-	name = "industrial hardhat"
+	name = "工业安全帽"
 	icon = 'icons/obj/item/clothing/hats/hardhat.dmi'
-	desc = "THIS IS AN OFFICIAL CONSTRUCTION ZONE! PLEASE REMOVE YOURSELF FROM THE AREA!"
-	desc_extended = "A yellow industrial hardhat. Seems pretty robust against blunt trauma."
+	desc = "这里是正式施工区域！请立即离开！"
+	desc_extended = "黄色工业安全帽，似乎能有效抵御钝器伤害。"
 
 
 	armor = /armor/military/light
@@ -21,5 +21,5 @@
 	rarity = RARITY_UNCOMMON
 
 /obj/item/clothing/head/light/hardhat/fire
-	name = "firefighter's hardhat"
+	name = "消防安全帽"
 	color = COLOR_RED

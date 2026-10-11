@@ -1,7 +1,7 @@
 /obj/item/storage/heavy/trash_pile
-	name = "trash pile"
-	desc = "Look inside, if you dare."
-	desc_extended = "A large pile of trash containing long discarded items. It could be dangerous to search one.."
+	name = "垃圾堆"
+	desc = "有胆量就翻翻看。"
+	desc_extended = "一大堆垃圾，里面有许多丢弃已久的物品。翻找它可能会有危险……"
 	icon = 'icons/obj/structure/trash_piles.dmi'
 	icon_state = "trash"
 
@@ -51,7 +51,7 @@
 
 	if(. && stored_beefman)
 		var/turf/T = get_turf(src)
-		T.visible_message(span("danger","A disturbed beefman crawls out of \the [src.name]!"))
+		T.visible_message(span("danger","一个受到惊扰的血肉人从[src.name]里爬了出来！"))
 		stored_beefman.force_move(T)
 		stored_beefman.ai.set_objective(caller)
 		stored_beefman = null

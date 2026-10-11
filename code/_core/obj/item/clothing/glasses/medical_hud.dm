@@ -1,8 +1,8 @@
 /obj/item/clothing/glasses/medical_hud
-	name = "medical hud"
+	name = "医疗状态目镜"
 
-	desc = "This is just like a videogame!"
-	desc_extended = "A medical heads up display eyepiece that analyzes the health of nearby living beings and displays them on the screen."
+	desc = "简直就像电子游戏一样！"
+	desc_extended = "带有医疗状态界面的目镜，分析附近生物的健康状况并显示在屏幕上。"
 	icon = 'icons/obj/item/clothing/glasses/medical_hud.dmi'
 
 	vision_mod = FLAG_VISION_MEDICAL
@@ -19,10 +19,10 @@
 
 
 /obj/item/clothing/glasses/medical_hud/advanced
-	name = "advanced medical hud"
+	name = "先进医疗状态目镜"
 
-	desc = "This is just like a videogame!"
-	desc_extended = "A medical heads up display eyepiece that analyzes the health of nearby living beings and displays them on the screen. This one also displays the type of injury, if any."
+	desc = "简直就像电子游戏一样！"
+	desc_extended = "带有医疗状态界面的目镜，分析附近生物的健康状况并显示在屏幕上。这款还能显示伤者的伤害类型。"
 	icon = 'icons/obj/item/clothing/glasses/medical_hud.dmi'
 	vision_mod = FLAG_VISION_MEDICAL | FLAG_VISION_MEDICAL_ADVANCED
 

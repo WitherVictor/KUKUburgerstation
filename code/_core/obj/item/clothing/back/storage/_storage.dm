@@ -1,6 +1,6 @@
 obj/item/clothing/back/storage
-	name = "back storage"
-	desc_extended = "Stores a robust amount of items."
+	name = "背部储物装备"
+	desc_extended = "能存放不少物品。"
 
 	is_container = TRUE
 

@@ -1,7 +1,7 @@
 /obj/item/pinpointer/
-	name = "personal pinpointer"
-	desc = "Where is it?"
-	desc_extended = "Use this to track and locate objects."
+	name = "个人定位器"
+	desc = "它在哪儿？"
+	desc_extended = "用来追踪和定位目标。"
 
 	icon = 'icons/obj/item/pinpointer.dmi'
 	icon_state = "red"
@@ -35,11 +35,16 @@
 	if(tracked_atom)
 		var/turf/T = get_turf(tracked_atom)
 		var/turf/T2 = get_turf(src)
-		. += div("notice","The device reports the coordinates as ([T2.x],[T2.y],[T2.z]).")
-		. += div("notice","It's set to track [tracked_atom.name] at ([T.x],[T.y],[T.z]).")
+		. += div("notice","设备自身坐标为（[T2.x],[T2.y],[T2.z]）。")
+		. += div("notice","正在追踪[tracked_atom.name]，目标坐标为（[T.x],[T.y],[T.z]）。")
 	else
-		. += div("notice","It's off.")
+		. += div("notice","设备已关闭。")
 
+
+/obj/item/pinpointer/proc/get_direction_name(var/direction)
+	var/list/direction_names = list("north"="北","south"="南","east"="东","west"="西","north-east"="东北","north-west"="西北","south-east"="东南","south-west"="西南","none"="无方向")
+	var/direction_text = dir2text(direction)
+	return direction_names[direction_text] ? direction_names[direction_text] : direction_text
 
 /obj/item/pinpointer/proc/can_track(var/atom/A)
 
@@ -113,8 +118,8 @@
 	return TRUE
 
 /obj/item/pinpointer/custom/
-	name = "custom pinpointer"
-	desc_extended = "Use this to track and locate objects. This one allows you to scan an object and then track it."
+	name = "自定义定位器"
+	desc_extended = "用来追踪和定位目标。此型号可以扫描物体，然后追踪它。"
 	icon_state = "brown"
 
 	value = 30
@@ -125,10 +130,10 @@
 		INTERACT_CHECK
 		INTERACT_DELAY(10)
 		if(!can_track(object))
-			activator.to_chat(span("warning","You can't track this object!"))
+			activator.to_chat(span("warning","你无法追踪这个目标！"))
 			return TRUE
 		tracked_atom = object
-		activator.visible_message(span("notice","\The [activator.name] scans \the [object.name] with \the [src.name]."),span("notice","You scan \the [object.name], tracking it."))
+		activator.visible_message(span("notice","[activator.name]用[src.name]扫描了[object.name]。"),span("notice","你扫描了[object.name]，开始追踪它。"))
 		scan_mode = FALSE
 		START_THINKING(src)
 		return TRUE
@@ -143,9 +148,9 @@
 	scan_mode = !scan_mode
 
 	if(scan_mode)
-		activator.to_chat(span("notice","You enable scan mode. Scan an object to track it."))
+		activator.to_chat(span("notice","你开启了扫描模式。扫描一个物体即可追踪它。"))
 	else
-		activator.to_chat(span("notice","You disable scan mode."))
+		activator.to_chat(span("notice","你关闭了扫描模式。"))
 
 	update_sprite()
 
@@ -153,8 +158,8 @@
 
 
 /obj/item/pinpointer/crew/
-	name = "crew pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks positions of NanoTrasen crew."
+	name = "船员定位器"
+	desc_extended = "用来追踪和定位目标。此型号可追踪纳米传讯船员的位置。"
 	icon_state = "blue"
 
 	value = 20
@@ -173,13 +178,13 @@
 	var/list/possible_crew = list()
 
 	if(enable_friendly_fire)
-		activator.to_chat(span("notice","This doesn't seem to be working for some reason..."))
+		activator.to_chat(span("notice","不知为何，它似乎无法工作……"))
 		return FALSE
 
 	if(encoded && is_living(activator))
 		var/mob/living/L = activator
 		if(L.loyalty_tag != desired_loyalty_tag)
-			activator.to_chat(span("warning","All the information seems to be displayed in code you don't understand..."))
+			activator.to_chat(span("warning","所有信息似乎都是你无法理解的密文……"))
 			return FALSE
 
 	for(var/mob/living/advanced/player/P in SSliving.all_players)
@@ -187,13 +192,13 @@
 			continue
 		if(!can_track(P))
 			continue
-		var/name_mod = "[P.real_name] ([P.dead ? "DEAD" : "Alive"], [dir2text(get_dir_advanced(activator,P))], [get_dist_advanced(src,P)]m)"
+		var/name_mod = "[P.real_name]（[P.dead ? "死亡" : "存活"]，[get_direction_name(get_dir_advanced(activator,P))]，[get_dist_advanced(src,P)]米）"
 		possible_crew[name_mod] = P
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("Who do you want to track?","Crew Pinpointer Tracking",null) as null|anything in possible_crew
+	var/choice = input("你想追踪谁？","船员定位器追踪",null) as null|anything in possible_crew
 
 	INTERACT_CHECK_OTHER(src) //Hacky
 
@@ -210,9 +215,9 @@
 
 
 /obj/item/pinpointer/crew/death
-	name = "death pinpointer"
+	name = "遗体定位器"
 	icon_state = "grey"
-	desc_extended = "Use this to track and locate objects. This is used to exclusively track corpses of NanoTrasen Crew."
+	desc_extended = "用来追踪和定位目标。此型号专门追踪纳米传讯船员的遗体。"
 	value = 100
 
 /obj/item/pinpointer/crew/death/can_track(var/atom/A)
@@ -228,8 +233,8 @@
 
 
 /obj/item/pinpointer/crew/syndicate
-	name = "syndicate operative pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks positions of Syndicate Raiders."
+	name = "辛迪加行动人员定位器"
+	desc_extended = "用来追踪和定位目标。此型号可追踪辛迪加突袭者的位置。"
 	icon_state = "syndicate"
 	desired_loyalty_tag = "Syndicate"
 	value = 1000
@@ -237,8 +242,8 @@
 	can_save = FALSE
 
 /obj/item/pinpointer/crew/revolutionary
-	name = "revolutionary soldier pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks positions of Revolutionary Soldiers."
+	name = "革命军士兵定位器"
+	desc_extended = "用来追踪和定位目标。此型号可追踪革命军士兵的位置。"
 	icon_state = "rev"
 	desired_loyalty_tag = "Revolutionary"
 	value = 1000
@@ -246,8 +251,8 @@
 	can_save = FALSE
 
 /obj/item/pinpointer/landmark/
-	name = "area pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks positions of important areas."
+	name = "区域定位器"
+	desc_extended = "用来追踪和定位目标。此型号可定位重要区域。"
 	icon_state = "green"
 
 	value = 10
@@ -261,7 +266,7 @@
 
 	var/area/my_area = get_area(src)
 	if(!my_area.area_identifier)
-		activator.to_chat(span("warning","There is no signal..."))
+		activator.to_chat(span("warning","没有信号……"))
 		return TRUE
 
 	for(var/k in SSarea.all_areas)
@@ -273,17 +278,17 @@
 		if(my_area.area_identifier != A.area_identifier)
 			continue
 		var/turf/T = locate(A.average_x,A.average_y,A.z)
-		var/name_mod = "[A.name] ([dir2text(get_dir_advanced(activator,T))], [get_dist_advanced(src,T)]m)"
+		var/name_mod = "[A.name]（[get_direction_name(get_dir_advanced(activator,T))]，[get_dist_advanced(src,T)]米）"
 		possible_landmarks[name_mod] = T
 
 	if(!length(possible_landmarks))
-		activator.to_chat(span("warning","Can't find anything to track!"))
+		activator.to_chat(span("warning","找不到可追踪的目标！"))
 		return TRUE
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("What do you want to track?","Area Pinpointer Tracking","Cancel") as null|anything in possible_landmarks
+	var/choice = input("你想追踪什么目标？","区域定位器追踪","取消") as null|anything in possible_landmarks
 
 	INTERACT_CHECK_OTHER(src) //Hacky
 
@@ -299,8 +304,8 @@
 	return TRUE
 
 /obj/item/pinpointer/objective/
-	name = "objectives pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks positions of your objectives, only works when in the field."
+	name = "任务目标定位器"
+	desc_extended = "用来追踪和定位目标。此型号可追踪任务目标的位置，仅在外勤区域有效。"
 	icon_state = "yellow"
 
 	value = 20
@@ -320,17 +325,17 @@
 			var/atom/A = k
 			if(!can_track(A))
 				continue
-			var/name_mod = "[A.name] ([dir2text(get_dir_advanced(activator,A))], [get_dist_advanced(src,A)]m)"
+			var/name_mod = "[A.name]（[get_direction_name(get_dir_advanced(activator,A))]，[get_dist_advanced(src,A)]米）"
 			possible_artifacts[name_mod] = A
 
 	if(!length(possible_artifacts))
-		activator.to_chat(span("warning","Can't find anything to track!"))
+		activator.to_chat(span("warning","找不到可追踪的目标！"))
 		return TRUE
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("What do you want to track?","Objective Pinpointer Tracking","Cancel") as null|anything in possible_artifacts
+	var/choice = input("你想追踪什么目标？","任务目标定位器追踪","取消") as null|anything in possible_artifacts
 
 	INTERACT_CHECK_OTHER(src) //Hacky
 
@@ -347,8 +352,8 @@
 
 
 /obj/item/pinpointer/boss/
-	name = "boss pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks positions of the big bad, only works when in the field."
+	name = "首领定位器"
+	desc_extended = "用来追踪和定位目标。此型号可追踪强大首领的位置，仅在外勤区域有效。"
 	icon_state = "orange"
 
 	value = 100
@@ -368,17 +373,17 @@
 			continue
 		if(A.health.health_current < 0)
 			continue
-		var/name_mod = "[A.name] ([dir2text(get_dir_advanced(activator,A))], [get_dist_advanced(src,A)]m)"
+		var/name_mod = "[A.name]（[get_direction_name(get_dir_advanced(activator,A))]，[get_dist_advanced(src,A)]米）"
 		possible_bosses[name_mod] = A
 
 	if(!length(possible_bosses))
-		activator.to_chat(span("warning","Can't find anything to track!"))
+		activator.to_chat(span("warning","找不到可追踪的目标！"))
 		return TRUE
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("What do you want to track?","Objective Pinpointer Tracking","Cancel") as null|anything in possible_bosses
+	var/choice = input("你想追踪什么目标？","首领定位器追踪","取消") as null|anything in possible_bosses
 
 	INTERACT_CHECK_OTHER(src) //Hacky.
 
@@ -396,8 +401,8 @@
 
 
 /obj/item/pinpointer/deathmatch
-	name = "deathmatch pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks everyone, but not that well.."
+	name = "死亡竞赛定位器"
+	desc_extended = "用来追踪和定位目标。此型号能追踪所有人，不过精度不怎么样……"
 	icon_state = "syndicate"
 	value = 1000
 	value_burgerbux = 1
@@ -412,7 +417,7 @@
 	var/list/possible_crew = list()
 
 	if(!enable_friendly_fire)
-		activator.to_chat(span("notice","This doesn't seem to be working for some reason..."))
+		activator.to_chat(span("notice","不知为何，它似乎无法工作……"))
 		return FALSE
 
 	for(var/mob/living/advanced/player/P in SSliving.all_players)
@@ -423,13 +428,13 @@
 		signal_num = 1 + (signal_num % 200)
 		var/rand_num = rand(5,10)
 		var/distance_to_show = 	CEILING(get_dist_advanced(src,P),rand_num)
-		var/name_mod = "Signal #[signal_num] ([P.dead ? "DEAD" : "Alive"], ~[distance_to_show]m)"
+		var/name_mod = "信号#[signal_num]（[P.dead ? "死亡" : "存活"]，约[distance_to_show]米）"
 		possible_crew[name_mod] = P
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("Who do you want to track?","Deathmatch Pinpointer Tracking",null) as null|anything in possible_crew
+	var/choice = input("你想追踪谁？","死亡竞赛定位器追踪",null) as null|anything in possible_crew
 
 	INTERACT_CHECK_OTHER(src) //Hacky
 
@@ -447,8 +452,8 @@
 
 
 /obj/item/pinpointer/mobs
-	name = "enemy pinpointer"
-	desc_extended = "Use this to track and locate objects. This one tracks things to kill."
+	name = "敌人定位器"
+	desc_extended = "用来追踪和定位目标。此型号用于寻找可供猎杀的生物目标。"
 	icon_state = "syndicate"
 	value = 1000
 	value_burgerbux = 1
@@ -467,13 +472,13 @@
 		signal_num += signal_offset
 		signal_num = 1 + (signal_num % 200)
 		var/distance_to_show = get_dist_advanced(src,a)
-		var/name_mod = "[a.name] ([a.dead ? "DEAD" : "Alive"], ~[distance_to_show]m)"
+		var/name_mod = "[a.name]（[a.dead ? "死亡" : "存活"]，约[distance_to_show]米）"
 		mobs[name_mod] = a
 
 	scan_mode = TRUE
 	update_sprite()
 
-	var/choice = input("Who do you want to track?","Mob Pinpointer Tracking",null) as null|anything in mobs
+	var/choice = input("你想追踪谁？","生物定位器追踪",null) as null|anything in mobs
 
 	INTERACT_CHECK_OTHER(src) //Hacky
 

@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/robust
-	name = "Ultimate Being"
-	desc = "The most robust man in the world."
+	name = "究极生物"
+	desc = "世上最能打的男人。"
 	species = "human"
 	sex = MALE
 	gender = MALE

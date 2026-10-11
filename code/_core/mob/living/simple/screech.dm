@@ -1,7 +1,7 @@
 /mob/living/simple/screech
-	name = "screech"
-	desc = "OH FUCK MY EARS"
-	desc_extended = "What the fuck?"
+	name = "尖啸怪"
+	desc = "卧槽，我的耳朵！"
+	desc_extended = "什么鬼？"
 	icon = 'icons/mob/living/simple/screech.dmi'
 	icon_state = "screech"
 	pixel_x = -16

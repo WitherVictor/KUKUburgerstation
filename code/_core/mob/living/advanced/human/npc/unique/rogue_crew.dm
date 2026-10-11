@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/unique/rogue_crew
-	name = "rogue crewmember"
-	desc = "What used to belong to NanoTrasen now roams the area with pure bloodlust in their eyes."
+	name = "叛变船员"
+	desc = "曾效力于纳米传讯，如今在这一带游荡，眼里只剩嗜血欲望。"
 
 	iff_tag = "Rogue"
 	loyalty_tag = "Rogue"

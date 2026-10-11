@@ -1,6 +1,6 @@
 /mob/living/simple/spacecarp/
-	name = "giant carp"
-	desc = "Wait, where is the space?"
+	name = "巨型鲤鱼"
+	desc = "等等，说好的太空呢？"
 	icon = 'icons/mob/living/simple/carp.dmi'
 	icon_state = "living"
 
@@ -88,12 +88,12 @@
 	update_sprite()
 
 /mob/living/simple/spacecarp/leader
-	name = "alpha giant carp"
+	name = "巨型鲤鱼头领"
 
 	level = 28
 
 /mob/living/simple/spacecarp/jungle
-	name = "giant jungle carp"
+	name = "巨型丛林鲤鱼"
 	level = 14
 
 /mob/living/simple/spacecarp/jungle/generate_colors()

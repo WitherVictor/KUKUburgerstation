@@ -1,7 +1,7 @@
 /obj/item/portal_scroll
-	name = "portal scroll"
-	desc = "Seems stable-ish."
-	desc_extended = "A scroll that when read, creates a portal to the nearest safe place."
+	name = "传送门卷轴"
+	desc = "看起来还算稳定。"
+	desc_extended = "阅读后可开启通往己方安全地点的传送门。"
 	icon = 'icons/obj/item/portal_scroll.dmi'
 	icon_state = "inventory"
 	has_quick_function = TRUE //Allows scrolls to show up in the belt slots.
@@ -16,7 +16,7 @@
 		if(L.loyalty_tag && length(portal_markers[L.loyalty_tag]))
 			var/obj/marker/M = portal_markers[L.loyalty_tag][1]
 			var/area/A = get_area(M)
-			if(A) . += span("notice","Using this will teleport you to \the [A.name].")
+			if(A) . += span("notice","使用后可开启通往[A.name]的传送门。")
 
 /obj/item/portal_scroll/quick(var/mob/activator,var/atom/object,location,params)
 	click_self(activator)
@@ -24,30 +24,30 @@
 /obj/item/portal_scroll/click_self(var/mob/activator,location,control,params)
 
 	if(!is_player(activator) || !activator.client)
-		activator.to_chat(span("warning","You don't know how to use this..."))
+		activator.to_chat(span("warning","你不知道该怎么使用它……"))
 		return TRUE
 
 	var/mob/living/advanced/player/P = activator
 
 	if(!P.z)
-		activator.to_chat(span("warning","You can't use this here!"))
+		activator.to_chat(span("warning","你不能在这里使用它！"))
 		return TRUE
 
 	var/area/A = P.loc.loc
 	if(A.area_identifier != "Mission")
-		activator.to_chat(span("warning","You can't use this here!"))
+		activator.to_chat(span("warning","你不能在这里使用它！"))
 		return TRUE
 
 	if(enable_friendly_fire)
-		activator.to_chat(span("warning","This doesn't seem to be working for some reason..."))
+		activator.to_chat(span("warning","不知为何，它似乎无法工作……"))
 		return TRUE
 
 	if(!P.loyalty_tag || !portal_markers[P.loyalty_tag])
-		activator.to_chat(span("warning","You don't know how to use this..."))
+		activator.to_chat(span("warning","你不知道该怎么使用它……"))
 		return TRUE
 
 	if(!length(portal_markers[P.loyalty_tag]))
-		activator.to_chat(span("warning","Failed to create a portal... there are too many portals that exist already!"))
+		activator.to_chat(span("warning","无法开启传送门……现有传送门已经太多了！"))
 		return TRUE
 
 	P.clear_portals()
@@ -61,7 +61,7 @@
 	var/turf/PMT = get_turf(PM)
 
 	if(!T || !PMT)
-		activator.to_chat(span("warning","Failed to create a portal. Something horribly went wrong."))
+		activator.to_chat(span("warning","无法开启传送门，出了严重的问题。"))
 		return TRUE
 
 	var/obj/effect/temp/portal/start_portal = new(T,SECONDS_TO_DECISECONDS(300))
@@ -83,8 +83,8 @@
 	var/area/A1 = T.loc
 	var/area/A2 = PMT.loc
 
-	start_portal.name = "[P.name]'s portal to [A2.name]"
-	end_portal.name = "[P.name]'s portal to [A1.name]"
+	start_portal.name = "[P.name]通往[A2.name]的传送门"
+	end_portal.name = "[P.name]通往[A1.name]的传送门"
 
 	start_portal.update_sprite()
 	end_portal.update_sprite()

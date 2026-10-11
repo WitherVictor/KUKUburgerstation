@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/recharging/captain
-	name = "\improper Captain's laser pistol"
-	desc = "All craftsmanship is of the highest quality."
-	desc_extended = "A fancier version of the laser rifle that self-charges. It has become innacurate due to its age."
+	name = "\improper 舰长激光手枪"
+	desc = "各处工艺都堪称上乘。"
+	desc_extended = "激光步枪的华丽自动充能版本。年岁已高，精度也随之下降。"
 	icon = 'icons/obj/item/weapons/ranged/laser/captain.dmi'
 	rarity = RARITY_MYTHICAL
 

@@ -1,6 +1,6 @@
 obj/structure/interactive/door/airlock/external
-	name = "external airlock"
-	desc = "A powered airlock."
+	name = "外部气闸门"
+	desc = "电动气闸门。"
 
 	icon = 'icons/obj/structure/airlock/airlock_external_new.dmi'
 	icon_state = "closed"

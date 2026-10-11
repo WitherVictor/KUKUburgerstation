@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/tungsten
-	name = "\improper T20mm carbine"
-	desc = "Shoots movable rods."
-	desc_extended = "A special NanoTrasen Research Team tungesten shooting carbine designed to rival the syndicate energy crossbow. This version shoots tungesten rods instead of energy bolts, is more cumbersome than the energy now, and honestly really doesn't have any resemblence the energy crossbow at all."
+	name = "\improper T20mm卡宾枪"
+	desc = "发射可移动的金属杆。"
+	desc_extended = "纳米传讯科研团队研发的特殊钨杆卡宾枪，原计划与辛迪加能量弩竞争。这款发射钨杆而非能量弹，比能量弩更笨重，说实话已经和能量弩毫无相似之处。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/tungsten.dmi'
 	icon_state = "inventory"
 	shoot_delay = 4

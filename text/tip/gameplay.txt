@@ -1,13 +1,13 @@
-You can access a safe storage space by talking to the Goblin. Every NanoTrasen employee has one, free of charge.
-Some clothing inventory spaces can fit more than one article of clothing. For example, you can wear a coat over a hardsuit.
-Dufflebags hold more than backpacks, and backpacks hold more than satchels. Generally the more spacious an inventory is, the more of a slowdown is applied when worn or held.
-Antag Tokens can be purchased in the Clown's office. They can be redeemed to your ckey to give you the ability to become an off-station antagonist.
-You can drink from beakers, however it is much more effective to drink from a drinking glass or a shot glass.
-Shot glasses consume the entirety of its contents in one sip.
-Contracts can be obtained from Mr. Scratch near the western part of the station. This is a good source of income.
-Mr. Scratch will never offer contracts to kill mobs that don't exist on the planet.
-Gold can be exchanged at the bank (Also known as the store "Bawse Loot") for credits.
-You can sell your unwanted items at the bank, also known as the store "Bawse Loot".
-Burgerstation's Economy is dynamic. The price of gold coins fluctuates based on how much of the currency is in circulation.
+与地精交谈即可使用安全储物空间。每位纳米传讯员工都能免费获得一个。
+部分服装槽位可以穿戴多件衣物。例如，你可以在硬式宇航服外再穿一件外套。
+行李袋比双肩包装得多，双肩包又比挎包装得多。通常，储物空间越大，穿戴或手持时造成的减速也越明显。
+你可以在小丑办公室购买对抗角色代币。兑换后，代币会记入你的账号，让你有机会扮演站外对抗角色。
+你可以直接用烧杯喝东西，不过使用玻璃杯或烈酒杯会高效得多。
+烈酒杯里的东西会被一口喝光。
+你可以在空间站西部附近向抓痕先生领取契约，这是个不错的收入来源。
+抓痕先生不会提供猎杀这颗星球上不存在的生物的契约。
+你可以在银行，也就是“鲍斯战利品”商店，把黄金兑换成信用点。
+你可以在银行，也就是“鲍斯战利品”商店，出售不需要的物品。
+汉堡站采用动态经济。金币价格会随着流通中的货币数量波动。
 
 

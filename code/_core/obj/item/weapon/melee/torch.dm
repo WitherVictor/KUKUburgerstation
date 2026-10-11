@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/torch //Also flashlights.
-	name = "torch"
-	desc = "A staple of cavemen and revolutionaries."
-	desc_extended = "Emits light. Somehow it has unlimited fuel."
+	name = "火把"
+	desc = "穴居人和革命者的必备品。"
+	desc_extended = "能够照明。不知为何，燃料永远烧不完。"
 	icon = 'icons/obj/item/weapons/melee/clubs/torch.dmi'
 
 	var/enabled = FALSE
@@ -63,9 +63,9 @@
 
 
 /obj/item/weapon/melee/torch/lantern
-	name = "lantern"
-	desc = "But what type of lantern? Eh, who cares."
-	desc_extended = "Emits a lot of light. Somehow it has unlimited fuel."
+	name = "提灯"
+	desc = "可这是什么提灯？算了，谁在乎呢。"
+	desc_extended = "提供明亮的照明。不知为何，燃料永远烧不完。"
 	icon = 'icons/obj/item/weapons/melee/clubs/lantern.dmi'
 
 	damage_type = /damagetype/item/medium
@@ -84,9 +84,9 @@
 
 
 /obj/item/weapon/melee/torch/flashlight
-	name = "plastic flashlight"
-	desc = "Can't live without it!"
-	desc_extended = "Emits light in a certain radius and direction when activated."
+	name = "塑料手电筒"
+	desc = "没有它可活不下去！"
+	desc_extended = "开启后向特定方向和范围投射光线。"
 	icon = 'icons/obj/item/weapons/melee/clubs/flashlight.dmi'
 
 	damage_type = /damagetype/item/light
@@ -106,11 +106,11 @@
 
 /obj/item/weapon/melee/torch/flashlight/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","Flashlights shine light only in the direction you are facing.<br>You can adjust where your character is looking by holding V, or automatically by having harm intent selected.")
+	. += span("notice","手电筒只照向你面朝的方向。<br>按住V可调整角色朝向；选中伤害意图时，朝向会自动调整。")
 
 /obj/item/weapon/melee/torch/flashlight/maglight
-	name = "maglight"
-	desc = "A robust flashlight."
+	name = "重型手电筒"
+	desc = "结实耐用的手电筒。"
 	icon = 'icons/obj/item/weapons/melee/clubs/maglight.dmi'
 
 	damage_type = /damagetype/item/medium
@@ -130,8 +130,8 @@
 
 
 /obj/item/weapon/melee/torch/tinea_luxor
-	name = "tinea_luxor light"
-	desc = "You shouldn't be seeing this."
+	name = "萤蕈素光源"
+	desc = "你不该看到这个。"
 	desired_light_range = VIEW_RANGE
 	desired_light_power = 0.9
 	desired_light_color = "#E3FF9E"

@@ -1,7 +1,7 @@
 /obj/structure/short_wall
-	name = "short wall"
-	desc = "Low enough to see over."
-	desc = "A torso high wall. Can be used as basic cover."
+	name = "矮墙"
+	desc = "低到能看见另一侧。"
+	desc = "齐胸高的墙，可以充当简易掩体。"
 	icon = 'icons/obj/structure/wall.dmi'
 	icon_state = "wall"
 
@@ -27,7 +27,7 @@
 	qdel(src)
 
 /obj/structure/short_wall/wood
-	name = "short wood wall"
+	name = "木制矮墙"
 	color = "#6F4533"
 	corner_category = "wood_wall"
 	material_id = /material/wood
@@ -39,13 +39,13 @@
 	color = "#60402C"
 
 /obj/structure/short_wall/brick
-	name = "short stone wall"
+	name = "石制矮墙"
 	icon = 'icons/obj/structure/stone.dmi'
 	corner_category = "stone_wall"
 	material_id = /material/steel
 
 /obj/structure/short_wall/sand
-	name = "short sand wall"
+	name = "沙土矮墙"
 	color = "#CC955F"
 	corner_category = "sand_wall"
 	material_id = /material/wood

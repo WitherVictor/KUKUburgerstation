@@ -1,7 +1,7 @@
 /obj/item/bedsheet
-	name = "bedsheet"
-	desc = "a mirmir."
-	desc_extended = "A comfy linen bedsheet, for covering yourself in bed."
+	name = "床单"
+	desc = "睡觉觉。"
+	desc_extended = "舒适的亚麻床单，躺在床上时可以盖在身上。"
 	icon = 'icons/obj/structure/bed.dmi'
 	icon_state = "sheet"
 	value = 10

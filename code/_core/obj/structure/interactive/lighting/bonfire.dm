@@ -1,6 +1,6 @@
 /obj/structure/interactive/lighting/bonfire //TODO: Make it cook.
-	name = "bonfire"
-	desc = "a large bonfire"
+	name = "篝火"
+	desc = "一堆大型篝火。"
 
 	opacity = 0
 

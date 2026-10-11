@@ -12,7 +12,7 @@
 
 		if(C.loc == C.additional_clothing_parent) //It's not worn, so try to equip.
 			if(!C.quick_equip(activator,ignore_hands=TRUE,ignore_held=FALSE,ignore_dynamic=TRUE))
-				activator.to_chat(span("notice","You can't toggle \the [C], there is clothing in the way!"))
+				activator.to_chat(span("notice","其他服装挡住了位置，无法展开[C]！"))
 			should_deploy = TRUE
 
 	if(!should_deploy)

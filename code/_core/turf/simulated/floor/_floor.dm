@@ -1,6 +1,6 @@
 /turf/simulated/floor/
-	name = "FLOOR"
-	desc = "A floor."
+	name = "地板"
+	desc = "一块地板。"
 
 	collision_flags = FLAG_COLLISION_NONE
 	collision_bullet_flags = FLAG_COLLISION_BULLET_NONE
@@ -63,17 +63,17 @@
 		return FALSE
 	var/mob/living/C = activator
 	if(get_dist(C,src) > 1)
-		C.to_chat(span("warning","You're too far away!"))
+		C.to_chat(span("warning","你离得太远了！"))
 		return FALSE
 
 	var/area/A = loc
 	if(A.flags_area & FLAG_AREA_NO_CONSTRUCTION)
-		C.to_chat(span("warning","You cannot construct this in this area!"))
+		C.to_chat(span("warning","你不能在这个区域建造它！"))
 		return FALSE
 
 	var/mob/living/L = locate() in contents
 	if(L)
-		C.to_chat(span("warning","You can't build this here, \the [L.name] is in the way!"))
+		C.to_chat(span("warning","你不能在这里建造，[L.name]挡住了位置！"))
 		return FALSE
 	for(var/obj/structure/S in src.contents)
 		if(S.under_tile != SAFEVAR(structure_to_make,under_tile))
@@ -85,12 +85,12 @@
 			if(flags_placement & FLAG_PLACEMENT_DIRECTIONAL)
 				if(!(S.dir & C.dir))
 					continue
-			C.to_chat(span("warning","There is a [S.name] here already!"))
+			C.to_chat(span("warning","这里已经有[S.name]了！"))
 			return FALSE
 		else
 			for(var/k in S.structure_blacklist)
 				if(istype(k,structure_to_make))
-					C.to_chat(span("warning","You cannot construct this with \the [S.name] in the way!"))
+					C.to_chat(span("warning","[S.name]挡住了位置，你无法建造！"))
 					return FALSE
 
 	return TRUE

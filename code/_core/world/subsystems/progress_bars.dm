@@ -92,7 +92,7 @@ SUBSYSTEM_DEF(progressbars)
 	if(all_progress_bars[owner])
 		if(ismob(owner))
 			var/mob/M = owner
-			M.to_chat(span("notice","You're already busy with a task!"))
+			M.to_chat(span("notice","你已经在忙别的事了！"))
 		return FALSE
 
 	all_progress_bars[owner] = list(

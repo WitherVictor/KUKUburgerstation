@@ -1,7 +1,7 @@
 /obj/item/slime_bomb
-	name = "bomb"
-	desc = "LATERNS, LAMP OIL, ROPE."
-	desc_extended = "A strange looking black powder bomb."
+	name = "黑火药炸弹"
+	desc = "提灯、灯油、绳子。"
+	desc_extended = "外形古怪的黑火药炸弹。"
 	icon = 'icons/obj/item/old_bomb.dmi'
 	icon_state = "bomb"
 

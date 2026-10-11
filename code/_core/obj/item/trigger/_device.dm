@@ -1,5 +1,5 @@
 /obj/item/device
-	name = "trigger assembly"
+	name = "触发器组件"
 	icon = 'icons/obj/item/trigger.dmi'
 
 	var/interactable = FALSE

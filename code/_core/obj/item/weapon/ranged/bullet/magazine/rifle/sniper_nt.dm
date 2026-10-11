@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/rifle/sniper_nt
-	name = "\improper 7.62mm Bushshot Sniper Rifle"
-	desc = "For when you want to be an asshole at an extended range."
-	desc_extended = "Placeholder"
+	name = "\improper 7.62mm丛林射手狙击步枪"
+	desc = "想隔得老远给人添堵时，就用它。"
+	desc_extended = "说明待补充。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/762_sniper_2.dmi'
 	icon_state = "inventory"
 	value = 3000

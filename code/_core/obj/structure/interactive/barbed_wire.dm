@@ -1,7 +1,7 @@
 /obj/structure/interactive/barbed_wire
-	name = "barbed wire"
-	desc = "Ouch!"
-	desc_extended = "An ancient, almost torturous design meant to inhibit the movement of soldiers and civilians while using as little materials as possible."
+	name = "铁丝网"
+	desc = "哎哟！"
+	desc_extended = "古老而近乎残酷的设计，用尽可能少的材料阻碍士兵和平民通行。"
 
 	icon = 'icons/obj/structure/barbed_wire.dmi'
 	icon_state = "wire"

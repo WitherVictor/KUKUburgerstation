@@ -107,7 +107,7 @@
 			if(is_living(speaker))
 				var/mob/living/L = speaker
 				if(L.dead)
-					L.to_chat(span("warning","You cannot use OOC when dead."))
+					L.to_chat(span("warning","死亡时不能使用OOC频道。"))
 					return FALSE
 			var/formatted_speech = format_speech(speaker,source,text_to_say,text_type,talk_range)
 			for(var/k in SSclient.all_clients)

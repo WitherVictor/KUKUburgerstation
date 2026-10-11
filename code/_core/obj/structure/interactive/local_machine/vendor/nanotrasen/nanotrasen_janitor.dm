@@ -2,7 +2,7 @@
 	icon = 'icons/obj/structure/vending_new.dmi'
 
 /obj/structure/interactive/vending/nanotrasen/janitor/equipment
-	name = "janitor equipment vendor"
+	name = "清洁装备售货机"
 	icon_state = "janitor_equipment"
 
 	icon_state_broken = null
@@ -22,7 +22,7 @@
 	)
 
 /obj/structure/interactive/vending/nanotrasen/janitor/clothing
-	name = "janitor clothing vendor"
+	name = "清洁服装售货机"
 	icon_state = "janitor_clothing"
 
 	icon_state_broken = null
@@ -73,7 +73,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/janitor/guns
-	name = "janitor gun vendor"
+	name = "清洁武器售货机"
 	icon_state = "janitor_guns"
 
 	icon_state_broken = null
@@ -116,7 +116,7 @@
 
 
 /obj/structure/interactive/vending/nanotrasen/janitor/ammo
-	name = "janitor ammo vendor"
+	name = "清洁弹药售货机"
 	icon_state = "janitor_ammo"
 
 	icon_state_broken = null

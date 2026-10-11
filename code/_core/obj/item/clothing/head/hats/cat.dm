@@ -1,8 +1,8 @@
 /obj/item/clothing/head/hat/cat
-	name = "\improper cursed cat ears"
+	name = "\improper 诅咒猫耳"
 	icon = 'icons/obj/item/clothing/hats/cat.dmi'
-	desc = "Pwease gimme huggie wuggies! uwu!"
-	desc_extended = "Dude what the fuck are you doing? Why did you buy this, why the fuck would you wanna even wear this? What the fuck, dude?"
+	desc = "求求你给人家抱抱嘛！呜呜！"
+	desc_extended = "哥们，你他妈在干什么？为什么要买这个，为什么他妈的还想戴上？搞什么啊，哥们？"
 
 	armor = /armor/dark/meme
 
@@ -27,10 +27,10 @@
 
 
 /obj/item/clothing/head/hat/bunny
-	name = "\improper cursed bunny ears"
+	name = "\improper 诅咒兔耳"
 	icon = 'icons/obj/item/clothing/hats/bunny.dmi'
-	desc = "Pwease gimme huggie wuggies! uwu!"
-	desc_extended = "Dude what the fuck are you doing? Why did you buy this, why the fuck would you wanna even wear this? What the fuck, dude?"
+	desc = "求求你给人家抱抱嘛！呜呜！"
+	desc_extended = "哥们，你他妈在干什么？为什么要买这个，为什么他妈的还想戴上？搞什么啊，哥们？"
 
 	armor = /armor/dark/meme
 

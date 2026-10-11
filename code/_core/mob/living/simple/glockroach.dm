@@ -1,7 +1,7 @@
 /mob/living/simple/glockroach
-	name = "glockroach"
+	name = "格洛克蟑螂"
 	desc = "!"
-	desc_extended = "A harmless critter. Or so it may seem."
+	desc_extended = "一只无害的小动物。至少看起来如此。"
 	icon = 'icons/mob/living/simple/glockroach.dmi'
 	icon_state = "glockroach"
 	damage_type = /damagetype/ranged/bullet/pistol_10mm

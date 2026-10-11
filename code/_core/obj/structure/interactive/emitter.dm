@@ -1,7 +1,7 @@
 /obj/structure/interactive/emitter
-	name = "supermatter emitter"
-	desc = "Pew pew!"
-	desc_extended = "Sends concetrated beams of pure energy intended to power up the supermatter. Keep this on to win."
+	name = "超物质发射器"
+	desc = "咻咻！"
+	desc_extended = "发射高度集中的纯能量光束，为超物质充能。想赢就让它一直开着。"
 
 	icon = 'icons/obj/structure/emitter.dmi'
 	icon_state = "emitter"
@@ -77,7 +77,7 @@
 		INTERACT_CHECK_OBJECT
 		INTERACT_DELAY(5)
 		active = !active
-		activator.visible_message(span("warning","\The [activator.name] turns \the [src.name] [active ? "on" : "off"]."),span("warning","You turn \the [src.name] [active ? "on" : "off"]."))
+		activator.visible_message(span("warning","[activator.name][active ? "启动" : "关闭"]了[src.name]。"),span("warning","你[active ? "启动" : "关闭"]了[src.name]。"))
 		if(active) START_THINKING(src)
 		update_sprite()
 

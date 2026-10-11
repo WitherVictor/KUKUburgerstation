@@ -1,7 +1,7 @@
 /obj/item/supply_remote
-	name = "drop pod remote"
-	desc = "When you need things delivered."
-	desc_extended = "A special remote designed to drop things into the battlefield."
+	name = "空投舱遥控器"
+	desc = "需要送货时就用它。"
+	desc_extended = "用于向战场空投物资的专用遥控器。"
 	icon = 'icons/obj/item/supply_remote.dmi'
 	icon_state = "inventory"
 
@@ -37,14 +37,14 @@
 	INTERACT_DELAY(10)
 
 	if(charges <= 0)
-		activator.to_chat(span("warning","There are no charges left in \the [src.name]!"))
+		activator.to_chat(span("warning","[src.name]的使用次数已耗尽！"))
 		return TRUE
 
 	var/turf/T = get_turf(object)
 	var/area/A = T.loc
 
 	if(A.flags_area & FLAG_AREA_NO_CONSTRUCTION)
-		activator.to_chat(span("warning","Invalid landing zone!"))
+		activator.to_chat(span("warning","无效的着陆区域！"))
 		return TRUE
 
 	charges--
@@ -65,8 +65,8 @@
 	return TRUE
 
 /obj/item/supply_remote/drill
-	name = "drop pod remote - mining drill"
-	desc_extended = "A special remote designed to drop things into the battlefield. This one contains a large mining drill and two mining braces."
+	name = "空投舱遥控器——采矿钻机"
+	desc_extended = "用于向战场空投物资的专用遥控器。这款投送一台大型采矿钻机和两个采矿支架。"
 	stored_object_types = list(
 		/obj/structure/interactive/mining_drill,
 		/obj/structure/interactive/mining_brace,
@@ -75,16 +75,16 @@
 	value = 1250
 
 /obj/item/supply_remote/ore_box
-	name = "drop pod remote - ore box"
-	desc_extended = "A special remote designed to drop things into the battlefield. This one contains a wooden box specially designed to hold ore."
+	name = "空投舱遥控器——矿石箱"
+	desc_extended = "用于向战场空投物资的专用遥控器。这款投送一个专门存放矿石的木箱。"
 	stored_object_types = list(
 		/obj/structure/interactive/ore_box
 	)
 	value = 500
 
 /obj/item/supply_remote/ammo
-	name = "drop pod remote - premium ammo restocker"
-	desc_extended = "A special remote designed to drop things into the battlefield. This one drops a premium ammo restocker."
+	name = "空投舱遥控器——优质弹药补给器"
+	desc_extended = "用于向战场空投物资的专用遥控器。这款投送一台优质弹药补给器。"
 	stored_object_types = list(
 		/obj/structure/interactive/restocker/ammo/premium
 	)
@@ -102,7 +102,7 @@
 */
 
 /obj/item/supply_remote/crates/nanotrasen
-	name = "drop pod remote - x4 NanoTrasen supply crates"
+	name = "空投舱遥控器——4箱纳米传讯补给"
 	stored_object_types = list(
 		/obj/item/supply_crate/nanotrasen,
 		/obj/item/supply_crate/nanotrasen,
@@ -112,7 +112,7 @@
 	value = 2000
 
 /obj/item/supply_remote/crates/syndicate
-	name = "drop pod remote - x4 Syndicate supply crates"
+	name = "空投舱遥控器——4箱辛迪加补给"
 	stored_object_types = list(
 		/obj/item/supply_crate/syndicate,
 		/obj/item/supply_crate/syndicate,
@@ -123,7 +123,7 @@
 	supply_pod_type = /obj/structure/interactive/crate/closet/supply_pod/syndicate
 
 /obj/item/supply_remote/crates/slavic
-	name = "drop pod remote - x4 Slavic supply crates"
+	name = "空投舱遥控器——4箱斯拉夫补给"
 	stored_object_types = list(
 		/obj/item/supply_crate/slavic,
 		/obj/item/supply_crate/slavic,
@@ -133,7 +133,7 @@
 	value = 2000
 
 /obj/item/supply_remote/crates/yankee
-	name = "drop pod remote - x4 Solarian supply crates"
+	name = "空投舱遥控器——4箱太阳系补给"
 	stored_object_types = list(
 		/obj/item/supply_crate/solarian,
 		/obj/item/supply_crate/solarian,
@@ -143,8 +143,8 @@
 	value = 2000
 
 /obj/item/supply_remote/barbecue
-	name = "drop pod remote - Barbecue Kit"
-	desc_extended = "A special remote designed to drop cool essential things into the battlefield. This one contains a portable barbecue."
+	name = "空投舱遥控器——烧烤套件"
+	desc_extended = "用于向战场空投酷炫必需品的专用遥控器。这款投送一个便携烧烤架。"
 	stored_object_types = list(
 		/obj/structure/table/cooking/barbecue
 	)

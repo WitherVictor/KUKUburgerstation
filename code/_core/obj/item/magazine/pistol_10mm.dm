@@ -1,7 +1,7 @@
 /obj/item/magazine/pistol_10mm
-	name = "\improper 10mm auto pistol magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper 10mm自动手枪弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/10mm_pistol.dmi'
 	icon_state = "10mmpistol"
 	bullet_count_max = 12
@@ -33,6 +33,6 @@
 	value = 5
 
 /obj/item/magazine/pistol_10mm/ap
-	name = "\improper 10mm auto AP pistol magazine"
+	name = "\improper 10mm穿甲弹自动手枪弹匣"
 	ammo = /obj/item/bullet_cartridge/pistol_10mm/ap
 	rarity = RARITY_UNCOMMON

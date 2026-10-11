@@ -1,6 +1,6 @@
 //This is basically a holder of spellcraft casting. There should be no variations of it since that's held somewhere else.
 /obj/item/weapon/ranged/magic/rune
-	name = "magic rune"
+	name = "魔法符文"
 
 	var/stored_buff
 	var/stored_buff_color

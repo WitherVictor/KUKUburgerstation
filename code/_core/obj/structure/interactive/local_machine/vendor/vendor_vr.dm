@@ -1,5 +1,5 @@
 /obj/structure/interactive/vr_shop
-	name = "magic loadout vendor"
+	name = "魔法装备方案售货机"
 	icon = 'icons/obj/structure/vending.dmi'
 	icon_state = "vr_platform"
 	var/vendor_type = "ammo"
@@ -83,7 +83,7 @@
 	add_overlay(I2)
 
 /obj/structure/interactive/vending/virtual_reality/
-	name = "VR Vendor"
+	name = "虚拟现实售货机"
 	markup = 0.75
 
 	ignore_economy = TRUE
@@ -105,7 +105,7 @@
 
 
 /obj/structure/interactive/vending/virtual_reality/weapons
-	name = "VR Weapon Vendor"
+	name = "虚拟现实武器售货机"
 	icon_state = "inventory"
 	stored_types = list()
 	interact_distance = VIEW_RANGE

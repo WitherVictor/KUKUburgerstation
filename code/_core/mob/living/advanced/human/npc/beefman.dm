@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/beefman
-	name = "beefman"
-	desc = "I told you not to go alone."
-	desc_extended = "A disgusting monster made entirely out of beef. It's unknown where these things came from, but we do know that they're attracted by the rotting corpses of humanoids."
+	name = "血肉人"
+	desc = "早就告诉你别独自行动。"
+	desc_extended = "一只完全由牛肉构成的恶心怪物。没人知道它们从何而来，只知道腐烂的类人生物尸体会把它们吸引过来。"
 	ai = /ai/advanced/beef
 	species = "beefman"
 

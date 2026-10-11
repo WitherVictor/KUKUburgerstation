@@ -1,7 +1,7 @@
 /obj/structure/table/cooking/barbecue
-	name = "electric portable barbecue"
-	desc = "I just wanna grill for god's sake."
-	desc_extended = "You can cook or heat up items by placing it on the barbecue. Click on it with an empty hand to toggle the barbecue."
+	name = "便携电烧烤炉"
+	desc = "老天，我只是想烤点东西。"
+	desc_extended = "将物品放在烧烤炉上即可烹饪或加热。空手点击可开关烧烤炉。"
 	icon = 'icons/obj/structure/bbq.dmi'
 	icon_state = "bbq"
 	anchored = FALSE

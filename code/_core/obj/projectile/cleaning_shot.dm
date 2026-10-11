@@ -1,5 +1,5 @@
 /obj/projectile/bullet/cleaning_shot
-	name = "cleaing shot"
+	name = "清洁弹"
 	icon = 'icons/obj/projectiles/bullet.dmi'
 	icon_state = "bullet_large"
 

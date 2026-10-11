@@ -1,6 +1,6 @@
 /mob/living/advanced/npc/sorcerer
-	name = "syndicate sorcerer"
-	desc = "A sorcerer borrowed from the syndicate-allied wizard federation."
+	name = "辛迪加术士"
+	desc = "一名从巫师联邦借调而来的术士；巫师联邦是辛迪加的盟友。"
 	ai = /ai/advanced
 
 	soul_size = SOUL_SIZE_UNCOMMON

@@ -6,7 +6,7 @@
 /area/mission/prefab/house/Initialize()
 	. = ..()
 	if(parent_type == /area/mission/prefab/house)
-		name = "\improper [pick(SStext.last_names)] Residence"
+		name = "\improper [pick(SStext.last_names)]宅邸"
 
 
 /area/mission/prefab/house/Finalize()
@@ -17,7 +17,7 @@
 
 //House 01
 /area/mission/prefab/house/house_01
-	name = "house 01"
+	name = "住宅01"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -51,7 +51,7 @@
 
 //House 02
 /area/mission/prefab/house/house_02
-	name = "house 02"
+	name = "住宅02"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -78,7 +78,7 @@
 
 //House 03
 /area/mission/prefab/house/house_03
-	name = "house 03"
+	name = "住宅03"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -104,7 +104,7 @@
 	icon_state = "red"
 //House 04
 /area/mission/prefab/house/house_04
-	name = "house 04"
+	name = "住宅04"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -125,7 +125,7 @@
 
 //House 05
 /area/mission/prefab/house/house_05
-	name = "house 05"
+	name = "住宅05"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -146,7 +146,7 @@
 
 //House 06
 /area/mission/prefab/house/house_06
-	name = "house 06"
+	name = "住宅06"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -170,7 +170,7 @@
 
 //House 07
 /area/mission/prefab/house/house_07
-	name = "house 07"
+	name = "住宅07"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -198,7 +198,7 @@
 
 //House 08
 /area/mission/prefab/house/house_08
-	name = "house 08"
+	name = "住宅08"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -223,7 +223,7 @@
 
 //House 09
 /area/mission/prefab/house/house_09
-	name = "house 08"
+	name = "住宅08"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -244,7 +244,7 @@
 
 //House 10
 /area/mission/prefab/house/house_10
-	name = "house 08"
+	name = "住宅08"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -268,7 +268,7 @@
 
 //House 11
 /area/mission/prefab/house/house_11
-	name = "house 08"
+	name = "住宅08"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -296,7 +296,7 @@
 
 //House 12
 /area/mission/prefab/house/house_12
-	name = "house 12"
+	name = "住宅12"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -323,7 +323,7 @@
 
 //House 13
 /area/mission/prefab/house/house_13
-	name = "house 13"
+	name = "住宅13"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -354,7 +354,7 @@
 
 //davidthtthird house 01
 /area/mission/prefab/house/house_D01
-	name = "house D01"
+	name = "住宅D01"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -379,7 +379,7 @@
 
 	//davidthtthird house 02 homless person barracks
 /area/mission/prefab/house/house_D02
-	name = "house D02"
+	name = "住宅D02"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -404,7 +404,7 @@
 
 		//davidthtthird house 03 "boxxed in"
 /area/mission/prefab/house/house_D03
-	name = "house D03"
+	name = "住宅D03"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -434,7 +434,7 @@
 
 		//davidthtthird house 04 maintaces house
 /area/mission/prefab/house/house_D04
-	name = "house D04"
+	name = "住宅D04"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE
@@ -455,7 +455,7 @@
 
 		//davidthtthird house 05
 /area/mission/prefab/house/house_D05
-	name = "house D05"
+	name = "住宅D05"
 	icon_state = "yellow"
 	requires_power = TRUE
 	link_to_parent_apc = TRUE

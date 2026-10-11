@@ -1,10 +1,10 @@
 /obj/structure/interactive/vending/medical/
-	name = "medicine vendor"
+	name = "药品售货机"
 	icon_state = "med"
 
 
 /obj/structure/interactive/vending/medical/medicine
-	name = "medicine vendor"
+	name = "药品售货机"
 	icon_state = "med"
 	stored_types = list(
 		/obj/item/analyzer/health,
@@ -32,7 +32,7 @@
 	)
 
 /obj/structure/interactive/vending/medical/basic
-	name = "emergency medicine vendor"
+	name = "急救药品售货机"
 	icon_state = "wallmed"
 	stored_types = list(
 		/obj/item/analyzer/health,
@@ -60,7 +60,7 @@
 		icon_state = "wallmed_nomap"
 
 /obj/structure/interactive/vending/medical/wardrobe
-	name = "medical wardrobe vendor"
+	name = "医疗服装售货机"
 	icon_state = "medidrobe"
 	stored_types = list(
 		/obj/item/clothing/underbottom/underwear/boxers/medical,
@@ -84,7 +84,7 @@
 	)
 
 /obj/structure/interactive/vending/medical/equipment
-	name = "medical equipment vendor"
+	name = "医疗装备售货机"
 	icon_state = "medquip"
 	stored_types = list(
 		/obj/item/clothing/ears/headset/nanotrasen/medical,

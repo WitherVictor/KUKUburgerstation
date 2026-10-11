@@ -1,11 +1,11 @@
 /obj/item/clothing/overwear/coat/highvis
-	name = "high-vis vest"
+	name = "高可视背心"
 	icon = 'icons/obj/items/clothing/suit/highvis.dmi'
 
 	rarity = RARITY_UNCOMMON
 
-	desc = "A very bright vest."
-	desc_extended = "A vest that shows the enemy exactly where they should hit."
+	desc = "一件非常显眼的背心。"
+	desc_extended = "让敌人一眼看清该打哪儿的背心。"
 
 	size = SIZE_2
 	weight = WEIGHT_1

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/shotgun/saiga_20
-	name = "\improper 20g Saiga"
-	desc = "For when you want to clear the house and erase the walls."
-	desc_extended = "The 20g Saiga is an insanely powerful semiautomatic AK-based shotgun, nicknamed \"Saiga\" because it's Saiga. <br> The description designer wasn't very original, it seems."
+	name = "\improper 20号赛加"
+	desc = "想清空整栋房子，连墙都不留时，就用它。"
+	desc_extended = "20号赛加是基于AK结构、威力惊人的半自动霰弹枪。之所以叫‘赛加’，是因为它就是赛加。<br>写说明的人似乎没什么创意。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/slavic/auto.dmi'
 	icon_state = "inventory"
 	value = 2700

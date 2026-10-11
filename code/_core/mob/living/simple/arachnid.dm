@@ -1,7 +1,7 @@
 /mob/living/simple/arachnid
-	name = "giant arachnid"
-	desc = "King of the jungle."
-	desc_extended = "A giant quadreped carniverous creature."
+	name = "巨型蛛形生物"
+	desc = "丛林之王。"
+	desc_extended = "一种巨大的四足食肉生物。"
 	icon = 'icons/mob/living/simple/jungle/arachnid.dmi'
 	icon_state = "living"
 	damage_type = /damagetype/unarmed/claw/
@@ -74,9 +74,9 @@
 		icon_state = "living"
 
 /mob/living/simple/arachnid/sand
-	name = "giant sand arachnid"
-	desc = "King of the sand."
-	desc_extended = "A giant quadreped carniverous creature."
+	name = "巨型沙地蛛形生物"
+	desc = "沙地之王。"
+	desc_extended = "一种巨大的四足食肉生物。"
 	icon = 'icons/mob/living/simple/jungle/arachnid_sand.dmi'
 
 	level = 24

@@ -1,7 +1,7 @@
 /obj/item/powergem
-	name = "power gem"
-	desc = "A gem filled with power."
-	desc_extended = "A special gem used for augmenting magic weapons with damage bonuses. Click on the magic weapon to apply it. Can be removed with a crowbar."
+	name = "能量宝石"
+	desc = "充满力量的宝石。"
+	desc_extended = "用于为魔法武器附加伤害的特殊宝石。用它点击魔法武器即可安装，可用撬棍取出。"
 
 
 	icon = 'icons/obj/item/powergem.dmi'
@@ -62,12 +62,18 @@
 
 	. = ..()
 
-	. += span("notice","Adds [damage_to_add] [damage_type_to_add] damage to attacks.")
+	. += span("notice","为攻击附加[damage_to_add]点[get_powergem_damage_name()]伤害。")
+
+/obj/item/powergem/proc/get_powergem_damage_name()
+	var/list/damage_display_names = list(LASER = "激光",ARCANE = "奥术",HEAT = "高温",COLD = "寒冷",SHOCK = "电击",ACID = "酸蚀",BOMB = "爆炸",BIO = "生物武器",RAD = "辐射",HOLY = "神圣",DARK = "黑暗",FATIGUE = "疲劳",PAIN = "疼痛",ION = "离子",SANITY = "理智",MENTAL = "精神",BLADE = "切割",BLUNT = "钝击",PIERCE = "穿刺")
+	return damage_display_names[damage_type_to_add] ? damage_display_names[damage_type_to_add] : damage_type_to_add
 
 
 /obj/item/powergem/Finalize()
 
-	name = "[rarity] power gem of [damage_type_to_add]"
+	var/list/rarity_display_names = list(RARITY_BROKEN = "破损",RARITY_COMMON = "普通",RARITY_UNCOMMON = "少见",RARITY_RARE = "稀有",RARITY_MYTHICAL = "神话",RARITY_LEGENDARY = "传奇")
+	var/rarity_display = rarity_display_names[rarity] ? rarity_display_names[rarity] : rarity
+	name = "[rarity_display][get_powergem_damage_name()]能量宝石"
 
 	var/damage_to_color = list(
 		LASER = COLOR_RED,

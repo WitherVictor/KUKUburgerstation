@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/energy/unlimited
-	name = "nut gun"
-	desc = "Seriously?"
-	desc_extended = "Nuts lasers everywhere."
+	name = "疯癫激光枪"
+	desc = "认真的？"
+	desc_extended = "疯狂激光，到处乱射。"
 	icon = 'icons/obj/items/weapons/ranged/laser.dmi'
 
 	projectile = /obj/projectile/bullet/laser

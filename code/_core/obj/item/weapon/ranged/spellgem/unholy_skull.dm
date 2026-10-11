@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/spellgem/unholy_skull
-	name = "unholy skull spell gem"
-	desc = "The source of all magic."
-	desc_extended = "Shoots an unholy skull that homes into its target, then explodes on contact."
+	name = "邪秽骷髅法术宝石"
+	desc = "一切魔法的源泉。"
+	desc_extended = "发射追踪目标的邪秽骷髅，接触后爆炸。"
 	icon_state = "damage"
 
 	rarity = RARITY_RARE

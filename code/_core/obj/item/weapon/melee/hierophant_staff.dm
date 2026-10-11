@@ -1,7 +1,7 @@
 /obj/item/weapon/melee/hierophant_staff
-	name = "staff of the hierophant"
-	desc = "No longer living, I think."
-	desc_extended = "A magical staff belonging to the late Hierophant. Allows for teleportation."
+	name = "大祭司法杖"
+	desc = "应该已经不活了吧。"
+	desc_extended = "已故大祭司的魔法法杖，能够用于传送。"
 
 	icon = 'icons/obj/item/heirophant_staff.dmi'
 
@@ -36,7 +36,7 @@
 		if(T)
 			var/area/A = T.loc
 			if(A.flags_area & FLAG_AREA_NO_TELEPORT)
-				activator.to_chat(span("danger","\The [src.name]'s magic doesn't seem to work here!"))
+				activator.to_chat(span("danger","[src.name]的魔法似乎在这里不起作用！"))
 				return TRUE
 			var/obj/effect/temp/hazard/hierophant/targeted/H = new(get_turf(activator),7,activator)
 			H.copy_delay = 1

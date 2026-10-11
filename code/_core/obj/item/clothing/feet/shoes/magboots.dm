@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/magboot
-	name = "right magboot"
-	desc = "Water-proof."
-	desc_extended = "Heavy boots with a magnetic sole, to be worn over your current shoe. Prevents you from losing grip and floating off into the void."
+	name = "右脚磁靴"
+	desc = "防水。"
+	desc_extended = "带磁性靴底的厚重靴子，可套在现有鞋子外。设计用于吸附地面，避免失去抓地力后飘入虚空。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -24,7 +24,7 @@
 	item_slot_layer = 3
 
 /obj/item/clothing/feet/shoes/magboot/left
-	name = "left magboot"
+	name = "左脚磁靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

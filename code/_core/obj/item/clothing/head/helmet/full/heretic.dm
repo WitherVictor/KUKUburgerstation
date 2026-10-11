@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet/full/heretic
-	name = "blooded heretic hood"
+	name = "染血异端兜帽"
 	desc = ""
 	desc_extended = ""
 	icon = 'icons/obj/item/clothing/hats/cult_heretic.dmi'

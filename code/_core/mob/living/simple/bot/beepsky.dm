@@ -1,7 +1,7 @@
 /mob/living/simple/bot/securitron/captain
-	name = "Captain Beepsky"
-	desc = "He's the Captain now."
-	desc_extended = "A named securitron model. It is programmed to guard the shuttle from punk passengers via bluespace stunbaton. Its circuits and wheels are a little loose..."
+	name = "比普斯基船长"
+	desc = "他现在是船长了。"
+	desc_extended = "一台有名有姓的安保机器人。它按程序用蓝空间电击警棍对付捣乱的乘客，守卫穿梭机。它的电路和轮子都有点松……"
 	icon = 'icons/mob/living/simple/beepsky.dmi'
 	icon_state = "captain"
 
@@ -23,6 +23,6 @@
 
 	if(messages && is_living(grabber))
 		var/mob/living/L = grabber
-		L.to_chat(span("warning","Beepsky instantly resists out of your grab!"))
+		L.to_chat(span("warning","比普斯基瞬间挣脱了你的抓握！"))
 
 	return FALSE

@@ -1,8 +1,8 @@
 /obj/item/clothing/neck/goblin_necklace
-	name = "Goblin King's necklace"
+	name = "地精王项链"
 	icon = 'icons/obj/item/clothing/neck/goblin_necklace.dmi'
-	desc = "You monster, stealing from the little green men."
-	desc_extended = "The loin is imbued with the life essence of the late Goblin King. Greatly desired by mages."
+	desc = "你这怪物，居然偷小绿人的东西。"
+	desc_extended = "项链中蕴含着已故地精王的生命精华，深受法师追捧。"
 	worn_layer = LAYER_MOB_CLOTHING_BELT
 
 	item_slot = SLOT_NECK

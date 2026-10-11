@@ -1,5 +1,5 @@
 /area/lz_001/
-	name = "LZ 001"
+	name = "001号登陆区"
 
 	trackable = TRUE
 

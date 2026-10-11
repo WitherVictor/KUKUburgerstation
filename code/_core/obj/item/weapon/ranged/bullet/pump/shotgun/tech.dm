@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/tech
-	name = "12g Technogun"
-	desc = "No, it doesn't play techno music."
-	desc_extended = "Based on the 12g M2 MasterStroke, the 12g Technogun was a science-designed and over-engineered shotgun meant to satisfy the non-existant demand of 'what if we made the standard shotgun semi-automatic, lighter, and shorter while still being just as powerful?'. The result was a recoil-high 4 round capacity semi-automatic shotgun with the chamber extending well into the butt of the shotgun."
+	name = "12号科技枪"
+	desc = "不会播放科技舞曲，别想了。"
+	desc_extended = "12号科技枪以12号M2妙手为基础，由科研人员过度设计而成，试图满足根本不存在的需求：‘能不能把标准霰弹枪改成半自动，做得更轻更短，还保持同样的威力？’最终产物是一把后坐力很大、容量4发的半自动霰弹枪，弹膛一直延伸到枪托深处。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/nanotrasen/pump_2.dmi'
 	icon_state = "inventory"
 

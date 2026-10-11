@@ -1,5 +1,5 @@
 /obj/structure/interactive/lighting/roadlamp
-	name = "street lamp"
+	name = "路灯"
 
 	icon = 'icons/obj/structure/streetlamp.dmi'
 	icon_state = "lamp"

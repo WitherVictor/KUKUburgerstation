@@ -1,7 +1,7 @@
 /obj/item/storage/egg_carton
-	name = "egg carton"
-	desc = "Stores eggs."
-	desc_extended = "Holds eggs."
+	name = "鸡蛋盒"
+	desc = "用来装鸡蛋。"
+	desc_extended = "存放鸡蛋的盒子。"
 	icon = 'icons/obj/item/storage/egg_carton.dmi'
 	icon_state = "eggbox"
 

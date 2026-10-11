@@ -1,5 +1,5 @@
 /turf/simulated/floor/ice
-	name = "ice"
+	name = "冰面"
 
 	icon = 'icons/turf/floor/icons.dmi'
 	icon_state = "ice"
@@ -16,7 +16,7 @@
 	layer = LAYER_FLOOR + 0.01
 
 /turf/simulated/floor/snow_plating
-	name = "plating"
+	name = "底板"
 	icon = 'icons/turf/floor/snow_plating.dmi'
 	icon_state = "floor"
 

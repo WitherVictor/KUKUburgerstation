@@ -39,7 +39,7 @@
 
 /obj/trigger/no_entry
 	name = "no entry"
-	var/message = "You cannot go that way."
+	var/message = "你不能往那边走。"
 
 /obj/trigger/no_entry/on_trigger(var/mob/triggerer)
 	triggerer.to_chat(span("notice",message))

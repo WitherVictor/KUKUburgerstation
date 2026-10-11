@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/magic/tome/ice
-	name = "tome of the ice crystal"
-	desc = "Cool."
-	desc_extended = "Fires a large ice crystal."
+	name = "冰晶法术典籍"
+	desc = "酷，也够冷。"
+	desc_extended = "发射一块大型冰晶。"
 	cost_mana = 15
 	shoot_delay = 8
 

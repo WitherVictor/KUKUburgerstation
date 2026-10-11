@@ -1,2 +1,2 @@
 obj/item/consumable/
-	name = "consumable item"
+	name = "消耗品"

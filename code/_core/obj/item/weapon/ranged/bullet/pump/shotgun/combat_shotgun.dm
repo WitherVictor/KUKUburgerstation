@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/pump/shotgun/combat
-	name = "12g Hunter-Killer Combat Shotgun"
-	desc = "Reliable and strong"
-	desc_extended = "A very robust pump action shotgun for Syndicate boarding parties."
+	name = "12号猎杀者战斗霰弹枪"
+	desc = "可靠而强劲。"
+	desc_extended = "供辛迪加登舰小队使用的坚固泵动式霰弹枪。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/syndicate/pump.dmi'
 	icon_state = "inventory"
 
@@ -85,8 +85,8 @@
 	return 0.1
 
 /obj/item/weapon/ranged/bullet/pump/shotgun/combat/mod
-	name = "12g Hunter-Killer Combat Shotgun MOD"
-	desc = "A very robust combat shotgun. This one has been modified to be stronger and lighter. Used mostly by elite syndicate operatives on boarding missions."
+	name = "12号猎杀者战斗霰弹枪改装型"
+	desc = "非常坚固的战斗霰弹枪，经过改装后更轻、更强劲。主要由执行登舰任务的辛迪加精英特工使用。"
 	icon = 'icons/obj/item/weapons/ranged/shotgun/syndicate/pump_mod.dmi'
 	icon_state = "inventory"
 

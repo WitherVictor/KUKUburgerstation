@@ -1,8 +1,8 @@
 //Arachnids
 /obj/item/contract/arachnids
-	name = "contract: Kill Arachnids"
+	name = "契约：击杀蛛形生物"
 	type_to_check = /mob/living/simple/arachnid
-	objective_text = "Arachnids killed"
+	objective_text = "已击杀蛛形生物"
 	value = 0
 
 /obj/item/contract/arachnids/low

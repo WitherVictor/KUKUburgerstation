@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/boot_colored
-	name = "right colored boot"
-	desc = "For when you want to turn up the heat a little."
-	desc_extended = "A black combat boot. Shields your feet from shrapnel."
+	name = "彩色右靴"
+	desc = "适合你想让场面稍微热闹一点的时候。"
+	desc_extended = "一只彩色战斗靴，保护双脚免受弹片伤害。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -18,7 +18,7 @@
 	speed_bonus = 0
 
 /obj/item/clothing/feet/shoes/boot_colored/left
-	name = "left colored boot"
+	name = "彩色左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -30,7 +30,7 @@
 	color = "#4D4F43"
 
 /obj/item/clothing/feet/shoes/boot_colored/merc/left
-	name = "left colored boot"
+	name = "彩色左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 
@@ -42,7 +42,7 @@
 	color = "#513726"
 
 /obj/item/clothing/feet/shoes/boot_colored/brown/left
-	name = "left colored boot"
+	name = "彩色左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

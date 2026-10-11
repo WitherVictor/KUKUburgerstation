@@ -1,7 +1,7 @@
 /mob/living/simple/cat
-	name = "cat"
-	desc = "A cat!"
-	desc_extended = "A less obnoxious feline."
+	name = "猫"
+	desc = "一只猫！"
+	desc_extended = "一只不那么烦人的猫。"
 	icon = 'icons/mob/living/simple/cat_colored.dmi'
 	icon_state = "living"
 
@@ -54,18 +54,18 @@
 
 
 /mob/living/simple/cat/kitten
-	name = "kitten"
-	desc = "A kitten!"
-	desc_extended = "A less obnoxious feline. Now smaller."
+	name = "小猫"
+	desc = "一只小猫！"
+	desc_extended = "一只不那么烦人的猫，现在更小了。"
 	icon = 'icons/mob/living/simple/cat_kitten.dmi'
 	icon_state = "living"
 
 	ai = /ai/pet/low_roam
 
 /mob/living/simple/cat/runtime
-	name = "Runtime"
-	desc = "Oh no, it's multiplying!"
-	desc_extended = "The CMO's favorite cat. It reproduces asexually every time the world experiences a runtime phenomenon."
+	name = "运行时"
+	desc = "糟了，它越变越多了！"
+	desc_extended = "医疗主管最喜欢的猫。每当世界发生运行时错误，它就会无性繁殖一次。"
 	icon = 'icons/mob/living/simple/cat_black.dmi'
 
 	loyalty_tag = "NanoTrasen"

@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/revolver/comp
-	name = "\improper .38 Competitive Revolver"
-	desc = "8 shots!"
-	desc_extended = "An 8 round short barrel revolver designed for competitive shooting. Shoots really fast and has very low recoil and spread after the first shot."
+	name = "\improper .38竞赛左轮手枪"
+	desc = "8发！"
+	desc_extended = "为射击比赛设计的8发短管左轮手枪。射速很快，首发之后的后坐力和散布都很低。"
 	icon = 'icons/obj/item/weapons/ranged/revolver/38_2.dmi'
 	icon_state = "inventory"
 	value = 800

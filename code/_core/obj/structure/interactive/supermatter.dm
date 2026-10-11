@@ -1,7 +1,7 @@
 /obj/structure/interactive/supermatter
-	name = "supermatter crystal"
-	desc = "Looks valuable!"
-	desc_extended = "An extremely rare and mysterious cluster of supermatter crystals. Emits radioactive energy while at the same time providing an insane amount of energy when charged."
+	name = "超物质晶体"
+	desc = "看起来很值钱！"
+	desc_extended = "一簇极其稀有而神秘的超物质晶体。会释放放射性能量，充能后还能提供惊人的能量。"
 	icon = 'icons/obj/structure/supermatter.dmi'
 	icon_state = "sm_map"
 
@@ -96,7 +96,7 @@
 			sound_spam = world.time + 5
 			display_spam = 0
 		if(display_spam <= world.time)
-			src.visible_message(span("danger","\The [O.name] flashes in a brilliant light as the [src.name]'s energy swallows it!"))
+			src.visible_message(span("danger","[O.name]闪耀出夺目的光芒，随即被[src.name]的能量吞噬！"))
 			display_spam = world.time + 1
 
 		return FALSE
@@ -113,13 +113,13 @@
 		var/turf/T = get_turf(src)
 		health.adjust_loss(BURN,health.health_max*0.1)
 		charge_amount = charge_max*0.9
-		visible_message(span("danger","\The [src.name] flashes  violently!"))
+		visible_message(span("danger","[src.name]剧烈闪烁！"))
 		explode(T,VIEW_RANGE,src,src,"Supermatter")
 	else if(charge < 0)
 		var/turf/T = get_turf(src)
 		health.adjust_loss(BRUTE,health.health_max*0.1)
 		charge_amount = charge_max*0.1
-		visible_message(span("danger","\The [src.name] creaks violently!"))
+		visible_message(span("danger","[src.name]发出刺耳的嘎吱声！"))
 		explode(T,VIEW_RANGE,src,src,"Supermatter")
 
 	return TRUE
@@ -144,7 +144,7 @@
 			I.adjust_quality(-1000)
 
 		if((damage_table[BLADE] && !damage_table[BLUNT]) || damage_table[BLADE] > damage_table[BLUNT]) //Cut
-			attacker.visible_message(span("warning","\The [attacker.name] takes a slice of supermatter shard from \the [src.name] using a [weapon.name]."),span("warning","You take a slice of supermatter shard from \the [src.name] using \the [weapon.name]."))
+			attacker.visible_message(span("warning","[attacker.name]用[weapon.name]从[src.name]上切下了一块超物质碎片。"),span("warning","你用[weapon.name]从[src.name]上切下了一块超物质碎片。"))
 			var/obj/item/container/edible/supermatter_cheese/SC = new(get_turf(weapon))
 			INITIALIZE(SC)
 			GENERATE(SC)
@@ -181,7 +181,7 @@
 
 
 /obj/structure/interactive/supermatter/station
-	name = "stable supermatter crystal"
+	name = "稳定超物质晶体"
 	health_base = 10000
 	charge_max = SECONDS_TO_DECISECONDS(60) //60 seconds of power.
 
@@ -191,15 +191,15 @@
 
 
 /obj/structure/interactive/supermatter/defense
-	name = "unstable supermatter crystal"
-	desc_extended = "An extremely important and extremely unstable shard of supermatter. You should protect this at all costs if you're NanoTrasen."
+	name = "不稳定超物质晶体"
+	desc_extended = "一块极其重要、也极不稳定的超物质碎片。纳米传讯成员应不惜一切代价保护它。"
 	health_base = 5000
 	charge_max = SECONDS_TO_DECISECONDS(900) //15 minutes
 
 /obj/structure/interactive/supermatter/defense/add_charge(var/charge_amount=0)
 	. = ..()
 	if(. && charge >= charge_max)
-		src.visible_message(span("notice","\The [src.name] disappears in a vibrant flash!"))
+		src.visible_message(span("notice","[src.name]在绚丽的闪光中消失了！"))
 		qdel(src)
 
 /obj/structure/interactive/supermatter/defense/can_be_attacked(var/atom/attacker,var/atom/weapon,var/params,var/damagetype/damage_type)
@@ -222,4 +222,4 @@
 
 /obj/structure/interactive/supermatter/defense/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","It is [FLOOR(charge,1)]/[charge_max]([FLOOR(100*(charge/charge_max),1)]%) charged.")
+	. += div("notice","充能量：[FLOOR(charge,1)]/[charge_max]（[FLOOR(100*(charge/charge_max),1)]%）。")

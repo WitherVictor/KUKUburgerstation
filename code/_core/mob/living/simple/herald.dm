@@ -1,5 +1,5 @@
 /mob/living/simple/herald
-	name = "\improper Herald of Sleeping Carp"
+	name = "眠鲤先驱"
 	boss_icon_state = "herald"
 	icon = 'icons/mob/living/simple/lavaland/herald.dmi'
 	icon_state = "living"

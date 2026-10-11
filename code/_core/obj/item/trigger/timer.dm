@@ -1,7 +1,7 @@
 /obj/item/device/timer
-	name = "timer"
-	desc = "Tick tock."
-	desc_extended = "A simple timer. Can be used to build totally innocuous and non-explosive things."
+	name = "计时器"
+	desc = "滴答，滴答。"
+	desc_extended = "简单的计时器，可用于制作绝对无害、绝不会爆炸的东西。"
 	icon_state = "timer"
 
 	var/time_set = 50
@@ -78,11 +78,11 @@
 	time_set = clamp(time_set + fixed_delta,time_min,time_max)
 
 	if(old_time_set == time_set)
-		activator.to_chat(span("notice","\The [src.name] can't seem to go any [time_set == time_min ? "lower" : "higher"]."))
+		activator.to_chat(span("notice","[src.name]的时间似乎不能再[time_set == time_min ? "缩短" : "延长"]了。"))
 	else if(spam_fix_time <= world.time)
-		activator.to_chat(span("notice","You change \the [src.name]'s time to [time_set] deciseconds..."))
+		activator.to_chat(span("notice","你将[src.name]的时间设为[time_set*0.1]秒……"))
 	else
-		activator.to_chat(span("notice","...[time_set] deciseconds..."))
+		activator.to_chat(span("notice","……[time_set*0.1]秒……"))
 
 	spam_fix_time = world.time + 20
 

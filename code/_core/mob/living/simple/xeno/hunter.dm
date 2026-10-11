@@ -1,5 +1,5 @@
 /mob/living/simple/xeno/hunter
-	name = "xeno hunter"
+	name = "异形猎手"
 	icon = 'icons/mob/living/simple/alien_hunter.dmi'
 
 	health_base = 50
@@ -18,7 +18,7 @@
 	level = 12
 
 /mob/living/simple/xeno/drone
-	name = "xeno drone"
+	name = "异形工蜂"
 	icon = 'icons/mob/living/simple/alien_drone.dmi'
 
 	health_base = 100
@@ -35,7 +35,7 @@
 	level = 10
 
 /mob/living/simple/xeno/sentinel
-	name = "xeno sentinel"
+	name = "异形哨兵"
 	icon = 'icons/mob/living/simple/alien_drone.dmi'
 
 	health_base = 150
@@ -54,7 +54,7 @@
 
 
 /mob/living/simple/xeno/predatorian
-	name = "xeno predatorian"
+	name = "异形禁卫"
 	icon = 'icons/mob/living/simple/alien_predatorian.dmi'
 
 	health_base = 400

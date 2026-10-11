@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hat/pirate
-	name = "pirate hat"
-	desc = "Yohoho!"
-	desc_extended = "A stylish black hat often worn by old pirates."
+	name = "海盗帽"
+	desc = "哟嚯嚯！"
+	desc_extended = "老海盗常戴的时髦黑帽子。"
 	icon = 'icons/obj/item/clothing/hats/pirate.dmi'
 
 	armor = /armor/leather

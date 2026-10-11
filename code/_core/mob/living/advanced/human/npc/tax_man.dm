@@ -1,7 +1,7 @@
 /mob/living/advanced/npc/tax_man
-	name = "tax man"
-	desc = "Handles your tax."
-	desc_extended = "Pay your taxes or suffer the consequences."
+	name = "税务官"
+	desc = "处理你的税务。"
+	desc_extended = "按时缴税，否则后果自负。"
 	ai = null
 	move_mod = 1
 
@@ -21,15 +21,15 @@
 
 
 /mob/living/advanced/npc/tax_man/helper
-	name = "tax assistant"
-	desc = "Explains things to you."
-	desc_extended = "Pay your taxes or suffer the consequences."
+	name = "税务助理"
+	desc = "为你答疑解惑。"
+	desc_extended = "按时缴税，否则后果自负。"
 
 
 /mob/living/advanced/npc/tax_collector
-	name = "tax collector"
-	desc = "PAY YOUR TAXES."
-	desc_extended = "One of the most lethal accountants in the galaxy. Hunts you down and kills you until you pay your taxes."
+	name = "征税员"
+	desc = "把税交了。"
+	desc_extended = "银河系最致命的会计之一。只要你不缴税，就会追杀你。"
 
 	ai = /ai/advanced/taxman
 

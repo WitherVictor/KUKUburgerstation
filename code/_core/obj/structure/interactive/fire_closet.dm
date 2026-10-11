@@ -1,5 +1,5 @@
 /obj/structure/interactive/fire_closet
-	name = "fire extinguisher holder"
+	name = "灭火器架"
 	icon = 'icons/obj/structure/fire_closet_new.dmi'
 	icon_state = "extinguisher"
 
@@ -21,7 +21,7 @@
 		INTERACT_DELAY(10)
 		var/mob/living/advanced/A = activator
 		if(!stored_extinguisher)
-			activator.to_chat(span("warning","\The [src.name] is empty!"))
+			activator.to_chat(span("warning","[src.name]是空的！"))
 			return TRUE
 		A.put_in_hands(stored_extinguisher,params)
 		stored_extinguisher = null

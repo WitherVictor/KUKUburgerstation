@@ -1,7 +1,7 @@
 obj/structure/interactive/info_spin
-	name = "info display"
-	desc = "hello how do i switch hands?"
-	desc_extended = "A large, holographic sign designating an information desk. Perhaps you could get some help here?"
+	name = "咨询显示牌"
+	desc = "你好，请问怎么切换左右手？"
+	desc_extended = "一块标示咨询台的大型全息招牌。也许你能在这里获得帮助？"
 	icon = 'icons/obj/structure/info_static.dmi'
 	icon_state = "info"
 	pixel_y = 10

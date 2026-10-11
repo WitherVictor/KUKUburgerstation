@@ -1,6 +1,6 @@
 /obj/item/color/
-	name = "Coloring Object"
-	desc = "Color things with this!"
+	name = "上色工具"
+	desc = "用它给东西上色！"
 
 	var/uses = 1 //How many uses does this item have until it's useless?
 	var/selected_color //Which color is currently selected?
@@ -21,21 +21,21 @@
 /obj/item/color/click_on_object(var/mob/caller as mob,var/atom/object,location,control,params)
 
 	if(get_dist(caller,object) > 1)
-		caller.to_chat(span("notice","You're too far away!"))
+		caller.to_chat(span("notice","你离得太远了！"))
 		return TRUE
 
 	if(uses <= 0)
-		caller.to_chat(span("notice","\The [src] seems to have run out of uses..."))
+		caller.to_chat(span("notice","[src]似乎已经用完了……"))
 		return TRUE
 
 	for(var/black_type in type_blacklist)
 		if(istype(object,black_type))
-			caller.to_chat(span("notice","You can't color \the [object] with \the [src]!"))
+			caller.to_chat(span("notice","你不能用[src]给[object]上色！"))
 			return FALSE
 
 	for(var/white_type in type_whitelist)
 		if(!istype(object,white_type))
-			caller.to_chat(span("notice","You can't color \the [object] with \the [src]!"))
+			caller.to_chat(span("notice","你不能用[src]给[object]上色！"))
 			return FALSE
 
 	var/color_to_set = get_selected_color(caller)
@@ -56,7 +56,7 @@
 
 		color_to_set = rgb(object_r + dif_r*strength,object_g + dif_g*strength,object_b + dif_b*strength)
 
-	caller.to_chat(span("notice","You color \the [object] with \the [src]."))
+	caller.to_chat(span("notice","你用[src]给[object]上了色。"))
 	object.set_color(color_to_set)
 	object.update_icon()
 	uses--

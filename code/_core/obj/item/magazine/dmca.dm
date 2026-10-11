@@ -1,7 +1,7 @@
 /obj/item/magazine/dmca
-	name = "\improper 10x24mm caseless DMCA magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "A highly advanced magazine that uses special Solarian quadruple stacked loading techniques to supply a high rate of fire 4 round burst to the DMCA."
+	name = "\improper 10x24mm无壳弹DMCA弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "先进的弹匣，采用太阳系特有的四排堆叠装填技术，为DMCA提供高速四连发供弹。"
 	icon = 'icons/obj/item/magazine/dmca.dmi'
 	icon_state = "dmca"
 	bullet_count_max = 99
@@ -29,9 +29,9 @@
 
 
 /obj/item/magazine/dmca/he
-	name = "\improper 10x24mm HEAP caseless DMCA magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "A highly advanced magazine that uses special Solarian quadruple stacked loading techniques to supply a high rate of fire 4 round burst to the DMCA. This one contains high explosive rounds."
+	name = "\improper 10x24mm无壳高爆穿甲弹DMCA弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "先进的弹匣，采用太阳系特有的四排堆叠装填技术，为DMCA提供高速四连发供弹。这款装有高爆弹药。"
 	icon = 'icons/obj/item/magazine/dmca_he.dmi'
 	icon_state = "dmca"
 

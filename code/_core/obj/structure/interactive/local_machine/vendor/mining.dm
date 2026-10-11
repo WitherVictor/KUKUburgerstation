@@ -1,5 +1,5 @@
 /obj/structure/interactive/vending/mining
-	name = "mining vendor"
+	name = "矿业售货机"
 	icon_state = "mining"
 
 	stored_types = list(

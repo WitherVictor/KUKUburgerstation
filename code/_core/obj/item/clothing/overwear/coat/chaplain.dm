@@ -1,9 +1,9 @@
 /obj/item/clothing/overwear/coat/chaplain
-	name = "priest garb"
+	name = "牧师长袍"
 	icon = 'icons/obj/item/clothing/suit/religious.dmi'
 
-	desc = "Ultra fancy!"
-	desc_extended = "Protects against magic attacks."
+	desc = "华丽至极！"
+	desc_extended = "能够抵御魔法攻击。"
 
 	armor = /armor/holy/garb
 	size = SIZE_3
@@ -16,11 +16,11 @@
 	)
 
 /obj/item/clothing/overwear/coat/chaplain/witchhunter
-	name = "witchhunter garb"
+	name = "猎巫人长袍"
 	icon = 'icons/obj/item/clothing/suit/witchunter.dmi'
 
-	desc = "Do not react."
-	desc_extended = "Once worn by those driven by zealous delusion, this suit has felt more than its fair share of warmth."
+	desc = "别作反应。"
+	desc_extended = "这件衣服曾属于被狂热妄念驱使的人，沾染过太多不该有的温热。"
 
 	dynamic_inventory_count = 1 //to store your bible
 	armor = /armor/leather/antimage

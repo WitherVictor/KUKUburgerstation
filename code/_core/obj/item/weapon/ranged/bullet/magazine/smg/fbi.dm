@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/smg/fbi
 	name = ".45 NT-FBI"
-	desc = "FBI, open up!"
-	desc_extended = "The heavy kick of this SMG is only somewhat offset by its advanced recoil compensation mechanism. Perfect for when you need the power of a Magnum revolver in full-auto."
+	desc = "联邦调查局，开门！"
+	desc_extended = "这把冲锋枪的后坐力很大，先进的后坐力补偿机构也只能抵消一部分。想要全自动倾泻马格南左轮般的火力时，它正合适。"
 	icon = 'icons/obj/item/weapons/ranged/smg/nanotrasen/45.dmi'
 	icon_state = "inventory"
 	value = 1600

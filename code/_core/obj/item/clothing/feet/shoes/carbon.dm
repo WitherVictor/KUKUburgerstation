@@ -1,7 +1,7 @@
 /obj/item/clothing/feet/shoes/carbon_boot
-	name = "right carbon boot"
-	desc = "For when you REALLY want to turn up the heat."
-	desc_extended = "A high-tech boot shielded with carbon-fibre. Somewhat bulky, but protects well."
+	name = "碳纤维右靴"
+	desc = "适合你真想把场面彻底炒热的时候。"
+	desc_extended = "带有碳纤维防护层的高科技靴子。稍显笨重，但防护出色。"
 
 	icon_state = "inventory_right"
 	icon_state_worn = "worn_right"
@@ -28,7 +28,7 @@
 
 
 /obj/item/clothing/feet/shoes/carbon_boot/left
-	name = "left carbon boot"
+	name = "碳纤维左靴"
 	icon_state = "inventory_left"
 	icon_state_worn = "worn_left"
 

@@ -1,5 +1,5 @@
 /obj/item/weapon/melee/energy/sword/katana
-	name = "high frequency blade"
+	name = "高频刃"
 	icon = 'icons/obj/item/weapons/melee/laser/katana.dmi'
 	color = "#FFFFFF"
 

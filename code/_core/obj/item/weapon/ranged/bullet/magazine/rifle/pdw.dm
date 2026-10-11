@@ -2,8 +2,8 @@
 
 /obj/item/weapon/ranged/bullet/magazine/rifle/pdw
 	name = "\improper 5.56mm SDW"
-	desc = "For personel defense!"
-	desc_extended = "A small, lightweight standard defense weapon chambered in 5.56. Shoots relatively fast, but isn't that accurate."
+	desc = "用于个人防卫！"
+	desc_extended = "小巧轻便的制式防卫武器，使用5.56弹药。射速较快，但精度不算高。"
 	icon = 'icons/obj/item/weapons/ranged/rifle/nanotrasen/556_5.dmi'
 	icon_state = "inventory"
 	value = 1000

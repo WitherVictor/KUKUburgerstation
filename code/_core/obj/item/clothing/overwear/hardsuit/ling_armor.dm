@@ -1,7 +1,7 @@
 /obj/item/clothing/overwear/hardsuit/ling
-	name = "living flesh armor"
-	desc = "Holy fuck what is this?"
-	desc_extended = "A clusterfuck of metal and flesh fused into living armor. This must make you do some pretty fucking wacky shit."
+	name = "活体血肉护甲"
+	desc = "我操，这是什么玩意儿？"
+	desc_extended = "金属与血肉胡乱融合成的活体护甲。穿上它，你肯定能搞出些他妈的离谱玩意儿。"
 	icon = 'icons/obj/item/clothing/suit/ling_armor.dmi'
 
 	value = 5000

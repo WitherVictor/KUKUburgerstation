@@ -1,7 +1,7 @@
 /obj/item/clothing/head/helmet/full/bio
-	name = "bio helmet"
-	desc = "For biological hazards."
-	desc_extended = "The top part of a full body biohazard suit. Good for protecting yourself from the biohazards."
+	name = "生物防护头盔"
+	desc = "应对生物危害。"
+	desc_extended = "全身生物防护服的头部组件，能有效抵御生物危害。"
 	icon = 'icons/obj/item/clothing/hats/bio.dmi'
 
 	armor = /armor/bio
@@ -14,9 +14,9 @@
 
 
 /obj/item/clothing/head/helmet/full/rad
-	name = "radiation helmet"
-	desc = "For radioactive hazards."
-	desc_extended = "The top part of a full body radiation suit. Good for protecting yourself from the rads."
+	name = "防辐射头盔"
+	desc = "应对放射性危害。"
+	desc_extended = "全身防辐射服的头部组件，能有效抵御辐射。"
 	icon = 'icons/obj/item/clothing/hats/rad.dmi'
 
 	armor = /armor/rad
@@ -29,9 +29,9 @@
 
 
 /obj/item/clothing/head/helmet/full/bomb
-	name = "bomb helmet"
-	desc = "For explosive hazards."
-	desc_extended = "The top part of a full body bomb suit. Good for protecting yourself from the bombs."
+	name = "防爆头盔"
+	desc = "应对爆炸危险。"
+	desc_extended = "全身防爆服的头部组件，能有效抵御爆炸。"
 	icon = 'icons/obj/item/clothing/hats/rad.dmi'
 
 	armor = /armor/military/heavy/hard/bomb

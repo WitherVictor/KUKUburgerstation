@@ -1,5 +1,5 @@
 /turf/simulated/floor/hierophant
-	name = "hierophant floor"
+	name = "大祭司地板"
 
 	icon = 'icons/turf/floor/hierophant.dmi'
 	icon_state = "floor1"

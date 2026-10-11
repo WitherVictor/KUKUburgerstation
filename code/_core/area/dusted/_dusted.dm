@@ -7,49 +7,49 @@
 	sunlight_color = "#C1AA7C"
 
 /area/dusted/exterior
-	name = "Dusted Exterior"
+	name = "尘封之地室外"
 	icon_state = "purple"
 
 /area/dusted/out_of_bounds
-	name = "OUT OF BOUNDS"
+	name = "边界之外"
 	icon_state = "red"
 
 /area/dusted/out_of_bounds/is_space()
 	return TRUE
 
 /area/dusted/interior
-	name = "Dusted Interior"
+	name = "尘封之地室内"
 	sunlight_freq = 0
 	sunlight_color = "FFFFFF"
 	icon_state = "blue"
 
 
 /area/dusted/interior/grey
-	name = "Grey Building"
+	name = "灰色建筑"
 	sunlight_freq = 0
 	sunlight_color = "FFFFFF"
 	icon_state = "green"
 
 /area/dusted/exterior/fountain
-	name = "Fountain"
+	name = "喷泉"
 	icon_state = "river"
 
 /area/dusted/exterior/market
-	name = "Market"
+	name = "市场"
 	icon_state = "shop"
 
 /area/dusted/exterior/bar_zone
-	name = "Outside Bar"
+	name = "酒吧外"
 	icon_state = "bar"
 
 /area/dusted/exterior/center_long_alley
-	name = "Center Long Alley"
+	name = "中央长巷"
 	icon_state = "hall_c"
 
 /area/dusted/exterior/grass_alley
-	name = "Grass Alley"
+	name = "草地小巷"
 	icon_state = "hall_e"
 
 /area/dusted/exterior/cargo_dump
-	name = "Cargo Dump"
+	name = "货物堆场"
 	icon_state = "cargo"

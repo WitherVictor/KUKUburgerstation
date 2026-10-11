@@ -1,7 +1,7 @@
 /obj/item/clothing/uniform/ce
-	name = "chief engineer's uniform"
-	desc = "SM DELAM CALL THE SHUTTLE"
-	desc_extended = "An uniform worn by the most incompetent engineers, who get promoted to Chiefs."
+	name = "总工程师制服"
+	desc = "超物质脱层了，快叫穿梭机！"
+	desc_extended = "最不称职的工程师穿的制服，毕竟他们都升职当总工程师了。"
 	icon = 'icons/obj/item/clothing/uniforms/ce.dmi'
 
 

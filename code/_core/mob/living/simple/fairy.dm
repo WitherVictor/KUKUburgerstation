@@ -1,7 +1,7 @@
 /mob/living/simple/fairy
-	name = "fairy"
-	desc = "Hey, listen!"
-	desc_extended = "If you have to listen to this damned thing for one more second you're going to take your eardrums out... how you'll do that is beyond you."
+	name = "精灵"
+	desc = "嘿，听我说！"
+	desc_extended = "再听这该死的东西吵上一秒，你就要把自己的耳膜掏出来了……虽然你也不知道该怎么掏。"
 	icon = 'icons/mob/living/simple/fairy.dmi'
 	icon_state = "living"
 

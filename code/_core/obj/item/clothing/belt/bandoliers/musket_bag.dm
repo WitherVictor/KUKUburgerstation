@@ -1,7 +1,7 @@
 /obj/item/clothing/belt/bandoliers/musket_bag
-	name = "musket bag"
-	desc = "It's called a POWDER HORN, okay?"
-	desc_extended = "A nerdy bag and nerdy horn for nerds that need to hold more ammo for flintlocks (You know who you are). ALT+Click to grab additional charges while already holding a charge. Holds up to 80 charges"
+	name = "火枪弹药袋"
+	desc = "这叫牛角火药筒，懂吗？"
+	desc_extended = "给燧发枪爱好者装更多弹药用的老派袋子和牛角筒（说的就是你）。手持弹药时，用ALT+单击可再取出一发同类弹药。最多可存放80发。"
 
 	icon = 'icons/obj/item/clothing/belts/musket_bag.dmi'
 	worn_layer = LAYER_MOB_CLOTHING_COAT_OVER

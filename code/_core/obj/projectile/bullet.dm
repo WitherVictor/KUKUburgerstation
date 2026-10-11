@@ -1,5 +1,5 @@
 /obj/projectile/bullet/
-	name = "bullet"
+	name = "子弹"
 	impact_effect_turf = /obj/effect/temp/impact/bullet
 	collision_bullet_flags = FLAG_COLLISION_BULLET_SOLID
 
@@ -11,39 +11,39 @@
 	color = bullet_color
 
 /obj/projectile/bullet/bolt
-	name = "crossbow bolt"
+	name = "弩矢"
 	icon = 'icons/obj/projectiles/bolt.dmi'
 	icon_state = "bolt"
 	muzzleflash_effect = null
 
 /obj/projectile/bullet/arrow
-	name = "arrow"
+	name = "箭矢"
 	icon = 'icons/obj/projectiles/arrow.dmi'
 	icon_state = "normal"
 	muzzleflash_effect = null
 
 /obj/projectile/bullet/arrow/ashen
-	name = "arrow"
+	name = "箭矢"
 	icon = 'icons/obj/projectiles/arrow.dmi'
 	icon_state = "ashen"
 
 /obj/projectile/bullet/arrow/hardlight
-	name = "arrow"
+	name = "箭矢"
 	icon = 'icons/obj/projectiles/arrow.dmi'
 	icon_state = "hardlight"
 
 /obj/projectile/bullet/arrow/hardlight/syndicate
-	name = "arrow"
+	name = "箭矢"
 	icon = 'icons/obj/projectiles/arrow.dmi'
 	icon_state = "hardlight_syndicate"
 
 /obj/projectile/bullet/tungsten
-	name = "tungsten bolt"
+	name = "钨杆弹"
 	icon = 'icons/obj/projectiles/bolt.dmi'
 	icon_state = "tungsten"
 
 /obj/projectile/bullet/syringe
-	name = "launched syringe"
+	name = "射出的注射器"
 	icon = 'icons/obj/projectiles/bolt.dmi'
 	icon_state = "syringe"
 	reagents = /reagent_container/syringe_gun_syringe
@@ -123,7 +123,7 @@
 		new /obj/effect/temp/hazard/flamethrowerfire(new_loc,SECONDS_TO_DECISECONDS(30),owner)
 
 /obj/projectile/bullet/gyrojet
-	name = "gyrojet"
+	name = "旋转火箭弹"
 	icon = 'icons/obj/projectiles/rocket.dmi'
 	icon_state = "gyrojet"
 
@@ -153,12 +153,12 @@
 			return FALSE
 
 /obj/projectile/bullet/Fiendish
-	name = "bullet"
+	name = "子弹"
 	icon = 'icons/obj/projectiles/laser.dmi'
 	icon_state = "ion"
 
 
 /obj/projectile/bullet/flintlock
-	name = "bullet"
+	name = "子弹"
 	icon = 'icons/obj/projectiles/flintlock.dmi'
 	icon_state = "iron"

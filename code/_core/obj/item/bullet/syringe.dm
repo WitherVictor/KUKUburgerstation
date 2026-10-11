@@ -1,7 +1,7 @@
 /obj/item/bullet_cartridge/syringe_gun/
-	name = "\improper syringe gun round"
-	desc = "Whoops! That was not medicine!"
-	desc_extended = "For weapons that take special syringe rounds"
+	name = "\improper 注射枪弹"
+	desc = "哎呀！刚才打的可不是药！"
+	desc_extended = "供使用特制注射弹的武器装填。"
 	icon = 'icons/obj/item/bullet/syringe_gun.dmi'
 	icon_state = "syringe"
 

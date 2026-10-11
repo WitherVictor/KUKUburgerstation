@@ -1,7 +1,7 @@
 /obj/item/magazine/smg_45
-	name = "\improper .45 banana magazine"
-	desc = "IT'S NOT A CLIP. IT'S A MAGAZINE."
-	desc_extended = "Contains ammunition for a ranged weapon. Make sure you're trying to use the right caliber."
+	name = "\improper .45香蕉弹匣"
+	desc = "这是弹匣，不是弹夹！"
+	desc_extended = "装有远程武器弹药，使用时请确认口径匹配。"
 	icon = 'icons/obj/item/magazine/45_smg.dmi'
 	icon_state = "45"
 	bullet_count_max = 25
@@ -32,7 +32,7 @@
 	icon_state = "[initial(icon_state)]_[get_ammo_count() ? 1 : 0]"
 
 /obj/item/magazine/smg_45/ap
-	name = "\improper .45 AP banana magazine"
+	name = "\improper .45穿甲弹香蕉弹匣"
 	icon = 'icons/obj/item/magazine/45_smg_ap.dmi'
 	icon_state = "45"
 	ammo = /obj/item/bullet_cartridge/pistol_45/ap

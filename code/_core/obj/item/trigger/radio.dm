@@ -1,7 +1,7 @@
 /obj/item/device/radio/
-	name = "radio"
-	desc = "Long distance communication. What could possibly go wrong?"
-	desc_extended = "The salvaged electronic innards of a radio, somehow removed from its casing but still perfectly functional."
+	name = "无线电"
+	desc = "远距离通讯，能出什么岔子呢？"
+	desc_extended = "回收来的无线电内部电子组件，不知怎么被拆出了外壳，却仍能正常工作。"
 	icon = 'icons/obj/item/radio_transmitter.dmi'
 	icon_state = "inventory"
 
@@ -27,7 +27,7 @@
 
 /obj/item/device/radio/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += span("notice","ALT+Click to start broadcasting nearby speech.<br>Use the mouse wheel to change frequencies.<br>Use in hands to toggle the signal reciever.")
+	. += span("notice","ALT+单击可切换附近语音的自动广播。<br>使用鼠标滚轮切换频率。<br>在手中使用可开关接收器；CTRL+单击可设置监听频率。")
 
 /obj/item/device/radio/Generate()
 	. = ..()
@@ -54,50 +54,53 @@
 		var/list/possible_settings = list()
 
 		for(var/k in listening_frequencies)
-			var/frequency_string = frequency_to_name(frequency)
-			if(frequency_string == "Unknown")
-				frequency_string = k
+			var/frequency_string = frequency_to_display_name(text2num(k))
+			if(frequency_to_name(text2num(k)) == "Unknown")
+				frequency_string = "[text2num(k)*0.1] kHz"
 			var/active = listening_frequencies[k] ? TRUE : FALSE
-			possible_settings["[active ? "Remove" : "Add"] [frequency_string]"] = k
+			possible_settings["[active ? "移除" : "添加"] [frequency_string]"] = k
 
-		possible_settings["Add..."] = "Add..."
-		possible_settings["Cancel"] = "Cancel"
+		possible_settings["添加频率……"] = "Add..."
+		possible_settings["取消"] = "Cancel"
 
-		var/chosen_setting = input("What would you like to do?","Radio Settings","Cancel") as null|anything in possible_settings
+		var/chosen_label = input("你想进行什么操作？","无线电设置","取消") as null|anything in possible_settings
+		if(!chosen_label)
+			return TRUE
+		var/chosen_setting = possible_settings[chosen_label]
 		if(chosen_setting == "Add...")
-			var/desired_frequency = input("What frequency do you wish to add?","Add Frequency","[RADIO_FREQ_COMMON]") as null|text
+			var/desired_frequency = input("你想添加哪个频率？","添加频率","[RADIO_FREQ_COMMON]") as null|text
 			if(!desired_frequency)
 				return TRUE
 			desired_frequency = text2num(desired_frequency)
 			if(!desired_frequency || desired_frequency <= 0)
-				activator.to_chat(span("warning","Invalid frequency!"))
+				activator.to_chat(span("warning","频率无效！"))
 				return TRUE
 			if(MODULUS(desired_frequency,1)) //Entered a correct frequency, however it needs to be multiplied to fit the current system.
 				desired_frequency *= 10
 			desired_frequency = round(desired_frequency,2) + 1
 			if(desired_frequency > frequency_max)
-				activator.to_chat(span("warning","Input frequency ([desired_frequency]) is too high for this radio's maximum frequency ([frequency_max])!"))
+				activator.to_chat(span("warning","输入频率（[desired_frequency*0.1] kHz）超过了这台无线电的最高频率（[frequency_max*0.1] kHz）！"))
 				return TRUE
 			if(desired_frequency < frequency_min)
-				activator.to_chat(span("warning","Input frequency ([desired_frequency]) is too low for this radio's minimum frequency ([frequency_min])!"))
+				activator.to_chat(span("warning","输入频率（[desired_frequency*0.1] kHz）低于这台无线电的最低频率（[frequency_min*0.1] kHz）！"))
 				return TRUE
 
 		else if(chosen_setting == "Cancel")
 			return TRUE
 		else
 			//We have an existing number. Toggle it.
-			listening_frequencies[chosen_setting[chosen_setting]] = !listening_frequencies[chosen_setting[chosen_setting]]
-			activator.to_chat(span("notice","The frequency [chosen_setting[chosen_setting]]([frequency_to_name(chosen_setting[chosen_setting])]) was [listening_frequencies[chosen_setting[chosen_setting]] ? "added to" : "removed from"] \the [src.name]'s listening frequencies."))
+			listening_frequencies[chosen_setting] = !listening_frequencies[chosen_setting]
+			activator.to_chat(span("notice","[src.name]的监听列表已[listening_frequencies[chosen_setting] ? "添加" : "移除"]频率[text2num(chosen_setting)*0.1] kHz（[frequency_to_display_name(text2num(chosen_setting))]）。"))
 		return TRUE
 
 	if(activator.attack_flags & CONTROL_MOD_DISARM)
 		broadcasting = !broadcasting
-		activator.to_chat(span("notice","You toggle the microphone to <b>[broadcasting ? "always broadcast." : "only broadcast when pressed."]</b>"))
+		activator.to_chat(span("notice","你将麦克风设为<b>[broadcasting ? "持续广播" : "仅在按键时广播"]</b>。"))
 		return TRUE
 
 
 	receiving = !receiving
-	activator.to_chat(span("notice","You toggle the signal reciever <b>[receiving ? "on" : "off"]</b>."))
+	activator.to_chat(span("notice","你<b>[receiving ? "开启" : "关闭"]</b>了信号接收器。"))
 	return TRUE
 
 /obj/item/device/radio/mouse_wheel_on_object(var/mob/activator,delta_x,delta_y,location,control,params)
@@ -113,18 +116,18 @@
 	if(frequency > frequency_max) frequency = frequency_max
 	if(frequency < frequency_min) frequency = frequency_min
 
-	var/frequency_string = frequency_to_name(frequency)
-	if(frequency_string == "Unknown")
+	var/frequency_string = frequency_to_display_name(frequency)
+	if(frequency_to_name(frequency) == "Unknown")
 		frequency_string = null
 
 	var/freq = frequency_string ? " (<b>[frequency_string]</b>)" : ""
 
 	if(old_frequency == frequency)
-		activator.to_chat(span("warning","The frequency can't seem to go any [frequency == frequency_min ? "lower" : "higher"]!"))
+		activator.to_chat(span("warning","频率似乎不能再[frequency == frequency_min ? "降低" : "提高"]了！"))
 	else if(spam_fix_time <= world.time)
-		activator.to_chat(span("notice","You change \the [src.name]'s frequency to [frequency*0.1] kHz[freq]..."))
+		activator.to_chat(span("notice","你将[src.name]的频率设为[frequency*0.1] kHz[freq]……"))
 	else
-		activator.to_chat(span("notice","...[frequency*0.1] kHz[freq]..."))
+		activator.to_chat(span("notice","……[frequency*0.1] kHz[freq]……"))
 
 	spam_fix_time = world.time + 20
 
@@ -176,7 +179,7 @@ list(
 	. = ..()
 
 /obj/item/device/radio/nanotrasen
-	name = "\improper NanoTrasen station radio"
+	name = "\improper 纳米传讯站用无线电"
 
 	frequency_min = RADIO_FREQ_ALPHA - 20
 	frequency_max = RADIO_FREQ_SHIP + 20
@@ -184,12 +187,12 @@ list(
 	value = 15
 
 /obj/item/device/radio/headset
-	name = "headset radio"
+	name = "耳机无线电"
 	broadcasting_range = 1
 	listen_range = 2
 
 /obj/item/device/radio/headset/nanotrasen
-	name = "\improper NanoTrasen headset radio"
+	name = "\improper 纳米传讯耳机无线电"
 
 	frequency_min = RADIO_FREQ_ALPHA - 20
 	frequency_max = RADIO_FREQ_SHIP + 20
@@ -197,7 +200,7 @@ list(
 	value = 15
 
 /obj/item/device/radio/headset/nanotrasen/medical
-	name = "\improper NanoTrasen medical headset radio"
+	name = "\improper 纳米传讯医疗耳机无线电"
 
 	frequency_min = RADIO_FREQ_ALPHA - 20
 	frequency_max = RADIO_FREQ_SHIP + 20
@@ -210,7 +213,7 @@ list(
 
 
 /obj/item/device/radio/headset/mercenary
-	name = "\improper Mercenary headset radio"
+	name = "\improper 佣兵耳机无线电"
 
 	frequency_min = RADIO_FREQ_MERCENARY_MIN
 	frequency_max = RADIO_FREQ_COMMON
@@ -228,7 +231,7 @@ list(
 	)
 
 /obj/item/device/radio/headset/syndicate
-	name = "\improper Syndicate headset radio"
+	name = "\improper 辛迪加耳机无线电"
 
 	frequency_min = RADIO_FREQ_SYNDICATE_MIN
 	frequency_max = RADIO_FREQ_COMMON
@@ -246,7 +249,7 @@ list(
 	)
 
 /obj/item/device/radio/headset/revolutionary
-	name = "\improper Revolutionary headset radio"
+	name = "\improper 革命者耳机无线电"
 
 	frequency_min = RADIO_FREQ_REVOLUTIONARY_MIN
 	frequency_max = RADIO_FREQ_COMMON

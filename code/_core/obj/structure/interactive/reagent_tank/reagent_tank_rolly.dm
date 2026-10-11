@@ -29,7 +29,7 @@
 
 
 /obj/structure/interactive/reagent_tank/rolly/water
-	name = "water tank"
+	name = "水罐"
 	color = "#44AAE2"
 
 /obj/structure/interactive/reagent_tank/rolly/water/Generate()
@@ -37,7 +37,7 @@
 	return ..()
 
 /obj/structure/interactive/reagent_tank/rolly/ethanol
-	name = "ethanol tank"
+	name = "乙醇罐"
 	color = "#FFD800"
 
 /obj/structure/interactive/reagent_tank/rolly/ethanol/Generate()
@@ -45,7 +45,7 @@
 	return ..()
 
 /obj/structure/interactive/reagent_tank/rolly/lube
-	name = "lube tank"
+	name = "润滑剂罐"
 	color = "#FF00DC"
 
 /obj/structure/interactive/reagent_tank/rolly/lube/Generate()
@@ -53,7 +53,7 @@
 	return ..()
 
 /obj/structure/interactive/reagent_tank/rolly/cheese_powder
-	name = "cheese powder tank"
+	name = "奶酪粉罐"
 	color = "#FFD800"
 
 /obj/structure/interactive/reagent_tank/rolly/cheese_powder/Generate()
@@ -61,7 +61,7 @@
 	return ..()
 
 /obj/structure/interactive/reagent_tank/rolly/cream_filling
-	name = "cream filling tank"
+	name = "甜奶油夹心罐"
 	color = "#FFFFFF"
 
 /obj/structure/interactive/reagent_tank/rolly/cream_filling/Generate()
@@ -70,7 +70,7 @@
 
 
 /obj/structure/interactive/reagent_tank/rolly/butter
-	name = "butter tank"
+	name = "黄油罐"
 	color = "#FFFF00"
 
 /obj/structure/interactive/reagent_tank/rolly/butter/Generate()

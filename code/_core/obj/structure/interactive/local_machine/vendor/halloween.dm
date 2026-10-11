@@ -1,8 +1,8 @@
 /obj/structure/interactive/vending/halloween
-	name = "chocolate bar vendor"
+	name = "巧克力棒售货机"
 	icon_state = "sustenance"
-	desc = "Get your rare chocolate bars here!"
-	desc_extended = "A special vendor that only sells the best chocolate bars in the galaxy."
+	desc = "稀有巧克力棒就在这里！"
+	desc_extended = "一台专卖全银河顶级巧克力棒的特殊售货机。"
 
 	stored_types = list(
 		/obj/item/container/food/package/junkfood/halloween/coconut_joy,

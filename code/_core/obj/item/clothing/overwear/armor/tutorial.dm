@@ -1,5 +1,5 @@
 /obj/item/clothing/overwear/armor/tutorial
-	name = "tutorial armor"
+	name = "教程护甲"
 	icon = 'icons/obj/item/clothing/suit/tutorial_dress.dmi'
 
 

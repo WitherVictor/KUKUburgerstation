@@ -1,5 +1,5 @@
 /obj/item/weapon/ranged/bullet/revolver/sbarrel
-	name = "\improper 12g single barrel shotgun"
+	name = "\improper 12号单管霰弹枪"
 	desc = ""
 	desc_extended = ""
 	icon = 'icons/obj/item/weapons/ranged/dbarrel.dmi'

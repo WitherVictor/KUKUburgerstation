@@ -1,5 +1,5 @@
 /turf/simulated/floor/icing/
-	name = "cake icing"
+	name = "蛋糕糖衣"
 
 	icon = 'icons/turf/floor/icing.dmi'
 	icon_state = "floor"

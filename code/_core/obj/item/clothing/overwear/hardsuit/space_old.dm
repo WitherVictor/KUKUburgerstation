@@ -1,5 +1,5 @@
 /obj/item/clothing/overwear/hardsuit/space
-	name = "\improper old spacesuit"
+	name = "\improper 旧式宇航服"
 	item_slot = SLOT_TORSO_ARMOR
 
 	icon = 'icons/obj/item/clothing/suit/space_old.dmi'

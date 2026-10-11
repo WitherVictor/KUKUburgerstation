@@ -1,7 +1,7 @@
 /obj/item/device/proximity
-	name = "proximity sensor"
-	desc = "Tick tock."
-	desc_extended = "A simple proximity sensor that triggers when any living creature in a set radius enters its sphere. The range can be set with a multitool, and the activation timer with an integrated wheel. Has a set delay."
+	name = "接近传感器"
+	desc = "滴答，滴答。"
+	desc_extended = "简单的接近传感器，生物进入设定范围内时便会触发。使用多功能工具调节范围，使用滚轮设置启动延时。"
 	icon_state = "motion"
 
 	var/time_set = 50
@@ -83,11 +83,11 @@
 	time_set = clamp(time_set + fixed_delta,time_min,time_max)
 
 	if(old_time_set == time_set)
-		activator.to_chat(span("notice","\The [src.name] can't seem to go any [time_set == time_min ? "lower" : "higher"]."))
+		activator.to_chat(span("notice","[src.name]的时间似乎不能再[time_set == time_min ? "缩短" : "延长"]了。"))
 	else if(spam_fix_time <= world.time)
-		activator.to_chat(span("notice","You change \the [src.name]'s time to [time_set] deciseconds..."))
+		activator.to_chat(span("notice","你将[src.name]的时间设为[time_set*0.1]秒……"))
 	else
-		activator.to_chat(span("notice","...[time_set] deciseconds..."))
+		activator.to_chat(span("notice","……[time_set*0.1]秒……"))
 
 	spam_fix_time = world.time + 20
 
@@ -102,15 +102,15 @@
 
 		if(range_set > 0)
 			range_set -= 1
-			activator.to_chat(span("notice","You change \the [src.name]'s range to [range_set] tiles..."))
+			activator.to_chat(span("notice","你将[src.name]的范围设为[range_set]格……"))
 			return TRUE
 		range_set = 2
-		activator.to_chat(span("notice","You change \the [src.name]'s range to [range_set] tiles..."))
+		activator.to_chat(span("notice","你将[src.name]的范围设为[range_set]格……"))
 		return TRUE
 
 	return ..()
 
 /obj/item/device/proximity/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","The timer is set at [time_set] deciseconds.")
-	. += div("notice","The range is set at [range_set] tiles.")
+	. += div("notice","计时器设定为[time_set*0.1]秒。")
+	. += div("notice","范围设定为[range_set]格。")

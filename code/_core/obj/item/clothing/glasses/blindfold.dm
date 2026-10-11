@@ -1,7 +1,7 @@
 /obj/item/clothing/glasses/blindfold
-	name = "black blindfold"
-	desc = "A BDSM enthuisast's dream."
-	desc_extended = "A black blindfold that is designed to blind the wearer. Provides excellent magic protection."
+	name = "黑色蒙眼布"
+	desc = "束缚与调教爱好者的梦想。"
+	desc_extended = "遮住佩戴者视线的黑色蒙眼布。提供出色的魔法防护。"
 	icon = 'icons/obj/item/clothing/glasses/blindfold.dmi'
 
 	armor = /armor/cloth/arcane
@@ -20,6 +20,6 @@
 
 
 /obj/item/clothing/glasses/blindfold/white
-	name = "white blindfold"
-	desc_extended = "A white blindfold that is designed to blind the wearer. Provides excellent magic protection."
+	name = "白色蒙眼布"
+	desc_extended = "遮住佩戴者视线的白色蒙眼布。提供出色的魔法防护。"
 	icon = 'icons/obj/item/clothing/glasses/blindfold_white.dmi'

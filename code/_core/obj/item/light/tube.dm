@@ -22,7 +22,7 @@
 		L.desired_light_color = color
 		L.update_atom_light()
 		L.update_sprite()
-		activator.visible_message(span("notice","\The [activator.name] inserts \the [src.name] into \the [object.name]."),span("notice","You insert \the [src.name] into \the [object.name]."))
+		activator.visible_message(span("notice","[activator.name]将[src.name]装入了[object.name]。"),span("notice","你将[src.name]装入了[object.name]。"))
 		qdel(src)
 		return TRUE
 
@@ -30,9 +30,9 @@
 
 
 /obj/item/light/tube
-	name = "light tube"
-	desc = "Tuuube."
-	desc_extended = "A lighting tube for lights. Can be used to replace existing lights, or provide new ones."
+	name = "灯管"
+	desc = "灯——管。"
+	desc_extended = "灯具用的灯管，可替换原有灯管或装入新灯具。"
 	icon = 'icons/obj/item/light_tube.dmi'
 	icon_state = "inventory"
 	light_type = /obj/structure/interactive/lighting/fixture/tube
@@ -41,9 +41,9 @@
 
 
 /obj/item/light/bulb
-	name = "light bulb"
-	desc = "Buuuulb."
-	desc_extended = "A lighting bulb for lights. Can be used to replace existing lights, or provide new ones."
+	name = "灯泡"
+	desc = "灯——泡。"
+	desc_extended = "灯具用的灯泡，可替换原有灯泡或装入新灯具。"
 	icon = 'icons/obj/item/light_bulb.dmi'
 	icon_state = "inventory"
 	light_type = /obj/structure/interactive/lighting/fixture/bulb

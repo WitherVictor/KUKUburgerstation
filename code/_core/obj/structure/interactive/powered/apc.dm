@@ -1,5 +1,5 @@
 /obj/structure/interactive/powered/apc
-	name = "area power converter"
+	name = "区域电力转换器"
 	icon = 'icons/obj/structure/power.dmi'
 	icon_state = "apc"
 
@@ -16,7 +16,7 @@
 
 /obj/structure/interactive/powered/apc/get_examine_list(var/mob/examiner)
 	. = ..()
-	. += div("notice","\The [cell.name] has [cell.charge_current] out of [cell.charge_max] charge remaining.")
+	. += div("notice","[cell.name]剩余电量：[cell.charge_current]/[cell.charge_max]。")
 
 /obj/structure/interactive/powered/apc/Destroy()
 

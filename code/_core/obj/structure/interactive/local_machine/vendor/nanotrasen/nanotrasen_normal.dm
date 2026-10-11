@@ -2,7 +2,7 @@
 	icon = 'icons/obj/structure/vending_new.dmi'
 
 /obj/structure/interactive/vending/nanotrasen/normal/clothing
-	name = "nanotrasen wardrobe vendor"
+	name = "纳米传讯服装售货机"
 	icon_state = "regular_clothing"
 
 	icon_state_broken = null
@@ -53,7 +53,7 @@
 
 /obj/structure/interactive/vending/nanotrasen/normal/guns
 
-	name = "nanotrasen gun vendor"
+	name = "纳米传讯武器售货机"
 	icon_state = "regular_guns"
 
 
@@ -97,7 +97,7 @@
 
 /obj/structure/interactive/vending/nanotrasen/normal/ammo
 
-	name = "nanotrasen gun vendor"
+	name = "纳米传讯弹药售货机"
 	icon_state = "regular_ammo"
 
 	stored_types = list(

@@ -1,7 +1,7 @@
 /obj/item/fishing/rod
-	name = "fishing rod"
-	desc = "Catch fish with this!"
-	desc_extended = "A very standard fishing rod that allows you to fish in areas containing water. Requires a lure, a line, and some bait to function."
+	name = "鱼竿"
+	desc = "用它钓鱼！"
+	desc_extended = "普通鱼竿，可在有鱼获的水域钓鱼。使用前需要装好浮漂、鱼线和适合该水域的鱼饵。"
 
 	icon = 'icons/obj/item/fishing/rod.dmi'
 	icon_state = "inventory"
@@ -100,9 +100,9 @@
 			line = null
 			update_sprite()
 		if(!object_removed)
-			activator.to_chat(span("notice","There is nothing to remove from \the [src.name]."))
+			activator.to_chat(span("notice","[src.name]上没有可取下的配件。"))
 			return TRUE
-		activator.to_chat(span("notice","You remove \the [object_removed.name]."))
+		activator.to_chat(span("notice","你取下了[object_removed.name]。"))
 		object_removed.drop_item(get_turf(src))
 		C.put_in_hands(object_removed,params)
 		return TRUE
@@ -111,11 +111,11 @@
 		if(istype(object,/obj/item/fishing/line/))
 			var/obj/item/fishing/line/P = object
 			if(line)
-				activator.to_chat(span("notice","You swap out \the [line.name] for \the [P.name]."))
+				activator.to_chat(span("notice","你将[line.name]换成了[P.name]。"))
 				line.drop_item(get_turf(activator))
 				line = null
 			else
-				activator.to_chat(span("notice","You insert \the [P.name] into \the [src.name]."))
+				activator.to_chat(span("notice","你将[P.name]装到了[src.name]上。"))
 
 			line = P
 			P.drop_item(src)
@@ -125,11 +125,11 @@
 		if(istype(object,/obj/item/fishing/lure/))
 			var/obj/item/fishing/lure/P = object
 			if(lure)
-				activator.to_chat(span("notice","You swap out \the [lure.name] for \the [P.name]."))
+				activator.to_chat(span("notice","你将[lure.name]换成了[P.name]。"))
 				lure.drop_item(get_turf(activator))
 				lure = null
 			else
-				activator.to_chat(span("notice","You insert \the [P.name] onto \the [src.name]."))
+				activator.to_chat(span("notice","你将[P.name]装到了[src.name]上。"))
 
 			lure = P
 			P.drop_item(src)
@@ -138,11 +138,11 @@
 		if(istype(object,/obj/item/fishing/bait/))
 			var/obj/item/fishing/bait/P = object
 			if(bait)
-				activator.to_chat(span("notice","You swap out \the [bait.name] for \the [P.name]."))
+				activator.to_chat(span("notice","你将[bait.name]换成了[P.name]。"))
 				bait.drop_item(get_turf(activator))
 				bait = null
 			else
-				activator.to_chat(span("notice","You attach \the [P.name] to \the [src.name]."))
+				activator.to_chat(span("notice","你将[P.name]挂到了[src.name]上。"))
 
 			bait = P
 			P.drop_item(src)
@@ -159,7 +159,7 @@
 			if(!is_inventory(src.loc) || time_since_snag >= snagged_fish) //Too slow...
 				snagged_fish = null
 				if(line.break_on_failure > 0 && rand(0,100) <= line.break_on_failure) //Bad line.
-					last_activator?.to_chat(span("danger","Too slow... your [line.name] snaps, and you lose your [bait.name] and [lure.name]!"))
+					last_activator?.to_chat(span("danger","太慢了……你的[line.name]断了，[bait.name]和[lure.name]也丢了！"))
 					QDEL_NULL(line)
 					QDEL_NULL(bait)
 					QDEL_NULL(lure)
@@ -170,7 +170,7 @@
 					return FALSE
 
 				if(!bait.nice_bait) //Fish stole your bait!
-					last_activator?.to_chat(span("warning","Too slow... the fish steals your [bait.name]!"))
+					last_activator?.to_chat(span("warning","太慢了……鱼偷走了你的[bait.name]！"))
 					snagged_fish = null
 					fishing_turf = null
 					QDEL_NULL(fishing_bob)
@@ -180,7 +180,7 @@
 						bait = null
 					return FALSE
 
-				last_activator?.to_chat(span("warning","Too slow... the fish got away..."))
+				last_activator?.to_chat(span("warning","太慢了……鱼跑掉了……"))
 				snagged_fish = null
 
 		else if(fishing_turf)
@@ -222,8 +222,8 @@
 			var/list/spawned_loot = SPAWN_LOOT(fishing_turf.fishing_rewards,T,score_total)
 
 			activator.visible_message(
-				span("notice","\The [activator.name] reels their [src.name] in!"),
-				span("notice","You reel your [src.name] in!")
+				span("notice","[activator.name]用[src.name]收线了！"),
+				span("notice","你用[src.name]收线了！")
 			)
 
 			if(length(spawned_loot))
@@ -231,9 +231,9 @@
 				for(var/k in spawned_loot)
 					var/atom/movable/M = k
 					object_names += M.name
-				activator.to_chat(span("notice","You caught [english_list(spawned_loot)]!"))
+				activator.to_chat(span("notice","你钓到了[jointext(object_names,"、")]！"))
 			else
-				activator.to_chat(span("notice","You fail to catch anything. At least your bait is saved..."))
+				activator.to_chat(span("notice","你什么也没钓到，至少鱼饵还在……"))
 
 			STOP_THINKING(src)
 			fishing_turf = null
@@ -247,31 +247,31 @@
 			fishing_turf = null
 			nospam = null
 			QDEL_NULL(fishing_bob)
-			activator.visible_message(span("notice","\The [activator] reels their [src.name] in."),span("notice","You reel your [src.name] in."))
+			activator.visible_message(span("notice","[activator]用[src.name]收线了。"),span("notice","你用[src.name]收线了。"))
 			return TRUE
 
 	if(istype(object,/turf/simulated/liquid/))
 		if(compact)
-			activator.to_chat(span("notice","Extend your fishing rod first!"))
+			activator.to_chat(span("notice","请先展开鱼竿！"))
 			return TRUE
 		var/turf/simulated/liquid/H = object
 		if(!H.fishing_rewards)
-			activator.to_chat(span("warning","There seems to be no fish here..."))
+			activator.to_chat(span("warning","这里似乎没有鱼……"))
 			return TRUE
 		if(!line || !lure || !bait)
-			activator.to_chat(span("warning","You need a line, a lure, and bait to use \the [src.name]!"))
+			activator.to_chat(span("warning","你需要装好鱼线、浮漂和鱼饵才能使用[src.name]！"))
 			return TRUE
 		if(H.fishing_rewards != bait.valid_loot_type)
-			activator.to_chat(span("warning","This doesn't seem to be the right bait..."))
+			activator.to_chat(span("warning","这种鱼饵似乎不适合这里……"))
 			return TRUE
 		if(!line.lavaproof && istype(object,/turf/simulated/liquid/lava))
-			activator.to_chat(span("warning","You need a lavaproof fishing line in order to fish in lava!"))
+			activator.to_chat(span("warning","在岩浆中钓鱼需要耐岩浆鱼线！"))
 			return TRUE
 		INTERACT_CHECK
 		INTERACT_DELAY(5)
 		fishing_turf = H
 		last_activator = activator
-		activator.visible_message(span("notice","\The [activator] casts their [src.name] into \the [fishing_turf.name]."),span("notice","You cast your [src.name] into \the [fishing_turf.name]."))
+		activator.visible_message(span("notice","[activator]用[src.name]向[fishing_turf.name]抛竿了。"),span("notice","你用[src.name]向[fishing_turf.name]抛竿了。"))
 		fishing_bob = new(fishing_turf)
 		fishing_bob.icon_state = "[lure.bob_icon_state]_out"
 		animate(fishing_bob,pixel_x=rand(-10,10),pixel_y=rand(-10,10),time=50)
@@ -285,17 +285,17 @@
 
 	. = ..()
 
-	if(line) . += span("notice","It has \the [line.name] equipped.")
-	else . += span("notice","It has no line.")
-	if(lure) . += span("notice","It has \the [lure.name] equipped.")
-	else . += span("notice","It has no lure.")
-	if(bait) . += span("notice","It has \the [bait.name] equipped.")
-	else . += span("notice","It has no bait.")
+	if(line) . += span("notice","已装鱼线：[line.name]。")
+	else . += span("notice","未装鱼线。")
+	if(lure) . += span("notice","已装浮漂：[lure.name]。")
+	else . += span("notice","未装浮漂。")
+	if(bait) . += span("notice","已挂鱼饵：[bait.name]。")
+	else . += span("notice","未挂鱼饵。")
 
 /obj/item/fishing/rod/telescopic
-	name = "telescopic fishing rod"
-	desc = "Bass pro certified!"
-	desc_extended = "A collapsable fishing rod that allows you to fish in areas containing water. Requires a lure, a line, and some bait to function."
+	name = "伸缩鱼竿"
+	desc = "鲈鱼高手认证！"
+	desc_extended = "可收缩的鱼竿，可在有鱼获的水域钓鱼。使用前需要展开，并装好浮漂、鱼线和适合该水域的鱼饵。"
 	value = 2000
 	icon = 'icons/obj/item/fishing/rodtelescopic.dmi'
 	compact = TRUE

@@ -1,5 +1,5 @@
 /mob/living/simple/colossus
-	name = "colossus"
+	name = "巨像"
 	boss_icon_state = "colossus"
 	icon = 'icons/mob/living/simple/lavaland/colossus.dmi'
 	icon_state = "colossus"
@@ -69,7 +69,7 @@
 	level = 28
 
 /mob/living/simple/colossus/pre_death()
-	do_say("<font color='#DD1C1F' size='4'>I WILL RETURN.</font>",FALSE)
+	do_say("<font color='#DD1C1F' size='4'>我必将归来。</font>",FALSE)
 	play_sound('sound/effects/demon_dies.ogg',get_turf(src), volume=75, range_min = VIEW_RANGE, range_max = VIEW_RANGE * 3)
 	return ..()
 

@@ -1,5 +1,5 @@
 /obj/structure/interactive/mining_drill
-	name = "mining drill"
+	name = "采矿钻机"
 	icon = 'icons/obj/structure/big_drill.dmi'
 	icon_state = "mining_drill"
 	anchored = FALSE
@@ -79,13 +79,13 @@
 /obj/structure/interactive/mining_drill/proc/activate(var/mob/activator)
 
 	if(!check_braces())
-		activator.to_chat(span("warning","\The [src] doesn't seem to want to turn on!"))
+		activator.to_chat(span("warning","[src]似乎无法启动，请检查支架！"))
 		return FALSE
 
 	if(activator)
-		visible_message(span("notice","\The [activator.name] activates \the [src.name]."),span("notice","You activate \the [src.name]."))
+		visible_message(span("notice","[activator.name]启动了[src.name]。"),span("notice","[activator.name]启动了[src.name]。"))
 	else
-		visible_message(span("warning","\The [src.name] powers up!"))
+		visible_message(span("warning","[src.name]启动了！"))
 
 	SShorde.all_drills[src] = world.time + SECONDS_TO_DECISECONDS(15)
 	set_anchored(TRUE)
@@ -97,9 +97,9 @@
 /obj/structure/interactive/mining_drill/proc/deactivate(var/mob/activator)
 
 	if(activator)
-		visible_message(span("notice","\The [activator.name] turns off \the [src.name]."),span("notice","You turn off \the [src.name]."))
+		visible_message(span("notice","[activator.name]关闭了[src.name]。"),span("notice","[activator.name]关闭了[src.name]。"))
 	else
-		visible_message(span("warning","\The [src.name] powers down!"))
+		visible_message(span("warning","[src.name]关闭了！"))
 
 	SShorde.all_drills -= src
 	found_deposit = null
@@ -193,7 +193,7 @@
 	return TRUE
 
 /obj/structure/interactive/mining_brace
-	name = "mining brace"
+	name = "采矿支架"
 	icon = 'icons/obj/structure/big_drill.dmi'
 	icon_state = "mining_brace"
 	anchored = FALSE
@@ -224,23 +224,23 @@
 
 	if(activator.movement_flags & MOVEMENT_WALKING)
 		if(anchored)
-			activator.to_chat(span("warning","You need to unsecure \the [src.name] before rotating it!"))
+			activator.to_chat(span("warning","需要先解除[src.name]的固定，才能旋转！"))
 		else
-			activator.visible_message(span("notice","\The [activator.name] rotates \the [src.name]."),span("notice","You rotate \the [src.name]."))
+			activator.visible_message(span("notice","[activator.name]转动了[src.name]。"),span("notice","你转动了[src.name]。"))
 			set_dir(turn(dir,90))
 		return TRUE
 
 	var/obj/structure/interactive/mining_drill/MD = locate() in get_step(src,dir)
 	if(MD && MD.anchored)
-		activator.to_chat(span("warning","You need to disable the mining drill first before moving this!"))
+		activator.to_chat(span("warning","需要先关闭采矿钻机，才能移动支架！"))
 		return TRUE
 
 	set_anchored(!anchored)
 
 	if(anchored)
-		activator.visible_message(span("notice","\The [activator.name] secures \the [src.name]."),span("notice","You secure \the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]固定了[src.name]。"),span("notice","你固定了[src.name]。"))
 	else
-		activator.visible_message(span("notice","\The [activator.name] unsecures \the [src.name]."),span("notice","You unsecure \the [src.name]."))
+		activator.visible_message(span("notice","[activator.name]解除了[src.name]的固定。"),span("notice","你解除了[src.name]的固定。"))
 
 	update_sprite()
 

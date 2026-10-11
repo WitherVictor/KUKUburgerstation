@@ -1,8 +1,8 @@
 /obj/item/clothing/overwear/armor/bulletproof
-	name = "bulletproof armor"
+	name = "防弹护甲"
 	icon = 'icons/obj/item/clothing/suit/bulletproof_vest.dmi'
-	desc = "Protecting against the greytide since 2193."
-	desc_extended = "A sturdy chestplate of bulletproof armor. Should protect against most small arms fire."
+	desc = "自2193年起，守护你免受灰潮侵害。"
+	desc_extended = "结实的防弹胸甲，应该能抵御大多数轻武器射击。"
 
 	protected_limbs = list(BODY_TORSO)
 
@@ -15,5 +15,5 @@
 
 
 /obj/item/clothing/overwear/armor/bulletproof/vr
-	name = "body armor"
+	name = "防护背心"
 	value_burgerbux = 1

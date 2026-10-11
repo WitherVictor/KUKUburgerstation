@@ -1,7 +1,7 @@
 /mob/living/simple/can_man
 
-	name = "Can Man"
-	desc = "The man with the can."
+	name = "罐头人"
+	desc = "那个带着罐头的男人。"
 
 
 	icon = 'icons/mob/living/simple/canman.dmi'

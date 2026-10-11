@@ -1,7 +1,7 @@
 /obj/item/weapon/ranged/bullet/magazine/pistol/syndie
-	name = "10mm Stecharov pistol"
-	desc = "The traitor's second best friend."
-	desc_extended = "The standard Syndicate pistol. Cheap. Reliable. The compactness of the gun makes it useful in assassinations as well as a holdout weapon."
+	name = "10mm斯捷查罗夫手枪"
+	desc = "叛徒的第二号好朋友。"
+	desc_extended = "辛迪加制式手枪。便宜，可靠。枪身紧凑，适合暗杀，也适合作为藏匿的备用武器。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/10mm.dmi'
 	icon_state = "inventory"
 	value = 250
@@ -80,10 +80,10 @@
 	return max(0,0.01 - (0.03 * L.get_skill_power(SKILL_RANGED)))
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/syndie/mod
-	name = "10mm Stecharov pistol MOD"
+	name = "10mm斯捷查罗夫手枪改装型"
 	icon = 'icons/obj/item/weapons/ranged/pistol/10mm_2.dmi'
-	desc = "The traitor's second best friend."
-	desc_extended = "A standard Syndicate pistol modified with better materials. This variant is much more compac, concealable, and fires much faster."
+	desc = "叛徒的第二号好朋友。"
+	desc_extended = "换用更好材料的辛迪加制式手枪改装型，更紧凑、更易隐藏，射速也快得多。"
 
 	size = SIZE_1
 
@@ -103,9 +103,9 @@
 
 
 /obj/item/weapon/ranged/bullet/magazine/pistol/syndie/slavic
-	name = "9x19mm Mackintosh pistol"
-	desc = "Putting the \"Sir, can I have something better.\" in surplus!"
-	desc_extended = "A surplus Slavic pistol designed to be a cheap replica of the Stecharov pistol, which was also a cheap replica of a Slavic pistol. It has many layers to its shitness."
+	name = "9x19mm麦金托什手枪"
+	desc = "库存旧货，让你只想说：‘长官，能给把好点的吗？’"
+	desc_extended = "库存旧式斯拉夫手枪，是斯捷查罗夫手枪的廉价仿制品，而后者本身也是某款斯拉夫手枪的廉价仿制品。烂得很有层次。"
 	icon = 'icons/obj/item/weapons/ranged/pistol/10mm_3.dmi'
 
 	company_type = "Slavic"
