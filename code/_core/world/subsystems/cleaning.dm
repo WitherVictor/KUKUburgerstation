@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(delete)
 		objects_to_delete -= k
 		qdel(D)
 
-	broadcast_to_clients(span("danger","Force deleted all objects queued for deletion."))
+	broadcast_to_clients(span("danger","已强制删除所有等待清理的对象。"))
 
 	return ..()
 

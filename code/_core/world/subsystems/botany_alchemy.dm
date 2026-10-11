@@ -43,7 +43,7 @@ SUBSYSTEM_DEF(botany_alchemy)
 	for(var/k in all_alchemy_plants)
 		var/obj/structure/interactive/alchemy_plant/P = k
 		qdel(P)
-	broadcast_to_clients(span("danger","Deleted all alchemy plants."))
+	broadcast_to_clients(span("danger","已删除所有炼金植物。"))
 
 	return ..()
 

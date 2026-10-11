@@ -16,10 +16,10 @@ SUBSYSTEM_DEF(lag_b_gone)
 		fps_decrease = min(fps_decrease+1,FPS_SERVER)
 
 	if(fps_decrease < 0 && !was_active)
-		broadcast_to_clients("Lag-B-Gone is now active.")
+		broadcast_to_clients("卡顿缓解机制已启用。")
 		was_active = TRUE
 	else if(fps_decrease >= 0 && was_active)
-		broadcast_to_clients("Lag-B-Gone is now inactive.")
+		broadcast_to_clients("卡顿缓解机制已停用。")
 		was_active = FALSE
 
 	return TRUE

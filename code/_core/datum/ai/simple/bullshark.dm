@@ -8,15 +8,15 @@
 
 	if(objective_attack && next_talk <= world.time)
 		var/message_to_say = list(
-			"Your server is nearing monthly limit!",
-			"It's great to see your Discord server using Bullshark to protect its members from unwanted content.",
-			"Bullshark's smart features like artifical intelligence, file scanning and link screenshot previews help keep your members safe.",
-			"This month you are approaching the free usage limit for your server. Check your dashboard for full details on your usage and to avoid any service interruption that may leave your server vulnerable.",
-			"Bullshark is fully configurable from the web dashboard. No commands to remember!",
-			"Possible Porn detected. [rand(1,100)]% match.",
-			"Possible Gore detected. [rand(1,100)]% match.",
-			"Possible Memes detected. [rand(1,100)]% match.",
-			"Possible Violence detected. [rand(1,100)]% match."
+			"你的服务器即将达到本月使用上限！",
+			"很高兴看到你的Discord服务器使用牛鲨，保护成员免受不良内容侵扰。",
+			"牛鲨的人工智能、文件扫描和链接截图预览等智能功能，有助于保障成员安全。",
+			"你的服务器即将用完本月免费额度。请在控制面板查看详细用量，以免服务中断，让服务器失去保护。",
+			"牛鲨的全部功能都可通过网页控制面板配置，无须记忆指令！",
+			"检测到疑似色情内容。匹配度[rand(1,100)]%。",
+			"检测到疑似血腥内容。匹配度[rand(1,100)]%。",
+			"检测到疑似梗图。匹配度[rand(1,100)]%。",
+			"检测到疑似暴力内容。匹配度[rand(1,100)]%。"
 		)
 		owner.do_say(pick(message_to_say),FALSE)
 

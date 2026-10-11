@@ -16,9 +16,9 @@
 		return FALSE
 
 	announce(
-		"Central Command Xenoviral Division",
-		"Blob Alert",
-		"A level 5 \"blob\" biohazard growth has been detected near the area of operations.",
+		"中央指挥部异星病毒事务处",
+		"异形菌毯警报",
+		"作战区域附近检测到五级生物危害——正在生长的“异形菌毯”。",
 		sound_to_play = 'sound/voice/announcement/blob.ogg'
 	)
 

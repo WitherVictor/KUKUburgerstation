@@ -7,10 +7,10 @@
 
 	if(damage_amount >= 10 && . && prob(25))
 		var/list/responses = list(
-			"You'll pay!",
-			"Blood for the blood god!",
-			"Death to you!",
-			"My blood returns!"
+			"你会付出代价的！",
+			"血祭血神！",
+			"去死吧！",
+			"我的鲜血又回来了！"
 		)
 		owner.do_say(pick(responses),language_to_use = LANGUAGE_CULT)
 
@@ -22,43 +22,43 @@
 		var/list/responses = list()
 		if(old_alert_level == ALERT_LEVEL_COMBAT && new_alert_level == ALERT_LEVEL_CAUTION)
 			responses = list(
-				"They are in the shadows.",
-				"Where must they be?",
-				"I do not see...",
-				"Where do they hide?"
+				"他们藏在阴影中。",
+				"他们究竟在哪里？",
+				"我看不见……",
+				"他们藏在哪里？"
 			)
 		else if(old_alert_level == ALERT_LEVEL_COMBAT && new_alert_level == ALERT_LEVEL_NONE)
 			responses = list(
-				"Another one for the blood god.",
-				"A sacrifice complete!",
-				"Death and destruction.",
-				"Excellent sacrifice."
+				"又一个献给血神的祭品。",
+				"献祭完成！",
+				"死亡与毁灭。",
+				"上好的祭品。"
 			)
 		else if(old_alert_level == ALERT_LEVEL_CAUTION && new_alert_level == ALERT_LEVEL_COMBAT)
 			responses = list(
-				"You hide no longer!",
-				"I see your doom!",
-				"A worthy sacrifice!",
-				"I found you!"
+				"你藏不住了！",
+				"我看见了你的末日！",
+				"值得献上的祭品！",
+				"找到你了！"
 			)
 		else if(old_alert_level == ALERT_LEVEL_NONE && new_alert_level == ALERT_LEVEL_NOISE)
 			responses = list(
-				"Something is near...",
-				"Do you hear life?",
-				"Something approaches.",
-				"I hear..."
+				"附近有什么东西……",
+				"你听见生命的声音了吗？",
+				"有什么东西正在靠近。",
+				"我听见了……"
 			)
 		else if(new_alert_level == ALERT_LEVEL_NOISE)
 			responses = list(
-				"I do not doubt my eyes or ears.",
-				"Death is soon...",
-				"Make this quick...",
-				"The shadows do not belong to you..."
+				"我不会怀疑自己的耳目。",
+				"死亡将至……",
+				"速战速决……",
+				"阴影不属于你……"
 			)
 		else if(new_alert_level == ALERT_LEVEL_NONE)
 			responses = list(
-				"Nothing. Wasted efforts.",
-				"A waste of time."
+				"什么也没有。白费力气。",
+				"浪费时间。"
 			)
 
 		if(length(responses))

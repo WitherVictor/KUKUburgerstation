@@ -14,9 +14,9 @@
 	log_debug("Starting Meteor Event")
 
 	announce(
-		"Central Command Meteorology Division",
-		"Meteor Storm Inbound",
-		"Meteors have been detected near the area of operations.",
+		"中央指挥部气象事务处",
+		"陨石风暴来袭",
+		"作战区域附近检测到陨石。",
 		sound_to_play = 'sound/voice/announcement/meteors.ogg'
 	)
 

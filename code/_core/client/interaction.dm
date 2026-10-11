@@ -137,7 +137,7 @@
 	if(click_flags & CLICK_MIDDLE)
 		if(mob.movement_flags & MOVEMENT_RUNNING && (is_turf(object) || is_turf(object.loc)))
 			if(spam_protection_interact <= 10)
-				mob.visible_message("<b>\The [mob.name]</b> points to <b>\the [object.name]</b>.")
+				mob.visible_message("<b>[mob.name]</b>指向<b>[object.name]</b>。")
 				var/turf/T = get_turf(mob)
 				var/obj/effect/temp/arrow/A = new(get_turf(object))
 				A.pixel_x = (T.x - A.x)*TILE_SIZE

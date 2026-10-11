@@ -93,20 +93,20 @@ SUBSYSTEM_DEF(ban)
 	if(src.bans_keys[ckey_sanitized])
 		log_admin("key [key]([address]) tried connecting to the server, but they were ckey banned.")
 		var/list/ban_data = src.bans_keys[ckey_sanitized]
-		var/message = "Adminstrator [ban_data["admin"]] banned this ckey [ban_data["expires"] == -1 ? "forever" : "for [get_nice_time(ban_data["expires"] - world.realtime)]"] with the reason of: [ban_data["reason"]]"
-		return list("Login" = FALSE, "reason" = "Your ckey has been banned from accessing the server.", "message" = message)
+		var/message = "管理员[ban_data["admin"]]已封禁此账号。期限：[ban_data["expires"] == -1 ? "永久" : get_nice_time(ban_data["expires"] - world.realtime,TRUE)]。原因：[ban_data["reason"]]"
+		return list("Login" = FALSE, "reason" = "你的账号已被禁止访问此服务器。", "message" = message)
 
 	if(src.bans_computer_ids[computer_id])
 		log_admin("key [key]([address]) tried connecting to the server, but they were computer id banned.")
 		var/list/ban_data = src.bans_computer_ids[computer_id]
-		var/message = "Adminstrator [ban_data["admin"]] banned this computer [ban_data["expires"] == -1 ? "forever" : "for [get_nice_time(ban_data["expires"] - world.realtime)]"] with the reason of: [ban_data["reason"]]"
-		return list("Login" = FALSE, "reason" = "Your computer ID has been banned from accessing the server.", "message" = message)
+		var/message = "管理员[ban_data["admin"]]已封禁此计算机。期限：[ban_data["expires"] == -1 ? "永久" : get_nice_time(ban_data["expires"] - world.realtime,TRUE)]。原因：[ban_data["reason"]]"
+		return list("Login" = FALSE, "reason" = "你的计算机ID已被禁止访问此服务器。", "message" = message)
 
 	if(src.bans_address[address])
 		log_admin("key [key]([address]) tried connecting to the server, but they were IP banned.")
 		var/list/ban_data = src.bans_address[address]
-		var/message = "Adminstrator [ban_data["admin"]] banned this IP address [ban_data["expires"] == -1 ? "forever" : "for [get_nice_time(ban_data["expires"] - world.realtime)]"] with the reason of: [ban_data["reason"]]"
-		return list("Login" = FALSE, "reason" = "Your IP address has been banned from accessing the server.", "message" = message)
+		var/message = "管理员[ban_data["admin"]]已封禁此IP地址。期限：[ban_data["expires"] == -1 ? "永久" : get_nice_time(ban_data["expires"] - world.realtime,TRUE)]。原因：[ban_data["reason"]]"
+		return list("Login" = FALSE, "reason" = "你的IP地址已被禁止访问此服务器。", "message" = message)
 
 	return FALSE
 
@@ -117,17 +117,17 @@ SUBSYSTEM_DEF(ban)
 
 	return SSban.is_banned(key,address,computer_id,type)
 
-/subsystem/ban/proc/add_ckey_ban(var/desired_ckey,var/admin_ckey = "SERVER",var/reason = "No reason specified.",var/expires = world.realtime + 86400)
+/subsystem/ban/proc/add_ckey_ban(var/desired_ckey,var/admin_ckey = "SERVER",var/reason = "未说明原因。",var/expires = world.realtime + 86400)
 
 	bans_keys[desired_ckey] = list("admin" = admin_ckey, "reason" = reason, "expires" = expires)
 	rustg_file_write(json_encode(bans_keys),BANLIST_KEYS_DIR)
 
 	var/client/C = SSclient.all_clients[desired_ckey]
 	if(C)
-		C << span("danger","You have been banned from the server.\n\
-		Banning Admin: [admin_ckey]\n\
-		Reason: [reason]\n\
-		Duration: [expires == -1 ? "Forever" : get_nice_time(expires - world.realtime)]")
+		C << span("danger","你已被此服务器封禁。\n\
+		执行封禁的管理员：[admin_ckey]\n\
+		原因：[reason]\n\
+		期限：[expires == -1 ? "永久" : get_nice_time(expires - world.realtime,TRUE)]")
 		if(is_player(C.mob))
 			var/mob/living/advanced/player/P = C.mob
 			var/obj/marker/B = pick(backup_spawnpoints)
@@ -141,7 +141,7 @@ SUBSYSTEM_DEF(ban)
 		del(C)
 
 	log_admin("[desired_ckey] was added to the ckey banlist by [admin_ckey] for [get_nice_time(expires - world.realtime)] with the reason of: [reason].")
-	broadcast_to_clients(span("ooc","[desired_ckey] was banned by [admin_ckey] for [get_nice_time(expires - world.realtime)] with the following reason: [reason]."))
+	broadcast_to_clients(span("ooc","[admin_ckey]封禁了[desired_ckey]，期限：[expires == -1 ? "永久" : get_nice_time(expires - world.realtime,TRUE)]。原因：[reason]。"))
 
 	return TRUE
 

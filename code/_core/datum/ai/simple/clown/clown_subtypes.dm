@@ -1,51 +1,51 @@
 /ai/clown/hulk
 	jokes = list(
-		"Are you a magician? Because whenever I look at you, everyone else disappears. BECAUSE EVERYONE ELSE IS DEAD.",
-		"I�m not a photographer, but I can picture me and you together. RIPPING YOU APART.",
-		"They say Disneyland is the happiest place on earth. Well apparently, no one has ever been standing next to you RIPPING OUT YOUR ENTRAILS.",
-		"For some reason, I was feeling a little off today. But when you came along, you definitely turned me on IN THE MOOD FOR MURDER.",
-		"I seem to have lost my phone number. Can I have yours SO I CAN NOTIFY YOUR NEXT OF KIN.",
-		"I�m lost. Can you give me directions to your heart SO I CAN RIP IT OUT.",
-		"Hi, how was heaven when you left it BECAUSE YOU'RE GOING BACK TO IT."
+		"你是魔术师吗？每次我看着你，其他人就都消失了。因为他们全死了。",
+		"我不是摄影师，但我能想象咱俩同框的画面。我正把你撕成碎片。",
+		"人们说迪士尼乐园是世上最快乐的地方。看来他们没试过站在你身边，把你的内脏扯出来。",
+		"今天我本来有些提不起劲。可你一出现，我的兴致就来了。杀人的兴致。",
+		"我好像把自己的电话号码弄丢了。能给我你的号码吗？好通知你的家属来认尸。",
+		"我迷路了。能告诉我通往你内心的路吗？好让我把你的心掏出来。",
+		"嗨，你离开天堂时，那里还好吗？因为你马上就要回去了。"
 	)
 
 
 /ai/clown/tree
 	jokes = list(
-		"Why do trees hate riddles? BECAUSE IT'S EASY TO GET STUMPED.",
-		"Why did the tree get stumped? BECAUSE IT COULDN'T GET TO THE ROOT OF THE PROBLEM.",
-		"What's a tree's favorite drink? ROOTBEER.",
-		"What did the tree do when the bank closed? IT OPENED ITS OWN BRANCH.",
-		"What happens to trees on Valentine's Day? THEY GET SAPPY.",
-		"How does a tree get on the internet? THEY LOG ON."
+		"树为什么讨厌猜谜？因为一被难倒，就只剩木桩了。",
+		"那棵树为什么被难倒了？因为它找不到问题的根。",
+		"树最喜欢喝什么？树根汽水。",
+		"银行关门后，树怎么办？自己开个分行，再长个分枝。",
+		"情人节的树会怎样？一边流树汁，一边讲肉麻话。",
+		"树怎么上网？用木头登录。"
 	)
 
 /ai/clown/long
 	jokes = list(
-		"What did the tooth say to the departing dentist? FILL ME WHEN YOU GET BACK IN.",
-		"What did the dentist say to the computer? THIS WON'T HURT A BYTE.",
-		"What did the dentist see at the North Pole? A MOLAR BEAR!",
-		"What does a dentist do on a roller coaster? HE BRACES HIMSELF.",
-		"Why didn�t the dentist ask his secretary out? HE WAS ALREADY TAKING OUT A TOOTH.",
-		"What does the dentist of the year get? A LITTLE PLAQUE."
+		"牙齿对准备离开的牙医说了什么？回来记得把我补上。",
+		"牙医对电脑说了什么？放心，连一个字节都不会疼。",
+		"牙医在北极看见了什么？一只北极臼齿熊！",
+		"牙医坐过山车时会做什么？先把自己箍牢。",
+		"牙医为什么没约秘书出去？因为他正忙着把牙拔出去。",
+		"年度最佳牙医能得到什么？一块小牙菌斑奖牌。"
 	)
 
 /ai/clown/pie
 	jokes = list(
-		"what's the best thing to put in a pie? YOUR TEETH!",
-		"Why did the pie go to the dentist? BECAUSE HE NEEDED A FILLING.",
-		"Why did the pie cross the road? SHE WAS MEAT AN POTATO.",
-		"Why do you call a protesting pie on Wall Street? OCCU-PIE!",
-		"What's the difference between pussy and apple pie? YOU CAN EAT YOUR MOM'S APPLE PIE."
+		"派里放什么最好？你的牙！",
+		"派为什么去看牙医？因为它需要补点馅。",
+		"派为什么过马路？因为它本来就是肉和土豆做的。",
+		"华尔街上抗议的派叫什么？占领华尔街派！",
+		"女人的屄和苹果派有什么区别？你可以吃你妈做的苹果派。"
 	)
 
 /ai/clown/lube
 	jokes = list(
-		"What's a foot longa and slippery? A SLIPPER.",
-		"What's pink and slippery? TWO ADJECTIVES.",
-		"What do you call a slippery book? NON-FRICTION.",
-		"What do you call a water slide with cocaine at the end? A SLIPPER SLOPE.",
-		"What do you call the period of time between slipping on a banana and landing on your ass? A BANANOSECOND."
+		"什么东西一尺长，还很滑？一只滑溜溜的拖鞋。",
+		"什么东西又粉又滑？两个形容词。",
+		"很滑的书叫什么？无摩擦纪实文学。",
+		"尽头放着可卡因的滑水道叫什么？通向堕落的滑坡。",
+		"从踩到香蕉皮滑倒，到屁股着地之间那段时间叫什么？一蕉秒。"
 	)
 
 /ai/clown/mutant/
@@ -56,17 +56,17 @@
 	. = ..()
 
 	var/list/objects = list(
-		"apple",
-		"banana",
-		"cabbage",
-		"potato",
-		"pie",
-		"car dealer",
-		"soap",
-		"triangle",
-		"mercenary",
-		"traitor",
-		"antagonist"
+		"苹果",
+		"香蕉",
+		"卷心菜",
+		"土豆",
+		"派",
+		"汽车经销商",
+		"肥皂",
+		"三角形",
+		"雇佣兵",
+		"叛徒",
+		"对抗角色"
 	)
 
 	for(var/i=1,i<=10,i++)
@@ -76,12 +76,12 @@
 		objects -= object_one
 		var/object_two = pick(objects)
 		objects -= object_two
-		jokes += "What did the [object_one] say to the [object_two]? JOIN US."
+		jokes += "[object_one]对[object_two]说了什么？加入我们。"
 
 /ai/clown/blob/
 	jokes = list(
-		"What did the man say to the female? FEMALES SUCK.",
-		"What did the beta cuck say to his soy boyfriend? I'M A FEMINIST.",
-		"What did the chad video game character say to the lesbian? I'M BETTER THAN YOU.",
-		"What did the female video game protagonist do when she saw a man? SHE DID BAD."
+		"男人对女人说了什么？女人烂透了。",
+		"窝囊的绿帽男对他那娘娘腔男友说了什么？我是女权主义者。",
+		"游戏里的猛男对女同性恋说了什么？我比你强。",
+		"游戏女主角看到男人后做了什么？她搞砸了。"
 	)

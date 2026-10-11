@@ -1,7 +1,7 @@
 /obj/reflector/
 
-	name = "Reflector"
-	desc = "Retuuuuurn to sender!"
+	name = "反射器"
+	desc = "原——路——奉——还！"
 
 	icon = 'icons/obj/projectiles/spray.dmi'
 	icon_state = "airblast"

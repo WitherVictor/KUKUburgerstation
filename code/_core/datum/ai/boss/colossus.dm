@@ -45,7 +45,7 @@
 				delay_mod = rand(2,4)
 				bullet_count = pick(1,1,1,1,2,3)
 				if(bullet_count > 1)
-					owner.do_say("<font color='#DD1C1F' size='4'>REPENT.</font>",FALSE)
+					owner.do_say("<font color='#DD1C1F' size='4'>忏悔吧。</font>",FALSE)
 			if(4 to 6)
 				projectile_mode = PROJECTILE_MODE_COUNTER_CLOCKWISE
 				projectiles_to_shoot = rand(30,60)
@@ -54,21 +54,21 @@
 				delay_mod = rand(2,4)
 				bullet_count = pick(1,1,1,1,2,3)
 				if(bullet_count > 1)
-					owner.do_say("<font color='#DD1C1F' size='4'>REPENT.</font>",FALSE)
+					owner.do_say("<font color='#DD1C1F' size='4'>忏悔吧。</font>",FALSE)
 			if(7 to 10)
 				projectile_mode = PROJECTILE_MODE_BULLETHELL
 				projectiles_to_shoot = rand(10,20)
 				projectile_speed = 8
 				delay_mod = rand(1,3)
 				bullet_count = 5
-				owner.do_say("<font color='#DD1C1F' size='4'>SUFFER.</font>",FALSE)
+				owner.do_say("<font color='#DD1C1F' size='4'>受苦吧。</font>",FALSE)
 			if(11)
 				projectile_mode = PROJECTILE_MODE_CIRCLE
 				projectiles_to_shoot = 3
 				projectile_speed = 4
 				delay_mod = 10
 				bullet_count = 20
-				owner.do_say("<font color='#DD1C1F' size='4'>DIE.</font>",FALSE)
+				owner.do_say("<font color='#DD1C1F' size='4'>去死吧。</font>",FALSE)
 
 		projectile_ticks = 30
 

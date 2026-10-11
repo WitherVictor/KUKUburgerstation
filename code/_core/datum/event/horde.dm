@@ -84,7 +84,7 @@
 		if(length(possible_turfs) <= 0)
 			break
 
-	notify_ghosts("A new [chosen_horde_type] patrol is being created!",T1)
+	notify_ghosts("一支新的[chosen_horde_type]巡逻队即将出现！",T1)
 
 	. = ..()
 

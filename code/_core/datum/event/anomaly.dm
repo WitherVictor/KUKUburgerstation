@@ -24,9 +24,9 @@
 		return FALSE
 
 	announce(
-		"Central Command Anomaly Division",
-		"Anomaly Detected",
-		"A strange anomaly reading was detected in the area of operation. Predicted location: [T.x],[T.y].",
+		"中央指挥部异常事务处",
+		"检测到异常",
+		"作战区域内检测到奇异的异常读数。预计位置：[T.x],[T.y]。",
 		sound_to_play = 'sound/voice/announcement/anomaly.ogg'
 	)
 
@@ -39,6 +39,6 @@
 		GENERATE(M)
 		FINALIZE(M)
 
-	notify_ghosts("An anomaly is being created!",T)
+	notify_ghosts("一个异常即将出现！",T)
 
 	return ..()

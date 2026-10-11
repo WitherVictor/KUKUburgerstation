@@ -50,14 +50,14 @@
 		return FALSE
 
 	announce(
-		"Central Command Intelligence Division",
-		"Enemy Troop Movements.",
-		"A group of hostile [initial(L.name)] reinforcements has been detected near the area of operations. Personel are advised not to travel alone."
+		"中央指挥部情报事务处",
+		"敌军动向",
+		"作战区域附近发现一批敌方[initial(L.name)]增援。建议所有人员避免单独行动。"
 	)
 
 	var/turf/T = get_turf(spawn_node)
 
-	notify_ghosts("A wave of hostile [initial(L.name)] is being created!",T)
+	notify_ghosts("一批敌方[initial(L.name)]即将出现！",T)
 
 	for(var/i=1,i<=rand(4,8),i++)
 		CHECK_TICK(50,FPS_SERVER*5)

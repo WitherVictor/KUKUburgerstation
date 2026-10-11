@@ -70,7 +70,7 @@
 	var/turf/T2 = find_new_location()
 	if(T2)
 		owner.force_move(T2)
-		notify_ghosts("A new [owner.name] was created at [T2.loc.name].",T2)
+		notify_ghosts("[T2.loc.name]出现了一个新的[owner.name]。",T2)
 	else
 		log_error("Tried creating a ghost ([owner.get_debug_name()]) in an invalid area!")
 		qdel(owner)
@@ -160,7 +160,8 @@
 	ghost_type = pick("shade","revenant","faithless","forgotten","clown","faceless")
 	owner_as_ghost.icon = 'icons/mob/living/simple/ghosts.dmi'
 	owner_as_ghost.icon_state = ghost_type
-	owner_as_ghost.name = ghost_type
+	var/list/ghost_names = list("shade" = "暗影幽灵", "revenant" = "亡魂", "faithless" = "失信者", "forgotten" = "遗忘之灵", "clown" = "小丑", "faceless" = "无面者")
+	owner_as_ghost.name = ghost_names[ghost_type]
 
 /ai/ghost/proc/create_emf(var/turf/loc,var/desired_level=3,var/desired_range=VIEW_RANGE)
 
@@ -210,7 +211,7 @@
 	if(A.area_identifier != origin_area_identifier)
 		var/turf/T2 = find_new_location()
 		owner.force_move(T2)
-		notify_ghosts("\The [owner.name] moved to [T2.loc.name].",T2)
+		notify_ghosts("[owner.name]移动到了[T2.loc.name]。",T2)
 		return TRUE
 
 	if(owner.attack_next <= world.time)
@@ -246,11 +247,11 @@
 							break
 					if(can_hunt)
 						anger = 200
-						notify_ghosts("\The [owner.name] is now hunting [objective_attack.name]!",T)
+						notify_ghosts("[owner.name]开始猎杀[objective_attack.name]！",T)
 						owner.icon_state = "[ghost_type]_angry"
 						play_sound('sound/ghost/ghost_ambience_2.ogg',T,volume=75)
 					else
-						notify_ghosts("\The [owner.name] stopped hunting.",T)
+						notify_ghosts("[owner.name]停止了猎杀。",T)
 						set_objective(null)
 						owner.icon_state = "[ghost_type]"
 						anger = 50
@@ -447,7 +448,7 @@
 	ghost_type = "living"
 	owner_as_ghost.icon = 'icons/mob/living/simple/shitass.dmi'
 	owner_as_ghost.icon_state = "living"
-	owner_as_ghost.name = "shitass"
+	owner_as_ghost.name = "屎腚怪"
 
 
 /ai/ghost/post_move(var/mob/living/L,args)

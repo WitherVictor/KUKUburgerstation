@@ -91,11 +91,11 @@
 /obj/item/proc/save_item_data(var/mob/living/advanced/player/P,var/save_inventory = TRUE,var/died=FALSE,var/loadout=FALSE)
 
 	if(!can_save && !length(inventories))
-		if(P) P.to_chat(span("warning","Notice: \The [src.name] could not be saved."))
+		if(P) P.to_chat(span("warning","提示：[src.name]无法保存。"))
 		return null
 
 	if(loadout && !SSbalance.can_save_loadout[src.type])
-		if(P) P.to_chat(span("warning","Notice: \The [src.name] could not be stored in the loadout system because it isn't a standard item."))
+		if(P) P.to_chat(span("warning","提示：[src.name]不是标准物品，无法存入装备方案系统。"))
 		return null
 
 	. = list()

@@ -23,8 +23,8 @@
 		return TRUE
 
 	if(!mob)
-		src << span("danger","Uhh... it seems like your mob was deleted unexpectedly. Contact Burger on Discord to tell them how you encountered this.")
-		src << span("danger","As a precaution, you were kicked. You can rejoin again.")
+		src << span("danger","呃……你控制的角色似乎被意外删除了。请通过Discord联系Burger，说明你遇到此问题的过程。")
+		src << span("danger","为避免进一步出错，系统已将你断开连接。你可以重新加入。")
 		del(src)
 		return FALSE
 

@@ -22,19 +22,19 @@ SUBSYSTEM_DEF(squad)
 /subsystem/squad/Initialize()
 
 	var/squad/red_team = new
-	red_team.name = "Red Squad"
+	red_team.name = "红色小队"
 	red_team.never_delete = TRUE
 
 	var/squad/blue_team = new
-	blue_team.name = "Blue Squad"
+	blue_team.name = "蓝色小队"
 	blue_team.never_delete = TRUE
 
 	var/squad/yellow_team = new
-	yellow_team.name = "Yellow Squad"
+	yellow_team.name = "黄色小队"
 	yellow_team.never_delete = TRUE
 
 	var/squad/green_team = new
-	green_team.name = "Green Squad"
+	green_team.name = "绿色小队"
 	green_team.never_delete = TRUE
 
 	return ..()

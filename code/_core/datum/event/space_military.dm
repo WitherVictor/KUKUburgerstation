@@ -54,9 +54,9 @@
 		return FALSE
 
 	announce(
-		"Space Military",
-		"Declaration of War",
-		"Hey uuuuuuuuuuuuuuuuuuh it appears that there is oil and war crimes in the area so uh... we're invading now and establishing democracy and freedom. Stay away from [english_list(announce_areas)] if you don't want to get shot.",
+		"太空军",
+		"宣战公告",
+		"喂，呃——这里似乎发现了石油，还有战争罪行，所以，呃……我们现在要入侵这里，建立民主与自由。不想挨枪子的话，就离[english_list(announce_areas,"无","、","、","、")]远点。",
 		//sound_to_play = 'sound/voice/announcement/migration.ogg'
 	)
 

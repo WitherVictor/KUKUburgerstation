@@ -29,8 +29,8 @@
 /power/resist/thick_skin
 	name = "Thick Skin"
 	desc = "Your skin is now considerably thicker. You still cry when Bambi's mom dies, though."
-	add_message = "Your skin feels considerably thicker..."
-	remove_message = "Your skin starts to feel thin again."
+	add_message = "你感觉皮肤厚实了许多……"
+	remove_message = "你感觉皮肤又变薄了。"
 	bonus_defense = list(
 		BLADE = 25,
 		PIERCE = 25
@@ -39,8 +39,8 @@
 /power/resist/moist_skin
 	name = "Moist Skin"
 	desc = "Your skin is now considerably moist. Don't forget to drink plenty of water."
-	add_message = "Your skin feels considerably wet..."
-	remove_message = "Your skin starts to dry again."
+	add_message = "你感觉皮肤湿润了许多……"
+	remove_message = "你的皮肤又开始干燥了。"
 	bonus_defense = list(
 		LASER = 25,
 		HEAT = 25
@@ -49,8 +49,8 @@
 /power/resist/magically_mute
 	name = "Magic Immune"
 	desc = "You're completely immune to magic. As a consequence, magic spells do not work and the natural connection to this world makes leaves you physically vunerable."
-	add_message = "You lose touch the magical energies..."
-	remove_message = "You regain magical coherance."
+	add_message = "你与魔法能量失去了联系……"
+	remove_message = "你重新建立了与魔法的联系。"
 	bonus_defense = list(
 		ARCANE = INFINITY,
 		BLADE = -50,
@@ -61,8 +61,8 @@
 /power/resist/genetically_evil
 	name = "Genetically Evil"
 	desc = "Looks like evil is a gene. For whatever reason, you're significantly more in touch with the evil side than the good side."
-	add_message = "You feel evil..."
-	remove_message = "You feel neutral again."
+	add_message = "你感觉自己变得邪恶了……"
+	remove_message = "你感觉自己又恢复了中立。"
 	bonus_defense = list(
 		HOLY = -100,
 		DARK = 50
@@ -71,8 +71,8 @@
 /power/resist/genetically_good
 	name = "Genetically Good"
 	desc = "Looks like goodness is a gene. For whatever reason, you're significantly more in touch with the good side than the evil side."
-	add_message = "You feel good..."
-	remove_message = "You feel neutral again."
+	add_message = "你感觉自己变得善良了……"
+	remove_message = "你感觉自己又恢复了中立。"
 	bonus_defense = list(
 		HOLY = 50,
 		DARK = -100

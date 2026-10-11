@@ -5,13 +5,13 @@ SUBSYSTEM_DEF(research)
 	desc = "Constrols research."
 	priority = SS_ORDER_CONFIG
 	var/list/quadrant_high_scores = list(
-		list("Marcus Burgs",80),
-		list("Pedro Johnson",50),
-		list("Diamond with Flaw",100),
-		list("Bar Shaleez",90),
-		list("Chad Thundercock",70),
-		list("Ileaza Marwani",60),
-		list("Trash McTrash",10)
+		list("马库斯·伯格斯",80),
+		list("佩德罗·约翰逊",50),
+		list("有瑕之钻",100),
+		list("巴尔·沙利兹",90),
+		list("查德·雷霆巨屌",70),
+		list("伊莉亚扎·马尔瓦尼",60),
+		list("垃圾·麦垃圾",10)
 	)
 	var/research_points = 0
 

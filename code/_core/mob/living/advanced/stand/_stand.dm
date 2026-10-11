@@ -3,8 +3,8 @@
 #define STAND_MODE_MANUAL "manual" //The stand will attack on your behalf.
 
 /mob/living/advanced/stand
-	name = "stand"
-	desc = "Boss, that's an enemy stand."
+	name = "替身"
+	desc = "老大，那是敌人的替身。"
 	plane = PLANE_MOVABLE
 	species = "stand"
 

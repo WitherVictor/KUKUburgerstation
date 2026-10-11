@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(wikibot)
 		log_subsystem(name,"Found [length(wikibot_list)] wikibot question/answer keys.")
 	else
 		log_subsystem(name,"Found no wikibot question/answer keys. Creating new one...")
-		add_new_wikibot_key(list("what","is","wikibot"),"Wikibot is a bot-controlled OOC helper that helps answer commonly asked questions.")
+		add_new_wikibot_key(list("what","is","wikibot"),"维基机器人是一个在OOC频道回答常见问题的自动助手。")
 
 	return ..()
 
@@ -48,4 +48,4 @@ SUBSYSTEM_DEF(wikibot)
 			best_answer = answer_key
 
 	if(best_answer)
-		broadcast_to_clients(format_speech("WikiBot","WikiBot","[asker], [best_answer]",TEXT_BOT))
+		broadcast_to_clients(format_speech("维基机器人","维基机器人","[asker]，[best_answer]",TEXT_BOT))

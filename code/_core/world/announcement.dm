@@ -1,9 +1,9 @@
-/proc/announce(var/announcement_sender = "Unknown", var/announcement_title = "Untitled",var/annoumcent_text = "NULL",var/announcement_type = ANNOUNCEMENT_STATION, var/language = LANGUAGE_BASIC, var/sound_to_play = null, var/frequency = RADIO_FREQ_SHIP, var/list/valid_mobs)
+/proc/announce(var/announcement_sender = "未知来源", var/announcement_title = "无标题",var/annoumcent_text = "无内容",var/announcement_type = ANNOUNCEMENT_STATION, var/language = LANGUAGE_BASIC, var/sound_to_play = null, var/frequency = RADIO_FREQ_SHIP, var/list/valid_mobs)
 
 	var/language/LA = SSlanguage.all_languages[language]
 
-	var/announcement_title_language = LA ? LA.process_text(announcement_sender,announcement_title) : "Blah blah blah."
-	var/annoumcent_text_language = LA ? LA.process_text(announcement_sender,annoumcent_text) : "Blah blah blah."
+	var/announcement_title_language = LA ? LA.process_text(announcement_sender,announcement_title) : "叽里咕噜。"
+	var/annoumcent_text_language = LA ? LA.process_text(announcement_sender,annoumcent_text) : "叽里咕噜。"
 
 	var/text_to_announce = "<br><div class='announcement [announcement_type]'><h2>[announcement_sender]</h2><h3>[announcement_title]</h3><p>[annoumcent_text]</p></div>"
 	var/text_to_announce_language = "<br><div class='announcement [announcement_type]'><h2>[announcement_sender]</h2><h3>[announcement_title_language]</h3><p>[annoumcent_text_language]</p></div>"

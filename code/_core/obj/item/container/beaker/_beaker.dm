@@ -50,7 +50,7 @@
 /obj/item/container/simple/beaker/get_examine_list(var/mob/examiner)
 	. = ..()
 	if(reagents)
-		. += div("notice","This can hold up to [reagents.volume_max]u of reagents.")
+		. += div("notice","最多可容纳[reagents.volume_max]单位试剂。")
 
 /obj/item/container/simple/beaker/water/Generate()
 	reagents.add_reagent(/reagent/nutrition/water,reagents.volume_max)

@@ -131,7 +131,7 @@
 		B.icon = 'icons/hud/discovery.dmi' //320x320
 		B.icon_state = "black"
 		B.screen_loc = "CENTER-4.5,CENTER-4.5"
-		B.maptext = "<font size='4'>Loading...</font>"
+		B.maptext = "<font size='4'>正在加载……</font>"
 		B.maptext_width = 320
 		B.maptext_height = 300
 		B.maptext_y = 20

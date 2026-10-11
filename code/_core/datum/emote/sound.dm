@@ -17,42 +17,42 @@
 /emote/sound/laugh
 	name = "Laugh"
 	id = "laugh"
-	action = "\The #USER laughs!"
-	action_target = "\The #USER laughs at #TARGET!"
+	action = "#USER笑了起来！"
+	action_target = "#USER嘲笑着#TARGET！"
 
 /emote/sound/cough
 	name = "Cough"
 	id = "cough"
-	action = "\The #USER coughs."
-	action_target = "\The #USER coughs on #TARGET."
+	action = "#USER咳嗽了几声。"
+	action_target = "#USER朝#TARGET咳嗽。"
 
 /emote/sound/deathgasp
 	name = "Death Gasp"
 	id = "deathgasp"
-	action = "\The #USER seizes up and falls limp, their eyes dead and lifeless..."
+	action = "#USER浑身抽搐，随后瘫软下来，双眼失去了生气……"
 
 /emote/sound/gasp
 	name = "Gasp"
 	id = "gasp"
-	action = "\The #USER gasps!"
+	action = "#USER倒吸了一口气！"
 
 /emote/sound/grenade
 	name = "Grenade!"
 	id = "grenade"
-	action = "\The #USER primes a grenade!"
+	action = "#USER拉开了手榴弹的保险！"
 
 /emote/sound/medic
 	name = "Medic!"
 	id = "medic"
-	action = "\The #USER calls out for a medic!"
+	action = "#USER大声呼叫医护人员！"
 
 /emote/sound/pain
 	name = "Oof"
 	id = "pain"
-	action = "\The #USER cries in pain!"
+	action = "#USER痛叫了一声！"
 
 /emote/sound/scream
 	name = "Scream"
 	id = "scream"
-	action = "\The #USER screams!"
-	action_target = "\The #USER screams at #TARGET!"
+	action = "#USER尖叫起来！"
+	action_target = "#USER朝#TARGET尖叫！"

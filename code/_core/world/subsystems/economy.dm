@@ -26,18 +26,18 @@ SUBSYSTEM_DEF(economy)
 	if(gold_in_circulation < 0)
 		gold_in_circulation = FLOOR(initial(gold_base_value)*RAND_PRECISE(0.5,1),1)
 		announce(
-			"Central Command Economic Division",
-			"Gold Market Crash",
-			"Central Command Economic Division regrets to inform all employees that gold has suffered a mysterious economic crash. We apologize for the inconvience.",
+			"中央指挥部经济事务处",
+			"黄金市场崩溃",
+			"中央指挥部经济事务处遗憾地通知全体员工，黄金市场因不明原因发生崩溃。对由此带来的不便，我们深表歉意。",
 			sound_to_play = 'sound/round_end/dump_it.ogg'
 		)
 		crash_sell_multiplier = 0.1
 	if(goblin_economy < 0)
 		goblin_economy = initial(goblin_economy)
 		announce(
-			"Central Command Economic Division",
-			"Goblin Market Crash",
-			"Central Command Economic Division regrets to inform all employees that the Goblin Economy has suffered a mysterious economic crash. We apologize for the inconvience.",
+			"中央指挥部经济事务处",
+			"地精市场崩溃",
+			"中央指挥部经济事务处遗憾地通知全体员工，地精经济因不明原因发生崩溃。对由此带来的不便，我们深表歉意。",
 			sound_to_play = 'sound/round_end/dump_it.ogg'
 		)
 		crash_sell_multiplier = 0.1

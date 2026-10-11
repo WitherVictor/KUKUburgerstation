@@ -16,9 +16,9 @@
 
 	var/length = 60
 	var/reason = sanitize(params["reason"])
-	var/nice_time = get_nice_time(length)
+	var/nice_time = get_nice_time(length,TRUE)
 
-	var/message = "You have been kicked for the following reason: \"[reason]\". You'll be able to rejoin in [english_list(nice_time)]."
+	var/message = "你已被踢出，原因：\"[reason]\"。你可以在[nice_time]后重新加入。"
 
 	world.SetConfig("ban",T.ckey,"type=time;seconds=[length];reason=[reason];message=[message];admin=[C.ckey];IP=[C.address];computer_id=[C.computer_id];")
 	return TRUE

@@ -84,12 +84,12 @@
 "w" = (
 /obj/item/clothing/back/flamethrower{
 	contraband = 1;
-	desc_extended = "A bulky back-mounted canister with a flamethrower attached. The attached flamethrower spews flames that ignite anything they hit and the ground they pass. This one is caked in Xenomorph resin.";
-	name = "resin-coated flamethrower canister"
+	desc_extended = "一个笨重的背负式燃料罐，连着一把火焰喷射器。喷出的火焰会点燃击中的物体，以及沿途的地面。这套设备表面结满了异形树脂。";
+	name = "裹满树脂的火焰喷射器燃料罐"
 	},
 /obj/item/weapon/ranged/energy/flamethrower{
 	contraband = 1;
-	name = "resin-coated flamethrower"
+	name = "裹满树脂的火焰喷射器"
 	},
 /turf/simulated/floor/xeno,
 /area/dmm_suite/clear_area)

@@ -50,9 +50,9 @@
 
 /subsystem/proc/unclog(var/mob/activator)
 	if(activator.ckey)
-		broadcast_to_clients("SHITTERS CLOGGED: Subsystem [name] has been restarted by [activator.ckey].")
+		broadcast_to_clients("系统堵塞：[activator.ckey]已重启子系统[name]。")
 	else
-		broadcast_to_clients("SHITTERS CLOGGED: Subsystem [name] has been restarted automatically by the server's failsafe.")
+		broadcast_to_clients("系统堵塞：服务器故障保护机制已自动重启子系统[name]。")
 	return TRUE
 
 /subsystem/New(var/desired_loc)

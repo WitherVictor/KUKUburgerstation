@@ -16,7 +16,7 @@ proc/talk(var/atom/speaker, var/atom/source, var/text_to_say, var/text_type, var
 
 	var/language/LA = SSlanguage.all_languages[language]
 
-	var/text_to_say_language = LA ? LA.process_text(speaker,text_to_say) : "Blah blah blah."
+	var/text_to_say_language = LA ? LA.process_text(speaker,text_to_say) : "叽里咕噜。"
 
 	var/turf/source_turf = get_turf(source)
 
@@ -50,7 +50,7 @@ proc/talk(var/atom/speaker, var/atom/source, var/text_to_say, var/text_type, var
 		if(TEXT_WHISPER)
 			if(istype(source,/client/))
 				var/client/C = source
-				C.to_chat("You cannot talk like this!")
+				C.to_chat("你不能这样说话！")
 				return
 			else
 				for(var/k in all_listeners)
@@ -71,7 +71,7 @@ proc/talk(var/atom/speaker, var/atom/source, var/text_to_say, var/text_type, var
 		if(TEXT_TALK)
 			if(istype(source,/client/))
 				var/client/C = source
-				C.to_chat("You cannot talk like this!")
+				C.to_chat("你不能这样说话！")
 				return
 			else
 				var/formatted_speech = format_speech(speaker,source,text_to_say,text_type,frequency,language)
@@ -109,7 +109,7 @@ proc/talk(var/atom/speaker, var/atom/source, var/text_to_say, var/text_type, var
 		if(TEXT_YELL)
 			if(istype(source,/client/))
 				var/client/C = source
-				C.to_chat("You cannot talk like this!")
+				C.to_chat("你不能这样说话！")
 				return
 			else
 				var/formatted_speech = format_speech(speaker,source,text_to_say,text_type,frequency,language)

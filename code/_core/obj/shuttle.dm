@@ -1,5 +1,5 @@
 /obj/structure/shuttle/wing/
-	name = "shuttle wing"
+	name = "穿梭机机翼"
 	plane = PLANE_SHUTTLE
 
 	collision_flags = FLAG_COLLISION_WALL

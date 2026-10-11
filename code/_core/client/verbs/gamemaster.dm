@@ -172,7 +172,7 @@
 		var/obj/item/organ/O = A1.labeled_organs[k]
 		O.break_bone(FALSE,FALSE)
 
-	A1.visible_message(span("danger","Every bone in [A1.name]'s body breaks!"),span("danger","Every bone in your body breaks!"))
+	A1.visible_message(span("danger","[A1.name]全身的骨头都断了！"),span("danger","你全身的骨头都断了！"))
 	play_sound('sound/effects/bone_crack.ogg',get_turf(A1))
 
 	log_admin("[A1.get_debug_name()] bones were broken by [src.get_debug_name()].")

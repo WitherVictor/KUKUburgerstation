@@ -79,7 +79,7 @@
 /obj/trigger/debug_message/armory
 	id = "armory"
 	message = "这里是军械库。你可以购买武器、弹药和护甲，抵御辛迪加。除非你非常清楚自己在做什么，否则强烈建议先在这里购置装备，\
-	再去其他部门购物。军械库还设有射击场，你可以对着射击训练假人试用枪械。"
+	再去其他部门购物。军械库还设有射击场，你可以对着练习靶人试用枪械。"
 
 
 /obj/trigger/debug_message/cryo

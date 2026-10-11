@@ -1,5 +1,5 @@
 /mob/living/advanced/npc/dummy
-	name = "射击训练假人"
+	name = "练习靶人"
 	desc = "这是个假人，笨蛋。"
 	desc_extended = "纳米传讯的标准训练假人，用来教新兵开枪，更重要的是教他们如何瞄准。"
 	ai = null
@@ -30,9 +30,9 @@
 	return 0.1
 
 /mob/living/advanced/npc/dummy/armor
-	name = "披甲射击训练假人"
+	name = "披甲练习靶人"
 	loadout = /loadout/dummy
 
 /mob/living/advanced/npc/dummy/armor_heavy
-	name = "重甲射击训练假人"
+	name = "重甲练习靶人"
 	loadout = /loadout/dummy/heavy

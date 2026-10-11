@@ -50,7 +50,7 @@
 		AI.tracked_event = src
 		tracked_space_cops += SP
 
-	announce("Space Cops","Space Cops Investigation","We've heard reports of War Crimes in the area and we'd like to investigate. Please to not interfere with out investigation by attempting to kill us.")
+	announce("太空警察","太空警察调查","我们接到报告，称本地区发生了战争罪行，现前来调查。请勿试图杀害调查人员，妨碍我们开展调查。")
 
 	associated_shuttle_controller.state = SHUTTLE_STATE_WAITING
 	associated_shuttle_controller.time = 0
@@ -137,18 +137,18 @@
 	var/final_message = ""
 
 	if(dead_count)
-		final_message += "We've successfully completed our investigation and determined that given our casualty rate of [dead_percentage]%, war crimes are indeed taking place here, notably by [english_list(space_cop_tag_shitlist)]. We're sending down some space soldiers to resolve the situation. "
+		final_message += "我们已完成调查。鉴于我方伤亡率达到[dead_percentage]%，可以确认这里确实发生了战争罪行，主要责任方为[english_list(space_cop_tag_shitlist,"无","、","、","、")]。我们将派遣太空士兵处理此事。"
 		if("NanoTrasen" in space_cop_tag_shitlist)
 			var/event/E = SSevents.all_events[/event/space_military]
 			SSevents.trigger_event(E)
 	else
-		final_message += "We've successfully completed our investigation and determined that no war crimes are taking place here, which is quite strange given NanoTrasen's history. "
+		final_message += "我们已完成调查，确认这里没有发生战争罪行。考虑到纳米传讯以往的记录，这个结果倒是相当奇怪。"
 		if(mising_count)
-			final_message += "As a result, we are leaving some of our investigators behind to further investigate the situation. "
+			final_message += "因此，我们会留下一部分调查人员，进一步查明情况。"
 
 	final_message = trim(final_message)
 
-	announce("Space Cops","Space Cops Investigation",final_message)
+	announce("太空警察","太空警察调查",final_message)
 
 	associated_shuttle_controller.state = SHUTTLE_STATE_WAITING
 	associated_shuttle_controller.time = 0

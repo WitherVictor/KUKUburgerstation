@@ -1,1 +1,1 @@
-[{"keywords":["what","is","wikibot"],"answer":"Wikibot is a bot-controlled OOC helper that helps answer commonly asked questions."}]
+[{"keywords":["what","is","wikibot"],"answer":"维基机器人是一个在OOC频道回答常见问题的自动助手。"}]

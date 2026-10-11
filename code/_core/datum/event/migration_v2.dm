@@ -73,9 +73,9 @@
 	var/the_name = initial(enemy_type_to_spawn.name)
 
 	announce(
-		"Central Command Space Biology Division",
-		"[the_name] Migration",
-		"\A [the_name] migration has been detected near the area of operations. Predicted migration areas: [english_list(announce_areas)].",
+		"中央指挥部太空生物事务处",
+		"[the_name]迁徙",
+		"作战区域附近检测到[the_name]迁徙。预计迁徙区域：[english_list(announce_areas,"无","、","、","、")]。",
 		sound_to_play = 'sound/voice/announcement/migration.ogg'
 	)
 

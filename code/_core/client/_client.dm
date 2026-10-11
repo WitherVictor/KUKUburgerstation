@@ -225,7 +225,7 @@ var/global/regex/guest_regex = regex(@'guest-\d+$',"m")
 			//Too many cooks!
 			var/rank_value = get_ranks()
 			if(!rank_value && !byond_member)
-				restricted = "The server is currently experiencing a massive influx of players, and is currently restricted to [player_limit_config] players. Come back another time when the population is reduced!"
+				restricted = "目前有大量玩家涌入，服务器人数上限为[player_limit_config]人。请等人数减少后再来！"
 				src << "<h1>[restricted]</h1>"
 				return mob
 		mob.show_hud(FALSE,speed = 0)
@@ -236,7 +236,7 @@ var/global/regex/guest_regex = regex(@'guest-\d+$',"m")
 			mob.show_hud(TRUE,speed = SECONDS_TO_DECISECONDS(2))
 			mob.force_move(get_turf(lobby_positions[1]))
 
-	broadcast_to_clients(span("ooc","<b>[ckey]</b> has joined the game."))
+	broadcast_to_clients(span("ooc","<b>[ckey]</b>加入了游戏。"))
 	update_window()
 	world.update_server_status()
 	if(SSvote && SSvote.initialized)
@@ -284,7 +284,7 @@ var/global/regex/guest_regex = regex(@'guest-\d+$',"m")
 		if(!R)
 			log_error("Invalid rank for [ckey]: [k]")
 			continue
-		to_chat(span("notice","Adding [R.name] permissions..."))
+		to_chat(span("notice","正在授予[R.name]权限……"))
 		permissions |= R.permissions
 
 	update_verbs()

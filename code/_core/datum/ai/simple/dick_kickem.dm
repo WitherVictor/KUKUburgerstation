@@ -7,18 +7,18 @@
 
 	if(objective_attack && next_talk <= world.time)
 		var/message_to_say = list(
-			"SOME PEOPLE CALL ME AN ASSHOLE. IT'S BECAUSE THERE IS A HOLE IN MY ASS.",
-			"YEAH YOU KEEP SHITTING YOURSELF.",
-			"I'M JUST ANOTHER HUGE FAT BITCH IN A SEA OF GAMERS.",
-			"OH, YOU THINK YOU'RE HOT SHIT?",
-			"ANIME? MORE LIKE HAVE TO PEE.",
-			"IT'S TIME TO GET NUDE AND BE OUTDOORS.",
-			"I'M HERE TO KICK.",
-			"IT'S TIME TO ASS.",
-			"I'M DICK KICKEM.",
-			"I'M GOING TO MAINTAIN AN ERECTION.",
-			"I'M GOING TO RIP OFF YOUR HEAD AND FAINT AT THE SIGHT OF BLOOD.",
-			"THOSE DAMN ALIEN BASTARDS FUCKED MY CAR."
+			"有人叫我屁眼。因为我的屁股上确实有个眼。",
+			"对，你就继续拉在裤子里吧。",
+			"在玩家的海洋里，我不过是又一个巨肥的婊子。",
+			"哦，你觉得自己是坨热乎的牛逼？",
+			"动漫？我看是尿漫，憋不住了。",
+			"是时候脱光衣服去户外了。",
+			"我是来踢人的。",
+			"是时候动屁股了。",
+			"我是迪克·踢爆。",
+			"我要保持勃起。",
+			"我要扯下你的脑袋，然后见血就晕。",
+			"那些该死的外星杂种把我的车给操了。"
 		)
 		owner.do_say(pick(message_to_say),FALSE)
 

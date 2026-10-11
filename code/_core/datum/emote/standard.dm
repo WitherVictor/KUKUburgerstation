@@ -1,97 +1,97 @@
 /emote/dab
 	name = "Dab"
 	id = "dab"
-	action = "\The #USER suddenly hits a dab!"
-	action_target = "\The #USER dabs on #TARGET!"
+	action = "#USER突然摆出了甩臂舞姿！"
+	action_target = "#USER朝#TARGET摆出甩臂舞姿！"
 
 /emote/flex
 	name = "Flex"
 	id = "flex"
-	action = "\The #USER flexes their muscles!"
-	action_target = "\The #USER flexes their muscles at #TARGET!"
+	action = "#USER秀了秀肌肉！"
+	action_target = "#USER朝#TARGET秀了秀肌肉！"
 
 /emote/nod
 	name = "Nod Head"
 	id = "nod"
-	action = "\The #USER nods."
-	action_target = "\The #USER nods their head at #TARGET."
+	action = "#USER点了点头。"
+	action_target = "#USER朝#TARGET点了点头。"
 
 /emote/shake
 	name = "Shake Head"
 	id = "shake"
-	action = "\The #USER shakes their head."
-	action_target = "\The #USER shakes their head at #TARGET."
+	action = "#USER摇了摇头。"
+	action_target = "#USER朝#TARGET摇了摇头。"
 
 /emote/bow
 	name = "Bow"
 	id = "bow"
-	action = "\The #USER bows."
-	action_target = "\The #USER bows towards #TARGET."
+	action = "#USER鞠了一躬。"
+	action_target = "#USER朝#TARGET鞠了一躬。"
 
 /emote/fist
 	name = "Shake Fist"
 	id = "fist"
-	action = "\The #USER shakes their fist."
-	action_target = "\The #USER shakes their fist at #TARGET!"
+	action = "#USER挥了挥拳头。"
+	action_target = "#USER朝#TARGET挥了挥拳头！"
 
 /emote/think
 	name = "Think"
 	id = "think"
-	action = "\The #USER thinks."
+	action = "#USER思考着。"
 	action_target = null
 
 /emote/wave
 	name = "Wave"
 	id = "wave"
-	action = "\The #USER waves."
-	action_target = "\The #USER waves at #TARGET."
+	action = "#USER挥了挥手。"
+	action_target = "#USER朝#TARGET挥了挥手。"
 
 /emote/shrug
 	name = "Shrug"
 	id = "shrug"
-	action = "\The #USER shrugs."
+	action = "#USER耸了耸肩。"
 	action_target = null
 
 /emote/cheer
 	name = "Cheer"
 	id = "cheer"
-	action = "\The #USER cheers!"
-	action_target = "\The #USER cheers #TARGET on!"
+	action = "#USER欢呼起来！"
+	action_target = "#USER为#TARGET加油！"
 
 /emote/beckon
 	name = "Beckon"
 	id = "beckon"
-	action = "\The #USER beckons."
-	action_target = "\The #USER beckons #TARGET."
+	action = "#USER招了招手。"
+	action_target = "#USER朝#TARGET招了招手。"
 
 /emote/yawn
 	name = "Yawn"
 	id = "yawn"
-	action = "\The #USER yawns."
-	action_target = "\The #USER yawns at #TARGET."
+	action = "#USER打了个哈欠。"
+	action_target = "#USER朝#TARGET打了个哈欠。"
 
 /emote/cry
 	name = "Cry"
 	id = "cry"
-	action = "\The #USER cries."
-	action_target = "\The #USER cries towards #TARGET!"
+	action = "#USER哭了起来。"
+	action_target = "#USER朝#TARGET哭了起来！"
 
 /emote/clap
 	name = "Clap"
 	id = "clap"
-	action = "\The #USER claps!"
-	action_target = "\The #USER claps for #TARGET!"
+	action = "#USER鼓起掌来！"
+	action_target = "#USER为#TARGET鼓掌！"
 
 /emote/salute
 	name = "Salute"
 	id = "salute"
-	action = "\The #USER salutes!"
-	action_target = "\The #USER salutes #TARGET!"
+	action = "#USER敬了个礼！"
+	action_target = "#USER向#TARGET敬礼！"
 
 /emote/inhale
 	name = "Inhale"
 	id = "inhale"
-	action = "\The #USER inhales."
+	action = "#USER吸了一口气。"
 
 /emote/inhale/on_emote(var/atom/emoter,var/atom/target)
 	if(is_advanced(emoter))
@@ -106,7 +106,7 @@
 /emote/drag
 	name = "Drag"
 	id = "drag"
-	action = "\The #USER takes a drag from their smoke."
+	action = "#USER吸了一口烟。"
 
 /emote/drag/can_emote(var/atom/emoter,var/atom/target)
 	. = ..()
@@ -131,12 +131,12 @@
 /emote/exhale
 	name = "Exhale"
 	id = "exhale"
-	action = "\The #USER exhales."
+	action = "#USER呼出一口气。"
 
 /emote/blink
 	name = "Blink"
 	id = "blink"
-	action = "\The #USER blinks."
+	action = "#USER眨了眨眼。"
 
 /emote/spin
 	name = "Spin"

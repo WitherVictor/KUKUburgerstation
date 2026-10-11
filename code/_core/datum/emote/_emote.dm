@@ -2,7 +2,7 @@
 	var/name = "Emote"
 	var/id = null
 
-	var/action = "\The #USER stares as they cannot scream."
+	var/action = "#USER瞪着眼睛，却叫不出声。"
 	var/action_target
 
 /emote/proc/can_emote(var/atom/emoter,var/atom/target)
