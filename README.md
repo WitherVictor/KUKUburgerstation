@@ -1,6 +1,6 @@
-# Welcome to Burgerstation.
+# 欢迎来到汉堡站.
 
-Enjoy your stay.
+汉化进度100%，享受你的游戏吧.
 
 ## Licensing
 
