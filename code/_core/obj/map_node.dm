@@ -86,10 +86,8 @@
 
 /obj/marker/map_node/PreDestroy()
 	. = ..()
-	//dmm_suite 在 chunk 子系统初始化之前就会删除地图上的节点，此时 SSchunk.chunks 仍为 null。
-	if(SSchunk.initialized && is_turf(src.loc))
-		var/chunk/CH = CHUNK(src.loc)
-		CH.nodes -= src
+	var/chunk/CH = CHUNK(src.loc)
+	CH.nodes -= src
 	SSnodes.all_map_nodes -= src
 
 /obj/marker/map_node/proc/initialize_node()

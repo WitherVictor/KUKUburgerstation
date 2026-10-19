@@ -5,5 +5,5 @@
 #define CHUNK_XYZ(x,y,z) SSchunk.chunks[z][x][y]
 
 
-#define CHUNK(T) SSchunk.chunks[GET_CHUNK_Z(T)][GET_CHUNK_X(T)][GET_CHUNK_Y(T)]
+#define CHUNK(T) SSchunk.chunks[GET_CHUNK_Z(T)][GET_CHUNK_X(T)][GET_CHUNK_Z(T)]
 
