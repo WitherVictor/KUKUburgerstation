@@ -18,6 +18,8 @@
 
 	var/use_time_dialation = TRUE
 
+	var/hard_realtime = FALSE //为 TRUE 时，该子系统忽略 tick_usage_max，始终运行。
+
 	var/initialized = FALSE
 	var/generated = FALSE
 	var/finalized = FALSE

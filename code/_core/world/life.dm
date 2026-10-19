@@ -2,7 +2,8 @@
 	set background = TRUE
 	spawn while(SS.tick_rate > 0 && world_state < STATE_SHUTDOWN)
 		if(SS.tick_rate > 0 && SS.overtime_count < SS.overtime_max)
-			if(world_state >= STATE_RUNNING && SS.tick_usage_max > 0 && world.tick_usage > SS.tick_usage_max)
+			//hard_realtime 子系统不参与“tick 超预算就整帧跳过”。
+			if(world_state >= STATE_RUNNING && !SS.hard_realtime && SS.tick_usage_max > 0 && world.tick_usage > SS.tick_usage_max)
 				SS.overtime_count++
 				sleep(TICK_LAG)
 				continue

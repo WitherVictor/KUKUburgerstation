@@ -369,10 +369,9 @@ proc/play_music_track(var/music_track_id,var/client/hearer,var/volume=35,var/loo
 	if(!hearers)
 		hearers = SSliving.all_mobs_with_clients_by_z["[source_turf.z]"]
 
+	//这里不主动让出 tick：hearers 只包含同 z 层有 client 的玩家，循环成本有界；
+	//在开枪路径里 CHECK_TICK 反而会把子弹生成推迟到后续 tick。
 	for(var/k in hearers)
-
-		CHECK_TICK(SSsound.tick_usage_max,FPS_SERVER*2)
-
 		var/mob/M = k
 
 		if(!M.client || !M.client.eye)
