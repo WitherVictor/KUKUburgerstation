@@ -388,8 +388,10 @@
 		if(debug) log_error("add_object() fail: Inventory glitch!")
 		return FALSE
 
+	//容器进入新归属时同步内部物品栏；归属为空时同样要同步，避免残留旧归属。
+	I.update_owner(owner)
+
 	if(owner)
-		I.update_owner(owner)
 		if(is_advanced(owner) && should_add_to_advanced)
 			var/mob/living/advanced/A = owner
 			if(worn)
@@ -477,6 +479,10 @@
 	vis_contents -= I
 
 	I.on_unequip(src,silent)
+
+	//容器离开物品栏（丢到地上等）时注销其内部物品栏，防止物品继续被存进已不在身上的容器。
+	if(!is_inventory(I.loc))
+		I.update_owner(null)
 
 	if(is_item(src.loc))
 		var/obj/item/IL = src.loc
