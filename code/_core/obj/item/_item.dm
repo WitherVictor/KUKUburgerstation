@@ -438,8 +438,6 @@
 	for(var/v in inventories)
 		var/obj/hud/inventory/I = v
 		I.update_owner(desired_owner)
-		for(var/obj/item/I2 in I.contents) //嵌套容器也要同步。
-			I2.update_owner(desired_owner)
 
 /obj/item/proc/get_owner()
 	if(is_inventory(src.loc))
