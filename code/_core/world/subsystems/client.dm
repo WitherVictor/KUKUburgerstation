@@ -48,20 +48,8 @@ SUBSYSTEM_DEF(client)
 		do_slow = TRUE
 		advanced_ticks = 0
 
-	//This handles life ticks for all players.
-	for(var/ckey in SSclient.all_clients) //This should never be tick checked.
-		var/client/C = SSclient.all_clients[ckey]
-		if(!C)
-			log_error("Tried getting the client of [ckey] but it didn't exist!")
-			SSclient.all_clients -= ckey
-			continue
-		C.on_life()
-		if(do_slow)
-			C.on_life_slow()
-		if(world_state >= STATE_RUNNING)
-			CHECK_TICK(tick_usage_max,FPS_SERVER)
-
-	for(var/k in queued_automatics)
+	//先处理自动开火队列，避免连发被客户端维护逻辑拖延。
+	for(var/k in queued_automatics.Copy())
 		var/obj/item/weapon/ranged/R = k
 		var/list/data = queued_automatics[k]
 		if(!data || !length(data))
@@ -79,7 +67,18 @@ SUBSYSTEM_DEF(client)
 			R.next_shoot_time = max(R.next_shoot_time,world.time + real_burst_delay)
 			R.current_bursts = 1
 			queued_automatics -= k
-		CHECK_TICK(tick_usage_max,FPS_SERVER)
 
+	//This handles life ticks for all players.
+	for(var/ckey in SSclient.all_clients) //This should never be tick checked.
+		var/client/C = SSclient.all_clients[ckey]
+		if(!C)
+			log_error("Tried getting the client of [ckey] but it didn't exist!")
+			SSclient.all_clients -= ckey
+			continue
+		C.on_life()
+		if(do_slow)
+			C.on_life_slow()
+		if(world_state >= STATE_RUNNING)
+			CHECK_TICK(tick_usage_max,FPS_SERVER)
 
 	return TRUE
