@@ -34,8 +34,9 @@
 
 	var/file_contents = rustg_file_read(full_path)
 	loaded_data = json_decode(file_contents)
-	if(loaded_data["fps_client"])
-		owner.fps = loaded_data["fps_client"]
+	var/loaded_fps = loaded_data["fps_client"]
+	if(isnum(loaded_fps))
+		owner.fps = round(clamp(loaded_fps,0,FPS_CLIENT_MAX))
 
 	var/list/default_colors = DEFAULT_COLORS
 

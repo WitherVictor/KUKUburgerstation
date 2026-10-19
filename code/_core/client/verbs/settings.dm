@@ -30,15 +30,19 @@
 	winshow(src,"browser([id])",TRUE)
 	src << output(html_to_send, "browser([id])")
 
-/client/verb/set_fps(var/desired_fps as num)
+/client/verb/set_fps()
 	set hidden = TRUE
-	var/old_fps = clamp(src.fps,FPS_SERVER,FPS_CLIENT)
-	desired_fps = clamp(desired_fps,FPS_SERVER,FPS_CLIENT)
-	to_chat(span("notice","帧率已从 [old_fps] 改为 [desired_fps]。"))
-	if(desired_fps == FPS_SERVER)
-		desired_fps = 0
-	src.fps = desired_fps
-	settings.change_setting("fps_client",desired_fps)
+	var/old_fps = clamp(src.fps,FPS_SERVER,FPS_CLIENT_MAX)
+	var/new_fps = input(usr,"请输入帧率（[FPS_SERVER]-[FPS_CLIENT_MAX]，[FPS_SERVER] 为与服务器同步）。","帧率设置",old_fps) as null|num
+	if(isnull(new_fps))
+		return
+	new_fps = round(clamp(new_fps,FPS_SERVER,FPS_CLIENT_MAX))
+	to_chat(span("notice","帧率已从 [old_fps] 改为 [new_fps]。"))
+	if(new_fps == FPS_SERVER)
+		//0 是特殊值，含义是“与服务器 tick 同步”（client.fps 的默认值），因此它会跟随 FPS_SERVER，而不是固定帧率。
+		new_fps = 0
+	src.fps = new_fps
+	settings.change_setting("fps_client",new_fps)
 
 /client/verb/set_view_range(var/desired_view_range as num)
 	set hidden = TRUE
