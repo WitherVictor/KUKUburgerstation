@@ -440,7 +440,7 @@
 	if(duration <= 0)
 		return FALSE
 
-	if(has_status_effect(src,BLINDED))
+	if(has_status_effect(BLINDED))
 		return FALSE
 
 	add_status_effect(BLINDED,duration,duration)

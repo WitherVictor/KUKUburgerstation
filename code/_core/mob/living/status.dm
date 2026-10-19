@@ -78,8 +78,10 @@
 	if(!S)
 		CRASH("Invalid status effect removed! ([status_type])")
 
-	S.on_effect_removed(src,status_type,status_effects[status_type]["magnitude"],status_effects[status_type]["duration"])
+	//先移除状态，再调用 on_effect_removed；否则失明/嗑药这类在回调里调用 update_eyes() 的效果会误判自己还挂着。
+	var/list/status_data = status_effects[status_type]
 	status_effects -= status_type
+	S.on_effect_removed(src,status_type,status_data["magnitude"],status_data["duration"])
 	if(check_horizontal)
 		handle_transform()
 
