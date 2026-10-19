@@ -8,7 +8,8 @@
 
 #define MAX_INVENTORY_X 8
 
-#define FPS_CLIENT 60 //0 Means synced. Also this is default, players can change this for themselves.
+#define FPS_CLIENT 60 //0 表示与服务器同步。同时也是默认值，玩家可自行修改。
+#define FPS_CLIENT_MAX 1000 //玩家可设置的最高客户端帧率。客户端 tick 分辨率为 1ms，因此该上限实际等于不做限制。
 #define FPS_SERVER 20
 
 //Soft limit to prevent more than any of this amount of being on a single turf at once. THIS INCLUDES EVERYTHING THAT USES move(). forcemove() is intentionally ignored.
